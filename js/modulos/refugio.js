@@ -1,14 +1,15 @@
 /**
- * Módulo de UI: Refugio, Progresión de 10 Niveles y Bitácora de Crónicas
+ * Módulo de UI: Refugio, Progresión de 10 Niveles, Bitácora y Expedientes Clasificados
  */
 
 import { GameEngine } from '../core/engine.js';
 import { PROGRAMAS_RADIO } from '../data/radio_programas.js';
+import { ARCHIVOS_CLASIFICADOS } from '../data/archivos_lore.js';
 
 export class RefugioModulo {
   constructor(contenedor) {
     this.contenedor = contenedor;
-    this.tabSubseccion = 'refugio'; // 'refugio', 'niveles', 'bitacora'
+    this.tabSubseccion = 'refugio'; // 'refugio', 'niveles', 'bitacora', 'archivos'
   }
 
   render(estado) {
@@ -28,7 +29,7 @@ export class RefugioModulo {
           <p class="refugio-narrativa-texto">${infoNivel.descripcion}</p>
           
           <div class="refugio-capacidad-box">
-            <span>Capacidad actual:</span>
+            <span>Capacidad activa:</span>
             <strong>🏃 ${infoNivel.maxSendas} Sendas &bull; 🕯️ ${infoNivel.maxFaros} Faros</strong>
           </div>
 
@@ -55,7 +56,7 @@ export class RefugioModulo {
       <!-- Selector de Subsecciones -->
       <div class="refugio-subnav">
         <button class="btn-subnav ${this.tabSubseccion === 'refugio' ? 'active' : ''}" id="btn-sub-refugio">
-          🛖 Almacén & Cimientos
+          🛖 Almacén
         </button>
         <button class="btn-subnav ${this.tabSubseccion === 'niveles' ? 'active' : ''}" id="btn-sub-niveles">
           🗺️ 10 Niveles
@@ -63,17 +64,21 @@ export class RefugioModulo {
         <button class="btn-subnav ${this.tabSubseccion === 'bitacora' ? 'active' : ''}" id="btn-sub-bitacora">
           📜 Bitácora (${bitacora.length})
         </button>
+        <button class="btn-subnav ${this.tabSubseccion === 'archivos' ? 'active' : ''}" id="btn-sub-archivos">
+          📁 Expedientes
+        </button>
       </div>
 
-      ${this.renderSubseccion(this.tabSubseccion, conocimientos, estado, bitacora)}
+      ${this.renderSubseccion(this.tabSubseccion, conocimientos, estado, bitacora, infoNivel)}
     `;
 
     this.vincularSubnav(estado);
   }
 
-  renderSubseccion(tab, conocimientos, estado, bitacora) {
+  renderSubseccion(tab, conocimientos, estado, bitacora, infoNivel) {
     if (tab === 'niveles') return this.renderNivelesMapa(estado);
     if (tab === 'bitacora') return this.renderBitacora(bitacora);
+    if (tab === 'archivos') return this.renderArchivosClasificados(infoNivel.nivel);
     return this.renderEstructuras(conocimientos, estado);
   }
 
@@ -159,6 +164,41 @@ export class RefugioModulo {
     `;
   }
 
+  renderArchivosClasificados(nivelRefugio) {
+    return `
+      <div class="archivos-lista" style="margin-top: 14px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
+          Expedientes, recortes y memorias recuperadas de las ruinas del antiguo mundo. Desbloquea más subiendo el nivel de tu refugio y sintonizando la radio.
+        </div>
+
+        ${ARCHIVOS_CLASIFICADOS.map(doc => {
+          const desbloqueado = doc.desbloqueadoInicio || (doc.desbloqueoNivel && nivelRefugio >= doc.desbloqueoNivel);
+
+          return `
+            <div class="card-item ${desbloqueado ? '' : 'doc-bloqueado'}" style="border-left: 3px solid ${desbloqueado ? 'var(--accent-amber)' : 'var(--border-subtle)'};">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.72rem; color: var(--accent-amber-light); font-family: var(--font-mono);">${doc.codigo}</span>
+                <span style="font-size: 0.72rem; color: var(--text-muted);">${doc.categoria}</span>
+              </div>
+              <h4 style="font-size: 0.95rem; color: var(--text-primary); margin: 4px 0;">
+                ${doc.icono} ${doc.titulo}
+              </h4>
+              ${desbloqueado ? `
+                <div class="doc-texto-cuerpo" style="font-size: 0.82rem; color: #fef08a; background: rgba(0,0,0,0.3); padding: 10px; border-radius: var(--radius-sm); line-height: 1.5; white-space: pre-line;">
+                  ${doc.texto}
+                </div>
+              ` : `
+                <div style="font-size: 0.78rem; color: var(--text-muted); font-style: italic; background: rgba(0,0,0,0.2); padding: 8px; border-radius: 4px;">
+                  🔒 Documento clasificado. Se revela al alcanzar Refugio Nivel ${doc.desbloqueoNivel}.
+                </div>
+              `}
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+  }
+
   renderNivelesMapa(estado) {
     const infoActual = GameEngine.calcularNivelRefugio(estado.recursos);
 
@@ -223,27 +263,12 @@ export class RefugioModulo {
     const btnRef = this.contenedor.querySelector('#btn-sub-refugio');
     const btnNiv = this.contenedor.querySelector('#btn-sub-niveles');
     const btnBit = this.contenedor.querySelector('#btn-sub-bitacora');
+    const btnArc = this.contenedor.querySelector('#btn-sub-archivos');
 
-    if (btnRef) {
-      btnRef.addEventListener('click', () => {
-        this.tabSubseccion = 'refugio';
-        this.render(estado);
-      });
-    }
-
-    if (btnNiv) {
-      btnNiv.addEventListener('click', () => {
-        this.tabSubseccion = 'niveles';
-        this.render(estado);
-      });
-    }
-
-    if (btnBit) {
-      btnBit.addEventListener('click', () => {
-        this.tabSubseccion = 'bitacora';
-        this.render(estado);
-      });
-    }
+    if (btnRef) btnRef.addEventListener('click', () => { this.tabSubseccion = 'refugio'; this.render(estado); });
+    if (btnNiv) btnNiv.addEventListener('click', () => { this.tabSubseccion = 'niveles'; this.render(estado); });
+    if (btnBit) btnBit.addEventListener('click', () => { this.tabSubseccion = 'bitacora'; this.render(estado); });
+    if (btnArc) btnArc.addEventListener('click', () => { this.tabSubseccion = 'archivos'; this.render(estado); });
   }
 
   getEmojiRecurso(tipo) {

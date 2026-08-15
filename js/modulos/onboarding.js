@@ -1,6 +1,6 @@
 /**
  * Módulo de Onboarding / Bienvenida Inmersiva
- * Explica la filosofía de UPROTA y solicita nombre y ciudad iniciales.
+ * Prólogo distópico, filosofía del refugio y configuración inicial del Prota.
  */
 
 import { estadoApp } from '../core/estado.js';
@@ -13,7 +13,7 @@ export class OnboardingModulo {
     }
   }
 
-  static abrirModalBienvenida(forzar = false) {
+  static abrirModalBienvenida() {
     const modalContainer = document.getElementById('modal-container');
     const modalContent = document.getElementById('modal-content');
     if (!modalContainer || !modalContent) return;
@@ -24,52 +24,63 @@ export class OnboardingModulo {
 
     modalContent.innerHTML = `
       <div class="onboarding-wrap">
-        <div class="onboarding-badge">📡 Transmisión de Emergencia</div>
-        <h2 class="onboarding-title">Bienvenido a UPROTA</h2>
-        <div class="onboarding-sub">Tu vida real convertida en aventura de supervivencia</div>
+        <div class="onboarding-distopia-header">
+          <span class="stamp-clasificado">AÑO 3 TRAS EL COLAPSO</span>
+          <h2 class="onboarding-title">El Yermo no Perdona la Desidia</h2>
+          <div class="onboarding-sub">Registro de Transmisión de Emergencia</div>
+        </div>
+
+        <!-- Prólogo Narrativo Distópico -->
+        <div class="onboarding-lore-box">
+          <p>
+            Los gobiernos cayeron hace años. No hubo un solo cataclismo: fueron las sequías interminables, los apagones globales y el silencio de las ciudades. El mundo que conocías se desmoronó.
+          </p>
+          <p style="margin-top: 8px;">
+            Afuera hay tormentas de polvo rojo, saqueadores al acecho y una extraña presencia en la maleza a la que todos llaman <em>"Verdes"</em>... aunque los pocos sobrevivientes que se han acercado murmuran que la verdad detrás de ellos es mucho más profunda.
+          </p>
+          <p style="margin-top: 8px; font-weight: 600; color: #fed7aa;">
+            En este mundo roto, la única muralla que te separa del abismo es tu propia disciplina diaria.
+          </p>
+        </div>
 
         <div class="onboarding-body">
-          <div class="onboarding-quote">
-            "UPROTA no es una aplicación de productividad. Es un refugio. Nace de una pregunta simple: ¿qué pasa cuando las cosas que antes eran fáciles —levantarte, ordenar, aprender— de pronto empiezan a pesar?"
-          </div>
-
           <div class="onboarding-feature">
             <span class="feat-icon">🪵</span>
             <div class="feat-text">
-              <strong>Supervivencia real:</strong> Cada tarea que completas en tu vida diaria (trotar, leer, lavar los platos) es, literalmente, el material que mantiene tu refugio en pie.
+              <strong>Tu vida real es tu fortaleza:</strong> Lavar los platos purifica tus utensilios; salir a correr patrulla tu perímetro; estudiar decodifica planos. Cada tarea que cumples mantiene tu refugio en pie.
+            </div>
+          </div>
+
+          <div class="onboarding-feature">
+            <span class="feat-icon">📁</span>
+            <div class="feat-text">
+              <strong>Descubre la verdad oculta:</strong> A través de transmisiones de radio, diarios de campo y recortes clasificados, irás desenterrando qué causó el Colapso y el enigma de los Fitolantros.
             </div>
           </div>
 
           <div class="onboarding-feature">
             <span class="feat-icon">🕯️</span>
             <div class="feat-text">
-              <strong>El Hogar (Cero culpa):</strong> Aquí nunca hay números rojos ni penalizaciones crueles si un día se complica. Cuando las cosas se tensan, el refugio te acoge y te da luz prestada.
-            </div>
-          </div>
-
-          <div class="onboarding-feature">
-            <span class="feat-icon">📻</span>
-            <div class="feat-text">
-              <strong>Conocimiento Real:</strong> El sistema de radio transmite habilidades reales de supervivencia narradas con voz. Al aprenderlas, desbloqueas nuevas tecnologías en tu refugio.
+              <strong>El Hogar (Validación sin culpa):</strong> Cuando las cosas se compliquen en tu vida real, el refugio nunca te castigará con números rojos. Te dará resguardo, calor y luz prestada para volver a empezar.
             </div>
           </div>
 
           <div class="onboarding-form">
             <div class="form-group">
-              <label for="input-onboarding-nombre">¿Cómo te llamas, Prota?</label>
-              <input type="text" id="input-onboarding-nombre" class="form-input" value="${nombreActual}" placeholder="Tu nombre o apodo">
+              <label for="input-onboarding-nombre">Nombre de tu Sobreviviente (Prota):</label>
+              <input type="text" id="input-onboarding-nombre" class="form-input" value="${nombreActual}" placeholder="Ej: Joshua, Elena, Cuervo...">
             </div>
 
             <div class="form-group">
-              <label for="input-onboarding-ciudad">¿De qué ciudad vienes? (Para sintonizar la radio)</label>
-              <input type="text" id="input-onboarding-ciudad" class="form-input" value="${ciudadActual}" placeholder="Ej: Mazatlán, Madrid, Buenos Aires...">
+              <label for="input-onboarding-ciudad">Ciudad natal o de origen (Para sintonizar la radio):</label>
+              <input type="text" id="input-onboarding-ciudad" class="form-input" value="${ciudadActual}" placeholder="Ej: Mazatlán, Madrid, Monterrey...">
             </div>
           </div>
         </div>
 
         <div class="modal-actions" style="margin-top: 16px;">
-          <button id="btn-comenzar-aventura" class="btn-primary" style="padding: 12px 20px; font-size: 0.95rem;">
-            🔥 Encender la Fogata y Entrar al Refugio
+          <button id="btn-comenzar-aventura" class="btn-primary" style="padding: 12px 20px; font-size: 0.95rem; width: 100%;">
+            🔥 Reclamar Punto Cero y Sobrevivir
           </button>
         </div>
       </div>

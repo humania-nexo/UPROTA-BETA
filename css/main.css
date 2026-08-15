@@ -222,7 +222,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
@@ -243,44 +243,54 @@ body {
   box-shadow: var(--shadow-card);
 }
 
-/* Onboarding Específico */
+/* Onboarding y Estampa de Lore */
 .onboarding-wrap {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.onboarding-badge {
-  font-size: 0.72rem;
-  text-transform: uppercase;
+.stamp-clasificado {
+  display: inline-block;
+  background: #451a03;
+  border: 1px dashed var(--accent-amber);
   color: var(--accent-amber-light);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
   font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
   letter-spacing: 0.1em;
+  margin-bottom: 6px;
 }
 
 .onboarding-title {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--text-primary);
 }
 
 .onboarding-sub {
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  margin-top: -8px;
   margin-bottom: 6px;
 }
 
-.onboarding-quote {
-  background: rgba(0, 0, 0, 0.3);
-  border-left: 3px solid var(--accent-amber);
-  padding: 10px 12px;
+.onboarding-lore-box {
+  background: rgba(0, 0, 0, 0.35);
+  border-left: 3px solid var(--accent-rust);
+  padding: 12px 14px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-style: italic;
   font-size: 0.85rem;
-  color: #fef08a;
-  line-height: 1.5;
+  color: var(--text-secondary);
+  line-height: 1.55;
   margin-bottom: 12px;
+}
+
+.onboarding-lore-box em {
+  color: var(--accent-green);
+  font-style: normal;
+  font-weight: 600;
 }
 
 .onboarding-feature {
@@ -302,24 +312,26 @@ body {
   margin-top: 8px;
 }
 
-/* Subnavegación de Refugio / Bitácora */
+/* Subnavegación de Refugio / Bitácora / Expedientes */
 .refugio-subnav {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   margin-bottom: 16px;
   border-bottom: 1px solid var(--border-subtle);
   padding-bottom: 8px;
+  overflow-x: auto;
 }
 
 .btn-subnav {
   background: transparent;
   border: 1px solid var(--border-subtle);
   color: var(--text-muted);
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: var(--radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .btn-subnav.active {
