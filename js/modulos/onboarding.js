@@ -1,6 +1,6 @@
 /**
  * Módulo de Onboarding / Bienvenida Inmersiva
- * Prólogo distópico, filosofía del refugio y configuración inicial del Prota.
+ * Prólogo distópico, filosofía del refugio y configuración inicial del Prota (Sin Spoilers).
  */
 
 import { estadoApp } from '../core/estado.js';
@@ -30,13 +30,13 @@ export class OnboardingModulo {
           <div class="onboarding-sub">Registro de Transmisión de Emergencia</div>
         </div>
 
-        <!-- Prólogo Narrativo Distópico -->
+        <!-- Prólogo Narrativo Distópico (Sin Spoilers) -->
         <div class="onboarding-lore-box">
           <p>
             Los gobiernos cayeron hace años. No hubo un solo cataclismo: fueron las sequías interminables, los apagones globales y el silencio de las ciudades. El mundo que conocías se desmoronó.
           </p>
           <p style="margin-top: 8px;">
-            Afuera hay tormentas de polvo rojo, saqueadores al acecho y una extraña presencia en la maleza a la que todos llaman <em>"Verdes"</em>... aunque los pocos sobrevivientes que se han acercado murmuran que la verdad detrás de ellos es mucho más profunda.
+            Afuera hay tormentas de polvo rojo, saqueadores al acecho y una extraña presencia en la maleza a la que todos llaman <em>"Verdes"</em>... pero las cosas rara vez son lo que parecen a primera vista.
           </p>
           <p style="margin-top: 8px; font-weight: 600; color: #fed7aa;">
             En este mundo roto, la única muralla que te separa del abismo es tu propia disciplina diaria.
@@ -54,7 +54,7 @@ export class OnboardingModulo {
           <div class="onboarding-feature">
             <span class="feat-icon">📁</span>
             <div class="feat-text">
-              <strong>Descubre la verdad oculta:</strong> A través de transmisiones de radio, diarios de campo y recortes clasificados, irás desenterrando qué causó el Colapso y el enigma de los Fitolantros.
+              <strong>Descubre la verdad:</strong> A través de transmisiones de radio, diarios de campo y expedientes clasificados, irás desenterrando poco a poco qué causó el Colapso y qué secretos oculta el Yermo.
             </div>
           </div>
 
