@@ -12,7 +12,7 @@ class GestorEstado {
     this.estado = {
       perfil: {
         nombre: "Prota",
-        ciudad: "Mazatlán",
+        ciudad: "Yermo Central",
         fechaInicio: new Date().toISOString(),
         bioma: "yermo"
       },
@@ -30,6 +30,7 @@ class GestorEstado {
       conocimientosAdquiridos: [],
       ecosLiberados: [],
       historialTensadas: [],
+      bitacoraEventos: [], // Historial de eventos y decisiones tomadas
       ultimoDiaRevisado: GameEngine.fechaHoyYMD(),
       diccionarioPersonal: {}
     };
@@ -56,8 +57,8 @@ class GestorEstado {
         this.estado = { ...this.estado, ...guardado };
         this.traductor = new MotorTraductor(this.estado.diccionarioPersonal || {});
       } else {
-        // Datos iniciales de demostración si es primera vez
-        await this.inicializarDatosPorDefecto();
+        // Guardar estado inicial limpio en Punto Cero
+        await this.guardar();
       }
       this.notificar();
     } catch (e) {
@@ -74,74 +75,19 @@ class GestorEstado {
     }
   }
 
-  async inicializarDatosPorDefecto() {
-    this.estado.sendas = [
-      {
-        id: "senda_1",
-        nombreOriginal: "Hacer ejercicio 20min",
-        nombreLore: "Patrulla del perímetro",
-        icono: "🏃",
-        frecuencia: "2x", // 2x por semana
-        categoria: "cuerpo",
-        recurso: { provisiones: 3, agua: 1 },
-        racha: 0,
-        checksSemana: 0,
-        ultimoCheck: null
-      },
-      {
-        id: "senda_2",
-        nombreOriginal: "Lavar los platos",
-        nombreLore: "Purificar utensilios del clan",
-        icono: "🥣",
-        frecuencia: "diario",
-        categoria: "hogar",
-        recurso: { tablas: 2, moral: 1 },
-        racha: 0,
-        checksSemana: 0,
-        ultimoCheck: null
-      }
-    ];
-
-    this.estado.cadenas = [
-      {
-        id: "cadena_1",
-        nombreOriginal: "Refresco",
-        nombreLore: "Jarabe Corrosivo",
-        icono: "🥤",
-        recaidasMes: 0,
-        ultimaRecaida: null
-      }
-    ];
-
-    this.estado.faros = [
-      {
-        id: "faro_1",
-        nombreLore: "Fortificar Cisterna Principal",
-        metaMonto: 5000,
-        actualMonto: 1500,
-        unidad: "$",
-        icono: "🪙"
-      }
-    ];
-
-    await this.guardar();
-  }
-
-  // Acciones de Sendas
+  // --- ACCIONES DE SENDAS ---
   async marcarSenda(id) {
     const hoy = GameEngine.fechaHoyYMD();
     const senda = this.estado.sendas.find(s => s.id === id);
     if (!senda) return null;
 
     const yaMarcadaHoy = senda.ultimoCheck === hoy;
-    if (yaMarcadaHoy) return null; // Ya se marcó hoy
+    if (yaMarcadaHoy) return null;
 
-    // Actualizar senda
     senda.ultimoCheck = hoy;
     senda.racha = (senda.racha || 0) + 1;
-    senda.checksSemana = (senda.checksSemana || 0) + 1;
+    senda.checksTotal = (senda.checksTotal || 0) + 1;
 
-    // Entregar recursos
     const ganados = senda.recurso || { tablas: 1 };
     for (const [rec, cant] of Object.entries(ganados)) {
       this.estado.recursos[rec] = (this.estado.recursos[rec] || 0) + cant;
@@ -151,19 +97,23 @@ class GestorEstado {
     return { senda, ganados };
   }
 
-  async agregarSenda(nombreOriginal, frecuencia = "diario", nombreLore = null, icono = null, recursos = null) {
-    const traduccion = this.traductor.traducirAccion(nombreOriginal);
+  async agregarSenda({ textoNatural, nombreLore, frecuencia, diasSemana, franjaHoraria, recurso, icono }) {
+    const traduccion = this.traductor.traducirAccion(textoNatural);
+
     const nuevaSenda = {
       id: `senda_${Date.now()}`,
-      nombreOriginal,
+      textoNatural: textoNatural, // Texto original exacto del usuario
       nombreLore: nombreLore || traduccion.lore,
       icono: icono || traduccion.icono,
-      frecuencia,
+      frecuencia: frecuencia || "diario",
+      diasSemana: diasSemana || ["lun", "mar", "mie", "jue", "vie", "sab", "dom"],
+      franjaHoraria: franjaHoraria || "libre",
       categoria: traduccion.categoria,
-      recurso: recursos || traduccion.recurso,
+      recurso: recurso || traduccion.recurso,
       racha: 0,
-      checksSemana: 0,
-      ultimoCheck: null
+      checksTotal: 0,
+      ultimoCheck: null,
+      creadoEl: new Date().toISOString()
     };
 
     this.estado.sendas.push(nuevaSenda);
@@ -171,7 +121,50 @@ class GestorEstado {
     return nuevaSenda;
   }
 
-  // Acciones de Cadenas (Tensadas)
+  async editarSenda(id, datosActualizados) {
+    const idx = this.estado.sendas.findIndex(s => s.id === id);
+    if (idx !== -1) {
+      this.estado.sendas[idx] = { ...this.estado.sendas[idx], ...datosActualizados };
+      await this.guardar();
+    }
+  }
+
+  async eliminarSenda(id) {
+    this.estado.sendas = this.estado.sendas.filter(s => s.id !== id);
+    await this.guardar();
+  }
+
+  // --- ACCIONES DE CADENAS ---
+  async agregarCadena({ textoNatural, nombreLore, icono }) {
+    const traduccion = this.traductor.traducirCadena(textoNatural);
+    const nuevaCadena = {
+      id: `cadena_${Date.now()}`,
+      textoNatural: textoNatural,
+      nombreLore: nombreLore || traduccion.lore,
+      icono: icono || traduccion.icono,
+      recaidasMes: 0,
+      ultimaRecaida: null,
+      creadoEl: new Date().toISOString()
+    };
+
+    this.estado.cadenas.push(nuevaCadena);
+    await this.guardar();
+    return nuevaCadena;
+  }
+
+  async editarCadena(id, datosActualizados) {
+    const idx = this.estado.cadenas.findIndex(c => c.id === id);
+    if (idx !== -1) {
+      this.estado.cadenas[idx] = { ...this.estado.cadenas[idx], ...datosActualizados };
+      await this.guardar();
+    }
+  }
+
+  async eliminarCadena(id) {
+    this.estado.cadenas = this.estado.cadenas.filter(c => c.id !== id);
+    await this.guardar();
+  }
+
   async registrarCadenaTensada(id) {
     const hoy = GameEngine.fechaHoyYMD();
     const ahoraISO = new Date().toISOString();
@@ -181,22 +174,66 @@ class GestorEstado {
     cadena.recaidasMes = (cadena.recaidasMes || 0) + 1;
     cadena.ultimaRecaida = hoy;
 
-    // Registrar en historial para auto-evidencia
     this.estado.historialTensadas.push({
       cadenaId: id,
       cadenaNombre: cadena.nombreLore,
+      textoNatural: cadena.textoNatural,
       fecha: hoy,
       timestamp: ahoraISO
     });
 
-    // Otorgar +5 de Claridad / Moral por volver y admitirlo
     this.estado.recursos.moral = (this.estado.recursos.moral || 0) + 2;
-
     await this.guardar();
     return cadena;
   }
 
-  // Acciones de Conocimiento / Radio
+  // --- ACCIONES DE FAROS ---
+  async agregarFaro({ textoNatural, nombreLore, metaMonto, actualMonto, unidad, icono }) {
+    const nuevoFaro = {
+      id: `faro_${Date.now()}`,
+      textoNatural: textoNatural,
+      nombreLore: nombreLore || `Faro: ${textoNatural}`,
+      metaMonto: Number(metaMonto) || 1000,
+      actualMonto: Number(actualMonto) || 0,
+      unidad: unidad || "$",
+      icono: icono || "🕯️",
+      creadoEl: new Date().toISOString()
+    };
+
+    this.estado.faros.push(nuevoFaro);
+    await this.guardar();
+    return nuevoFaro;
+  }
+
+  async editarFaro(id, datosActualizados) {
+    const idx = this.estado.faros.findIndex(f => f.id === id);
+    if (idx !== -1) {
+      this.estado.faros[idx] = { ...this.estado.faros[idx], ...datosActualizados };
+      await this.guardar();
+    }
+  }
+
+  async eliminarFaro(id) {
+    this.estado.faros = this.estado.faros.filter(f => f.id !== id);
+    await this.guardar();
+  }
+
+  // --- BITÁCORA Y EVENTOS ---
+  async registrarEventoEnBitacora({ eventoId, titulo, decision, resultado, fecha }) {
+    if (!this.estado.bitacoraEventos) this.estado.bitacoraEventos = [];
+    this.estado.bitacoraEventos.unshift({
+      id: `cronica_${Date.now()}`,
+      eventoId,
+      titulo,
+      decision,
+      resultado,
+      fecha: fecha || GameEngine.fechaHoyYMD(),
+      timestamp: new Date().toISOString()
+    });
+    await this.guardar();
+  }
+
+  // --- CONOCIMIENTO / RADIO ---
   async adquirirConocimiento(conocimientoId) {
     if (!this.estado.conocimientosAdquiridos.includes(conocimientoId)) {
       this.estado.conocimientosAdquiridos.push(conocimientoId);
@@ -208,7 +245,7 @@ class GestorEstado {
   }
 
   async actualizarCiudad(ciudad) {
-    this.estado.perfil.ciudad = ciudad || "Mazatlán";
+    this.estado.perfil.ciudad = ciudad || "Yermo Central";
     await this.guardar();
   }
 

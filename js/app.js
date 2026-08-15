@@ -1,6 +1,6 @@
 /**
  * UPROTA Beta v1.0 - Entrada Principal
- * Inicializa estado, módulos y enrutamiento entre vistas.
+ * Inicializa estado, módulos, onboarding y enrutamiento entre vistas.
  */
 
 import { estadoApp } from './core/estado.js';
@@ -10,6 +10,7 @@ import { RefugioModulo } from './modulos/refugio.js';
 import { RadioModulo } from './modulos/radio.js';
 import { HogarModulo } from './modulos/hogar.js';
 import { EventosModulo } from './modulos/eventos.js';
+import { OnboardingModulo } from './modulos/onboarding.js';
 
 class App {
   constructor() {
@@ -41,6 +42,9 @@ class App {
 
     // Cargar datos persistidos
     await estadoApp.cargar();
+
+    // Mostrar onboarding si es primera vez
+    OnboardingModulo.mostrarSiEsNecesario();
 
     // Registrar Service Worker para PWA
     this.registrarServiceWorker();
