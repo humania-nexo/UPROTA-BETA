@@ -1,0 +1,284 @@
+/* Estilos para el Tablón de Tareas, Sendas, Cadenas y Faros */
+
+.tablon-header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+}
+
+.tablon-title-wrap h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.tablon-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.btn-crear-senda {
+  background: var(--bg-surface-elevated);
+  border: 1px dashed var(--border-accent);
+  color: var(--accent-amber-light);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-crear-senda:hover {
+  background: var(--bg-surface-active);
+  border-style: solid;
+}
+
+/* Secciones del Tablón */
+.tablon-seccion {
+  margin-bottom: 24px;
+}
+
+.seccion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.seccion-titulo {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent-amber-light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.seccion-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Lista de Sendas (Hábitos a Forjar) */
+.sendas-grid, .cadenas-grid, .faros-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-item {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.card-item:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.card-item.cumplido {
+  border-color: rgba(74, 222, 128, 0.4);
+  background-color: rgba(74, 222, 128, 0.04);
+}
+
+.card-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.check-trigger {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border-strong);
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: transparent;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.check-trigger:hover {
+  border-color: var(--accent-amber);
+}
+
+.card-item.cumplido .check-trigger {
+  background: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--bg-primary);
+  transform: scale(1.05);
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-nombre-lore {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.card-nombre-real {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tag-freq {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 6px;
+}
+
+.card-recompensa {
+  font-family: var(--font-mono);
+  color: var(--accent-amber-light);
+  font-weight: 600;
+}
+
+.barra-progreso-wrap {
+  width: 100%;
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.barra-progreso {
+  height: 100%;
+  background: var(--accent-rust);
+  transition: width 0.3s ease;
+}
+
+/* Cadenas (Hábitos a Romper) */
+.card-cadena {
+  border-left: 3px solid var(--accent-rust);
+}
+
+.btn-cadena-tensa {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--accent-red-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-cadena-tensa:hover {
+  background: rgba(248, 113, 113, 0.1);
+  border-color: var(--accent-red-soft);
+}
+
+/* Faros (Metas / Ahorro) */
+.card-faro {
+  border-left: 3px solid var(--accent-blue);
+}
+
+.faro-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  margin-bottom: 4px;
+}
+
+/* Formulario Modal */
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+}
+
+.form-input:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--accent-amber);
+}
+
+.traduccion-preview {
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-accent);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  margin-top: 10px;
+}
+
+.traduccion-preview-title {
+  font-size: 0.72rem;
+  color: var(--accent-amber-light);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.traduccion-preview-lore {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 2px 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}

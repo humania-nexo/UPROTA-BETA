@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1816">
+  <meta name="description" content="UPROTA: Tu vida cotidiana como aventura de supervivencia en el Yermo.">
+  <title>UPROTA - Refugio del Yermo</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/tablon.css">
+  <link rel="stylesheet" href="css/refugio.css">
+  <link rel="stylesheet" href="css/radio.css">
+  <link rel="stylesheet" href="css/hogar.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <!-- Header Superior -->
+    <header class="app-header">
+      <div class="header-main">
+        <div class="refugio-badge" id="badge-refugio">
+          <span class="refugio-icon" id="header-refugio-icon">🏚️</span>
+          <div class="refugio-meta">
+            <span class="refugio-nombre" id="header-refugio-nombre">Refugio: Punto Cero</span>
+            <span class="refugio-dia" id="header-refugio-dia">Día 1</span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="btn-abrir-hogar" class="btn-hogar-header" title="El Hogar (Espacio de Luz)">
+            🔥 <span class="badge-hogar-text">El Hogar</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra rápida de recursos -->
+      <div class="recursos-bar" id="recursos-bar">
+        <div class="recurso-item" title="Tablas de madera"><span class="rec-icon">🪵</span> <span id="rec-tablas">0</span></div>
+        <div class="recurso-item" title="Provisiones"><span class="rec-icon">🥕</span> <span id="rec-provisiones">0</span></div>
+        <div class="recurso-item" title="Clavos y chatarra"><span class="rec-icon">🔩</span> <span id="rec-clavos">0</span></div>
+        <div class="recurso-item" title="Agua pura"><span class="rec-icon">💧</span> <span id="rec-agua">0</span></div>
+        <div class="recurso-item" title="Moral del refugio"><span class="rec-icon">🔥</span> <span id="rec-moral">5</span></div>
+      </div>
+    </header>
+
+    <!-- Área de Alertas/Eventos Dinámicos -->
+    <div id="banner-notificacion" class="banner-notificacion hidden"></div>
+
+    <!-- Contenido Principal de Vistas -->
+    <main class="app-content">
+      <!-- VISTA 1: TABLÓN (Checklist diario de 20 segundos) -->
+      <section id="vista-tablon" class="vista-seccion active">
+        <!-- Renderizado dinámico desde tablon.js -->
+      </section>
+
+      <!-- VISTA 2: REFUGIO (Estado y construcciones) -->
+      <section id="vista-refugio" class="vista-seccion">
+        <!-- Renderizado dinámico desde refugio.js -->
+      </section>
+
+      <!-- VISTA 3: RADIO DEL YERMO (Conocimiento real y transmisiones) -->
+      <section id="vista-radio" class="vista-seccion">
+        <!-- Renderizado dinámico desde radio.js -->
+      </section>
+
+      <!-- VISTA 4: EL HOGAR (Pantalla de resguardo y validación) -->
+      <section id="vista-hogar" class="vista-seccion">
+        <!-- Renderizado dinámico desde hogar.js -->
+      </section>
+    </main>
+
+    <!-- Barra de Navegación Inferior (Tabs) -->
+    <nav class="app-nav">
+      <button class="nav-btn active" data-vista="tablon" id="nav-tablon">
+        <span class="nav-icon">📋</span>
+        <span class="nav-label">Tablón</span>
+      </button>
+      <button class="nav-btn" data-vista="refugio" id="nav-refugio">
+        <span class="nav-icon">🛖</span>
+        <span class="nav-label">Refugio</span>
+      </button>
+      <button class="nav-btn" data-vista="radio" id="nav-radio">
+        <span class="nav-icon">📻</span>
+        <span class="nav-label">Radio</span>
+        <span class="radio-ping hidden" id="radio-ping"></span>
+      </button>
+      <button class="nav-btn" data-vista="hogar" id="nav-hogar">
+        <span class="nav-icon">🕯️</span>
+        <span class="nav-label">El Hogar</span>
+      </button>
+    </nav>
+
+    <!-- Modales Globales -->
+    <div id="modal-container" class="modal-overlay hidden">
+      <div class="modal-card" id="modal-content">
+        <!-- Inyección dinámica -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Script principal modular -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
