@@ -1,6 +1,5 @@
 /**
- * Módulo de UI: Refugio, Cimientos y Bitácora de Crónicas
- * Muestra el estado evolutivo del asentamiento y permite consultar la historia.
+ * Módulo de UI: Refugio, Progresión de 10 Niveles y Bitácora de Crónicas
  */
 
 import { GameEngine } from '../core/engine.js';
@@ -9,13 +8,14 @@ import { PROGRAMAS_RADIO } from '../data/radio_programas.js';
 export class RefugioModulo {
   constructor(contenedor) {
     this.contenedor = contenedor;
-    this.tabSubseccion = 'refugio'; // 'refugio' o 'bitacora'
+    this.tabSubseccion = 'refugio'; // 'refugio', 'niveles', 'bitacora'
   }
 
   render(estado) {
-    const infoNivel = GameEngine.calcularNivelRefugio(estado.recursos, estado.cimientos);
+    const infoNivel = GameEngine.calcularNivelRefugio(estado.recursos);
     const conocimientos = estado.conocimientosAdquiridos || [];
     const bitacora = estado.bitacoraEventos || [];
+    const sig = infoNivel.siguienteNivel;
 
     this.contenedor.innerHTML = `
       <div class="refugio-view-header">
@@ -26,6 +26,26 @@ export class RefugioModulo {
             <span>Refugio de ${estado.perfil.nombre}</span>
           </div>
           <p class="refugio-narrativa-texto">${infoNivel.descripcion}</p>
+          
+          <div class="refugio-capacidad-box">
+            <span>Capacidad actual:</span>
+            <strong>🏃 ${infoNivel.maxSendas} Sendas &bull; 🕯️ ${infoNivel.maxFaros} Faros</strong>
+          </div>
+
+          ${sig ? `
+            <div class="refugio-sig-nivel-box">
+              <div class="sig-nivel-head">
+                <span>Próximo: Nivel ${sig.nivel} - ${sig.nombre}</span>
+                <span style="color: var(--accent-amber-light);">+2 Sendas</span>
+              </div>
+              <div class="sig-requisitos-row">
+                ${this.renderRequisitosChips(estado.recursos, sig.requisitos)}
+              </div>
+            </div>
+          ` : `
+            <div class="refugio-max-level">👑 ¡Has alcanzado la cima: La Ciudadela Libre!</div>
+          `}
+
           <div class="refugio-clima-box">
             <strong>Estado del Yermo:</strong> ${infoNivel.clima}
           </div>
@@ -35,17 +55,38 @@ export class RefugioModulo {
       <!-- Selector de Subsecciones -->
       <div class="refugio-subnav">
         <button class="btn-subnav ${this.tabSubseccion === 'refugio' ? 'active' : ''}" id="btn-sub-refugio">
-          🛖 Estructuras & Almacén
+          🛖 Almacén & Cimientos
+        </button>
+        <button class="btn-subnav ${this.tabSubseccion === 'niveles' ? 'active' : ''}" id="btn-sub-niveles">
+          🗺️ 10 Niveles
         </button>
         <button class="btn-subnav ${this.tabSubseccion === 'bitacora' ? 'active' : ''}" id="btn-sub-bitacora">
-          📜 Bitácora & Crónicas (${bitacora.length})
+          📜 Bitácora (${bitacora.length})
         </button>
       </div>
 
-      ${this.tabSubseccion === 'refugio' ? this.renderEstructuras(conocimientos, estado) : this.renderBitacora(bitacora)}
+      ${this.renderSubseccion(this.tabSubseccion, conocimientos, estado, bitacora)}
     `;
 
     this.vincularSubnav(estado);
+  }
+
+  renderSubseccion(tab, conocimientos, estado, bitacora) {
+    if (tab === 'niveles') return this.renderNivelesMapa(estado);
+    if (tab === 'bitacora') return this.renderBitacora(bitacora);
+    return this.renderEstructuras(conocimientos, estado);
+  }
+
+  renderRequisitosChips(recursos, req) {
+    return Object.entries(req).map(([rec, cant]) => {
+      const actual = recursos[rec] || 0;
+      const cumplido = actual >= cant;
+      return `
+        <span class="req-chip ${cumplido ? 'ok' : ''}">
+          ${this.getEmojiRecurso(rec)} ${actual}/${cant}
+        </span>
+      `;
+    }).join(' ');
   }
 
   renderEstructuras(conocimientos, estado) {
@@ -90,7 +131,7 @@ export class RefugioModulo {
               <span class="cimiento-nombre">🪵 Tablas de Madera</span>
               <span class="cimiento-integridad alta">${estado.recursos.tablas} unidades</span>
             </div>
-            <div class="cimiento-desc">Usadas para reforzar paredes y defensas.</div>
+            <div class="cimiento-desc">Usadas para reforzar paredes, subir de nivel y fortificar.</div>
           </div>
           <div class="cimiento-card">
             <div class="cimiento-header">
@@ -115,6 +156,39 @@ export class RefugioModulo {
           </div>
         </div>
       </section>
+    `;
+  }
+
+  renderNivelesMapa(estado) {
+    const infoActual = GameEngine.calcularNivelRefugio(estado.recursos);
+
+    return `
+      <div class="mapa-niveles-wrap" style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
+        ${GameEngine.NIVELES_REFUGIO.map(n => {
+          const esActual = n.nivel === infoActual.nivel;
+          const superado = n.nivel < infoActual.nivel;
+
+          return `
+            <div class="card-item ${esActual ? 'nivel-actual' : ''}" style="${esActual ? 'border-color: var(--accent-amber); background: rgba(217, 119, 6, 0.08);' : ''}">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">
+                  ${n.icono} Nivel ${n.nivel}: ${n.nombre}
+                </div>
+                <div>
+                  ${esActual ? `<span class="badge-desbloqueo-radio" style="background: var(--accent-rust); color: #fff;">Actual</span>` : ''}
+                  ${superado ? `<span style="color: var(--accent-green); font-size: 0.8rem;">✓ Conquistado</span>` : ''}
+                </div>
+              </div>
+              <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 4px;">
+                Ranuras: 🏃 ${n.maxSendas} Sendas &bull; 🕯️ ${n.maxFaros} Faros
+              </div>
+              <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--accent-amber-light); margin-top: 2px;">
+                ${n.requisitoTexto}
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
     `;
   }
 
@@ -147,11 +221,19 @@ export class RefugioModulo {
 
   vincularSubnav(estado) {
     const btnRef = this.contenedor.querySelector('#btn-sub-refugio');
+    const btnNiv = this.contenedor.querySelector('#btn-sub-niveles');
     const btnBit = this.contenedor.querySelector('#btn-sub-bitacora');
 
     if (btnRef) {
       btnRef.addEventListener('click', () => {
         this.tabSubseccion = 'refugio';
+        this.render(estado);
+      });
+    }
+
+    if (btnNiv) {
+      btnNiv.addEventListener('click', () => {
+        this.tabSubseccion = 'niveles';
         this.render(estado);
       });
     }
@@ -162,5 +244,10 @@ export class RefugioModulo {
         this.render(estado);
       });
     }
+  }
+
+  getEmojiRecurso(tipo) {
+    const mapa = { tablas: '🪵', provisiones: '🥕', clavos: '🔩', agua: '💧', moral: '🔥' };
+    return mapa[tipo] || '📦';
   }
 }

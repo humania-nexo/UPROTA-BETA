@@ -1,5 +1,5 @@
 /**
- * Módulo de UI: Tablón (Checklist Diario y Configuración Detallada)
+ * Módulo de UI: Tablón (Checklist Diario y Límites de Ranuras Make-to-Win)
  */
 
 import { estadoApp } from '../core/estado.js';
@@ -16,13 +16,19 @@ export class TablonModulo {
   render(estado) {
     const hoy = GameEngine.fechaHoyYMD();
     const diaNum = GameEngine.calcularDiasDesdeInicio(estado.perfil.fechaInicio);
+    const infoRefugio = GameEngine.calcularNivelRefugio(estado.recursos);
+
     const totalLabores = (estado.sendas.length + estado.cadenas.length + estado.faros.length);
+    const numSendas = estado.sendas.length;
+    const maxSendas = infoRefugio.maxSendas;
+    const numFaros = estado.faros.length;
+    const maxFaros = infoRefugio.maxFaros;
 
     this.contenedor.innerHTML = `
       <div class="tablon-header">
         <div class="tablon-title-wrap">
           <h1>Tablón de Labores</h1>
-          <span class="tablon-subtitle">Día ${diaNum} &bull; ${estado.perfil.nombre} (${estado.perfil.ciudad})</span>
+          <span class="tablon-subtitle">Día ${diaNum} &bull; ${estado.perfil.nombre} &bull; Refugio Nv.${infoRefugio.nivel}</span>
         </div>
         <div class="header-tablon-btns">
           <button id="btn-menu-crear" class="btn-crear-senda">
@@ -35,12 +41,18 @@ export class TablonModulo {
       ${totalLabores === 0 ? this.renderZeroState() : ''}
 
       <!-- SECCIÓN 1: SENDAS A FORJAR -->
-      ${estado.sendas.length > 0 ? `
-        <section class="tablon-seccion">
-          <div class="seccion-header">
-            <span class="seccion-titulo">🏃 Sendas a Forjar</span>
-            <span class="seccion-sub">Toca la tarjeta para configurar</span>
-          </div>
+      <section class="tablon-seccion">
+        <div class="seccion-header">
+          <span class="seccion-titulo">
+            🏃 Sendas a Forjar
+            <span class="badge-slots ${numSendas >= maxSendas ? 'lleno' : ''}">
+              ${numSendas}/${maxSendas} ranuras
+            </span>
+          </span>
+          <span class="seccion-sub">Toca la tarjeta para configurar</span>
+        </div>
+
+        ${estado.sendas.length > 0 ? `
           <div class="sendas-grid">
             ${estado.sendas.map(senda => {
               const cumplidoHoy = senda.ultimoCheck === hoy;
@@ -71,8 +83,12 @@ export class TablonModulo {
               `;
             }).join('')}
           </div>
-        </section>
-      ` : ''}
+        ` : (totalLabores > 0 ? `
+          <div class="slot-vacio-aviso" id="btn-crear-senda-directo">
+            + Forjar una Senda (${numSendas}/${maxSendas} disponibles)
+          </div>
+        ` : '')}
+      </section>
 
       <!-- SECCIÓN 2: CADENAS A ROMPER -->
       ${estado.cadenas.length > 0 ? `
@@ -108,12 +124,18 @@ export class TablonModulo {
       ` : ''}
 
       <!-- SECCIÓN 3: FAROS (Metas de Ahorro / Rumbo) -->
-      ${estado.faros.length > 0 ? `
-        <section class="tablon-seccion">
-          <div class="seccion-header">
-            <span class="seccion-titulo">🕯️ Faros de Rumbo</span>
-            <span class="seccion-sub">Toca para actualizar avance</span>
-          </div>
+      <section class="tablon-seccion">
+        <div class="seccion-header">
+          <span class="seccion-titulo">
+            🕯️ Faros de Rumbo
+            <span class="badge-slots ${numFaros >= maxFaros ? 'lleno' : ''}">
+              ${numFaros}/${maxFaros} ranuras
+            </span>
+          </span>
+          <span class="seccion-sub">Metas de largo plazo</span>
+        </div>
+
+        ${estado.faros.length > 0 ? `
           <div class="faros-grid">
             ${estado.faros.map(faro => {
               const porcentaje = Math.min(100, Math.round((faro.actualMonto / faro.metaMonto) * 100)) || 0;
@@ -136,11 +158,15 @@ export class TablonModulo {
               `;
             }).join('')}
           </div>
-        </section>
-      ` : ''}
+        ` : (totalLabores > 0 ? `
+          <div class="slot-vacio-aviso" id="btn-crear-faro-directo">
+            + Fijar un Faro (${numFaros}/${maxFaros} disponibles)
+          </div>
+        ` : '')}
+      </section>
     `;
 
-    this.vincularEventos();
+    this.vincularEventos(infoRefugio);
   }
 
   renderZeroState() {
@@ -148,7 +174,7 @@ export class TablonModulo {
       <div class="zero-state-card">
         <div class="zero-state-icon">🏕️</div>
         <h3>Tu Refugio está en Punto Cero</h3>
-        <p>No tienes labores impuestas de fábrica. Tú decides qué hábitos y metas sostendrán tu supervivencia.</p>
+        <p>Inicias con <strong>3 ranuras de Senda</strong> y <strong>1 ranura de Faro</strong>. A medida que cumplas tus labores y acumules recursos, tu refugio subirá de nivel desbloqueando más espacio.</p>
         
         <div class="zero-state-actions">
           <button id="btn-zero-senda" class="btn-primary">
@@ -163,7 +189,7 @@ export class TablonModulo {
         </div>
 
         <div class="zero-state-suggestions">
-          <div class="sugg-title">O agrega una labor sugerida con 1 toque:</div>
+          <div class="sugg-title">O añade una labor de auxilio inicial con 1 toque:</div>
           <div class="sugg-chips">
             <button class="chip-sugg" data-tarea="Trotar o caminar 20 min">🏃 Patrulla de caminata</button>
             <button class="chip-sugg" data-tarea="Lavar los platos de hoy">🥣 Purificar utensilios</button>
@@ -175,7 +201,7 @@ export class TablonModulo {
     `;
   }
 
-  vincularEventos() {
+  vincularEventos(infoRefugio) {
     // Check rápido en sendas
     this.contenedor.querySelectorAll('.btn-check-senda').forEach(btn => {
       btn.addEventListener('click', async (e) => {
@@ -222,32 +248,111 @@ export class TablonModulo {
       });
     });
 
-    // Botones de creación
+    // Intentar crear con validación de límite
+    const intentarCrearSenda = () => {
+      if (estadoApp.estado.sendas.length >= infoRefugio.maxSendas) {
+        this.mostrarModalLimiteAlcanzado('senda', infoRefugio);
+      } else {
+        this.abrirModalCrearSenda();
+      }
+    };
+
+    const intentarCrearFaro = () => {
+      if (estadoApp.estado.faros.length >= infoRefugio.maxFaros) {
+        this.mostrarModalLimiteAlcanzado('faro', infoRefugio);
+      } else {
+        this.abrirModalCrearFaro();
+      }
+    };
+
     const btnCrear = this.contenedor.querySelector('#btn-menu-crear');
     if (btnCrear) {
-      btnCrear.addEventListener('click', () => this.abrirMenuTipoCreacion());
+      btnCrear.addEventListener('click', () => this.abrirMenuTipoCreacion(infoRefugio));
     }
 
     const btnZeroSenda = this.contenedor.querySelector('#btn-zero-senda');
-    if (btnZeroSenda) btnZeroSenda.addEventListener('click', () => this.abrirModalCrearSenda());
+    if (btnZeroSenda) btnZeroSenda.addEventListener('click', intentarCrearSenda);
 
     const btnZeroCadena = this.contenedor.querySelector('#btn-zero-cadena');
     if (btnZeroCadena) btnZeroCadena.addEventListener('click', () => this.abrirModalCrearCadena());
 
     const btnZeroFaro = this.contenedor.querySelector('#btn-zero-faro');
-    if (btnZeroFaro) btnZeroFaro.addEventListener('click', () => this.abrirModalCrearFaro());
+    if (btnZeroFaro) btnZeroFaro.addEventListener('click', intentarCrearFaro);
+
+    const btnSendaDirecto = this.contenedor.querySelector('#btn-crear-senda-directo');
+    if (btnSendaDirecto) btnSendaDirecto.addEventListener('click', intentarCrearSenda);
+
+    const btnFaroDirecto = this.contenedor.querySelector('#btn-crear-faro-directo');
+    if (btnFaroDirecto) btnFaroDirecto.addEventListener('click', intentarCrearFaro);
 
     // Chips de sugerencia rápida
     this.contenedor.querySelectorAll('.chip-sugg').forEach(chip => {
       chip.addEventListener('click', async (e) => {
+        if (estadoApp.estado.sendas.length >= infoRefugio.maxSendas) {
+          this.mostrarModalLimiteAlcanzado('senda', infoRefugio);
+          return;
+        }
         const texto = e.currentTarget.dataset.tarea;
         await estadoApp.agregarSenda({ textoNatural: texto });
       });
     });
   }
 
+  // Modal cuando se alcanza el límite de ranuras
+  mostrarModalLimiteAlcanzado(tipo, infoRefugio) {
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
+    if (!modalContainer || !modalContent) return;
+
+    const esSenda = tipo === 'senda';
+    const sig = infoRefugio.siguienteNivel;
+
+    let reqTexto = "¡Has alcanzado la cima de la Ciudadela!";
+    if (sig) {
+      reqTexto = Object.entries(sig.requisitos)
+        .map(([r, c]) => `${this.getEmojiRecurso(r)} ${c}`)
+        .join(' &bull; ');
+    }
+
+    modalContent.innerHTML = `
+      <div style="text-align: center;">
+        <div style="font-size: 2.4rem; margin-bottom: 8px;">🛖⚠️</div>
+        <h2 style="font-size: 1.2rem; color: #fbbf24; margin-bottom: 8px;">
+          Límite de Ranuras Alcanzado (${esSenda ? infoRefugio.maxSendas : infoRefugio.maxFaros} max)
+        </h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 16px;">
+          Tu refugio actual (<strong>Nivel ${infoRefugio.nivel}: ${infoRefugio.nombre}</strong>) solo puede sostener ${esSenda ? infoRefugio.maxSendas : infoRefugio.maxFaros} ${esSenda ? 'sendas' : 'faros'} sin dispersar tu energía.
+        </p>
+
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-strong); border-radius: var(--radius-md); padding: 14px; text-align: left; margin-bottom: 16px;">
+          <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-amber-light); font-weight: 700; margin-bottom: 4px;">
+            🏗️ Cómo desbloquear más ranuras (Make-to-Win):
+          </div>
+          <div style="font-size: 0.84rem; color: var(--text-primary); line-height: 1.4;">
+            Cumple tus labores actuales para reunir materiales y subir tu refugio a <strong>Nivel ${sig ? sig.nivel : 10}: ${sig ? sig.nombre : 'Máximo'}</strong> (+2 ranuras de Senda).
+          </div>
+          ${sig ? `
+            <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--accent-amber-light); margin-top: 8px; border-top: 1px dashed var(--border-subtle); padding-top: 6px;">
+              Requisitos: ${reqTexto}
+            </div>
+          ` : ''}
+        </div>
+
+        <button id="btn-cerrar-limite" class="btn-primary" style="width: 100%;">
+          Entendido, a forjar con disciplina
+        </button>
+      </div>
+    `;
+
+    modalContent.querySelector('#btn-cerrar-limite').addEventListener('click', () => {
+      modalContainer.classList.add('hidden');
+    });
+
+    modalContainer.classList.remove('hidden');
+  }
+
   // --- MENÚ Y MODALES DE CREACIÓN ---
-  abrirMenuTipoCreacion() {
+  abrirMenuTipoCreacion(infoRefugio) {
     const modalContainer = document.getElementById('modal-container');
     const modalContent = document.getElementById('modal-content');
     if (!modalContainer || !modalContent) return;
@@ -256,13 +361,13 @@ export class TablonModulo {
       <h2 style="font-size: 1.15rem; margin-bottom: 14px; color: var(--text-primary);">¿Qué deseas forjar?</h2>
       <div style="display: flex; flex-direction: column; gap: 10px;">
         <button id="btn-elegir-senda" class="btn-primary" style="justify-content: flex-start; padding: 12px 16px;">
-          🏃 <strong>Senda (Hábito Positivo)</strong> - Ej: Trotar, leer, ordenar, orar
+          🏃 <strong>Senda (Hábito Positivo)</strong> [${estadoApp.estado.sendas.length}/${infoRefugio.maxSendas}]
         </button>
         <button id="btn-elegir-cadena" class="btn-secondary" style="justify-content: flex-start; padding: 12px 16px;">
-          ⛓️ <strong>Cadena a Romper (Hábito a Dejar)</strong> - Ej: Fumar, refresco, redes
+          ⛓️ <strong>Cadena a Romper (Hábito a Dejar)</strong>
         </button>
         <button id="btn-elegir-faro" class="btn-secondary" style="justify-content: flex-start; padding: 12px 16px;">
-          🕯️ <strong>Faro de Rumbo (Meta de Ahorro / Largo Plazo)</strong> - Ej: Ahorrar $5,000
+          🕯️ <strong>Faro de Rumbo (Meta de Ahorro)</strong> [${estadoApp.estado.faros.length}/${infoRefugio.maxFaros}]
         </button>
       </div>
       <div class="modal-actions" style="margin-top: 14px;">
@@ -271,9 +376,24 @@ export class TablonModulo {
     `;
 
     modalContent.querySelector('#btn-cerrar-menu-crear').addEventListener('click', () => modalContainer.classList.add('hidden'));
-    modalContent.querySelector('#btn-elegir-senda').addEventListener('click', () => this.abrirModalCrearSenda());
+
+    modalContent.querySelector('#btn-elegir-senda').addEventListener('click', () => {
+      if (estadoApp.estado.sendas.length >= infoRefugio.maxSendas) {
+        this.mostrarModalLimiteAlcanzado('senda', infoRefugio);
+      } else {
+        this.abrirModalCrearSenda();
+      }
+    });
+
     modalContent.querySelector('#btn-elegir-cadena').addEventListener('click', () => this.abrirModalCrearCadena());
-    modalContent.querySelector('#btn-elegir-faro').addEventListener('click', () => this.abrirModalCrearFaro());
+
+    modalContent.querySelector('#btn-elegir-faro').addEventListener('click', () => {
+      if (estadoApp.estado.faros.length >= infoRefugio.maxFaros) {
+        this.mostrarModalLimiteAlcanzado('faro', infoRefugio);
+      } else {
+        this.abrirModalCrearFaro();
+      }
+    });
 
     modalContainer.classList.remove('hidden');
   }
@@ -407,7 +527,6 @@ export class TablonModulo {
         </h2>
       </div>
 
-      <!-- Descripción original en lenguaje natural intacto -->
       <div class="lenguaje-natural-box">
         <span class="ln-tag">Tu labor en lenguaje natural:</span>
         <div class="ln-texto">"${senda.textoNatural}"</div>
