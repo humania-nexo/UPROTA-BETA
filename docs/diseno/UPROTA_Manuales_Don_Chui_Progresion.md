@@ -44,6 +44,25 @@ Don Chui te entrega el **Tomo I**, y por primera vez el Prota (y el jugador) apr
 
 ---
 
+## 3.1 Evento Semanal 1 (Día 7): El Rincón Royido y el Nacimiento de los Faros
+
+Cada semana el refugio enfrenta un **evento o adversidad única del Yermo** (clima, desgaste, saqueos, plagas). En el **Día 7**, cuando el Prota empieza a sentirse confiado tras dominar el fuego y el agua del Tomo I, ocurre el primer golpe de realidad:
+
+### La Adversidad del Día 7:
+Al despertar, descubres que una colonia de ratones de campo se coló por un hueco entre las tablas del suelo y **royó las provisiones guardadas**. No solo mordisquearon el alimento, sino que lo contaminaron con orina y excremento. En el Yermo, comer alimento contaminado por roedores es una sentencia de fiebres y parásitos: **las provisiones deben desecharse por completo**.
+
+### El Impacto Psicológico y Narrativo:
+El Prota experimenta en carne propia lo que significa **vivir al día sin un fondo de emergencia**. La naturaleza no avisa.
+
+### La Consecuencia Mecánica: Nacimiento de los Faros
+De esta adversidad nacen dos decisiones firmes:
+1. **La Alacena Colgada:** Construir una caja suspendida con cuerdas y alambre para que los roedores no alcancen el alimento.
+2. **El Faro de Ahorro (Obligatorio — 6 Meses, 5%):** El Prota comprende que para no quedar indefenso ante imprevistos, es vital cultivar la disciplina innegociable de apartar el **5% de los ingresos fijos** en un fondo de honor. 
+
+> *Los Faros no nacen como una opción fría de menú; nacen como la respuesta consciente del sobreviviente ante la fragilidad de la vida.*
+
+---
+
 ## 4. Catálogo de los 3 Tomos de Supervivencia (15 Técnicas)
 
 ### 📦 TOMO I: "Primeros Pasos — Lo Urgente para no Morir" (Entrega: Día 3)
