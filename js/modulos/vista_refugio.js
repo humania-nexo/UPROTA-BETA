@@ -24,19 +24,21 @@ export class VistaRefugio {
         </div>
         <p class="refugio-desc">${infoNivel.descripcion}</p>
 
-        <!-- PANEL DE BIOENERGÍA -->
-        <div class="bioenergia-panel">
-          <div class="bioenergia-head">
-            <span>⚡ Bioenergía por Pedal</span>
-            <span>${estado.bioenergia.nivelCarga}% Carga</span>
+        <!-- PANEL DE ENERGÍA (Oculto hasta que se descubran fuentes y almacenamiento) -->
+        ${estado.bioenergia?.biciGeneradorConstruido ? `
+          <div class="bioenergia-panel">
+            <div class="bioenergia-head">
+              <span>⚡ Red Eléctrica del Refugio</span>
+              <span>${estado.bioenergia.nivelCarga}% Almacenado</span>
+            </div>
+            <div class="bioenergia-barra-wrap">
+              <div class="bioenergia-barra" style="width: ${estado.bioenergia.nivelCarga}%;"></div>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">
+              Fuentes conectadas: Bioenergía / Baterías del viejo mundo.
+            </div>
           </div>
-          <div class="bioenergia-barra-wrap">
-            <div class="bioenergia-barra" style="width: ${estado.bioenergia.nivelCarga}%;"></div>
-          </div>
-          <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">
-            Cumple tus Sendas de Cuerpo para pedalear y recargar la batería de la radio y luces LED.
-          </div>
-        </div>
+        ` : ''}
 
         ${evaluacionSubida.posible ? `
           <button id="btn-subir-nivel-refugio" class="btn-yermo-primary" style="width: 100%; margin-top: 8px;">
