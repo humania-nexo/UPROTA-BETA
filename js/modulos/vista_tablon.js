@@ -245,8 +245,7 @@ export class VistaTablon {
     `;
   }
 
-  vincularEventos(estado) {
-    // Check de Sendas
+    // Check de Sendas (Suma/Resta 1 con seguridad)
     this.contenedor.querySelectorAll('[data-senda-idx]').forEach(btn => {
       btn.addEventListener('click', async (e) => {
         e.stopPropagation();
@@ -254,19 +253,45 @@ export class VistaTablon {
         const senda = estado.sendas[idx];
         if (!senda) return;
 
-        senda.cumplidaHoy = !senda.cumplidaHoy;
-        const res = SendasEngine.registrarCumplimiento(senda, senda.cumplidaHoy);
-        estado.sendas[idx] = res.senda;
+        const nuevoEstado = !senda.cumplidaHoy;
+        senda.cumplidaHoy = nuevoEstado;
 
-        if (senda.cumplidaHoy) {
-          // Si es Cuerpo, recargar bioenergía
+        if (nuevoEstado) {
+          // Marcar (+1)
+          senda.diasCumplidos = (senda.diasCumplidos || 0) + 1;
+          senda.diasTotales = (senda.diasTotales || 0) + 1;
+          senda.rachaActual = (senda.rachaActual || 0) + 1;
+          senda.fallosSeguidos = 0;
+
           if (senda.pilar === 'cuerpo') {
             estado.bioenergia = RefugioMundoEngine.recargarBioenergia(estado.bioenergia, 35);
           }
           estado.recursos.tablas = (estado.recursos.tablas || 0) + 1;
+        } else {
+          // Desmarcar (-1 seguro)
+          senda.diasCumplidos = Math.max(0, (senda.diasCumplidos || 1) - 1);
+          senda.diasTotales = Math.max(0, (senda.diasTotales || 1) - 1);
+          senda.rachaActual = Math.max(0, (senda.rachaActual || 1) - 1);
+
+          if (senda.pilar === 'cuerpo') {
+            estado.bioenergia.nivelCarga = Math.max(0, (estado.bioenergia.nivelCarga || 0) - 35);
+          }
+          estado.recursos.tablas = Math.max(0, (estado.recursos.tablas || 1) - 1);
         }
 
+        senda.tasaFallos = senda.diasTotales > 0 ? (senda.diasFallados || 0) / senda.diasTotales : 0;
+
         await estadoApp.guardar();
+      });
+    });
+
+    // Clic en Cadena para Reporte Sincero (Limpio vs Recaída)
+    this.contenedor.querySelectorAll('.cadena-card').forEach((card, index) => {
+      card.addEventListener('click', () => {
+        const cadena = estado.cadenas[index];
+        if (cadena) {
+          this.abrirModalReporteCadena(index, cadena);
+        }
       });
     });
 
@@ -590,6 +615,99 @@ export class VistaTablon {
         cerrar();
       } catch (e) {
         alert(e.message);
+      }
+    });
+
+    modalContainer.classList.remove('hidden');
+  }
+
+  abrirModalReporteCadena(idx, cadena) {
+    if (!cadena) return;
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
+    if (!modalContainer || !modalContent) return;
+
+    modalContent.innerHTML = `
+      <div class="modal-crear-wrap">
+        <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+          <span style="font-size: 1.4rem;">⛓️</span>
+          <h3 style="color: var(--text-primary); font-size: 1.1rem;">${cadena.nombre}</h3>
+        </div>
+        <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px;">
+          Desafío de 21 días continuos para romper el mal hábito. Sé honesto contigo mismo.
+        </p>
+
+        <!-- ESTADO ACTUAL -->
+        <div class="card-yermo" style="background: rgba(0,0,0,0.35); padding: 12px; margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 6px;">
+            <span>Días Limpios:</span>
+            <strong style="color: var(--oro-torta-glow);">${cadena.diasLimpiosConsecutivos || 0}/21 Días</strong>
+          </div>
+          <div style="background: rgba(0,0,0,0.5); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
+            <div style="width: ${Math.min(100, Math.round(((cadena.diasLimpiosConsecutivos || 0) / 21) * 100))}%; background: #22c55e; height: 100%;"></div>
+          </div>
+          <div style="font-size: 0.74rem; color: ${cadena.estadoPuente === 'tiembla' ? '#fca5a5' : 'var(--text-muted)'};">
+            Estado: <strong>${cadena.estadoPuente === 'tiembla' ? '⚠️ El puente tiembla (Recaída reciente)' : 'Paso firme en el puente'}</strong>
+          </div>
+        </div>
+
+        <div style="font-size: 0.82rem; color: var(--text-primary); font-weight: 600; margin-bottom: 8px;">
+          ¿Cómo transcurrió tu día hoy?
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
+          <button id="btn-reporte-limpio" class="btn-yermo-primary" style="background: #15803d; border-color: #22c55e; padding: 10px; font-size: 0.85rem;">
+            ✓ Me mantuve libre hoy (Día Limpio +1)
+          </button>
+          <button id="btn-reporte-recaida" class="btn-yermo-secondary" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.5); color: #fca5a5; padding: 10px; font-size: 0.85rem;">
+            ⚠️ Tuve una recaída hoy (Sinceridad sin culpa)
+          </button>
+        </div>
+
+        <button id="btn-desatar-cadena" class="btn-yermo-secondary" style="width: 100%; font-size: 0.72rem; padding: 6px; color: var(--text-muted);">
+          Desatar / Eliminar esta Cadena
+        </button>
+      </div>
+    `;
+
+    const cerrar = () => modalContainer.classList.add('hidden');
+    modalContent.querySelector('#btn-cerrar-modal').addEventListener('click', cerrar);
+
+    // Reporte Limpio
+    modalContent.querySelector('#btn-reporte-limpio').addEventListener('click', async () => {
+      const res = CadenasEngine.registrarDia(cadena, false);
+      estadoApp.datos.cadenas[idx] = res.cadena;
+      cadena.reportadaHoy = true;
+      await estadoApp.guardar();
+      cerrar();
+    });
+
+    // Reporte Recaída
+    modalContent.querySelector('#btn-reporte-recaida').addEventListener('click', async () => {
+      const res = CadenasEngine.registrarDia(cadena, true);
+      estadoApp.datos.cadenas[idx] = res.cadena;
+      cadena.reportadaHoy = true;
+
+      if (res.activarHogar) {
+        estadoApp.datos.hogarDesbloqueado = true;
+      }
+
+      await estadoApp.guardar();
+      cerrar();
+
+      if (res.activarHogar) {
+        alert('Has tenido 3 recaídas consecutivas. Se ha encendido una luz en El Hogar para que puedas resguardarte y volver a empezar sin culpa.');
+        document.querySelector('[data-tab="hogar"]')?.click();
+      }
+    });
+
+    // Eliminar
+    modalContent.querySelector('#btn-desatar-cadena').addEventListener('click', async () => {
+      if (confirm(`¿Deseas desatar la cadena "${cadena.nombre}"?`)) {
+        estadoApp.datos.cadenas.splice(idx, 1);
+        await estadoApp.guardar();
+        cerrar();
       }
     });
 
