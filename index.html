@@ -30,7 +30,7 @@
             <span id="header-refugio-nivel">Nivel 0 &bull; Punto Cero</span>
           </div>
         </div>
-        <button id="btn-ir-hogar-top" class="btn-hogar-link">
+        <button id="btn-ir-hogar-top" class="btn-hogar-link hidden">
           <span>🕯️</span>
           <span>El Hogar</span>
         </button>
@@ -79,7 +79,7 @@
       <section id="vista-hogar" class="vista-panel"></section>
     </main>
 
-    <!-- NAVEGACIÓN INFERIOR (5 TABS) -->
+    <!-- NAVEGACIÓN INFERIOR (3 TABS BASE + 2 DESBLOQUEABLES) -->
     <nav class="app-bottom-nav">
       <button class="nav-tab-btn active" data-tab="tablon">
         <span class="tab-icon">📋</span>
@@ -93,11 +93,11 @@
         <span class="tab-icon">🧭</span>
         <span class="tab-label">Misiones</span>
       </button>
-      <button class="nav-tab-btn" data-tab="comunicacion">
+      <button id="nav-btn-radio" class="nav-tab-btn hidden" data-tab="comunicacion">
         <span class="tab-icon">📻</span>
         <span class="tab-label">Radio</span>
       </button>
-      <button class="nav-tab-btn" data-tab="hogar">
+      <button id="nav-btn-hogar" class="nav-tab-btn hidden" data-tab="hogar">
         <span class="tab-icon">🕯️</span>
         <span class="tab-label">El Hogar</span>
       </button>

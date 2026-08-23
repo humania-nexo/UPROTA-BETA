@@ -103,6 +103,18 @@ class App {
     if (resAgua) resAgua.textContent = `${estado.recursos.aguaLitros}L`;
     if (resBateria) resBateria.textContent = `${estado.bioenergia.nivelCarga}%`;
 
+    // Visibilidad dinámica de pestañas (Sin spoilers)
+    const btnRadio = document.getElementById('nav-btn-radio');
+    if (btnRadio) {
+      btnRadio.classList.toggle('hidden', (estado.comunicacion?.fase || 0) < 1);
+    }
+
+    const btnHogarTop = document.getElementById('btn-ir-hogar-top');
+    const btnHogarNav = document.getElementById('nav-btn-hogar');
+    const mostrarHogar = !!estado.hogarDesbloqueado;
+    if (btnHogarTop) btnHogarTop.classList.toggle('hidden', !mostrarHogar);
+    if (btnHogarNav) btnHogarNav.classList.toggle('hidden', !mostrarHogar);
+
     // Renderizar vista actual activa
     if (this.vistas[this.tabActual]) {
       this.vistas[this.tabActual].render(estado);
