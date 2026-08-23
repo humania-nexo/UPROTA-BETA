@@ -115,9 +115,16 @@ export class VistaTablon {
         `).join('')}
       </div>
 
-      <button id="btn-nueva-senda" class="btn-yermo-secondary" style="width: 100%; margin-bottom: 18px;">
-        + Trazar Nueva Senda
-      </button>
+      <!-- BOTÓN / AVISO DE NUEVA SENDA -->
+      ${estado.sendas.length < infoRefugio.maxSendas ? `
+        <button id="btn-nueva-senda" class="btn-yermo-secondary" style="width: 100%; margin-bottom: 18px;">
+          + Trazar Nueva Senda (${estado.sendas.length}/${infoRefugio.maxSendas})
+        </button>
+      ` : `
+        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; margin-bottom: 18px; border-style: dashed;">
+          🔒 <strong>Slots de Sendas al tope (${estado.sendas.length}/${infoRefugio.maxSendas}):</strong> Mantén constancia con tus sendas actuales y mejora tu refugio para habilitar más espacios.
+        </div>
+      `}
 
       <!-- SECCIÓN: CADENAS (MALOS HÁBITOS A ROMPER) -->
       <div class="seccion-tablon-head">
@@ -147,9 +154,16 @@ export class VistaTablon {
         `).join('')}
       </div>
 
-      <button id="btn-nueva-cadena" class="btn-yermo-secondary" style="width: 100%; margin-bottom: 18px;">
-        + Atar Nueva Cadena
-      </button>
+      <!-- BOTÓN / AVISO DE NUEVA CADENA -->
+      ${estado.cadenas.length < infoRefugio.maxCadenas ? `
+        <button id="btn-nueva-cadena" class="btn-yermo-secondary" style="width: 100%; margin-bottom: 18px;">
+          + Atar Nueva Cadena (${estado.cadenas.length}/${infoRefugio.maxCadenas})
+        </button>
+      ` : `
+        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; margin-bottom: 18px; border-style: dashed;">
+          🔒 <strong>Slots de Cadenas al tope (${estado.cadenas.length}/${infoRefugio.maxCadenas}):</strong> Rompe una cadena actual o sube el nivel de tu refugio para atar otra.
+        </div>
+      `}
 
       <!-- SECCIÓN: FAROS (AHORRO Y PROYECTOS) -->
       <div class="seccion-tablon-head">
@@ -162,7 +176,11 @@ export class VistaTablon {
       </div>
 
       <div class="faros-list">
-        ${estado.faros.length === 0 ? `
+        ${infoRefugio.maxFaros === 0 ? `
+          <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.82rem;">
+            🔒 <strong>Faros no disponibles:</strong> El sistema de faros se encenderá tras asegurar tu primer almacén de provisiones (Día 7).
+          </div>
+        ` : estado.faros.length === 0 ? `
           <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.84rem;">
             Sin faros encendidos. Activa tu Faro de Ahorro regular (5% a 6 meses).
           </div>
@@ -183,9 +201,16 @@ export class VistaTablon {
         `).join('')}
       </div>
 
-      <button id="btn-nuevo-faro" class="btn-yermo-secondary" style="width: 100%;">
-        + Encender Faro
-      </button>
+      <!-- BOTÓN / AVISO DE NUEVO FARO -->
+      ${infoRefugio.maxFaros === 0 ? '' : estado.faros.length < infoRefugio.maxFaros ? `
+        <button id="btn-nuevo-faro" class="btn-yermo-secondary" style="width: 100%;">
+          + Encender Faro (${estado.faros.length}/${infoRefugio.maxFaros})
+        </button>
+      ` : `
+        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; border-style: dashed;">
+          🔒 <strong>Slots de Faros al tope (${estado.faros.length}/${infoRefugio.maxFaros}):</strong> Mejora tu refugio para habilitar más metas.
+        </div>
+      `}
     `;
 
     this.vincularEventos(estado);
