@@ -1,0 +1,161 @@
+/* Estilos de la Torta de Equilibrio de 21 Días — UPROTA */
+
+.torta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+}
+
+.torta-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.torta-titulo {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.torta-badge-ventana {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--oro-torta);
+  background: rgba(245, 158, 11, 0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.torta-visual-wrap {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.torta-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  border-radius: 50%;
+}
+
+.torta-centro {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: var(--bg-surface);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-strong);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.torta-centro-puntos {
+  font-size: 1.25rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+}
+
+.torta-centro-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* Efecto Dorado Resplandeciente */
+.torta-container.es-dorada {
+  border-color: var(--oro-torta);
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.25);
+  background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, var(--bg-surface-elevated) 100%);
+}
+
+.torta-container.es-dorada .torta-centro-puntos {
+  color: var(--oro-torta-glow);
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+/* Grilla de los 4 Pilares */
+.pilares-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.pilar-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pilar-card.pilar-cuerpo { border-left: 3px solid var(--pilar-cuerpo); }
+.pilar-card.pilar-mente { border-left: 3px solid var(--pilar-mente); }
+.pilar-card.pilar-espiritu { border-left: 3px solid var(--pilar-espiritu); }
+.pilar-card.pilar-taller { border-left: 3px solid var(--pilar-taller); }
+
+.pilar-info-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pilar-nombre {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pilar-porcentaje {
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+/* Bonos de Equilibrio */
+.bonos-list {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bono-chip {
+  font-size: 0.76rem;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 2px solid var(--border-strong);
+  color: var(--text-secondary);
+}
+
+.bono-chip.dorado {
+  border-left-color: var(--oro-torta);
+  color: var(--oro-torta-glow);
+  background: rgba(245, 158, 11, 0.1);
+}

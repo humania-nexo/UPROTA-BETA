@@ -1,260 +1,187 @@
 /**
- * Gestor de Estado Centralizado para UPROTA Beta
- * Sincroniza memoria y persistencia en IndexedDB.
+ * Gestor Central de Estado Reactivo (Store)
+ * Desacoplado, modular y persistente en IndexedDB.
  */
 
-import { db } from './db.js';
-import { GameEngine } from './engine.js';
-import { MotorTraductor } from './traductor.js';
+import { MotorDB } from './db.js';
+import { PilaresEngine } from './pilares_engine.js';
+import { NIVELES_REFUGIO } from '../data/niveles_refugio.js';
 
-class GestorEstado {
+export class EstadoApp {
+  static CLAVE_ESTADO = 'uprota_estado_global';
+
   constructor() {
-    this.estado = {
+    this.suscriptores = [];
+    this.datos = this.generarEstadoInicial();
+  }
+
+  generarEstadoInicial() {
+    return {
       perfil: {
-        nombre: "Prota",
-        ciudad: "Yermo Central",
-        fechaInicio: new Date().toISOString(),
-        bioma: "yermo"
+        nombre: 'Prota',
+        ciudad: 'Yermo Central',
+        fechaInicio: new Date().toISOString().split('T')[0],
+        onboardingCompletado: false
       },
+      nivelRefugio: 0,
       recursos: {
-        tablas: 0,
-        provisiones: 0,
-        clavos: 0,
-        agua: 0,
-        moral: 5
+        tablas: 5,
+        clavos: 4,
+        provisiones: 2,
+        aguaLitros: 3,
+        moral: 10
+      },
+      bolsa: {
+        tipo: 'Bolsa ecológica rota',
+        capacidadKg: 8.0,
+        pesoActualKg: 1.2,
+        espaciosMax: 6,
+        items: [
+          { id: 'item_001', nombre: 'Clavos oxidados', pesoKg: 0.5, cantidad: 4 },
+          { id: 'item_008', nombre: 'Tabla de pino suelta', pesoKg: 1.2, cantidad: 2 }
+        ]
+      },
+      bioenergia: {
+        nivelCarga: 80, // 0 a 100%
+        biciGeneradorConstruido: false,
+        lucesLedEncendidas: true,
+        radioEncendida: false
+      },
+      comunicacion: {
+        fase: 0, // 0: Silencio, 1: Radio onda corta, 2: WAN local
+        frecuenciaSintonizada: 104.5,
+        estacionesDisponibles: ['104.5 Yermo Libre'],
+        transmisionesEscuchadas: []
       },
       sendas: [],
+      cimientos: [],
       cadenas: [],
       faros: [],
-      cimientos: [],
-      conocimientosAdquiridos: [],
-      ecosLiberados: [],
-      historialTensadas: [],
-      bitacoraEventos: [], // Historial de eventos y decisiones tomadas
-      ultimoDiaRevisado: GameEngine.fechaHoyYMD(),
-      diccionarioPersonal: {}
-    };
-
-    this.listeners = [];
-    this.traductor = new MotorTraductor(this.estado.diccionarioPersonal);
-  }
-
-  suscribir(listener) {
-    this.listeners.push(listener);
-    return () => {
-      this.listeners = this.listeners.filter(l => l !== listener);
+      objetosSabiduriaActivos: ['obj_biblia_chui'], // Biblia de Don Chui activa por defecto
+      objetosSabiduriaInventario: ['obj_biblia_chui'],
+      sabiduriaVistoHoy: false,
+      misionRealizadaHoy: false,
+      ultimaFechaAcceso: new Date().toISOString().split('T')[0]
     };
   }
 
-  notificar() {
-    this.listeners.forEach(fn => fn(this.estado));
-  }
-
-  async cargar() {
+  async inicializar() {
     try {
-      const guardado = await db.get('estado_global', 'principal');
+      const guardado = await MotorDB.obtener('estado_app', EstadoApp.CLAVE_ESTADO);
       if (guardado) {
-        this.estado = { ...this.estado, ...guardado };
-        this.traductor = new MotorTraductor(this.estado.diccionarioPersonal || {});
+        // Fusionar con estado inicial para compatibilidad si hay nuevas propiedades
+        this.datos = { ...this.generarEstadoInicial(), ...guardado };
       } else {
-        // Guardar estado inicial limpio en Punto Cero
         await this.guardar();
       }
-      this.notificar();
+      this.verificarCambioDeDia();
     } catch (e) {
-      console.error("Error al cargar estado desde IndexedDB:", e);
+      console.warn('Iniciando con estado en memoria por error en DB:', e);
+    }
+    this.notificar();
+  }
+
+  verificarCambioDeDia() {
+    const hoy = new Date().toISOString().split('T')[0];
+    if (this.datos.ultimaFechaAcceso !== hoy) {
+      this.datos.ultimaFechaAcceso = hoy;
+      this.datos.sabiduriaVistoHoy = false;
+      this.datos.misionRealizadaHoy = false;
+      // Drenaje leve natural de batería si no hubo pedaleo
+      this.datos.bioenergia.nivelCarga = Math.max(10, this.datos.bioenergia.nivelCarga - 15);
+      this.guardar();
     }
   }
 
   async guardar() {
-    try {
-      await db.put('estado_global', this.estado, 'principal');
-      this.notificar();
-    } catch (e) {
-      console.error("Error al guardar estado:", e);
-    }
+    await MotorDB.guardar('estado_app', EstadoApp.CLAVE_ESTADO, this.datos);
+    this.notificar();
   }
 
-  // --- ACCIONES DE SENDAS ---
-  async marcarSenda(id) {
-    const hoy = GameEngine.fechaHoyYMD();
-    const senda = this.estado.sendas.find(s => s.id === id);
-    if (!senda) return null;
-
-    const yaMarcadaHoy = senda.ultimoCheck === hoy;
-    if (yaMarcadaHoy) return null;
-
-    senda.ultimoCheck = hoy;
-    senda.racha = (senda.racha || 0) + 1;
-    senda.checksTotal = (senda.checksTotal || 0) + 1;
-
-    const ganados = senda.recurso || { tablas: 1 };
-    for (const [rec, cant] of Object.entries(ganados)) {
-      this.estado.recursos[rec] = (this.estado.recursos[rec] || 0) + cant;
-    }
-
-    await this.guardar();
-    return { senda, ganados };
+  suscribir(fn) {
+    this.suscriptores.push(fn);
+    fn(this.datos);
   }
 
-  async agregarSenda({ textoNatural, nombreLore, frecuencia, diasSemana, franjaHoraria, recurso, icono }) {
-    const traduccion = this.traductor.traducirAccion(textoNatural);
+  notificar() {
+    this.suscriptores.forEach(fn => fn(this.datos));
+  }
+
+  // --- MÉTODOS DE MUTACIÓN ---
+
+  get infoPilares() {
+    // Filtrar objetos de sabiduría activos
+    const objetosActivosData = this.datos.objetosSabiduriaActivos.map(id => {
+      if (id === 'obj_biblia_chui') return { id, pilar: 'espiritu' };
+      if (id === 'obj_manual_supervivencia_1') return { id, pilar: 'mente' };
+      return { id, pilar: 'espiritu' };
+    });
+
+    return PilaresEngine.calcularEquilibrio(this.datos.sendas, objetosActivosData);
+  }
+
+  get infoNivelRefugio() {
+    return NIVELES_REFUGIO[this.datos.nivelRefugio] || NIVELES_REFUGIO[0];
+  }
+
+  async agregarSenda(nombre, pilar, frecuencia = 'diario', rigor = 'flexible') {
+    const limite = this.infoNivelRefugio.maxSendas;
+    if (this.datos.sendas.length >= limite) {
+      throw new Error(`Tu refugio Nivel ${this.datos.nivelRefugio} solo permite ${limite} sendas activas.`);
+    }
 
     const nuevaSenda = {
       id: `senda_${Date.now()}`,
-      textoNatural: textoNatural, // Texto original exacto del usuario
-      nombreLore: nombreLore || traduccion.lore,
-      icono: icono || traduccion.icono,
-      frecuencia: frecuencia || "diario",
-      diasSemana: diasSemana || ["lun", "mar", "mie", "jue", "vie", "sab", "dom"],
-      franjaHoraria: franjaHoraria || "libre",
-      categoria: traduccion.categoria,
-      recurso: recurso || traduccion.recurso,
-      racha: 0,
-      checksTotal: 0,
-      ultimoCheck: null,
-      creadoEl: new Date().toISOString()
+      nombre,
+      pilar, // 'cuerpo', 'mente', 'espiritu', 'taller'
+      frecuencia,
+      rigor,
+      fechaCreacion: new Date().toISOString().split('T')[0],
+      diasTotales: 0,
+      diasCumplidos: 0,
+      diasFallados: 0,
+      rachaActual: 0,
+      fallosSeguidos: 0,
+      cumplidaHoy: false
     };
 
-    this.estado.sendas.push(nuevaSenda);
+    this.datos.sendas.push(nuevaSenda);
     await this.guardar();
     return nuevaSenda;
   }
 
-  async editarSenda(id, datosActualizados) {
-    const idx = this.estado.sendas.findIndex(s => s.id === id);
-    if (idx !== -1) {
-      this.estado.sendas[idx] = { ...this.estado.sendas[idx], ...datosActualizados };
-      await this.guardar();
+  async agregarCadena(nombre) {
+    const limite = this.infoNivelRefugio.maxCadenas;
+    if (this.datos.cadenas.length >= limite) {
+      throw new Error(`Tu refugio Nivel ${this.datos.nivelRefugio} solo permite ${limite} cadenas activas.`);
     }
-  }
 
-  async eliminarSenda(id) {
-    this.estado.sendas = this.estado.sendas.filter(s => s.id !== id);
-    await this.guardar();
-  }
-
-  // --- ACCIONES DE CADENAS ---
-  async agregarCadena({ textoNatural, nombreLore, icono }) {
-    const traduccion = this.traductor.traducirCadena(textoNatural);
     const nuevaCadena = {
       id: `cadena_${Date.now()}`,
-      textoNatural: textoNatural,
-      nombreLore: nombreLore || traduccion.lore,
-      icono: icono || traduccion.icono,
-      recaidasMes: 0,
-      ultimaRecaida: null,
-      creadoEl: new Date().toISOString()
+      nombre,
+      fechaCreacion: new Date().toISOString().split('T')[0],
+      diasRegistrados: 0,
+      diasLimpiosConsecutivos: 0,
+      recaidasConsecutivas: 0,
+      totalRecaidas: 0,
+      estadoPuente: 'firme',
+      reportadaHoy: false
     };
 
-    this.estado.cadenas.push(nuevaCadena);
+    this.datos.cadenas.push(nuevaCadena);
     await this.guardar();
     return nuevaCadena;
   }
 
-  async editarCadena(id, datosActualizados) {
-    const idx = this.estado.cadenas.findIndex(c => c.id === id);
-    if (idx !== -1) {
-      this.estado.cadenas[idx] = { ...this.estado.cadenas[idx], ...datosActualizados };
-      await this.guardar();
+  async agregarFaro(faroObjeto) {
+    const limite = this.infoNivelRefugio.maxFaros;
+    if (this.datos.faros.length >= limite) {
+      throw new Error(`Tu refugio Nivel ${this.datos.nivelRefugio} solo permite ${limite} faros activos.`);
     }
-  }
 
-  async eliminarCadena(id) {
-    this.estado.cadenas = this.estado.cadenas.filter(c => c.id !== id);
-    await this.guardar();
-  }
-
-  async registrarCadenaTensada(id) {
-    const hoy = GameEngine.fechaHoyYMD();
-    const ahoraISO = new Date().toISOString();
-    const cadena = this.estado.cadenas.find(c => c.id === id);
-    if (!cadena) return null;
-
-    cadena.recaidasMes = (cadena.recaidasMes || 0) + 1;
-    cadena.ultimaRecaida = hoy;
-
-    this.estado.historialTensadas.push({
-      cadenaId: id,
-      cadenaNombre: cadena.nombreLore,
-      textoNatural: cadena.textoNatural,
-      fecha: hoy,
-      timestamp: ahoraISO
-    });
-
-    this.estado.recursos.moral = (this.estado.recursos.moral || 0) + 2;
-    await this.guardar();
-    return cadena;
-  }
-
-  // --- ACCIONES DE FAROS ---
-  async agregarFaro({ textoNatural, nombreLore, metaMonto, actualMonto, unidad, icono }) {
-    const nuevoFaro = {
-      id: `faro_${Date.now()}`,
-      textoNatural: textoNatural,
-      nombreLore: nombreLore || `Faro: ${textoNatural}`,
-      metaMonto: Number(metaMonto) || 1000,
-      actualMonto: Number(actualMonto) || 0,
-      unidad: unidad || "$",
-      icono: icono || "🕯️",
-      creadoEl: new Date().toISOString()
-    };
-
-    this.estado.faros.push(nuevoFaro);
-    await this.guardar();
-    return nuevoFaro;
-  }
-
-  async editarFaro(id, datosActualizados) {
-    const idx = this.estado.faros.findIndex(f => f.id === id);
-    if (idx !== -1) {
-      this.estado.faros[idx] = { ...this.estado.faros[idx], ...datosActualizados };
-      await this.guardar();
-    }
-  }
-
-  async eliminarFaro(id) {
-    this.estado.faros = this.estado.faros.filter(f => f.id !== id);
-    await this.guardar();
-  }
-
-  // --- BITÁCORA Y EVENTOS ---
-  async registrarEventoEnBitacora({ eventoId, titulo, decision, resultado, fecha }) {
-    if (!this.estado.bitacoraEventos) this.estado.bitacoraEventos = [];
-    this.estado.bitacoraEventos.unshift({
-      id: `cronica_${Date.now()}`,
-      eventoId,
-      titulo,
-      decision,
-      resultado,
-      fecha: fecha || GameEngine.fechaHoyYMD(),
-      timestamp: new Date().toISOString()
-    });
-    await this.guardar();
-  }
-
-  // --- CONOCIMIENTO / RADIO ---
-  async adquirirConocimiento(conocimientoId) {
-    if (!this.estado.conocimientosAdquiridos.includes(conocimientoId)) {
-      this.estado.conocimientosAdquiridos.push(conocimientoId);
-      this.estado.recursos.moral = (this.estado.recursos.moral || 0) + 3;
-      await this.guardar();
-      return true;
-    }
-    return false;
-  }
-
-  async actualizarCiudad(ciudad) {
-    this.estado.perfil.ciudad = ciudad || "Yermo Central";
-    await this.guardar();
-  }
-
-  async aplicarCambioRecursos(cambios) {
-    for (const [rec, cant] of Object.entries(cambios)) {
-      this.estado.recursos[rec] = Math.max(0, (this.estado.recursos[rec] || 0) + cant);
-    }
+    this.datos.faros.push(faroObjeto);
     await this.guardar();
   }
 }
 
-export const estadoApp = new GestorEstado();
+export const estadoApp = new EstadoApp();

@@ -1,156 +1,120 @@
 /**
- * UPROTA Beta v1.0 - Entrada Principal
- * Inicializa estado, módulos, onboarding y enrutamiento entre vistas.
+ * Archivo Principal de Entrada (Bootstrap y Orquestación) — UPROTA v1.0
  */
 
 import { estadoApp } from './core/estado.js';
-import { GameEngine } from './core/engine.js';
-import { TablonModulo } from './modulos/tablon.js';
-import { RefugioModulo } from './modulos/refugio.js';
-import { RadioModulo } from './modulos/radio.js';
-import { HogarModulo } from './modulos/hogar.js';
-import { EventosModulo } from './modulos/eventos.js';
-import { OnboardingModulo } from './modulos/onboarding.js';
+import { VistaTablon } from './modulos/vista_tablon.js';
+import { VistaRefugio } from './modulos/vista_refugio.js';
+import { VistaMisiones } from './modulos/vista_misiones.js';
+import { VistaComunicacion } from './modulos/vista_comunicacion.js';
+import { VistaHogar } from './modulos/vista_hogar.js';
+import { ModalSabiduria } from './modulos/modal_sabiduria.js';
 
 class App {
   constructor() {
-    this.vistaActual = 'tablon';
-
-    // Contenedores de vistas
-    this.elemVistaTablon = document.getElementById('vista-tablon');
-    this.elemVistaRefugio = document.getElementById('vista-refugio');
-    this.elemVistaRadio = document.getElementById('vista-radio');
-    this.elemVistaHogar = document.getElementById('vista-hogar');
-
-    // Inicializar Módulos
-    this.moduloTablon = new TablonModulo(this.elemVistaTablon, () => this.cambiarVista('hogar'));
-    this.moduloRefugio = new RefugioModulo(this.elemVistaRefugio);
-    this.moduloRadio = new RadioModulo(this.elemVistaRadio);
-    this.moduloHogar = new HogarModulo(this.elemVistaHogar);
-    this.moduloEventos = new EventosModulo();
+    this.tabActual = 'tablon';
+    this.vistas = {};
   }
 
-  async init() {
-    // Configurar navegación
+  async iniciar() {
+    console.log('Iniciando UPROTA v1.0...');
+
+    // Instanciar vistas
+    this.vistas = {
+      tablon: new VistaTablon(document.getElementById('vista-tablon')),
+      refugio: new VistaRefugio(document.getElementById('vista-refugio')),
+      misiones: new VistaMisiones(document.getElementById('vista-misiones')),
+      comunicacion: new VistaComunicacion(document.getElementById('vista-comunicacion')),
+      hogar: new VistaHogar(document.getElementById('vista-hogar'))
+    };
+
+    // Vincular navegación
     this.vincularNavegacion();
 
-    // Suscribir renderizado al estado
-    estadoApp.suscribir((estado) => {
-      this.actualizarHeader(estado);
-      this.renderVistaActual(estado);
-    });
+    // Inicializar IndexedDB y suscribir vistas al estado central
+    await estadoApp.inicializar();
+    estadoApp.suscribir((estado) => this.actualizarVistas(estado));
 
-    // Cargar datos persistidos
-    await estadoApp.cargar();
+    // Abrir pop-up de Sabiduría Diaria si es la primera apertura del día
+    ModalSabiduria.mostrarSiCorresponde();
 
-    // Mostrar onboarding si es primera vez
-    OnboardingModulo.mostrarSiEsNecesario();
-
-    // Registrar Service Worker para PWA
+    // Registrar Service Worker
     this.registrarServiceWorker();
   }
 
   vincularNavegacion() {
-    // Botones de navegación inferior
-    document.querySelectorAll('.nav-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const vista = e.currentTarget.dataset.vista;
-        this.cambiarVista(vista);
+    const botones = document.querySelectorAll('[data-tab]');
+    botones.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        this.cambiarTab(tab);
       });
     });
 
-    // Botón superior de El Hogar
-    const btnHogarHeader = document.getElementById('btn-abrir-hogar');
-    if (btnHogarHeader) {
-      btnHogarHeader.addEventListener('click', () => {
-        this.cambiarVista('hogar');
-      });
+    const btnHogarTop = document.getElementById('btn-ir-hogar-top');
+    if (btnHogarTop) {
+      btnHogarTop.addEventListener('click', () => this.cambiarTab('hogar'));
     }
   }
 
-  cambiarVista(nombreVista) {
-    this.vistaActual = nombreVista;
+  cambiarTab(nuevoTab) {
+    this.tabActual = nuevoTab;
 
-    // Actualizar botones de nav
-    document.querySelectorAll('.nav-btn').forEach(btn => {
-      if (btn.dataset.vista === nombreVista) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
+    // Actualizar botones inferiores
+    document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-tab') === nuevoTab);
+    });
+
+    // Actualizar paneles visibles
+    document.querySelectorAll('.vista-panel').forEach(panel => {
+      panel.classList.remove('active');
+    });
+
+    const panelActivo = document.getElementById(`vista-${nuevoTab}`);
+    if (panelActivo) {
+      panelActivo.classList.add('active');
+      if (this.vistas[nuevoTab]) {
+        this.vistas[nuevoTab].render(estadoApp.datos);
       }
-    });
-
-    // Actualizar contenedores de vista
-    document.querySelectorAll('.vista-seccion').forEach(sec => {
-      sec.classList.remove('active');
-    });
-
-    const target = document.getElementById(`vista-${nombreVista}`);
-    if (target) {
-      target.classList.add('active');
-    }
-
-    this.renderVistaActual(estadoApp.estado);
-  }
-
-  renderVistaActual(estado) {
-    switch (this.vistaActual) {
-      case 'tablon':
-        this.moduloTablon.render(estado);
-        break;
-      case 'refugio':
-        this.moduloRefugio.render(estado);
-        break;
-      case 'radio':
-        this.moduloRadio.render(estado);
-        break;
-      case 'hogar':
-        this.moduloHogar.render(estado);
-        break;
     }
   }
 
-  actualizarHeader(estado) {
-    const infoNivel = GameEngine.calcularNivelRefugio(estado.recursos, estado.cimientos);
-    const diaNum = GameEngine.calcularDiasDesdeInicio(estado.perfil.fechaInicio);
+  actualizarVistas(estado) {
+    // Actualizar barra de cabecera
+    const nombreElem = document.getElementById('header-prota-nombre');
+    const nivelElem = document.getElementById('header-refugio-nivel');
+    if (nombreElem) nombreElem.textContent = estado.perfil.nombre;
+    if (nivelElem) nivelElem.textContent = `Nivel ${estado.nivelRefugio} - ${estadoApp.infoNivelRefugio.nombre}`;
 
-    // Header info
-    const elemIcono = document.getElementById('header-refugio-icon');
-    const elemNombre = document.getElementById('header-refugio-nombre');
-    const elemDia = document.getElementById('header-refugio-dia');
+    // Actualizar chips de recursos
+    const resTablas = document.getElementById('res-tablas');
+    const resClavos = document.getElementById('res-clavos');
+    const resProv = document.getElementById('res-provisiones');
+    const resAgua = document.getElementById('res-agua');
+    const resBateria = document.getElementById('res-bateria');
 
-    if (elemIcono) elemIcono.textContent = infoNivel.icono;
-    if (elemNombre) elemNombre.textContent = `Refugio: ${infoNivel.nombre}`;
-    if (elemDia) elemDia.textContent = `Día ${diaNum}`;
+    if (resTablas) resTablas.textContent = estado.recursos.tablas;
+    if (resClavos) resClavos.textContent = estado.recursos.clavos;
+    if (resProv) resProv.textContent = estado.recursos.provisiones;
+    if (resAgua) resAgua.textContent = `${estado.recursos.aguaLitros}L`;
+    if (resBateria) resBateria.textContent = `${estado.bioenergia.nivelCarga}%`;
 
-    // Recursos
-    const r = estado.recursos;
-    const elTablas = document.getElementById('rec-tablas');
-    const elProv = document.getElementById('rec-provisiones');
-    const elClavos = document.getElementById('rec-clavos');
-    const elAgua = document.getElementById('rec-agua');
-    const elMoral = document.getElementById('rec-moral');
-
-    if (elTablas) elTablas.textContent = r.tablas || 0;
-    if (elProv) elProv.textContent = r.provisiones || 0;
-    if (elClavos) elClavos.textContent = r.clavos || 0;
-    if (elAgua) elAgua.textContent = r.agua || 0;
-    if (elMoral) elMoral.textContent = r.moral || 0;
+    // Renderizar vista actual activa
+    if (this.vistas[this.tabActual]) {
+      this.vistas[this.tabActual].render(estado);
+    }
   }
 
   registrarServiceWorker() {
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').catch(err => {
-          console.log('SW registration note:', err);
-        });
-      });
+      navigator.serviceWorker.register('./sw.js')
+        .then(() => console.log('Service Worker de UPROTA registrado con éxito.'))
+        .catch(err => console.warn('Fallo al registrar Service Worker:', err));
     }
   }
 }
 
-// Iniciar aplicación
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const app = new App();
-  app.init();
+  app.iniciar();
 });

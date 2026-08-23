@@ -1,64 +1,115 @@
-/* Estilos adicionales para Refugio y Progresión de Niveles */
+/* Estilos del Refugio, Bioenergía y Bolsa de Peso Real — UPROTA */
 
-.refugio-capacidad-box {
-  background: var(--bg-surface);
+.refugio-hero {
+  background: linear-gradient(180deg, #24201c 0%, var(--bg-surface-elevated) 100%);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
-  padding: 8px 12px;
-  font-size: 0.82rem;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-bottom: 16px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.refugio-sig-nivel-box {
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px dashed var(--accent-rust);
-  border-radius: var(--radius-sm);
-  padding: 10px 12px;
-  margin-bottom: 12px;
+.refugio-stage-tag {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--oro-torta);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.sig-nivel-head {
+.refugio-titulo-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+  gap: 8px;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 6px;
 }
 
-.sig-requisitos-row {
+.refugio-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Indicador de Bioenergía */
+.bioenergia-panel {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 6px;
 }
 
-.req-chip {
+.bioenergia-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.bioenergia-barra-wrap {
+  width: 100%;
+  height: 6px;
   background: var(--bg-surface);
-  border: 1px solid var(--border-strong);
-  font-size: 0.72rem;
-  font-family: var(--font-mono);
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: var(--text-muted);
+  border-radius: 3px;
+  overflow: hidden;
 }
 
-.req-chip.ok {
-  border-color: var(--accent-green);
-  color: var(--accent-green);
-  background: rgba(74, 222, 128, 0.08);
+.bioenergia-barra {
+  height: 100%;
+  background: linear-gradient(90deg, #ea580c, #facc15);
+  transition: width 0.3s ease;
 }
 
-.refugio-max-level {
-  background: linear-gradient(90deg, #b45309, #d97706);
-  color: #fff;
+/* Bolsa de Peso Real */
+.bolsa-panel {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.bolsa-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.bolsa-titulo {
+  font-size: 0.88rem;
   font-weight: 700;
-  text-align: center;
-  padding: 8px;
+  color: var(--text-primary);
+}
+
+.bolsa-peso-badge {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
+.bolsa-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.bolsa-item-chip {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  margin-bottom: 12px;
+  padding: 6px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
 }

@@ -1,108 +1,84 @@
 /**
- * Wrapper de IndexedDB nativo para UPROTA Beta
- * Almacenamiento asíncrono, robusto y sin límites de localStorage.
+ * Módulo de Base de Datos Nativa (IndexedDB)
+ * Cumple con Regla 9 de Reglas Técnicas: manejo de errores y persistencia 100% local-first.
  */
 
-const DB_NAME = 'uprota_yermo_db';
+const DB_NOMBRE = 'uprota_db_v1';
 const DB_VERSION = 1;
 
-class DB {
-  constructor() {
-    this.db = null;
-  }
+export class MotorDB {
+  static dbInstancia = null;
 
-  async init() {
-    if (this.db) return this.db;
+  static async abrir() {
+    if (this.dbInstancia) return this.dbInstancia;
 
     return new Promise((resolve, reject) => {
-      const request = indexedDB.open(DB_NAME, DB_VERSION);
+      const request = indexedDB.open(DB_NOMBRE, DB_VERSION);
 
-      request.onupgradeneeded = (event) => {
-        const db = event.target.result;
+      request.onupgradeneeded = (evento) => {
+        const db = evento.target.result;
 
-        // Stores principales
-        if (!db.objectStoreNames.contains('estado_global')) {
-          db.createObjectStore('estado_global');
+        // Tienda de estado general
+        if (!db.objectStoreNames.contains('estado_app')) {
+          db.createObjectStore('estado_app', { keyPath: 'id' });
         }
-        if (!db.objectStoreNames.contains('sendas')) {
-          db.createObjectStore('sendas', { keyPath: 'id' });
+
+        // Tienda de historial diario (ventana de 21 días)
+        if (!db.objectStoreNames.contains('historial_dias')) {
+          db.createObjectStore('historial_dias', { keyPath: 'fecha' });
         }
-        if (!db.objectStoreNames.contains('cadenas')) {
-          db.createObjectStore('cadenas', { keyPath: 'id' });
-        }
-        if (!db.objectStoreNames.contains('faros')) {
-          db.createObjectStore('faros', { keyPath: 'id' });
-        }
-        if (!db.objectStoreNames.contains('historial_checks')) {
-          db.createObjectStore('historial_checks', { keyPath: 'id', autoIncrement: true });
-        }
-        if (!db.objectStoreNames.contains('conocimientos')) {
-          db.createObjectStore('conocimientos', { keyPath: 'id' });
-        }
-        if (!db.objectStoreNames.contains('ecos')) {
-          db.createObjectStore('ecos', { keyPath: 'id' });
+
+        // Tienda de bitácora y eventos
+        if (!db.objectStoreNames.contains('bitacora')) {
+          db.createObjectStore('bitacora', { keyPath: 'id', autoIncrement: true });
         }
       };
 
-      request.onsuccess = (event) => {
-        this.db = event.target.result;
-        resolve(this.db);
+      request.onsuccess = (evento) => {
+        this.dbInstancia = evento.target.result;
+        resolve(this.dbInstancia);
       };
 
-      request.onerror = (event) => {
-        console.error('Error al abrir IndexedDB:', event.target.error);
-        reject(event.target.error);
+      request.onerror = (evento) => {
+        console.error('Error crítico al abrir IndexedDB:', evento.target.error);
+        reject(evento.target.error);
       };
     });
   }
 
-  async get(storeName, key) {
-    await this.init();
+  static async obtener(tienda, clave) {
+    const db = await this.abrir();
     return new Promise((resolve, reject) => {
-      const transaction = this.db.transaction([storeName], 'readonly');
-      const store = transaction.objectStore(storeName);
-      const request = store.get(key);
+      const tx = db.transaction(tienda, 'readonly');
+      const store = tx.objectStore(tienda);
+      const req = store.get(clave);
 
-      request.onsuccess = () => resolve(request.result);
-      request.onerror = () => reject(request.error);
+      req.onsuccess = () => resolve(req.result ? req.result.datos : null);
+      req.onerror = () => reject(req.error);
     });
   }
 
-  async getAll(storeName) {
-    await this.init();
+  static async guardar(tienda, clave, datos) {
+    const db = await this.abrir();
     return new Promise((resolve, reject) => {
-      const transaction = this.db.transaction([storeName], 'readonly');
-      const store = transaction.objectStore(storeName);
-      const request = store.getAll();
+      const tx = db.transaction(tienda, 'readwrite');
+      const store = tx.objectStore(tienda);
+      const req = store.put({ id: clave, fecha: clave, datos });
 
-      request.onsuccess = () => resolve(request.result || []);
-      request.onerror = () => reject(request.error);
+      req.onsuccess = () => resolve(true);
+      req.onerror = () => reject(req.error);
     });
   }
 
-  async put(storeName, value, key = null) {
-    await this.init();
+  static async obtenerTodos(tienda) {
+    const db = await this.abrir();
     return new Promise((resolve, reject) => {
-      const transaction = this.db.transaction([storeName], 'readwrite');
-      const store = transaction.objectStore(storeName);
-      const request = key ? store.put(value, key) : store.put(value);
+      const tx = db.transaction(tienda, 'readonly');
+      const store = tx.objectStore(tienda);
+      const req = store.getAll();
 
-      request.onsuccess = () => resolve(request.result);
-      request.onerror = () => reject(request.error);
-    });
-  }
-
-  async delete(storeName, key) {
-    await this.init();
-    return new Promise((resolve, reject) => {
-      const transaction = this.db.transaction([storeName], 'readwrite');
-      const store = transaction.objectStore(storeName);
-      const request = store.delete(key);
-
-      request.onsuccess = () => resolve(request.result);
-      request.onerror = () => reject(request.error);
+      req.onsuccess = () => resolve(req.result || []);
+      req.onerror = () => reject(req.error);
     });
   }
 }
-
-export const db = new DB();

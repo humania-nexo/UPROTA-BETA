@@ -1,28 +1,39 @@
-// Service Worker sencillo para caché de assets en UPROTA Beta
-const CACHE_NAME = 'uprota-v1.0';
+/**
+ * Service Worker — UPROTA v1.0
+ * Caché local-first para funcionamiento 100% offline.
+ */
+
+const CACHE_NAME = 'uprota-cache-v1.0';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './css/main.css',
+  './css/torta.css',
   './css/tablon.css',
   './css/refugio.css',
-  './css/radio.css',
-  './css/hogar.css',
+  './css/popups.css',
   './js/app.js',
   './js/core/db.js',
   './js/core/estado.js',
-  './js/core/engine.js',
-  './js/core/traductor.js',
-  './js/data/diccionario.js',
-  './js/data/eventos.js',
-  './js/data/radio_programas.js',
-  './js/data/frases_hogar.js',
-  './js/modulos/tablon.js',
-  './js/modulos/refugio.js',
-  './js/modulos/radio.js',
-  './js/modulos/hogar.js',
-  './js/modulos/eventos.js'
+  './js/core/pilares_engine.js',
+  './js/core/sendas_engine.js',
+  './js/core/cadenas_engine.js',
+  './js/core/faros_engine.js',
+  './js/mundo/refugio_engine.js',
+  './js/mundo/misiones_engine.js',
+  './js/mundo/comunicacion.js',
+  './js/mundo/sabiduria_diaria.js',
+  './js/modulos/vista_tablon.js',
+  './js/modulos/vista_refugio.js',
+  './js/modulos/vista_misiones.js',
+  './js/modulos/vista_comunicacion.js',
+  './js/modulos/vista_hogar.js',
+  './js/modulos/modal_sabiduria.js',
+  './js/data/items_botin.js',
+  './js/data/sabiduria_textos.js',
+  './js/data/frases_estoicas.js',
+  './js/data/niveles_refugio.js'
 ];
 
 self.addEventListener('install', (e) => {
@@ -36,7 +47,9 @@ self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) => {
       return Promise.all(
-        keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))
+        keys.map((k) => {
+          if (k !== CACHE_NAME) return caches.delete(k);
+        })
       );
     })
   );
@@ -45,8 +58,6 @@ self.addEventListener('activate', (e) => {
 
 self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then((res) => {
-      return res || fetch(e.request).catch(() => caches.match('./index.html'));
-    })
+    caches.match(e.request).then((res) => res || fetch(e.request))
   );
 });
