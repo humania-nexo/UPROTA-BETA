@@ -54,12 +54,22 @@ Al despertar, descubres que una colonia de ratones de campo se coló por un huec
 ### El Impacto Psicológico y Narrativo:
 El Prota experimenta en carne propia lo que significa **vivir al día sin un fondo de emergencia**. La naturaleza no avisa.
 
-### La Consecuencia Mecánica: Nacimiento de los Faros
-De esta adversidad nacen dos decisiones firmes:
-1. **La Alacena Colgada:** Construir una caja suspendida con cuerdas y alambre para que los roedores no alcancen el alimento.
-2. **El Faro de Ahorro (Obligatorio — 6 Meses, 5%):** El Prota comprende que para no quedar indefenso ante imprevistos, es vital cultivar la disciplina innegociable de apartar el **5% de los ingresos fijos** en un fondo de honor. 
+### La Consecuencia Mecánica:
+1. **Tarea de 1 Día — Construir la Alacena Hermética:** Ocupa la labor del día siguiente (Día 8). Requiere madera y alambre para suspender la comida fuera del alcance de los roedores.
+2. **Desbloqueo del Faro de Ahorro:** Al completar la alacena, se desbloquea oficialmente el **Faro de Ahorro Semestral (Obligatorio — 6 Meses, 5%)**.
 
-> *Los Faros no nacen como una opción fría de menú; nacen como la respuesta consciente del sobreviviente ante la fragilidad de la vida.*
+---
+
+## 3.2 El Sistema del "Puente Informativo" (Icono ℹ️ Sin Romper la Inmersión)
+
+Para proteger la atmósfera del Yermo y no romper la narrativa con explicaciones clínicas de autoayuda:
+
+* **Inmersión Total por Defecto:** Todo texto, diálogo y misión en la pantalla principal habla **estrictamente en el lenguaje del Yermo**.
+* **El Icono Discreto ℹ️:** Cada elemento importante (Pilares, Cadenas, Faros, El Hogar, Eventos) cuenta con un pequeño glifo `ℹ️` sutil.
+* **El Panel de la Vida Real:** Al tocar `ℹ️`, se abre un modal limpio que explica con total transparencia:
+  1. **¿Por qué existe esta mecánica en el juego?**
+  2. **¿Cómo se aplica a tu vida real?** (La psicología del hábito, la regla del 5% de ahorro para emergencias, por qué las rachas rotas no deben castigarte, etc.).
+* **Cierre inmediato:** El jugador puede leer la explicación formativa y cerrarla al instante para continuar inmerso en su refugio.
 
 ---
 

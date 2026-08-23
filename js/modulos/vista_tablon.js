@@ -7,6 +7,7 @@ import { SendasEngine } from '../core/sendas_engine.js';
 import { CadenasEngine } from '../core/cadenas_engine.js';
 import { FarosEngine } from '../core/faros_engine.js';
 import { RefugioMundoEngine } from '../mundo/refugio_engine.js';
+import { ModalInfo } from './modal_info.js';
 
 export class VistaTablon {
   constructor(contenedor) {
@@ -25,6 +26,7 @@ export class VistaTablon {
           <div class="torta-titulo">
             <span>${pilares.esDorado ? '🌟' : '⚖️'}</span>
             <span>Torta de Equilibrio</span>
+            <button class="btn-info-glifo" data-info-key="torta_equilibrio" title="Información vida real" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.85rem;">ℹ️</button>
           </div>
           <div class="torta-badge-ventana">Ventana 21 Días</div>
         </div>
@@ -122,6 +124,7 @@ export class VistaTablon {
         <div class="seccion-tablon-titulo">
           <span>⛓️</span>
           <span>Cadenas a Romper</span>
+          <button class="btn-info-glifo" data-info-key="cadenas" title="Información vida real" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.85rem;">ℹ️</button>
         </div>
         <span class="slots-counter">${estado.cadenas.length}/${infoRefugio.maxCadenas} Slots</span>
       </div>
@@ -153,6 +156,7 @@ export class VistaTablon {
         <div class="seccion-tablon-titulo">
           <span>🕯️</span>
           <span>Faros y Metas</span>
+          <button class="btn-info-glifo" data-info-key="faro_ahorro" title="Información vida real" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.85rem;">ℹ️</button>
         </div>
         <span class="slots-counter">${estado.faros.length}/${infoRefugio.maxFaros} Slots</span>
       </div>
@@ -257,6 +261,15 @@ export class VistaTablon {
     if (btnFaro) {
       btnFaro.addEventListener('click', () => this.abrirModalCrearFaro());
     }
+
+    // Botones de Información ℹ️ (Puente a la Vida Real)
+    this.contenedor.querySelectorAll('.btn-info-glifo').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const key = btn.getAttribute('data-info-key');
+        ModalInfo.abrir(key);
+      });
+    });
   }
 
   abrirModalCrearSenda() {
