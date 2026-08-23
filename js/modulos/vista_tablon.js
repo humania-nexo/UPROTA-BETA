@@ -248,7 +248,8 @@ export class VistaTablon {
   vincularEventos(estado) {
     // Check de Sendas
     this.contenedor.querySelectorAll('[data-senda-idx]').forEach(btn => {
-      btn.addEventListener('click', async () => {
+      btn.addEventListener('click', async (e) => {
+        e.stopPropagation();
         const idx = Number(btn.getAttribute('data-senda-idx'));
         const senda = estado.sendas[idx];
         if (!senda) return;
@@ -266,6 +267,18 @@ export class VistaTablon {
         }
 
         await estadoApp.guardar();
+      });
+    });
+
+    // Clic en la tarjeta de Senda para abrir Detalle y Configuración
+    this.contenedor.querySelectorAll('.senda-main-info').forEach(info => {
+      info.addEventListener('click', () => {
+        const card = info.closest('.senda-card');
+        const btn = card.querySelector('[data-senda-idx]');
+        if (btn) {
+          const idx = Number(btn.getAttribute('data-senda-idx'));
+          this.abrirModalDetalleSenda(idx, estado.sendas[idx]);
+        }
       });
     });
 
@@ -297,6 +310,112 @@ export class VistaTablon {
     });
   }
 
+  abrirModalDetalleSenda(idx, senda) {
+    if (!senda) return;
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
+    if (!modalContainer || !modalContent) return;
+
+    const progreso66 = Math.min(100, Math.round(((senda.diasTotales || 0) / 66) * 100));
+    const tasaFallosPct = Math.round((senda.tasaFallos || 0) * 100);
+
+    modalContent.innerHTML = `
+      <div class="modal-crear-wrap">
+        <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+          <span style="font-size: 1.4rem;">${senda.pilar === 'cuerpo' ? '🏃' : senda.pilar === 'mente' ? '📜' : senda.pilar === 'espiritu' ? '🔥' : '🛠️'}</span>
+          <h3 style="color: var(--text-primary); font-size: 1.1rem;">${senda.nombre}</h3>
+        </div>
+        <div style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--pilar-${senda.pilar}-light); margin-bottom: 12px; text-transform: uppercase;">
+          Pilar Asignado: +1 ${senda.pilar}
+        </div>
+
+        <!-- BARRA DE FORJADO A CIMIENTO (66 DÍAS) -->
+        <div class="card-yermo" style="background: rgba(0,0,0,0.35); padding: 10px; margin-bottom: 14px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 4px;">
+            <span>Forjado a Cimiento:</span>
+            <strong style="color: var(--oro-torta-glow);">${senda.diasTotales || 0}/66 Días (${progreso66}%)</strong>
+          </div>
+          <div style="background: rgba(0,0,0,0.5); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
+            <div style="width: ${progreso66}%; background: var(--oro-torta); height: 100%;"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted);">
+            <span>Racha actual: ${senda.rachaActual || 0} días</span>
+            <span>Tasa de fallos: ${tasaFallosPct}% (Tope: 25%)</span>
+          </div>
+        </div>
+
+        <!-- CONFIGURACIÓN DE FRECUENCIA -->
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">Nombre del Hábito:</label>
+          <input type="text" id="input-edit-senda-nombre" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);" value="${senda.nombre}">
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">Frecuencia Objetivo:</label>
+          <select id="select-edit-frecuencia" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
+            <option value="diario" ${senda.tipoFrecuencia === 'diario' ? 'selected' : ''}>Diario (Todos los días)</option>
+            <option value="dias_fijos" ${senda.tipoFrecuencia === 'dias_fijos' ? 'selected' : ''}>Días Fijos de la Semana (L, M, V...)</option>
+            <option value="veces_semana" ${senda.tipoFrecuencia === 'veces_semana' ? 'selected' : ''}>Veces por Semana Flexible (Ej: 3x/sem)</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">Horario Sugerido / Momento del Día:</label>
+          <select id="select-edit-horario" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
+            <option value="cualquiera" ${senda.horarioObjetivo === 'cualquiera' ? 'selected' : ''}>Cualquier momento</option>
+            <option value="manana" ${senda.horarioObjetivo === 'manana' ? 'selected' : ''}>Mañana (Al despertar)</option>
+            <option value="tarde" ${senda.horarioObjetivo === 'tarde' ? 'selected' : ''}>Tarde (Media jornada)</option>
+            <option value="noche" ${senda.horarioObjetivo === 'noche' ? 'selected' : ''}>Noche (Antes de dormir)</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 16px;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">Nota / Disparador del Hábito:</label>
+          <input type="text" id="input-edit-senda-nota" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);" placeholder="Ej: Después del café de la mañana..." value="${senda.notaMotivacion || ''}">
+        </div>
+
+        <div style="display: flex; gap: 8px;">
+          <button id="btn-guardar-cambios-senda" class="btn-yermo-primary" style="flex: 2; padding: 10px;">
+            Guardar Cambios
+          </button>
+          <button id="btn-eliminar-senda" class="btn-yermo-secondary" style="flex: 1; padding: 10px; color: #fca5a5; border-color: rgba(239, 68, 68, 0.4);">
+            Eliminar
+          </button>
+        </div>
+      </div>
+    `;
+
+    const cerrar = () => modalContainer.classList.add('hidden');
+    modalContent.querySelector('#btn-cerrar-modal').addEventListener('click', cerrar);
+
+    modalContent.querySelector('#btn-guardar-cambios-senda').addEventListener('click', async () => {
+      const nuevoNombre = modalContent.querySelector('#input-edit-senda-nombre').value.trim();
+      const nuevaFrec = modalContent.querySelector('#select-edit-frecuencia').value;
+      const nuevoHorario = modalContent.querySelector('#select-edit-horario').value;
+      const nuevaNota = modalContent.querySelector('#input-edit-senda-nota').value.trim();
+
+      if (nuevoNombre) {
+        senda.nombre = nuevoNombre;
+        senda.tipoFrecuencia = nuevaFrec;
+        senda.horarioObjetivo = nuevoHorario;
+        senda.notaMotivacion = nuevaNota;
+        await estadoApp.guardar();
+        cerrar();
+      }
+    });
+
+    modalContent.querySelector('#btn-eliminar-senda').addEventListener('click', async () => {
+      if (confirm(`¿Seguro que deseas eliminar la senda "${senda.nombre}"?`)) {
+        estadoApp.datos.sendas.splice(idx, 1);
+        await estadoApp.guardar();
+        cerrar();
+      }
+    });
+
+    modalContainer.classList.remove('hidden');
+  }
+
   abrirModalCrearSenda() {
     const modalContainer = document.getElementById('modal-container');
     const modalContent = document.getElementById('modal-content');
@@ -307,18 +426,37 @@ export class VistaTablon {
         <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
         <h3 style="margin-bottom: 12px; color: var(--text-primary);">🏃 Trazar Nueva Senda</h3>
         
-        <div style="margin-bottom: 12px;">
+        <div style="margin-bottom: 10px;">
           <label style="font-size: 0.8rem; color: var(--text-muted);">Nombre del Hábito:</label>
           <input type="text" id="input-senda-nombre" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);" placeholder="Ej: Correr 20 min, Leer 10 páginas, Orar...">
         </div>
 
-        <div style="margin-bottom: 14px;">
+        <div style="margin-bottom: 10px;">
           <label style="font-size: 0.8rem; color: var(--text-muted);">Asignar a 1 Pilar Absoluto:</label>
           <select id="select-senda-pilar" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
             <option value="cuerpo">🏃 Cuerpo (Salud, Movimiento, Deporte)</option>
             <option value="mente">📜 Mente (Lectura, Estudio, Concentración)</option>
             <option value="espiritu">🔥 Espíritu (Vida interior, Calma, Oración)</option>
             <option value="taller">🛠️ Taller (Trabajo manual, Reparar, Dibujar)</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">Frecuencia / Días de Ejecución:</label>
+          <select id="select-senda-frecuencia" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
+            <option value="diario">Diario (7 días a la semana)</option>
+            <option value="dias_fijos">Días Fijos de la Semana (L-M-V...)</option>
+            <option value="veces_semana">Veces por Semana Flexible (Ej: 3x/sem)</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label style="font-size: 0.8rem; color: var(--text-muted);">Horario / Momento del Día:</label>
+          <select id="select-senda-horario" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
+            <option value="cualquiera">Cualquier momento del día</option>
+            <option value="manana">Mañana (Al despertar)</option>
+            <option value="tarde">Tarde (Media jornada)</option>
+            <option value="noche">Noche (Antes de dormir)</option>
           </select>
         </div>
 
@@ -334,10 +472,19 @@ export class VistaTablon {
     modalContent.querySelector('#btn-guardar-senda').addEventListener('click', async () => {
       const nombre = modalContent.querySelector('#input-senda-nombre').value.trim();
       const pilar = modalContent.querySelector('#select-senda-pilar').value;
+      const frecuencia = modalContent.querySelector('#select-senda-frecuencia').value;
+      const horario = modalContent.querySelector('#select-senda-horario').value;
       if (!nombre) return;
 
       try {
         await estadoApp.agregarSenda(nombre, pilar);
+        // Asignar parámetros extra
+        const nueva = estadoApp.datos.sendas[estadoApp.datos.sendas.length - 1];
+        if (nueva) {
+          nueva.tipoFrecuencia = frecuencia;
+          nueva.horarioObjetivo = horario;
+          await estadoApp.guardar();
+        }
         cerrar();
       } catch (e) {
         alert(e.message);
