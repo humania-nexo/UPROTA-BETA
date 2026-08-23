@@ -109,3 +109,22 @@
   color: var(--text-secondary);
   line-height: 1.5;
 }
+
+/* Chips de Sugerencia Rápida */
+.chip-sug {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.chip-sug:hover {
+  background: var(--bg-surface-active);
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}
