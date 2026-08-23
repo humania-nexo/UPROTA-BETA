@@ -128,3 +128,24 @@
   border-color: var(--border-accent);
   color: var(--text-primary);
 }
+
+.btn-toggle-mas {
+  background: transparent;
+  border: 1px dashed var(--border-accent);
+  color: var(--oro-torta-glow);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-toggle-mas:hover {
+  background: rgba(217, 119, 6, 0.15);
+  border-color: var(--oro-torta);
+}
+
+.extra-chips-box.hidden {
+  display: none !important;
+}
