@@ -9,6 +9,7 @@ import { VistaMisiones } from './modulos/vista_misiones.js';
 import { VistaComunicacion } from './modulos/vista_comunicacion.js';
 import { VistaHogar } from './modulos/vista_hogar.js';
 import { ModalSabiduria } from './modulos/modal_sabiduria.js';
+import { ModalOnboarding } from './modulos/modal_onboarding.js';
 
 class App {
   constructor() {
@@ -35,7 +36,10 @@ class App {
     await estadoApp.inicializar();
     estadoApp.suscribir((estado) => this.actualizarVistas(estado));
 
-    // Abrir pop-up de Sabiduría Diaria si es la primera apertura del día
+    // Abrir Onboarding si es la primera vez
+    ModalOnboarding.mostrarSiEsNecesario();
+
+    // Abrir pop-up de Sabiduría Diaria si corresponde
     ModalSabiduria.mostrarSiCorresponde();
 
     // Registrar Service Worker

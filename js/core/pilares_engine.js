@@ -77,7 +77,7 @@ export class PilaresEngine {
       taller: (conteo.taller / totalPuntos) * 100
     };
 
-    const evaluacion = this.evaluarNivelEquilibrio(porcentajes);
+    const evaluacion = this.evaluarNivelEquilibrio(porcentajes, totalPuntos, conteo);
 
     return {
       puntos: conteo,
@@ -90,15 +90,51 @@ export class PilaresEngine {
   }
 
   /**
-   * Evalúa el nivel de equilibrio según Documento A (Sección 6)
-   * Los bonos son acumulativos.
+   * Evalúa el nivel de equilibrio según Documento A (Sección 6).
+   * El inicio básico (4 sendas) no da bonos dorados para no regalar la cima sin esfuerzo previo.
    */
-  static evaluarNivelEquilibrio(porcentajes) {
+  static evaluarNivelEquilibrio(porcentajes, totalPuntos = 0, conteo = { cuerpo: 0, mente: 0, espiritu: 0, taller: 0 }) {
     const valores = Object.values(porcentajes);
     const min = Math.min(...valores);
     const max = Math.max(...valores);
 
     const bonos = [];
+
+    // --- BONOS ESPECÍFICOS POR PILAR ACUMULADO (2+ fuentes en un pilar) ---
+    if (conteo.cuerpo >= 2) {
+      bonos.push({
+        id: 'bono_pilar_cuerpo',
+        titulo: '🏃 Resistencia Física',
+        desc: '−5% probabilidad de herida en exploraciones del Yermo.'
+      });
+    }
+    if (conteo.mente >= 2) {
+      bonos.push({
+        id: 'bono_pilar_mente',
+        titulo: '📜 Agudeza Mental',
+        desc: '+10% avance en proyectos de planos y lectura.'
+      });
+    }
+    if (conteo.espiritu >= 2) {
+      bonos.push({
+        id: 'bono_pilar_espiritu',
+        titulo: '🔥 Calma Interior',
+        desc: '+2 puntos de moral y mayor resguardo en El Hogar.'
+      });
+    }
+    if (conteo.taller >= 2) {
+      bonos.push({
+        id: 'bono_pilar_taller',
+        titulo: '🛠️ Manos Hábiles',
+        desc: '+10% eficiencia al reparar y craftear herramientas.'
+      });
+    }
+
+    // Si es el inicio básico (4 sendas), mantener como base de partida
+    if (totalPuntos <= 4) {
+      return { nivel: 'base_inicial', bonos };
+    }
+
     let nivel = 'desbalanceado';
 
     // Nivel 1: Aproximado (ningún pilar por debajo de 15%)

@@ -30,6 +30,8 @@ const ASSETS = [
   './js/modulos/vista_comunicacion.js',
   './js/modulos/vista_hogar.js',
   './js/modulos/modal_sabiduria.js',
+  './js/modulos/modal_onboarding.js',
+  './js/modulos/modal_info.js',
   './js/data/items_botin.js',
   './js/data/sabiduria_textos.js',
   './js/data/frases_estoicas.js',
