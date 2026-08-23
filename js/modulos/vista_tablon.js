@@ -263,7 +263,8 @@ export class VistaTablon {
           senda.rachaActual = (senda.rachaActual || 0) + 1;
           senda.fallosSeguidos = 0;
 
-          if (senda.pilar === 'cuerpo') {
+          // Solo recarga energía si el generador ya fue aprendido y construido (Nivel 5)
+          if (senda.pilar === 'cuerpo' && estado.bioenergia?.biciGeneradorConstruido) {
             estado.bioenergia = RefugioMundoEngine.recargarBioenergia(estado.bioenergia, 35);
           }
           estado.recursos.tablas = (estado.recursos.tablas || 0) + 1;
@@ -273,7 +274,7 @@ export class VistaTablon {
           senda.diasTotales = Math.max(0, (senda.diasTotales || 1) - 1);
           senda.rachaActual = Math.max(0, (senda.rachaActual || 1) - 1);
 
-          if (senda.pilar === 'cuerpo') {
+          if (senda.pilar === 'cuerpo' && estado.bioenergia?.biciGeneradorConstruido) {
             estado.bioenergia.nivelCarga = Math.max(0, (estado.bioenergia.nivelCarga || 0) - 35);
           }
           estado.recursos.tablas = Math.max(0, (estado.recursos.tablas || 1) - 1);

@@ -103,6 +103,12 @@ class App {
     if (resAgua) resAgua.textContent = `${estado.recursos.aguaLitros}L`;
     if (resBateria) resBateria.textContent = `${estado.bioenergia.nivelCarga}%`;
 
+    // Chip de Bioenergía en Header (Oculto hasta Nivel 5 con Generador)
+    const chipBateria = document.getElementById('chip-recurso-bateria');
+    if (chipBateria) {
+      chipBateria.classList.toggle('hidden', !estado.bioenergia?.biciGeneradorConstruido);
+    }
+
     // Visibilidad dinámica de pestañas (Sin spoilers)
     const btnRadio = document.getElementById('nav-btn-radio');
     if (btnRadio) {
