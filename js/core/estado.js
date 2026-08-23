@@ -164,18 +164,19 @@ export class EstadoApp {
     return NIVELES_REFUGIO[this.datos.nivelRefugio] || NIVELES_REFUGIO[0];
   }
 
-  async agregarSenda(nombre, pilar, frecuencia = 'diario', rigor = 'flexible') {
+  async agregarSenda(nombre, pilar, frecuencia = 'diario', horarioObjetivo = 'cualquiera') {
     const limite = this.infoNivelRefugio.maxSendas;
     if (this.datos.sendas.length >= limite) {
       throw new Error(`Tu refugio Nivel ${this.datos.nivelRefugio} solo permite ${limite} sendas activas.`);
     }
 
     const nuevaSenda = {
-      id: `senda_${Date.now()}`,
+      id: `senda_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
       nombre,
       pilar, // 'cuerpo', 'mente', 'espiritu', 'taller'
+      tipoFrecuencia: frecuencia,
       frecuencia,
-      rigor,
+      horarioObjetivo,
       fechaCreacion: new Date().toISOString().split('T')[0],
       diasTotales: 0,
       diasCumplidos: 0,

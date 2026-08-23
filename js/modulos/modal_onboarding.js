@@ -90,27 +90,37 @@ export class ModalOnboarding {
         </p>
 
         <!-- PILAR 1: CUERPO -->
-        <div style="margin-bottom: 12px; border-left: 3px solid var(--pilar-cuerpo); padding-left: 10px;">
+        <div style="margin-bottom: 14px; border-left: 3px solid var(--pilar-cuerpo); padding-left: 10px;">
           <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-cuerpo-light);">🏃 1. CUERPO (Salud y Energía)</label>
           <div style="font-size: 0.72rem; color: var(--text-secondary); margin: 2px 0 6px 0;">
             <strong>Propósito:</strong> Sacudirte el sedentarismo y generar energía física.
           </div>
           <div style="display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 6px;">
-            <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="Caminar 25 min al aire libre">Caminar 25 min</button>
+            <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="Trotar 30 min al aire libre">Trotar 30 min</button>
             <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="15 Flexiones y estiramientos">15 Flexiones</button>
-            <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="Trotar o andar en bicicleta">Trotar / Bici</button>
+            <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="Caminar 25 min">Caminar 25 min</button>
             <button type="button" class="btn-toggle-mas" data-target-extra="extra-cuerpo">+ Más</button>
           </div>
           <div id="extra-cuerpo" class="extra-chips-box hidden" style="display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 6px;">
             <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="Subir escaleras sin ascensor">Subir escaleras</button>
             <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="Tomar 2L de agua pura hoy">Beber 2L agua</button>
-            <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="30 min de entrenamiento con pesas">Pesas / Gym</button>
+            <button type="button" class="chip-sug" data-target="input-pilar-cuerpo" data-val="30 min de entrenamiento pesas">Pesas / Gym</button>
           </div>
-          <input type="text" id="input-pilar-cuerpo" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 0;" placeholder="Escribe tu hábito de cuerpo...">
+          <input type="text" id="input-pilar-cuerpo" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 6px;" placeholder="Escribe tu hábito de cuerpo...">
+          
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; font-size: 0.72rem; color: var(--text-muted);">
+            <span>Meta:</span>
+            <div class="frec-selector-group" data-pilar="cuerpo" style="display: flex; gap: 4px;">
+              <button type="button" class="frec-pill active" data-val="diario">Diario</button>
+              <button type="button" class="frec-pill" data-val="2x">2x/sem</button>
+              <button type="button" class="frec-pill" data-val="3x">3x/sem</button>
+              <button type="button" class="frec-pill" data-val="5x">5x/sem</button>
+            </div>
+          </div>
         </div>
 
         <!-- PILAR 2: MENTE -->
-        <div style="margin-bottom: 12px; border-left: 3px solid var(--pilar-mente); padding-left: 10px;">
+        <div style="margin-bottom: 14px; border-left: 3px solid var(--pilar-mente); padding-left: 10px;">
           <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-mente-light);">📜 2. MENTE (Nutrición Intelectual)</label>
           <div style="font-size: 0.72rem; color: var(--text-secondary); margin: 2px 0 6px 0;">
             <strong>Propósito:</strong> Alimentar el intelecto con conocimiento útil.
@@ -126,11 +136,20 @@ export class ModalOnboarding {
             <button type="button" class="chip-sug" data-target="input-pilar-mente" data-val="Avanzar 20 min en programación">Estudiar código</button>
             <button type="button" class="chip-sug" data-target="input-pilar-mente" data-val="Partida de ajedrez / lógica">Ajedrez / Lógica</button>
           </div>
-          <input type="text" id="input-pilar-mente" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 0;" placeholder="Escribe tu hábito de mente...">
+          <input type="text" id="input-pilar-mente" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 6px;" placeholder="Escribe tu hábito de mente...">
+
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; font-size: 0.72rem; color: var(--text-muted);">
+            <span>Meta:</span>
+            <div class="frec-selector-group" data-pilar="mente" style="display: flex; gap: 4px;">
+              <button type="button" class="frec-pill active" data-val="diario">Diario</button>
+              <button type="button" class="frec-pill" data-val="3x">3x/sem</button>
+              <button type="button" class="frec-pill" data-val="5x">5x/sem</button>
+            </div>
+          </div>
         </div>
 
         <!-- PILAR 3: ESPÍRITU -->
-        <div style="margin-bottom: 12px; border-left: 3px solid var(--pilar-espiritu); padding-left: 10px;">
+        <div style="margin-bottom: 14px; border-left: 3px solid var(--pilar-espiritu); padding-left: 10px;">
           <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-espiritu-light);">🔥 3. ESPÍRITU (Calma y Desconexión)</label>
           <div style="font-size: 0.72rem; color: var(--text-secondary); margin: 2px 0 6px 0;">
             <strong>Propósito:</strong> Soltar el teléfono y reconectar con la calma interior.
@@ -146,7 +165,16 @@ export class ModalOnboarding {
             <button type="button" class="chip-sug" data-target="input-pilar-espiritu" data-val="Tomar café/té con calma sin pantalla">Café sin teléfono</button>
             <button type="button" class="chip-sug" data-target="input-pilar-espiritu" data-val="Contemplar el cielo al atardecer">Contemplar atardecer</button>
           </div>
-          <input type="text" id="input-pilar-espiritu" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 0;" placeholder="Escribe tu hábito de espíritu...">
+          <input type="text" id="input-pilar-espiritu" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 6px;" placeholder="Escribe tu hábito de espíritu...">
+
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; font-size: 0.72rem; color: var(--text-muted);">
+            <span>Meta:</span>
+            <div class="frec-selector-group" data-pilar="espiritu" style="display: flex; gap: 4px;">
+              <button type="button" class="frec-pill active" data-val="diario">Diario</button>
+              <button type="button" class="frec-pill" data-val="3x">3x/sem</button>
+              <button type="button" class="frec-pill" data-val="5x">5x/sem</button>
+            </div>
+          </div>
         </div>
 
         <!-- PILAR 4: TALLER -->
@@ -166,7 +194,17 @@ export class ModalOnboarding {
             <button type="button" class="chip-sug" data-target="input-pilar-taller" data-val="Reparar o ajustar algo roto en casa">Reparar algo roto</button>
             <button type="button" class="chip-sug" data-target="input-pilar-taller" data-val="Cocinar comida fresca desde cero">Cocinar desde cero</button>
           </div>
-          <input type="text" id="input-pilar-taller" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 0;" placeholder="Escribe tu labor manual...">
+          <input type="text" id="input-pilar-taller" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 6px;" placeholder="Escribe tu labor manual...">
+
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; font-size: 0.72rem; color: var(--text-muted);">
+            <span>Meta:</span>
+            <div class="frec-selector-group" data-pilar="taller" style="display: flex; gap: 4px;">
+              <button type="button" class="frec-pill active" data-val="diario">Diario</button>
+              <button type="button" class="frec-pill" data-val="2x">2x/sem</button>
+              <button type="button" class="frec-pill" data-val="3x">3x/sem</button>
+              <button type="button" class="frec-pill" data-val="5x">5x/sem</button>
+            </div>
+          </div>
         </div>
 
         <button id="btn-onb-ir-paso-3" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem;">
@@ -188,6 +226,15 @@ export class ModalOnboarding {
       });
     });
 
+    // Vincular selectores de frecuencia (pills)
+    modalContent.querySelectorAll('.frec-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        const group = pill.closest('.frec-selector-group');
+        group.querySelectorAll('.frec-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+      });
+    });
+
     // Botones + Más
     modalContent.querySelectorAll('.btn-toggle-mas').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -201,16 +248,21 @@ export class ModalOnboarding {
     });
 
     modalContent.querySelector('#btn-onb-ir-paso-3').addEventListener('click', () => {
-      const hCuerpo = modalContent.querySelector('#input-pilar-cuerpo').value.trim() || 'Caminar 25 min al aire libre';
+      const hCuerpo = modalContent.querySelector('#input-pilar-cuerpo').value.trim() || 'Trotar 30 min al aire libre';
       const hMente = modalContent.querySelector('#input-pilar-mente').value.trim() || 'Leer 10 páginas de un libro';
       const hEspiritu = modalContent.querySelector('#input-pilar-espiritu').value.trim() || 'Oración sincera y gratitud';
       const hTaller = modalContent.querySelector('#input-pilar-taller').value.trim() || 'Regar las plantas / cuidar jardín';
 
+      const frecCuerpo = modalContent.querySelector('.frec-selector-group[data-pilar="cuerpo"] .frec-pill.active')?.getAttribute('data-val') || 'diario';
+      const frecMente = modalContent.querySelector('.frec-selector-group[data-pilar="mente"] .frec-pill.active')?.getAttribute('data-val') || 'diario';
+      const frecEspiritu = modalContent.querySelector('.frec-selector-group[data-pilar="espiritu"] .frec-pill.active')?.getAttribute('data-val') || 'diario';
+      const frecTaller = modalContent.querySelector('.frec-selector-group[data-pilar="taller"] .frec-pill.active')?.getAttribute('data-val') || 'diario';
+
       const sendasConfig = [
-        { nombre: hCuerpo, pilar: 'cuerpo' },
-        { nombre: hMente, pilar: 'mente' },
-        { nombre: hEspiritu, pilar: 'espiritu' },
-        { nombre: hTaller, pilar: 'taller' }
+        { nombre: hCuerpo, pilar: 'cuerpo', frecuencia: frecCuerpo },
+        { nombre: hMente, pilar: 'mente', frecuencia: frecMente },
+        { nombre: hEspiritu, pilar: 'espiritu', frecuencia: frecEspiritu },
+        { nombre: hTaller, pilar: 'taller', frecuencia: frecTaller }
       ];
 
       this.abrirPaso3(sendasConfig);
@@ -300,9 +352,9 @@ export class ModalOnboarding {
       const c1 = modalContent.querySelector('#input-cadena-1').value.trim() || 'Desvelarme con el teléfono en la cama';
       const c2 = modalContent.querySelector('#input-cadena-2').value.trim() || 'Procrastinar y aplazar tareas difíciles';
 
-      // Agregar las 4 sendas
+      // Agregar las 4 sendas con su frecuencia personalizada
       for (const s of sendasConfig) {
-        await estadoApp.agregarSenda(s.nombre, s.pilar);
+        await estadoApp.agregarSenda(s.nombre, s.pilar, s.frecuencia || 'diario');
       }
 
       // Agregar las 2 cadenas

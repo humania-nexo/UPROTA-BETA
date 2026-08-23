@@ -149,3 +149,27 @@
 .extra-chips-box.hidden {
   display: none !important;
 }
+
+/* Pastillas de Frecuencia Semanal */
+.frec-pill {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.frec-pill:hover {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}
+
+.frec-pill.active {
+  background: var(--accent-rust);
+  border-color: var(--accent-rust-light);
+  color: #fff;
+  font-weight: 700;
+}
