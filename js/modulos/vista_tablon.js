@@ -245,6 +245,7 @@ export class VistaTablon {
     `;
   }
 
+  vincularEventos(estado) {
     // Check de Sendas (Suma/Resta 1 con seguridad)
     this.contenedor.querySelectorAll('[data-senda-idx]').forEach(btn => {
       btn.addEventListener('click', async (e) => {
