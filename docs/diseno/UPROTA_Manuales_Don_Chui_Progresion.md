@@ -4,42 +4,43 @@
 
 ---
 
-## 1. El Estado Inicial del Prota (Día 0: Punto Cero)
+## 1. El Prota como Reflejo de la Persona Común (Día 1: Punto Cero)
 
-El protagonista no empieza con habilidades avanzadas ni con un refugio fortificado. Inicia con las últimas reservas de su mochila de escape tras semanas de vagar por el Yermo:
+El protagonista no es un militar de élite ni un experto en supervivencia: **es una persona común de la vida moderna**. Ante un colapso repentino, la inmensa mayoría de la población huye con lo que tiene puesto y lo poco que logra meter a toda prisa en una bolsa. No sabe encender fuego con ramas, no tiene pedernal ni herramientas especializadas.
 
-### Equipo Inicial en la Mochila:
-* **🎒 Contenedor:** Bolsa ecológica rota (Capacidad 8 kg).
-* **🥫 Comida del Viejo Mundo:** 3 latas de atún/frijol (Raciones comerciales).
-* **💧 Agua Embotellada:** 4 Litros de agua limpia en botellas PET comerciales.
-* **📦 Materiales de rescate:** 5 tablas de pino sueltas, 1 bote con 10 clavos oxidados, 1 pedazo de lona plástica rota.
-* **🔪 Herramienta:** 1 cuchillo de cocina mellado (30% eficiencia).
-* **🔥 Fuego:** Sin fósforos ni encendedor (solo un par de lentes de lectura rayados).
+### Equipo Inicial en la Mochila de Escape:
+* **🎒 Contenedor:** Bolsa ecológica rota de tela de mercado (Capacidad 8 kg).
+* **🥫 Comida del Viejo Mundo:** 3 latas comerciales de comida (atún/frijol). **Se comen frías** porque no hay fuego.
+* **💧 Agua Embotellada:** 4 Litros de agua purificada en botellas PET de tienda.
+* **🍓 Recolección silvestre:** Si sale a explorar, puede recolectar frutos silvestres comestibles del monte (moras, tunas, bayas).
+* **📦 Materiales de rescate:** 5 tablas sueltas de palet, 10 clavos oxidados, 1 pedazo de lona rota.
+* **🔪 Herramienta:** 1 cuchillo de cocina mellado del viejo mundo (30% eficiencia).
+* **🔥 Fuego:** **CERO.** No hay fósforos, ni encendedor, ni conocimientos para hacer una fogata. Las noches son oscuras y frías.
 
 ---
 
-## 2. Consumo Humano Realista y Tensión Inicial (Días 1 a 3)
+## 2. Consumo Humano Realista y la Tensión de los Primeros 3 Días
 
-Para que el jugador sienta la urgencia real de la supervivencia sin agobio punitivo:
+El jugador y el personaje aprenden al mismo tiempo. En los primeros días experimenta la vulnerabilidad real de no saber cómo sostenerse por sí mismo:
 
 | Recurso vital | Consumo diario mínimo | Efecto si llega a 0 |
 |---|---|---|
-| **💧 Agua Pura** | **2 Litros / día** | Fatiga severa: no se pueden realizar exploraciones Tipo A hasta beber. |
-| **🥕 Comida** | **1 Ración / día** (o 1 lata) | Debilidad leve: penalización de moral (-2 moral). |
+| **💧 Agua Pura** | **2 Litros / día** | Fatiga severa: no se pueden realizar exploraciones hasta beber. |
+| **🥫 Comida** | **1 Ración / día** (o 1 lata fría / frutos) | Debilidad leve: penalización de moral (-2 moral). |
 
-### La cuenta regresiva de los primeros 3 días:
-* **Día 1:** Consumes 2L de agua y 1 lata de comida. Te quedan 2L de agua y 2 latas.
-* **Día 2:** Consumes 2L de agua y 1 lata. Te queda 0L de agua limpia y 1 sola lata. La sed aprieta. Sales a buscar agua al riachuelo, pero está turbia y no sabes cómo purificarla sin enfermar.
-* **Día 3 (El Evento Crítico):** Se agota la última lata. En ese momento exacto de necesidad, **aparece Don Chui caminando por el sendero**.
+### La cuenta regresiva inicial:
+* **Día 1:** Comes tu primera lata fría y bebes 2L de agua de botella. Te quedan 2L y 2 latas. La noche es fría y en penumbra.
+* **Día 2:** Comes la segunda lata fría y bebes los últimos 2L de agua embotellada. Te queda 0L de agua limpia y 1 sola lata. La sed aprieta. Si sales al monte encuentras un riachuelo, pero el agua está turbia y no tienes fuego para hervirla ni sabes cómo filtrarla sin enfermarte.
+* **Día 3 (El Punto de Inflexión):** Comes la última lata fría. Se acabó la comida del viejo mundo y el agua de botella. En ese instante de vulnerabilidad total, **aparece Don Chui caminando por el sendero**.
 
 ---
 
 ## 3. El Primer Encuentro con Don Chui (Día 3)
 
-Don Chui se acerca al refugio, ve tu fogón apagado y tu agua turbia.
-> *"La paz sea contigo, Prota. Te veo seco y con el estómago pegado al espinazo. Mi patrón me manda a caminar estos cerros para echarle una mano a los que todavía tienen ganas de vivir. Es un patrón exigente, le gusta que la gente trabaje con sus manos, pero nunca deja sin sustento al que no se rinde. Toma este cuaderno, lo escribí de mi puño y letra. Léelo despacio y ponte a chambear."*
+Don Chui se acerca al refugio, ve tu espacio sin fuego, tu agua turbia y tus latas vacías.
+> *"La paz sea contigo, Prota. Te veo seco, temblando de frío y con el estómago pegado al espinazo. No te avergüences; nadie nos enseñó en la escuela a prender un leño sin cerillos ni a sacar agua pura de un charco. Mi patrón me manda a caminar estos cerros para echarle una mano a los que todavía tienen ganas de aprender y vivir. Es un patrón exigente, le gusta que la gente trabaje con sus manos, pero nunca deja sin sustento al que no se rinde. Toma este cuaderno, lo escribí de mi puño y letra. Léelo despacio y ponte a chambear."*
 
-Don Chui te entrega el **Tomo I**.
+Don Chui te entrega el **Tomo I**, y por primera vez el Prota (y el jugador) aprenden la técnica real de crear fuego por fricción con un ovillo vegetal y purificar agua.
 
 ---
 
