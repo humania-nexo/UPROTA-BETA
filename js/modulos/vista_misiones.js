@@ -1,10 +1,8 @@
 /**
- * Vista: Misiones Diarias (1 por día real)
- * Exploración Tipo A con riesgo vs Recolección Tipo B segura.
+ * Vista: Misiones y Exploración Asíncrona (Resolución al día siguiente)
  */
 
 import { estadoApp } from '../core/estado.js';
-import { MisionesEngine } from '../mundo/misiones_engine.js';
 
 export class VistaMisiones {
   constructor(contenedor) {
@@ -12,122 +10,210 @@ export class VistaMisiones {
   }
 
   render(estado) {
-    const infoNivel = estadoApp.infoNivelRefugio;
-    const misionHecha = estado.misionRealizadaHoy;
+    const hayInforme = !!estado.informeMisionPendiente;
+    const enCurso = !!estado.misionDespachadaHoy;
 
     this.contenedor.innerHTML = `
-      <div class="card-yermo">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <h3 style="font-size: 1rem; color: var(--text-primary);">🧭 Patrulla y Salidas del Yermo</h3>
-          <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--oro-torta);">1 Misión / Día Real</span>
-        </div>
-        <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.45;">
-          El Yermo no recompensa el farmeo compulsivo. Tu cuerpo y el monte necesitan descanso. Sal una vez al día a explorar o recolectar suministros.
-        </p>
+      <div style="text-align: center; margin-bottom: 14px;">
+        <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 2px;">
+          🧭 Expediciones del Yermo
+        </h2>
+        <span style="font-size: 0.76rem; color: var(--text-muted);">
+          1 misión por día real &bull; El Prota explora y regresa con los resultados al amanecer
+        </span>
       </div>
 
-      ${misionHecha ? `
-        <div class="card-yermo" style="text-align: center; border-color: var(--border-strong); background: rgba(0, 0, 0, 0.4);">
-          <div style="font-size: 2rem; margin-bottom: 6px;">🏕️</div>
-          <h4 style="color: var(--text-primary); margin-bottom: 4px;">Ya patrullaste hoy, Prota</h4>
-          <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-            El Yermo descansa. Guarda tus herramientas, cuida tu fuego y regresa mañana para una nueva salida.
+      <!-- ESTADO 1: HAY UN INFORME PENDIENTE POR REVISAR -->
+      ${hayInforme ? `
+        <div class="card-yermo" style="background: rgba(217, 119, 6, 0.12); border: 2px solid var(--oro-torta); margin-bottom: 16px; text-align: center; padding: 16px;">
+          <div style="font-size: 2rem; margin-bottom: 4px;">📦</div>
+          <h3 style="font-size: 1.05rem; color: var(--oro-torta-glow); margin-bottom: 4px;">¡El Prota ha Regresado del Yermo!</h3>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">
+            La expedición despachada ayer ha concluido. Revisa la bitácora para ver el botín, posibles heridas y los recursos recolectados.
+          </p>
+          <button id="btn-ver-informe-mision" class="btn-yermo-primary" style="width: 100%; padding: 10px;">
+            📜 Ver Informe de Expedición y Reclamar Botín
+          </button>
+        </div>
+      ` : ''}
+
+      <!-- ESTADO 2: PROTA EN CURSO -->
+      ${!hayInforme && enCurso ? `
+        <div class="card-yermo" style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--pilar-mente); margin-bottom: 16px; text-align: center; padding: 18px;">
+          <div style="font-size: 2rem; margin-bottom: 6px;">🧭</div>
+          <h3 style="font-size: 1.05rem; color: var(--pilar-mente-light); margin-bottom: 4px;">Prota en Expedición...</h3>
+          <div style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 8px;">
+            Destino: <strong>${estado.misionDespachadaHoy.destino || 'El Yermo'}</strong> (${estado.misionDespachadaHoy.tipo === 'tipo_a' ? 'Exploración de Ruinas' : 'Recolección Segura'}).
+          </div>
+          <p style="font-size: 0.76rem; color: var(--text-muted);">
+            El camino toma todo el día y la noche. Vuelve mañana al amanecer para recibir el informe de bitácora y desembarcar la mochila.
           </p>
         </div>
-      ` : `
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <!-- OPCIÓN 1: TIPO A EXPLORACIÓN CON RIESGO -->
-          <div class="card-yermo" style="border-left: 3px solid var(--accent-rust);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-              <h4 style="font-size: 0.9rem; color: var(--text-primary);">🏚️ Explorar Ruinas del Sector Norte</h4>
-              <span style="font-size: 0.7rem; color: var(--pilar-cuerpo-light); font-family: var(--font-mono);">Tipo A &bull; Riesgo Leve</span>
+      ` : ''}
+
+      <!-- ESTADO 3: DISPONIBLE PARA ELEGIR MISIÓN DE HOY -->
+      ${!hayInforme && !enCurso ? `
+        <div class="misiones-grid">
+          <!-- TIPO A: EXPLORACIÓN -->
+          <div class="card-yermo" style="border-left: 3px solid var(--accent-rust); margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+              <div>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--accent-rust-light); text-transform: uppercase;">Tipo A &bull; Ruinas Peligrosas</span>
+                <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-top: 2px;">Casas del Sector Norte</h4>
+              </div>
+              <span class="slots-counter">Riesgo Leve</span>
             </div>
-            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px;">
-              Casas abandonadas y talleres. Posibilidad de encontrar herramientas raras, sal o café de trueque.
+            <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.4;">
+              Rebusca en cajones y armarios abandonados. Alta probabilidad de objetos de trueque (café, cables, sal) pero riesgo de raspaduras en el monte.
             </p>
-            <button id="btn-mision-tipo-a" class="btn-yermo-primary" style="width: 100%;">
-              Iniciar Exploración
+            <button class="btn-yermo-primary btn-despachar-mision" style="width: 100%; padding: 8px;" data-mision-tipo="tipo_a" data-mision-destino="Casas del Sector Norte">
+              Despachar Expedición (Resultado Mañana)
             </button>
           </div>
 
-          <!-- OPCIÓN 2: TIPO B MADERA SEGURA -->
-          <div class="card-yermo" style="border-left: 3px solid var(--pilar-taller);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-              <h4 style="font-size: 0.9rem; color: var(--text-primary);">🌲 Recolección: Bosquecito Tras el Cerro</h4>
-              <span style="font-size: 0.7rem; color: var(--pilar-taller-light); font-family: var(--font-mono);">Tipo B &bull; Segura</span>
+          <!-- TIPO B: RECOLECCIÓN MADERA -->
+          <div class="card-yermo" style="border-left: 3px solid var(--pilar-taller); margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+              <div>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--pilar-taller-light); text-transform: uppercase;">Tipo B &bull; Seguro</span>
+                <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-top: 2px;">Quebrada de Palets</h4>
+              </div>
+              <span class="slots-counter">Sin Riesgo</span>
             </div>
-            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px;">
-              Corte de tablas y recolección de leña seca. Sin riesgo de heridas.
+            <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.4;">
+              Desarmar maderas y tarimas viejas en el arroyo seco. Trae 3 tablas seguras y leña para el fogón del refugio.
             </p>
-            <button id="btn-mision-tipo-b-madera" class="btn-yermo-secondary" style="width: 100%;">
-              Recolectar Madera
+            <button class="btn-yermo-secondary btn-despachar-mision" style="width: 100%; padding: 8px;" data-mision-tipo="tipo_b_madera" data-mision-destino="Bosquecito tras el cerro">
+              Recolectar Madera (Resultado Mañana)
             </button>
           </div>
 
-          <!-- OPCIÓN 3: TIPO B AGUA SEGURA -->
-          <div class="card-yermo" style="border-left: 3px solid var(--pilar-mente);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-              <h4 style="font-size: 0.9rem; color: var(--text-primary);">💧 Acarreo: Riachuelo Cercano</h4>
-              <span style="font-size: 0.7rem; color: var(--pilar-mente-light); font-family: var(--font-mono);">Tipo B &bull; Segura</span>
+          <!-- TIPO B: RECOLECCIÓN AGUA -->
+          <div class="card-yermo" style="border-left: 3px solid var(--pilar-mente); margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+              <div>
+                <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--pilar-mente-light); text-transform: uppercase;">Tipo B &bull; Vital</span>
+                <h4 style="font-size: 0.95rem; color: var(--text-primary); margin-top: 2px;">Acarreo de Agua al Riachuelo</h4>
+              </div>
+              <span class="slots-counter">Sin Riesgo</span>
             </div>
-            <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px;">
-              Acarreo de 10L de agua en cubetas. Sin riesgo.
+            <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.4;">
+              Caminar con garrafones y cubetas hacia el cauce bajo del arroyo. Trae 8L de agua (requiere filtrado y hervor).
             </p>
-            <button id="btn-mision-tipo-b-agua" class="btn-yermo-secondary" style="width: 100%;">
-              Acarrear Agua
+            <button class="btn-yermo-secondary btn-despachar-mision" style="width: 100%; padding: 8px;" data-mision-tipo="tipo_b_agua" data-mision-destino="Riachuelo cercano">
+              Acarrear Agua (Resultado Mañana)
             </button>
           </div>
         </div>
-      `}
+      ` : ''}
     `;
 
-    this.vincularEventos(estado, infoNivel);
+    this.vincularEventos(estado);
   }
 
-  vincularEventos(estado, infoNivel) {
-    const btnA = this.contenedor.querySelector('#btn-mision-tipo-a');
-    const btnBMadera = this.contenedor.querySelector('#btn-mision-tipo-b-madera');
-    const btnBAgua = this.contenedor.querySelector('#btn-mision-tipo-b-agua');
+  vincularEventos(estado) {
+    // Botón para ver informe pendiente
+    const btnVerInforme = this.contenedor.querySelector('#btn-ver-informe-mision');
+    if (btnVerInforme) {
+      btnVerInforme.addEventListener('click', () => {
+        this.mostrarModalInforme(estado.informeMisionPendiente);
+      });
+    }
 
-    const procesarResultado = async (resultado) => {
-      estado.misionRealizadaHoy = true;
+    // Botones para despachar misión
+    this.contenedor.querySelectorAll('.btn-despachar-mision').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const tipo = btn.getAttribute('data-mision-tipo');
+        const destino = btn.getAttribute('data-mision-destino');
 
-      if (resultado.recursosGanados) {
-        if (resultado.recursosGanados.tablas) estado.recursos.tablas = (estado.recursos.tablas || 0) + resultado.recursosGanados.tablas;
-        if (resultado.recursosGanados.aguaLitros) estado.recursos.aguaLitros = (estado.recursos.aguaLitros || 0) + resultado.recursosGanados.aguaLitros;
+        estadoApp.datos.misionDespachadaHoy = {
+          tipo,
+          destino,
+          fechaDespacho: new Date().toISOString().split('T')[0]
+        };
+
+        await estadoApp.guardar();
+      });
+    });
+  }
+
+  mostrarModalInforme(informe) {
+    if (!informe) return;
+
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
+    if (!modalContainer || !modalContent) return;
+
+    modalContent.innerHTML = `
+      <div class="informe-mision-wrap">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <h3 style="font-size: 1.15rem; color: var(--oro-torta-glow);">📜 Bitácora de Expedición</h3>
+          <span class="slots-counter">${informe.estadoSalud}</span>
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px;">
+          Destino explorado: <strong>${informe.nombreDestino}</strong>
+        </div>
+
+        <!-- LOG NARRATIVO -->
+        <div class="card-yermo" style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--accent-rust); margin-bottom: 12px; font-size: 0.82rem; line-height: 1.5;">
+          ${informe.logNarrativo.map(l => `<p style="margin-bottom: 6px;">${l}</p>`).join('')}
+        </div>
+
+        <!-- RECURSOS Y BOTÍN -->
+        <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">
+          📦 Botín Transportado (${informe.pesoTotalKg || 0} kg):
+        </div>
+        
+        <div class="card-yermo" style="background: var(--bg-surface); padding: 8px; margin-bottom: 14px; font-size: 0.8rem;">
+          ${informe.itemsRecogidos && informe.itemsRecogidos.length > 0 ? `
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              ${informe.itemsRecogidos.map(item => `
+                <li style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dashed var(--border-subtle);">
+                  <span>${item.nombre}</span>
+                  <span style="color: var(--oro-torta-glow);">${item.pesoKg} kg (Trueque: ${item.valorTrueque || 1})</span>
+                </li>
+              `).join('')}
+            </ul>
+          ` : '<span style="color: var(--text-muted);">Sin objetos sueltos. Solo recursos básicos.</span>'}
+
+          ${informe.recursosGanados ? `
+            <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border-subtle); display: flex; gap: 12px; color: #a7f3d0; font-weight: 600;">
+              ${informe.recursosGanados.tablas ? `<span>🪵 +${informe.recursosGanados.tablas} Tablas</span>` : ''}
+              ${informe.recursosGanados.clavos ? `<span>🔩 +${informe.recursosGanados.clavos} Clavos</span>` : ''}
+              ${informe.recursosGanados.aguaLitros ? `<span>💧 +${informe.recursosGanados.aguaLitros}L Agua</span>` : ''}
+            </div>
+          ` : ''}
+        </div>
+
+        <button id="btn-reclamar-informe" class="btn-yermo-primary" style="width: 100%; padding: 12px;">
+          ✓ Guardar en Refugio y Continuar
+        </button>
+      </div>
+    `;
+
+    modalContent.querySelector('#btn-reclamar-informe').addEventListener('click', async () => {
+      // Depositar recursos
+      if (informe.recursosGanados) {
+        if (informe.recursosGanados.tablas) estadoApp.datos.recursos.tablas += informe.recursosGanados.tablas;
+        if (informe.recursosGanados.clavos) estadoApp.datos.recursos.clavos += informe.recursosGanados.clavos;
+        if (informe.recursosGanados.aguaLitros) estadoApp.datos.recursos.aguaLitros += informe.recursosGanados.aguaLitros;
       }
 
-      if (resultado.itemsRecogidos && resultado.itemsRecogidos.length > 0) {
-        resultado.itemsRecogidos.forEach(item => {
-          estado.bolsa.items.push(item);
+      // Depositar ítems en bolsa si caben
+      if (informe.itemsRecogidos) {
+        informe.itemsRecogidos.forEach(item => {
+          estadoApp.datos.bolsa.items.push(item);
         });
-        estado.bolsa.pesoActualKg = Math.min(infoNivel.capacidadBolsaKg, estado.bolsa.pesoActualKg + (resultado.pesoTotalCargadoKg || 1));
       }
 
+      // Limpiar informe pendiente para habilitar la misión de hoy
+      estadoApp.datos.informeMisionPendiente = null;
       await estadoApp.guardar();
-      alert(`${resultado.mensaje}\n${resultado.itemsDejadosPorPeso?.length > 0 ? `(Dejaste ${resultado.itemsDejadosPorPeso.length} ítems por peso de bolsa)` : ''}`);
-    };
 
-    if (btnA) {
-      btnA.addEventListener('click', () => {
-        const esDorado = estadoApp.infoPilares.esDorado;
-        const res = MisionesEngine.ejecutarMision('tipo_a', 'Casas del sector norte', infoNivel.capacidadBolsaKg, esDorado);
-        procesarResultado(res);
-      });
-    }
+      modalContainer.classList.add('hidden');
+    });
 
-    if (btnBMadera) {
-      btnBMadera.addEventListener('click', () => {
-        const res = MisionesEngine.ejecutarMision('tipo_b_madera', null, infoNivel.capacidadBolsaKg);
-        procesarResultado(res);
-      });
-    }
-
-    if (btnBAgua) {
-      btnBAgua.addEventListener('click', () => {
-        const res = MisionesEngine.ejecutarMision('tipo_b_agua', null, infoNivel.capacidadBolsaKg);
-        procesarResultado(res);
-      });
-    }
+    modalContainer.classList.remove('hidden');
   }
 }

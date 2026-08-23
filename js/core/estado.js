@@ -6,9 +6,10 @@
 import { MotorDB } from './db.js';
 import { PilaresEngine } from './pilares_engine.js';
 import { NIVELES_REFUGIO } from '../data/niveles_refugio.js';
+import { MisionesEngine } from '../mundo/misiones_engine.js';
 
 export class EstadoApp {
-  static CLAVE_ESTADO = 'uprota_estado_global';
+  static CLAVE_ESTADO = 'uprota_estado_v1';
 
   constructor() {
     this.suscriptores = [];
@@ -62,9 +63,12 @@ export class EstadoApp {
       faros: [],
       manualesDonChui: [], // 'tomo_1', 'tomo_2', 'tomo_3'
       donChuiConocido: false,
+      hogarDesbloqueado: false,
       objetosSabiduriaActivos: [], // Se desbloquea en Día 60 con la Biblia
       objetosSabiduriaInventario: [],
       sabiduriaVistoHoy: false,
+      misionDespachadaHoy: null,        // Misión enviada hoy (en curso)
+      informeMisionPendiente: null,     // Informe de expedición listo para ver
       misionRealizadaHoy: false,
       ultimaFechaAcceso: new Date().toISOString().split('T')[0]
     };
@@ -91,6 +95,18 @@ export class EstadoApp {
       this.datos.ultimaFechaAcceso = hoy;
       this.datos.perfil.diaSupervivencia = (this.datos.perfil.diaSupervivencia || 1) + 1;
       this.datos.sabiduriaVistoHoy = false;
+
+      // Si había una misión enviada ayer, resolverla y crear el informe de expedición
+      if (this.datos.misionDespachadaHoy) {
+        const pilares = this.infoPilares;
+        const informe = MisionesEngine.resolverMision(
+          this.datos.misionDespachadaHoy,
+          this.datos.bolsa.capacidadKg,
+          pilares.esDorado
+        );
+        this.datos.informeMisionPendiente = informe;
+        this.datos.misionDespachadaHoy = null;
+      }
       this.datos.misionRealizadaHoy = false;
 
       // Consumo biológico diario realista (2L de agua y 1 ración)
