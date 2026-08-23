@@ -178,7 +178,7 @@ export class VistaTablon {
       <div class="faros-list">
         ${infoRefugio.maxFaros === 0 ? `
           <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.82rem;">
-            🔒 <strong>Faros no disponibles:</strong> El sistema de faros se encenderá tras asegurar tu primer almacén de provisiones (Día 7).
+            🔒 Función no disponible por ahora. Concéntrate en tus primeros pasos.
           </div>
         ` : estado.faros.length === 0 ? `
           <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.84rem;">
