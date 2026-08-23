@@ -21,30 +21,33 @@ export class EstadoApp {
         nombre: 'Prota',
         ciudad: 'Yermo Central',
         fechaInicio: new Date().toISOString().split('T')[0],
+        diaSupervivencia: 1,
         onboardingCompletado: false
       },
       nivelRefugio: 0,
       recursos: {
         tablas: 5,
-        clavos: 4,
-        provisiones: 2,
-        aguaLitros: 3,
+        clavos: 10,
+        provisiones: 3,   // 3 latas comerciales del viejo mundo
+        aguaLitros: 4,     // 4 Litros de agua embotellada
         moral: 10
       },
       bolsa: {
         tipo: 'Bolsa ecológica rota',
         capacidadKg: 8.0,
-        pesoActualKg: 1.2,
+        pesoActualKg: 3.5,
         espaciosMax: 6,
         items: [
-          { id: 'item_001', nombre: 'Clavos oxidados', pesoKg: 0.5, cantidad: 4 },
-          { id: 'item_008', nombre: 'Tabla de pino suelta', pesoKg: 1.2, cantidad: 2 }
+          { id: 'item_099', nombre: 'Lata de comida comercial', pesoKg: 0.4, cantidad: 3 },
+          { id: 'item_001', nombre: 'Clavos oxidados', pesoKg: 0.5, cantidad: 10 },
+          { id: 'item_008', nombre: 'Tabla de pino suelta', pesoKg: 1.2, cantidad: 2 },
+          { id: 'item_032', nombre: 'Cuchillo de cocina mellado (30%)', pesoKg: 0.2, cantidad: 1 }
         ]
       },
       bioenergia: {
-        nivelCarga: 80, // 0 a 100%
+        nivelCarga: 0, // En Nivel 0 no hay generador ni LEDs
         biciGeneradorConstruido: false,
-        lucesLedEncendidas: true,
+        lucesLedEncendidas: false,
         radioEncendida: false
       },
       comunicacion: {
@@ -57,8 +60,10 @@ export class EstadoApp {
       cimientos: [],
       cadenas: [],
       faros: [],
-      objetosSabiduriaActivos: ['obj_biblia_chui'], // Biblia de Don Chui activa por defecto
-      objetosSabiduriaInventario: ['obj_biblia_chui'],
+      manualesDonChui: [], // 'tomo_1', 'tomo_2', 'tomo_3'
+      donChuiConocido: false,
+      objetosSabiduriaActivos: [], // Se desbloquea en Día 60 con la Biblia
+      objetosSabiduriaInventario: [],
       sabiduriaVistoHoy: false,
       misionRealizadaHoy: false,
       ultimaFechaAcceso: new Date().toISOString().split('T')[0]
@@ -69,7 +74,6 @@ export class EstadoApp {
     try {
       const guardado = await MotorDB.obtener('estado_app', EstadoApp.CLAVE_ESTADO);
       if (guardado) {
-        // Fusionar con estado inicial para compatibilidad si hay nuevas propiedades
         this.datos = { ...this.generarEstadoInicial(), ...guardado };
       } else {
         await this.guardar();
@@ -85,10 +89,30 @@ export class EstadoApp {
     const hoy = new Date().toISOString().split('T')[0];
     if (this.datos.ultimaFechaAcceso !== hoy) {
       this.datos.ultimaFechaAcceso = hoy;
+      this.datos.perfil.diaSupervivencia = (this.datos.perfil.diaSupervivencia || 1) + 1;
       this.datos.sabiduriaVistoHoy = false;
       this.datos.misionRealizadaHoy = false;
-      // Drenaje leve natural de batería si no hubo pedaleo
-      this.datos.bioenergia.nivelCarga = Math.max(10, this.datos.bioenergia.nivelCarga - 15);
+
+      // Consumo biológico diario realista (2L de agua y 1 ración)
+      if (this.datos.recursos.aguaLitros >= 2) {
+        this.datos.recursos.aguaLitros -= 2;
+      } else {
+        this.datos.recursos.aguaLitros = 0; // Deshidratación
+      }
+
+      if (this.datos.recursos.provisiones >= 1) {
+        this.datos.recursos.provisiones -= 1;
+      } else {
+        this.datos.recursos.provisiones = 0;
+        this.datos.recursos.moral = Math.max(0, this.datos.recursos.moral - 2);
+      }
+
+      // Evento Don Chui en Día 3
+      if (this.datos.perfil.diaSupervivencia >= 3 && !this.datos.donChuiConocido) {
+        this.datos.donChuiConocido = true;
+        this.datos.manualesDonChui.push('tomo_1');
+      }
+
       this.guardar();
     }
   }
