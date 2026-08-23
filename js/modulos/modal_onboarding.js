@@ -22,46 +22,53 @@ export class ModalOnboarding {
     modalContent.innerHTML = `
       <div class="onboarding-wrap">
         <div style="display: inline-block; background: #451a03; border: 1px dashed var(--oro-torta); color: var(--oro-torta-glow); font-family: var(--font-mono); font-size: 0.72rem; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px;">
-          REGISTRO DE EMERGENCIA &bull; AÑO 3
+          REGISTRO DE TRANSMISIÓN &bull; AÑO 3
         </div>
 
-        <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 4px;">
+        <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 2px;">
           El Yermo no Perdona la Desidia
         </h2>
         <div style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px;">
-          Prólogo de Supervivencia y Puente a tu Vida Real
+          Bienvenido a UPROTA &bull; Eres el Protagonista de tu Propia Historia
         </div>
 
-        <div style="background: rgba(0, 0, 0, 0.4); border-left: 3px solid var(--accent-rust); padding: 12px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 14px;">
+        <div style="background: rgba(0, 0, 0, 0.4); border-left: 3px solid var(--accent-rust); padding: 12px 14px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 14px;">
           <p>
-            La civilización no cayó por un solo cataclismo: fueron las sequías interminables, los apagones globales y el silencio de las ciudades. Cada persona quedó por su cuenta, sobreviviendo desde su propio rincón.
+            La civilización colapsó por múltiples motivos: sequías interminables, apagones globales y el silencio de las ciudades. Cada persona quedó por su cuenta, sobreviviendo desde su propio refugio.
           </p>
-          <p style="margin-top: 6px; font-weight: 600; color: #fed7aa;">
-            En este mundo, tu vida diaria real es tu fortaleza. Lavar platos purifica utensilios; hacer ejercicio patrulla tu perímetro; estudiar decodifica planos; orar o meditar cuida el fuego interior.
+          <p style="margin-top: 8px; font-weight: 700; color: #fed7aa;">
+            En este mundo, tu vida diaria real es tu fortaleza:
           </p>
         </div>
 
-        <div style="margin-bottom: 16px;">
-          <div style="font-size: 0.82rem; color: var(--text-primary); font-weight: 600; margin-bottom: 6px;">
-            Sobreviviente (Prota):
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; font-size: 0.82rem;">
+          <div style="display: flex; align-items: center; gap: 8px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-taller);">
+            <span>🍽️</span>
+            <span><strong>Lavar los platos</strong> es <em>purificar utensilios</em> del refugio.</span>
           </div>
-          <input type="text" id="input-onb-nombre" class="card-yermo" style="width: 100%; padding: 8px; color: #fff; background: var(--bg-surface); margin-bottom: 8px;" placeholder="Tu nombre o apodo (Ej: Elena, Joshua, Cuervo)">
-          <input type="text" id="input-onb-ciudad" class="card-yermo" style="width: 100%; padding: 8px; color: #fff; background: var(--bg-surface);" placeholder="Ciudad de origen (Ej: Mazatlán, Madrid, Bogotá)">
+          <div style="display: flex; align-items: center; gap: 8px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-cuerpo);">
+            <span>🏃</span>
+            <span><strong>Hacer ejercicio</strong> es <em>patrullar tu perímetro</em> y generar energía.</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-mente);">
+            <span>📜</span>
+            <span><strong>Estudiar o leer</strong> es <em>decodificar planos</em> de supervivencia.</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-espiritu);">
+            <span>🔥</span>
+            <span><strong>Orar o meditar</strong> es <em>cuidar el fuego interior</em> y la calma.</span>
+          </div>
         </div>
 
-        <button id="btn-onb-ir-paso-2" class="btn-yermo-primary" style="width: 100%; padding: 12px;">
+        <button id="btn-onb-ir-paso-2" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem;">
           Entendido &bull; Trazar Mis 4 Sendas Iniciales ➔
         </button>
       </div>
     `;
 
     modalContent.querySelector('#btn-onb-ir-paso-2').addEventListener('click', () => {
-      const nombre = modalContent.querySelector('#input-onb-nombre').value.trim() || 'Prota';
-      const ciudad = modalContent.querySelector('#input-onb-ciudad').value.trim() || 'Yermo Central';
-      
-      estadoApp.datos.perfil.nombre = nombre;
-      estadoApp.datos.perfil.ciudad = ciudad;
-      
+      estadoApp.datos.perfil.nombre = 'Prota';
+      estadoApp.datos.perfil.ciudad = 'El Yermo';
       this.abrirPaso2();
     });
 
