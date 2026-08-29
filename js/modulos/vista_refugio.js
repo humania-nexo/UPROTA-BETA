@@ -3,7 +3,7 @@
  */
 
 import { estadoApp } from '../core/estado.js';
-import { RefugioMundoEngine } from '../mundo/refugio_engine.js';
+import { RefugioMundoEngine, DioramaEngine } from '../mundo/refugio_engine.js';
 import { NIVELES_REFUGIO } from '../data/niveles_refugio.js';
 
 export class VistaRefugio {
@@ -15,21 +15,11 @@ export class VistaRefugio {
     const infoNivel = estadoApp.infoNivelRefugio;
     const evaluacionSubida = RefugioMundoEngine.puedeSubirNivel(estado.nivelRefugio, estado.recursos);
 
-    const spritesRefugio = [
-      'assets/sprites/refugio/refugio_lvl0_punto_cero.png',
-      'assets/sprites/refugio/refugio_lvl1_cajones.png',
-      'assets/sprites/refugio/refugio_lvl2_techo.png',
-      'assets/sprites/refugio/refugio_lvl3_huerto.png',
-      'assets/sprites/refugio/refugio_lvl4_taller.png',
-      'assets/sprites/refugio/refugio_lvl5_fortaleza.png'
-    ];
-    const spriteActual = spritesRefugio[Math.min(spritesRefugio.length - 1, estado.nivelRefugio || 0)];
-
     this.contenedor.innerHTML = `
       <div class="refugio-hero">
-        <!-- DIORAMA VISUAL EVOLUTIVO -->
+        <!-- DIORAMA MODULAR POR CAPAS (PLANTILLA EVOLUTIVA) -->
         <div class="refugio-diorama-wrap">
-          <img src="${spriteActual}" alt="Diorama Refugio Nivel ${estado.nivelRefugio}" class="refugio-diorama-img">
+          ${DioramaEngine.render(estado)}
         </div>
 
         <span class="refugio-stage-tag">Nivel ${infoNivel.nivel} &bull; ${infoNivel.nombre}</span>
