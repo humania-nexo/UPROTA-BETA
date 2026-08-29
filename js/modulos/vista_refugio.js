@@ -15,11 +15,26 @@ export class VistaRefugio {
     const infoNivel = estadoApp.infoNivelRefugio;
     const evaluacionSubida = RefugioMundoEngine.puedeSubirNivel(estado.nivelRefugio, estado.recursos);
 
+    const spritesRefugio = [
+      'assets/sprites/refugio/refugio_lvl0_punto_cero.png',
+      'assets/sprites/refugio/refugio_lvl1_cajones.png',
+      'assets/sprites/refugio/refugio_lvl2_techo.png',
+      'assets/sprites/refugio/refugio_lvl3_huerto.png',
+      'assets/sprites/refugio/refugio_lvl4_taller.png',
+      'assets/sprites/refugio/refugio_lvl5_fortaleza.png'
+    ];
+    const spriteActual = spritesRefugio[Math.min(spritesRefugio.length - 1, estado.nivelRefugio || 0)];
+
     this.contenedor.innerHTML = `
       <div class="refugio-hero">
+        <!-- DIORAMA VISUAL EVOLUTIVO -->
+        <div class="refugio-diorama-wrap">
+          <img src="${spriteActual}" alt="Diorama Refugio Nivel ${estado.nivelRefugio}" class="refugio-diorama-img">
+        </div>
+
         <span class="refugio-stage-tag">Nivel ${infoNivel.nivel} &bull; ${infoNivel.nombre}</span>
         <div class="refugio-titulo-row">
-          <span>${infoNivel.icono}</span>
+          <img src="assets/sprites/ui/tab_refugio.png" alt="Refugio" class="pixel-icon icon-24">
           <span>Refugio de ${estado.perfil.nombre}</span>
         </div>
         <p class="refugio-desc">${infoNivel.descripcion}</p>

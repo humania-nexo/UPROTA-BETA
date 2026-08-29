@@ -59,6 +59,10 @@
 
 body {
   background-color: var(--bg-primary);
+  background-image: url('../assets/sprites/fondos/bg_yermo_polvo.png');
+  background-repeat: repeat;
+  background-size: 64px 64px;
+  image-rendering: pixelated;
   color: var(--text-primary);
   font-family: var(--font-main);
   line-height: 1.5;
@@ -66,9 +70,6 @@ body {
   display: flex;
   justify-content: center;
   overflow-x: hidden;
-  background-image: 
-    radial-gradient(ellipse at top, rgba(180, 83, 9, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse at bottom, rgba(36, 33, 30, 0.6) 0%, transparent 80%);
 }
 
 .app-container {
@@ -77,11 +78,14 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-surface);
-  border-left: 1px solid var(--border-subtle);
-  border-right: 1px solid var(--border-subtle);
+  background-color: rgba(26, 24, 22, 0.94);
+  background-image: radial-gradient(circle at 50% 10%, rgba(217, 119, 6, 0.08) 0%, transparent 60%), url('../assets/sprites/fondos/bg_yermo_polvo.png');
+  background-repeat: repeat;
+  background-size: 64px 64px;
+  border-left: 2px solid #38342f;
+  border-right: 2px solid #38342f;
   position: relative;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
 }
 
 /* Header */
@@ -89,9 +93,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
-  background-color: rgba(26, 24, 22, 0.96);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-subtle);
+  background-color: rgba(26, 24, 22, 0.95);
+  background-image: url('../assets/sprites/fondos/bg_chapa_oxidada.png');
+  background-repeat: repeat;
+  background-size: 48px 48px;
+  border-bottom: 2px solid #4f4a43;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   padding: 12px 16px 8px 16px;
 }
 

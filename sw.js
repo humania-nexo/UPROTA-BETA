@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v1.4';
+const CACHE_NAME = 'uprota-cache-v1.5';
 const ASSETS = [
   './',
   './index.html',
@@ -39,6 +39,25 @@ const ASSETS = [
   './js/data/frases_estoicas.js',
   './js/data/niveles_refugio.js',
   './assets/sprites/emojis/emojis_manifest.json',
+  './assets/sprites/fondos/bg_yermo_polvo.png',
+  './assets/sprites/fondos/bg_chapa_oxidada.png',
+  './assets/sprites/fondos/bg_madera_tablas.png',
+  './assets/sprites/fondos/bg_noche_estrellada.png',
+  './assets/sprites/refugio/refugio_lvl0_punto_cero.png',
+  './assets/sprites/refugio/refugio_lvl1_cajones.png',
+  './assets/sprites/refugio/refugio_lvl2_techo.png',
+  './assets/sprites/refugio/refugio_lvl3_huerto.png',
+  './assets/sprites/refugio/refugio_lvl4_taller.png',
+  './assets/sprites/refugio/refugio_lvl5_fortaleza.png',
+  './assets/sprites/npcs/don_chui_neutral.png',
+  './assets/sprites/npcs/don_chui_hablando.png',
+  './assets/sprites/npcs/don_chui_orgulloso.png',
+  './assets/sprites/npcs/don_chui_preocupado.png',
+  './assets/sprites/ui/frame_panel_metal.png',
+  './assets/sprites/ui/btn_madera_normal.png',
+  './assets/sprites/ui/btn_madera_pressed.png',
+  './assets/sprites/ui/btn_metal_normal.png',
+  './assets/sprites/ui/btn_metal_pressed.png',
   './assets/sprites/recursos/recurso_tablas.png',
   './assets/sprites/recursos/recurso_clavos.png',
   './assets/sprites/recursos/recurso_provisiones.png',

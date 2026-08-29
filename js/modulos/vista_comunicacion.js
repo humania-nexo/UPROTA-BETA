@@ -26,9 +26,9 @@ export class VistaComunicacion {
 
       ${estado.comunicacion.fase === 0 ? `
         <!-- FASE 0: ENCUENTROS PRESENCIALES CON DON CHUI -->
-        <div class="card-yermo" style="border-left: 3px solid var(--pilar-espiritu);">
+        <div class="card-yermo" style="border-left: 3px solid var(--pilar-espiritu); background-image: url('assets/sprites/fondos/bg_chapa_oxidada.png'); background-repeat: repeat; background-size: 48px 48px;">
           <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <div style="font-size: 2.2rem; line-height: 1;">🧔🏽‍♂️</div>
+            <img src="assets/sprites/npcs/don_chui_neutral.png" alt="Don Chui" class="pixel-icon icon-48" style="width: 48px; height: 48px; border: 2px solid var(--pilar-espiritu); border-radius: var(--radius-sm); background: #000;">
             <div>
               <h4 style="color: var(--text-primary); font-size: 0.95rem; margin-bottom: 2px;">Don Chui (El Caminante)</h4>
               <div style="font-size: 0.75rem; color: var(--pilar-espiritu-light); margin-bottom: 8px;">Mensajero del Yermo &bull; Portador de Sabiduría</div>

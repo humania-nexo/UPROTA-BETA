@@ -20,10 +20,12 @@ export class VistaHogar {
     const sabiduria = FRASES_HOGAR.SABIDURIA_ESTOICA[sabIndex];
 
     this.contenedor.innerHTML = `
-      <div style="text-align: center; margin-bottom: 16px;">
-        <div style="font-size: 2.2rem; margin-bottom: 4px;">🕯️</div>
-        <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--oro-torta-glow);">El Hogar del Yermo</h2>
-        <span style="font-size: 0.76rem; color: var(--text-muted);">Espacio de resguardo, calor y validación radical</span>
+      <div style="text-align: center; margin-bottom: 16px; background-image: url('assets/sprites/fondos/bg_noche_estrellada.png'); background-repeat: repeat; background-size: 64px 64px; padding: 18px 12px; border-radius: var(--radius-lg); border: 1px solid rgba(192, 132, 252, 0.3); box-shadow: 0 4px 20px rgba(0,0,0,0.8);">
+        <div style="margin-bottom: 6px;">
+          <img src="assets/sprites/ui/tab_hogar.png" alt="El Hogar" class="pixel-icon icon-32" style="width: 36px; height: 36px;">
+        </div>
+        <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--oro-torta-glow); margin: 0;">El Hogar del Yermo</h2>
+        <span style="font-size: 0.76rem; color: #e9d5ff;">Espacio de resguardo, calor y validación radical</span>
       </div>
 
       <div class="hogar-wrap">

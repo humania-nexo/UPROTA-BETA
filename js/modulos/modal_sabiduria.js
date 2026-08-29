@@ -31,7 +31,7 @@ export class ModalSabiduria {
         <button class="modal-close-btn" id="btn-cerrar-sabiduria">&times;</button>
         
         <div class="sabiduria-header">
-          <span class="sabiduria-avatar">${data.icono}</span>
+          <img src="assets/sprites/npcs/don_chui_hablando.png" alt="Don Chui" class="pixel-icon icon-48" style="width: 44px; height: 44px; border: 2px solid var(--oro-torta); border-radius: var(--radius-sm); background: #000;">
           <div class="sabiduria-titulos">
             <h2>${data.nombreObjeto}</h2>
             <span>Sabiduría Diaria &bull; +1 ${data.pilar.toUpperCase()}</span>
