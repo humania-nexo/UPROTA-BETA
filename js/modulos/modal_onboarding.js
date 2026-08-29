@@ -5,6 +5,7 @@
  */
 
 import { estadoApp } from '../core/estado.js';
+import { TourGuiado } from './modal_sabiduria.js';
 
 export class ModalOnboarding {
   static mostrarSiEsNecesario() {
@@ -418,6 +419,11 @@ export class ModalOnboarding {
       await estadoApp.guardar();
 
       modalContainer.classList.add('hidden');
+
+      // Lanzar el Tour Guiado interactivo de reconocimiento
+      setTimeout(() => {
+        TourGuiado.iniciar();
+      }, 300);
     });
   }
 }

@@ -8,7 +8,7 @@ import { VistaRefugio } from './modulos/vista_refugio.js';
 import { VistaMisiones } from './modulos/vista_misiones.js';
 import { VistaComunicacion } from './modulos/vista_comunicacion.js';
 import { VistaHogar } from './modulos/vista_hogar.js';
-import { ModalSabiduria } from './modulos/modal_sabiduria.js';
+import { ModalSabiduria, TourGuiado } from './modulos/modal_sabiduria.js';
 import { ModalOnboarding } from './modulos/modal_onboarding.js';
 
 class App {
@@ -41,6 +41,9 @@ class App {
 
     // Abrir pop-up de Sabiduría Diaria si corresponde
     ModalSabiduria.mostrarSiCorresponde();
+
+    // Verificar si corresponde el Tour Guiado
+    TourGuiado.verificarYIniciar();
 
     // Registrar Service Worker
     this.registrarServiceWorker();

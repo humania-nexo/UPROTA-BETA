@@ -44,6 +44,83 @@
   margin-bottom: 14px;
 }
 
+/* BOTONES MODAL */
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+/* TOUR GUIADO (SPOTLIGHT & COMIDILLA FLOTANTE) */
+.tour-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: auto;
+  transition: opacity 0.3s ease;
+}
+
+.tour-spotlight-box {
+  position: absolute;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.78), 0 0 15px rgba(217, 119, 6, 0.6);
+  border: 2px solid var(--oro-torta);
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2001;
+}
+
+.tour-tooltip-card {
+  position: absolute;
+  width: 90%;
+  max-width: 340px;
+  background: var(--bg-surface);
+  border: 1px solid var(--oro-torta);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 10px rgba(217, 119, 6, 0.3);
+  z-index: 2002;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tour-tooltip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.tour-tooltip-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--oro-torta-glow);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tour-tooltip-step {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.tour-tooltip-body {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin-bottom: 12px;
+}
+
+.tour-tooltip-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .sabiduria-avatar {
   font-size: 2rem;
   line-height: 1;
