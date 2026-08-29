@@ -83,50 +83,44 @@ export class DioramaEngine {
         <!-- SLOT SUPERIOR: ANTENA DE TELECOMUNICACIONES -->
         ${tieneAntena ? `
           <div class="diorama-slot slot-antena" title="Antena de Radio Onda Corta (104.5 MHz)">
-            <img src="assets/sprites/ui/tab_radio.png" alt="Antena" class="diorama-sprite sprite-antena">
-            <div class="radio-onda-pulso"></div>
+            <img src="assets/sprites/refugio/modulo_antena_mutil.png" alt="Antena" class="diorama-sprite-modulo sprite-antena">
           </div>
         ` : ''}
 
-        <!-- SLOT IZQUIERDO: GALLINERO VERTICAL CON GALLINAS ANIMADAS -->
+        <!-- SLOT IZQUIERDO: GALLINERO VERTICAL CON GALLINA ANIMADA -->
         ${tieneGallinero ? `
-          <div class="diorama-slot slot-gallinero" title="Gallinero Vertical de Refugio">
-            <div class="gallinero-caja">
-              <span class="sprite-gallina gallina-1" title="Gallina ponedora">🐔</span>
-              <span class="sprite-gallina gallina-2" title="Gallina en nido">🐥</span>
-            </div>
+          <div class="diorama-slot slot-gallinero" title="Gallinero Vertical">
+            <img src="assets/sprites/refugio/modulo_gallinero.png" alt="Gallinero" class="diorama-sprite-modulo">
+            <div class="gallina-animada-frame" title="Gallina ponedora"></div>
           </div>
         ` : ''}
 
         <!-- SLOT INFERIOR IZQUIERDO: HUERTO EN CAJONES -->
         ${tieneHuerto ? `
           <div class="diorama-slot slot-huerto" title="Cajones de Cultivo y Siembra">
-            <div class="huerto-caja">🌱 🌾 🪴</div>
+            <img src="assets/sprites/refugio/modulo_huerto_cajones.png" alt="Huerto" class="diorama-sprite-modulo">
           </div>
         ` : ''}
 
         <!-- SLOT DERECHO: MESA DE TRABAJO Y TALLER -->
         ${tieneTaller ? `
           <div class="diorama-slot slot-taller" title="Mesa de Carpintería y Herramientas">
-            <div class="taller-caja">🛠️ 🪚</div>
+            <img src="assets/sprites/refugio/modulo_mesa_taller.png" alt="Taller" class="diorama-sprite-modulo">
           </div>
         ` : ''}
 
-        <!-- SLOT MEDIO DERECHO: BICI-GENERADOR Y LEDS -->
+        <!-- SLOT MEDIO DERECHO: BICI-GENERADOR -->
         ${tieneEnergia ? `
           <div class="diorama-slot slot-energia" title="Bici-Generador y Acumulador">
-            <div class="energia-caja ${bioenergia.nivelCarga > 0 ? 'energia-activa' : ''}">
-              <span class="led-indicador">⚡</span>
-            </div>
+            <img src="assets/sprites/refugio/modulo_bici_generador.png" alt="Bici-Generador" class="diorama-sprite-modulo ${bioenergia.nivelCarga > 0 ? 'energia-activa' : ''}">
           </div>
         ` : ''}
 
         <!-- SLOT FRONTAL: FOGÓN CON LLAMA ANIMADA -->
         ${tieneFogon ? `
-          <div class="diorama-slot slot-fogon" title="Fogón del Asentamiento">
-            <div class="fogon-llama-animada">
-              <span class="llama-core">🔥</span>
-            </div>
+          <div class="diorama-slot slot-fogon" title="Fogón de Supervivencia">
+            <img src="assets/sprites/refugio/modulo_fogon_piedras.png" alt="Fogón" class="diorama-sprite-modulo">
+            <div class="fuego-animado-frame" title="Llama encendida"></div>
           </div>
         ` : ''}
       </div>
