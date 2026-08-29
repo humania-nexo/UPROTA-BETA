@@ -29,6 +29,9 @@ class App {
       hogar: new VistaHogar(document.getElementById('vista-hogar'))
     };
 
+    // Exponer app globalmente
+    window.app = this;
+
     // Vincular navegación
     this.vincularNavegacion();
 
@@ -61,6 +64,13 @@ class App {
     const btnHogarTop = document.getElementById('btn-ir-hogar-top');
     if (btnHogarTop) {
       btnHogarTop.addEventListener('click', () => this.cambiarTab('hogar'));
+    }
+
+    const btnGuia = document.getElementById('btn-abrir-guia');
+    if (btnGuia) {
+      btnGuia.addEventListener('click', () => {
+        TourGuiado.iniciar();
+      });
     }
   }
 

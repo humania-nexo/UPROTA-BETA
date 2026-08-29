@@ -105,14 +105,19 @@ export class TourGuiado {
     if (perfil.onboardingCompletado && !perfil.tourCompletado) {
       setTimeout(() => {
         this.iniciar();
-      }, 600);
+      }, 700);
     }
   }
 
   static iniciar() {
     this.pasoActual = 0;
-    this.crearOverlay();
-    this.mostrarPaso(this.pasoActual);
+    if (window.app && typeof window.app.cambiarTab === 'function') {
+      window.app.cambiarTab('tablon');
+    }
+    setTimeout(() => {
+      this.crearOverlay();
+      this.mostrarPaso(this.pasoActual);
+    }, 150);
   }
 
   static crearOverlay() {
@@ -120,6 +125,7 @@ export class TourGuiado {
 
     this.overlayEl = document.createElement('div');
     this.overlayEl.className = 'tour-overlay';
+    this.overlayEl.style.opacity = '1';
     this.overlayEl.innerHTML = `
       <div class="tour-spotlight-box" id="tour-spotlight"></div>
       <div class="tour-tooltip-card" id="tour-tooltip"></div>
@@ -127,10 +133,14 @@ export class TourGuiado {
     document.body.appendChild(this.overlayEl);
   }
 
-  static mostrarPaso(index) {
+  static mostrarPaso(index, reintentos = 0) {
     if (index >= this.pasos.length) {
       this.finalizar();
       return;
+    }
+
+    if (!this.overlayEl) {
+      this.crearOverlay();
     }
 
     const paso = this.pasos[index];
@@ -139,16 +149,22 @@ export class TourGuiado {
     const tooltip = this.overlayEl.querySelector('#tour-tooltip');
 
     if (!targetEl) {
+      if (reintentos < 3) {
+        setTimeout(() => this.mostrarPaso(index, reintentos + 1), 300);
+        return;
+      }
       this.pasoActual++;
       this.mostrarPaso(this.pasoActual);
       return;
     }
 
-    targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    try {
+      targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (e) {}
 
     setTimeout(() => {
       const rect = targetEl.getBoundingClientRect();
-      const padding = 6;
+      const padding = 8;
 
       spotlight.style.top = `${Math.max(0, rect.top - padding)}px`;
       spotlight.style.left = `${Math.max(0, rect.left - padding)}px`;
@@ -156,7 +172,7 @@ export class TourGuiado {
       spotlight.style.height = `${rect.height + padding * 2}px`;
 
       const espacioAbajo = window.innerHeight - rect.bottom;
-      const tooltipArriba = espacioAbajo < 200 && rect.top > 200;
+      const tooltipArriba = espacioAbajo < 220 && rect.top > 200;
       const esUltimo = index === this.pasos.length - 1;
 
       tooltip.innerHTML = `
@@ -183,10 +199,10 @@ export class TourGuiado {
 
       if (tooltipArriba) {
         tooltip.style.top = 'auto';
-        tooltip.style.bottom = `${window.innerHeight - rect.top + 12}px`;
+        tooltip.style.bottom = `${Math.max(10, window.innerHeight - rect.top + 14)}px`;
       } else {
         tooltip.style.bottom = 'auto';
-        tooltip.style.top = `${rect.bottom + 12}px`;
+        tooltip.style.top = `${Math.max(10, rect.bottom + 14)}px`;
       }
 
       tooltip.querySelector('#btn-tour-saltar').addEventListener('click', () => this.finalizar());
@@ -194,7 +210,7 @@ export class TourGuiado {
         this.pasoActual++;
         this.mostrarPaso(this.pasoActual);
       });
-    }, 200);
+    }, 280);
   }
 
   static async finalizar() {
@@ -210,4 +226,9 @@ export class TourGuiado {
     await estadoApp.guardar();
   }
 }
+
+if (typeof window !== 'undefined') {
+  window.TourGuiado = TourGuiado;
+}
+
 
