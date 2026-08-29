@@ -43,19 +43,19 @@ export class ModalOnboarding {
 
         <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; font-size: 0.82rem;">
           <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-taller);">
-            <img src="assets/sprites/pilares/pilar_taller.png" alt="Taller" class="pixel-icon icon-20">
+            <img src="assets/sprites/emojis/habitos/emoji_platos.png" alt="Platos" class="emoji-pixel">
             <span><strong>Lavar los platos</strong> es <em>purificar utensilios</em> del refugio.</span>
           </div>
           <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-cuerpo);">
-            <img src="assets/sprites/pilares/pilar_cuerpo.png" alt="Cuerpo" class="pixel-icon icon-20">
+            <img src="assets/sprites/emojis/habitos/emoji_correr.png" alt="Correr" class="emoji-pixel">
             <span><strong>Hacer ejercicio</strong> es <em>patrullar tu perímetro</em> y generar energía.</span>
           </div>
           <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-mente);">
-            <img src="assets/sprites/pilares/pilar_mente.png" alt="Mente" class="pixel-icon icon-20">
+            <img src="assets/sprites/emojis/habitos/emoji_pergamino.png" alt="Estudiar" class="emoji-pixel">
             <span><strong>Estudiar o leer</strong> es <em>decodificar planos</em> de supervivencia.</span>
           </div>
           <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-espiritu);">
-            <img src="assets/sprites/pilares/pilar_espiritu.png" alt="Espíritu" class="pixel-icon icon-20">
+            <img src="assets/sprites/emojis/habitos/emoji_llama_calma.png" alt="Orar" class="emoji-pixel">
             <span><strong>Orar o meditar</strong> es <em>cuidar el fuego interior</em> y la calma.</span>
           </div>
         </div>

@@ -67,3 +67,17 @@
   width: 16px;
   height: 16px;
 }
+
+/* Emojis Pixel Art (16x16 nativos para textos y listas) */
+.emoji-pixel {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  display: inline-block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+

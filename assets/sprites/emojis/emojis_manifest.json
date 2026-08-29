@@ -1,0 +1,1416 @@
+{
+    "version":  "1.0.0",
+    "author":  "Pix (Especialista en Pixel Art \u0026 Artista Técnico)",
+    "total_emojis":  200,
+    "base_path":  "assets/sprites/emojis/",
+    "categories":  {
+                       "habitos":  [
+                                       {
+                                           "id":  "emoji_agua_vaso",
+                                           "name":  "agua vaso",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_agua_vaso.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_agua_vaso.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_aguja_hilo",
+                                           "name":  "aguja hilo",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_aguja_hilo.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_aguja_hilo.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_ajedrez",
+                                           "name":  "ajedrez",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_ajedrez.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_ajedrez.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_alcancia",
+                                           "name":  "alcancia",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_alcancia.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_alcancia.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_bicicleta",
+                                           "name":  "bicicleta",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_bicicleta.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_bicicleta.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_bombilla",
+                                           "name":  "bombilla",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_bombilla.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_bombilla.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cadena_calavera",
+                                           "name":  "cadena calavera",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_cadena_calavera.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_cadena_calavera.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cadena_celular",
+                                           "name":  "cadena celular",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_cadena_celular.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_cadena_celular.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cadena_cigarro",
+                                           "name":  "cadena cigarro",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_cadena_cigarro.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_cadena_cigarro.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cadena_copa",
+                                           "name":  "cadena copa",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_cadena_copa.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_cadena_copa.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cadena_dulce",
+                                           "name":  "cadena dulce",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_cadena_dulce.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_cadena_dulce.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cadena_reloj_arena",
+                                           "name":  "cadena reloj arena",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_cadena_reloj_arena.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_cadena_reloj_arena.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_caja_herramientas",
+                                           "name":  "caja herramientas",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_caja_herramientas.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_caja_herramientas.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_caminar",
+                                           "name":  "caminar",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_caminar.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_caminar.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_campana",
+                                           "name":  "campana",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_campana.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_campana.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_candado_cerrado",
+                                           "name":  "candado cerrado",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_candado_cerrado.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_candado_cerrado.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cerebro",
+                                           "name":  "cerebro",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_cerebro.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_cerebro.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_corazon_calma",
+                                           "name":  "corazon calma",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_corazon_calma.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_corazon_calma.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_correr",
+                                           "name":  "correr",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_correr.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_correr.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cubeta",
+                                           "name":  "cubeta",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_cubeta.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_cubeta.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_dientes",
+                                           "name":  "dientes",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_dientes.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_dientes.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_dormir",
+                                           "name":  "dormir",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_dormir.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_dormir.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_ducha",
+                                           "name":  "ducha",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_ducha.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_ducha.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_engranaje",
+                                           "name":  "engranaje",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_engranaje.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_engranaje.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_escoba",
+                                           "name":  "escoba",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_escoba.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_escoba.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_estirar",
+                                           "name":  "estirar",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_estirar.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_estirar.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_huerto_pala",
+                                           "name":  "huerto pala",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_huerto_pala.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_huerto_pala.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_libro",
+                                           "name":  "libro",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_libro.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_libro.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_llama_calma",
+                                           "name":  "llama calma",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_llama_calma.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_llama_calma.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_llave",
+                                           "name":  "llave",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_llave.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_llave.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_llave_puerta",
+                                           "name":  "llave puerta",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_llave_puerta.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_llave_puerta.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_luna_ocaso",
+                                           "name":  "luna ocaso",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_luna_ocaso.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_luna_ocaso.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_lupa",
+                                           "name":  "lupa",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_lupa.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_lupa.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_manos_paz",
+                                           "name":  "manos paz",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_manos_paz.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_manos_paz.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_manzana",
+                                           "name":  "manzana",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_manzana.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_manzana.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_martillo",
+                                           "name":  "martillo",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_martillo.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_martillo.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_moneda_ahorro",
+                                           "name":  "moneda ahorro",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_moneda_ahorro.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_moneda_ahorro.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_pantalla",
+                                           "name":  "pantalla",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_pantalla.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_pantalla.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_pergamino",
+                                           "name":  "pergamino",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_pergamino.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_pergamino.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_pesas",
+                                           "name":  "pesas",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_pesas.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_pesas.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_planta_brote",
+                                           "name":  "planta brote",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_planta_brote.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_planta_brote.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_platos",
+                                           "name":  "platos",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_platos.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_platos.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_pluma",
+                                           "name":  "pluma",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_pluma.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_pluma.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_reloj_pomodoro",
+                                           "name":  "reloj pomodoro",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_reloj_pomodoro.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_reloj_pomodoro.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_serrucho",
+                                           "name":  "serrucho",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_serrucho.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_serrucho.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_silencio",
+                                           "name":  "silencio",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_silencio.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_silencio.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_sol_alba",
+                                           "name":  "sol alba",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_sol_alba.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_sol_alba.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_tijeras",
+                                           "name":  "tijeras",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_tijeras.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_tijeras.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_vela_oracion",
+                                           "name":  "vela oracion",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_vela_oracion.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_vela_oracion.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_zanahoria",
+                                           "name":  "zanahoria",
+                                           "category":  "habitos",
+                                           "png":  "assets/sprites/emojis/habitos/emoji_zanahoria.png",
+                                           "aseprite":  "assets/sprites/emojis/habitos/emoji_zanahoria.aseprite"
+                                       }
+                                   ],
+                       "emociones":  [
+                                         {
+                                             "id":  "emoji_abrazo_refugio",
+                                             "name":  "abrazo refugio",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_abrazo_refugio.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_abrazo_refugio.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_ancla_habito",
+                                             "name":  "ancla habito",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_ancla_habito.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_ancla_habito.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_bandera_hito",
+                                             "name":  "bandera hito",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_bandera_hito.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_bandera_hito.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_bateria_baja",
+                                             "name":  "bateria baja",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_bateria_baja.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_bateria_baja.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_bateria_llena",
+                                             "name":  "bateria llena",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_bateria_llena.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_bateria_llena.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_boca_cerrada",
+                                             "name":  "boca cerrada",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_boca_cerrada.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_boca_cerrada.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_bostezo_sueno",
+                                             "name":  "bostezo sueno",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_bostezo_sueno.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_bostezo_sueno.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_alerta",
+                                             "name":  "cara alerta",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_alerta.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_alerta.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_asombrado",
+                                             "name":  "cara asombrado",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_asombrado.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_asombrado.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_calma",
+                                             "name":  "cara calma",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_calma.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_calma.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_cansado",
+                                             "name":  "cara cansado",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_cansado.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_cansado.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_feliz",
+                                             "name":  "cara feliz",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_feliz.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_feliz.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_firme",
+                                             "name":  "cara firme",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_firme.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_firme.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_herido",
+                                             "name":  "cara herido",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_herido.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_herido.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_mareado",
+                                             "name":  "cara mareado",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_mareado.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_mareado.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_mascara_gas",
+                                             "name":  "cara mascara gas",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_mascara_gas.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_mascara_gas.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_pensando",
+                                             "name":  "cara pensando",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_pensando.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_pensando.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_sucio",
+                                             "name":  "cara sucio",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_sucio.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_sucio.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_triste",
+                                             "name":  "cara triste",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_triste.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_triste.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_cara_victoria",
+                                             "name":  "cara victoria",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_cara_victoria.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_cara_victoria.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_corazon_brillante",
+                                             "name":  "corazon brillante",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_corazon_brillante.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_corazon_brillante.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_corazon_roto",
+                                             "name":  "corazon roto",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_corazon_roto.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_corazon_roto.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_destello_magico",
+                                             "name":  "destello magico",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_destello_magico.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_destello_magico.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_diana_objetivo",
+                                             "name":  "diana objetivo",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_diana_objetivo.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_diana_objetivo.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_escudo_defensa",
+                                             "name":  "escudo defensa",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_escudo_defensa.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_escudo_defensa.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_estrella_victoria",
+                                             "name":  "estrella victoria",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_estrella_victoria.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_estrella_victoria.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_foco_atencion",
+                                             "name":  "foco atencion",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_foco_atencion.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_foco_atencion.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_frasco_posion",
+                                             "name":  "frasco posion",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_frasco_posion.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_frasco_posion.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_fuego_ardiente",
+                                             "name":  "fuego ardiente",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_fuego_ardiente.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_fuego_ardiente.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_gota_sudor",
+                                             "name":  "gota sudor",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_gota_sudor.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_gota_sudor.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_lagrima_alivio",
+                                             "name":  "lagrima alivio",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_lagrima_alivio.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_lagrima_alivio.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_luz_guia",
+                                             "name":  "luz guia",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_luz_guia.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_luz_guia.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_mano_abierta",
+                                             "name":  "mano abierta",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_mano_abierta.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_mano_abierta.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_mano_saludo",
+                                             "name":  "mano saludo",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_mano_saludo.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_mano_saludo.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_marca_equilibrio",
+                                             "name":  "marca equilibrio",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_marca_equilibrio.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_marca_equilibrio.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_marca_progreso",
+                                             "name":  "marca progreso",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_marca_progreso.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_marca_progreso.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_medalla_honor",
+                                             "name":  "medalla honor",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_medalla_honor.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_medalla_honor.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_mente_brillante",
+                                             "name":  "mente brillante",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_mente_brillante.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_mente_brillante.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_musculo_fuerza",
+                                             "name":  "musculo fuerza",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_musculo_fuerza.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_musculo_fuerza.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_ojo_ciego",
+                                             "name":  "ojo ciego",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_ojo_ciego.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_ojo_ciego.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_ojo_vigilante",
+                                             "name":  "ojo vigilante",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_ojo_vigilante.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_ojo_vigilante.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_pildora_medicina",
+                                             "name":  "pildora medicina",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_pildora_medicina.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_pildora_medicina.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_pulgar_abajo",
+                                             "name":  "pulgar abajo",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_pulgar_abajo.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_pulgar_abajo.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_pulgar_arriba",
+                                             "name":  "pulgar arriba",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_pulgar_arriba.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_pulgar_arriba.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_puno_cerrado",
+                                             "name":  "puno cerrado",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_puno_cerrado.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_puno_cerrado.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_rayo_energia",
+                                             "name":  "rayo energia",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_rayo_energia.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_rayo_energia.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_sol_radiante",
+                                             "name":  "sol radiante",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_sol_radiante.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_sol_radiante.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_termometro_salud",
+                                             "name":  "termometro salud",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_termometro_salud.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_termometro_salud.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_trofeo_forja",
+                                             "name":  "trofeo forja",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_trofeo_forja.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_trofeo_forja.aseprite"
+                                         },
+                                         {
+                                             "id":  "emoji_venda_medica",
+                                             "name":  "venda medica",
+                                             "category":  "emociones",
+                                             "png":  "assets/sprites/emojis/emociones/emoji_venda_medica.png",
+                                             "aseprite":  "assets/sprites/emojis/emociones/emoji_venda_medica.aseprite"
+                                         }
+                                     ],
+                       "naturaleza":  [
+                                          {
+                                              "id":  "emoji_aceite_botella",
+                                              "name":  "aceite botella",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_aceite_botella.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_aceite_botella.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_arbol_pino",
+                                              "name":  "arbol pino",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_arbol_pino.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_arbol_pino.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_arbol_roble",
+                                              "name":  "arbol roble",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_arbol_roble.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_arbol_roble.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_arcoiris_paz",
+                                              "name":  "arcoiris paz",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_arcoiris_paz.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_arcoiris_paz.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_arroz_tazon",
+                                              "name":  "arroz tazon",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_arroz_tazon.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_arroz_tazon.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_cactus_nopal",
+                                              "name":  "cactus nopal",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_cactus_nopal.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_cactus_nopal.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_cafe_taza",
+                                              "name":  "cafe taza",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_cafe_taza.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_cafe_taza.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_caracol_tierra",
+                                              "name":  "caracol tierra",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_caracol_tierra.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_caracol_tierra.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_carne_asada",
+                                              "name":  "carne asada",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_carne_asada.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_carne_asada.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_chile_picante",
+                                              "name":  "chile picante",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_chile_picante.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_chile_picante.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_conejo_monte",
+                                              "name":  "conejo monte",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_conejo_monte.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_conejo_monte.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_flor_manzanilla",
+                                              "name":  "flor manzanilla",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_flor_manzanilla.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_flor_manzanilla.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_fogata_exterior",
+                                              "name":  "fogata exterior",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_fogata_exterior.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_fogata_exterior.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_frijol_grano",
+                                              "name":  "frijol grano",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_frijol_grano.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_frijol_grano.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_frutos_bayas",
+                                              "name":  "frutos bayas",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_frutos_bayas.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_frutos_bayas.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_gallina_silvestre",
+                                              "name":  "gallina silvestre",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_gallina_silvestre.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_gallina_silvestre.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_gota_agua",
+                                              "name":  "gota agua",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_gota_agua.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_gota_agua.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_grasa_animal",
+                                              "name":  "grasa animal",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_grasa_animal.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_grasa_animal.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_hoja_otono",
+                                              "name":  "hoja otono",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_hoja_otono.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_hoja_otono.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_hoja_verde",
+                                              "name":  "hoja verde",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_hoja_verde.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_hoja_verde.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_hongo_silvestre",
+                                              "name":  "hongo silvestre",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_hongo_silvestre.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_hongo_silvestre.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_huella_animal",
+                                              "name":  "huella animal",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_huella_animal.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_huella_animal.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_huevo_fresco",
+                                              "name":  "huevo fresco",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_huevo_fresco.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_huevo_fresco.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_insecto_abeja",
+                                              "name":  "insecto abeja",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_insecto_abeja.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_insecto_abeja.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_insecto_mariposa",
+                                              "name":  "insecto mariposa",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_insecto_mariposa.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_insecto_mariposa.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_jabali_monte",
+                                              "name":  "jabali monte",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_jabali_monte.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_jabali_monte.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_lagartija_sol",
+                                              "name":  "lagartija sol",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_lagartija_sol.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_lagartija_sol.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_lata_conserva",
+                                              "name":  "lata conserva",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_lata_conserva.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_lata_conserva.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_limon_citrico",
+                                              "name":  "limon citrico",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_limon_citrico.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_limon_citrico.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_lluvia_tormenta",
+                                              "name":  "lluvia tormenta",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_lluvia_tormenta.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_lluvia_tormenta.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_lobo_perro",
+                                              "name":  "lobo perro",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_lobo_perro.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_lobo_perro.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_madera_tronco",
+                                              "name":  "madera tronco",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_madera_tronco.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_madera_tronco.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_maiz_elote",
+                                              "name":  "maiz elote",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_maiz_elote.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_maiz_elote.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_montana_sierra",
+                                              "name":  "montana sierra",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_montana_sierra.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_montana_sierra.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_nieve_frio",
+                                              "name":  "nieve frio",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_nieve_frio.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_nieve_frio.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_nube_gris",
+                                              "name":  "nube gris",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_nube_gris.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_nube_gris.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_pajaro_paloma",
+                                              "name":  "pajaro paloma",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_pajaro_paloma.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_pajaro_paloma.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_pan_rustico",
+                                              "name":  "pan rustico",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_pan_rustico.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_pan_rustico.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_papas_raiz",
+                                              "name":  "papas raiz",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_papas_raiz.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_papas_raiz.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_pescado_rio",
+                                              "name":  "pescado rio",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_pescado_rio.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_pescado_rio.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_raton_campo",
+                                              "name":  "raton campo",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_raton_campo.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_raton_campo.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_rio_agua",
+                                              "name":  "rio agua",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_rio_agua.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_rio_agua.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_sal_salero",
+                                              "name":  "sal salero",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_sal_salero.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_sal_salero.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_semilla_girasol",
+                                              "name":  "semilla girasol",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_semilla_girasol.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_semilla_girasol.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_sopa_olla",
+                                              "name":  "sopa olla",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_sopa_olla.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_sopa_olla.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_te_infusion",
+                                              "name":  "te infusion",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_te_infusion.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_te_infusion.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_tierra_surco",
+                                              "name":  "tierra surco",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_tierra_surco.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_tierra_surco.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_tomate_huerto",
+                                              "name":  "tomate huerto",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_tomate_huerto.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_tomate_huerto.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_trigo_espiga",
+                                              "name":  "trigo espiga",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_trigo_espiga.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_trigo_espiga.aseprite"
+                                          },
+                                          {
+                                              "id":  "emoji_viento_aire",
+                                              "name":  "viento aire",
+                                              "category":  "naturaleza",
+                                              "png":  "assets/sprites/emojis/naturaleza/emoji_viento_aire.png",
+                                              "aseprite":  "assets/sprites/emojis/naturaleza/emoji_viento_aire.aseprite"
+                                          }
+                                      ],
+                       "objetos":  [
+                                       {
+                                           "id":  "emoji_aceitera",
+                                           "name":  "aceitera",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_aceitera.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_aceitera.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_alambre_rollo",
+                                           "name":  "alambre rollo",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_alambre_rollo.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_alambre_rollo.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_arco_flecha",
+                                           "name":  "arco flecha",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_arco_flecha.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_arco_flecha.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_bateria_celda",
+                                           "name":  "bateria celda",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_bateria_celda.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_bateria_celda.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_botas_goma",
+                                           "name":  "botas goma",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_botas_goma.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_botas_goma.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_botella_filtro",
+                                           "name":  "botella filtro",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_botella_filtro.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_botella_filtro.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_brujula",
+                                           "name":  "brujula",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_brujula.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_brujula.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cable_empalme",
+                                           "name":  "cable empalme",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_cable_empalme.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_cable_empalme.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cama_catre",
+                                           "name":  "cama catre",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_cama_catre.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_cama_catre.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cantimplora",
+                                           "name":  "cantimplora",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_cantimplora.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_cantimplora.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_casa_refugio",
+                                           "name":  "casa refugio",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_casa_refugio.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_casa_refugio.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cinta_adhesiva",
+                                           "name":  "cinta adhesiva",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_cinta_adhesiva.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_cinta_adhesiva.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cuchillo",
+                                           "name":  "cuchillo",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_cuchillo.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_cuchillo.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_cuerda_soga",
+                                           "name":  "cuerda soga",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_cuerda_soga.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_cuerda_soga.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_dinamo_manivela",
+                                           "name":  "dinamo manivela",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_dinamo_manivela.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_dinamo_manivela.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_gafas_proteccion",
+                                           "name":  "gafas proteccion",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_gafas_proteccion.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_gafas_proteccion.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_guantes_trabajo",
+                                           "name":  "guantes trabajo",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_guantes_trabajo.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_guantes_trabajo.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_guitarra_acustica",
+                                           "name":  "guitarra acustica",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_guitarra_acustica.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_guitarra_acustica.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_hacha",
+                                           "name":  "hacha",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_hacha.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_hacha.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_horno_barro",
+                                           "name":  "horno barro",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_horno_barro.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_horno_barro.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_letrina_higiene",
+                                           "name":  "letrina higiene",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_letrina_higiene.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_letrina_higiene.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_linterna_reliquia",
+                                           "name":  "linterna reliquia",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_linterna_reliquia.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_linterna_reliquia.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_llave_inglesa",
+                                           "name":  "llave inglesa",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_llave_inglesa.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_llave_inglesa.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_lupa_solar",
+                                           "name":  "lupa solar",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_lupa_solar.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_lupa_solar.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_mapa_yermo",
+                                           "name":  "mapa yermo",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_mapa_yermo.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_mapa_yermo.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_mochila",
+                                           "name":  "mochila",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_mochila.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_mochila.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_nota_musical",
+                                           "name":  "nota musical",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_nota_musical.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_nota_musical.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_olla_hervir",
+                                           "name":  "olla hervir",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_olla_hervir.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_olla_hervir.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_pala_construccion",
+                                           "name":  "pala construccion",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_pala_construccion.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_pala_construccion.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_paleta_pintor",
+                                           "name":  "paleta pintor",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_paleta_pintor.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_paleta_pintor.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_panel_solar",
+                                           "name":  "panel solar",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_panel_solar.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_panel_solar.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_partitura_musica",
+                                           "name":  "partitura musica",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_partitura_musica.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_partitura_musica.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_piedra_afilar",
+                                           "name":  "piedra afilar",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_piedra_afilar.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_piedra_afilar.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_pincel_artista",
+                                           "name":  "pincel artista",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_pincel_artista.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_pincel_artista.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_puerta_madera",
+                                           "name":  "puerta madera",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_puerta_madera.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_puerta_madera.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_radio_portatil",
+                                           "name":  "radio portatil",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_radio_portatil.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_radio_portatil.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_reloj_pulsera",
+                                           "name":  "reloj pulsera",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_reloj_pulsera.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_reloj_pulsera.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_sarten_cocina",
+                                           "name":  "sarten cocina",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_sarten_cocina.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_sarten_cocina.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_simbolo_check",
+                                           "name":  "simbolo check",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_simbolo_check.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_simbolo_check.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_simbolo_cruz",
+                                           "name":  "simbolo cruz",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_simbolo_cruz.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_simbolo_cruz.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_simbolo_infinito",
+                                           "name":  "simbolo infinito",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_simbolo_infinito.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_simbolo_infinito.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_simbolo_mas",
+                                           "name":  "simbolo mas",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_simbolo_mas.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_simbolo_mas.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_simbolo_peligro",
+                                           "name":  "simbolo peligro",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_simbolo_peligro.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_simbolo_peligro.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_simbolo_prohibido",
+                                           "name":  "simbolo prohibido",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_simbolo_prohibido.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_simbolo_prohibido.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_sombrero_paja",
+                                           "name":  "sombrero paja",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_sombrero_paja.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_sombrero_paja.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_tornillo_tuerca",
+                                           "name":  "tornillo tuerca",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_tornillo_tuerca.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_tornillo_tuerca.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_trampa_lazo",
+                                           "name":  "trampa lazo",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_trampa_lazo.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_trampa_lazo.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_tubo_pvc",
+                                           "name":  "tubo pvc",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_tubo_pvc.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_tubo_pvc.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_ventana_vidrio",
+                                           "name":  "ventana vidrio",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_ventana_vidrio.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_ventana_vidrio.aseprite"
+                                       },
+                                       {
+                                           "id":  "emoji_violin_lutier",
+                                           "name":  "violin lutier",
+                                           "category":  "objetos",
+                                           "png":  "assets/sprites/emojis/objetos/emoji_violin_lutier.png",
+                                           "aseprite":  "assets/sprites/emojis/objetos/emoji_violin_lutier.aseprite"
+                                       }
+                                   ]
+                   }
+}
