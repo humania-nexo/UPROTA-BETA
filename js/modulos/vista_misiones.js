@@ -15,9 +15,12 @@ export class VistaMisiones {
 
     this.contenedor.innerHTML = `
       <div style="text-align: center; margin-bottom: 14px;">
-        <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 2px;">
-          🧭 Expediciones del Yermo
-        </h2>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 2px;">
+          <img src="assets/sprites/ui/tab_misiones.png" alt="Misiones" class="pixel-icon icon-24">
+          <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin: 0;">
+            Expediciones del Yermo
+          </h2>
+        </div>
         <span style="font-size: 0.76rem; color: var(--text-muted);">
           1 misión por día real &bull; El Prota explora y regresa con los resultados al amanecer
         </span>
@@ -26,13 +29,16 @@ export class VistaMisiones {
       <!-- ESTADO 1: HAY UN INFORME PENDIENTE POR REVISAR -->
       ${hayInforme ? `
         <div class="card-yermo" style="background: rgba(217, 119, 6, 0.12); border: 2px solid var(--oro-torta); margin-bottom: 16px; text-align: center; padding: 16px;">
-          <div style="font-size: 2rem; margin-bottom: 4px;">📦</div>
+          <div style="margin-bottom: 8px;">
+            <img src="assets/sprites/items/caja_expedicion.png" alt="Expedición" class="pixel-icon icon-48">
+          </div>
           <h3 style="font-size: 1.05rem; color: var(--oro-torta-glow); margin-bottom: 4px;">¡El Prota ha Regresado del Yermo!</h3>
           <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">
             La expedición despachada ayer ha concluido. Revisa la bitácora para ver el botín, posibles heridas y los recursos recolectados.
           </p>
-          <button id="btn-ver-informe-mision" class="btn-yermo-primary" style="width: 100%; padding: 10px;">
-            📜 Ver Informe de Expedición y Reclamar Botín
+          <button id="btn-ver-informe-mision" class="btn-yermo-primary" style="width: 100%; padding: 10px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <img src="assets/sprites/pilares/pilar_mente.png" alt="Bitácora" class="pixel-icon icon-16">
+            <span>Ver Informe de Expedición y Reclamar Botín</span>
           </button>
         </div>
       ` : ''}
@@ -40,7 +46,9 @@ export class VistaMisiones {
       <!-- ESTADO 2: PROTA EN CURSO -->
       ${!hayInforme && enCurso ? `
         <div class="card-yermo" style="background: rgba(0,0,0,0.4); border-left: 3px solid var(--pilar-mente); margin-bottom: 16px; text-align: center; padding: 18px;">
-          <div style="font-size: 2rem; margin-bottom: 6px;">🧭</div>
+          <div style="margin-bottom: 8px;">
+            <img src="assets/sprites/ui/tab_misiones.png" alt="Misiones" class="pixel-icon icon-32">
+          </div>
           <h3 style="font-size: 1.05rem; color: var(--pilar-mente-light); margin-bottom: 4px;">Prota en Expedición...</h3>
           <div style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 8px;">
             Destino: <strong>${estado.misionDespachadaHoy.destino || 'El Yermo'}</strong> (${estado.misionDespachadaHoy.tipo === 'tipo_a' ? 'Exploración de Ruinas' : 'Recolección Segura'}).
@@ -83,8 +91,9 @@ export class VistaMisiones {
             <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.4;">
               Desarmar maderas y tarimas viejas en el arroyo seco. Trae 3 tablas seguras y leña para el fogón del refugio.
             </p>
-            <button class="btn-yermo-secondary btn-despachar-mision" style="width: 100%; padding: 8px;" data-mision-tipo="tipo_b_madera" data-mision-destino="Bosquecito tras el cerro">
-              Recolectar Madera (Resultado Mañana)
+            <button class="btn-yermo-secondary btn-despachar-mision" style="width: 100%; padding: 8px; display: flex; align-items: center; justify-content: center; gap: 6px;" data-mision-tipo="tipo_b_madera" data-mision-destino="Bosquecito tras el cerro">
+              <img src="assets/sprites/recursos/recurso_tablas.png" alt="Tablas" class="pixel-icon icon-16">
+              <span>Recolectar Madera (Resultado Mañana)</span>
             </button>
           </div>
 
@@ -100,8 +109,9 @@ export class VistaMisiones {
             <p style="font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.4;">
               Caminar con garrafones y cubetas hacia el cauce bajo del arroyo. Trae 8L de agua (requiere filtrado y hervor).
             </p>
-            <button class="btn-yermo-secondary btn-despachar-mision" style="width: 100%; padding: 8px;" data-mision-tipo="tipo_b_agua" data-mision-destino="Riachuelo cercano">
-              Acarrear Agua (Resultado Mañana)
+            <button class="btn-yermo-secondary btn-despachar-mision" style="width: 100%; padding: 8px; display: flex; align-items: center; justify-content: center; gap: 6px;" data-mision-tipo="tipo_b_agua" data-mision-destino="Riachuelo cercano">
+              <img src="assets/sprites/recursos/recurso_agua.png" alt="Agua" class="pixel-icon icon-16">
+              <span>Acarrear Agua (Resultado Mañana)</span>
             </button>
           </div>
         </div>
@@ -147,7 +157,10 @@ export class VistaMisiones {
     modalContent.innerHTML = `
       <div class="informe-mision-wrap">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <h3 style="font-size: 1.15rem; color: var(--oro-torta-glow);">📜 Bitácora de Expedición</h3>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <img src="assets/sprites/pilares/pilar_mente.png" alt="Bitacora" class="pixel-icon icon-20">
+            <h3 style="font-size: 1.15rem; color: var(--oro-torta-glow); margin: 0;">Bitácora de Expedición</h3>
+          </div>
           <span class="slots-counter">${informe.estadoSalud}</span>
         </div>
 
@@ -161,8 +174,9 @@ export class VistaMisiones {
         </div>
 
         <!-- RECURSOS Y BOTÍN -->
-        <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">
-          📦 Botín Transportado (${informe.pesoTotalKg || 0} kg):
+        <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+          <img src="assets/sprites/items/caja_expedicion.png" alt="Botin" class="pixel-icon icon-16">
+          <span>Botín Transportado (${informe.pesoTotalKg || 0} kg):</span>
         </div>
         
         <div class="card-yermo" style="background: var(--bg-surface); padding: 8px; margin-bottom: 14px; font-size: 0.8rem;">
@@ -178,16 +192,17 @@ export class VistaMisiones {
           ` : '<span style="color: var(--text-muted);">Sin objetos sueltos. Solo recursos básicos.</span>'}
 
           ${informe.recursosGanados ? `
-            <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border-subtle); display: flex; gap: 12px; color: #a7f3d0; font-weight: 600;">
-              ${informe.recursosGanados.tablas ? `<span>🪵 +${informe.recursosGanados.tablas} Tablas</span>` : ''}
-              ${informe.recursosGanados.clavos ? `<span>🔩 +${informe.recursosGanados.clavos} Clavos</span>` : ''}
-              ${informe.recursosGanados.aguaLitros ? `<span>💧 +${informe.recursosGanados.aguaLitros}L Agua</span>` : ''}
+            <div style="margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--border-subtle); display: flex; gap: 12px; color: #a7f3d0; font-weight: 600; flex-wrap: wrap;">
+              ${informe.recursosGanados.tablas ? `<span style="display: flex; align-items: center; gap: 4px;"><img src="assets/sprites/recursos/recurso_tablas.png" alt="Tablas" class="pixel-icon icon-16"> +${informe.recursosGanados.tablas} Tablas</span>` : ''}
+              ${informe.recursosGanados.clavos ? `<span style="display: flex; align-items: center; gap: 4px;"><img src="assets/sprites/recursos/recurso_clavos.png" alt="Clavos" class="pixel-icon icon-16"> +${informe.recursosGanados.clavos} Clavos</span>` : ''}
+              ${informe.recursosGanados.aguaLitros ? `<span style="display: flex; align-items: center; gap: 4px;"><img src="assets/sprites/recursos/recurso_agua.png" alt="Agua" class="pixel-icon icon-16"> +${informe.recursosGanados.aguaLitros}L Agua</span>` : ''}
             </div>
           ` : ''}
         </div>
 
-        <button id="btn-reclamar-informe" class="btn-yermo-primary" style="width: 100%; padding: 12px;">
-          ✓ Guardar en Refugio y Continuar
+        <button id="btn-reclamar-informe" class="btn-yermo-primary" style="width: 100%; padding: 12px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <img src="assets/sprites/ui/ico_check_ok.png" alt="OK" class="pixel-icon icon-16">
+          <span>Guardar en Refugio y Continuar</span>
         </button>
       </div>
     `;

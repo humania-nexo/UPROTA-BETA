@@ -13,6 +13,7 @@
 
   <!-- Estilos Modulares -->
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/sprites.css">
   <link rel="stylesheet" href="css/torta.css">
   <link rel="stylesheet" href="css/tablon.css">
   <link rel="stylesheet" href="css/refugio.css">
@@ -24,14 +25,14 @@
     <header class="app-header">
       <div class="header-top">
         <div class="refugio-id">
-          <span class="refugio-avatar">🏕️</span>
+          <img src="assets/sprites/ui/tab_refugio.png" alt="Refugio" class="pixel-icon icon-24 refugio-avatar">
           <div class="refugio-textos">
             <h1 id="header-prota-nombre">Prota</h1>
             <span id="header-refugio-nivel">Nivel 0 &bull; Punto Cero</span>
           </div>
         </div>
         <button id="btn-ir-hogar-top" class="btn-hogar-link hidden">
-          <span>🕯️</span>
+          <img src="assets/sprites/ui/tab_hogar.png" alt="El Hogar" class="pixel-icon icon-20">
           <span>El Hogar</span>
         </button>
       </div>
@@ -39,19 +40,19 @@
       <!-- BARRA DE RECURSOS DEL ASENTAMIENTO -->
       <div class="recursos-strip">
         <div class="recurso-chip" title="Tablas de madera">
-          <span>🪵</span>
+          <img src="assets/sprites/recursos/recurso_tablas.png" alt="Tablas" class="pixel-icon icon-16">
           <span id="res-tablas">0</span>
         </div>
         <div class="recurso-chip" title="Clavos y chatarra">
-          <span>🔩</span>
+          <img src="assets/sprites/recursos/recurso_clavos.png" alt="Clavos" class="pixel-icon icon-16">
           <span id="res-clavos">0</span>
         </div>
         <div class="recurso-chip" title="Provisiones de comida">
-          <span>🥕</span>
+          <img src="assets/sprites/recursos/recurso_provisiones.png" alt="Provisiones" class="pixel-icon icon-16">
           <span id="res-provisiones">0</span>
         </div>
         <div class="recurso-chip" title="Agua pura">
-          <span>💧</span>
+          <img src="assets/sprites/recursos/recurso_agua.png" alt="Agua" class="pixel-icon icon-16">
           <span id="res-agua">0L</span>
         </div>
       </div>
@@ -78,23 +79,23 @@
     <!-- NAVEGACIÓN INFERIOR (3 TABS BASE + 2 DESBLOQUEABLES) -->
     <nav class="app-bottom-nav">
       <button class="nav-tab-btn active" data-tab="tablon">
-        <span class="tab-icon">📋</span>
+        <img src="assets/sprites/ui/tab_tablon.png" alt="Tablón" class="pixel-icon icon-24">
         <span class="tab-label">Tablón</span>
       </button>
       <button class="nav-tab-btn" data-tab="refugio">
-        <span class="tab-icon">🛖</span>
+        <img src="assets/sprites/ui/tab_refugio.png" alt="Refugio" class="pixel-icon icon-24">
         <span class="tab-label">Refugio</span>
       </button>
       <button class="nav-tab-btn" data-tab="misiones">
-        <span class="tab-icon">🧭</span>
+        <img src="assets/sprites/ui/tab_misiones.png" alt="Misiones" class="pixel-icon icon-24">
         <span class="tab-label">Misiones</span>
       </button>
       <button id="nav-btn-radio" class="nav-tab-btn hidden" data-tab="comunicacion">
-        <span class="tab-icon">📻</span>
+        <img src="assets/sprites/ui/tab_radio.png" alt="Radio" class="pixel-icon icon-24">
         <span class="tab-label">Radio</span>
       </button>
       <button id="nav-btn-hogar" class="nav-tab-btn hidden" data-tab="hogar">
-        <span class="tab-icon">🕯️</span>
+        <img src="assets/sprites/ui/tab_hogar.png" alt="El Hogar" class="pixel-icon icon-24">
         <span class="tab-label">El Hogar</span>
       </button>
     </nav>

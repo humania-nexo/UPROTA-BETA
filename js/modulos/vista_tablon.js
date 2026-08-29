@@ -24,9 +24,11 @@ export class VistaTablon {
       <div class="torta-container ${pilares.esDorado ? 'es-dorada' : ''}">
         <div class="torta-header">
           <div class="torta-titulo">
-            <span>${pilares.esDorado ? '🌟' : '⚖️'}</span>
+            <img src="${pilares.esDorado ? 'assets/sprites/pilares/torta_dorada_badge.png' : 'assets/sprites/pilares/torta_dorada_badge.png'}" alt="Torta" class="pixel-icon icon-20">
             <span>Torta de Equilibrio</span>
-            <button class="btn-info-glifo" data-info-key="torta_equilibrio" title="Información vida real" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.85rem;">ℹ️</button>
+            <button class="btn-info-glifo" data-info-key="torta_equilibrio" title="Información vida real" style="background:none;border:none;cursor:pointer;padding:0;">
+              <img src="assets/sprites/ui/ico_info.png" alt="Info" class="pixel-icon icon-16">
+            </button>
           </div>
           <div class="torta-badge-ventana">Ventana 21 Días</div>
         </div>
@@ -42,28 +44,28 @@ export class VistaTablon {
         <div class="pilares-grid">
           <div class="pilar-card pilar-cuerpo">
             <div class="pilar-info-left">
-              <span>🏃</span>
+              <img src="assets/sprites/pilares/pilar_cuerpo.png" alt="Cuerpo" class="pixel-icon icon-20">
               <span class="pilar-nombre">Cuerpo</span>
             </div>
             <span class="pilar-porcentaje">${Math.round(pilares.porcentajes.cuerpo)}%</span>
           </div>
           <div class="pilar-card pilar-mente">
             <div class="pilar-info-left">
-              <span>📜</span>
+              <img src="assets/sprites/pilares/pilar_mente.png" alt="Mente" class="pixel-icon icon-20">
               <span class="pilar-nombre">Mente</span>
             </div>
             <span class="pilar-porcentaje">${Math.round(pilares.porcentajes.mente)}%</span>
           </div>
           <div class="pilar-card pilar-espiritu">
             <div class="pilar-info-left">
-              <span>🔥</span>
+              <img src="assets/sprites/pilares/pilar_espiritu.png" alt="Espíritu" class="pixel-icon icon-20">
               <span class="pilar-nombre">Espíritu</span>
             </div>
             <span class="pilar-porcentaje">${Math.round(pilares.porcentajes.espiritu)}%</span>
           </div>
           <div class="pilar-card pilar-taller">
             <div class="pilar-info-left">
-              <span>🛠️</span>
+              <img src="assets/sprites/pilares/pilar_taller.png" alt="Taller" class="pixel-icon icon-20">
               <span class="pilar-nombre">Taller</span>
             </div>
             <span class="pilar-porcentaje">${Math.round(pilares.porcentajes.taller)}%</span>
@@ -83,15 +85,16 @@ export class VistaTablon {
 
       <!-- AVISO DE PISO MÍNIMO 1-1-1-8 SI FALTA ALGÚN PILAR -->
       ${!piso.cumplePiso ? `
-        <div style="background: rgba(180, 83, 9, 0.15); border: 1px solid var(--accent-rust); border-radius: var(--radius-sm); padding: 8px 12px; margin-bottom: 12px; font-size: 0.78rem; color: #fed7aa;">
-          ⚠️ <strong>Piso mínimo:</strong> El Yermo te anima a sostener al menos 1 senda en cada pilar. Te falta: <em>${piso.pilaresFaltantes.join(', ')}</em>.
+        <div style="background: rgba(180, 83, 9, 0.15); border: 1px solid var(--accent-rust); border-radius: var(--radius-sm); padding: 8px 12px; margin-bottom: 12px; font-size: 0.78rem; color: #fed7aa; display: flex; align-items: center; gap: 8px;">
+          <img src="assets/sprites/mecanicas/cadena_tiembla.png" alt="Aviso" class="pixel-icon icon-20">
+          <div><strong>Piso mínimo:</strong> El Yermo te anima a sostener al menos 1 senda en cada pilar. Te falta: <em>${piso.pilaresFaltantes.join(', ')}</em>.</div>
         </div>
       ` : ''}
 
       <!-- SECCIÓN: SENDAS (HÁBITOS POSITIVOS) -->
       <div class="seccion-tablon-head">
         <div class="seccion-tablon-titulo">
-          <span>🏃</span>
+          <img src="assets/sprites/mecanicas/mecanica_senda.png" alt="Sendas" class="pixel-icon icon-20">
           <span>Sendas Activas</span>
         </div>
         <span class="slots-counter">${estado.sendas.length}/${infoRefugio.maxSendas} Slots</span>
@@ -109,7 +112,7 @@ export class VistaTablon {
               <span class="senda-meta">+1 ${s.pilar.toUpperCase()} &bull; Racha: ${s.rachaActual || 0}d &bull; (${s.diasTotales || 0}/66d)</span>
             </div>
             <button class="btn-check-item ${s.cumplidaHoy ? 'checked' : ''}" data-senda-idx="${index}">
-              ${s.cumplidaHoy ? '✓' : ''}
+              ${s.cumplidaHoy ? '<img src="assets/sprites/ui/ico_check_ok.png" alt="OK" class="pixel-icon icon-16">' : ''}
             </button>
           </div>
         `).join('')}
@@ -121,17 +124,20 @@ export class VistaTablon {
           + Trazar Nueva Senda (${estado.sendas.length}/${infoRefugio.maxSendas})
         </button>
       ` : `
-        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; margin-bottom: 18px; border-style: dashed;">
-          🔒 <strong>Slots de Sendas al tope (${estado.sendas.length}/${infoRefugio.maxSendas}):</strong> Mantén constancia con tus sendas actuales y mejora tu refugio para habilitar más espacios.
+        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; margin-bottom: 18px; border-style: dashed; display: flex; align-items: center; justify-content: center; gap: 6px;">
+          <img src="assets/sprites/ui/ico_candado.png" alt="Bloqueado" class="pixel-icon icon-16">
+          <span><strong>Slots de Sendas al tope (${estado.sendas.length}/${infoRefugio.maxSendas}):</strong> Mantén constancia con tus sendas actuales y mejora tu refugio para habilitar más espacios.</span>
         </div>
       `}
 
       <!-- SECCIÓN: CADENAS (MALOS HÁBITOS A ROMPER) -->
       <div class="seccion-tablon-head">
         <div class="seccion-tablon-titulo">
-          <span>⛓️</span>
+          <img src="assets/sprites/mecanicas/cadena_firme.png" alt="Cadenas" class="pixel-icon icon-20">
           <span>Cadenas a Romper</span>
-          <button class="btn-info-glifo" data-info-key="cadenas" title="Información vida real" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.85rem;">ℹ️</button>
+          <button class="btn-info-glifo" data-info-key="cadenas" title="Información vida real" style="background:none;border:none;cursor:pointer;padding:0;">
+            <img src="assets/sprites/ui/ico_info.png" alt="Info" class="pixel-icon icon-16">
+          </button>
         </div>
         <span class="slots-counter">${estado.cadenas.length}/${infoRefugio.maxCadenas} Slots</span>
       </div>
@@ -148,7 +154,7 @@ export class VistaTablon {
               <span class="senda-meta">Días libre: ${c.diasLimpiosConsecutivos || 0}/21 &bull; ${c.estadoPuente === 'tiembla' ? '⚠️ Puente tiembla' : 'Paso firme'}</span>
             </div>
             <button class="btn-check-item ${c.reportadaHoy ? 'checked' : ''}" data-cadena-idx="${index}">
-              ${c.reportadaHoy ? '✓' : ''}
+              ${c.reportadaHoy ? '<img src="assets/sprites/ui/ico_check_ok.png" alt="OK" class="pixel-icon icon-16">' : ''}
             </button>
           </div>
         `).join('')}
@@ -160,17 +166,20 @@ export class VistaTablon {
           + Atar Nueva Cadena (${estado.cadenas.length}/${infoRefugio.maxCadenas})
         </button>
       ` : `
-        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; margin-bottom: 18px; border-style: dashed;">
-          🔒 <strong>Slots de Cadenas al tope (${estado.cadenas.length}/${infoRefugio.maxCadenas}):</strong> Rompe una cadena actual o sube el nivel de tu refugio para atar otra.
+        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; margin-bottom: 18px; border-style: dashed; display: flex; align-items: center; justify-content: center; gap: 6px;">
+          <img src="assets/sprites/ui/ico_candado.png" alt="Bloqueado" class="pixel-icon icon-16">
+          <span><strong>Slots de Cadenas al tope (${estado.cadenas.length}/${infoRefugio.maxCadenas}):</strong> Rompe una cadena actual o sube el nivel de tu refugio para atar otra.</span>
         </div>
       `}
 
       <!-- SECCIÓN: FAROS (AHORRO Y PROYECTOS) -->
       <div class="seccion-tablon-head">
         <div class="seccion-tablon-titulo">
-          <span>🕯️</span>
+          <img src="assets/sprites/mecanicas/faro_encendido.png" alt="Faros" class="pixel-icon icon-20">
           <span>Faros y Metas</span>
-          <button class="btn-info-glifo" data-info-key="faro_ahorro" title="Información vida real" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.85rem;">ℹ️</button>
+          <button class="btn-info-glifo" data-info-key="faro_ahorro" title="Información vida real" style="background:none;border:none;cursor:pointer;padding:0;">
+            <img src="assets/sprites/ui/ico_info.png" alt="Info" class="pixel-icon icon-16">
+          </button>
         </div>
         <span class="slots-counter">${estado.faros.length}/${infoRefugio.maxFaros} Slots</span>
       </div>
@@ -346,11 +355,18 @@ export class VistaTablon {
     const progreso66 = Math.min(100, Math.round(((senda.diasTotales || 0) / 66) * 100));
     const tasaFallosPct = Math.round((senda.tasaFallos || 0) * 100);
 
+    const spritePilarMap = {
+      cuerpo: 'assets/sprites/pilares/pilar_cuerpo.png',
+      mente: 'assets/sprites/pilares/pilar_mente.png',
+      espiritu: 'assets/sprites/pilares/pilar_espiritu.png',
+      taller: 'assets/sprites/pilares/pilar_taller.png'
+    };
+
     modalContent.innerHTML = `
       <div class="modal-crear-wrap">
         <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-          <span style="font-size: 1.4rem;">${senda.pilar === 'cuerpo' ? '🏃' : senda.pilar === 'mente' ? '📜' : senda.pilar === 'espiritu' ? '🔥' : '🛠️'}</span>
+          <img src="${spritePilarMap[senda.pilar] || 'assets/sprites/mecanicas/mecanica_senda.png'}" alt="${senda.pilar}" class="pixel-icon icon-24">
           <h3 style="color: var(--text-primary); font-size: 1.1rem;">${senda.nombre}</h3>
         </div>
         <div style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--pilar-${senda.pilar}-light); margin-bottom: 12px; text-transform: uppercase;">
@@ -633,7 +649,7 @@ export class VistaTablon {
       <div class="modal-crear-wrap">
         <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-          <span style="font-size: 1.4rem;">⛓️</span>
+          <img src="assets/sprites/mecanicas/cadena_firme.png" alt="Cadena" class="pixel-icon icon-24">
           <h3 style="color: var(--text-primary); font-size: 1.1rem;">${cadena.nombre}</h3>
         </div>
         <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px;">
@@ -649,8 +665,9 @@ export class VistaTablon {
           <div style="background: rgba(0,0,0,0.5); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
             <div style="width: ${Math.min(100, Math.round(((cadena.diasLimpiosConsecutivos || 0) / 21) * 100))}%; background: #22c55e; height: 100%;"></div>
           </div>
-          <div style="font-size: 0.74rem; color: ${cadena.estadoPuente === 'tiembla' ? '#fca5a5' : 'var(--text-muted)'};">
-            Estado: <strong>${cadena.estadoPuente === 'tiembla' ? '⚠️ El puente tiembla (Recaída reciente)' : 'Paso firme en el puente'}</strong>
+          <div style="font-size: 0.74rem; color: ${cadena.estadoPuente === 'tiembla' ? '#fca5a5' : 'var(--text-muted)'}; display: flex; align-items: center; gap: 6px;">
+            <img src="${cadena.estadoPuente === 'tiembla' ? 'assets/sprites/mecanicas/cadena_tiembla.png' : 'assets/sprites/mecanicas/cadena_firme.png'}" alt="Estado" class="pixel-icon icon-16">
+            <span>Estado: <strong>${cadena.estadoPuente === 'tiembla' ? 'El puente tiembla (Recaída reciente)' : 'Paso firme en el puente'}</strong></span>
           </div>
         </div>
 
@@ -659,11 +676,13 @@ export class VistaTablon {
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px;">
-          <button id="btn-reporte-limpio" class="btn-yermo-primary" style="background: #15803d; border-color: #22c55e; padding: 10px; font-size: 0.85rem;">
-            ✓ Me mantuve libre hoy (Día Limpio +1)
+          <button id="btn-reporte-limpio" class="btn-yermo-primary" style="background: #15803d; border-color: #22c55e; padding: 10px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <img src="assets/sprites/ui/ico_check_ok.png" alt="OK" class="pixel-icon icon-16">
+            <span>Me mantuve libre hoy (Día Limpio +1)</span>
           </button>
-          <button id="btn-reporte-recaida" class="btn-yermo-secondary" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.5); color: #fca5a5; padding: 10px; font-size: 0.85rem;">
-            ⚠️ Tuve una recaída hoy (Sinceridad sin culpa)
+          <button id="btn-reporte-recaida" class="btn-yermo-secondary" style="background: rgba(239, 68, 68, 0.15); border-color: rgba(239, 68, 68, 0.5); color: #fca5a5; padding: 10px; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <img src="assets/sprites/mecanicas/cadena_tiembla.png" alt="Alerta" class="pixel-icon icon-16">
+            <span>Tuve una recaída hoy (Sinceridad sin culpa)</span>
           </button>
         </div>
 

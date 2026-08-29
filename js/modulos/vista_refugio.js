@@ -54,7 +54,10 @@ export class VistaRefugio {
       <!-- PANEL DE BOLSA DE PESO REAL -->
       <div class="bolsa-panel">
         <div class="bolsa-head">
-          <span class="bolsa-titulo">🎒 ${estado.bolsa.tipo}</span>
+          <span class="bolsa-titulo" style="display: flex; align-items: center; gap: 6px;">
+            <img src="assets/sprites/items/caja_expedicion.png" alt="Bolsa" class="pixel-icon icon-20">
+            <span>${estado.bolsa.tipo}</span>
+          </span>
           <span class="bolsa-peso-badge">${estado.bolsa.pesoActualKg} / ${infoNivel.capacidadBolsaKg} kg</span>
         </div>
         <div class="bolsa-items-grid">
@@ -69,23 +72,38 @@ export class VistaRefugio {
 
       <!-- ALMACÉN DE RECURSOS DEL ASENTAMIENTO -->
       <div class="card-yermo">
-        <h4 style="margin-bottom: 10px; font-size: 0.9rem; color: var(--text-primary);">📦 Inventario del Asentamiento</h4>
+        <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 10px;">
+          <img src="assets/sprites/items/caja_expedicion.png" alt="Almacen" class="pixel-icon icon-20">
+          <h4 style="font-size: 0.9rem; color: var(--text-primary); margin: 0;">Inventario del Asentamiento</h4>
+        </div>
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
           <div style="background: var(--bg-surface); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-muted);">🪵 Tablas</div>
-            <div style="font-size: 1.1rem; font-weight: 700; font-family: var(--font-mono); color: #fff;">${estado.recursos.tablas} u.</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px;">
+              <img src="assets/sprites/recursos/recurso_tablas.png" alt="Tablas" class="pixel-icon icon-16">
+              <span>Tablas</span>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 700; font-family: var(--font-mono); color: #fff; margin-top: 2px;">${estado.recursos.tablas} u.</div>
           </div>
           <div style="background: var(--bg-surface); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-muted);">🔩 Clavos</div>
-            <div style="font-size: 1.1rem; font-weight: 700; font-family: var(--font-mono); color: #fff;">${estado.recursos.clavos} u.</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px;">
+              <img src="assets/sprites/recursos/recurso_clavos.png" alt="Clavos" class="pixel-icon icon-16">
+              <span>Clavos</span>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 700; font-family: var(--font-mono); color: #fff; margin-top: 2px;">${estado.recursos.clavos} u.</div>
           </div>
           <div style="background: var(--bg-surface); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-muted);">🥕 Provisiones</div>
-            <div style="font-size: 1.1rem; font-weight: 700; font-family: var(--font-mono); color: #fff;">${estado.recursos.provisiones} rac.</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px;">
+              <img src="assets/sprites/recursos/recurso_provisiones.png" alt="Provisiones" class="pixel-icon icon-16">
+              <span>Provisiones</span>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 700; font-family: var(--font-mono); color: #fff; margin-top: 2px;">${estado.recursos.provisiones} rac.</div>
           </div>
           <div style="background: var(--bg-surface); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-            <div style="font-size: 0.75rem; color: var(--text-muted);">💧 Agua Pura</div>
-            <div style="font-size: 1.1rem; font-weight: 700; font-family: var(--font-mono); color: #fff;">${estado.recursos.aguaLitros} L</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px;">
+              <img src="assets/sprites/recursos/recurso_agua.png" alt="Agua" class="pixel-icon icon-16">
+              <span>Agua Pura</span>
+            </div>
+            <div style="font-size: 1.1rem; font-weight: 700; font-family: var(--font-mono); color: #fff; margin-top: 2px;">${estado.recursos.aguaLitros} L</div>
           </div>
         </div>
       </div>

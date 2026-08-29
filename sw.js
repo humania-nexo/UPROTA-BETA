@@ -3,12 +3,13 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v1.2';
+const CACHE_NAME = 'uprota-cache-v1.3';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './css/main.css',
+  './css/sprites.css',
   './css/torta.css',
   './css/tablon.css',
   './css/refugio.css',
@@ -35,7 +36,38 @@ const ASSETS = [
   './js/data/items_botin.js',
   './js/data/sabiduria_textos.js',
   './js/data/frases_estoicas.js',
-  './js/data/niveles_refugio.js'
+  './js/data/niveles_refugio.js',
+  './assets/sprites/recursos/recurso_tablas.png',
+  './assets/sprites/recursos/recurso_clavos.png',
+  './assets/sprites/recursos/recurso_provisiones.png',
+  './assets/sprites/recursos/recurso_agua.png',
+  './assets/sprites/pilares/pilar_cuerpo.png',
+  './assets/sprites/pilares/pilar_mente.png',
+  './assets/sprites/pilares/pilar_espiritu.png',
+  './assets/sprites/pilares/pilar_taller.png',
+  './assets/sprites/pilares/torta_dorada_badge.png',
+  './assets/sprites/ui/tab_tablon.png',
+  './assets/sprites/ui/tab_refugio.png',
+  './assets/sprites/ui/tab_misiones.png',
+  './assets/sprites/ui/tab_radio.png',
+  './assets/sprites/ui/tab_hogar.png',
+  './assets/sprites/ui/ico_info.png',
+  './assets/sprites/ui/ico_check_ok.png',
+  './assets/sprites/ui/ico_candado.png',
+  './assets/sprites/mecanicas/mecanica_senda.png',
+  './assets/sprites/mecanicas/mecanica_cimiento.png',
+  './assets/sprites/mecanicas/cadena_firme.png',
+  './assets/sprites/mecanicas/cadena_tiembla.png',
+  './assets/sprites/mecanicas/cadena_rota.png',
+  './assets/sprites/mecanicas/faro_apagado.png',
+  './assets/sprites/mecanicas/faro_encendido.png',
+  './assets/sprites/items/caja_expedicion.png',
+  './assets/sprites/items/item_cuchillo_mellado.png',
+  './assets/sprites/items/item_cafe_solubil.png',
+  './assets/sprites/items/item_cables_cobre.png',
+  './assets/sprites/items/item_sal_grano.png',
+  './assets/sprites/items/item_yesca_natural.png',
+  './assets/sprites/items/item_biblia_don_chui.png'
 ];
 
 self.addEventListener('install', (e) => {
