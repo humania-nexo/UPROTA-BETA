@@ -40,7 +40,7 @@ export class ModalInfo {
         <button class="modal-close-btn" id="btn-cerrar-info">&times;</button>
         
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-          <span style="font-size: 1.5rem;">ℹ️</span>
+          <img src="assets/sprites/ui/ico_info.png" alt="Info" class="pixel-icon icon-24">
           <h3 style="color: var(--text-primary); font-size: 1.05rem;">${info.titulo}</h3>
         </div>
 
@@ -54,8 +54,9 @@ export class ModalInfo {
           <p style="font-size: 0.84rem; color: #f5f2eb; line-height: 1.5;">${info.vidaReal}</p>
         </div>
 
-        <button id="btn-entendido-info" class="btn-yermo-primary" style="width: 100%; padding: 10px;">
-          ✓ Entendido (Volver al Yermo)
+        <button id="btn-entendido-info" class="btn-yermo-primary" style="width: 100%; padding: 10px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <img src="assets/sprites/ui/ico_check_ok.png" alt="OK" class="pixel-icon icon-16">
+          <span>Entendido (Volver al Yermo)</span>
         </button>
       </div>
     `;

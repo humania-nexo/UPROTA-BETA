@@ -42,26 +42,27 @@ export class ModalOnboarding {
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; font-size: 0.82rem;">
-          <div style="display: flex; align-items: center; gap: 8px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-taller);">
-            <span>🍽️</span>
+          <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-taller);">
+            <img src="assets/sprites/pilares/pilar_taller.png" alt="Taller" class="pixel-icon icon-20">
             <span><strong>Lavar los platos</strong> es <em>purificar utensilios</em> del refugio.</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 8px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-cuerpo);">
-            <span>🏃</span>
+          <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-cuerpo);">
+            <img src="assets/sprites/pilares/pilar_cuerpo.png" alt="Cuerpo" class="pixel-icon icon-20">
             <span><strong>Hacer ejercicio</strong> es <em>patrullar tu perímetro</em> y generar energía.</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 8px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-mente);">
-            <span>📜</span>
+          <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-mente);">
+            <img src="assets/sprites/pilares/pilar_mente.png" alt="Mente" class="pixel-icon icon-20">
             <span><strong>Estudiar o leer</strong> es <em>decodificar planos</em> de supervivencia.</span>
           </div>
-          <div style="display: flex; align-items: center; gap: 8px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-espiritu);">
-            <span>🔥</span>
+          <div style="display: flex; align-items: center; gap: 10px; background: var(--bg-surface); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 3px solid var(--pilar-espiritu);">
+            <img src="assets/sprites/pilares/pilar_espiritu.png" alt="Espíritu" class="pixel-icon icon-20">
             <span><strong>Orar o meditar</strong> es <em>cuidar el fuego interior</em> y la calma.</span>
           </div>
         </div>
 
-        <button id="btn-onb-ir-paso-2" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem;">
-          Entendido &bull; Trazar Mis 4 Sendas Iniciales ➔
+        <button id="btn-onb-ir-paso-2" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <span>Entendido &bull; Trazar Mis 4 Sendas Iniciales</span>
+          <img src="assets/sprites/mecanicas/mecanica_senda.png" alt="Sendas" class="pixel-icon icon-16">
         </button>
       </div>
     `;
@@ -82,16 +83,22 @@ export class ModalOnboarding {
 
     modalContent.innerHTML = `
       <div class="onboarding-wrap">
-        <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 2px;">
-          ⚖️ Configuración del Piso Mínimo (4 Pilares)
-        </h3>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 2px;">
+          <img src="assets/sprites/pilares/torta_dorada_badge.png" alt="Pilares" class="pixel-icon icon-24">
+          <h3 style="font-size: 1.15rem; color: var(--text-primary); margin: 0;">
+            Configuración del Piso Mínimo (4 Pilares)
+          </h3>
+        </div>
         <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.4;">
           Para que ninguna dimensión quede abandonada, define 1 hábito real para cada pilar. Toca un ejemplo o escribe el tuyo.
         </p>
 
         <!-- PILAR 1: CUERPO -->
         <div style="margin-bottom: 14px; border-left: 3px solid var(--pilar-cuerpo); padding-left: 10px;">
-          <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-cuerpo-light);">🏃 1. CUERPO (Salud y Energía)</label>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <img src="assets/sprites/pilares/pilar_cuerpo.png" alt="Cuerpo" class="pixel-icon icon-16">
+            <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-cuerpo-light);">1. CUERPO (Salud y Energía)</label>
+          </div>
           <div style="font-size: 0.72rem; color: var(--text-secondary); margin: 2px 0 6px 0;">
             <strong>Propósito:</strong> Sacudirte el sedentarismo y generar energía física.
           </div>
@@ -121,7 +128,10 @@ export class ModalOnboarding {
 
         <!-- PILAR 2: MENTE -->
         <div style="margin-bottom: 14px; border-left: 3px solid var(--pilar-mente); padding-left: 10px;">
-          <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-mente-light);">📜 2. MENTE (Nutrición Intelectual)</label>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <img src="assets/sprites/pilares/pilar_mente.png" alt="Mente" class="pixel-icon icon-16">
+            <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-mente-light);">2. MENTE (Nutrición Intelectual)</label>
+          </div>
           <div style="font-size: 0.72rem; color: var(--text-secondary); margin: 2px 0 6px 0;">
             <strong>Propósito:</strong> Alimentar el intelecto con conocimiento útil.
           </div>
@@ -150,7 +160,10 @@ export class ModalOnboarding {
 
         <!-- PILAR 3: ESPÍRITU -->
         <div style="margin-bottom: 14px; border-left: 3px solid var(--pilar-espiritu); padding-left: 10px;">
-          <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-espiritu-light);">🔥 3. ESPÍRITU (Calma y Desconexión)</label>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <img src="assets/sprites/pilares/pilar_espiritu.png" alt="Espíritu" class="pixel-icon icon-16">
+            <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-espiritu-light);">3. ESPÍRITU (Calma y Desconexión)</label>
+          </div>
           <div style="font-size: 0.72rem; color: var(--text-secondary); margin: 2px 0 6px 0;">
             <strong>Propósito:</strong> Soltar el teléfono y reconectar con la calma interior.
           </div>
@@ -179,7 +192,10 @@ export class ModalOnboarding {
 
         <!-- PILAR 4: TALLER -->
         <div style="margin-bottom: 16px; border-left: 3px solid var(--pilar-taller); padding-left: 10px;">
-          <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-taller-light);">🛠️ 4. TALLER (Labor Manual y Cuidado)</label>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <img src="assets/sprites/pilares/pilar_taller.png" alt="Taller" class="pixel-icon icon-16">
+            <label style="font-size: 0.84rem; font-weight: 700; color: var(--pilar-taller-light);">4. TALLER (Labor Manual y Cuidado)</label>
+          </div>
           <div style="font-size: 0.72rem; color: var(--text-secondary); margin: 2px 0 6px 0;">
             <strong>Propósito:</strong> Usar tus manos para ordenar, reparar o cuidar algo real.
           </div>
@@ -207,8 +223,9 @@ export class ModalOnboarding {
           </div>
         </div>
 
-        <button id="btn-onb-ir-paso-3" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem;">
-          Siguiente: Atar 2 Cadenas Iniciales ➔
+        <button id="btn-onb-ir-paso-3" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <span>Siguiente: Atar 2 Cadenas Iniciales</span>
+          <img src="assets/sprites/mecanicas/cadena_firme.png" alt="Cadenas" class="pixel-icon icon-16">
         </button>
       </div>
     `;
@@ -276,16 +293,22 @@ export class ModalOnboarding {
 
     modalContent.innerHTML = `
       <div class="onboarding-wrap">
-        <h3 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 2px;">
-          ⛓️ Atar 2 Cadenas (Malos Hábitos a Romper)
-        </h3>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 2px;">
+          <img src="assets/sprites/mecanicas/cadena_firme.png" alt="Cadenas" class="pixel-icon icon-24">
+          <h3 style="font-size: 1.15rem; color: var(--text-primary); margin: 0;">
+            Atar 2 Cadenas (Malos Hábitos a Romper)
+          </h3>
+        </div>
         <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.4;">
           Una <strong>Cadena</strong> representa un hábito negativo que drena tu energía y deseas erradicar de tu vida real. Necesitas <strong>21 días continuos</strong> sin recaer para romper cada una.
         </p>
 
         <!-- CADENA 1 -->
         <div style="margin-bottom: 14px; border-left: 3px solid #ef4444; padding-left: 10px;">
-          <label style="font-size: 0.84rem; font-weight: 700; color: #fca5a5;">⛓️ 1. Primera Cadena a Romper:</label>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <img src="assets/sprites/mecanicas/cadena_firme.png" alt="Cadena" class="pixel-icon icon-16">
+            <label style="font-size: 0.84rem; font-weight: 700; color: #fca5a5;">1. Primera Cadena a Romper:</label>
+          </div>
           <div style="display: flex; gap: 4px; flex-wrap: wrap; margin: 6px 0;">
             <button type="button" class="chip-sug" data-target="input-cadena-1" data-val="Desvelarme con el teléfono en la cama">Desvelarme con teléfono</button>
             <button type="button" class="chip-sug" data-target="input-cadena-1" data-val="Fumar cigarrillos o vapear">Fumar / Vapear</button>
@@ -302,7 +325,10 @@ export class ModalOnboarding {
 
         <!-- CADENA 2 -->
         <div style="margin-bottom: 18px; border-left: 3px solid #f97316; padding-left: 10px;">
-          <label style="font-size: 0.84rem; font-weight: 700; color: #fdba74;">⛓️ 2. Segunda Cadena a Romper:</label>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <img src="assets/sprites/mecanicas/cadena_tiembla.png" alt="Cadena" class="pixel-icon icon-16">
+            <label style="font-size: 0.84rem; font-weight: 700; color: #fdba74;">2. Segunda Cadena a Romper:</label>
+          </div>
           <div style="display: flex; gap: 4px; flex-wrap: wrap; margin: 6px 0;">
             <button type="button" class="chip-sug" data-target="input-cadena-2" data-val="Procrastinar y aplazar tareas difíciles">Procrastinar tareas</button>
             <button type="button" class="chip-sug" data-target="input-cadena-2" data-val="Ver redes sociales al despertar">Redes al despertar</button>
@@ -317,8 +343,9 @@ export class ModalOnboarding {
           <input type="text" id="input-cadena-2" class="card-yermo" style="width: 100%; padding: 6px 8px; color: #fff; background: var(--bg-surface); margin-bottom: 0;" placeholder="Escribe tu segundo mal hábito...">
         </div>
 
-        <button id="btn-onb-guardar-todo" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem;">
-          🔥 Reclamar Punto Cero y Comenzar
+        <button id="btn-onb-guardar-todo" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <img src="assets/sprites/pilares/pilar_espiritu.png" alt="Fuego" class="pixel-icon icon-20">
+          <span>Reclamar Punto Cero y Comenzar</span>
         </button>
       </div>
     `;
