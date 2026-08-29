@@ -398,21 +398,47 @@ export class ModalOnboarding {
         }
       }
 
-      // Agregar las 2 cadenas con Lore y figuras
+      // Helper para detectar Lore e Icono según texto de Cadena
+      const obtenerLoreCadena = (texto) => {
+        const t = (texto || '').toLowerCase();
+        if (t.includes('fumar') || t.includes('vapear') || t.includes('cigarro') || t.includes('tabaco')) {
+          return { lore: 'Inhalar polvo rojo y vapores tóxicos', icon: 'assets/sprites/emojis/habitos/emoji_cigarro_apagado.png' };
+        }
+        if (t.includes('teléfono') || t.includes('celular') || t.includes('redes') || t.includes('pantalla') || t.includes('desvelar')) {
+          return { lore: 'Atadura a la pantalla lumínica', icon: 'assets/sprites/emojis/habitos/emoji_celular_alerta.png' };
+        }
+        if (t.includes('procrastinar') || t.includes('aplazar') || t.includes('postergar') || t.includes('inercia')) {
+          return { lore: 'Trampa de la inercia y desidia', icon: 'assets/sprites/emojis/habitos/emoji_reloj_arena.png' };
+        }
+        if (t.includes('chatarra') || t.includes('dulce') || t.includes('azúcar') || t.includes('refresco') || t.includes('gaseosa') || t.includes('comida')) {
+          return { lore: 'Consumo de raciones adulteradas', icon: 'assets/sprites/emojis/habitos/emoji_dulce_procesado.png' };
+        }
+        if (t.includes('alcohol') || t.includes('beber') || t.includes('cerveza') || t.includes('licor')) {
+          return { lore: 'Trago embriagante del desierto', icon: 'assets/sprites/emojis/habitos/emoji_copa_licor.png' };
+        }
+        if (t.includes('gasto') || t.includes('comprar') || t.includes('dinero')) {
+          return { lore: 'Fuga de recursos y chatarra', icon: 'assets/sprites/emojis/habitos/emoji_alcancia.png' };
+        }
+        return { lore: texto, icon: 'assets/sprites/mecanicas/cadena_firme.png' };
+      };
+
+      // Agregar las 2 cadenas con Lore y figuras dinámicas
       await estadoApp.agregarCadena(c1);
       const cad1 = estadoApp.datos.cadenas[estadoApp.datos.cadenas.length - 1];
       if (cad1) {
-        cad1.nombreLore = 'Atadura a la pantalla lumínica';
+        const info1 = obtenerLoreCadena(c1);
+        cad1.nombreLore = info1.lore;
         cad1.accionReal = c1;
-        cad1.icono = 'assets/sprites/emojis/habitos/emoji_celular_alerta.png';
+        cad1.icono = info1.icon;
       }
 
       await estadoApp.agregarCadena(c2);
       const cad2 = estadoApp.datos.cadenas[estadoApp.datos.cadenas.length - 1];
       if (cad2) {
-        cad2.nombreLore = 'Trampa de la inercia y desidia';
+        const info2 = obtenerLoreCadena(c2);
+        cad2.nombreLore = info2.lore;
         cad2.accionReal = c2;
-        cad2.icono = 'assets/sprites/emojis/habitos/emoji_reloj_arena.png';
+        cad2.icono = info2.icon;
       }
 
       estadoApp.datos.perfil.onboardingCompletado = true;

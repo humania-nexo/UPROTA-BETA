@@ -186,13 +186,13 @@ export class VistaTablon {
           </div>
         ` : estado.cadenas.map((c, index) => `
           <div class="cadena-card ${c.estadoPuente === 'tiembla' ? 'tiembla' : ''}" style="display: flex; align-items: center; gap: 10px;">
-            <img src="${this.obtenerIconoDefaultCadena(c)}" alt="Icono" class="emoji-pixel" style="width: 22px; height: 22px; cursor: pointer;" title="Toca para reportar">
-            <div class="senda-main-info" style="flex: 1;">
+            <img src="${this.obtenerIconoDefaultCadena(c)}" alt="Icono" class="emoji-pixel" style="width: 22px; height: 22px; cursor: pointer;" title="Toca para ver o editar">
+            <div class="cadena-main-info" style="flex: 1; cursor: pointer;">
               <span class="senda-nombre">${c.nombreLore || c.nombre}</span>
               ${c.accionReal && c.nombreLore ? `<span style="font-size: 0.72rem; color: #fca5a5; display: block; margin-top: 1px;">⛓️ Mal hábito: ${c.accionReal}</span>` : ''}
               <span class="senda-meta">Días libre: ${c.diasLimpiosConsecutivos || 0}/21 &bull; ${c.estadoPuente === 'tiembla' ? '⚠️ Puente tiembla' : 'Paso firme'}</span>
             </div>
-            <button class="btn-check-item ${c.reportadaHoy ? 'checked' : ''}" data-cadena-idx="${index}">
+            <button class="btn-check-item ${c.reportadaHoy ? 'checked' : ''}" data-cadena-idx="${index}" title="Toca para reporte sincero (Día Limpio o Recaída)">
               ${c.reportadaHoy ? '<img src="assets/sprites/ui/ico_check_ok.png" alt="OK" class="pixel-icon icon-16">' : ''}
             </button>
           </div>
@@ -340,25 +340,36 @@ export class VistaTablon {
       });
     });
 
-    // Clic en Cadena para Reporte Sincero (Limpio vs Recaída)
-    this.contenedor.querySelectorAll('.cadena-card').forEach((card, index) => {
-      card.addEventListener('click', () => {
-        const cadena = estado.cadenas[index];
-        if (cadena) {
-          this.abrirModalReporteCadena(index, cadena);
-        }
-      });
-    });
-
     // Clic en la tarjeta de Senda para abrir Detalle y Configuración
-    this.contenedor.querySelectorAll('.senda-main-info').forEach(info => {
-      info.addEventListener('click', () => {
-        const card = info.closest('.senda-card');
+    this.contenedor.querySelectorAll('.senda-card .senda-main-info, .senda-card > img').forEach(el => {
+      el.addEventListener('click', () => {
+        const card = el.closest('.senda-card');
         const btn = card.querySelector('[data-senda-idx]');
         if (btn) {
           const idx = Number(btn.getAttribute('data-senda-idx'));
           this.abrirModalDetalleSenda(idx, estado.sendas[idx]);
         }
+      });
+    });
+
+    // Clic en la tarjeta de Cadena para abrir Detalle y Configuración (Lore, Real, Figura, Eliminar)
+    this.contenedor.querySelectorAll('.cadena-card .cadena-main-info, .cadena-card > img').forEach(el => {
+      el.addEventListener('click', () => {
+        const card = el.closest('.cadena-card');
+        const btn = card.querySelector('[data-cadena-idx]');
+        if (btn) {
+          const idx = Number(btn.getAttribute('data-cadena-idx'));
+          this.abrirModalDetalleCadena(idx, estado.cadenas[idx]);
+        }
+      });
+    });
+
+    // Clic en botón Check de Cadena para abrir Reporte Sincero (Limpio vs Recaída)
+    this.contenedor.querySelectorAll('.btn-check-item[data-cadena-idx]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = Number(btn.getAttribute('data-cadena-idx'));
+        this.abrirModalReporteCadena(idx, estado.cadenas[idx]);
       });
     });
 
@@ -772,6 +783,114 @@ export class VistaTablon {
         cerrar();
       } catch (e) {
         alert(e.message);
+      }
+    });
+
+    modalContainer.classList.remove('hidden');
+  }
+
+  abrirModalDetalleCadena(idx, cadena) {
+    if (!cadena) return;
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
+    if (!modalContainer || !modalContent) return;
+
+    let iconoSeleccionado = this.obtenerIconoDefaultCadena(cadena);
+
+    modalContent.innerHTML = `
+      <div class="modal-crear-wrap">
+        <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+          <img id="img-preview-cadena" src="${iconoSeleccionado}" alt="Cadena" class="emoji-pixel" style="width: 28px; height: 28px;">
+          <div>
+            <h3 style="color: var(--text-primary); font-size: 1.1rem; margin: 0;">${cadena.nombreLore || cadena.nombre}</h3>
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: #fca5a5; text-transform: uppercase;">
+              Desafío de Ruptura &bull; 21 Días
+            </div>
+          </div>
+        </div>
+
+        <!-- BARRA DE DÍAS LIMPIOS -->
+        <div class="card-yermo" style="background: rgba(0,0,0,0.35); padding: 10px; margin-bottom: 14px;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.78rem; margin-bottom: 4px;">
+            <span>Progreso de Ruptura:</span>
+            <strong style="color: var(--oro-torta-glow);">${cadena.diasLimpiosConsecutivos || 0}/21 Días (${Math.min(100, Math.round(((cadena.diasLimpiosConsecutivos || 0) / 21) * 100))}%)</strong>
+          </div>
+          <div style="background: rgba(0,0,0,0.5); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 6px;">
+            <div style="width: ${Math.min(100, Math.round(((cadena.diasLimpiosConsecutivos || 0) / 21) * 100))}%; background: #22c55e; height: 100%;"></div>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted);">
+            <span>Estado del puente: ${cadena.estadoPuente === 'tiembla' ? '⚠️ Tiembla (Recaída reciente)' : '✅ Firme'}</span>
+            <span>Recaídas históricas: ${cadena.totalRecaidas || 0}</span>
+          </div>
+        </div>
+
+        <!-- FIGURA PIXEL ART -->
+        <div style="margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.3); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <img id="img-mini-cadena-glifo" src="${iconoSeleccionado}" alt="Glifo" class="emoji-pixel" style="width: 22px; height: 22px;">
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Figura de la Cadena</span>
+          </div>
+          <button type="button" id="btn-cambiar-cadena-glifo" class="btn-yermo-secondary" style="padding: 4px 10px; font-size: 0.74rem;">
+            Elegir Figura (200 Emojis)
+          </button>
+        </div>
+
+        <!-- DUALIDAD LORE & VIDA REAL -->
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; color: var(--oro-torta-glow); font-weight: 600;">Bautizo en el Yermo (Lore):</label>
+          <input type="text" id="input-edit-cadena-lore" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);" value="${cadena.nombreLore || cadena.nombre}">
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Mal Hábito en la Vida Real:</label>
+          <input type="text" id="input-edit-cadena-real" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fca5a5; background: var(--bg-surface);" placeholder="Ej: Fumar cigarrillos, refrescos..." value="${cadena.accionReal || cadena.nombre}">
+        </div>
+
+        <div style="display: flex; gap: 8px;">
+          <button id="btn-guardar-cambios-cadena" class="btn-yermo-primary" style="flex: 2; padding: 10px;">
+            Guardar Cambios
+          </button>
+          <button id="btn-eliminar-cadena" class="btn-yermo-secondary" style="flex: 1; padding: 10px; color: #fca5a5; border-color: rgba(239, 68, 68, 0.4);">
+            Desatar Cadena
+          </button>
+        </div>
+      </div>
+    `;
+
+    const cerrar = () => modalContainer.classList.add('hidden');
+    modalContent.querySelector('#btn-cerrar-modal').addEventListener('click', cerrar);
+
+    // Selector de Glifos
+    modalContent.querySelector('#btn-cambiar-cadena-glifo').addEventListener('click', () => {
+      ModalSelectorGlifos.abrir((nuevaRuta) => {
+        iconoSeleccionado = nuevaRuta;
+        modalContent.querySelector('#img-preview-cadena').src = nuevaRuta;
+        modalContent.querySelector('#img-mini-cadena-glifo').src = nuevaRuta;
+      }, iconoSeleccionado);
+    });
+
+    // Guardar Cambios
+    modalContent.querySelector('#btn-guardar-cambios-cadena').addEventListener('click', async () => {
+      const nuevoLore = modalContent.querySelector('#input-edit-cadena-lore').value.trim();
+      const nuevaReal = modalContent.querySelector('#input-edit-cadena-real').value.trim();
+
+      if (nuevoLore || nuevaReal) {
+        cadena.nombreLore = nuevoLore || nuevaReal;
+        cadena.accionReal = nuevaReal || nuevoLore;
+        cadena.nombre = cadena.nombreLore;
+        cadena.icono = iconoSeleccionado;
+        await estadoApp.guardar();
+        cerrar();
+      }
+    });
+
+    // Eliminar / Desatar
+    modalContent.querySelector('#btn-eliminar-cadena').addEventListener('click', async () => {
+      if (confirm(`¿Deseas desatar la cadena "${cadena.nombre}"?`)) {
+        estadoApp.datos.cadenas.splice(idx, 1);
+        await estadoApp.guardar();
+        cerrar();
       }
     });
 
