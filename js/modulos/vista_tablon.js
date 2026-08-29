@@ -8,10 +8,42 @@ import { CadenasEngine } from '../core/cadenas_engine.js';
 import { FarosEngine } from '../core/faros_engine.js';
 import { RefugioMundoEngine } from '../mundo/refugio_engine.js';
 import { ModalInfo } from './modal_info.js';
+import { ModalSelectorGlifos } from '../core/emojis_engine.js';
 
 export class VistaTablon {
   constructor(contenedor) {
     this.contenedor = contenedor;
+  }
+
+  obtenerIconoDefaultSenda(s) {
+    if (s.icono) return s.icono;
+    const n = (s.nombreLore || s.nombre || '').toLowerCase();
+    if (n.includes('trotar') || n.includes('correr') || n.includes('ejercicio') || n.includes('patrullar')) return 'assets/sprites/emojis/habitos/emoji_correr.png';
+    if (n.includes('leer') || n.includes('libro') || n.includes('estudiar') || n.includes('plano')) return 'assets/sprites/emojis/habitos/emoji_pergamino.png';
+    if (n.includes('orar') || n.includes('meditar') || n.includes('gratitud') || n.includes('fuego')) return 'assets/sprites/emojis/habitos/emoji_llama_calma.png';
+    if (n.includes('plato') || n.includes('regar') || n.includes('limpieza') || n.includes('utensilio')) return 'assets/sprites/emojis/habitos/emoji_platos.png';
+    if (n.includes('pesa') || n.includes('gym')) return 'assets/sprites/emojis/habitos/emoji_pesas.png';
+    if (n.includes('agua')) return 'assets/sprites/emojis/habitos/emoji_agua_vaso.png';
+    
+    // Por pilar
+    const pilarMap = {
+      cuerpo: 'assets/sprites/pilares/pilar_cuerpo.png',
+      mente: 'assets/sprites/pilares/pilar_mente.png',
+      espiritu: 'assets/sprites/pilares/pilar_espiritu.png',
+      taller: 'assets/sprites/pilares/pilar_taller.png'
+    };
+    return pilarMap[s.pilar] || 'assets/sprites/mecanicas/mecanica_senda.png';
+  }
+
+  obtenerIconoDefaultCadena(c) {
+    if (c.icono) return c.icono;
+    const n = (c.nombreLore || c.nombre || '').toLowerCase();
+    if (n.includes('celular') || n.includes('telefono') || n.includes('pantalla') || n.includes('redes')) return 'assets/sprites/emojis/habitos/emoji_celular_alerta.png';
+    if (n.includes('fumar') || n.includes('cigarro') || n.includes('vapear') || n.includes('polvo rojo')) return 'assets/sprites/emojis/habitos/emoji_cigarro_apagado.png';
+    if (n.includes('procrastinar') || n.includes('desidia') || n.includes('inercia')) return 'assets/sprites/emojis/habitos/emoji_reloj_arena.png';
+    if (n.includes('azucar') || n.includes('refresco') || n.includes('dulce')) return 'assets/sprites/emojis/habitos/emoji_dulce_procesado.png';
+    if (n.includes('alcohol') || n.includes('bebida') || n.includes('copa')) return 'assets/sprites/emojis/habitos/emoji_copa_licor.png';
+    return 'assets/sprites/mecanicas/cadena_firme.png';
   }
 
   render(estado) {
@@ -106,9 +138,11 @@ export class VistaTablon {
             No hay sendas activas. Crea tu primera senda para fortalecer tu refugio.
           </div>
         ` : estado.sendas.map((s, index) => `
-          <div class="senda-card pilar-${s.pilar}">
-            <div class="senda-main-info">
-              <span class="senda-nombre">${s.nombre}</span>
+          <div class="senda-card pilar-${s.pilar}" style="display: flex; align-items: center; gap: 10px;">
+            <img src="${this.obtenerIconoDefaultSenda(s)}" alt="Icono" class="emoji-pixel" style="width: 22px; height: 22px; cursor: pointer;" title="Toca para ver detalles">
+            <div class="senda-main-info" style="flex: 1;">
+              <span class="senda-nombre">${s.nombreLore || s.nombre}</span>
+              ${s.accionReal && s.nombreLore ? `<span style="font-size: 0.72rem; color: #fed7aa; display: block; margin-top: 1px;">⚙️ Real: ${s.accionReal}</span>` : ''}
               <span class="senda-meta">+1 ${s.pilar.toUpperCase()} &bull; Racha: ${s.rachaActual || 0}d &bull; (${s.diasTotales || 0}/66d)</span>
             </div>
             <button class="btn-check-item ${s.cumplidaHoy ? 'checked' : ''}" data-senda-idx="${index}">
@@ -148,9 +182,11 @@ export class VistaTablon {
             Sin cadenas atadas. Añade un hábito que quieras soltar (21 días continuos).
           </div>
         ` : estado.cadenas.map((c, index) => `
-          <div class="cadena-card ${c.estadoPuente === 'tiembla' ? 'tiembla' : ''}">
-            <div class="senda-main-info">
-              <span class="senda-nombre">${c.nombre}</span>
+          <div class="cadena-card ${c.estadoPuente === 'tiembla' ? 'tiembla' : ''}" style="display: flex; align-items: center; gap: 10px;">
+            <img src="${this.obtenerIconoDefaultCadena(c)}" alt="Icono" class="emoji-pixel" style="width: 22px; height: 22px; cursor: pointer;" title="Toca para reportar">
+            <div class="senda-main-info" style="flex: 1;">
+              <span class="senda-nombre">${c.nombreLore || c.nombre}</span>
+              ${c.accionReal && c.nombreLore ? `<span style="font-size: 0.72rem; color: #fca5a5; display: block; margin-top: 1px;">⛓️ Mal hábito: ${c.accionReal}</span>` : ''}
               <span class="senda-meta">Días libre: ${c.diasLimpiosConsecutivos || 0}/21 &bull; ${c.estadoPuente === 'tiembla' ? '⚠️ Puente tiembla' : 'Paso firme'}</span>
             </div>
             <button class="btn-check-item ${c.reportadaHoy ? 'checked' : ''}" data-cadena-idx="${index}">
@@ -186,8 +222,9 @@ export class VistaTablon {
 
       <div class="faros-list">
         ${infoRefugio.maxFaros === 0 ? `
-          <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.82rem;">
-            🔒 Función no disponible por ahora. Concéntrate en tus primeros pasos.
+          <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.82rem; display: flex; align-items: center; justify-content: center; gap: 6px;">
+            <img src="assets/sprites/ui/ico_candado.png" alt="Bloqueado" class="pixel-icon icon-16">
+            <span>Función no disponible por ahora. Concéntrate en tus primeros pasos.</span>
           </div>
         ` : estado.faros.length === 0 ? `
           <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.84rem;">
@@ -196,7 +233,10 @@ export class VistaTablon {
         ` : estado.faros.map((f, index) => `
           <div class="faro-card">
             <div class="faro-header">
-              <span class="faro-titulo">${f.nombre}</span>
+              <span class="faro-titulo" style="display: flex; align-items: center; gap: 6px;">
+                <img src="${f.icono || 'assets/sprites/mecanicas/faro_encendido.png'}" alt="Faro" class="emoji-pixel">
+                <span>${f.nombre}</span>
+              </span>
               <span class="slots-counter">${f.tipoModalidad === 'tiempo' ? '6 Meses (5%)' : `$${f.montoAcumulado}/$${f.montoMeta}`}</span>
             </div>
             <div class="faro-progreso-barra-wrap">
@@ -216,8 +256,9 @@ export class VistaTablon {
           + Encender Faro (${estado.faros.length}/${infoRefugio.maxFaros})
         </button>
       ` : `
-        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; border-style: dashed;">
-          🔒 <strong>Slots de Faros al tope (${estado.faros.length}/${infoRefugio.maxFaros}):</strong> Mejora tu refugio para habilitar más metas.
+        <div class="card-yermo" style="text-align: center; color: var(--text-muted); font-size: 0.76rem; border-style: dashed; display: flex; align-items: center; justify-content: center; gap: 6px;">
+          <img src="assets/sprites/ui/ico_candado.png" alt="Bloqueado" class="pixel-icon icon-16">
+          <span><strong>Slots de Faros al tope (${estado.faros.length}/${infoRefugio.maxFaros}):</strong> Mejora tu refugio para habilitar más metas.</span>
         </div>
       `}
     `;
@@ -354,23 +395,19 @@ export class VistaTablon {
 
     const progreso66 = Math.min(100, Math.round(((senda.diasTotales || 0) / 66) * 100));
     const tasaFallosPct = Math.round((senda.tasaFallos || 0) * 100);
-
-    const spritePilarMap = {
-      cuerpo: 'assets/sprites/pilares/pilar_cuerpo.png',
-      mente: 'assets/sprites/pilares/pilar_mente.png',
-      espiritu: 'assets/sprites/pilares/pilar_espiritu.png',
-      taller: 'assets/sprites/pilares/pilar_taller.png'
-    };
+    let iconoSeleccionado = this.obtenerIconoDefaultSenda(senda);
 
     modalContent.innerHTML = `
       <div class="modal-crear-wrap">
         <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-          <img src="${spritePilarMap[senda.pilar] || 'assets/sprites/mecanicas/mecanica_senda.png'}" alt="${senda.pilar}" class="pixel-icon icon-24">
-          <h3 style="color: var(--text-primary); font-size: 1.1rem;">${senda.nombre}</h3>
-        </div>
-        <div style="font-size: 0.76rem; font-family: var(--font-mono); color: var(--pilar-${senda.pilar}-light); margin-bottom: 12px; text-transform: uppercase;">
-          Pilar Asignado: +1 ${senda.pilar}
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+          <img id="img-preview-senda" src="${iconoSeleccionado}" alt="Senda" class="emoji-pixel" style="width: 28px; height: 28px;">
+          <div>
+            <h3 style="color: var(--text-primary); font-size: 1.1rem; margin: 0;">${senda.nombreLore || senda.nombre}</h3>
+            <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--pilar-${senda.pilar}-light); text-transform: uppercase;">
+              Pilar: +1 ${senda.pilar}
+            </div>
+          </div>
         </div>
 
         <!-- BARRA DE FORJADO A CIMIENTO (66 DÍAS) -->
@@ -388,24 +425,40 @@ export class VistaTablon {
           </div>
         </div>
 
-        <!-- CONFIGURACIÓN DE FRECUENCIA -->
-        <div style="margin-bottom: 12px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">Nombre del Hábito:</label>
-          <input type="text" id="input-edit-senda-nombre" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);" value="${senda.nombre}">
+        <!-- FIGURA PIXEL ART -->
+        <div style="margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.3); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <img id="img-mini-glifo" src="${iconoSeleccionado}" alt="Glifo" class="emoji-pixel" style="width: 22px; height: 22px;">
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Figura de la Senda</span>
+          </div>
+          <button type="button" id="btn-cambiar-glifo" class="btn-yermo-secondary" style="padding: 4px 10px; font-size: 0.74rem;">
+            Elegir Figura (200 Emojis)
+          </button>
         </div>
 
-        <div style="margin-bottom: 12px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">Frecuencia Objetivo:</label>
-          <select id="select-edit-frecuencia" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
+        <!-- DUALIDAD LORE & VIDA REAL -->
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; color: var(--oro-torta-glow); font-weight: 600;">Bautizo en el Yermo (Lore):</label>
+          <input type="text" id="input-edit-senda-lore" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);" value="${senda.nombreLore || senda.nombre}">
+        </div>
+
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Hábito en la Vida Real (Acción):</label>
+          <input type="text" id="input-edit-senda-real" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fed7aa; background: var(--bg-surface);" placeholder="Ej: Lavar platos, trotar 30 min..." value="${senda.accionReal || senda.nombre}">
+        </div>
+
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Frecuencia Objetivo:</label>
+          <select id="select-edit-frecuencia" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);">
             <option value="diario" ${senda.tipoFrecuencia === 'diario' ? 'selected' : ''}>Diario (Todos los días)</option>
             <option value="dias_fijos" ${senda.tipoFrecuencia === 'dias_fijos' ? 'selected' : ''}>Días Fijos de la Semana (L, M, V...)</option>
             <option value="veces_semana" ${senda.tipoFrecuencia === 'veces_semana' ? 'selected' : ''}>Veces por Semana Flexible (Ej: 3x/sem)</option>
           </select>
         </div>
 
-        <div style="margin-bottom: 12px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">Horario Sugerido / Momento del Día:</label>
-          <select id="select-edit-horario" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Horario Sugerido:</label>
+          <select id="select-edit-horario" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);">
             <option value="cualquiera" ${senda.horarioObjetivo === 'cualquiera' ? 'selected' : ''}>Cualquier momento</option>
             <option value="manana" ${senda.horarioObjetivo === 'manana' ? 'selected' : ''}>Mañana (Al despertar)</option>
             <option value="tarde" ${senda.horarioObjetivo === 'tarde' ? 'selected' : ''}>Tarde (Media jornada)</option>
@@ -413,9 +466,9 @@ export class VistaTablon {
           </select>
         </div>
 
-        <div style="margin-bottom: 16px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">Nota / Disparador del Hábito:</label>
-          <input type="text" id="input-edit-senda-nota" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);" placeholder="Ej: Después del café de la mañana..." value="${senda.notaMotivacion || ''}">
+        <div style="margin-bottom: 14px;">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Nota / Disparador del Hábito:</label>
+          <input type="text" id="input-edit-senda-nota" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);" placeholder="Ej: Después del café de la mañana..." value="${senda.notaMotivacion || ''}">
         </div>
 
         <div style="display: flex; gap: 8px;">
@@ -432,14 +485,27 @@ export class VistaTablon {
     const cerrar = () => modalContainer.classList.add('hidden');
     modalContent.querySelector('#btn-cerrar-modal').addEventListener('click', cerrar);
 
+    // Abrir Selector de Glifos
+    modalContent.querySelector('#btn-cambiar-glifo').addEventListener('click', () => {
+      ModalSelectorGlifos.abrir((nuevaRuta) => {
+        iconoSeleccionado = nuevaRuta;
+        modalContent.querySelector('#img-preview-senda').src = nuevaRuta;
+        modalContent.querySelector('#img-mini-glifo').src = nuevaRuta;
+      }, iconoSeleccionado);
+    });
+
     modalContent.querySelector('#btn-guardar-cambios-senda').addEventListener('click', async () => {
-      const nuevoNombre = modalContent.querySelector('#input-edit-senda-nombre').value.trim();
+      const nuevoLore = modalContent.querySelector('#input-edit-senda-lore').value.trim();
+      const nuevaReal = modalContent.querySelector('#input-edit-senda-real').value.trim();
       const nuevaFrec = modalContent.querySelector('#select-edit-frecuencia').value;
       const nuevoHorario = modalContent.querySelector('#select-edit-horario').value;
       const nuevaNota = modalContent.querySelector('#input-edit-senda-nota').value.trim();
 
-      if (nuevoNombre) {
-        senda.nombre = nuevoNombre;
+      if (nuevoLore || nuevaReal) {
+        senda.nombreLore = nuevoLore || nuevaReal;
+        senda.accionReal = nuevaReal || nuevoLore;
+        senda.nombre = senda.nombreLore;
+        senda.icono = iconoSeleccionado;
         senda.tipoFrecuencia = nuevaFrec;
         senda.horarioObjetivo = nuevoHorario;
         senda.notaMotivacion = nuevaNota;
@@ -464,29 +530,50 @@ export class VistaTablon {
     const modalContent = document.getElementById('modal-content');
     if (!modalContainer || !modalContent) return;
 
+    let iconoSeleccionado = 'assets/sprites/emojis/habitos/emoji_correr.png';
+
     modalContent.innerHTML = `
       <div class="modal-crear-wrap">
         <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
-        <h3 style="margin-bottom: 12px; color: var(--text-primary);">🏃 Trazar Nueva Senda</h3>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+          <img src="assets/sprites/mecanicas/mecanica_senda.png" alt="Senda" class="pixel-icon icon-20">
+          <h3 style="margin: 0; color: var(--text-primary);">Trazar Nueva Senda</h3>
+        </div>
         
-        <div style="margin-bottom: 10px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">Nombre del Hábito:</label>
-          <input type="text" id="input-senda-nombre" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);" placeholder="Ej: Correr 20 min, Leer 10 páginas, Orar...">
+        <!-- FIGURA PIXEL ART -->
+        <div style="margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.3); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <img id="img-crear-glifo" src="${iconoSeleccionado}" alt="Glifo" class="emoji-pixel" style="width: 24px; height: 24px;">
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Figura Asignada</span>
+          </div>
+          <button type="button" id="btn-crear-cambiar-glifo" class="btn-yermo-secondary" style="padding: 4px 10px; font-size: 0.74rem;">
+            Elegir Figura (200 Emojis)
+          </button>
         </div>
 
         <div style="margin-bottom: 10px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">Asignar a 1 Pilar Absoluto:</label>
-          <select id="select-senda-pilar" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
-            <option value="cuerpo">🏃 Cuerpo (Salud, Movimiento, Deporte)</option>
-            <option value="mente">📜 Mente (Lectura, Estudio, Concentración)</option>
-            <option value="espiritu">🔥 Espíritu (Vida interior, Calma, Oración)</option>
-            <option value="taller">🛠️ Taller (Trabajo manual, Reparar, Dibujar)</option>
+          <label style="font-size: 0.78rem; color: var(--oro-torta-glow); font-weight: 600;">Bautizo en el Yermo (Lore):</label>
+          <input type="text" id="input-senda-lore" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);" placeholder="Ej: Purificar utensilios del refugio...">
+        </div>
+
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Acción en la Vida Real (Hábito Común):</label>
+          <input type="text" id="input-senda-real" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fed7aa; background: var(--bg-surface);" placeholder="Ej: Lavar los platos después de cenar...">
+        </div>
+
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Asignar a 1 Pilar Absoluto:</label>
+          <select id="select-senda-pilar" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);">
+            <option value="cuerpo">Cuerpo (Salud, Movimiento, Deporte)</option>
+            <option value="mente">Mente (Lectura, Estudio, Concentración)</option>
+            <option value="espiritu">Espíritu (Vida interior, Calma, Oración)</option>
+            <option value="taller">Taller (Trabajo manual, Reparar, Cuidar)</option>
           </select>
         </div>
 
         <div style="margin-bottom: 10px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">Frecuencia / Días de Ejecución:</label>
-          <select id="select-senda-frecuencia" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Frecuencia Objetivo:</label>
+          <select id="select-senda-frecuencia" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);">
             <option value="diario">Diario (7 días a la semana)</option>
             <option value="dias_fijos">Días Fijos de la Semana (L-M-V...)</option>
             <option value="veces_semana">Veces por Semana Flexible (Ej: 3x/sem)</option>
@@ -494,8 +581,8 @@ export class VistaTablon {
         </div>
 
         <div style="margin-bottom: 14px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">Horario / Momento del Día:</label>
-          <select id="select-senda-horario" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Horario Sugerido:</label>
+          <select id="select-senda-horario" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);">
             <option value="cualquiera">Cualquier momento del día</option>
             <option value="manana">Mañana (Al despertar)</option>
             <option value="tarde">Tarde (Media jornada)</option>
@@ -512,18 +599,30 @@ export class VistaTablon {
     const cerrar = () => modalContainer.classList.add('hidden');
     modalContent.querySelector('#btn-cerrar-modal').addEventListener('click', cerrar);
 
+    modalContent.querySelector('#btn-crear-cambiar-glifo').addEventListener('click', () => {
+      ModalSelectorGlifos.abrir((nuevaRuta) => {
+        iconoSeleccionado = nuevaRuta;
+        modalContent.querySelector('#img-crear-glifo').src = nuevaRuta;
+      }, iconoSeleccionado);
+    });
+
     modalContent.querySelector('#btn-guardar-senda').addEventListener('click', async () => {
-      const nombre = modalContent.querySelector('#input-senda-nombre').value.trim();
+      const lore = modalContent.querySelector('#input-senda-lore').value.trim();
+      const real = modalContent.querySelector('#input-senda-real').value.trim();
       const pilar = modalContent.querySelector('#select-senda-pilar').value;
       const frecuencia = modalContent.querySelector('#select-senda-frecuencia').value;
       const horario = modalContent.querySelector('#select-senda-horario').value;
-      if (!nombre) return;
+      
+      const nombreFinal = lore || real;
+      if (!nombreFinal) return;
 
       try {
-        await estadoApp.agregarSenda(nombre, pilar);
-        // Asignar parámetros extra
+        await estadoApp.agregarSenda(nombreFinal, pilar);
         const nueva = estadoApp.datos.sendas[estadoApp.datos.sendas.length - 1];
         if (nueva) {
+          nueva.nombreLore = lore || real;
+          nueva.accionReal = real || lore;
+          nueva.icono = iconoSeleccionado;
           nueva.tipoFrecuencia = frecuencia;
           nueva.horarioObjetivo = horario;
           await estadoApp.guardar();
@@ -542,14 +641,35 @@ export class VistaTablon {
     const modalContent = document.getElementById('modal-content');
     if (!modalContainer || !modalContent) return;
 
+    let iconoSeleccionado = 'assets/sprites/emojis/habitos/emoji_cigarro_apagado.png';
+
     modalContent.innerHTML = `
       <div class="modal-crear-wrap">
         <button class="modal-close-btn" id="btn-cerrar-modal">&times;</button>
-        <h3 style="margin-bottom: 12px; color: var(--text-primary);">⛓️ Atar Nueva Cadena (Mal Hábito)</h3>
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+          <img src="assets/sprites/mecanicas/cadena_firme.png" alt="Cadena" class="pixel-icon icon-20">
+          <h3 style="margin: 0; color: var(--text-primary);">Atar Nueva Cadena (21 Días)</h3>
+        </div>
         
+        <!-- FIGURA PIXEL ART -->
+        <div style="margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.3); padding: 8px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <img id="img-crear-cadena-glifo" src="${iconoSeleccionado}" alt="Glifo" class="emoji-pixel" style="width: 24px; height: 24px;">
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Figura de la Cadena</span>
+          </div>
+          <button type="button" id="btn-cadena-cambiar-glifo" class="btn-yermo-secondary" style="padding: 4px 10px; font-size: 0.74rem;">
+            Elegir Figura (200 Emojis)
+          </button>
+        </div>
+
+        <div style="margin-bottom: 10px;">
+          <label style="font-size: 0.78rem; color: var(--oro-torta-glow); font-weight: 600;">Bautizo en el Yermo (Lore):</label>
+          <input type="text" id="input-cadena-lore" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fff; background: var(--bg-surface);" placeholder="Ej: Inhalar polvo rojo, atadura al cristal...">
+        </div>
+
         <div style="margin-bottom: 14px;">
-          <label style="font-size: 0.8rem; color: var(--text-muted);">¿Qué hábito quieres romper (21 días continuos)?:</label>
-          <input type="text" id="input-cadena-nombre" class="card-yermo" style="width: 100%; margin-top: 4px; padding: 8px; color: #fff; background: var(--bg-surface);" placeholder="Ej: Fumar, Refresco con azúcar, Scroll infinito...">
+          <label style="font-size: 0.78rem; color: var(--text-muted);">Mal Hábito en la Vida Real:</label>
+          <input type="text" id="input-cadena-real" class="card-yermo" style="width: 100%; margin-top: 2px; padding: 6px 8px; color: #fca5a5; background: var(--bg-surface);" placeholder="Ej: Fumar cigarrillos, desvelo con celular...">
         </div>
 
         <button id="btn-guardar-cadena" class="btn-yermo-primary" style="width: 100%; padding: 12px;">
@@ -561,12 +681,28 @@ export class VistaTablon {
     const cerrar = () => modalContainer.classList.add('hidden');
     modalContent.querySelector('#btn-cerrar-modal').addEventListener('click', cerrar);
 
+    modalContent.querySelector('#btn-cadena-cambiar-glifo').addEventListener('click', () => {
+      ModalSelectorGlifos.abrir((nuevaRuta) => {
+        iconoSeleccionado = nuevaRuta;
+        modalContent.querySelector('#img-crear-cadena-glifo').src = nuevaRuta;
+      }, iconoSeleccionado);
+    });
+
     modalContent.querySelector('#btn-guardar-cadena').addEventListener('click', async () => {
-      const nombre = modalContent.querySelector('#input-cadena-nombre').value.trim();
-      if (!nombre) return;
+      const lore = modalContent.querySelector('#input-cadena-lore').value.trim();
+      const real = modalContent.querySelector('#input-cadena-real').value.trim();
+      const nombreFinal = lore || real;
+      if (!nombreFinal) return;
 
       try {
-        await estadoApp.agregarCadena(nombre);
+        await estadoApp.agregarCadena(nombreFinal);
+        const nueva = estadoApp.datos.cadenas[estadoApp.datos.cadenas.length - 1];
+        if (nueva) {
+          nueva.nombreLore = lore || real;
+          nueva.accionReal = real || lore;
+          nueva.icono = iconoSeleccionado;
+          await estadoApp.guardar();
+        }
         cerrar();
       } catch (e) {
         alert(e.message);

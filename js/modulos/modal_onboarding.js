@@ -379,14 +379,40 @@ export class ModalOnboarding {
       const c1 = modalContent.querySelector('#input-cadena-1').value.trim() || 'Desvelarme con el teléfono en la cama';
       const c2 = modalContent.querySelector('#input-cadena-2').value.trim() || 'Procrastinar y aplazar tareas difíciles';
 
-      // Agregar las 4 sendas con su frecuencia personalizada
+      const mapaLoreSendas = {
+        cuerpo: { lore: 'Patrullar perímetro y forjar tracción', icon: 'assets/sprites/emojis/habitos/emoji_correr.png' },
+        mente: { lore: 'Decodificar planos de supervivencia', icon: 'assets/sprites/emojis/habitos/emoji_pergamino.png' },
+        espiritu: { lore: 'Cuidar el fuego interior y la calma', icon: 'assets/sprites/emojis/habitos/emoji_llama_calma.png' },
+        taller: { lore: 'Purificar utensilios y sostener refugio', icon: 'assets/sprites/emojis/habitos/emoji_platos.png' }
+      };
+
+      // Agregar las 4 sendas con su frecuencia y dualidad Lore/Real
       for (const s of sendasConfig) {
         await estadoApp.agregarSenda(s.nombre, s.pilar, s.frecuencia || 'diario');
+        const nueva = estadoApp.datos.sendas[estadoApp.datos.sendas.length - 1];
+        if (nueva) {
+          nueva.nombreLore = mapaLoreSendas[s.pilar]?.lore || s.nombre;
+          nueva.accionReal = s.nombre;
+          nueva.icono = mapaLoreSendas[s.pilar]?.icon || 'assets/sprites/mecanicas/mecanica_senda.png';
+        }
       }
 
-      // Agregar las 2 cadenas
+      // Agregar las 2 cadenas con Lore y figuras
       await estadoApp.agregarCadena(c1);
+      const cad1 = estadoApp.datos.cadenas[estadoApp.datos.cadenas.length - 1];
+      if (cad1) {
+        cad1.nombreLore = 'Atadura a la pantalla lumínica';
+        cad1.accionReal = c1;
+        cad1.icono = 'assets/sprites/emojis/habitos/emoji_celular_alerta.png';
+      }
+
       await estadoApp.agregarCadena(c2);
+      const cad2 = estadoApp.datos.cadenas[estadoApp.datos.cadenas.length - 1];
+      if (cad2) {
+        cad2.nombreLore = 'Trampa de la inercia y desidia';
+        cad2.accionReal = c2;
+        cad2.icono = 'assets/sprites/emojis/habitos/emoji_reloj_arena.png';
+      }
 
       estadoApp.datos.perfil.onboardingCompletado = true;
       await estadoApp.guardar();
