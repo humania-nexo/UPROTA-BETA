@@ -3,6 +3,7 @@
  */
 
 import { estadoApp } from '../core/estado.js';
+import { ModalInfo } from './modal_info.js';
 
 export class VistaMisiones {
   constructor(contenedor) {
@@ -20,6 +21,9 @@ export class VistaMisiones {
           <h2 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin: 0;">
             Expediciones del Yermo
           </h2>
+          <button class="btn-info-glifo" data-info-key="expediciones" title="Información vida real" style="background:none;border:none;cursor:pointer;padding:0;">
+            <img src="assets/sprites/ui/ico_info.png" alt="Info" class="pixel-icon icon-16">
+          </button>
         </div>
         <span style="font-size: 0.76rem; color: var(--text-muted);">
           1 misión por día real &bull; El Prota explora y regresa con los resultados al amanecer
@@ -143,6 +147,15 @@ export class VistaMisiones {
         };
 
         await estadoApp.guardar();
+      });
+    });
+
+    // Botones de Información ℹ️
+    this.contenedor.querySelectorAll('.btn-info-glifo').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const key = btn.getAttribute('data-info-key');
+        ModalInfo.abrir(key);
       });
     });
   }

@@ -23,6 +23,16 @@ export const INFO_VIDA_REAL = {
     titulo: 'Cadenas y el Puente que Tiembla (21 Días)',
     porQueJuego: 'Rompe malos hábitos en 21 días continuos sin castigo destructivo por 1-2 recaídas aisladas.',
     vidaReal: 'Dejar un mal hábito (azúcar, fumar, procrastinar) rara vez es un camino perfecto. Tratar una recaída aislada como un "temblor en el puente" en vez de una catástrofe evita el efecto de abandono total y refuerza el compromiso al día siguiente.'
+  },
+  sendas: {
+    titulo: 'Sendas Activas y el Forjado de Cimientos (66 Días)',
+    porQueJuego: 'Sostienen la energía de tu refugio y forjan cimientos inamovibles tras 66 días de práctica.',
+    vidaReal: 'La neurociencia (University College London) demuestra que un hábito positivo promedio tarda 66 días en volverse automático. El sistema permite frecuencias flexibles (2x, 3x, 5x o diario) para adaptarse a la vida real sin la frustración de rachas rígidas.'
+  },
+  expediciones: {
+    titulo: 'Expediciones y Misiones Asíncronas (1 por Día)',
+    porQueJuego: 'Despachas una misión hoy y el Prota regresa con el botín y la bitácora al amanecer del día siguiente.',
+    vidaReal: 'Diseñado contra la adicción a pantallas y dopamina instantánea. En lugar de mantenerte horas atrapado en la app, UPROTA fomenta que cierres el teléfono, atiendas tu día real y regreses mañana a revisar el fruto de tu constancia.'
   }
 };
 

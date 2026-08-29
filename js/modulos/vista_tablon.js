@@ -128,6 +128,9 @@ export class VistaTablon {
         <div class="seccion-tablon-titulo">
           <img src="assets/sprites/mecanicas/mecanica_senda.png" alt="Sendas" class="pixel-icon icon-20">
           <span>Sendas Activas</span>
+          <button class="btn-info-glifo" data-info-key="sendas" title="Información vida real" style="background:none;border:none;cursor:pointer;padding:0;">
+            <img src="assets/sprites/ui/ico_info.png" alt="Info" class="pixel-icon icon-16">
+          </button>
         </div>
         <span class="slots-counter">${estado.sendas.length}/${infoRefugio.maxSendas} Slots</span>
       </div>
