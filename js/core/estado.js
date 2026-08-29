@@ -70,6 +70,8 @@ export class EstadoApp {
       misionDespachadaHoy: null,        // Misión enviada hoy (en curso)
       informeMisionPendiente: null,     // Informe de expedición listo para ver
       misionRealizadaHoy: false,
+      bitacoraPendienteAyer: false,
+      fechaUltimaBitacora: new Date().toISOString().split('T')[0],
       ultimaFechaAcceso: new Date().toISOString().split('T')[0]
     };
   }
@@ -92,6 +94,9 @@ export class EstadoApp {
   verificarCambioDeDia() {
     const hoy = new Date().toISOString().split('T')[0];
     if (this.datos.ultimaFechaAcceso !== hoy) {
+      if (this.datos.perfil.onboardingCompletado) {
+        this.datos.bitacoraPendienteAyer = true;
+      }
       this.datos.ultimaFechaAcceso = hoy;
       this.datos.perfil.diaSupervivencia = (this.datos.perfil.diaSupervivencia || 1) + 1;
       this.datos.sabiduriaVistoHoy = false;

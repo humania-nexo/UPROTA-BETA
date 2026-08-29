@@ -8,7 +8,7 @@ import { VistaRefugio } from './modulos/vista_refugio.js';
 import { VistaMisiones } from './modulos/vista_misiones.js';
 import { VistaComunicacion } from './modulos/vista_comunicacion.js';
 import { VistaHogar } from './modulos/vista_hogar.js';
-import { ModalSabiduria, TourGuiado } from './modulos/modal_sabiduria.js';
+import { ModalSabiduria, TourGuiado, ModalBitacoraMatutina } from './modulos/modal_sabiduria.js';
 import { ModalOnboarding } from './modulos/modal_onboarding.js';
 
 class App {
@@ -39,13 +39,16 @@ class App {
     await estadoApp.inicializar();
     estadoApp.suscribir((estado) => this.actualizarVistas(estado));
 
-    // Abrir Onboarding si es la primera vez
+    // 1. Abrir Onboarding si es la primera vez
     ModalOnboarding.mostrarSiEsNecesario();
 
-    // Abrir pop-up de Sabiduría Diaria si corresponde
+    // 2. Abrir Bitácora Matutina si cambió de día real
+    ModalBitacoraMatutina.mostrarSiCorresponde();
+
+    // 3. Abrir pop-up de Sabiduría Diaria si corresponde
     ModalSabiduria.mostrarSiCorresponde();
 
-    // Verificar si corresponde el Tour Guiado
+    // 4. Verificar si corresponde el Tour Guiado
     TourGuiado.verificarYIniciar();
 
     // Registrar Service Worker
