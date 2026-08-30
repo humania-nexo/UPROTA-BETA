@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Motor de Cronologia Maestra de NPCs y Arcos Narrativos (Dias 1 a 90+)
  * Basado en: docs/diseno/UPROTA_Cronologia_Arcos_NPCs.md
  */
@@ -63,10 +63,10 @@ export class CronologiaEngine {
       estado.bonificaciones.reduccionInfeccionLluvia = 0.25;
       eventosActivados.push({
         id: 'evento_dona_concha_visita',
-        titulo: 'El Saber de Dona Concha',
-        npc: 'Dona Concha',
-        icono: 'assets/sprites/npcs/don_chui_neutral.png',
-        desc: 'Dona Concha te ensena a clasificar hierbas y te entrega el Herbario del Valle (-25% riesgo de infeccion).'
+        titulo: 'El Saber de Doña Concha',
+        npc: 'Doña Concha',
+        icono: 'assets/sprites/npcs/npc_dona_concha_idle.png',
+        desc: 'Doña Concha te enseña a clasificar hierbas y te entrega el Herbario del Valle (-25% riesgo de infección).'
       });
     }
 
@@ -83,7 +83,7 @@ export class CronologiaEngine {
         id: 'evento_valeria_singer',
         titulo: 'La Aguja del Yermo: Valeria',
         npc: 'Valeria',
-        icono: 'assets/sprites/npcs/don_chui_neutral.png',
+        icono: 'assets/sprites/npcs/npc_valeria_costurera_idle.png',
         desc: 'Valeria repara tu carga. Tu capacidad sube a 12 kg y 10 ranuras con el Bolso Reforzado.'
       });
     }
@@ -94,10 +94,10 @@ export class CronologiaEngine {
       estado.npcsConocidos.push('lutier_anciano');
       eventosActivados.push({
         id: 'evento_lutier_visita',
-        titulo: 'La Melodia Perdida: El Lutier',
+        titulo: 'La Melodía Perdida: El Lutier',
         npc: 'El Lutier',
-        icono: 'assets/sprites/npcs/don_chui_neutral.png',
-        desc: 'El Lutier busca madera curada para su orquesta. La musica puede traer gran moral al refugio.'
+        icono: 'assets/sprites/npcs/npc_lutier_anciano_idle.png',
+        desc: 'El Lutier busca madera curada para su orquesta. La música puede traer gran moral al refugio.'
       });
     }
 
@@ -109,10 +109,10 @@ export class CronologiaEngine {
       estado.bonificaciones.recuperacionFisicaPilarCuerpo = 0.10;
       eventosActivados.push({
         id: 'evento_katia_mensajera',
-        titulo: 'La Senda Rapida: Katia',
+        titulo: 'La Senda Rápida: Katia',
         npc: 'Katia',
-        icono: 'assets/sprites/npcs/don_chui_neutral.png',
-        desc: 'Katia evalua tu condicion. Si mantienes el Pilar Cuerpo activo, tu recuperacion mejora un +10%.'
+        icono: 'assets/sprites/npcs/npc_katia_mensajera_idle.png',
+        desc: 'Katia evalúa tu condición. Si mantienes el Pilar Cuerpo activo, tu recuperación mejora un +10%.'
       });
     }
 
@@ -121,10 +121,10 @@ export class CronologiaEngine {
       estado.manualesDonChui.push('tomo_3');
       eventosActivados.push({
         id: 'evento_don_chui_tomo3',
-        titulo: 'Maestria del Yermo: Tomo III',
+        titulo: 'Maestría del Yermo: Tomo III',
         npc: 'Don Chui',
         icono: 'assets/sprites/npcs/don_chui_hablando.png',
-        desc: 'Don Chui te entrega el Tomo III: Horno cob de alta masa termica y lejia desinfectante.'
+        desc: 'Don Chui te entrega el Tomo III: Horno cob de alta masa térmica y lejía desinfectante.'
       });
     }
 
@@ -140,7 +140,7 @@ export class CronologiaEngine {
         titulo: 'El Legado de Don Chui',
         npc: 'Don Chui',
         icono: 'assets/sprites/npcs/don_chui_hablando.png',
-        desc: 'Don Chui te entrega su Biblia (+1 Espiritu). Se habilita la Radio de Onda Corta en 104.5 MHz.'
+        desc: 'Don Chui te entrega su Biblia (+1 Espíritu). Se habilita la Radio de Onda Corta en 104.5 MHz.'
       });
     }
 
@@ -152,8 +152,8 @@ export class CronologiaEngine {
         id: 'evento_elena_arte_guerra',
         titulo: 'La Estrategia del Risco: Elena',
         npc: 'Elena (Sierra-Uno)',
-        icono: 'assets/sprites/npcs/don_chui_neutral.png',
-        desc: 'Elena comparte \"El Arte de la Guerra\" de Sun Tzu (+1 Mente). Se habilita la red WAN local.'
+        icono: 'assets/sprites/npcs/npc_elena_radio_idle.png',
+        desc: 'Elena comparte "El Arte de la Guerra" de Sun Tzu (+1 Mente). Se habilita la red WAN local.'
       });
     }
 
@@ -163,10 +163,10 @@ export class CronologiaEngine {
       estado.eventosCumplidos.push('vivero_silenciado');
       eventosActivados.push({
         id: 'vivero_silenciado',
-        titulo: 'El Vivero Silenciado: Bebe Fitolantro',
-        npc: 'Misterio Ecologico',
-        icono: 'assets/sprites/npcs/don_chui_neutral.png',
-        desc: 'Encuentras un campamento quemado y un Bebe Fitolantro de 40 cm llorando entre las raices. Comienza la Simbiosis.'
+        titulo: 'El Vivero Silenciado: Bebé Fitolantro',
+        npc: 'Misterio Ecológico',
+        icono: 'assets/sprites/npcs/npc_bebe_fitolantro.png',
+        desc: 'Encuentras un campamento quemado y un Bebé Fitolantro de 40 cm llorando entre las raíces. Comienza la Simbiosis.'
       });
     }
 

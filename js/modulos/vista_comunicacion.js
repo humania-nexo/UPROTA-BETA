@@ -60,9 +60,11 @@ export class VistaComunicacion {
         <div class="card-yermo" style="background: #171513; border: 1px solid var(--border-strong);">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border-subtle);">
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="font-size: 1.2rem;">📻</span>
+              <span class="sprite-radio-onda-anim"></span>
               <div>
-                <div style="font-family: var(--font-mono); color: var(--oro-torta-glow); font-size: 1.05rem; font-weight: bold;">104.5 MHz YERMO LIBRE</div>
+                <div style="font-family: var(--font-mono); color: var(--oro-torta-glow); font-size: 1.05rem; font-weight: bold; display: flex; align-items: center; gap: 6px;">
+                  104.5 MHz YERMO LIBRE
+                </div>
                 <div style="font-size: 0.7rem; color: #a8a29e;">Sierra-Uno / Estación del Risco</div>
               </div>
             </div>

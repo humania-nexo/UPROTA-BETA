@@ -54,3 +54,37 @@
 | `[SFX: Silbido muy suave de viento constante. Zumbido rítmico de generador de pedaleo a baja velocidad].` | **LOCUTORA:**<br>*(Voz en susurro firme, muy íntima).*<br>Son las tres y media de la madrugada.<br><br>Esta transmisión corta es para el que esta noche no puede dormir porque le pesan los pensamientos. Para el que hoy dio un paso en falso, o para el que siente que las fuerzas no le alcanzan para volver a levantar el refugio mañana. |
 | `[PAUSA-HAB: 3 segundos de respiración serena y crujido de madera].` | **LOCUTORA:**<br>Escúchame bien: una recaída no es el fin del camino. Es solo un recordatorio de que somos de carne y hueso. No te castigues con pensamientos duros en la oscuridad; de noche todos los problemas parecen el doble de grandes.<br><br>Respira hondo. Toma un sorbo de agua pura. Mañana el sol vuelve a salir para todos por igual, y la tierra te va a estar esperando para que vuelvas a empezar con las manos limpias.<br><br>Acá voy a dejar la portadora abierta un ratito más para hacerte compañía. No estás solo. Descansa. |
 | `[SFX: La voz calla. Queda la portadora zumbando suave y cálida durante 10 segundos antes de cortar].` | |
+
+---
+
+### 🎙️ GUION 4: "Aviso Meteorológico de Urgencia — Viento de Ceniza"
+* **Emisor:** Elena (Sierra-Uno, operadora de radio del Risco).
+* **Duración:** ~1:30 minutos.
+* **Propósito:** Alertar al valle sobre ráfagas con polvo volcánico y ceniza.
+
+| Efectos de Sonido / Entorno | Guion y Acotaciones del Locutor |
+|---|---|
+| `[SFX: Tono de alerta breve... ráfagas de viento contra la torre].` | **ELENA:**<br>Sierra-Uno con boletín meteorológico de urgencia para las próximas 36 horas.<br><br>El barómetro del Risco está cayendo en picada. Se aproxima una vaguada seca desde el norte con viento de ceniza. Si tienen huertos descubiertos o semilleros en cubetas, tápenlos de inmediato con esteras de paja o costales húmedos.<br><br>Cierren las compuertas de las alacenas y aseguren los filtros de agua. El polvo fino colmata los lechos de carbón si los dejan abiertos al aire. Quien tenga que salir a trotar o a recoger leña mañana temprano, use un pañuelo de algodón humedecido sobre la boca y la nariz. Cuiden los pulmones; en el Yermo no hay respiradores de repuesto. Sierra-Uno fuera.<br><br>`[SFX: 'Beep' final... estática modulada].` |
+
+---
+
+### 🎙️ GUION 5: "Cápsula Técnica — Mantenimiento del Colector Pluvial"
+* **Emisor:** Elena & Don Chui.
+* **Duración:** ~2:10 minutos.
+* **Propósito:** Enseñar a limpiar canaletas y operar la trampa first-flush.
+
+| Efectos de Sonido / Entorno | Guion y Acotaciones del Locutor |
+|---|---|
+| `[SFX: Zumbido de sintonía... chasquido de micrófono].` | **ELENA:**<br>104.5 MHz en la escala. Hoy Don Chui nos recuerda una regla sagrada de fontanería rústica:<br><br>**DON CHUI:**<br>Muchachos, no se confíen de las primeras gotas. El techo junta caca de pájaro, tizne y polvo durante semanas de sequía. Si no limpian la canaleta de lámina y no vacían el tubo de descarte previo —el first-flush—, toda esa porquería se les va directo al tambor de doscientos litros y les pudre la reserva del mes. Cinco minutos de escoba de varas en el tejado les salvan cien litros de agua limpia.<br><br>**ELENA:**<br>Escucharon al maestro. La prevención no cuesta nada; la pereza se paga con disentería. Revisen sus codos de PVC y sus mallas mosquiteras antes de que oscurezca. Sierra-Uno fuera.<br><br>`[SFX: Doble 'click' de cierre].` |
+
+---
+
+### 🎙️ GUION 6: "Buenas Noches desde el Risco — El Fuego Interior"
+* **Emisor:** Elena (Sierra-Uno).
+* **Duración:** ~2:00 minutos.
+* **Propósito:** Contención emocional nocturna y valoración del esfuerzo diario.
+
+| Efectos de Sonido / Entorno | Guion y Acotaciones del Locutor |
+|---|---|
+| `[SFX: Estática cálida... sonido lejano de viento de montaña].` | **ELENA:**<br>Son las once de la noche en el valle. Habla Elena desde la cima del Risco.<br><br>A esta hora las luces de los fogones empiezan a apagarse en la quebrada. Sé que hay noches en que el cansancio pesa el doble. Noches en que miran el techo de chapa y se preguntan cuánto más habrá que remar contra la corriente.<br><br>Solo quiero recordarles algo: cada clavo que enderezaron hoy, cada gota de agua que hirvieron, cada paso que dieron con la carga al hombro, es una victoria contra el caos. El mundo viejo no va a volver, pero la dignidad con la que nos levantamos mañana depende enteramente de nosotros.<br><br>Dejen la brasa bien tapada con ceniza para que guarde calor. Descansen el cuerpo y serenen la mente. Mañana volvemos a empezar. Buenas noches a todos en el Yermo... Sierra-Uno fuera.<br><br>`[SFX: Tono de cierre... silencio nocturno].` |
+

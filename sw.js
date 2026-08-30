@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v1.8';
+const CACHE_NAME = 'uprota-cache-v1.9';
 const ASSETS = [
   './',
   './index.html',
@@ -14,6 +14,16 @@ const ASSETS = [
   './css/tablon.css',
   './css/refugio.css',
   './css/popups.css',
+  './assets/sprites/ui/sprite_radio_onda_frame1.png',
+  './assets/sprites/ui/sprite_radio_onda_frame2.png',
+  './assets/sprites/npcs/npc_lutier_anciano_idle.png',
+  './assets/sprites/npcs/npc_el_tuerto_idle.png',
+  './assets/sprites/npcs/npc_dona_concha_idle.png',
+  './assets/sprites/npcs/npc_valeria_costurera_idle.png',
+  './assets/sprites/npcs/npc_katia_mensajera_idle.png',
+  './assets/sprites/npcs/npc_elena_radio_idle.png',
+  './assets/sprites/npcs/npc_bebe_fitolantro.png',
+  './assets/sprites/npcs/npc_nino_raiz_idle.png',
   './js/app.js',
   './js/core/db.js',
   './js/core/estado.js',

@@ -62,6 +62,28 @@
   margin-right: 2px;
 }
 
+/* Animación de Ondas de Radio (Loop 2 frames steps(1)) */
+.sprite-radio-onda-anim {
+  width: 20px;
+  height: 20px;
+  background-image: url('../assets/sprites/ui/sprite_radio_onda_frame1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  display: inline-block;
+  vertical-align: middle;
+  animation: animRadioOnda 0.7s steps(1) infinite;
+}
+
+@keyframes animRadioOnda {
+  0%, 100% {
+    background-image: url('../assets/sprites/ui/sprite_radio_onda_frame1.png');
+  }
+  50% {
+    background-image: url('../assets/sprites/ui/sprite_radio_onda_frame2.png');
+  }
+}
+
 /* Botón de Check interactivo con sprite */
 .btn-check-item .pixel-icon {
   width: 16px;

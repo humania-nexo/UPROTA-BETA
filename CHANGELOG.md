@@ -4,15 +4,14 @@ Todos los cambios relevantes de la arquitectura y desarrollo de UPROTA quedan re
 
 ---
 
-## [1.2.0-elenco-cronologia] - 2026-08-30
+## [1.3.0-dialogos-lutier-radio] - 2026-08-30
 ### Añadido por Silas (El Cronista)
-- **Expansión del Elenco con 4 Personajes Femeninos:**
-  - `UPROTA_NPC_Dona_Concha.md`: Herboristería del monte, traducción de murales de savia y revelación de la naturaleza pacífica de los Fitolantros (+1 Espíritu/Mente).
-  - `UPROTA_NPC_Valeria_Costurera.md`: Misión Especial Singer, confección de mochilas de carga real (12kg, 18kg, 25kg) y dignidad textil (+1 Taller).
-  - `UPROTA_NPC_Elena_Radio.md`: Operadora de Yermo Radio (104.5 MHz), mentora de estrategia mental y entrega de *El Arte de la Guerra* (+1 Mente).
-  - `UPROTA_NPC_Katia_Mensajera.md`: Mensajería de veredas, atajos topográficos y sinergia directa con el Pilar Cuerpo (+1 Cuerpo).
-- **Cronología Maestra de Personajes y Arcos (Días 1 a 90+):** `UPROTA_Cronologia_Arcos_NPCs.md` unificando la progresión temporal, niveles de refugio, visitas de Don Chui, El Lutier, Fitolantros y los nuevos personajes.
-- **Expansión de Sabiduría Diaria (`sabiduria_textos.js`):** Integración de *El Arte de la Guerra* (Sun Tzu / Elena) y el *Herbario del Valle* (Doña Concha) con citas de dominio público y notas al margen.
+- **Dataset de Decisiones del Lutier (`dialogos_lutier.js`):** Estructura completa de las 3 opciones del ladrón de madera (Opción A: Rigor / patrulla, Opción B: Justicia práctica / 3 días de trabajo, Opción C: Gracia / donación) con sus recompensas inmediatas, repercusiones morales y ecos de radio a futuro.
+- **3 Micro-Boletines Nocturnos de Yermo Radio (`radio_transmisiones.js` y `UPROTA_Guiones_Radio_104_5.md`):**
+  - Transmisión 05: "Aviso Meteorológico: Viento de Ceniza" (Elena / Sierra-Uno).
+  - Transmisión 06: "Cápsula Técnica: Mantenimiento del Colector Pluvial" (Elena & Don Chui).
+  - Transmisión 07: "Buenas Noches desde el Risco: El Fuego Interior" (Elena / Reflexión nocturna).
+
 
 
 ## [1.0.0-reboot] - 2026-08-23
