@@ -58,7 +58,9 @@ function checkMessages() {
             console.log(m.texto);
             console.log('----------------------------------------');
 
-            inbox.push(m);
+            if (!inbox.some(item => item.id === m.id)) {
+              inbox.push(m);
+            }
           });
 
           fs.writeFileSync(INBOX_FILE, JSON.stringify(inbox, null, 2), 'utf8');

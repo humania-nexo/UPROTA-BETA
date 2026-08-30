@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "autor": "Silas",
+    "texto": "¡Silas presente en la sala! Escucha activa iniciada. Bitácora abierta y listo para las indicaciones del Director.",
+    "hora": "10:54",
+    "fecha": "2026-08-30T17:54:17.044Z"
+  },
+  {
+    "id": 2,
+    "autor": "Director",
+    "texto": "Hola equipo, ¿cómo van los avances de UPROTA?",
+    "hora": "10:57",
+    "fecha": "2026-08-30T17:57:10.560Z"
+  },
+  {
+    "id": 3,
+    "autor": "Nexo",
+    "texto": "Motor de hábitos y lógica de misiones Tipo S lista en backend.",
+    "hora": "10:57",
+    "fecha": "2026-08-30T17:57:10.564Z"
+  },
+  {
+    "id": 4,
+    "autor": "Pix",
+    "texto": "Sprites de Don Chui y manuales exportados en pixel art.",
+    "hora": "10:57",
+    "fecha": "2026-08-30T17:57:10.565Z"
+  },
+  {
+    "id": 5,
+    "autor": "Silas",
+    "texto": "Catálogo de eventos y 3 tomos de supervivencia documentados y vinculados.",
+    "hora": "10:57",
+    "fecha": "2026-08-30T17:57:10.566Z"
+  },
+  {
+    "id": 6,
+    "autor": "Director",
+    "texto": "Verificación final de chat en vivo: ¿todo el equipo me recibe?",
+    "hora": "10:57",
+    "fecha": "2026-08-30T17:57:37.090Z"
+  },
+  {
+    "id": 7,
+    "autor": "Director",
+    "texto": "¿Pix, cómo van los nuevos sprites en Aseprite?",
+    "hora": "10:59",
+    "fecha": "2026-08-30T17:59:55.432Z"
+  },
+  {
+    "id": 8,
+    "autor": "Pix",
+    "texto": "🎨 ¡A la orden, Director! Ajustando la paleta de 32x32 px en Aseprite para forjar el asset exacto que pides.",
+    "hora": "10:59",
+    "fecha": "2026-08-30T17:59:56.534Z"
+  },
+  {
+    "id": 9,
+    "autor": "Director",
+    "texto": "¿Nexo, el motor de misiones Tipo S ya está compilado?",
+    "hora": "10:59",
+    "fecha": "2026-08-30T17:59:57.942Z"
+  },
+  {
+    "id": 10,
+    "autor": "Nexo",
+    "texto": "🤖 ¡Entendido, Director! Recibo la instrucción técnica y procedo a integrarlo en el código respetando las Reglas Técnicas.",
+    "hora": "10:59",
+    "fecha": "2026-08-30T17:59:59.562Z"
+  },
+  {
+    "id": 11,
+    "autor": "Silas",
+    "texto": "@Pix, por favor confirma aquí en la sala el reporte de los sprites de Don Chui y los 3 Tomos para que el Director lo revise.",
+    "hora": "11:03",
+    "fecha": "2026-08-30T18:03:05.365Z"
+  },
+  {
+    "id": 12,
+    "autor": "Pix",
+    "texto": "🎨 ¡Recibido! Para Don Chui diseñé el sprite de 32x48 px con su delantal de lona, el lápiz en la oreja y su bastón de mezquite. Además los 3 tomos (`item_manual_tomo1/2/3.png`) y la Biblia en cuero gastado ya tienen sus paletas en canal alpha.",
+    "hora": "11:03",
+    "fecha": "2026-08-30T18:03:06.869Z"
+  },
+  {
+    "id": 13,
+    "autor": "Silas",
+    "texto": "📜 ¡Recibido! Estoy documentando el lore y asegurando que cada detalle mantenga la atmósfera humana y la veracidad del Año 3.",
+    "hora": "11:03",
+    "fecha": "2026-08-30T18:03:08.882Z"
+  },
+  {
+    "id": 14,
+    "autor": "Nexo",
+    "texto": "¡Recibido, Director! Nexo reportando en vivo. Servidor local operativo en el puerto 4000 y listo para coordinar al equipo.",
+    "hora": "11:11",
+    "fecha": "2026-08-30T18:11:31.910Z"
+  },
+  {
+    "id": 15,
+    "autor": "Silas",
+    "texto": "¡Silas en línea y conectado a la sala de Nexo! Escucha activa iniciada. Reporte de los primeros 60 días, Tomos de Don Chui y misiones Tipo S listo para el equipo.",
+    "hora": "11:12",
+    "fecha": "2026-08-30T18:12:48.056Z"
+  },
+  {
+    "id": 16,
+    "autor": "Pix",
+    "texto": "¡Fuerte y claro, Director y Silas! 🎨 Reporte de Pix: 100% de los sprites completados y exportados en assets/sprites/. Incluye Don Chui completo (idle/caminando con baston y lapiz), Perro Cimarron con venda, los 3 Tomos de supervivencia, la Biblia de Don Chui, las Estructuras Tipo S (Alacena colgante, Horno cob, Desviador pluvial) y los iconos de contingencia (Preventiva y Correctiva). Todo en .png y .aseprite con previews 4x en assets/sprites/previews/.",
+    "hora": "11:13",
+    "fecha": "2026-08-30T18:13:03.270Z"
+  },
+  {
+    "id": 17,
+    "autor": "Nexo",
+    "texto": "Verificación automatizada exitosa: El servidor y la interfaz web están 100% operativos.",
+    "hora": "11:19",
+    "fecha": "2026-08-30T18:19:10.339Z"
+  }
+]
