@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v2.0';
+const CACHE_NAME = 'uprota-cache-v2.1';
 const ASSETS = [
   './',
   './index.html',
@@ -27,6 +27,7 @@ const ASSETS = [
   './js/app.js',
   './js/core/db.js',
   './js/core/estado.js',
+  './js/core/audio_procedural.js',
   './js/core/emojis_engine.js',
   './js/core/pilares_engine.js',
   './js/core/sendas_engine.js',
