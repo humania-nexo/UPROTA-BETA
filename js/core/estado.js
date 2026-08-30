@@ -7,6 +7,8 @@ import { MotorDB } from './db.js';
 import { PilaresEngine } from './pilares_engine.js';
 import { NIVELES_REFUGIO } from '../data/niveles_refugio.js';
 import { MisionesEngine } from '../mundo/misiones_engine.js';
+import { CronologiaEngine } from '../mundo/cronologia_npcs.js';
+import { OBJETOS_SABIDURIA } from '../data/sabiduria_textos.js';
 
 export class EstadoApp {
   static CLAVE_ESTADO = 'uprota_estado_v1';
@@ -128,11 +130,8 @@ export class EstadoApp {
         this.datos.recursos.moral = Math.max(0, this.datos.recursos.moral - 2);
       }
 
-      // Evento Don Chui en Día 3
-      if (this.datos.perfil.diaSupervivencia >= 3 && !this.datos.donChuiConocido) {
-        this.datos.donChuiConocido = true;
-        this.datos.manualesDonChui.push('tomo_1');
-      }
+      // Evaluación de triggers y eventos cronológicos (Días 1 a 90+)
+      CronologiaEngine.evaluarProgreso(this.datos);
 
       this.guardar();
     }
@@ -155,11 +154,10 @@ export class EstadoApp {
   // --- MÉTODOS DE MUTACIÓN ---
 
   get infoPilares() {
-    // Filtrar objetos de sabiduría activos
-    const objetosActivosData = this.datos.objetosSabiduriaActivos.map(id => {
-      if (id === 'obj_biblia_chui') return { id, pilar: 'espiritu' };
-      if (id === 'obj_manual_supervivencia_1') return { id, pilar: 'mente' };
-      return { id, pilar: 'espiritu' };
+    // Mapeo dinámico de objetos de sabiduría activos según catálogo
+    const objetosActivosData = (this.datos.objetosSabiduriaActivos || []).map(id => {
+      const obj = Object.values(OBJETOS_SABIDURIA).find(o => o.id === id);
+      return { id, pilar: obj ? obj.pilar : 'espiritu' };
     });
 
     return PilaresEngine.calcularEquilibrio(this.datos.sendas, objetosActivosData);

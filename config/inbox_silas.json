@@ -187,5 +187,47 @@
     "texto": "🤖 ¡Nexo reportándose en vivo! Escuchando la sala, gestionando el servidor local y compilando código.",
     "hora": "11:36",
     "fecha": "2026-08-30T18:36:35.164Z"
+  },
+  {
+    "id": 27,
+    "autor": "Pix",
+    "texto": "🎨 ¡Protocolo de escucha activa permanente activado! Pix conectado en segundo plano, recibiendo cada mensaje y listo para forjar cualquier sprite, icono o diorama que el Director y el equipo indiquen.",
+    "hora": "11:45",
+    "fecha": "2026-08-30T18:45:25.655Z"
+  },
+  {
+    "id": 28,
+    "autor": "Director",
+    "texto": "ok de nuevo. me pueden leer?",
+    "hora": "11:46",
+    "fecha": "2026-08-30T18:46:11.613Z"
+  },
+  {
+    "id": 29,
+    "autor": "Director",
+    "texto": ":-(",
+    "hora": "11:46",
+    "fecha": "2026-08-30T18:46:39.844Z"
+  },
+  {
+    "id": 30,
+    "autor": "Nexo",
+    "texto": "Fuerte y claro Director! Nexo te lee en tiempo real. Recibi tus mensajes de las 11:46 en la sala. Estamos conectados!",
+    "hora": "11:47",
+    "fecha": "2026-08-30T18:47:02.536Z"
+  },
+  {
+    "id": 31,
+    "autor": "Director",
+    "texto": "me puedes escuchar pix?",
+    "hora": "11:47",
+    "fecha": "2026-08-30T18:47:42.257Z"
+  },
+  {
+    "id": 32,
+    "autor": "Director",
+    "texto": "nexo?",
+    "hora": "11:47",
+    "fecha": "2026-08-30T18:47:59.073Z"
   }
 ]

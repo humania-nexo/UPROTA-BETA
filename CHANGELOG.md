@@ -4,16 +4,16 @@ Todos los cambios relevantes de la arquitectura y desarrollo de UPROTA quedan re
 
 ---
 
-## [1.1.0-narrativa] - 2026-08-30
+## [1.2.0-elenco-cronologia] - 2026-08-30
 ### Añadido por Silas (El Cronista)
-- **Ficha y Progresión de Don Chui:** Integración de la apariencia física detallada de Don Chui (cojera, incansable, bajito/gordito, maestro reparador) y desarrollo completo de los **3 Tomos de Supervivencia (15 técnicas reales de bushcraft)** respaldadas por física y química empírica (`UPROTA_Manuales_Don_Chui_Progresion.md` y `UPROTA_Ficha_Don_Chui.md`).
-- **Catálogo de Eventos Semanales del Refugio:** Escalabilidad de eventos semanales desde el Nivel 0 (roedores, goteras) hasta el Nivel 10 (consejo de cuenca, tasas de gobiernos transitorios y sequía) en `UPROTA_Eventos_Semanales_Refugio.md`.
-- **Misiones Especiales de Contingencia (Tipo S):** Sistema de misiones temporales vinculadas a cada evento semanal divididas en **Preventivas (🛡️ S)** mediante avisos de radio y **Correctivas / Salto Evolutivo (🛠️ S)** para transformar la adversidad en mejoras permanentes y Faros (ej. *Alacena Hermética Colgante* tras *El Rincón Royido* $\rightarrow$ *Faro de Ahorro*).
-- **Banco Maestro de Misiones:** Stock completo de expediciones Tipo B (fijas sin riesgo), Tipo A (aleatorias con riesgo por nivel) y Tipo S (contingencia) en `UPROTA_Misiones_Expediciones_Stock.md`.
-- **Guiones de Yermo Radio (104.5 MHz):** Dramaturgia radial en onda corta, boletines comunitarios, cápsulas técnicas de taller con Don Chui y reflexiones de madrugada (`UPROTA_Guiones_Radio_104_5.md`).
-- **El Hogar y Sabiduría Diaria (Datasets JS):**
-  - `sabiduria_textos.js`: 12 versículos bíblicos de dominio público comentados con notas manuscritas al margen por Don Chui y textos formativos de manuales.
-  - `frases_estoicas.js` y `UPROTA_El_Hogar_Textos_Resguardo.md`: Matriz de 4 capas (Validación radical, Evidencia, Luz prestada y Filosofía estoica en tono Yermo).
+- **Expansión del Elenco con 4 Personajes Femeninos:**
+  - `UPROTA_NPC_Dona_Concha.md`: Herboristería del monte, traducción de murales de savia y revelación de la naturaleza pacífica de los Fitolantros (+1 Espíritu/Mente).
+  - `UPROTA_NPC_Valeria_Costurera.md`: Misión Especial Singer, confección de mochilas de carga real (12kg, 18kg, 25kg) y dignidad textil (+1 Taller).
+  - `UPROTA_NPC_Elena_Radio.md`: Operadora de Yermo Radio (104.5 MHz), mentora de estrategia mental y entrega de *El Arte de la Guerra* (+1 Mente).
+  - `UPROTA_NPC_Katia_Mensajera.md`: Mensajería de veredas, atajos topográficos y sinergia directa con el Pilar Cuerpo (+1 Cuerpo).
+- **Cronología Maestra de Personajes y Arcos (Días 1 a 90+):** `UPROTA_Cronologia_Arcos_NPCs.md` unificando la progresión temporal, niveles de refugio, visitas de Don Chui, El Lutier, Fitolantros y los nuevos personajes.
+- **Expansión de Sabiduría Diaria (`sabiduria_textos.js`):** Integración de *El Arte de la Guerra* (Sun Tzu / Elena) y el *Herbario del Valle* (Doña Concha) con citas de dominio público y notas al margen.
+
 
 ## [1.0.0-reboot] - 2026-08-23
 ### Añadido

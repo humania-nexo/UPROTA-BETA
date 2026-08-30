@@ -129,6 +129,68 @@ export const OBJETOS_SABIDURIA = {
         texto: 'El sebo de las presas colado con mecha de torzal de algodón da tres horas de lumbre limpia sin humo negro para trabajar de noche.'
       }
     ]
+  },
+
+  ARTE_GUERRA_ELENA: {
+    id: 'obj_arte_guerra_elena',
+    nombre: 'El Arte de la Guerra (Sun Tzu)',
+    pilar: 'mente',
+    puntosPilar: 1,
+    icono: '⚔️',
+    npcOrigen: 'Elena (Radio)',
+    botonTexto: 'Leído',
+    desc: 'Tratado clásico de estrategia de dominio público entregado por Elena en la estación del Risco para cultivar disciplina mental y logística.',
+    mensajes: [
+      {
+        referencia: 'Capítulo III: Estrategia Ofensiva',
+        texto: '«Si conoces al enemigo y te conoces a ti mismo, no debes temer el resultado de cien batallas. Si te conoces a ti mismo pero no al enemigo, por cada victoria obtenida sufrirás una derrota.»',
+        notaElena: 'Nota de Elena: "El enemigo más peligroso en el Yermo es tu propia prisa. Conoce tus límites y nunca salgas al monte sin medir tu agua."'
+      },
+      {
+        referencia: 'Capítulo I: Planes Iniciales',
+        texto: '«El arte de la guerra se basa en el engaño... Cuando seas capaz de atacar, debes aparentar incapacidad; cuando uses tus fuerzas, debes parecer inactivo; cuando estés cerca, debes hacer creer que estás lejos.»',
+        notaElena: 'Nota de Elena: "Mantén tu refugio discreto. El humo bajo y el silencio valen más que diez barricadas levantadas con ruido."'
+      },
+      {
+        referencia: 'Capítulo VI: Puntos Débiles y Fuertes',
+        texto: '«Quien llega primero al campo de batalla y espera al enemigo, estará descansado; quien llega tarde y se precipita a la lucha, estará exhausto.»',
+        notaElena: 'Nota de Elena: "Prepara la leña antes de que anochezca y el agua antes de tener sed. Anticiparse es ganar sin pelear."'
+      },
+      {
+        referencia: 'Capítulo VII: Maniobras',
+        texto: '«Que tus planes sean oscuros e impenetrables como la noche, y cuando te muevas, cae como un rayo.»',
+        notaElena: 'Nota de Elena: "No anuncies tus proyectos a los cuatro vientos. Trabaja en silencio en tu tablón y deja que los cimientos hablen solos."'
+      }
+    ]
+  },
+
+  HERBARIO_DONA_CONCHA: {
+    id: 'obj_herbario_concha',
+    nombre: 'Herbario del Valle (Doña Concha)',
+    pilar: 'espiritu',
+    puntosPilar: 1,
+    icono: '🌿',
+    npcOrigen: 'Doña Concha',
+    botonTexto: 'Leído',
+    desc: 'Cuaderno con hojas secas prensadas y remedios caseros de monte para sostener la salud y la calma en el refugio.',
+    mensajes: [
+      {
+        referencia: 'La Nobleza de la Manzanilla',
+        texto: 'La flor de manzanilla se corta cuando abre al mediodía. Una infusión tibia antes de dormir asienta el estómago y limpia el pecho de angustias.',
+        notaConcha: 'Nota de Concha: "El cuerpo que no duerme en paz se enferma de la nada. Cuida tu descanso como si fuera oro."'
+      },
+      {
+        referencia: 'El Poder del Llantén de Ribera',
+        texto: 'Hojas frescas machacadas en mortero limpio con un toque de salmuera cierran raspones y evitan que la carne se encangrene.',
+        notaConcha: 'Nota de Concha: "Si te cortas con un fierro oxidado, lava a chorro y tapa con llantén. La tierra misma tiene el parche."'
+      },
+      {
+        referencia: 'La Sábila del Peñasco',
+        texto: 'Drena el líquido amarillo amargo antes de usar. La pulpa transparente cura las quemaduras de sol y regenera la piel curtida.',
+        notaConcha: 'Nota de Concha: "Paciencia con la penca: lo que cura está en el centro limpio, no en la orilla apurada."'
+      }
+    ]
   }
 };
+
 

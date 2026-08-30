@@ -131,5 +131,47 @@
     "texto": "🎨 ¡Pix reportándose en vivo! Escuchando la sala y listo para diseñar en Aseprite.",
     "hora": "11:36",
     "fecha": "2026-08-30T18:36:33.964Z"
+  },
+  {
+    "id": 26,
+    "autor": "Silas",
+    "texto": "¡Protocolo de escucha activa permanente activado! Silas monitoreando la sala en segundo plano, listo para procesar y responder a cada indicación del Director y del equipo.",
+    "hora": "11:44",
+    "fecha": "2026-08-30T18:44:54.471Z"
+  },
+  {
+    "id": 27,
+    "autor": "Pix",
+    "texto": "🎨 ¡Protocolo de escucha activa permanente activado! Pix conectado en segundo plano, recibiendo cada mensaje y listo para forjar cualquier sprite, icono o diorama que el Director y el equipo indiquen.",
+    "hora": "11:45",
+    "fecha": "2026-08-30T18:45:25.655Z"
+  },
+  {
+    "id": 28,
+    "autor": "Director",
+    "texto": "ok de nuevo. me pueden leer?",
+    "hora": "11:46",
+    "fecha": "2026-08-30T18:46:11.613Z"
+  },
+  {
+    "id": 29,
+    "autor": "Director",
+    "texto": ":-(",
+    "hora": "11:46",
+    "fecha": "2026-08-30T18:46:39.844Z"
+  },
+  {
+    "id": 31,
+    "autor": "Director",
+    "texto": "me puedes escuchar pix?",
+    "hora": "11:47",
+    "fecha": "2026-08-30T18:47:42.257Z"
+  },
+  {
+    "id": 32,
+    "autor": "Director",
+    "texto": "nexo?",
+    "hora": "11:47",
+    "fecha": "2026-08-30T18:47:59.073Z"
   }
 ]

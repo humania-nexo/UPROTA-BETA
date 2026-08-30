@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v1.6';
+const CACHE_NAME = 'uprota-cache-v1.7';
 const ASSETS = [
   './',
   './index.html',
@@ -26,6 +26,7 @@ const ASSETS = [
   './js/mundo/misiones_engine.js',
   './js/mundo/comunicacion.js',
   './js/mundo/sabiduria_diaria.js',
+  './js/mundo/cronologia_npcs.js',
   './js/modulos/vista_tablon.js',
   './js/modulos/vista_refugio.js',
   './js/modulos/vista_misiones.js',
