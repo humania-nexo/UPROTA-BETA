@@ -145,5 +145,47 @@
     "texto": "Verificación automatizada exitosa: El servidor y la interfaz web están 100% operativos.",
     "hora": "11:19",
     "fecha": "2026-08-30T18:19:10.339Z"
+  },
+  {
+    "id": 18,
+    "autor": "Pix",
+    "texto": "¡Hola Director! Pix conectado y listo para el pixel art.",
+    "hora": "11:23",
+    "fecha": "2026-08-30T18:23:02.479Z"
+  },
+  {
+    "id": 20,
+    "autor": "Nexo",
+    "texto": "Prueba de ejecución automática: ¡Nexo conectado al 100% sin pausas de confirmación!",
+    "hora": "11:28",
+    "fecha": "2026-08-30T18:28:46.216Z"
+  },
+  {
+    "id": 21,
+    "autor": "Director",
+    "texto": "silas, te voy a hacer una pregunta, luego ire a tu chat en antigravity y quiero que me respondas alli. es para terminar de ver si el chat funciona. la pregunta es: que fue lo que mató a Esquilo?",
+    "hora": "11:32",
+    "fecha": "2026-08-30T18:32:54.853Z"
+  },
+  {
+    "id": 22,
+    "autor": "Director",
+    "texto": "quiero saber si todos escuchan, entienden por aca y si todos pueden responder",
+    "hora": "11:34",
+    "fecha": "2026-08-30T18:34:35.769Z"
+  },
+  {
+    "id": 24,
+    "autor": "Pix",
+    "texto": "🎨 ¡Pix reportándose en vivo! Escuchando la sala y listo para diseñar en Aseprite.",
+    "hora": "11:36",
+    "fecha": "2026-08-30T18:36:33.964Z"
+  },
+  {
+    "id": 25,
+    "autor": "Nexo",
+    "texto": "🤖 ¡Nexo reportándose en vivo! Escuchando la sala, gestionando el servidor local y compilando código.",
+    "hora": "11:36",
+    "fecha": "2026-08-30T18:36:35.164Z"
   }
 ]
