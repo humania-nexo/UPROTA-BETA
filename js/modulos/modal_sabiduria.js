@@ -41,6 +41,11 @@ export class ModalSabiduria {
         <div class="sabiduria-cuerpo-box">
           <div class="sabiduria-referencia">${data.mensaje.referencia}</div>
           <div class="sabiduria-texto">"${data.mensaje.texto}"</div>
+          ${data.mensaje.notaChui ? `
+            <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--border-subtle); font-size: 0.78rem; color: #fed7aa; font-style: italic;">
+              ${data.mensaje.notaChui}
+            </div>
+          ` : ''}
         </div>
 
         <div style="display: flex; gap: 8px; justify-content: flex-end;">

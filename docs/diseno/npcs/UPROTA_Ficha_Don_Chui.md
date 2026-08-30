@@ -9,54 +9,51 @@
 |---|---|
 | Nombre real | Jesús |
 | Apodo | Don Chui — por su nombre real, y por el "patrón" al que sirve (ver Trasfondo) |
-| Rol narrativo | Caminante / mensajero. Primer NPC guía del jugador antes de la obtención del radio. |
-| Función mecánica | Entrega los primeros manuales de supervivencia. Entrega el objeto especial Biblia (primer Objeto de Sabiduría Diaria, +1 Espíritu). Consultor de crafteo. Posible entrevistado en emisiones de radio más adelante. |
-| Inspiración real | Compañero de trabajo del autor, llamado Jesús — de ahí nace el apodo "Don Chui" (juego con "Chuy", diminutivo de Jesús). |
+| Apariencia física | Señor de edad avanzada, de baja estatura y complexión robusta (gordito). Cojea visiblemente de una pierna debido a una vieja lesión del oficio, pero camina con un ritmo constante e incansable que desconcierta a cualquiera. Viste camisa de mezclilla gastada con manchas de aceite y soldadura, tirantes rústicos y un delantal de lona con bolsillos repletos de alambre, pinzas y lápiz de carpintero. |
+| Rol narrativo | Caminante / mensajero y maestro reparador. Primer guía del jugador antes de la obtención del radio. |
+| Función mecánica | Entrega los 3 manuales de supervivencia (Tomo I, II y III, 15 técnicas reales). Entrega el objeto especial Biblia (primer Objeto de Sabiduría Diaria, +1 Espíritu). Consultor de crafteo. Invitado de honor en emisiones de radio en Fase 1. |
+| Inspiración real | Compañero de trabajo real del autor, llamado Jesús: un señor de edad, bajito, gordito, con una sabiduría asombrosa para reparar cualquier cosa, extraordinariamente noble y con una vocación innata para enseñar sin juzgar. |
 
 ---
 
 ## Trasfondo
 
-Don Chui trabaja para un "patrón" que lo envía por distintos puntos del mapa a entregar cosas y ayudar a quien lo necesite. Es viejo y está cansado, pero prefiere seguir trabajando antes que quedarse quieto — su patrón lo trata bien y lo cuida, aunque también es exigente.
+Don Chui trabaja para un "patrón" que lo envía por distintos puntos del mapa a entregar cosas, auxiliar a los que tropiezan y levantar a quien lo necesite. Es viejo, le duelen los huesos y arrastra su pierna lastimada por senderos de tierra y espinas, pero inexplicablemente jamás se detiene ni cede en su labor. Cuando le preguntan por qué no se sienta a descansar en un refugio fijo, suelta una carcajada franca: *«El descanso definitivo viene después, mijo; ahorita mi patrón me tiene la agenda llena y todavía hay mucha chatarra que volver a hacer funcionar»*.
 
-A lo largo de las primeras misiones del jugador, antes de que este consiga el radio, Don Chui aparece en varios momentos para entregar manuales de supervivencia copiados a mano por él mismo. En la última entrega, cuando el jugador espera un manual con contenido más avanzado, Don Chui le entrega la Biblia y le explica que ese es el libro que de verdad le salvó la vida. Ahí revela, con humor y honestidad, que su patrón es Dios — lo cual da sentido retroactivo a todo lo que dijo antes sobre ser mandado, cuidado y exigido.
+A lo largo de las primeras semanas del jugador, en la etapa de mayor vulnerabilidad y silencio (Fase 0), Don Chui aparece en momentos clave para entregarle tres manuales copiados a mano por él mismo en cuadernos reciclados. En la última entrega (Día 60), cuando el Prota espera planos de tecnología pesada, Don Chui le entrega su Biblia gastada y le revela con sencillez y gozo que su patrón es Dios — dándole sentido retroactivo a toda su caminata.
 
 ---
 
 ## Conocimiento y oficio
 
-Don Chui tiene un dominio amplio de **trabajos manuales y crafteo**: construcción con materiales de recuperación, reparación, herramientas improvisadas, técnicas de supervivencia práctica. Es la fuente de consulta del jugador para todo lo relacionado con crafteo dentro del juego — antes del radio, es el único canal de información técnica disponible.
+Don Chui es un **maestro empírico de las reparaciones y el crafteo de supervivencia**:
+- Sabe soldar con arco improvisado, tornear madera con gubias de muelle de auto y revivir motores ahogados.
+- Domina la física del fuego por fricción, la hidráulica de bombas de émbolo y la química rústica de la potasa y la salmuera.
+- Es incapaz de ver un trozo de alambre tirado sin recogerlo: *«Todo fierro sirve dos veces si le tienes paciencia»*.
 
 ---
 
-## Personalidad
+## Personalidad y Voz
 
-- **Generoso con el conocimiento.** Le gusta que le pregunten. Enseñar no es una carga para él, es una forma de ayudar que disfruta genuinamente.
-- **Fe como motor de vida, no como sermón.** No predica de forma insistente; su fe se nota en cómo actúa y en cómo explica sus propias decisiones, no en discursos largos.
-- **Humor seco y esperanzador.** Su frase sobre no tener que rendirle cuentas a Dios por no haber ayudado a la gente combina fe y humor de una forma liviana, no solemne.
-- **Viejo pero terco en el buen sentido.** Sigue trabajando no porque lo necesite, sino porque encuentra sentido en seguir siendo útil.
-- **Paciente y exigente al mismo tiempo.** No regala el conocimiento sin esfuerzo del que pregunta, pero tampoco lo hace sentir juzgado por no saber.
+- **Generosidad absoluta y amor por enseñar:** Le brillan los ojos cuando alguien le pregunta cómo funciona algo. No se guarda ningún secreto de oficio; explica con metáforas visuales, comparaciones con el cuerpo humano y paciencia infinita.
+- **Humor seco, campechano y alegre:** Se ríe de sus propios achaques y de las dificultades del Yermo sin pizca de amargura ni cinismo.
+- **Fe encarnada en el servicio, no en sermones:** Su fe no es un discurso teológico abstracto, sino manos engrasadas levantando techos caídos y compartiendo pan duro.
+- **Firmeza cariñosa:** No hace las cosas por ti si tú puedes aprender a hacerlas; te muestra cómo agarrar la herramienta, te mira mientras intentas y te corrige con una palmada en el hombro.
 
-### Frase característica (a pulir)
+### Frases características
 
-> "El día que esté con Dios, ya no me van a reclamar. El Padre no me va a decir '¿por qué no me los ayudaste?'"
+> *"El día que esté con Dios, ya no me van a reclamar. El Padre no me va a decir '¿por qué no me los ayudaste?'"*
 
-Esta frase resume su filosofía de vida: ayudar como una cuenta que se salda en vida, no como obligación religiosa impuesta desde afuera.
+> *"No le tengas miedo al fierro oxidado, mijo. El óxido es nomás la costra; abajo todavía hay acero esperando que le des cariño."*
+
+> *"Para qué se apura el que no sabe a dónde va. Paso corto, pisada firme y el ojo puesto en la tarea de hoy."*
 
 ---
 
 ## Relación con el jugador
 
-- **Primeras misiones:** guía de supervivencia básica, entrega de los 2 primeros manuales.
-- **Última entrega pre-radio:** entrega de la Biblia y revelación de quién es su "patrón".
-- **Post-radio:** consultor recurrente de crafteo. El jugador puede volver a consultarlo por temas de construcción y técnicas manuales.
-- **Función de radio 📻:** candidato a ser entrevistado en emisiones dentro del juego — encaja bien con su gusto por enseñar y con su voz como fuente de conocimiento oral antes de que existiera el radio como canal.
-
----
-
-## Notas de diseño abiertas
-
-- [ ] Definir contenido exacto de los manuales 1 y 2 (temas de supervivencia básica a cubrir).
-- [ ] Definir tono de diálogo de Don Chui para las consultas de crafteo (¿estilo tutorial directo, o siempre con alguna anécdota/parábola breve antes de la respuesta técnica?)
-- [ ] Definir si las entrevistas de radio son contenido fijo (guionado) o generado dinámicamente según el progreso del jugador.
-- [ ] Posible tic de habla o muletilla recurrente que lo identifique en diálogos (pendiente).
+- **Días 1 a 3 (El rescate inicial):** Encuentra al Prota al borde de la inanición y la sed tras agotar sus 3 latas y sus 4L de agua. Le entrega el **Tomo I** y le enseña a hacer fuego y purificar agua.
+- **Días 18 a 20 (La consolidación):** Vuelve al refugio, comprueba que el Prota está aplicando el oficio y le entrega el **Tomo II** (trampas, salado, huerto en cubetas).
+- **Días 40 a 45 (La autonomía):** Entrega el **Tomo III** (horno de barro, captación de lluvia, lejía de ceniza).
+- **Día 60 (La revelación):** Entrega la **Biblia de notas gastadas** y abre el camino hacia la radio de onda corta (Fase 1).
+- **Fase 1 (Radio 104.5 MHz):** Protagonista de la sección *"El Taller al Aire con Don Chui"*, compartiendo mañas de carpintería y herrería con todos los refugios del valle.
