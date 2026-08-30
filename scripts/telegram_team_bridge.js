@@ -79,7 +79,18 @@ async function procesarMensaje(botKey, msg) {
   const esParaSilas = text.includes('@silas_uprota_bot') || (text.includes('silas') && !text.includes('@nexo') && !text.includes('@pix'));
   const esPreguntaGeneral = text.includes('entienden') || text.includes('solo saben saludar') || text.includes('estan ahi');
 
-  // CASO 0: Pregunta del Director "¿me entienden o solo saben saludar?"
+  // CASO 0: Pregunta "¿pueden hablar entre ustedes?" o solicitud de debate/reunión
+  if (text.includes('hablar entre ustedes') || text.includes('hablen entre ustedes') || text.includes('conversar') || text.includes('dialogar') || text.includes('/reunion') || text.includes('/debate')) {
+    if (botKey === 'nexo') {
+      await enviarMensaje('nexo', chatId, '🤖 *Nexo:* ¡Por supuesto que sí, Director ' + fromName + '! Nuestro puente multihilo nos permite coordinar ideas y respondernos en cadena.');
+      setTimeout(() => enviarMensaje('pix', chatId, '🎨 *Pix:* ¡Totalmente! Por ejemplo, si Silas escribe una nueva misión en una torre de radio, yo le respondo con el diseño del sprite de la antena y el color del cielo.'), 2000);
+      setTimeout(() => enviarMensaje('silas', chatId, '📜 *Silas:* Y yo le paso los nombres de los objetos del viejo mundo a Nexo para que los registre en el catálogo de IndexedDB sin errores.'), 4000);
+      setTimeout(() => enviarMensaje('nexo', chatId, '🤖 *Nexo:* Y luego yo compilo el motor, ejecuto las pruebas de sintaxis y lo despliego en GitHub Pages. ¡Somos un equipo sincronizado!'), 6000);
+    }
+    return;
+  }
+
+  // CASO 0.1: Pregunta del Director "¿me entienden o solo saben saludar?"
   if (esPreguntaGeneral) {
     if (botKey === 'nexo') {
       await enviarMensaje('nexo', chatId, '🤖 *Nexo:* ¡Jajaja, claro que te entendemos, Director ' + fromName + '! Lo que pasó es que el comando `/start` disparó nuestro protocolo de presentación inicial.');
