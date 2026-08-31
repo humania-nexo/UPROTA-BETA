@@ -142,6 +142,44 @@ export class ProceduralAudioEngine {
     this.playNoise(0.08, 0.25, true);
     this.playTone(180, 'square', 0.06, 0.2);
   }
+
+  // 7. Modo Fiesta (Fanfarria Chiptune de Celebración y Victoria)
+  playModoFiestaFanfarria() {
+    this.init();
+    if (!this.ctx || this.silenciado) return;
+
+    const melodia = [
+      { f: 523.25, d: 0.12, t: 0 },    // Do5
+      { f: 659.25, d: 0.12, t: 110 },  // Mi5
+      { f: 783.99, d: 0.12, t: 220 },  // Sol5
+      { f: 1046.50, d: 0.25, t: 330 }, // Do6
+      { f: 783.99, d: 0.10, t: 550 },  // Sol5
+      { f: 1046.50, d: 0.35, t: 660 }, // Do6 sostenido
+      
+      { f: 587.33, d: 0.10, t: 1050 }, // Re5
+      { f: 739.99, d: 0.10, t: 1160 }, // Fa#5
+      { f: 880.00, d: 0.10, t: 1270 }, // La5
+      { f: 1174.66, d: 0.40, t: 1380 },// Re6
+      
+      { f: 1046.50, d: 0.15, t: 1800 },// Do6
+      { f: 1174.66, d: 0.15, t: 1950 },// Re6
+      { f: 1318.51, d: 0.60, t: 2100 } // Mi6 apoteósico
+    ];
+
+    melodia.forEach(n => {
+      setTimeout(() => {
+        this.playTone(n.f, 'square', n.d, 0.22, 0.01, n.d - 0.01);
+        this.playTone(n.f * 0.5, 'triangle', n.d, 0.26, 0.01, n.d - 0.01);
+      }, n.t);
+    });
+
+    const beats = [0, 220, 440, 660, 1050, 1270, 1380, 1800, 1950, 2100];
+    beats.forEach(t => {
+      setTimeout(() => {
+        this.playNoise(0.07, 0.20, true);
+      }, t);
+    });
+  }
 }
 
 export const audioProcedural = new ProceduralAudioEngine();

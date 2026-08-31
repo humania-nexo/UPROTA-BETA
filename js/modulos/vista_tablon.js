@@ -9,6 +9,7 @@ import { FarosEngine } from '../core/faros_engine.js';
 import { RefugioMundoEngine } from '../mundo/refugio_engine.js';
 import { ModalInfo } from './modal_info.js';
 import { ModalSelectorGlifos } from '../core/emojis_engine.js';
+import { ModoFiestaEngine } from './modo_fiesta.js';
 
 export class VistaTablon {
   constructor(contenedor) {
@@ -312,10 +313,21 @@ export class VistaTablon {
 
         if (nuevoEstado) {
           // Marcar (+1)
+          const diasTotalesPrevios = senda.diasTotales || 0;
           senda.diasCumplidos = (senda.diasCumplidos || 0) + 1;
           senda.diasTotales = (senda.diasTotales || 0) + 1;
           senda.rachaActual = (senda.rachaActual || 0) + 1;
           senda.fallosSeguidos = 0;
+
+          // Hito 66 Días: Hábito Forjado a Cimiento
+          if (senda.diasTotales >= 66 && diasTotalesPrevios < 66) {
+            ModoFiestaEngine.activar({
+              tipo: 'senda',
+              titulo: '¡CIMIENTO FORJADO EN HIERRO!',
+              subtitulo: senda.nombreLore || senda.nombre,
+              detalle: `¡66 días de constancia real! La ciencia de hábitos demuestra que "${senda.accionReal || senda.nombre}" ya no te cuesta fuerza de voluntad: se ha convertido en un Cimiento indestructible de tu identidad.`
+            });
+          }
 
           // Solo recarga energía si el generador ya fue aprendido y construido (Nivel 5)
           if (senda.pilar === 'cuerpo' && estado.bioenergia?.biciGeneradorConstruido) {
@@ -955,11 +967,21 @@ export class VistaTablon {
 
     // Reporte Limpio
     modalContent.querySelector('#btn-reporte-limpio').addEventListener('click', async () => {
+      const diasPrevios = cadena.diasLimpiosConsecutivos || 0;
       const res = CadenasEngine.registrarDia(cadena, false);
       estadoApp.datos.cadenas[idx] = res.cadena;
       cadena.reportadaHoy = true;
       await estadoApp.guardar();
       cerrar();
+
+      if (res.cadena.diasLimpiosConsecutivos >= 21 && diasPrevios < 21) {
+        ModoFiestaEngine.activar({
+          tipo: 'cadena',
+          titulo: '¡CADENA ROTA Y DESTRUIDA!',
+          subtitulo: cadena.nombreLore || cadena.nombre,
+          detalle: `¡Has completado 21 días limpios consecutivos! Has cruzado el Puente que Tiembla y vencido a "${cadena.accionReal || cadena.nombre}". ¡El Refugio celebra con alegría tu libertad!`
+        });
+      }
     });
 
     // Reporte Recaída

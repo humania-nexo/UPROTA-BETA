@@ -1,8 +1,9 @@
 import { audioProcedural } from '../core/audio_procedural.js';
+import { ModoFiestaEngine } from './modo_fiesta.js';
 
 /**
  * Modal: Centro de Ayuda, Información, Instalador PWA, FAQ y Créditos Oficiales
- * UPROTA v2.2 — Equipo Humano + IA
+ * UPROTA v2.6 — Equipo Humano + IA
  */
 
 export class ModalCentroAyuda {
@@ -100,6 +101,17 @@ export class ModalCentroAyuda {
       });
     }
 
+    // Botón de prueba Modo Fiesta
+    container.querySelector('#btn-test-modo-fiesta')?.addEventListener('click', () => {
+      document.getElementById('modal-container')?.classList.add('hidden');
+      ModoFiestaEngine.activar({
+        tipo: 'general',
+        titulo: '¡MODO FIESTA DEL REFUGIO!',
+        subtitulo: 'Celebración y Festival Humano + IA',
+        detalle: '¡La música 8-bits suena, los sprites bailan al ritmo y el confeti llueve sobre el Yermo! Así se celebra cada Faro alcanzado, cada Cimiento forjado y cada Cadena destruida.'
+      });
+    });
+
     // Acordeón FAQ
     container.querySelectorAll('.faq-pregunta').forEach(item => {
       item.addEventListener('click', () => {
@@ -123,6 +135,17 @@ export class ModalCentroAyuda {
             <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin-top: 6px;">
               Ambientado en un post-colapso sobrio, realista y esperanzador, cada acción que realizas en tu mundo real (hacer ejercicio, leer, orar, reparar algo, vencer un vicio o ahorrar) genera tablas, clavos, energía y moral para reconstruir tu refugio en el Yermo.
             </p>
+          </div>
+
+          <!-- MODO FIESTA INTERACTIVO -->
+          <div class="card-yermo" style="border-left: 3px solid #f472b6; background: rgba(244, 114, 182, 0.08); margin-bottom: 10px;">
+            <h4 style="color: #f472b6; font-size: 0.88rem; margin-bottom: 4px;">🎉 Modo Fiesta: Celebración del Refugio</h4>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">
+              Cuando conquistas un Faro, forjas un Cimiento a los 66 días o destruyes una Cadena de 21 días, el Refugio desata una fiesta con fanfarria 8-bits, confeti pixel art y baile de sprites.
+            </p>
+            <button id="btn-test-modo-fiesta" class="btn-yermo-primary" style="width: 100%; padding: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #f59e0b, #ec4899); border: none; color: #fff; font-weight: bold; cursor: pointer; border-radius: var(--radius-sm);">
+              🎉 Probar Modo Fiesta (Baile & Confeti 8-Bits)
+            </button>
           </div>
 
           <div class="card-yermo" style="background: rgba(0,0,0,0.2); margin-bottom: 10px;">

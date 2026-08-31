@@ -103,3 +103,44 @@
   flex-shrink: 0;
 }
 
+/* ==========================================
+   MODO FIESTA / FESTIVAL DEL REFUGIO (Retro Harlem Shake)
+   ========================================== */
+
+@keyframes fiestaRebote {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-4px) rotate(-3deg) scale(1.05); }
+  50% { transform: translateY(0) rotate(0deg) scale(1); }
+  75% { transform: translateY(-3px) rotate(3deg) scale(1.04); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+@keyframes fiestaGlow {
+  0% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); border-color: #f59e0b; }
+  50% { box-shadow: 0 0 35px rgba(56, 189, 248, 0.6); border-color: #38bdf8; }
+  100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.3); border-color: #f59e0b; }
+}
+
+@keyframes fiestaIconoBounce {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  30% { transform: scale(1.25) rotate(-8deg); }
+  60% { transform: scale(1.2) rotate(8deg); }
+}
+
+body.modo-fiesta-activo .pixel-icon,
+body.modo-fiesta-activo .nav-tab-btn,
+body.modo-fiesta-activo .recurso-chip,
+body.modo-fiesta-activo .diorama-sprite-modulo,
+body.modo-fiesta-activo .torta-container {
+  animation: fiestaRebote 0.45s infinite ease-in-out;
+}
+
+body.modo-fiesta-activo .app-header {
+  animation: fiestaGlow 0.8s infinite ease-in-out;
+}
+
+.fiesta-icono-rebotante {
+  animation: fiestaIconoBounce 0.6s infinite ease-in-out;
+  display: inline-block;
+}
+
