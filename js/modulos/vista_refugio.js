@@ -5,6 +5,7 @@
 import { estadoApp } from '../core/estado.js';
 import { RefugioMundoEngine, DioramaEngine } from '../mundo/refugio_engine.js';
 import { NIVELES_REFUGIO } from '../data/niveles_refugio.js';
+import { audioProcedural } from '../core/audio_procedural.js';
 
 export class VistaRefugio {
   constructor(contenedor) {
@@ -117,8 +118,55 @@ export class VistaRefugio {
     const btnSubir = this.contenedor.querySelector('#btn-subir-nivel-refugio');
     if (btnSubir) {
       btnSubir.addEventListener('click', async () => {
-        estado.nivelRefugio += 1;
+        const nuevoNivelInfo = RefugioMundoEngine.ejecutarSubidaNivel(estado);
+        if (!nuevoNivelInfo) return;
+
+        // Fanfarria 8-bits
+        audioProcedural.playFanfarriaFaro();
+
+        // Guardar estado y notificar vistas
         await estadoApp.guardar();
+        estadoApp.notificar();
+
+        // Abrir modal de celebración de ascenso
+        const modalContainer = document.getElementById('modal-container');
+        const modalContent = document.getElementById('modal-content');
+        if (modalContainer && modalContent) {
+          modalContent.innerHTML = `
+            <div class="info-modal-wrap" style="text-align: center; padding: 20px 14px;">
+              <div style="font-size: 2.2rem; margin-bottom: 6px;">🔨✨</div>
+              <h2 style="color: var(--oro-torta-glow); font-size: 1.25rem; margin-bottom: 2px;">¡REFUGIO MEJORADO!</h2>
+              <div style="font-size: 0.95rem; color: #fff; font-weight: bold; margin-bottom: 12px;">
+                Nivel ${nuevoNivelInfo.nivel}: ${nuevoNivelInfo.nombre}
+              </div>
+
+              <div class="card-yermo" style="background: rgba(0,0,0,0.4); text-align: left; margin-bottom: 14px; border-left: 3px solid var(--oro-torta);">
+                <div style="font-size: 0.72rem; color: var(--oro-torta); font-weight: bold; text-transform: uppercase; margin-bottom: 6px;">
+                  NUEVAS CAPACIDADES DESBLOQUEADAS:
+                </div>
+                <div style="font-size: 0.8rem; color: #e7e5e4; line-height: 1.6;">
+                  <div>🎒 <strong>Bolsa:</strong> ${nuevoNivelInfo.bolsaTipo} (${nuevoNivelInfo.capacidadBolsaKg} kg / ${nuevoNivelInfo.espaciosBolsa} ranuras)</div>
+                  <div>🌿 <strong>Sendas Máximas:</strong> ${nuevoNivelInfo.maxSendas} hábitos simultáneos</div>
+                  <div>⛓️ <strong>Cadenas a Romper:</strong> ${nuevoNivelInfo.maxCadenas} vicios a erradicar</div>
+                  <div>🌟 <strong>Faros de Propósito:</strong> ${nuevoNivelInfo.maxFaros} metas a largo plazo</div>
+                </div>
+              </div>
+
+              <p style="font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 16px;">
+                "${nuevoNivelInfo.descripcion}"
+              </p>
+
+              <button id="btn-cerrar-mejora-refugio" class="btn-yermo-primary" style="width: 100%; padding: 10px; font-weight: bold; font-size: 0.9rem;">
+                ¡A la Obra! Continuar Supervivencia
+              </button>
+            </div>
+          `;
+          modalContainer.classList.remove('hidden');
+
+          modalContent.querySelector('#btn-cerrar-mejora-refugio')?.addEventListener('click', () => {
+            modalContainer.classList.add('hidden');
+          });
+        }
       });
     }
   }

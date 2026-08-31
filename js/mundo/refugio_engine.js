@@ -47,6 +47,41 @@ export class RefugioMundoEngine {
       faltantes: falta
     };
   }
+
+  /**
+   * Ejecuta la subida de nivel, descuenta los recursos y actualiza beneficios.
+   */
+  static ejecutarSubidaNivel(estado) {
+    const evaluacion = this.puedeSubirNivel(estado.nivelRefugio, estado.recursos);
+    if (!evaluacion.posible) return null;
+
+    const sigNivel = estado.nivelRefugio + 1;
+    const req = NIVELES_REFUGIO[sigNivel].requisitos;
+
+    // Descontar recursos
+    if (req.tablas) estado.recursos.tablas -= req.tablas;
+    if (req.clavos) estado.recursos.clavos -= req.clavos;
+    if (req.provisiones) estado.recursos.provisiones -= req.provisiones;
+    if (req.aguaLitros) estado.recursos.aguaLitros -= req.aguaLitros;
+
+    // Aplicar nuevo nivel
+    estado.nivelRefugio = sigNivel;
+    const infoNuevoNivel = NIVELES_REFUGIO[sigNivel];
+
+    // Actualizar bolsa y capacidades si el nuevo nivel es superior
+    if (infoNuevoNivel.capacidadBolsaKg > estado.bolsa.capacidadKg) {
+      estado.bolsa.tipo = infoNuevoNivel.bolsaTipo;
+      estado.bolsa.capacidadKg = infoNuevoNivel.capacidadBolsaKg;
+      estado.bolsa.espaciosMax = infoNuevoNivel.espaciosBolsa;
+    }
+
+    // Desbloqueos automáticos de módulos clave
+    if (sigNivel >= 5) {
+      estado.bioenergia.biciGeneradorConstruido = true;
+    }
+
+    return infoNuevoNivel;
+  }
 }
 
 export class DioramaEngine {
