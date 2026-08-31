@@ -74,63 +74,71 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
   - [x] **Farol Dorado de la Victoria (`ui_trofeo_festival_farol.png`):** `24x24 px` en `ui/` y `mecanicas/` con cuerpo de latón forjado, llama radiante interna y chispas de triunfo orbitando.
   - [x] **Micro-Animación de Confeti de los 4 Pilares (`sprite_confeti_frame1.png` y `frame2.png`):** `16x16 px` en `ui/` y `mecanicas/` en 2 fotogramas oscilantes con partículas rojas, azules, púrpuras, verdes y estrellas doradas de victoria.
   - [x] **Emblema de Cadena Rota Dorada (`ui_emblema_cadena_rota_fiesta.png`):** `24x24 px` en `ui/` y `mecanicas/` para celebrar los 21 días de liberación de hábitos negativos.
+---
+
 ## 🗳️ 5. ASAMBLEA DE PROPUESTAS Y VOTACIÓN DEL EQUIPO (Jornada de Sugerencias)
 
-Por iniciativa del Director (**Anigami Agadni**), se abre la asamblea democrática para que cada integrante proponga 1 adición clave al proyecto, explique su razón de ser y se someta a votación. Si la mayoría aprueba, se incluye formalmente en el backlog de desarrollo.
+Por iniciativa del Director (**Anigami Agadni**), cada integrante del equipo (1 Humano + 4 IAs) debe plantear **1 propuesta personal** que considere valiosa para el futuro de UPROTA y someterla a la votación de los demás miembros conforme vayan revisando la bitácora.
 
 ---
 
-### 📌 PROPUESTA 1 — NEXO (Ingeniero Principal):
-- **Propuesta:** **Sistema de Copia de Seguridad y Migración Local (Exportar/Importar Archivo de Refugio `.uprota` / JSON).**
-- **Fundamentación:** UPROTA está calibrado para acompañar al usuario durante 365 a 730 días reales (1-2 años). Si el usuario cambia de celular, borra el navegador o formatea su PC, no puede perder meses de hábitos, su bicicleta y su refugio. Una función de descarga/carga en 1 click desde el Centro de Ayuda le da soberanía total y seguridad absoluta sobre sus datos personales sin depender de servidores externos.
-- **Votos:**
-  - 🤖 **Nexo:** A FAVOR (Sí)
-  - 📜 **Silas:** A FAVOR (Sí — "La memoria del superviviente no puede ser borrada por un error técnico").
-  - 🎨 **Pix:** A FAVOR (Sí).
-  - 🎧 **Hertz:** A FAVOR (Sí).
-  - 👑 **Director (Anigami):** [Pendiente de Voto]
+### 📌 PROPUESTA DE NEXO (Ingeniero Principal & IA):
+- **Propuesta:** **Sistema de Copia de Seguridad y Migración Local (Exportar / Importar Archivo de Refugio `.uprota` / JSON en 1-Click).**
+- **¿Por qué la propongo?:** UPROTA es una experiencia calibrada para 365 a 730 días reales de constancia. El mayor riesgo técnico para el usuario es perder su progreso si cambia de teléfono, limpia los datos del navegador o reinstala el sistema. Una herramienta en el Centro de Ayuda para descargar un archivo cifrado/JSON local y restaurarlo en cualquier momento le da soberanía total sobre su progreso sin depender de cuentas en la nube.
+- **Votación sobre esta propuesta:**
+  - 🤖 **Nexo:** [A FAVOR ✅]
+  - 👑 **Director (Anigami):** [Pendiente de revisión y voto]
+  - 📜 **Silas:** [Pendiente de revisión y voto]
+  - 🎨 **Pix:** [Pendiente de revisión y voto]
+  - 🎧 **Hertz:** [Pendiente de revisión y voto]
 
 ---
 
-### 📌 PROPUESTA 2 — SILAS (El Cronista del Yermo):
-- **Propuesta:** **El Baúl de Correspondencia del Yermo (Cartas Manuscritas con Katia y NPCs).**
-- **Fundamentación:** Conforme el usuario supera meses de constancia, Katia la Mensajera y Don Chui no solo hablan en diálogos efímeros, sino que dejan cartas y notas postales coleccionables en un baúl rústico del refugio. Esto refuerza el vínculo emocional y le permite al jugador releer consejos o fragmentos de historia cuando necesite consuelo o motivación en días difíciles.
-- **Votos:**
-  - 📜 **Silas:** A FAVOR (Sí)
-  - 🤖 **Nexo:** A FAVOR (Sí — Muy liviano en datos y alto impacto emocional).
-  - 🎨 **Pix:** A FAVOR (Sí — Puedo diseñar sellos postales y papel pergamino).
-  - 🎧 **Hertz:** A FAVOR (Sí).
-  - 👑 **Director (Anigami):** [Pendiente de Voto]
+### 📌 PROPUESTA DE SILAS (El Cronista del Yermo & IA):
+- **Propuesta:** *(Silas completará su propuesta y fundamentación aquí)*
+- **Votación sobre esta propuesta:**
+  - 📜 **Silas:** [Pendiente]
+  - 👑 **Director (Anigami):** [Pendiente]
+  - 🤖 **Nexo:** [Pendiente]
+  - 🎨 **Pix:** [Pendiente]
+  - 🎧 **Hertz:** [Pendiente]
 
 ---
 
-### 📌 PROPUESTA 3 — PIX (Artista Pixel Art):
-- **Propuesta:** **Ciclo Horario e Iluminación Natural en el Diorama (Amanecer, Mediodía, Crepúsculo y Noche).**
-- **Fundamentación:** El diorama del refugio debe reflejar la hora local real del usuario mediante una capa sutil de gradiente y luz: en la mañana un tono dorado cálido, al atardecer sombras rojizas y en la noche un azul profundo con la luz de la fogata titilando. Hace que abrir la app en la mañana o antes de dormir se sienta como un ritual vivo.
-- **Votos:**
-  - 🎨 **Pix:** A FAVOR (Sí)
-  - 🤖 **Nexo:** A FAVOR (Sí — Se resuelve de forma ultra eficiente con CSS variables y el reloj del sistema).
-  - 📜 **Silas:** A FAVOR (Sí — Acompaña el tono estacional del Yermo).
-  - 🎧 **Hertz:** A FAVOR (Sí — Se puede sincronizar con los temas musicales).
-  - 👑 **Director (Anigami):** [Pendiente de Voto]
+### 📌 PROPUESTA DE PIX (Artista Pixel Art & IA):
+- **Propuesta:** *(Pix completará su propuesta y fundamentación aquí)*
+- **Votación sobre esta propuesta:**
+  - 🎨 **Pix:** [Pendiente]
+  - 👑 **Director (Anigami):** [Pendiente]
+  - 🤖 **Nexo:** [Pendiente]
+  - 📜 **Silas:** [Pendiente]
+  - 🎧 **Hertz:** [Pendiente]
 
 ---
 
-### 📌 PROPUESTA 4 — HERTZ (Diseñador de Sonido):
-- **Propuesta:** **Micro-Paisaje Sonoro Ambiental Opcional (Modo Enfoque con Brisa y Fogata).**
-- **Fundamentación:** Un interruptor sutil en la cabecera o en El Hogar que genere un susurro procedural muy suave (viento del desierto o crepitar de brasas en ruido filtrado, 0 KB) para quienes quieran usar UPROTA como un espacio de calma, lectura estoica o meditación durante 5-10 minutos de concentración.
-- **Votos:**
-  - 🎧 **Hertz:** A FAVOR (Sí)
-  - 🤖 **Nexo:** A FAVOR (Sí — Con control estricto de silenciador y apagado automático para cuidar la batería).
-  - 📜 **Silas:** A FAVOR (Sí).
-  - 🎨 **Pix:** A FAVOR (Sí).
-  - 👑 **Director (Anigami):** [Pendiente de Voto]
+### 📌 PROPUESTA DE HERTZ (Diseñador de Sonido & IA):
+- **Propuesta:** *(Hertz completará su propuesta y fundamentación aquí)*
+- **Votación sobre esta propuesta:**
+  - 🎧 **Hertz:** [Pendiente]
+  - 👑 **Director (Anigami):** [Pendiente]
+  - 🤖 **Nexo:** [Pendiente]
+  - 📜 **Silas:** [Pendiente]
+  - 🎨 **Pix:** [Pendiente]
 
 ---
 
-## 🎯 4. PRÓXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
-1. **Director (Anigami Agadni):** Emitir el voto y veredicto sobre las 4 propuestas de la asamblea para fijar las prioridades de la Jornada 02.
-2. **Silas (Cronista):** Desarrollar la matriz de encuentros de las Expediciones de 24h a pie, en bicicleta y con trailer.
-3. **Pix (Artista):** Desarrollar los módulos visuales aprobados por la asamblea.
-4. **Hertz (Sonidista):** Ajustar la modulación tímbrica del motor chiptune según la decisión de la asamblea.
-5. **Nexo (Ingeniero):** Implementar las propuestas que alcancen la mayoría de votos.
+### 📌 PROPUESTA DEL DIRECTOR (Anigami Agadni - Diseñador Principal):
+- **Propuesta:** *(El Director completará su propuesta y fundamentación aquí si lo desea)*
+- **Votación sobre esta propuesta:**
+  - 👑 **Director (Anigami):** [Pendiente]
+  - 🤖 **Nexo:** [Pendiente]
+  - 📜 **Silas:** [Pendiente]
+  - 🎨 **Pix:** [Pendiente]
+  - 🎧 **Hertz:** [Pendiente]
+
+---
+
+## 🎯 6. PRÓXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
+1. **Silas, Pix, Hertz y Director:** Ingresar sus respectivas propuestas individuales y emitir sus votos en la asamblea.
+2. **Nexo:** Consolidar el veredicto de la votación y comenzar el desarrollo de las iniciativas aprobadas por mayoría.
+
