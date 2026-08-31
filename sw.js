@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v2.7';
+const CACHE_NAME = 'uprota-cache-v2.8';
 const ASSETS = [
   './',
   './index.html',
@@ -25,6 +25,10 @@ const ASSETS = [
   './assets/sprites/items/item_bici_expedicion.png',
   './assets/sprites/items/item_trailer_remolque.png',
   './assets/sprites/ui/ui_transporte_bici_trailer_combo.png',
+  './assets/sprites/ui/ui_trofeo_festival_farol.png',
+  './assets/sprites/ui/ui_emblema_cadena_rota_fiesta.png',
+  './assets/sprites/ui/sprite_confeti_frame1.png',
+  './assets/sprites/ui/sprite_confeti_frame2.png',
   './assets/sprites/ui/sprite_radio_onda_frame1.png',
   './assets/sprites/ui/sprite_radio_onda_frame2.png',
   './assets/sprites/npcs/npc_lutier_anciano_idle.png',
@@ -35,6 +39,7 @@ const ASSETS = [
   './assets/sprites/npcs/npc_elena_radio_idle.png',
   './assets/sprites/npcs/npc_bebe_fitolantro.png',
   './assets/sprites/npcs/npc_nino_raiz_idle.png',
+  './js/data/musica_chiptune.js',
   './js/app.js',
   './js/core/db.js',
   './js/core/estado.js',

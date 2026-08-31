@@ -16,7 +16,11 @@ export class ModoFiestaEngine {
     } = config;
 
     ModoFiestaEngine.activo = true;
-    audioProcedural.playModoFiestaFanfarria();
+    if (typeof audioProcedural.playChiptuneTrack === 'function') {
+      audioProcedural.playChiptuneTrack('modo_fiesta');
+    } else {
+      audioProcedural.playModoFiestaFanfarria();
+    }
 
     document.body.classList.add('modo-fiesta-activo');
     ModoFiestaEngine.iniciarConfetiPixel();
@@ -113,8 +117,8 @@ export class ModoFiestaEngine {
     if (!modalContainer || !modalContent) return;
 
     const iconosPorTipo = {
-      faro: 'assets/sprites/mecanicas/faro_luz_activa.png',
-      cadena: 'assets/sprites/mecanicas/cadena_firme.png',
+      faro: 'assets/sprites/ui/ui_trofeo_festival_farol.png',
+      cadena: 'assets/sprites/ui/ui_emblema_cadena_rota_fiesta.png',
       senda: 'assets/sprites/pilares/torta_dorada_badge.png',
       general: 'assets/sprites/emojis/emociones/emoji_estrella_victoria.png'
     };
