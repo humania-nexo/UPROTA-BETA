@@ -113,22 +113,22 @@ export class ModoFiestaEngine {
     if (!modalContainer || !modalContent) return;
 
     const iconosPorTipo = {
-      faro: '🌟⛵',
-      cadena: '⛓️💥',
-      senda: '🏛️✨',
-      general: '🎉👑'
+      faro: 'assets/sprites/mecanicas/faro_luz_activa.png',
+      cadena: 'assets/sprites/mecanicas/cadena_firme.png',
+      senda: 'assets/sprites/pilares/torta_dorada_badge.png',
+      general: 'assets/sprites/emojis/emociones/emoji_estrella_victoria.png'
     };
 
-    const icono = iconosPorTipo[tipo] || '🎉✨';
+    const spriteIcono = iconosPorTipo[tipo] || 'assets/sprites/emojis/emociones/emoji_estrella_victoria.png';
 
     modalContent.innerHTML = `
       <div class="info-modal-wrap fiesta-modal-card" style="text-align: center; padding: 24px 16px; border: 3px solid var(--oro-torta); box-shadow: 0 0 35px rgba(245, 158, 11, 0.45); background: #12100e; border-radius: var(--radius-md);">
-        <div style="font-size: 2.8rem; margin-bottom: 8px;" class="fiesta-icono-rebotante">
-          ${icono}
+        <div style="margin-bottom: 8px;" class="fiesta-icono-rebotante">
+          <img src="${spriteIcono}" alt="Logro" class="pixel-icon icon-48" style="width: 48px; height: 48px; image-rendering: pixelated;">
         </div>
         
         <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--oro-torta); text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">
-          ¡FESTIVAL DEL REFUGIO &bull; MODO FIESTA!
+          FESTIVAL DEL REFUGIO &bull; VICTORIA PERSONAL
         </span>
 
         <h2 style="color: var(--oro-torta-glow); font-size: 1.35rem; margin-top: 4px; margin-bottom: 4px; font-family: var(--font-serif);">
@@ -139,22 +139,14 @@ export class ModoFiestaEngine {
           ${subtitulo}
         </div>
 
-        <div class="card-yermo" style="background: rgba(0,0,0,0.5); border-left: 3px solid var(--oro-torta); text-align: left; padding: 12px; margin-bottom: 16px;">
+        <div class="card-yermo" style="background: rgba(0,0,0,0.5); border-left: 3px solid var(--oro-torta); text-align: left; padding: 12px; margin-bottom: 18px;">
           <p style="font-size: 0.82rem; color: #e7e5e4; line-height: 1.55; margin: 0;">
             ${detalle}
           </p>
         </div>
 
-        <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 18px; font-size: 1.4rem;">
-          <span>👑</span>
-          <span>🤖</span>
-          <span>🎨</span>
-          <span>📜</span>
-          <span>🎧</span>
-        </div>
-
         <button id="btn-cerrar-modo-fiesta" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.92rem; font-weight: bold; cursor: pointer; border: none; border-radius: var(--radius-sm); background: var(--oro-torta); color: #000;">
-          ¡Honor y Fuerza! Que Continúe la Fiesta
+          Honor y Fuerza &bull; Continuar la Marcha
         </button>
       </div>
     `;

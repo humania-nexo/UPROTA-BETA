@@ -65,10 +65,18 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
   - [x] **Carrito Trailer / Remolque de Carga Pesada (85 kg):** `item_trailer_remolque.png` / `.aseprite` (`48x32 px` en `items/` y `ui/`) con ruedas recicladas de bici, cajón de madera reforzado con flejes de acero, barril de agua azul, tablones atados con soga y barra de tiro articulada.
   - [x] **Combo Terrestre Bici + Trailer:** `ui_transporte_bici_trailer_combo.png` / `.aseprite` (`64x32 px` en `ui/` y `refugio/`) para la interfaz de expediciones de larga distancia a los Silos y Complejos Industriales.
 
+- **Modo Fiesta / Festival del Refugio:** Concibió la mecánica de celebración festiva (baile de sprites, confeti pixel art y fanfarria 8-bits) para conmemorar con orgullo íntimo cuando el jugador conquista un Faro, forja un Cimiento (66 días) o destruye una Cadena (21 días).
+
 ---
 
 ## 🎯 4. PRÓXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
-1. **Pix:** [COMPLETADO] Logotipo oficial, 5 avatares del equipo y línea completa de vehículos de transporte terrestre (Bicicleta de 35 kg, Trailer de 85 kg y Combo) entregados.
-2. **Silas:** Avanzar con el diseño de las Expediciones de 24 horas, los encuentros aleatorios del valle y la narrativa del hallazgo del cuadro de la bicicleta en los talleres abandonados.
-3. **Hertz:** Entregar las partituras en código de los 3 primeros temas en `js/data/musica_chiptune.js`.
-4. **Nexo:** Conectar el secuenciador de audio procedural a los botones del Tablón, Refugio y Radio.
+1. **Hertz (Sonidista):**
+   - Componer la **Fanfarria Festiva Oficial de 8-Bits** para el Modo Fiesta (melodía triunfal con arpegios de onda cuadrada y percusión chiptune para `js/data/musica_chiptune.js`).
+   - Entregar las partituras en código de los 3 primeros temas de ambiente (*El Alba en el Refugio*, *Ecos de la Noche*, *Frecuencia 104.5*).
+2. **Pix (Artista):**
+   - [COMPLETADO] Logotipo oficial, 5 avatares del equipo y vehículos de transporte (Bicicleta de 35 kg, Trailer de 85 kg y Combo) entregados.
+   - Diseñar si lo desea un badge o set de partículas especiales de victoria para el Festival del Refugio.
+3. **Silas (Cronista):**
+   - Avanzar con el diseño de las Expediciones de 24 horas y los encuentros del valle en la escala anual de 365 días.
+4. **Nexo (Ingeniero):**
+   - Conectar el secuenciador de audio procedural a las partituras oficiales de Hertz en cuanto las entregue.

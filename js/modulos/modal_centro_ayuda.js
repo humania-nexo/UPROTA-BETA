@@ -139,12 +139,16 @@ export class ModalCentroAyuda {
 
           <!-- MODO FIESTA INTERACTIVO -->
           <div class="card-yermo" style="border-left: 3px solid #f472b6; background: rgba(244, 114, 182, 0.08); margin-bottom: 10px;">
-            <h4 style="color: #f472b6; font-size: 0.88rem; margin-bottom: 4px;">🎉 Modo Fiesta: Celebración del Refugio</h4>
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <img src="assets/sprites/emojis/emociones/emoji_estrella_victoria.png" alt="Fiesta" class="pixel-icon icon-16">
+              <h4 style="color: #f472b6; font-size: 0.88rem; margin: 0;">Festival del Refugio: Modo Fiesta</h4>
+            </div>
             <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">
-              Cuando conquistas un Faro, forjas un Cimiento a los 66 días o destruyes una Cadena de 21 días, el Refugio desata una fiesta con fanfarria 8-bits, confeti pixel art y baile de sprites.
+              Cuando conquistas un Faro, forjas un Cimiento a los 66 días o destruyes una Cadena de 21 días, el Refugio celebra con fanfarria 8-bits, confeti pixel art y baile de sprites.
             </p>
-            <button id="btn-test-modo-fiesta" class="btn-yermo-primary" style="width: 100%; padding: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #f59e0b, #ec4899); border: none; color: #fff; font-weight: bold; cursor: pointer; border-radius: var(--radius-sm);">
-              🎉 Probar Modo Fiesta (Baile & Confeti 8-Bits)
+            <button id="btn-test-modo-fiesta" class="btn-yermo-primary" style="width: 100%; padding: 8px; font-size: 0.82rem; background: linear-gradient(135deg, #f59e0b, #ec4899); border: none; color: #fff; font-weight: bold; cursor: pointer; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; gap: 6px;">
+              <img src="assets/sprites/pilares/torta_dorada_badge.png" alt="Probar" class="pixel-icon icon-16">
+              <span>Probar Modo Fiesta (Baile & Confeti 8-Bits)</span>
             </button>
           </div>
 
