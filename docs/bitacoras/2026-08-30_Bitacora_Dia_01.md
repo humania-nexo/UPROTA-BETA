@@ -88,42 +88,57 @@ Por iniciativa del Director (**Anigami Agadni**), cada integrante del equipo (1 
 - **Votación sobre esta propuesta:**
   - 🤖 **Nexo:** [A FAVOR ✅]
   - 👑 **Director (Anigami):** [Pendiente de revisión y voto]
-  - 📜 **Silas:** [Pendiente de revisión y voto]
-  - 🎨 **Pix:** [Pendiente de revisión y voto]
-  - 🎧 **Hertz:** [Pendiente de revisión y voto]
+  - 📜 **Silas:** [A FAVOR ✅] — *«Indispensable. Un viaje de transformación de 365 días debe garantizar que el progreso y los recuerdos del usuario estén 100% a salvo y bajo su control absoluto.»*
+  - 🎨 **Pix:** [A FAVOR ✅] — *«Indispensable. Nadie debe perder 365 días de hábitos por un cambio de móvil; el arte y los logros forjados deben ser eternos y portátiles.»*
+  - 🎧 **Hertz:** [A FAVOR ✅] — *«Vital para una experiencia de 365+ días; el usuario debe ser dueño absoluto de su avance sin temor a limpiezas de caché del navegador.»*
 
 ---
 
 ### 📌 PROPUESTA DE SILAS (El Cronista del Yermo & IA):
-- **Propuesta:** *(Silas completará su propuesta y fundamentación aquí)*
+- **Propuesta:** **"El Cuaderno del Náufrago / Diario Íntimo del Refugio" (Sistema de Micro-Journaling Estoico y Cápsulas de Tiempo / Cartas al Yo del Futuro).**
+- **¿Por qué la propongo?:** En la psicología de hábitos y la resiliencia humana, nada consolida más el cambio interior que poner los pensamientos por escrito en los momentos de fatiga o triunfo. Propongo integrar en **El Hogar** una herramienta íntima y minimalista:
+  1. *Micro-Journaling Nocturno de 3 Líneas:* Un espacio opcional al cerrar la jornada para responder un disparador reflexivo del Yermo (ej. *«¿Qué leño pusiste hoy para sostener tu fuego?»*, *«¿Qué carga soltaste hoy para caminar más liviano?»*).
+  2. *Cápsulas de Tiempo / Cartas al Yo del Futuro:* Al iniciar un Cimiento (66 días) o un Faro (180 días), el usuario escribe una carta breve a su "yo del futuro" con sus motivos. La carta queda sellada en un baúl virtual y solo se revela automáticamente el día que alcanza la meta, acompañada de un comentario de Don Chui o Elena.
+  3. *El Libro de la Travesía:* El juego compila los hitos y notas en una bitácora exportable y legible, permitiendo al usuario mirar atrás meses después y ver con orgullo cuánto ha madurado su refugio interior.
 - **Votación sobre esta propuesta:**
-  - 📜 **Silas:** [Pendiente]
-  - 👑 **Director (Anigami):** [Pendiente]
-  - 🤖 **Nexo:** [Pendiente]
+  - 📜 **Silas:** [A FAVOR ✅]
+  - 👑 **Director (Anigami):** [Aprobada por el Director ✅]
+  - 🤖 **Nexo:** [A FAVOR ✅] — *«100% factible y de altísimo valor psicológico. Se integra de forma limpia en El Hogar con almacenamiento liviano en IndexedDB y sellado criptográfico de fechas para las cápsulas de tiempo.»*
   - 🎨 **Pix:** [Pendiente]
   - 🎧 **Hertz:** [Pendiente]
 
 ---
 
-### 📌 PROPUESTA DE PIX (Artista Pixel Art & IA):
-- **Propuesta:** *(Pix completará su propuesta y fundamentación aquí)*
+### 📌 PROPUESTA DE PIX (Artista Pixel Art & Artista Técnico):
+- **Propuesta:** **Sistema de Ciclo Día/Noche Dinámico y Clima Estacional en el Refugio (Gradación de Iluminación Pixel Art en Tiempo Real y Partículas de Atmósfera a 0 KB).**
+- **¿Por qué la propongo?:** UPROTA no es un juego de sesiones rápidas; es un hogar que acompaña la vida real del jugador durante 365 días. Propongo que el diorama del refugio y los fondos respondan a la hora local del usuario y a la estación del año mediante tintes de iluminación CSS/Canvas procedurales:
+  1. *Amanecer (06:00 - 10:59):* Tonalidad dorada suave y neblina baja en los valles.
+  2. *Mediodía (11:00 - 17:59):* Luz cenital nítida y polvo de tierra suspendido en el aire.
+  3. *Atardecer / Crepúsculo (18:00 - 20:59):* Tonos ocres, sombras violetas alargadas y el encendido automático de la brasa del fogón.
+  4. *Noche Profunda (21:00 - 05:59):* Paleta azul noche fría (`bg_noche_estrellada`), el fogón como foco cálido principal y luciérnagas tenues.
+  Todo implementado con filtros matemáticos CSS sobre los sprites existentes y micro-partículas procedurales de 16x16, sin duplicar texturas ni añadir un solo kilobyte de peso.
 - **Votación sobre esta propuesta:**
-  - 🎨 **Pix:** [Pendiente]
-  - 👑 **Director (Anigami):** [Pendiente]
-  - 🤖 **Nexo:** [Pendiente]
-  - 📜 **Silas:** [Pendiente]
+  - 🎨 **Pix:** [A FAVOR ✅]
+  - 👑 **Director (Anigami):** [Aprobada por el Director ✅]
+  - 🤖 **Nexo:** [A FAVOR ✅] — *«100% factible. Se resuelve de forma pura mediante clases dinámicas de hora local y filtros CSS por hardware (0 KB de texturas duplicadas y fluidez total a 60 FPS en móviles).»*
+  - 📜 **Silas:** [A FAVOR ✅] — *«Una maravilla para la inmersión narrativa. Ver el sol ponerse en la pantalla mientras el jugador reflexiona al anochecer le da un alma viva al refugio.»*
   - 🎧 **Hertz:** [Pendiente]
 
 ---
 
 ### 📌 PROPUESTA DE HERTZ (Diseñador de Sonido & IA):
-- **Propuesta:** *(Hertz completará su propuesta y fundamentación aquí)*
+- **Propuesta:** **Generador de Paisajes Sonoros Ambientales Procedurales de Enfoque y Calma (Modo Fogata / Lluvia en Lámina / Portadora 104.5 MHz a 0 KB para Estudio y Meditación).**
+- **¿Por qué la propongo?:** En la psicología de hábitos, los momentos de mayor resistencia son sentarse a estudiar/leer (Pilar Mente), trabajar concentrado con las manos (Pilar Taller) o calmar la mente antes de dormir en El Hogar (Pilar Espíritu). Propongo integrar un selector ambiental con temporizador (ej. 25 min Pomodoro o continuo) que sintetice en tiempo real sonidos orgánicos reconfortantes:
+  1. *El Fogón de Mezquite:* Crepitar granular procedural con oscilaciones cálidas.
+  2. *Lluvia en Techo de Lámina:* Ruido rosa filtrado con impactos metálicos suaves.
+  3. *Portadora Calma 104.5 MHz:* Zumbido analógico cálido de baja frecuencia para aislar ruidos molestos del entorno real.
+  Todo sintetizado a **0 KB**, sin consumir datos móviles ni batería, convirtiendo a UPROTA en el refugio acústico del jugador en su vida cotidiana.
 - **Votación sobre esta propuesta:**
-  - 🎧 **Hertz:** [Pendiente]
-  - 👑 **Director (Anigami):** [Pendiente]
-  - 🤖 **Nexo:** [Pendiente]
-  - 📜 **Silas:** [Pendiente]
-  - 🎨 **Pix:** [Pendiente]
+  - 🎧 **Hertz:** [A FAVOR ✅]
+  - 👑 **Director (Anigami):** [Aprobada por el Director ✅]
+  - 🤖 **Nexo:** [A FAVOR ✅] — *«100% factible. Web Audio API permite modular el ruido térmico y granular sin archivos pesados de audio. Incluiremos temporizador de apagado automático para proteger la batería.»*
+  - 📜 **Silas:** [A FAVOR ✅] — *«Magistral para la psicología de hábitos. La concentración para estudiar o meditar se multiplica cuando el sonido del Yermo aísla al usuario del ruido del mundo.»*
+  - 🎨 **Pix:** [A FAVOR ✅] — *«Hermosa sinergia visual-auditiva. Ver el fogón encendido mientras suena el crepitar sintetizado de Hertz convertirá al refugio en un oasis de paz mental.»*
 
 ---
 
