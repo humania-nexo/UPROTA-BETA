@@ -1,94 +1,77 @@
-# Cronología Maestra de Personajes y Arcos Narrativos (Días 1 a 90+)
-### Documento Maestro de Progresión — UPROTA
-**Vincula: Documento A (Núcleo) + Documento B (Mundo) + Todas las Fichas de NPCs**
+# Cronología Maestra de Personajes y Arcos Narrativos (Escala Anual: Días 1 a 365+)
+### Documento Maestro de Progresión Estacional — UPROTA
+**Vincula: Documento A (Núcleo) + Documento B (Mundo) + Todas las Fichas de NPCs + Filosofía Antidopamínica**
 
 ---
 
-## 1. MAPA DE RUTA TEMPORAL Y NIVELES DE REFUGIO
+## 1. MAPA DE RUTA ESTACIONAL (EL AÑO COMPLETO DEL PROTA)
 
-Este documento unifica y coordina la aparición de todos los personajes del juego, garantizando que el jugador experimente un avance armónico entre la supervivencia material, la vida interior, el arte y el misterio ecológico.
+UPROTA acompaña al usuario a lo largo de un año completo de vida real (365 días) dividido en cuatro grandes estaciones psicológicas y materiales:
 
 ```
-       DÍAS 1 - 15           DÍAS 16 - 35          DÍAS 36 - 60          DÍAS 61 - 90+
- ┌─────────────────────┬─────────────────────┬─────────────────────┬─────────────────────┐
- │  FASE 0: SILENCIO   │  FASE 1: APERTURA   │  FASE 2: CONSOLID.  │  FASE 3: SIMBIOSIS  │
- │  • Don Chui (Tomo I)│  • Doña Concha      │  • Don Chui (Tomo 3)│  • El Tuerto        │
- │  • Rincón Royido    │  • Don Chui (Tomo 2)│  • Katia            │  • Fitolantros F3   │
- │  • Fitolantros F0   │  • Valeria (Singer) │  • Don Chui (Biblia)│  • Vivero Silenciado│
- │                     │  • El Lutier        │  • Elena (Radio)    │  • Niño Raíz        │
- └─────────────────────┴─────────────────────┴─────────────────────┴─────────────────────┘
+        MESES 1 - 3                 MESES 4 - 6                 MESES 7 - 9                MESES 10 - 12
+        (DÍAS 1 - 90)              (DÍAS 91 - 180)            (DÍAS 181 - 270)            (DÍAS 271 - 365+)
+ ┌───────────────────────────┬───────────────────────────┬───────────────────────────┬───────────────────────────┐
+ │   ESTACIÓN 1: DESPERTAR   │   ESTACIÓN 2: INVIERNO    │   ESTACIÓN 3: EXPEDICIÓN  │   ESTACIÓN 4: SIMBIOSIS   │
+ │ • Don Chui (Tomos 1 y 2)  │ • Don Chui (Tomo 3)       │ • Yermo Radio 104.5 (Elena│ • El Tuerto (Isla Clarión)│
+ │ • Rincón Royido (Faro 1)  │ • Mochila Costal (18 kg)  │ • La Bicicleta (35 kg, 2x)│ • Carrito Trailer (85 kg) │
+ │ • Doña Concha (Herbario)  │ • El Dilema del Lutier    │ • Concierto Lago Cisnes   │ • Elena (Arte de la Guerra│
+ │ • Valeria (Singer 12 kg)  │ • Don Chui (Biblia D180)  │ • Katia (Mapas de Risco)  │ • Vivero Silenciado (D365)│
+ └───────────────────────────┴───────────────────────────┴───────────────────────────┴───────────────────────────┘
 ```
 
 ---
 
-## 2. DESGLOSE CRONOLÓGICO DÍA POR DÍA
+## 2. DESGLOSE CRONOLÓGICO POR ESTACIONES
 
 ---
 
-### 📦 BLOQUE 1: El Despertar y los Primeros Pasos (Días 1 a 15 — Refugio Nivel 0 y 1)
-
-* **Días 1 a 2:**
-  - El Prota sobrevive con sus 3 latas frías y 4L de agua embotellada. Noches oscuras y frías. Sin fuego.
-  - *Lore Fitolantros (Fase 0):* Se escuchan crujidos lejanos en el monte. El Prota cree que son "Zombies Verdes" hostiles.
-* **Día 3 (El Punto de Inflexión):**
-  - Se agota la comida y el agua de tienda. Aparece **Don Chui** con su cojera y su delantal de lona.
-  - Entrega el **Tomo I de Supervivencia** (Fuego por fricción, filtro PET, hervido a borbotones, salmuera/llantén y semilleros).
-* **Día 7 (Evento Canon Semanal):**
-  - Ocurre **"El Rincón Royido"**: roedores contaminan las provisiones del suelo.
-  - **Día 8:** Misión Especial Correctiva $\rightarrow$ *Construcción de la Alacena Hermética Colgante*.
-  - **Desbloqueo:** Nace el **Faro de Ahorro Semestral (Obligatorio — 6 Meses, 5%)**.
+### 🍂 ESTACIÓN 1: El Despertar y la Lucha a Pie (Meses 1 a 3 — Días 1 a 90)
+* **Días 1 a 2:** Soledad inicial con 3 latas y 4L de agua. Ruptura de la ilusión de abundancia.
+* **Día 3:** Llegada de **Don Chui** con su cojera y su delantal de lona. Entrega el **Tomo I de Supervivencia** (Fuego por fricción, filtro PET y hervido).
+* **Día 7:** **"El Rincón Royido"** $\rightarrow$ Construcción de la Alacena Colgante $\rightarrow$ Inicio del **Primer Faro de Ahorro (6 Meses)**.
+* **Día 30 (Mes 1 cumplido):** Don Chui comprueba la constancia del semillero y entrega el **Tomo II** (Lazos de alambre, velas de sebo y carne seca).
+* **Día 45:** Primera visita de **Doña Concha**: Inicia el huerto medicinal y relata su primera observación pacífica de los Fitolantros.
+* **Día 60-70 (Mes 2):** **Valeria (La Costurera)** activa la **Misión Singer** $\rightarrow$ Desbloqueo del **Bolso de Lona Reforzado (12 kg)**.
 
 ---
 
-### 🌿 BLOQUE 2: Raíces, Agujas y Música (Días 16 a 35 — Refugio Nivel 2 y 3)
-
-* **Días 18 a 20:**
-  - Regresa **Don Chui**, comprueba el fuego y los semilleros, y entrega el **Tomo II** (Lazos de alambre, huerto en cubetas, velas de sebo, cecina con sal y afilado de cuchillos).
-* **Día 20:**
-  - Visita de **Doña Concha**: Enseña a clasificar hierbas medicinales.
-  - *Grieta en los Fitolantros (Fase 1):* Doña Concha cuenta que los vio al amanecer haciendo fotosíntesis en silencio: *«No comen gente, mijo; están rezándole al sol»*.
-* **Días 22 a 25:**
-  - Llega **Valeria (La Costurera)**: Critica la bolsa rota del Prota y activa la **Misión Especial Singer** para rescatar la máquina de coser a pedal.
-  - *Desbloqueo:* Bolso Reforzado (12 kg de capacidad).
-* **Días 28 a 32:**
-  - Aparece **El Lutier Anciano**: Pide una donación importante de madera para su orquesta.
-  - *Dilema Moral del Ladrón Atrapado:* Caminos A (Entregar a autoridad), B (Hacerlo trabajar) o C (Perdonar y donar).
+### ❄️ ESTACIÓN 2: La Prueba del Invierno y el Rescate del Arte (Meses 4 a 6 — Días 91 a 180)
+* **Día 100-110:** La rutina se vuelve pesada. El jugador experimenta la fatiga del hábito.
+* **Día 120 (Mes 4):** Fabricación de la **Mochila Costal con Correas de Auto (18 kg)**. Radio de expedición ampliado a 8 km.
+* **Día 130-140:** **Don Chui** entrega el **Tomo III** (Horno de Cob, descarte *first-flush*, lejía de ceniza y deshidratador solar).
+* **Día 150 (Mes 5):** Aparición de **El Lutier Anciano** y el dilema del ladrón de madera (Rigor vs. Justicia Práctica vs. Donación de Gracia).
+* **Día 180 (Mes 6 — Gran Hito del Semestre):**
+  - Culminación del Primer Faro de Ahorro.
+  - **Don Chui** entrega la **Biblia de tapas de cuero gastadas** (+1 Espíritu) y revela su fe profunda.
+  - Se desbloquean los componentes para la Radio de Onda Corta.
 
 ---
 
-### 📻 BLOQUE 3: Ecos de Radio y la Revelación (Días 36 a 60 — Refugio Nivel 4 y 5)
-
-* **Días 35 a 40:**
-  - Primera visita rápida de **Katia (La Mensajera)**: Evalúa el estado físico del Prota (Pilar Cuerpo), ofrece atajos de expedición y mapas topográficos.
-* **Días 40 a 45:**
-  - **Don Chui** entrega el **Tomo III** (Horno de cob de alta masa térmica, canaleta con descarte *first-flush*, lejía de potasa desinfectante y deshidratador solar).
-* **Días 45 a 55:**
-  - Si el jugador donó madera al Lutier: Regresa con su orquesta tocando *El Lago de los Cisnes* y se instala en el refugio (+1 Moral cada 3 días).
-* **Día 60 (Fin de Fase 0 / Gran Hito Espiritual):**
-  - **Don Chui** entrega **la Biblia de tapas de cuero gastadas** (+1 Espíritu, primer Objeto de Sabiduría Diaria) y revela con gozo que su Patrón es Dios.
-  - Se habilitan los componentes para reparar la **Radio de Onda Corta (Fase 1 — 104.5 MHz)**.
-  - Se empieza a escuchar la voz de **Elena (Sierra-Uno)** en las noches del valle.
+### 🌸 ESTACIÓN 3: Las Dos Ruedas y la Voz del Risco (Meses 7 a 9 — Días 181 a 270)
+* **Día 190-200:** Primera sintonía clara de **Yermo Radio (104.5 MHz)** con la voz de **Elena (Sierra-Uno)**.
+* **Día 210-230:** Si el jugador donó madera al Lutier: Regresa con su orquesta tocando *El Lago de los Cisnes* (+1 Moral cada 3 días).
+* **Día 240 (Mes 8 — EL GRAN SALTO MECÁNICO):**
+  - Finalización de la restauración de **La Bicicleta de Acero Cromoly (35 kg, Velocidad x2.0, Radio: 20 km)** con Don Chui y Valeria.
+* **Día 250-260:** Encuentro con **Katia la Mensajera**, quien premia la tracción física del jugador con mapas topográficos de montaña.
 
 ---
 
-### 🌳 BLOQUE 4: El Origen, la Elección y la Simbiosis (Días 61 a 90+ — Refugio Nivel 6 al 10)
-
-* **Días 65 a 75:**
-  - **Elena** anuncia la red WAN local (Fase 2). Al visitarla en el Risco, entrega el segundo Objeto de Sabiduría Diaria: **"El Arte de la Guerra" de Sun Tzu** (+1 Mente).
-  - Llega **El Tuerto** con la mochila de la Isla Clarión: Revela el Proyecto Edén de Elias Voss (2031-2038). El juego renombra oficialmente a los "Verdes" como **Fitolantros**.
-* **Días 75 a 85:**
-  - *El Lutier pide partir en "La Gira":* El Prota experimenta el desapego amoroso de dejar partir la música hacia otros refugios.
-* **Día 90 (EVENTO CANON CUMBRE): "El Vivero Silenciado"**
-  - Siguiendo columnas de humo humano, el Prota encuentra un campamento fitolantro quemado y un **Bebé Fitolantro de 40 cm** llorando como hojas secas en una cueva de raíces.
-  - **Decisión A (Compasión Inmediata):** Lo lleva al refugio $\rightarrow$ Lo cuida vinculándolo a su trote de sol matutino $\rightarrow$ Evoluciona a **Niño Raíz** $\rightarrow$ Desbloquea el Cimiento *"Jardín Mixto"* $\rightarrow$ Camino al **Final C (Simbiosis Universal)**.
-  - **Decisión B (Duda Humana):** Lo deja con dolor $\rightarrow$ Semanas después, **Doña Concha** activa *"El Sendero de Vuelta"* para permitir una redención real.
+### ☀️ ESTACIÓN 4: La Madurez, la Carga Pesada y la Simbiosis (Meses 10 a 12 — Días 271 a 365+)
+* **Día 280-300:** **Elena** convoca a los supervivientes a la red comunitaria. Al visitarla en la cumbre del Risco, entrega el libro **"El Arte de la Guerra" de Sun Tzu** (+1 Mente).
+* **Día 310-320:** **El Tuerto** llega con el registro de la Isla Clarión de Elias Voss. Revelación oficial del Proyecto Edén y renombramiento de los Fitolantros.
+* **Día 330 (Mes 11):** Forja del **Carrito Trailer / Remolque de Carga Pesada (85 kg, Radio: 35 km)**. Se abre la Cantera de Yeso y los transportes industriales.
+* **Día 365 (Fin del Año 1 — EVENTO CANON CUMBRE): "El Vivero Silenciado"**
+  - Hallazgo del campamento fitolantro quemado y rescate del **Bebé Fitolantro de 40 cm**.
+  - Su adopción y cuidado abre el **Año 2 (Días 366 a 730)** con la crianza del Niño Raíz, el cimiento *"Jardín Mixto"* y la marcha hacia el **Final C (Simbiosis Universal)**.
 
 ---
 
-## 3. TABLA RESUMEN DE OBJETOS DE SABIDURÍA DIARIA
+## 3. TABLA DE PROGRESIÓN TEMPORAL DE OBJETOS DE SABIDURÍA
 
-| Objeto | Pilar | NPC Portador | Desbloqueo | Botón Pop-up |
+| Objeto | Pilar | NPC Portador | Desbloqueo Realista | Botón Pop-up |
 |---|---|---|---|---|
-| **Biblia de notas gastadas** | +1 Espíritu | Don Chui | Día 60 | `"Amén"` |
-| **El Arte de la Guerra** | +1 Mente | Elena (Radio) | Nivel 5 (Fase 2) | `"Leído"` |
-| **Herbario Ilustrado del Valle** | +1 Espíritu / Mente | Doña Concha | Nivel 6 | `"Leído"` |
+| **Manuales de Supervivencia I, II y III** | +1 Mente | Don Chui | Meses 1, 1 y 4 (Días 3, 30 y 130) | `"Leído"` |
+| **Herbario Ilustrado del Valle** | +1 Espíritu / Mente | Doña Concha | Mes 2 (Día 45) | `"Leído"` |
+| **Biblia de notas gastadas** | +1 Espíritu | Don Chui | Mes 6 (Día 180 — Gran Faro) | `"Amén"` |
+| **El Arte de la Guerra** | +1 Mente | Elena (Radio) | Mes 10 (Día 290) | `"Leído"` |

@@ -31,10 +31,11 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
 - **Animaciones y UI:** Micro-animacion de ondas de radio en 2 frames (sprite_radio_onda_frame1/2.png) y el set de mas de 40 emojis retro.
 
 ### Silas - Arquitecto Narrativo / El Cronista del Yermo:
-- **Cronologia Maestra de Triggers (Dias 1 a 90+):** Documento maestro UPROTA_Cronologia_Arcos_NPCs.md con las condiciones de desbloqueo, bonos mecanicos y arcos de cada NPC.
-- **Catalogo de Sabiduria Diaria:** Los 12 versiculos biblicos y tratados clasicos con notas manuscritas al margen (notaChui, notaElena, notaConcha).
+- **Cronologia Maestra Estacional (Dias 1 a 365+):** Documento maestro `UPROTA_Cronologia_Arcos_NPCs.md` reajustado a una escala anual y no-speedrun de 4 estaciones (Meses 1-3 Despertar, Meses 4-6 Invierno/Faro semestral, Meses 7-9 Bicicleta y Radio, Meses 10-12 Trailer y Vivero Silenciado).
+- **Progresión de Transporte y Expediciones de 24h a Escala Anual:** Documento maestro `UPROTA_Progresion_Transporte_y_Expediciones_24h.md` y dataset `eventos_ruta_24h.js` con la curva de carga pausada (Bolsa 8kg en Mes 1, Bolso Singer 12kg en Mes 2, Mochila Costal 18kg en Mes 4, Bicicleta Cromoly 35kg en Mes 8 y Carrito Trailer 85kg en Mes 11).
+- **Catalogo de Sabiduria Diaria:** Los versiculos biblicos y tratados clasicos con notas manuscritas distribuidos a lo largo del año (notaChui, notaElena, notaConcha).
 - **Guiones de Radio 104.5 MHz:** 7 boletines nocturnos de Elena, Don Chui y El Tuerto con consejos de supervivencia, alertas climaticas y contencion emocional.
-- **Dilema del Lutier (dialogos_lutier.js):** Estructuracion de las 3 ramas morales (Rigor, Trabajo Compensatorio y Donacion de Gracia) con sus ecos de radio diferidos y el Concierto de Tchaikovsky en Dia 55.
+- **Dilema del Lutier (dialogos_lutier.js):** Estructuracion de las 3 ramas morales en Mes 5 con el Concierto de Tchaikovsky en Mes 7.
 
 ### Hertz - Disenador de Sonido y Musico Chiptune:
 - **Incorporacion e Investigacion:** Desarrollo el documento maestro UPROTA_Paisaje_Sonoro_y_Arquitectura_Audio.md.
