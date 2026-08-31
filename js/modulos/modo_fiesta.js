@@ -121,10 +121,10 @@ export class ModoFiestaEngine {
 
     const icono = iconosPorTipo[tipo] || '🎉✨';
 
-    modalContent.innerHTML = 
+    modalContent.innerHTML = `
       <div class="info-modal-wrap fiesta-modal-card" style="text-align: center; padding: 24px 16px; border: 3px solid var(--oro-torta); box-shadow: 0 0 35px rgba(245, 158, 11, 0.45); background: #12100e; border-radius: var(--radius-md);">
         <div style="font-size: 2.8rem; margin-bottom: 8px;" class="fiesta-icono-rebotante">
-          
+          ${icono}
         </div>
         
         <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--oro-torta); text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">
@@ -132,16 +132,16 @@ export class ModoFiestaEngine {
         </span>
 
         <h2 style="color: var(--oro-torta-glow); font-size: 1.35rem; margin-top: 4px; margin-bottom: 4px; font-family: var(--font-serif);">
-          
+          ${titulo}
         </h2>
         
         <div style="font-size: 0.92rem; color: #fff; font-weight: bold; margin-bottom: 14px;">
-          
+          ${subtitulo}
         </div>
 
         <div class="card-yermo" style="background: rgba(0,0,0,0.5); border-left: 3px solid var(--oro-torta); text-align: left; padding: 12px; margin-bottom: 16px;">
           <p style="font-size: 0.82rem; color: #e7e5e4; line-height: 1.55; margin: 0;">
-            
+            ${detalle}
           </p>
         </div>
 
@@ -157,7 +157,7 @@ export class ModoFiestaEngine {
           ¡Honor y Fuerza! Que Continúe la Fiesta
         </button>
       </div>
-    ;
+    `;
 
     modalContainer.classList.remove('hidden');
 
