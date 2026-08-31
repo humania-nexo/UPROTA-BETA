@@ -1,4 +1,4 @@
-﻿import { audioProcedural } from '../core/audio_procedural.js';
+import { audioProcedural } from '../core/audio_procedural.js';
 
 /**
  * Modal: Centro de Ayuda, Información, Instalador PWA, FAQ y Créditos Oficiales
@@ -227,8 +227,8 @@ export class ModalCentroAyuda {
               </div>
               <div>
                 <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin: 0;">Anigami Agadni</h4>
-                <div style="font-size: 0.72rem; color: #fff; font-weight: 600;">Director, Diseñador Principal & Creador</div>
-                <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 2px;">Visión humana, arquitectura de hábitos, liderazgo ético y propósito supremo.</div>
+                <div style="font-size: 0.72rem; color: #fff; font-weight: 600;">Director & Diseñador Principal</div>
+                <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 2px;">La mente que soñó UPROTA. Visión humana, psicología de hábitos y liderazgo del equipo.</div>
               </div>
             </div>
 

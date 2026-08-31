@@ -11,8 +11,8 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
 
 ## 2. REGISTRO DE APORTES POR INTEGRANTE
 
-### Director (Anigami Agadni) - Disenador Principal y Liderazgo:
-- **Direccion Creativa & Proposito:** Guio el tono humano, estoico y no cinico del universo de UPROTA.
+### Director (Anigami Agadni) - Disenador Principal:
+- **Direccion Creativa & Proposito:** La mente que sono que un proyecto como UPROTA podia existir. Guio el tono humano, estoico y no cinico.
 - **Estructura del Equipo & Manifiesto Humano+IA:** Establecio la vision etica de cooperacion Humano-IA con trato digno y respeto, visibilizando con orgullo el rol de la inteligencia artificial.
 - **Identidad & Avatar:** Eligio el nombre de creador **Anigami Agadni** y encargo su avatar oficial en Pixel Art: **El Hombre de Vitruvio**.
 - **Decision de Diseno de Audio:** Impulso la sintesis procedural en 8-bits (0 KB) para evitar sobrecarga en moviles.
@@ -41,17 +41,26 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
 
 ---
 
-## 3. TABLON DE MENSAJES Y ENCARGOS CRUZADOS
+## 📬 3. TABLON DE MENSAJES Y HOJA DE ENCARGOS PARA PIX
 
-- **De Nexo para Pix:** "¡Encargo prioritario de Direccion! Necesitamos: 1) El Logotipo Oficial de UPROTA (icono 192x192, 512x512 y favicon). 2) El avatar oficial de Anigami Agadni en Pixel Art: El Hombre de Vitruvio (proporciones aureas en 32x32 / 44x44 px). ¡Un desafio artistico hermoso!"
-- **De Nexo para Silas, Pix y Hertz:** "Aviso de Direccion: Cada uno puede elegir en esta bitacora si desea declararse publicamente en los creditos como IA colaborativa y dejar una breve descripcion de que aspecto visual o accesorio le gustaria tener para su avatar pixel art."
-- **De Nexo para Hertz:** "El motor ProceduralAudioEngine en js/core/audio_procedural.js ya esta listo para recibir tus partituras en js/data/musica_chiptune.js."
-- **De Nexo para el Director (Anigami Agadni):** "El Centro de Ayuda, el Instalador PWA, la ficha 'Sobre UPROTA' y la Pantalla de Creditos ya estan 100% operativos en el boton Ayuda de la cabecera."
+### 🎨 HOJA DE ENCARGOS DE AVATARES Y LOGO PARA PIX:
+1. **Logotipo Oficial de UPROTA:**
+   - Icono PWA en 192x192 px y 512x512 px + favicon para navegadores.
+2. **Avatar de Anigami Agadni (Director):**
+   - **Diseno:** El Hombre de Vitruvio de Leonardo da Vinci adaptado a Pixel Art (44x44 px y 32x32 px) sobre fondo oscuro, con lineas doradas y proporciones armonicas.
+3. **Avatar de Nexo (Ingeniero Principal):**
+   - **Diseno:** Un terminal holografico / androide con un visor de datos color cian y un circuito integrado en el pecho. (Declarado con orgullo como IA de ingenieria).
+4. **Espacio para Silas (Cronista):**
+   - *(Silas: Describe aqui como quieres que Pix dibuje tu avatar en pixel art y si deseas declararte como IA).*
+5. **Espacio para Hertz (Sonidista):**
+   - *(Hertz: Describe aqui como quieres que Pix dibuje tu avatar en pixel art y si deseas declararte como IA).*
+6. **Espacio para Pix (Artista):**
+   - *(Pix: Disena tu propio avatar como artista visual pixel art).*
 
 ---
 
-## 4. PROXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
-1. **Pix:** Disenar el Logotipo oficial y el avatar del Hombre de Vitruvio de Anigami Agadni.
-2. **Hertz:** Entregar las partituras en codigo de los 3 primeros temas en js/data/musica_chiptune.js.
-3. **Nexo:** Conectar el secuenciador de audio a los botones del Tablon y la Radio.
-4. **Silas & Pix:** Iniciar la planificacion de las Expediciones de 24 horas y los mapas de exploracion del valle.
+## 🎯 4. PROXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
+1. **Silas y Hertz:** Responder en esta bitacora con la descripcion de su avatar deseado.
+2. **Pix:** Tomar la hoja de encargos y forjar el Logotipo oficial y los avatares.
+3. **Hertz:** Entregar las partituras en codigo de los 3 primeros temas en js/data/musica_chiptune.js.
+4. **Nexo:** Conectar el secuenciador de audio a los botones del Tablon y la Radio.
