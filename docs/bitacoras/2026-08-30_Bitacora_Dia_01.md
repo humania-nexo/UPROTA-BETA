@@ -60,14 +60,15 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
 6. **Avatar de Pix (Artista Pixel Art & Artista Técnico):**
    - [x] **El Pintor del Yermo:** Boina desgastada, lupas de precisión para micro-píxeles con reflejo de los 4 colores de los pilares, bufanda manchada de óleo y pincel maestro brillante (`assets/sprites/avatars/avatar_pix_44x44.png` y `_32x32.png`).
 
----
-
-- **Progresión de Transporte Make-to-Win (De Bolsa a Bici-Trailer):** Estableció la visión de progresión de carga terrestre: desde la humilde bolsa ecológica rota (8 kg), pasando por la restauración en taller de una **Bicicleta del viejo mundo** (35 kg), hasta la construcción de un **Carrito Trailer / Remolque de Carga Pesada** (85 kg) para transportar materiales pesados y botín masivo.
+- **Progresión de Transporte Make-to-Win (De Bolsa a Bici-Trailer) — [✅ ENTREGADA AL 100%]:**
+  - [x] **Bicicleta de Expedición (35 kg):** `item_bici_expedicion.png` / `.aseprite` (`48x32 px` en `items/` y `ui/`) con cuadro de acero soldado, alforjas dobles de lona encerada marrón, faro dínamo frontal y soporte para machete.
+  - [x] **Carrito Trailer / Remolque de Carga Pesada (85 kg):** `item_trailer_remolque.png` / `.aseprite` (`48x32 px` en `items/` y `ui/`) con ruedas recicladas de bici, cajón de madera reforzado con flejes de acero, barril de agua azul, tablones atados con soga y barra de tiro articulada.
+  - [x] **Combo Terrestre Bici + Trailer:** `ui_transporte_bici_trailer_combo.png` / `.aseprite` (`64x32 px` en `ui/` y `refugio/`) para la interfaz de expediciones de larga distancia a los Silos y Complejos Industriales.
 
 ---
 
 ## 🎯 4. PRÓXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
-1. **Pix:** [COMPLETADO] Logotipo oficial y 5 avatares del equipo entregados. **Nuevo encargo:** Diseñar sprites de la Bicicleta de expedición y el Carrito Trailer Remolque de carga.
+1. **Pix:** [COMPLETADO] Logotipo oficial, 5 avatares del equipo y línea completa de vehículos de transporte terrestre (Bicicleta de 35 kg, Trailer de 85 kg y Combo) entregados.
 2. **Silas:** Avanzar con el diseño de las Expediciones de 24 horas, los encuentros aleatorios del valle y la narrativa del hallazgo del cuadro de la bicicleta en los talleres abandonados.
 3. **Hertz:** Entregar las partituras en código de los 3 primeros temas en `js/data/musica_chiptune.js`.
 4. **Nexo:** Conectar el secuenciador de audio procedural a los botones del Tablón, Refugio y Radio.

@@ -12,9 +12,17 @@ export class VistaRefugio {
     this.contenedor = contenedor;
   }
 
+  obtenerIconoTransporte(tipoBolsa = '') {
+    const t = (tipoBolsa || '').toLowerCase();
+    if (t.includes('trailer') || t.includes('remolque')) return 'assets/sprites/ui/ui_transporte_bici_trailer_combo.png';
+    if (t.includes('bici') || t.includes('bicicleta')) return 'assets/sprites/items/item_bici_expedicion.png';
+    return 'assets/sprites/items/caja_expedicion.png';
+  }
+
   render(estado) {
     const infoNivel = estadoApp.infoNivelRefugio;
     const evaluacionSubida = RefugioMundoEngine.puedeSubirNivel(estado.nivelRefugio, estado.recursos);
+    const iconoTransporte = this.obtenerIconoTransporte(estado.bolsa.tipo);
 
     this.contenedor.innerHTML = `
       <div class="refugio-hero">
@@ -57,11 +65,11 @@ export class VistaRefugio {
         `}
       </div>
 
-      <!-- PANEL DE BOLSA DE PESO REAL -->
+      <!-- PANEL DE BOLSA / TRANSPORTE DE PESO REAL -->
       <div class="bolsa-panel">
         <div class="bolsa-head">
           <span class="bolsa-titulo" style="display: flex; align-items: center; gap: 6px;">
-            <img src="assets/sprites/items/caja_expedicion.png" alt="Bolsa" class="pixel-icon icon-20">
+            <img src="${iconoTransporte}" alt="Transporte" class="pixel-icon icon-24" style="image-rendering: pixelated;">
             <span>${estado.bolsa.tipo}</span>
           </span>
           <span class="bolsa-peso-badge">${estado.bolsa.pesoActualKg} / ${infoNivel.capacidadBolsaKg} kg</span>
