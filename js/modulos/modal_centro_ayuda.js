@@ -32,7 +32,9 @@ export class ModalCentroAyuda {
   }
 
   static renderContenido(container) {
-    container.innerHTML = 
+    const tab = ModalCentroAyuda.tabActivo;
+
+    container.innerHTML = `
       <div class="info-modal-wrap" style="max-height: 85vh; overflow-y: auto; padding-right: 4px;">
         <button class="modal-close-btn" id="btn-cerrar-ayuda" style="position: absolute; top: 12px; right: 12px;">&times;</button>
         
@@ -41,32 +43,32 @@ export class ModalCentroAyuda {
           <span style="font-size: 1.3rem;">ℹ️</span>
           <div>
             <h3 style="color: var(--text-primary); font-size: 1.05rem; margin: 0;">Centro de Información & Ayuda</h3>
-            <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--oro-torta);">UPROTA v2.2 &bull; Build 2026.08.30</span>
+            <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--oro-torta);">UPROTA v2.3 &bull; Build 2026.08.30</span>
           </div>
         </div>
 
         <!-- PESTAÑAS INTERNAS -->
         <div style="display: flex; gap: 4px; overflow-x: auto; margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.05);">
-          <button class="btn-ayuda-tab " data-tab="sobre" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ; color: ; font-weight: bold; cursor: pointer;">
+          <button class="btn-ayuda-tab ${tab === 'sobre' ? 'active' : ''}" data-tab="sobre" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'sobre' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'sobre' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer;">
             📖 Sobre UPROTA
           </button>
-          <button class="btn-ayuda-tab " data-tab="faq" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ; color: ; font-weight: bold; cursor: pointer;">
+          <button class="btn-ayuda-tab ${tab === 'faq' ? 'active' : ''}" data-tab="faq" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'faq' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'faq' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer;">
             ❓ FAQ
           </button>
-          <button class="btn-ayuda-tab " data-tab="instalacion" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ; color: ; font-weight: bold; cursor: pointer;">
+          <button class="btn-ayuda-tab ${tab === 'instalacion' ? 'active' : ''}" data-tab="instalacion" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'instalacion' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'instalacion' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer;">
             📲 Instalar App
           </button>
-          <button class="btn-ayuda-tab " data-tab="creditos" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ; color: ; font-weight: bold; cursor: pointer;">
+          <button class="btn-ayuda-tab ${tab === 'creditos' ? 'active' : ''}" data-tab="creditos" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'creditos' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'creditos' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer;">
             👑 Créditos
           </button>
         </div>
 
         <!-- CUERPO SEGÚN PESTAÑA -->
         <div id="cuerpo-tab-ayuda">
-          
+          ${ModalCentroAyuda.getHtmlTab(tab)}
         </div>
       </div>
-    ;
+    `;
 
     // Eventos
     container.querySelector('#btn-cerrar-ayuda')?.addEventListener('click', () => {
@@ -112,7 +114,7 @@ export class ModalCentroAyuda {
   static getHtmlTab(tab) {
     switch (tab) {
       case 'sobre':
-        return 
+        return `
           <div class="card-yermo" style="border-left: 3px solid var(--oro-torta); background: rgba(0,0,0,0.3); margin-bottom: 10px;">
             <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin-bottom: 4px;">¿Qué es UPROTA?</h4>
             <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
@@ -139,10 +141,10 @@ export class ModalCentroAyuda {
               A diferencia de las apps que castigan al usuario con números rojos y culpa cuando tiene un día difícil, UPROTA valida tu esfuerzo humano acumulado. Si tropiezas, el refugio te resguarda en <em>El Hogar</em> para que descanses y vuelvas a empezar con dignidad.
             </p>
           </div>
-        ;
+        `;
 
       case 'faq':
-        return 
+        return `
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--border-subtle);">
               <div class="faq-pregunta" style="font-size: 0.84rem; font-weight: bold; color: var(--oro-torta); cursor: pointer; display: flex; justify-content: space-between;">
@@ -184,10 +186,10 @@ export class ModalCentroAyuda {
               </div>
             </div>
           </div>
-        ;
+        `;
 
       case 'instalacion':
-        return 
+        return `
           <div class="card-yermo" style="border-left: 3px solid #4ade80; background: rgba(0,0,0,0.3); margin-bottom: 12px;">
             <h4 style="color: #4ade80; font-size: 0.92rem; margin-bottom: 4px;">📲 Instalar en Pantalla Principal (PWA)</h4>
             <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.45;">
@@ -201,17 +203,17 @@ export class ModalCentroAyuda {
           <div class="card-yermo" style="background: rgba(0,0,0,0.2);">
             <h4 style="font-size: 0.84rem; color: var(--text-primary); margin-bottom: 6px;">⚙️ Estado Técnico del Sistema:</h4>
             <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); line-height: 1.6;">
-              <div>• <strong>Versión:</strong> UPROTA v2.2</div>
+              <div>• <strong>Versión:</strong> UPROTA v2.3</div>
               <div>• <strong>Compilación:</strong> 2026.08.30-prod</div>
               <div>• <strong>Almacenamiento:</strong> IndexedDB Local (Persistente)</div>
-              <div>• <strong>Caché Offline:</strong> Service Worker Activo (v2.1)</div>
+              <div>• <strong>Caché Offline:</strong> Service Worker Activo (v2.3)</div>
               <div>• <strong>Motor de Audio:</strong> Web Audio API Chiptune (0 KB)</div>
             </div>
           </div>
-        ;
+        `;
 
       case 'creditos':
-        return 
+        return `
           <div class="card-yermo" style="border-left: 3px solid var(--oro-torta); background: rgba(0,0,0,0.4); margin-bottom: 12px;">
             <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin-bottom: 4px;">🤝 Manifiesto de Cooperación Humano + IA</h4>
             <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; font-style: italic;">
@@ -270,7 +272,7 @@ export class ModalCentroAyuda {
               </div>
             </div>
           </div>
-        ;
+        `;
     }
   }
 }
