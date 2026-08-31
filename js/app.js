@@ -10,6 +10,7 @@ import { VistaComunicacion } from './modulos/vista_comunicacion.js';
 import { VistaHogar } from './modulos/vista_hogar.js';
 import { ModalSabiduria, TourGuiado, ModalBitacoraMatutina } from './modulos/modal_sabiduria.js';
 import { ModalOnboarding } from './modulos/modal_onboarding.js';
+import { ModalCentroAyuda } from './modulos/modal_centro_ayuda.js';
 
 class App {
   constructor() {
@@ -18,7 +19,10 @@ class App {
   }
 
   async iniciar() {
-    console.log('Iniciando UPROTA v1.0...');
+    console.log('Iniciando UPROTA v2.2...');
+
+    // Inicializar listener de instalación PWA
+    ModalCentroAyuda.init();
 
     // Instanciar vistas
     this.vistas = {
@@ -45,7 +49,7 @@ class App {
     // 2. Abrir Bitácora Matutina si cambió de día real
     ModalBitacoraMatutina.mostrarSiCorresponde();
 
-    // 3. Abrir pop-up de Sabiduría Diaria si corresponde
+    // 3. Abrir Versículo / Sabiduría Diaria
     ModalSabiduria.mostrarSiCorresponde();
 
     // 4. Verificar si corresponde el Tour Guiado
@@ -67,6 +71,13 @@ class App {
     const btnHogarTop = document.getElementById('btn-ir-hogar-top');
     if (btnHogarTop) {
       btnHogarTop.addEventListener('click', () => this.cambiarTab('hogar'));
+    }
+
+    const btnCentroAyuda = document.getElementById('btn-centro-ayuda');
+    if (btnCentroAyuda) {
+      btnCentroAyuda.addEventListener('click', () => {
+        ModalCentroAyuda.abrir('sobre');
+      });
     }
 
     const btnGuia = document.getElementById('btn-abrir-guia');
