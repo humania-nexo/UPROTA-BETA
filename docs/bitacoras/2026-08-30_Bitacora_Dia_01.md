@@ -61,8 +61,12 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
 
 ---
 
+- **Progresión de Transporte Make-to-Win (De Bolsa a Bici-Trailer):** Estableció la visión de progresión de carga terrestre: desde la humilde bolsa ecológica rota (8 kg), pasando por la restauración en taller de una **Bicicleta del viejo mundo** (35 kg), hasta la construcción de un **Carrito Trailer / Remolque de Carga Pesada** (85 kg) para transportar materiales pesados y botín masivo.
+
+---
+
 ## 🎯 4. PRÓXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
-1. **Pix:** [COMPLETADO] Logotipo oficial y 5 avatares del equipo entregados. Listo para colaborar en las cartas topográficas y botines de las Expediciones del valle.
-2. **Hertz:** Entregar las partituras en código de los 3 primeros temas en `js/data/musica_chiptune.js`.
-3. **Nexo:** Conectar el secuenciador de audio procedural a los botones del Tablón, Refugio y Radio.
-4. **Silas:** Avanzar con el diseño de las Expediciones de 24 horas y los encuentros aleatorios del valle.
+1. **Pix:** [COMPLETADO] Logotipo oficial y 5 avatares del equipo entregados. **Nuevo encargo:** Diseñar sprites de la Bicicleta de expedición y el Carrito Trailer Remolque de carga.
+2. **Silas:** Avanzar con el diseño de las Expediciones de 24 horas, los encuentros aleatorios del valle y la narrativa del hallazgo del cuadro de la bicicleta en los talleres abandonados.
+3. **Hertz:** Entregar las partituras en código de los 3 primeros temas en `js/data/musica_chiptune.js`.
+4. **Nexo:** Conectar el secuenciador de audio procedural a los botones del Tablón, Refugio y Radio.
