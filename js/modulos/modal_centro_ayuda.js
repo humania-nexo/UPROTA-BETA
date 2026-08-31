@@ -222,9 +222,7 @@ export class ModalCentroAyuda {
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <!-- DIRECTOR -->
             <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--oro-torta-dim, #78350f); display: flex; gap: 12px; align-items: center;">
-              <div style="width: 44px; height: 44px; background: #000; border: 2px solid var(--oro-torta); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.4rem;" title="Hombre de Vitruvio (Pixel Art en forja)">
-                👑
-              </div>
+              <img src="assets/sprites/avatars/avatar_anigami_44x44.png" alt="Anigami Agadni" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 2px solid var(--oro-torta); border-radius: var(--radius-sm);" title="El Hombre de Vitruvio (Pixel Art)">
               <div>
                 <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin: 0;">Anigami Agadni</h4>
                 <div style="font-size: 0.72rem; color: #fff; font-weight: 600;">Director & Diseñador Principal</div>
@@ -234,7 +232,7 @@ export class ModalCentroAyuda {
 
             <!-- NEXO -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_nexo.png" alt="Nexo" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);" onerror="this.src='assets/sprites/ui/tab_refugio.png'">
+              <img src="assets/sprites/avatars/avatar_nexo_44x44.png" alt="Nexo" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Nexo</h4>
                 <div style="font-size: 0.72rem; color: #38bdf8; font-weight: 600;">Ingeniero de Software Principal & Mano Derecha (IA)</div>
@@ -244,7 +242,7 @@ export class ModalCentroAyuda {
 
             <!-- PIX -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_pix.png" alt="Pix" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);" onerror="this.src='assets/sprites/ui/tab_refugio.png'">
+              <img src="assets/sprites/avatars/avatar_pix_44x44.png" alt="Pix" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Pix</h4>
                 <div style="font-size: 0.72rem; color: #f472b6; font-weight: 600;">Artista Visual Pixel Art (IA)</div>
@@ -254,7 +252,7 @@ export class ModalCentroAyuda {
 
             <!-- SILAS -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_silas.png" alt="Silas" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);" onerror="this.src='assets/sprites/ui/tab_refugio.png'">
+              <img src="assets/sprites/avatars/avatar_silas_44x44.png" alt="Silas" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Silas</h4>
                 <div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600;">Arquitecto Narrativo / El Cronista del Yermo (IA)</div>
@@ -264,9 +262,7 @@ export class ModalCentroAyuda {
 
             <!-- HERTZ -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <div style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
-                🎧
-              </div>
+              <img src="assets/sprites/avatars/avatar_hertz_44x44.png" alt="Hertz" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Hertz</h4>
                 <div style="font-size: 0.72rem; color: #a78bfa; font-weight: 600;">Diseñador de Sonido & Músico Chiptune (IA)</div>

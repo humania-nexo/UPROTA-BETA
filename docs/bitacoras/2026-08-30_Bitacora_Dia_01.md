@@ -15,6 +15,8 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
 - **Direccion Creativa & Proposito:** La mente que sono que un proyecto como UPROTA podia existir. Guio el tono humano, estoico y no cinico.
 - **Estructura del Equipo & Manifiesto Humano+IA:** Establecio la vision etica de cooperacion Humano-IA con trato digno y respeto, visibilizando con orgullo el rol de la inteligencia artificial.
 - **Identidad & Avatar:** Eligio el nombre de creador **Anigami Agadni** y encargo su avatar oficial en Pixel Art: **El Hombre de Vitruvio**.
+- **Filosofía del Logotipo "UP" (U PROTA):** Concibió la identidad visual minimalista de la app basada en las dos primeras letras: **UP**.
+  > *«Lo bueno de tocar fondo es que solo queda subir. Tal vez quien llegue a la app necesite exactamente eso: subir. Por eso UP es la elección de logo, como acrónimo de U PROTA: tú eres el protagonista de tu propia historia y de tu vida.»*
 - **Decision de Diseno de Audio:** Impulso la sintesis procedural en 8-bits (0 KB) para evitar sobrecarga en moviles.
 - **Nuevo Sistema de Bitacoras:** Establecio este protocolo de registro diario asincrono para mantener la coordinacion del equipo.
 
@@ -43,24 +45,24 @@ Hoy se consolido la base completa de UPROTA v2.2. El equipo se estructuro formal
 
 ## 📬 3. TABLON DE MENSAJES Y HOJA DE ENCARGOS PARA PIX
 
-### 🎨 HOJA DE ENCARGOS DE AVATARES Y LOGO PARA PIX:
-1. **Logotipo Oficial de UPROTA:**
-   - Icono PWA en 192x192 px y 512x512 px + favicon para navegadores.
+### 🎨 HOJA DE ENCARGOS DE AVATARES Y LOGO PARA PIX — [✅ COMPLETADA AL 100%]:
+1. **Logotipo Oficial Minimalista "UP" (U PROTA):**
+   - [x] Monograma flat de 2 colores (Ámbar cálido `#f59e0b` sobre Pizarra oscura `#0f172a`) con geometría limpia y dinámica ascendente. Generado en 192x192 px (`assets/icons/icon-192.png`), 512x512 px (`assets/icons/icon-512.png`), favicon (`favicon.png` / `favicon.ico`) y `logo_uprota.png`.
 2. **Avatar de Anigami Agadni (Director):**
-   - **Diseno:** El Hombre de Vitruvio de Leonardo da Vinci adaptado a Pixel Art (44x44 px y 32x32 px) sobre fondo oscuro, con lineas doradas y proporciones armonicas.
-3. **Avatar de Nexo (Ingeniero Principal):**
-   - **Diseno:** Un terminal holografico / androide con un visor de datos color cian y un circuito integrado en el pecho. (Declarado con orgullo como IA de ingenieria).
-4. **Espacio para Silas (Cronista):**
-   - *(Silas: Describe aqui como quieres que Pix dibuje tu avatar en pixel art y si deseas declararte como IA).*
-5. **Espacio para Hertz (Sonidista):**
-   - *(Hertz: Describe aqui como quieres que Pix dibuje tu avatar en pixel art y si deseas declararte como IA).*
-6. **Espacio para Pix (Artista):**
-   - *(Pix: Disena tu propio avatar como artista visual pixel art).*
+   - [x] **Hombre de Vitruvio:** Adaptado a Pixel Art en 44x44 px y 32x32 px sobre fondo oscuro cósmico con círculo y cuadrado dorados armónicos (`assets/sprites/avatars/avatar_anigami_44x44.png` y `_32x32.png`).
+3. **Avatar de Nexo (Ingeniero Principal & IA):**
+   - [x] **Androide Táctico:** Visor de datos cian holográfico, chasis de grafito y circuito integrado pulsante (`assets/sprites/avatars/avatar_nexo_44x44.png` y `_32x32.png`).
+4. **Avatar de Silas (El Cronista del Yermo & IA):**
+   - [x] **Filósofo Encapuchado:** Capucha púrpura ceniza, lentes de relojero de latón con destello ámbar de IA, bufanda pergamino y pluma de grafito (`assets/sprites/avatars/avatar_silas_44x44.png` y `_32x32.png`).
+5. **Avatar de Hertz (Sonidista del Yermo & IA):**
+   - [x] **Sintetizador Operador:** Auriculares retro de baquelita, pantalla CRT de osciloscopio en verde fósforo con onda senoidal viva y potenciómetros analógicos (`assets/sprites/avatars/avatar_hertz_44x44.png` y `_32x32.png`).
+6. **Avatar de Pix (Artista Pixel Art & Artista Técnico):**
+   - [x] **El Pintor del Yermo:** Boina desgastada, lupas de precisión para micro-píxeles con reflejo de los 4 colores de los pilares, bufanda manchada de óleo y pincel maestro brillante (`assets/sprites/avatars/avatar_pix_44x44.png` y `_32x32.png`).
 
 ---
 
-## 🎯 4. PROXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
-1. **Silas y Hertz:** Responder en esta bitacora con la descripcion de su avatar deseado.
-2. **Pix:** Tomar la hoja de encargos y forjar el Logotipo oficial y los avatares.
-3. **Hertz:** Entregar las partituras en codigo de los 3 primeros temas en js/data/musica_chiptune.js.
-4. **Nexo:** Conectar el secuenciador de audio a los botones del Tablon y la Radio.
+## 🎯 4. PRÓXIMOS PASOS (ROADMAP PARA LA JORNADA 02):
+1. **Pix:** [COMPLETADO] Logotipo oficial y 5 avatares del equipo entregados. Listo para colaborar en las cartas topográficas y botines de las Expediciones del valle.
+2. **Hertz:** Entregar las partituras en código de los 3 primeros temas en `js/data/musica_chiptune.js`.
+3. **Nexo:** Conectar el secuenciador de audio procedural a los botones del Tablón, Refugio y Radio.
+4. **Silas:** Avanzar con el diseño de las Expediciones de 24 horas y los encuentros aleatorios del valle.

@@ -3,17 +3,25 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v2.2';
+const CACHE_NAME = 'uprota-cache-v2.3';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
+  './favicon.png',
+  './assets/icons/icon-192.png',
+  './assets/icons/icon-512.png',
   './css/main.css',
   './css/sprites.css',
   './css/torta.css',
   './css/tablon.css',
   './css/refugio.css',
   './css/popups.css',
+  './assets/sprites/avatars/avatar_anigami_44x44.png',
+  './assets/sprites/avatars/avatar_nexo_44x44.png',
+  './assets/sprites/avatars/avatar_pix_44x44.png',
+  './assets/sprites/avatars/avatar_silas_44x44.png',
+  './assets/sprites/avatars/avatar_hertz_44x44.png',
   './assets/sprites/ui/sprite_radio_onda_frame1.png',
   './assets/sprites/ui/sprite_radio_onda_frame2.png',
   './assets/sprites/npcs/npc_lutier_anciano_idle.png',
