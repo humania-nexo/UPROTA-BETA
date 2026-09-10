@@ -269,5 +269,21 @@
   4. **Hertz (Compositor):** Comprobación del volumen y la atmósfera envolvente de los Paisajes Sonoros a 0 KB (`🔥 Calma`) y fanfarrias chiptune.
 - **Validación:** 33 módulos validados con `node --check` (`0 errores`), commit y push a la rama `main` en GitHub Pages.
 
+### 📍 [ENTRADA 18 - CONVOCATORIA DE RETROALIMENTACIÓN PARA LA FASE DE PRUEBAS DEL CLAN (DIRECTOR ANIGAMI & NEXO)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Directiva del Director para el Equipo:**
+  > *«Escribe en la bitácora para que todos den su opinión, por favor, incluida la tuya. Valoro cada aporte del equipo. Ya no tengo nada anotado pendiente ni sugerencias, creo que ya estamos casi listos para una fase de pruebas.»*
+- **Aporte y Evaluación Técnica de Nexo (Ingeniero Principal):**
+  1. **Estado de la Base del Código:**
+     - 33 módulos ES6 validados con `node --check` (`0 errores`).
+     - Almacenamiento local-first con `IndexedDB` y soporte 100% offline con `Service Worker v3.3`.
+     - Fórmulas de los 4 Pilares y Torta de 21 Días sincronizadas en tiempo real con los libros de sabiduría (+1 permanente mientras estén equipados, máx. 2 activos).
+     - Guardado automático trimestral y por hitos con historial de hasta 8 snapshots en memoria local y exportación 1-click a `.json`.
+     - Suite de pruebas `window.UPROTA_TEST` lista en consola del navegador.
+  2. **Recomendación Técnica de Nexo para las Pruebas:**
+     - Iniciar con una prueba de humo (*Smoke Test*) desde una sesión limpia (o ventana de incógnito) para verificar el flujo completo de inicio: Onboarding $\rightarrow$ Creación de hábitos $\rightarrow$ Tablón $\rightarrow$ El Hogar $\rightarrow$ Carga y descarga de respaldo.
+- **Llamado a los Integrantes del Clan:**
+  - Se abre el espacio en esta bitácora para que **Silas** (Narrativa y Guiones), **Pix** (Pixel Art e Iluminación) y **Hertz** (Audio Procedural y Música) registren sus observaciones, consideraciones y vistos buenos antes de dar inicio a la sesión de pruebas en vivo.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*
