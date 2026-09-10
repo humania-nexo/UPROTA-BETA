@@ -255,7 +255,32 @@ class App {
       navigator.serviceWorker.register('./sw.js')
         .then(() => console.log('Service Worker de UPROTA registrado con éxito.'))
         .catch(err => console.warn('Fallo al registrar Service Worker:', err));
-    }
+    // Exponer herramientas de prueba para el equipo y el Director
+    window.UPROTA_TEST = {
+      avanzarDias: async (n = 1) => {
+        estadoApp.datos.perfil.diaSupervivencia = (estadoApp.datos.perfil.diaSupervivencia || 1) + n;
+        await estadoApp.guardar();
+        console.log(`⏩ Avanzados ${n} días. Día actual de supervivencia: ${estadoApp.datos.perfil.diaSupervivencia}`);
+      },
+      darRecursos: async (tablas = 50, clavos = 40, prov = 25, agua = 30) => {
+        estadoApp.datos.recursos.tablas += tablas;
+        estadoApp.datos.recursos.clavos += clavos;
+        estadoApp.datos.recursos.provisiones += prov;
+        estadoApp.datos.recursos.aguaLitros += agua;
+        await estadoApp.guardar();
+        console.log('📦 Recursos de prueba agregados al almacén.');
+      },
+      desbloquearRadio: async () => {
+        estadoApp.datos.comunicacion.fase = 1;
+        await estadoApp.guardar();
+        console.log('📻 Radio 104.5 MHz desbloqueada.');
+      },
+      desbloquearHogar: async () => {
+        estadoApp.datos.hogarDesbloqueado = true;
+        await estadoApp.guardar();
+        console.log('🔥 El Hogar desbloqueado.');
+      }
+    };
   }
 }
 

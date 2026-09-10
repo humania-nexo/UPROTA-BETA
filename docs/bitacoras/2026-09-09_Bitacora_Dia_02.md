@@ -257,5 +257,17 @@
      - **Pestaña ❓ FAQ:** Pregunta explicativa sobre cómo funciona el guardado automático de 90 días y la tranquilidad de no perder progreso si se olvida el respaldo manual.
 - **Validación:** 33 módulos verificados con `node --check` (`0 errores`), commit y push a la rama `main` en GitHub Pages.
 
+### 📍 [ENTRADA 17 - PREPARATIVOS PARA LA FASE DE PRUEBAS INTEGRAL DEL CLAN (NEXO, SILAS, PIX, HERTZ & DIRECTOR)]
+- **Participantes:** Director (Anigami Agadni), Nexo (Ingeniero Principal), Silas (Cronista), Pix (Artista Visual) y Hertz (Compositor).
+- **Consolidación de Estado:**
+  - El sistema cuenta con 33 módulos ES6 100% operativos y sincronizados con IndexedDB y Service Worker (`uprota-cache-v3.3`).
+  - Se habilitó la suite de utilidades de testing en consola (`window.UPROTA_TEST`) para avanzar días, inyectar recursos y probar desbloqueos de Radio y El Hogar sin alterar la lógica de producción.
+- **Consultas y Perspectivas del Equipo para la Fase de Pruebas:**
+  1. **Nexo (Ingeniero):** Validación del flujo completo de inicio (Onboarding $\rightarrow$ Tablón $\rightarrow$ Torta de 21 Días $\rightarrow$ El Hogar $\rightarrow$ Respaldo JSON y Snapshots).
+  2. **Silas (Cronista):** Revisión de la cadencia de lectura de los guiones de radio para la grabación con el micrófono Fifine AM8 y los presets del mixer Fifine SC3.
+  3. **Pix (Artista):** Comprobación visual de los 11 sprites de refugio y las 4 fases de iluminación diurna/nocturna en pantallas móviles y desktop.
+  4. **Hertz (Compositor):** Comprobación del volumen y la atmósfera envolvente de los Paisajes Sonoros a 0 KB (`🔥 Calma`) y fanfarrias chiptune.
+- **Validación:** 33 módulos validados con `node --check` (`0 errores`), commit y push a la rama `main` en GitHub Pages.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*
