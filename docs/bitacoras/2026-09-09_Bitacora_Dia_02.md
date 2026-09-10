@@ -243,5 +243,19 @@
   - `js/core/faros_engine.js`: `FarosEngine.crearFaroAhorroTiempo()`, `obtenerCheckpointsTotales()`, `avanzarSiguienteCiclo()` con preservación de `historialCiclos`.
 - **Validación:** 33 módulos verificados con `node --check` (`0 errores`), commit y push a la rama `main`.
 
+### 📍 [ENTRADA 16 - SISTEMA DE GUARDADO AUTOMÁTICO TRIMESTRAL & GESTIÓN DE SNAPSHOTS EN AYUDA (NEXO & DIRECTOR)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Directiva del Director:**
+  > *«Creo que también deberíamos crear archivos de guardado automático por si el prota no lo hace. Cada 3 meses o algo así. Y explicarlo en alguna parte de la sección de ayuda.»*
+- **Implementaciones en Código:**
+  1. **Motor de Snapshots en `js/core/estado.js`:**
+     - Propiedad `respaldosAutomaticos: []` en el estado principal (almacena hasta 8 snapshots históricos).
+     - Disparador automático `verificarSnapshotsTrimestrales()` al cierre de cada estación (Días 90, 180, 270 y 365) y en hitos clave de Cimientos/Faros.
+     - Métodos de gestión: `crearSnapshotAutomatico()`, `restaurarSnapshotAutomatico(id)` y `descargarSnapshotJSON(id)`.
+  2. **Interfaz en el Centro de Ayuda (`js/modulos/modal_centro_ayuda.js`):**
+     - **Pestaña 💾 Respaldo:** Nueva tarjeta dedicada *Guardados Automáticos del Sistema* que lista todos los snapshots disponibles, permitiendo descargar el archivo `.json` a la carpeta Descargas/Nube o restaurar el refugio a ese punto con un solo clic, junto con el botón *+ Crear Punto Ahora*.
+     - **Pestaña ❓ FAQ:** Pregunta explicativa sobre cómo funciona el guardado automático de 90 días y la tranquilidad de no perder progreso si se olvida el respaldo manual.
+- **Validación:** 33 módulos verificados con `node --check` (`0 errores`), commit y push a la rama `main` en GitHub Pages.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*

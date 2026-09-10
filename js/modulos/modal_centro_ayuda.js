@@ -199,7 +199,45 @@ export class ModalCentroAyuda {
       });
     });
 
-    // --- PESTAÑA RESPALDO: EXPORTAR & IMPORTAR ---
+    // --- PESTAÑA RESPALDO: SNAPSHOTS AUTOMÁTICOS, EXPORTAR & IMPORTAR ---
+    const btnCrearSnapshot = container.querySelector('#btn-crear-snapshot-manual');
+    if (btnCrearSnapshot) {
+      btnCrearSnapshot.addEventListener('click', async () => {
+        const dia = estadoApp.datos.perfil?.diaSupervivencia || 1;
+        estadoApp.crearSnapshotAutomatico(`Punto de Restauración Manual — Día ${dia}`, 'manual');
+        await estadoApp.guardar();
+        audioProcedural.playCheckSenda();
+        ModalCentroAyuda.renderContenido(container);
+      });
+    }
+
+    container.querySelectorAll('.btn-descargar-snapshot').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const snapId = btn.dataset.snapid;
+        const nombre = estadoApp.descargarSnapshotJSON(snapId);
+        if (nombre) {
+          audioProcedural.playCheckSenda();
+          alert(`📥 Respaldo automático descargado como ${nombre} en tu carpeta de Descargas.`);
+        }
+      });
+    });
+
+    container.querySelectorAll('.btn-restaurar-snapshot').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const snapId = btn.dataset.snapid;
+        if (confirm('⚠️ ¿Deseas restaurar tu refugio a este punto de guardado automático? Se sobrescribirá el estado actual con los datos de ese snapshot.')) {
+          try {
+            await estadoApp.restaurarSnapshotAutomatico(snapId);
+            audioProcedural.playFanfarriaFaro();
+            alert('✅ ¡Refugio restaurado con éxito!');
+            setTimeout(() => window.location.reload(), 800);
+          } catch (err) {
+            alert('Error al restaurar: ' + err.message);
+          }
+        }
+      });
+    });
+
     const btnExportar = container.querySelector('#btn-exportar-partida');
     const msgExportar = container.querySelector('#msg-exportar-exito');
     if (btnExportar) {
@@ -340,7 +378,8 @@ export class ModalCentroAyuda {
           </div>
         `;
 
-      case 'respaldo':
+      case 'respaldo': {
+        const snapshots = estadoApp.datos.respaldosAutomaticos || [];
         return `
           <div class="card-yermo" style="border-left: 3px solid var(--oro-torta); background: rgba(0,0,0,0.3); margin-bottom: 12px;">
             <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
@@ -348,15 +387,61 @@ export class ModalCentroAyuda {
               <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin: 0;">Soberanía y Seguridad de tu Refugio</h4>
             </div>
             <p style="font-size: 0.80rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-              En UPROTA tu progreso dura <strong>365 a 730 días reales</strong>. Tus datos viven exclusivamente en la memoria de este dispositivo y nunca se envían a servidores externos. Aquí puedes guardar y cargar tu partida con total libertad.
+              En UPROTA tu progreso dura <strong>365 a 730 días reales</strong>. Tus datos viven exclusivamente en la memoria de este dispositivo y nunca se envían a servidores externos. Cuentas con <strong>guardados automáticos trimestrales</strong> y exportación manual libre.
             </p>
+          </div>
+
+          <!-- TARJETA 0: GUARDADOS AUTOMÁTICOS TRIMESTRALES (AUTO-SNAPSHOTS) -->
+          <div class="card-yermo" style="background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.4); padding: 12px; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="font-size: 1.2rem;">⏱️</span>
+                <h4 style="color: #d8b4fe; font-size: 0.88rem; margin: 0;">Guardados Automáticos del Sistema</h4>
+              </div>
+              <button id="btn-crear-snapshot-manual" class="btn-yermo-secondary" style="font-size: 0.70rem; padding: 3px 8px; border-color: #c084fc; color: #e9d5ff; cursor: pointer;" title="Guarda un snapshot del momento actual">
+                + Crear Punto Ahora
+              </button>
+            </div>
+            
+            <p style="font-size: 0.76rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">
+              UPROTA genera automáticamente <strong>puntos de restauración cada 3 meses (Día 90, 180, 270, 365)</strong> y en hitos de Cimientos/Faros. Si alguna vez olvidas hacer una copia manual, puedes descargar o restaurar cualquiera de estos puntos:
+            </p>
+
+            ${snapshots.length === 0 ? `
+              <div style="text-align: center; padding: 8px; background: rgba(0,0,0,0.3); border-radius: var(--radius-sm); font-size: 0.74rem; color: var(--text-muted);">
+                Aún no hay snapshots automáticos registrados. Se generarán automáticamente al cerrar cada estación o puedes pulsar "+ Crear Punto Ahora".
+              </div>
+            ` : `
+              <div style="display: flex; flex-direction: column; gap: 6px;">
+                ${snapshots.map(snap => `
+                  <div class="card-yermo" style="background: rgba(0,0,0,0.5); padding: 8px 10px; border: 1px solid rgba(192, 132, 252, 0.25); display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                      <div style="font-size: 0.78rem; font-weight: bold; color: #fef08a;">
+                        ${snap.motivo || `Día ${snap.diaSupervivencia}`}
+                      </div>
+                      <div style="font-size: 0.68rem; color: var(--text-muted); font-family: var(--font-mono);">
+                        ${snap.fecha} &bull; ${snap.resumen || `Día ${snap.diaSupervivencia}`}
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 6px;">
+                      <button class="btn-descargar-snapshot btn-yermo-secondary" data-snapid="${snap.id}" style="font-size: 0.70rem; padding: 4px 6px; border-color: #38bdf8; color: #38bdf8; cursor: pointer;" title="Descargar este archivo .json">
+                        📥 Bajar
+                      </button>
+                      <button class="btn-restaurar-snapshot btn-yermo-primary" data-snapid="${snap.id}" style="font-size: 0.70rem; padding: 4px 6px; background: #9333ea; border: none; color: #fff; cursor: pointer;" title="Restaurar el juego a este punto">
+                        🔄 Cargar
+                      </button>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            `}
           </div>
 
           <!-- TARJETA 1: EXPORTAR PARTIDA -->
           <div class="card-yermo" style="background: rgba(0,0,0,0.25); border: 1px solid var(--border-subtle); padding: 12px; margin-bottom: 12px;">
             <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
               <img src="assets/sprites/pilares/torta_dorada_badge.png" alt="Guardar" class="pixel-icon icon-16">
-              <h4 style="color: #38bdf8; font-size: 0.88rem; margin: 0;">1. Guardar Copia de Seguridad</h4>
+              <h4 style="color: #38bdf8; font-size: 0.88rem; margin: 0;">1. Guardar Copia Manual (.json / .uprota)</h4>
             </div>
             <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 8px;">
               Genera un archivo <code>.json</code> con todo tu avance (perfil, días, faros, inventario, vehículos y construcciones).
@@ -388,10 +473,21 @@ export class ModalCentroAyuda {
             <div id="msg-importar-estado" style="display: none; font-size: 0.74rem; margin-top: 6px; text-align: center;"></div>
           </div>
         `;
+      }
 
       case 'faq':
         return `
           <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--border-subtle);">
+              <div class="faq-pregunta" style="font-size: 0.84rem; font-weight: bold; color: var(--oro-torta); cursor: pointer; display: flex; justify-content: space-between;">
+                <span>¿Qué pasa si olvido hacer un respaldo manual?</span>
+                <span>▼</span>
+              </div>
+              <div class="faq-respuesta hidden" style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.45; border-top: 1px dashed var(--border-subtle); padding-top: 6px;">
+                No te preocupes. UPROTA cuenta con un <strong>sistema de Guardado Automático Trimestral</strong> que genera puntos de restauración en tu navegador cada 3 meses (Día 90, 180, 270, 365) y en cada gran hito (Cimientos y Faros). Puedes consultarlos, descargarlos o restaurarlos en la pestaña <strong>💾 Respaldo</strong>.
+              </div>
+            </div>
+
             <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--border-subtle);">
               <div class="faq-pregunta" style="font-size: 0.84rem; font-weight: bold; color: var(--oro-torta); cursor: pointer; display: flex; justify-content: space-between;">
                 <span>¿Cómo funciona el modo 100% Offline?</span>

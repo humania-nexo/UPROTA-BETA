@@ -65,6 +65,7 @@ export class EstadoApp {
       faros: [],
       diarioNaufrago: [],
       capsulasTiempo: [],
+      respaldosAutomaticos: [], // Snapshots automáticos cada 90 días e hitos clave
       manualesDonChui: [], // 'tomo_1', 'tomo_2', 'tomo_3'
       donChuiConocido: false,
       hogarDesbloqueado: false,
@@ -134,6 +135,9 @@ export class EstadoApp {
 
       // Evaluación de triggers y eventos cronológicos (Días 1 a 90+)
       CronologiaEngine.evaluarProgreso(this.datos);
+
+      // Verificación de guardados automáticos trimestrales e hitos
+      this.verificarSnapshotsTrimestrales();
 
       this.guardar();
     }
@@ -273,6 +277,70 @@ export class EstadoApp {
     this.datos = estadoRestaurado;
     await this.guardar();
     return true;
+  }
+
+  verificarSnapshotsTrimestrales() {
+    if (!this.datos.respaldosAutomaticos) this.datos.respaldosAutomaticos = [];
+    const dia = this.datos.perfil?.diaSupervivencia || 1;
+
+    // Hitos trimestrales: Día 90, 180, 270, 365 y múltiplos
+    if ((dia >= 90 && dia % 90 === 0) || dia === 365) {
+      const yaExiste = this.datos.respaldosAutomaticos.some(s => s.diaSupervivencia === dia && s.tipo === 'trimestral');
+      if (!yaExiste) {
+        const estacion = Math.floor(dia / 90) || 1;
+        this.crearSnapshotAutomatico(`Snapshot Trimestral — Día ${dia} (Cierre de Estación ${estacion})`, 'trimestral');
+      }
+    }
+  }
+
+  crearSnapshotAutomatico(motivo = 'Respaldo Automático del Refugio', tipo = 'trimestral') {
+    if (!this.datos.respaldosAutomaticos) this.datos.respaldosAutomaticos = [];
+    const dia = this.datos.perfil?.diaSupervivencia || 1;
+    const fecha = new Date().toISOString().split('T')[0];
+
+    const snapshot = {
+      id: `snap_${Date.now()}_${Math.random().toString(36).substr(2, 4)}`,
+      fecha,
+      diaSupervivencia: dia,
+      tipo,
+      motivo,
+      resumen: `Nivel ${this.datos.nivelRefugio} • ${this.datos.sendas?.length || 0} Sendas • ${this.datos.recursos?.tablas || 0} Tablas`,
+      datosJSON: JSON.stringify(this.datos)
+    };
+
+    // Mantener hasta los últimos 8 snapshots
+    this.datos.respaldosAutomaticos.unshift(snapshot);
+    if (this.datos.respaldosAutomaticos.length > 8) {
+      this.datos.respaldosAutomaticos = this.datos.respaldosAutomaticos.slice(0, 8);
+    }
+    return snapshot;
+  }
+
+  async restaurarSnapshotAutomatico(snapshotId) {
+    if (!this.datos.respaldosAutomaticos) return false;
+    const snap = this.datos.respaldosAutomaticos.find(s => s.id === snapshotId);
+    if (!snap || !snap.datosJSON) {
+      throw new Error('No se encontró el punto de restauración solicitado.');
+    }
+    return this.importarRespaldoJSON(snap.datosJSON);
+  }
+
+  descargarSnapshotJSON(snapshotId) {
+    if (!this.datos.respaldosAutomaticos) return null;
+    const snap = this.datos.respaldosAutomaticos.find(s => s.id === snapshotId);
+    if (!snap || !snap.datosJSON) return null;
+
+    const nombreArchivo = `UPROTA_Respaldo_Auto_Dia_${snap.diaSupervivencia}_${snap.fecha}.json`;
+    const blob = new Blob([snap.datosJSON], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = nombreArchivo;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    return nombreArchivo;
   }
 
   async guardarEntradaDiario(disparadorId, texto, pilar = 'mente') {
