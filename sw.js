@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v3.2';
+const CACHE_NAME = 'uprota-cache-v3.3';
 const ASSETS = [
   './',
   './index.html',
@@ -84,6 +84,11 @@ const ASSETS = [
   './assets/sprites/refugio/refugio_lvl3_huerto.png',
   './assets/sprites/refugio/refugio_lvl4_taller.png',
   './assets/sprites/refugio/refugio_lvl5_fortaleza.png',
+  './assets/sprites/refugio/refugio_lvl6_taller_restauracion.png',
+  './assets/sprites/refugio/refugio_lvl7_enclave_comercial.png',
+  './assets/sprites/refugio/refugio_lvl8_complejo_autosustentable.png',
+  './assets/sprites/refugio/refugio_lvl9_santuario_comunitario.png',
+  './assets/sprites/refugio/refugio_lvl10_ciudadela_libre.png',
   './assets/sprites/refugio/modulo_gallinero.png',
   './assets/sprites/refugio/sprite_gallina_frame1.png',
   './assets/sprites/refugio/sprite_gallina_frame2.png',

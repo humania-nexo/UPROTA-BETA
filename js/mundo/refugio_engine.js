@@ -91,16 +91,21 @@ export class DioramaEngine {
     const bioenergia = estado.bioenergia || {};
     const radioActiva = estado.comunicacion?.fase >= 1;
 
-    // Sprite de estructura base según nivel
+    // Sprite de estructura base según nivel (Nivel 0 al 10)
     const spritesBase = [
       'assets/sprites/refugio/refugio_lvl0_punto_cero.png',
       'assets/sprites/refugio/refugio_lvl1_cajones.png',
       'assets/sprites/refugio/refugio_lvl2_techo.png',
       'assets/sprites/refugio/refugio_lvl3_huerto.png',
       'assets/sprites/refugio/refugio_lvl4_taller.png',
-      'assets/sprites/refugio/refugio_lvl5_fortaleza.png'
+      'assets/sprites/refugio/refugio_lvl5_fortaleza.png',
+      'assets/sprites/refugio/refugio_lvl6_taller_restauracion.png',
+      'assets/sprites/refugio/refugio_lvl7_enclave_comercial.png',
+      'assets/sprites/refugio/refugio_lvl8_complejo_autosustentable.png',
+      'assets/sprites/refugio/refugio_lvl9_santuario_comunitario.png',
+      'assets/sprites/refugio/refugio_lvl10_ciudadela_libre.png'
     ];
-    const spriteBase = spritesBase[Math.min(spritesBase.length - 1, nivel)];
+    const spriteBase = spritesBase[Math.min(spritesBase.length - 1, Math.max(0, nivel))];
 
     // Módulos activos
     const tieneFogon = nivel >= 1 || modulos.includes('fogon');

@@ -209,5 +209,26 @@
      - Se integró el botón **`ℹ️ ¿Cómo funciona?`** en la cabecera de la Biblioteca, abriendo un modal interactivo con la guía completa de funcionamiento y sinergia con la Torta de Equilibrio.
 - **Validación:** 33 módulos verificados con `node --check` (`0 errores`) y pruebas unitarias de cálculo dinámico de la Torta confirmadas.
 
+### 📍 [ENTRADA 14 - LOS 10 NIVELES DE REFUGIO CON 11 SPRITES MODULARES & CICLO DE ILUMINACIÓN DÍA/NOCHE (PIX & NEXO)]
+- **Participantes:** Pix (Artista Visual), Nexo (Ingeniero Principal) y Director (Anigami Agadni).
+- **Entregas y Verificaciones Realizadas:**
+  1. **Generación del Catálogo Completo de 11 Sprites de Refugio (Nivel 0 al 10):**
+     - `refugio_lvl0_punto_cero.png` (Toldo roto, fogón frío, restos de palet).
+     - `refugio_lvl1_cajones.png` (Paredes de palets reforzados, lona tensa, fogón con brasas).
+     - `refugio_lvl2_techo.png` (Tejado de chapa acanalada, puerta con ventana, barril recolector de lluvia).
+     - `refugio_lvl3_huerto.png` (Cabaña aislada con chimenea de piedra, huerto en cajones elevados, bidones de 200L).
+     - `refugio_lvl4_taller.png` (Banco de carpintería con tornillo de banco, horno de barro, mástil de radio).
+     - `refugio_lvl5_fortaleza.png` (Paneles solares en techo, estación de bici-generador, valla perimetral).
+     - `refugio_lvl6_taller_restauracion.png` (Tanque de electrólisis para desoxidación de metales, chimenea industrial, bici con parrilla).
+     - `refugio_lvl7_enclave_comercial.png` (Alero con toldo rayado de la Caravana de la Sal, báscula de romana, sacos de sal, alforjas de cuero).
+     - `refugio_lvl8_complejo_autosustentable.png` (Invernadero de policarbonato traslúcido con cultivos, remolque trailer de 2 ruedas acoplado al eje trasero).
+     - `refugio_lvl9_santuario_comunitario.png` (Muro de piedra y madera curada, cisterna elevada con biofiltro, mástil de 104.5 MHz con balizas duales, trailer de carga pesada).
+     - `refugio_lvl10_ciudadela_libre.png` (Bastión de gaviones y roca volcánica, cúpula geodésica solar, torre vigía con mega-reflector, convoy ciclista definitivo con trailer blindado y estandarte dorado del clan).
+  2. **Motor de Diorama y Sincronización:**
+     - `js/mundo/refugio_engine.js`: `DioramaEngine` mapea dinámicamente los 11 sprites según `estado.nivelRefugio` (0 a 10).
+     - `css/refugio.css`: 4 filtros de iluminación horaria en tiempo real (Amanecer, Mediodía, Crepúsculo, Noche Profunda) con aceleración por hardware a 60 FPS y badge flotante.
+  3. **Service Worker (`sw.js`):** Subida a versión `uprota-cache-v3.3` con los 5 nuevos sprites precacheados offline.
+- **Validación:** 33 módulos probados con `node --check` (`0 errores`), commit y push a la rama `main` en GitHub Pages.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*
