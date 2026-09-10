@@ -230,5 +230,18 @@
   3. **Service Worker (`sw.js`):** Subida a versión `uprota-cache-v3.3` con los 5 nuevos sprites precacheados offline.
 - **Validación:** 33 módulos probados con `node --check` (`0 errores`), commit y push a la rama `main` en GitHub Pages.
 
+### 📍 [ENTRADA 15 - CALIBRACIÓN DE FAROS A 24 SEMANAS & CONTINUIDAD ORGÁNICA AL AÑO 2 (NEXO & DIRECTOR)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Resolución de Reglas de Faros y Progresión Temporal:**
+  1. **Calibración a 24 Semanas por Ciclo (168 Días):**
+     - En lugar de 180 días planos desfasados, los ciclos de Faros por Tiempo quedan calibrados en 24 semanas exactas (24 semanales, 12 quincenales, 6 mensuales).
+     - **Ciclo I (Días 7 a 175):** *Faro Semestral I: Los Cimientos* $\rightarrow$ Culmina holgadamente en el Día 175 antes de la entrega de la Biblia de Don Chui en el Día 180.
+     - **Ciclo II (Días 176 a 344):** *Faro Semestral II: La Travesía del Convoy* $\rightarrow$ Culmina en el Día 344 (Mes 11), permitiendo celebrar el triunfo del segundo faro antes del evento cumbre del Día 365.
+  2. **Continuidad Orgánica al Año 2 (Días 366 a 730):**
+     - Cero borrado de datos: Al alcanzar el Día 365, el jugador puede continuar ininterrumpidamente en el **Año 2 (Modo Guardián)**, preservando sus sendas activas, cimientos forjados, recursos, nivel de refugio y avanzando al *Ciclo III de Faros* si desea sostener su disciplina financiera y personal sin perder impulso.
+- **Implementación en Código:**
+  - `js/core/faros_engine.js`: `FarosEngine.crearFaroAhorroTiempo()`, `obtenerCheckpointsTotales()`, `avanzarSiguienteCiclo()` con preservación de `historialCiclos`.
+- **Validación:** 33 módulos verificados con `node --check` (`0 errores`), commit y push a la rama `main`.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*
