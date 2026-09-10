@@ -235,3 +235,51 @@
   font-size: 0.76rem;
   color: var(--text-secondary);
 }
+
+/* ============================================================
+   CICLO DÍA / NOCHE E ILUMINACIÓN NATURAL EN DIORAMA (PIX)
+   ============================================================ */
+.diorama-stage-container {
+  transition: filter 1.2s ease, background 1.2s ease;
+}
+
+/* 1. Amanecer (06:00 - 10:59): Luz dorada tenue */
+.diorama-amanecer {
+  filter: sepia(0.2) brightness(1.05) hue-rotate(-8deg);
+}
+
+/* 2. Mediodía (11:00 - 17:59): Contraste nítido y sol cenital */
+.diorama-mediodia {
+  filter: brightness(1.02) contrast(1.06);
+}
+
+/* 3. Crepúsculo / Atardecer (18:00 - 20:59): Tonos ocres y brasas */
+.diorama-crepusculo {
+  filter: sepia(0.35) saturate(1.25) hue-rotate(-20deg) brightness(0.95);
+}
+
+/* 4. Noche Profunda (21:00 - 05:59): Azul noche fría y fogón */
+.diorama-noche {
+  filter: brightness(0.72) hue-rotate(190deg) saturate(0.85);
+}
+
+/* Badge flotante de fase horaria */
+.diorama-fase-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 3px 7px;
+  font-size: 0.68rem;
+  color: #fff;
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}

@@ -141,8 +141,25 @@
      - **Bitácora Histórica Plegable:** Botón para desplegar y revisar todas las notas históricas guardadas durante la travesía.
      - **Cápsulas de Tiempo al Yo del Futuro:** Selector de cartas selladas (66 días para Cimientos, 180 días para Faros o 30 días para Promesas personales), visualización con candado hermético y botón de desellado con fanfarria y mensaje de Don Chui/Elena al cumplirse los días.
      - **Mantenimiento de las 4 Capas de Validación:** Validación del terreno, evidencia histórica de pasos, luz prestada y sabiduría estoica.
-  3. **Service Worker (`sw.js`):** Actualizado a `uprota-cache-v3.1` precacheando los nuevos sprites de Pix.
-- **Validación:** 31 módulos JS probados con Node.js (`0 errores`), commit y push a GitHub Pages.
+---
+
+### 📍 [ENTRADA 09 - INTEGRACIÓN TOTAL DEL CICLO DÍA/NOCHE Y PAISAJES DE ENFOQUE A 0 KB (NEXO - v3.2)]
+- **Participantes:** Director (Anigami Agadni), Pix (Artista), Hertz (Sonidista) y Nexo (Ingeniero Principal).
+- **Desarrollo Realizado (Nexo):**
+  1. **Ciclo Día/Noche Dinámico en el Diorama (`js/mundo/refugio_engine.js` & `css/refugio.css`):**
+     - Cálculo de hora local con `DioramaEngine.obtenerFaseHoraria()`.
+     - 4 estados de luz renderizados con filtros CSS acelerados por hardware a 60 FPS:
+       - *🌅 Amanecer (06:00 - 10:59):* `sepia(0.2) brightness(1.05) hue-rotate(-8deg)`.
+       - *☀️ Mediodía (11:00 - 17:59):* `brightness(1.02) contrast(1.06)`.
+       - *🌇 Atardecer / Crepúsculo (18:00 - 20:59):* `sepia(0.35) saturate(1.25) hue-rotate(-20deg) brightness(0.95)`.
+       - *🌌 Noche Profunda (21:00 - 05:59):* `brightness(0.72) hue-rotate(190deg) saturate(0.85)`.
+     - Badge flotante en el diorama indicando la fase atmosférica y hora actual.
+  2. **Controlador de Paisajes Sonoros y Pomodoro a 0 KB (`index.html` & `js/app.js`):**
+     - Botón **`🔥 Calma`** en la cabecera principal (`#btn-ambiente-top`).
+     - Modal de selección con los 3 ambientes procedurales de Hertz (*🪵 El Fogón de Mezquite*, *🌧️ Lluvia en Lámina*, *📻 Portadora 104.5 MHz*).
+     - Temporizador de apagado automático con modos: *Continuo*, *25 min (Pomodoro)* y *45 min (Estudio)* con fade-out gradual.
+  3. **Service Worker (`sw.js`):** Subida a versión de caché `uprota-cache-v3.2`.
+- **Validación:** 31 módulos JS probados con Node.js (`0 errores`), commit y push realizado con éxito a GitHub Pages.
 
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*

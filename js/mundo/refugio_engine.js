@@ -110,8 +110,17 @@ export class DioramaEngine {
     const tieneEnergia = bioenergia.biciGeneradorConstruido || nivel >= 5 || modulos.includes('bici_generador');
     const tieneAntena = radioActiva || nivel >= 2 || modulos.includes('antena_radio');
 
+    // Fase horaria dinámica (Amanecer, Mediodía, Crepúsculo, Noche)
+    const fase = DioramaEngine.obtenerFaseHoraria();
+
     return `
-      <div class="diorama-stage-container">
+      <div class="diorama-stage-container diorama-${fase.id}">
+        <!-- BADGE FLOTANTE DE HORA LOCAL & FASE AMBIENTAL -->
+        <div class="diorama-fase-badge">
+          <span>${fase.icono}</span>
+          <span>${fase.etiqueta}</span>
+        </div>
+
         <!-- CAPA 1: ESTRUCTURA BASE -->
         <img src="${spriteBase}" alt="Estructura Base Refugio" class="diorama-layer diorama-base-layer">
 
@@ -160,6 +169,20 @@ export class DioramaEngine {
         ` : ''}
       </div>
     `;
+  }
+
+  static obtenerFaseHoraria() {
+    const hora = new Date().getHours();
+    if (hora >= 6 && hora < 11) {
+      return { id: 'amanecer', nombre: 'Amanecer', icono: '🌅', etiqueta: 'Luz Dorada del Alba' };
+    }
+    if (hora >= 11 && hora < 18) {
+      return { id: 'mediodia', nombre: 'Mediodía', icono: '☀️', etiqueta: 'Sol Cenital del Yermo' };
+    }
+    if (hora >= 18 && hora < 21) {
+      return { id: 'crepusculo', nombre: 'Atardecer', icono: '🌇', etiqueta: 'Crepúsculo & Brasas' };
+    }
+    return { id: 'noche', nombre: 'Noche', icono: '🌌', etiqueta: 'Noche Profunda & Estrellas' };
   }
 }
 

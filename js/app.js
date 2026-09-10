@@ -73,6 +73,13 @@ class App {
       btnHogarTop.addEventListener('click', () => this.cambiarTab('hogar'));
     }
 
+    const btnAmbiente = document.getElementById('btn-ambiente-top');
+    if (btnAmbiente) {
+      btnAmbiente.addEventListener('click', () => {
+        this.mostrarModalAmbienteSonoro();
+      });
+    }
+
     const btnCentroAyuda = document.getElementById('btn-centro-ayuda');
     if (btnCentroAyuda) {
       btnCentroAyuda.addEventListener('click', () => {
@@ -86,6 +93,104 @@ class App {
         TourGuiado.iniciar();
       });
     }
+  }
+
+  mostrarModalAmbienteSonoro() {
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
+    if (!modalContainer || !modalContent) return;
+
+    const activo = audioProcedural.isAmbienteActivo();
+
+    modalContent.innerHTML = `
+      <div class="info-modal-wrap" style="text-align: left; padding: 18px 14px;">
+        <button class="modal-close-btn" id="btn-cerrar-modal-ambiente" style="position: absolute; top: 12px; right: 12px;">&times;</button>
+        
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+          <img src="assets/sprites/emojis/emociones/emoji_fuego_ardiente.png" alt="Ambiente" class="pixel-icon icon-24">
+          <h3 style="color: var(--oro-torta-glow); font-size: 1.05rem; margin: 0;">Paisajes Sonoros de Enfoque (0 KB)</h3>
+        </div>
+        <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 12px;">
+          Sintetizados en tiempo real mediante Web Audio API para aislarte del ruido, concentrarte al estudiar/trabajar o calmar la mente antes de dormir.
+        </p>
+
+        <!-- SELECCIÓN DE PAISAJE -->
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px;">
+          <button class="btn-ambiente-card" data-tipo="fogon" style="display: flex; align-items: center; gap: 10px; padding: 10px; background: ${activo === 'fogon' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(0,0,0,0.4)'}; border: 1px solid ${activo === 'fogon' ? '#f59e0b' : 'var(--border-subtle)'}; border-radius: var(--radius-sm); color: #fff; cursor: pointer; text-align: left; width: 100%;">
+            <span style="font-size: 1.4rem;">🪵</span>
+            <div>
+              <strong style="font-size: 0.84rem; color: #fef08a; display: block;">El Fogón de Mezquite</strong>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">Zumbido térmico cálido y crepitar estocástico de brasas.</span>
+            </div>
+          </button>
+
+          <button class="btn-ambiente-card" data-tipo="lluvia" style="display: flex; align-items: center; gap: 10px; padding: 10px; background: ${activo === 'lluvia' ? 'rgba(56, 189, 248, 0.2)' : 'rgba(0,0,0,0.4)'}; border: 1px solid ${activo === 'lluvia' ? '#38bdf8' : 'var(--border-subtle)'}; border-radius: var(--radius-sm); color: #fff; cursor: pointer; text-align: left; width: 100%;">
+            <span style="font-size: 1.4rem;">🌧️</span>
+            <div>
+              <strong style="font-size: 0.84rem; color: #bae6fd; display: block;">Lluvia en Techo de Lámina</strong>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">Cortina continua y gotas suaves amortiguadas.</span>
+            </div>
+          </button>
+
+          <button class="btn-ambiente-card" data-tipo="radio_portadora" style="display: flex; align-items: center; gap: 10px; padding: 10px; background: ${activo === 'radio_portadora' ? 'rgba(168, 85, 247, 0.2)' : 'rgba(0,0,0,0.4)'}; border: 1px solid ${activo === 'radio_portadora' ? '#a855f7' : 'var(--border-subtle)'}; border-radius: var(--radius-sm); color: #fff; cursor: pointer; text-align: left; width: 100%;">
+            <span style="font-size: 1.4rem;">📻</span>
+            <div>
+              <strong style="font-size: 0.84rem; color: #e9d5ff; display: block;">Portadora Calma 104.5 MHz</strong>
+              <span style="font-size: 0.72rem; color: var(--text-muted);">Zumbido analógico de onda corta y aislamiento total.</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- TEMPORIZADOR POMODORO -->
+        <div style="margin-bottom: 14px; background: rgba(0,0,0,0.3); padding: 10px; border-radius: var(--radius-sm);">
+          <label style="font-size: 0.74rem; color: var(--text-secondary); display: block; margin-bottom: 6px;">
+            ⏱️ Temporizador de Apagado Automático:
+          </label>
+          <div style="display: flex; gap: 6px;">
+            <button class="btn-timer-opt" data-min="0" style="flex: 1; padding: 6px 4px; font-size: 0.72rem; background: var(--bg-surface); border: 1px solid var(--oro-torta); color: #fff; border-radius: var(--radius-sm); cursor: pointer;">Continuo</button>
+            <button class="btn-timer-opt" data-min="25" style="flex: 1; padding: 6px 4px; font-size: 0.72rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: #fff; border-radius: var(--radius-sm); cursor: pointer;">25 min (Pomodoro)</button>
+            <button class="btn-timer-opt" data-min="45" style="flex: 1; padding: 6px 4px; font-size: 0.72rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); color: #fff; border-radius: var(--radius-sm); cursor: pointer;">45 min (Estudio)</button>
+          </div>
+        </div>
+
+        ${activo ? `
+          <button id="btn-detener-ambiente" class="btn-yermo-secondary" style="width: 100%; padding: 10px; font-size: 0.82rem; border-color: #ef4444; color: #fca5a5; font-weight: bold; cursor: pointer; border-radius: var(--radius-sm);">
+            ⏹️ Detener Paisaje Sonoro
+          </button>
+        ` : ''}
+      </div>
+    `;
+
+    modalContainer.classList.remove('hidden');
+
+    let duracionSeleccionada = 0;
+
+    modalContent.querySelectorAll('.btn-timer-opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        modalContent.querySelectorAll('.btn-timer-opt').forEach(b => b.style.borderColor = 'var(--border-subtle)');
+        btn.style.borderColor = 'var(--oro-torta)';
+        duracionSeleccionada = parseInt(btn.dataset.min || '0', 10);
+      });
+    });
+
+    modalContent.querySelectorAll('.btn-ambiente-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const tipo = card.dataset.tipo;
+        audioProcedural.startAmbienteProcedural(tipo, duracionSeleccionada);
+        modalContainer.classList.add('hidden');
+        audioProcedural.playClick();
+      });
+    });
+
+    modalContent.querySelector('#btn-detener-ambiente')?.addEventListener('click', () => {
+      audioProcedural.stopAmbienteProcedural();
+      modalContainer.classList.add('hidden');
+    });
+
+    modalContent.querySelector('#btn-cerrar-modal-ambiente')?.addEventListener('click', () => {
+      modalContainer.classList.add('hidden');
+      audioProcedural.playClick();
+    });
   }
 
   cambiarTab(nuevoTab) {
