@@ -29,17 +29,17 @@ export class SabiduriaDiariaEngine {
   }
 
   /**
-   * Valida la activación de un nuevo objeto de sabiduría respetando el tope de 3 activos.
+   * Valida la activación de un nuevo objeto de sabiduría respetando el tope de 2 libros activos.
    */
   static intentarActivarObjeto(objetosActivos, nuevoObjetoId) {
     if (objetosActivos.includes(nuevoObjetoId)) {
       return { exito: true, objetosActivos };
     }
 
-    if (objetosActivos.length >= 3) {
+    if (objetosActivos.length >= 2) {
       return {
         exito: false,
-        razon: 'Límite alcanzado: Máximo 3 Objetos de Sabiduría Diaria activos simultáneos. Desactiva uno en tu inventario para activar este.'
+        razon: 'Límite alcanzado: Máximo 2 Libros de Sabiduría activos simultáneamente (+1 Pilar c/u). Desactiva uno en tu inventario para activar este.'
       };
     }
 

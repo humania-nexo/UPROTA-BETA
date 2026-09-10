@@ -4,13 +4,13 @@ Todos los cambios relevantes de la arquitectura y desarrollo de UPROTA quedan re
 
 ---
 
-## [1.6.0-cuaderno-naufrago-capsulas-tiempo] - 2026-09-09
+## [1.7.0-guiones-radio-fifine-sc3] - 2026-09-09
 ### Añadido por Silas (El Cronista)
-- **Sistema de Micro-Journaling y Cápsulas de Tiempo (`UPROTA_Cuaderno_Naufrago_y_Capsulas_Tiempo.md`):**
-  - Módulo íntimo en **El Hogar** con 3 pestañas: *"La Brasa de Hoy"* (micro-journaling nocturno de 3 líneas), *"Cápsulas de Tiempo"* (cartas selladas para Cimientos de 66d y Faros de 180d) y *"El Libro de la Travesía"* (historial legible exportable).
-- **Dataset de Disparadores y Plantillas (`cuaderno_naufrago_textos.js`):**
-  - 6 preguntas reflexivas rotativas con citas de Don Chui, Valeria, Katia, Elena y Doña Concha.
-  - Plantillas de Cartas al Yo del Futuro con mensajes ceremoniales de apertura para el Día 66 y Día 180.
+- **Reestructuración de Yermo Radio (104.5 MHz) para Cabina Fifine AM8 & SC3 (`UPROTA_Guiones_Radio_104_5.md` y `radio_transmisiones.js`):**
+  - El **Director (Anigami Agadni)** asume el rol de **Locutor Ancla y Conductor Central** con su voz natural masculina (cálida, sobria y cercana).
+  - Integración de la tabla de presets de efectos de voz del mixer **Fifine AmpliGame SC3** para intervenciones y entrevistas de personajes (Anciano para Don Chui, Mujer/Anciana para Doña Concha, y Bebé para la cría Fitolantra).
+  - Actualización completa de las 7 transcripciones radiales para lectura directa en cabina.
+
 
 
 

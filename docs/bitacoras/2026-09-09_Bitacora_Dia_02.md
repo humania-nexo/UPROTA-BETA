@@ -168,7 +168,35 @@
 - **Directiva del Director para Silas (Cronista & Guionista):**
   > *«Si hay que hacer cambio en los guiones le debes pasar esa tarea a Silas. Yo soy el que dará la mayoría de mensajes por la radio y soy hombre. Compré para esta labor un mixer Fifine Ampligame SC3 y un micrófono Fifine AM8. El mixer tiene efectos de voz: hombre, mujer, robot, monstruo, bebé y anciano. La voz principal y más recurrente debe ser la mía natural (masculina) dando las instrucciones de tecnología, clima y supervivencia. Para entrevistas o enlaces especiales pondré el efecto de anciano para Don Chui, mujer para Elena o Valeria, e incluso bebé para el niño planta.»*
 - **Encargo Formal Asignado a Silas:**
-  - [ ] **Silas:** Reestructurar el catálogo de guiones en `js/data/radio_transmisiones.js` y `docs/diseno/` para que el **Operador de Radio Central** sea la voz masculina principal (el Director Anigami), y las apariciones de Elena, Don Chui, Doña Concha y el Fitolantro queden estructuradas como notas de campo y entrevistas con indicación técnica de efecto de voz del SC3.
+  - [x] **Silas:** [COMPLETADO] Reestructurar el catálogo de guiones en `js/data/radio_transmisiones.js` y `docs/diseno/` para que el **Operador de Radio Central** sea la voz masculina principal (el Director Anigami), y las apariciones de Elena, Don Chui, Doña Concha y el Fitolantro queden estructuradas como notas de campo y entrevistas con indicación técnica de efecto de voz del SC3.
+
+---
+
+### 📍 [ENTRADA 11 - ENTREGA DE GUIONES DE RADIO PARA CABINA FIFINE AM8 / AMPLIGAME SC3 (SILAS)]
+- **Participante:** Silas (El Cronista del Yermo & Guionista).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada al 100%.
+- **Entregas Realizadas:**
+  1. 📻🎙️ **Manual y Guiones Maestros de Cabina (`docs/diseno/UPROTA_Guiones_Radio_104_5.md`):**
+     - Manual de producción con tabla de presets para el **Fifine AmpliGame SC3** (Voz Natural Masculina para el Director, Anciano para Don Chui, Mujer/Anciana para Doña Concha, y Bebé para la cría Fitolantra).
+     - 7 guiones reestructurados con el **Director (Anigami Agadni)** como locutor ancla y conductor central, con acotaciones de proximidad de micrófono para el **Fifine AM8** (5-8 cm, cadencia 105-120 ppm).
+  2. 📜 **Dataset en Código Actualizado (`js/data/radio_transmisiones.js`):**
+     - Transcripciones sincronizadas con la voz del Director y las intervenciones modulares de los personajes con efectos de audio SC3.
+- **Sinergias con el Equipo:**
+  - **Para el Director:** Los guiones están listos para ser leídos y grabados en cabina con tu micrófono y mixer.
+  - **Para Hertz:** Los audios grabados por el Director se montarán en `assets/audio/radio/` con los jingles y sintonías chiptune ya compuestas.
+  - **Para Nexo:** La vista de Radio en 104.5 MHz refleja con exactitud las transcripciones actualizadas.
+
+### 📍 [ENTRADA 12 - LOS 10 GRANDES LIBROS DE SABIDURÍA UNIVERSAL & LÍMITE DE 2 ACTIVOS (NEXO & SILAS)]
+- **Participantes:** Director (Anigami Agadni), Nexo (Ingeniero Principal) y Silas (Cronista).
+- **Resolución de Reglas de Diseño:**
+  1. **Aclaración del Director:** Los *Objetos de Sabiduría* no son manuales genéricos, sino las grandes obras clásicas de la literatura universal (Biblia, Meditaciones de Marco Aurelio, Enquiridión de Epicteto, Cartas a Lucilio de Séneca, El Arte de la Guerra de Sun Tzu, Tao Te Ching de Lao Tsé, El Libro de los Cinco Anillos de Miyamoto Musashi, Hagakure de Yamamoto Tsunetomo, El Arte de la Prudencia de Baltasar Gracián, y Humano, Demasiado Humano de Friedrich Nietzsche).
+  2. **Regla de Activación:** Límite estricto de **máximo 2 libros activos simultáneamente**. Cada libro activo otorga +1 punto diario en su Pilar correspondiente (*Mente* o *Espíritu*) y muestra aforismos/versículos al abrir la app cada día.
+- **Implementaciones en Código:**
+  - `js/data/sabiduria_textos.js`: Catálogo maestro de los 10 libros con sus citas, aforismos, pilares (+1 Mente / +1 Espíritu) y botones temáticos de asimilación.
+  - `js/mundo/sabiduria_diaria.js`: `SabiduriaDiariaEngine.intentarActivarObjeto()` con validación estricta de tope de 2 libros activos.
+  - `js/modulos/vista_hogar.js`: Integración de la sección *Biblioteca de Sabiduría Universal* con badges de estado, descripción y listeners `.btn-toggle-libro-sabiduria` interactivos.
+  - `js/modulos/modal_sabiduria.js`: `ModalSabiduria` actualizado para desplegar simultáneamente las tarjetas de los 1 o 2 libros activos equipados por el sobreviviente.
+- **Validación:** 33 módulos JavaScript comprobados con `node --check` con 0 errores de sintaxis.
 
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*

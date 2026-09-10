@@ -5,6 +5,8 @@
 
 import { FRASES_HOGAR } from '../data/frases_estoicas.js';
 import { DISPARADORES_MICRO_JOURNALING, PLANTILLAS_CAPSULAS_TIEMPO } from '../data/cuaderno_naufrago_textos.js';
+import { OBJETOS_SABIDURIA } from '../data/sabiduria_textos.js';
+import { SabiduriaDiariaEngine } from '../mundo/sabiduria_diaria.js';
 import { audioProcedural } from '../core/audio_procedural.js';
 import { estadoApp } from '../core/estado.js';
 
@@ -163,7 +165,53 @@ export class VistaHogar {
         `}
       </div>
 
-      <!-- SECCIÓN 3: LAS 4 CAPAS DE VALIDACIÓN HISTÓRICAS -->
+      <!-- SECCIÓN 3: BIBLIOTECA DE SABIDURÍA UNIVERSAL (10 OBRAS CLÁSICAS) -->
+      <div class="card-yermo" style="border-left: 3px solid #38bdf8; background: rgba(56, 189, 248, 0.06); padding: 14px; margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 1.4rem;">📚</span>
+            <div>
+              <h3 style="color: #bae6fd; font-size: 0.95rem; margin: 0;">Biblioteca de Sabiduría Universal</h3>
+              <span style="font-size: 0.70rem; color: var(--text-muted); font-family: var(--font-mono);">
+                Activos: ${(estado.objetosSabiduriaActivos || []).length} / 2 Libros (+1 Pilar c/u)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 10px;">
+          Elige hasta <strong>2 libros activos</strong> para nutrir tu rutina. Cada libro activo te otorga +1 punto diario en su Pilar y dispara un aforismo o versículo matutino al abrir el refugio.
+        </p>
+
+        <!-- GRID DE LOS 10 LIBROS -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          ${Object.values(OBJETOS_SABIDURIA).map(libro => {
+            const activo = (estado.objetosSabiduriaActivos || []).includes(libro.id);
+            const colorPilar = libro.pilar === 'espiritu' ? '#c084fc' : '#60a5fa';
+            return `
+              <div class="card-yermo" style="background: ${activo ? 'rgba(56, 189, 248, 0.15)' : 'rgba(0,0,0,0.4)'}; border: 1px solid ${activo ? '#38bdf8' : 'var(--border-subtle)'}; padding: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px;">
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.3rem;">${libro.icono}</span>
+                    <div>
+                      <strong style="color: #fff; font-size: 0.86rem; display: block;">${libro.nombre}</strong>
+                      <span style="font-size: 0.70rem; color: var(--text-muted); font-style: italic;">${libro.autor} &bull; <span style="color: ${colorPilar}; font-weight: bold;">+1 ${libro.pilar.toUpperCase()}</span></span>
+                    </div>
+                  </div>
+                  <button class="btn-toggle-libro-sabiduria btn-yermo-${activo ? 'primary' : 'secondary'}" data-id="${libro.id}" style="font-size: 0.72rem; padding: 4px 8px; white-space: nowrap; ${activo ? 'background: #0284c7;' : ''}">
+                    ${activo ? '✅ Activo (+1)' : 'Equipar'}
+                  </button>
+                </div>
+                <p style="font-size: 0.74rem; color: var(--text-secondary); line-height: 1.35; margin: 4px 0 0 0;">
+                  ${libro.desc}
+                </p>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- SECCIÓN 4: LAS 4 CAPAS DE VALIDACIÓN HISTÓRICAS -->
       <div class="hogar-wrap">
         <!-- CAPA 1: VALIDACIÓN -->
         <div class="hogar-capa-box">
@@ -262,7 +310,34 @@ export class VistaHogar {
       });
     });
 
-    // 5. Volver al Tablón
+    // 5. Toggle Libros de Sabiduría Activos (máx. 2)
+    this.contenedor.querySelectorAll('.btn-toggle-libro-sabiduria').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const libroId = btn.dataset.id;
+        const activos = estadoApp.datos.objetosSabiduriaActivos || [];
+        if (activos.includes(libroId)) {
+          // Desactivar
+          estadoApp.datos.objetosSabiduriaActivos = activos.filter(id => id !== libroId);
+          await estadoApp.guardar();
+          audioProcedural.playClick();
+          this.render(estadoApp.datos);
+        } else {
+          // Intentar activar con tope de 2
+          const res = SabiduriaDiariaEngine.intentarActivarObjeto(activos, libroId);
+          if (!res.exito) {
+            alert(res.razon);
+            audioProcedural.playError();
+            return;
+          }
+          estadoApp.datos.objetosSabiduriaActivos = res.objetosActivos;
+          await estadoApp.guardar();
+          audioProcedural.playSubirNivel();
+          this.render(estadoApp.datos);
+        }
+      });
+    });
+
+    // 6. Volver al Tablón
     const btnVolver = this.contenedor.querySelector('#btn-volver-tablon-desde-hogar');
     if (btnVolver) {
       btnVolver.addEventListener('click', () => {

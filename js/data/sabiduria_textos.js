@@ -1,196 +1,322 @@
 /**
- * Catálogo de Sabiduría Diaria (Textos, Manuales y Versículos de Dominio Público)
- * Vincula: Objetos de Sabiduría Diaria (Don Chui, Biblia, etc.)
+ * Catálogo Maestro de Objetos de Sabiduría Universal (Dominio Público)
+ * 10 Grandes Obras de Filosofía, Espiritualidad y Estrategia Humana
+ * Regla: Máximo 2 libros activos simultáneamente (+1 Mente o +1 Espíritu por libro).
  */
 
 export const OBJETOS_SABIDURIA = {
-  BIBLIA_DON_CHUI: {
-    id: 'obj_biblia_chui',
-    nombre: 'Biblia de Don Chui',
+  // 1. LA SANTA BIBLIA (ESPÍRITU)
+  BIBLIA: {
+    id: 'obj_biblia',
+    nombre: 'La Santa Biblia',
+    autor: 'Textos Sagrados',
     pilar: 'espiritu',
     puntosPilar: 1,
     icono: '📖',
-    npcOrigen: 'Don Chui',
     botonTexto: 'Amén',
-    desc: 'Un ejemplar gastado con notas a lápiz en los márgenes. Entrega final de Don Chui que revela la fuente de su paz y fortaleza incansable.',
+    desc: 'Salmos de amparo, proverbios de prudencia y evangelios de amor y consuelo para fortalecer el espíritu humano.',
     mensajes: [
       {
         referencia: 'Salmo 23:1-3',
-        texto: '«El Señor es mi pastor; nada me faltará. En lugares de delicados pastos me hará descansar; junto a aguas de reposo me pastoreará. Confortará mi alma.»',
-        notaChui: 'Nota al margen de Don Chui: "Aun en el pedregal más seco, si vas con el Patrón, el alma tiene sombra fresca."'
+        texto: '«El Señor es mi pastor; nada me faltará. En lugares de delicados pastos me hará descansar; junto a aguas de reposo me pastoreará. Confortará mi alma.»'
       },
       {
-        referencia: 'Salmo 27:1',
-        texto: '«El Señor es mi luz y mi salvación; ¿de quién temeré? El Señor es la fortaleza de mi vida; ¿de quién he de atemorizarme?»',
-        notaChui: 'Nota al margen: "Cuando caiga la noche y el viento sacuda las láminas del techo, acuérdate de quién te sostiene en pie."'
-      },
-      {
-        referencia: 'Salmo 46:1-2',
-        texto: '«Dios es nuestro amparo y fortaleza, nuestro pronto auxilio en las tribulaciones. Por tanto, no temeremos, aunque la tierra sea removida.»',
-        notaChui: 'Nota al margen: "Se cayeron los puentes de fierro y las ciudades, pero el suelo donde pisas firme sigue sostenido por Él."'
+        referencia: 'Proverbios 24:16',
+        texto: '«Porque siete veces cae el justo, y vuelve a levantarse; mas los impíos caerán en el mal.»'
       },
       {
         referencia: 'Salmo 91:1-2',
-        texto: '«El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente. Diré yo al Señor: Esperanza mía, y castillo mío; mi Dios, en quien confiaré.»',
-        notaChui: 'Nota al margen: "El mejor refugio no son cuatro tablas con púas; es la paz que nadie en el Yermo te puede arrebatar."'
-      },
-      {
-        referencia: 'Salmo 121:1-2',
-        texto: '«Alzaré mis ojos a los montes; ¿de dónde vendrá mi socorro? Mi socorro viene del Señor, que hizo los cielos y la tierra.»',
-        notaChui: 'Nota al margen: "Cuando te duelan las piernas de cargar leña, levanta la vista. No estás solo en esta quebrada."'
-      },
-      {
-        referencia: 'Proverbios 3:5-6',
-        texto: '«Confía en el Señor con todo tu corazón, y no te apoyes en tu propia prudencia. Reconócelo en todos tus caminos, y él enderezará tus veredas.»',
-        notaChui: 'Nota al margen: "No te aceleres queriendo arreglarlo todo de golpe. Deja que el Patrón marque la ruta de hoy."'
-      },
-      {
-        referencia: 'Isaías 40:29-31',
-        texto: '«Él da esfuerzo al cansado, y multiplica las fuerzas al que no tiene ningunas... los que esperan en el Señor tendrán nuevas fuerzas; levantarán alas como las águilas.»',
-        notaChui: 'Nota al margen: "Hasta el buey viejo afloja el paso, pero si te falta aire, el Patrón te renueva el aliento."'
-      },
-      {
-        referencia: 'Josué 1:9',
-        texto: '«Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque el Señor tu Dios estará contigo en dondequiera que vayas.»',
-        notaChui: 'Nota al margen: "Para salir al monte a buscar comida se necesita valor, pero más valor se necesita para volver a empezar sin quejarse."'
-      },
-      {
-        referencia: 'Lamentaciones 3:22-23',
-        texto: '«Por la misericordia del Señor no hemos sido consumidos, porque nunca decayeron sus misericordias. Nuevas son cada mañana; grande es tu fidelidad.»',
-        notaChui: 'Nota al margen: "Ayer tropezaste o se te rompió una vasija. Hoy amaneció sol de nuevo. Cada alba es borrón y cuenta nueva."'
+        texto: '«El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente. Diré yo al Señor: Esperanza mía, y castillo mío; mi Dios, en quien confiaré.»'
       },
       {
         referencia: 'Mateo 6:34',
-        texto: '«Así que, no os afanéis por el día de mañana, porque el día de mañana traerá su afán. Basta a cada día su propio mal.»',
-        notaChui: 'Nota al margen: "Una tarea a la vez, Prota. El agua de hoy, la leña de hoy. No cargues la semana entera en la espalda."'
+        texto: '«Así que no os afanéis por el día de mañana, porque el día de mañana traerá su afán. Basta a cada día su propio mal.»'
       },
       {
-        referencia: 'Filipenses 4:12-13',
-        texto: '«Sé vivir humildemente, y sé tener abundancia; en todo y por todo estoy enseñado... Todo lo puedo en Cristo que me fortalece.»',
-        notaChui: 'Nota al margen: "Con una lata de frijol o con banquete, el corazón agradecido nunca pasa hambre de verdad."'
+        referencia: 'Isaías 40:29',
+        texto: '«Él da esfuerzo al cansado, y multiplica las fuerzas al que no tiene ningunas.»'
       },
       {
-        referencia: 'Proverbios 16:3',
-        texto: '«Encomienda al Señor tus obras, y tus pensamientos serán afirmados.»',
-        notaChui: 'Nota al margen: "Antes de darle el primer martillazo al leño, pide dirección. El trabajo con propósito dura el doble."'
+        referencia: 'Proverbios 16:32',
+        texto: '«Mejor es el que tarda en airarse que el fuerte; y el que se enseñorea de su espíritu, que el que toma una ciudad.»'
+      },
+      {
+        referencia: 'Filipenses 4:13',
+        texto: '«Todo lo puedo en Cristo que me fortalece.»'
       }
     ]
   },
 
-  MANUAL_AGUA_FUEGO: {
-    id: 'obj_manual_supervivencia_1',
-    nombre: 'Manual I: Primeros Pasos (Copiado a mano)',
+  // 2. MEDITACIONES — MARCO AURELIO (ESPÍRITU)
+  MEDITACIONES_MARCO_AURELIO: {
+    id: 'obj_meditaciones_marco_aurelio',
+    nombre: 'Meditaciones',
+    autor: 'Marco Aurelio',
+    pilar: 'espiritu',
+    puntosPilar: 1,
+    icono: '🏛️',
+    botonTexto: 'Asimilado',
+    desc: 'Diario íntimo del emperador filósofo sobre la fortaleza interior, el deber, la impermanencia y la serenidad ante la adversidad.',
+    mensajes: [
+      {
+        referencia: 'Libro IV, 3',
+        texto: '«En ninguna parte puede hallar el hombre un retiro más apacible y tranquilo que en la intimidad de su propia alma.»'
+      },
+      {
+        referencia: 'Libro VIII, 47',
+        texto: '«Si te afliges por una causa externa, no es ella lo que te perturba, sino tu propio juicio sobre ella; y borrar ese juicio está en tu poder.»'
+      },
+      {
+        referencia: 'Libro II, 1',
+        texto: '«Al amanecer, dite a ti mismo: Hoy me toparé con el indiscreto, el ingrato, el insolente. Ninguno puede dañarme porque conozco la naturaleza del bien.»'
+      },
+      {
+        referencia: 'Libro VII, 18',
+        texto: '«¿El pepino es amargo? Tíralo. ¿Hay zarzas en el camino? Desvíate. Basta eso. No añadas: ¿Por qué habrán sido creadas estas cosas en el mundo?»'
+      },
+      {
+        referencia: 'Libro V, 16',
+        texto: '«El alma se tiñe del color de sus propios pensamientos.»'
+      }
+    ]
+  },
+
+  // 3. ENQUIRIDIÓN / MANUAL DE VIDA — EPICTETO (MENTE)
+  ENQUIRIDION_EPICTETO: {
+    id: 'obj_enquiridion_epicteto',
+    nombre: 'Manual de Vida (Enquiridión)',
+    autor: 'Epicteto',
     pilar: 'mente',
     puntosPilar: 1,
     icono: '📜',
-    npcOrigen: 'Don Chui',
-    botonTexto: 'Leído',
-    desc: 'Notas prácticas sobre fuego por fricción, filtrado por capas y hervido a borbotones.',
+    botonTexto: 'Entendido',
+    desc: 'La brújula estoica de la dicotomía del control: distinguir con lucidez quirúrgica lo que depende de ti de lo que escapa a tu dominio.',
     mensajes: [
       {
-        referencia: 'La Ley del Husillo y la Muesca',
-        texto: 'El fuego por fricción no nace de la furia, sino del ritmo parejo. La muesca en V debe entrar un tercio al hoyuelo para juntar polvito negro ardiente sin ahogarlo.'
+        referencia: 'Capítulo I',
+        texto: '«De las cosas que existen, unas dependen de nosotros y otras no. De nosotros dependen el juicio, el impulso, el deseo y la aversión; en una palabra, nuestros propios actos.»'
       },
       {
-        referencia: 'La Trampa del Agua Cristalina',
-        texto: 'El agua que sale del filtro de arena y carbón parece pura, pero los microbios invisibles siguen vivos. Cinco minutos de borbotones francos en la lata es la única garantía de no enfermar.'
+        referencia: 'Capítulo V',
+        texto: '«No son las cosas las que atormentan a los hombres, sino los principios y opiniones que los hombres se forman acerca de las cosas.»'
       },
       {
-        referencia: 'El Nido de Dos Capas',
-        texto: 'Prepara tu ovillo de yesca antes de girar el vástago: paja gruesa por fuera para dar estructura, pelusa de cardo batida al centro para recibir la brasa caliente.'
+        referencia: 'Capítulo VIII',
+        texto: '«No pretendas que las cosas ocurran como tú deseas; desea más bien que se produzcan tal como se producen, y vivirás en paz.»'
       },
       {
-        referencia: 'Salmuera y Llantén',
-        texto: 'Nunca laves una herida de monte con alcohol puro: una cucharadita de sal en agua hervida y un emplasto de llantén machacado cierran la piel limpia.'
+        referencia: 'Capítulo XII',
+        texto: '«Si quieres progresar, soporta con paciencia que te tomen por ignorante o insensato respecto a las cosas externas.»'
       }
     ]
   },
 
-  MANUAL_CONSOLIDACION: {
-    id: 'obj_manual_supervivencia_2',
-    nombre: 'Manual II: Consolidación (Copiado a mano)',
-    pilar: 'mente',
+  // 4. CARTAS A LUCILIO — SÉNECA (ESPÍRITU)
+  CARTAS_LUCILIO_SENECA: {
+    id: 'obj_cartas_lucilio_seneca',
+    nombre: 'Cartas a Lucilio',
+    autor: 'Lucio Anneo Séneca',
+    pilar: 'espiritu',
     puntosPilar: 1,
-    icono: '📐',
-    npcOrigen: 'Don Chui',
-    botonTexto: 'Leído',
-    desc: 'Técnicas de trampas de vereda, velas de sebo, curado con sal y afilado de cuchillos.',
+    icono: '✉️',
+    botonTexto: 'Interiorizado',
+    desc: 'Consejos epistolares sobre el uso consciente del tiempo, la amistad sincera, la moderación y la preparación serena ante la fatiga.',
     mensajes: [
       {
-        referencia: 'Veredas y Lazos de Alambre',
-        texto: 'Los conejos caminan por túneles de hierba. Cuelga el lazo a cuatro dedos del suelo; el animal empuja con su propio paso y la trampa hace el resto.'
+        referencia: 'Carta I',
+        texto: '«Reclama tu derecho sobre ti mismo; junta y conserva el tiempo que hasta ahora te quitaban, te sustraían o se te escapaba.»'
       },
       {
-        referencia: 'La Regla de la Carne Curada',
-        texto: 'Quita toda la grasa antes de salar la carne. La grasa se enrancia; la fibra magra salada y secada al sol resiste semanas de camino.'
+        referencia: 'Carta XIII',
+        texto: '«Hay más cosas que nos asustan que cosas que nos hieren; y sufrimos más a menudo por nuestra imaginación que por la realidad.»'
       },
       {
-        referencia: 'El Sebo que Alumbra',
-        texto: 'El sebo de las presas colado con mecha de torzal de algodón da tres horas de lumbre limpia sin humo negro para trabajar de noche.'
+        referencia: 'Carta II',
+        texto: '«No es pobre el que tiene poco, sino el que codicia más. El alma que se contenta con lo necesario es verdaderamente rica.»'
+      },
+      {
+        referencia: 'Carta LXXI',
+        texto: '«No hay viento favorable para el que no sabe a qué puerto se encamina.»'
       }
     ]
   },
 
-  ARTE_GUERRA_ELENA: {
-    id: 'obj_arte_guerra_elena',
-    nombre: 'El Arte de la Guerra (Sun Tzu)',
+  // 5. EL ARTE DE LA GUERRA — SUN TZU (MENTE)
+  ARTE_GUERRA_SUN_TZU: {
+    id: 'obj_arte_guerra_sun_tzu',
+    nombre: 'El Arte de la Guerra',
+    autor: 'Sun Tzu',
     pilar: 'mente',
     puntosPilar: 1,
     icono: '⚔️',
-    npcOrigen: 'Elena (Radio)',
-    botonTexto: 'Leído',
-    desc: 'Tratado clásico de estrategia de dominio público entregado por Elena en la estación del Risco para cultivar disciplina mental y logística.',
+    botonTexto: 'Comprendido',
+    desc: 'Tratado de estrategia, anticipación, economía de fuerzas y victoria mediante la disciplina mental y el silencio.',
     mensajes: [
       {
-        referencia: 'Capítulo III: Estrategia Ofensiva',
-        texto: '«Si conoces al enemigo y te conoces a ti mismo, no debes temer el resultado de cien batallas. Si te conoces a ti mismo pero no al enemigo, por cada victoria obtenida sufrirás una derrota.»',
-        notaElena: 'Nota de Elena: "El enemigo más peligroso en el Yermo es tu propia prisa. Conoce tus límites y nunca salgas al monte sin medir tu agua."'
+        referencia: 'Capítulo III: Estrategia',
+        texto: '«El supremo arte de la guerra consiste en someter al enemigo sin necesidad de combatir.»'
       },
       {
-        referencia: 'Capítulo I: Planes Iniciales',
-        texto: '«El arte de la guerra se basa en el engaño... Cuando seas capaz de atacar, debes aparentar incapacidad; cuando uses tus fuerzas, debes parecer inactivo; cuando estés cerca, debes hacer creer que estás lejos.»',
-        notaElena: 'Nota de Elena: "Mantén tu refugio discreto. El humo bajo y el silencio valen más que diez barricadas levantadas con ruido."'
+        referencia: 'Capítulo III: Conocimiento',
+        texto: '«Si conoces al enemigo y te conoces a ti mismo, no debes temer el resultado de cien batallas.»'
       },
       {
-        referencia: 'Capítulo VI: Puntos Débiles y Fuertes',
-        texto: '«Quien llega primero al campo de batalla y espera al enemigo, estará descansado; quien llega tarde y se precipita a la lucha, estará exhausto.»',
-        notaElena: 'Nota de Elena: "Prepara la leña antes de que anochezca y el agua antes de tener sed. Anticiparse es ganar sin pelear."'
+        referencia: 'Capítulo VI: Anticipación',
+        texto: '«El que llega primero al terreno y aguarda, estará descansado; el que llega tarde y se precipita a la lucha, estará exhausto.»'
       },
       {
-        referencia: 'Capítulo VII: Maniobras',
-        texto: '«Que tus planes sean oscuros e impenetrables como la noche, y cuando te muevas, cae como un rayo.»',
-        notaElena: 'Nota de Elena: "No anuncies tus proyectos a los cuatro vientos. Trabaja en silencio en tu tablón y deja que los cimientos hablen solos."'
+        referencia: 'Capítulo VII: Maniobra',
+        texto: '«Sé rápido como el viento, silencioso como el bosque, agresivo como el fuego e inconmovible como una montaña.»'
       }
     ]
   },
 
-  HERBARIO_DONA_CONCHA: {
-    id: 'obj_herbario_concha',
-    nombre: 'Herbario del Valle (Doña Concha)',
+  // 6. TAO TE CHING — LAO TSÉ (ESPÍRITU)
+  TAO_TE_CHING_LAO_TSE: {
+    id: 'obj_tao_te_ching',
+    nombre: 'Tao Te Ching',
+    autor: 'Lao Tsé',
     pilar: 'espiritu',
     puntosPilar: 1,
-    icono: '🌿',
-    npcOrigen: 'Doña Concha',
-    botonTexto: 'Leído',
-    desc: 'Cuaderno con hojas secas prensadas y remedios caseros de monte para sostener la salud y la calma en el refugio.',
+    icono: '☯️',
+    botonTexto: 'En Armonía',
+    desc: 'La sabiduría oriental del flujo natural, la no-resistencia (Wu Wei), la humildad del agua y la fuerza de lo sutil.',
     mensajes: [
       {
-        referencia: 'La Nobleza de la Manzanilla',
-        texto: 'La flor de manzanilla se corta cuando abre al mediodía. Una infusión tibia antes de dormir asienta el estómago y limpia el pecho de angustias.',
-        notaConcha: 'Nota de Concha: "El cuerpo que no duerme en paz se enferma de la nada. Cuida tu descanso como si fuera oro."'
+        referencia: 'Capítulo 8: El Agua',
+        texto: '«La suprema bondad es como el agua. El agua beneficia a todas las cosas sin competir con ellas, y se acomoda en los lugares que los hombres desprecian.»'
       },
       {
-        referencia: 'El Poder del Llantén de Ribera',
-        texto: 'Hojas frescas machacadas en mortero limpio con un toque de salmuera cierran raspones y evitan que la carne se encangrene.',
-        notaConcha: 'Nota de Concha: "Si te cortas con un fierro oxidado, lava a chorro y tapa con llantén. La tierra misma tiene el parche."'
+        referencia: 'Capítulo 64: El Comienzo',
+        texto: '«Un árbol tan grueso que apenas puede abrazarse nace de un brote diminuto. Un viaje de mil leguas comienza con un solo paso.»'
       },
       {
-        referencia: 'La Sábila del Peñasco',
-        texto: 'Drena el líquido amarillo amargo antes de usar. La pulpa transparente cura las quemaduras de sol y regenera la piel curtida.',
-        notaConcha: 'Nota de Concha: "Paciencia con la penca: lo que cura está en el centro limpio, no en la orilla apurada."'
+        referencia: 'Capítulo 33: Maestría',
+        texto: '«Conocer a los demás es sabiduría; conocerse a uno mismo es iluminación. Vencer a otros requiere fuerza; vencerse a uno mismo requiere verdadero poder.»'
+      },
+      {
+        referencia: 'Capítulo 76: Flexibilidad',
+        texto: '«Al nacer, el hombre es flexible y suave; al morir, es rígido y duro. Lo flexible y suave pertenece a la vida; lo rígido y duro pertenece a la muerte.»'
+      }
+    ]
+  },
+
+  // 7. EL LIBRO DE LOS CINCO ANILLOS — MIYAMOTO MUSASHI (MENTE)
+  CINCO_ANILLOS_MUSASHI: {
+    id: 'obj_cinco_anillos_musashi',
+    nombre: 'El Libro de los Cinco Anillos',
+    autor: 'Miyamoto Musashi',
+    pilar: 'mente',
+    puntosPilar: 1,
+    icono: '🗡️',
+    botonTexto: 'Enfocado',
+    desc: 'Tratado del legendario espadachín japonés sobre la atención inquebrantable, la precisión técnica, el ritmo y la ausencia de dudas.',
+    mensajes: [
+      {
+        referencia: 'Libro de la Tierra',
+        texto: '«No hagas nada que no sea útil. Observa diez mil cosas y conócete a ti mismo a través de tu disciplina diaria.»'
+      },
+      {
+        referencia: 'Libro del Agua',
+        texto: '«Mantén tu mente en calma tanto en la tranquilidad como en el fragor de la batalla. Ni apresures tu paso ni te quedes rezagado.»'
+      },
+      {
+        referencia: 'Libro del Fuego',
+        texto: '«Percibe aquello que no puede verse con los ojos; comprende el ritmo de los acontecimientos antes de que se manifiesten.»'
+      },
+      {
+        referencia: 'Libro del Vacío',
+        texto: '«Pule tu corazón y tu mente día a día; cuando no haya rastro de confusión ni vanidad, tu acción será directa y natural.»'
+      }
+    ]
+  },
+
+  // 8. HAGAKURE: EL CAMINO DEL SAMURÁI — YAMAMOTO TSUNETOMO (ESPÍRITU)
+  HAGAKURE_TSUNETOMO: {
+    id: 'obj_hagakure',
+    nombre: 'Hagakure (El Camino del Samurái)',
+    autor: 'Yamamoto Tsunetomo',
+    pilar: 'espiritu',
+    puntosPilar: 1,
+    icono: '🌸',
+    botonTexto: 'Con Honor',
+    desc: 'Aforismos sobre la rectitud moral, el deber incondicional, la lealtad y la claridad mental de vivir cada jornada con entrega total.',
+    mensajes: [
+      {
+        referencia: 'Capítulo I',
+        texto: '«La rectitud se forja en los detalles cotidianos. No hay nada fuera del momento presente; quien vive con plena entrega ahora, cumple con su deber.»'
+      },
+      {
+        referencia: 'Capítulo II',
+        texto: '«La victoria sobre uno mismo es el fundamento de toda excelencia. Si superas tus flaquezas de ayer, hoy serás un hombre más firme.»'
+      },
+      {
+        referencia: 'Capítulo V',
+        texto: '«La discreción en el hablar y la sobriedad en el porte son los escudos que protegen la dignidad en tiempos difíciles.»'
+      }
+    ]
+  },
+
+  // 9. EL ARTE DE LA PRUDENCIA — BALTASAR GRACIÁN (MENTE)
+  ARTE_PRUDENCIA_GRACIAN: {
+    id: 'obj_arte_prudencia_gracian',
+    nombre: 'El Arte de la Prudencia',
+    autor: 'Baltasar Gracián',
+    pilar: 'mente',
+    puntosPilar: 1,
+    icono: '🎭',
+    botonTexto: 'Prudente',
+    desc: '300 aforismos de agudeza, temple, discreción, discernimiento de caracteres y sabiduría práctica para sortear las dificultades del mundo.',
+    mensajes: [
+      {
+        referencia: 'Aforismo 2',
+        texto: '«Carácter y entendimiento: son los dos polos de la excelencia humana; uno sin el otro es solo media felicidad. No basta saber, es preciso saber obrar con temple.»'
+      },
+      {
+        referencia: 'Aforismo 3',
+        texto: '«Llevar las cosas con suspensión: el misterio en las resoluciones mantiene el respeto ajeno. La sencillez abierta en todo momento expone tu refugio a miradas indiscretas.»'
+      },
+      {
+        referencia: 'Aforismo 48',
+        texto: '«Hombre con fondo: tanto tienes de persona cuanto tienes de profundidad. Lo superficial se agota en el primer golpe; lo profundo sostiene los temporales.»'
+      },
+      {
+        referencia: 'Aforismo 130',
+        texto: '«Hacer y hacer parecer: las cosas no pasan por lo que son, sino por lo que parecen. Valer y saber mostrarlo es valer dos veces.»'
+      }
+    ]
+  },
+
+  // 10. HUMANO, DEMASIADO HUMANO — FRIEDRICH NIETZSCHE (MENTE)
+  HUMANO_DEMASIADO_HUMANO: {
+    id: 'obj_humano_demasiado_humano',
+    nombre: 'Humano, Demasiado Humano',
+    autor: 'Friedrich Nietzsche',
+    pilar: 'mente',
+    puntosPilar: 1,
+    icono: '⚡',
+    botonTexto: 'Superado',
+    desc: 'Aforismos libres sobre el auto-examen riguroso, la superación del autoengaño, la forja de la voluntad y la conquista de la independencia intelectual.',
+    mensajes: [
+      {
+        referencia: 'Aforismo 230: El Caminante',
+        texto: '«El que ha alcanzado la libertad de la razón no puede sentirse en la tierra más que como un caminante, aunque no un caminante que viaja hacia una meta final, pues no la hay.»'
+      },
+      {
+        referencia: 'Aforismo 283: La Voluntad',
+        texto: '«El valor de una conquista no se mide por lo que se obtiene, sino por el esfuerzo y el temple que costó alcanzarla.»'
+      },
+      {
+        referencia: 'Aforismo 499: Los Amigos',
+        texto: '«No busques la compañía que te adula y debilita tus defensas; busca al camarada que exige de ti tu máxima nobleza y rigor.»'
+      },
+      {
+        referencia: 'Aforismo 588: La Paciencia',
+        texto: '«El dominio de sí en las cosas pequeñas es la única escuela donde se forja la fortaleza para las grandes pruebas de la vida.»'
       }
     ]
   }
 };
+
 
 

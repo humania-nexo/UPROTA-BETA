@@ -10,49 +10,62 @@ import { CadenasEngine } from '../core/cadenas_engine.js';
 export class ModalSabiduria {
   static mostrarSiCorresponde() {
     const estado = estadoApp.datos;
-    if (estado.sabiduriaVistoHoy || estado.objetosSabiduriaActivos.length === 0) {
+    if (estado.sabiduriaVistoHoy || !estado.objetosSabiduriaActivos || estado.objetosSabiduriaActivos.length === 0) {
       return;
     }
 
-    const primerObjId = estado.objetosSabiduriaActivos[0];
-    const data = SabiduriaDiariaEngine.obtenerMensajeDelDia(primerObjId);
-    if (!data) return;
+    const items = estado.objetosSabiduriaActivos
+      .map(id => SabiduriaDiariaEngine.obtenerMensajeDelDia(id))
+      .filter(Boolean);
 
-    this.abrirModal(data);
+    if (items.length === 0) return;
+
+    this.abrirModal(items);
   }
 
-  static abrirModal(data) {
+  static abrirModal(items) {
     const modalContainer = document.getElementById('modal-container');
     const modalContent = document.getElementById('modal-content');
     if (!modalContainer || !modalContent) return;
 
     modalContent.innerHTML = `
-      <div class="sabiduria-modal-wrap">
+      <div class="sabiduria-modal-wrap" style="max-height: 85vh; overflow-y: auto;">
         <button class="modal-close-btn" id="btn-cerrar-sabiduria">&times;</button>
         
-        <div class="sabiduria-header">
-          <img src="assets/sprites/npcs/don_chui_hablando.png" alt="Don Chui" class="pixel-icon icon-48" style="width: 44px; height: 44px; border: 2px solid var(--oro-torta); border-radius: var(--radius-sm); background: #000;">
+        <div class="sabiduria-header" style="margin-bottom: 12px;">
+          <div style="font-size: 2rem; line-height: 1;">🏛️</div>
           <div class="sabiduria-titulos">
-            <h2>${data.nombreObjeto}</h2>
-            <span>Sabiduría Diaria &bull; +1 ${data.pilar.toUpperCase()}</span>
+            <h2>Sabiduría de la Jornada</h2>
+            <span>${items.length === 1 ? '1 Objeto de Sabiduría Activo' : '2 Objetos de Sabiduría Activos'} &bull; Dosis Diaria de Fortaleza</span>
           </div>
         </div>
 
-        <div class="sabiduria-cuerpo-box">
-          <div class="sabiduria-referencia">${data.mensaje.referencia}</div>
-          <div class="sabiduria-texto">"${data.mensaje.texto}"</div>
-          ${(data.mensaje.notaChui || data.mensaje.notaElena || data.mensaje.notaConcha) ? `
-            <div style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--border-subtle); font-size: 0.78rem; color: #fed7aa; font-style: italic;">
-              ${data.mensaje.notaChui || data.mensaje.notaElena || data.mensaje.notaConcha}
+        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
+          ${items.map(data => `
+            <div class="card-yermo" style="background: rgba(0,0,0,0.5); border: 1px solid rgba(56, 189, 248, 0.4); padding: 12px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-size: 1.2rem;">${data.icono}</span>
+                  <strong style="color: #38bdf8; font-size: 0.88rem;">${data.nombreObjeto}</strong>
+                </div>
+                <span style="font-size: 0.70rem; color: ${data.pilar === 'espiritu' ? '#c084fc' : '#60a5fa'}; font-weight: bold; background: rgba(0,0,0,0.4); padding: 2px 6px; border-radius: 4px;">
+                  +1 ${data.pilar.toUpperCase()}
+                </span>
+              </div>
+
+              <div class="sabiduria-referencia" style="font-size: 0.74rem; color: var(--oro-torta); font-family: var(--font-mono); margin-bottom: 4px;">
+                ${data.mensaje.referencia}
+              </div>
+              <div class="sabiduria-texto" style="font-size: 0.82rem; color: #f8fafc; line-height: 1.45; font-style: italic;">
+                "${data.mensaje.texto}"
+              </div>
             </div>
-          ` : ''}
+          `).join('')}
         </div>
 
-        <div style="display: flex; gap: 8px; justify-content: flex-end;">
-          <button id="btn-confirmar-sabiduria" class="btn-yermo-primary" style="width: 100%; padding: 12px;">
-            ${data.botonTexto}
-          </button>
-        </div>
+        <button id="btn-confirmar-sabiduria" class="btn-yermo-primary" style="width: 100%; padding: 12px; font-size: 0.88rem; font-weight: bold;">
+          ✨ Asimilar Sabiduría y Entrar al Refugio
+        </button>
       </div>
     `;
 
@@ -62,8 +75,8 @@ export class ModalSabiduria {
       modalContainer.classList.add('hidden');
     };
 
-    modalContent.querySelector('#btn-confirmar-sabiduria').addEventListener('click', cerrar);
-    modalContent.querySelector('#btn-cerrar-sabiduria').addEventListener('click', cerrar);
+    modalContent.querySelector('#btn-confirmar-sabiduria')?.addEventListener('click', cerrar);
+    modalContent.querySelector('#btn-cerrar-sabiduria')?.addEventListener('click', cerrar);
 
     modalContainer.classList.remove('hidden');
   }

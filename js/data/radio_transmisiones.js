@@ -1,5 +1,6 @@
 /**
  * Catálogo de Transmisiones de Radio Onda Corta (104.5 MHz)
+ * Locución Principal: Director Anigami Agadni (Voz Natural / Fifine AM8 + SC3)
  * Incluye transcripción completa legible en pantalla y rutas de audio con botón de descarga.
  */
 
@@ -7,126 +8,128 @@ export const TRANSMISIONES_RADIO = [
   {
     id: 'rad_001',
     numero: 1,
-    titulo: 'Voz en la Quebrada: Primer Contacto',
-    locutor: 'Elena (Sierra-Uno)',
+    titulo: 'Voz en la Quebrada: Primer Contacto del Director',
+    locutor: 'Director (Anigami Agadni) [Voz Natural]',
     frecuencia: '104.5 MHz',
     duracionAprox: '1:45 min',
     archivoAudio: 'assets/audio/radio/transmision_01_primer_contacto.mp3',
-    resumen: 'Elena emite su primer llamado general a los supervivientes del valle.',
-    transcripcion: `[Estática suave... beep de sincronía]
+    resumen: 'El Director emite su primer llamado general a los supervivientes del valle desde la cabina central.',
+    transcripcion: `[Estática suave de onda corta... 'Click' de interruptor PTT]
 
-«Aquí Sierra-Uno transmitiendo en 104.5 MHz desde el Risco Norte. Si estás escuchando esto, no estás solo en la quebrada. 
+«Probando modulación en los siete punto doscientos megaciclos... Buenas noches a todos en la quebrada. Les habla el Director desde la estación central de Yermo Radio en 104.5 MHz. Si estás escuchando esto al lado de tu estufa o con el auricular de tapón pegado a la oreja: no estás solo.
 
-La primera regla del Yermo no es pelear, es construir orden. Cuida tu agua antes del mediodía. Asegura tu leña antes de que caiga el sol. Si tienes un refugio levantado con láminas y clavos, mantén el fuego bajo para no llamar miradas innecesarias.
+La primera ley del Yermo no es pelear, es poner orden. Cuida tu agua antes de que pegue el mediodía. Asegura tu leña seca antes de que caiga el sol. Si estás levantando tu refugio con cuatro tablas y lámina vieja, mantén el fuego bajo para no llamar miradas innecesarias.
 
-Estaremos emitiendo reportes de clima, consejos de taller y enlaces entre supervivientes todas las noches al cambio de guardia. Mantengan la calma, cuiden su mente y sostengan la rutina. Sierra-Uno fuera.»
+Estaremos emitiendo reportes de clima, consejos de taller y enlaces comunitarios todas las noches al cambio de guardia. Cuiden su mente, sostengan la rutina y no pierdan la fe. Cambio y fuera.»
 
-[Beep final... estática]`
+[Click de PTT... siseo suave]`
   },
   {
     id: 'rad_002',
     numero: 2,
-    titulo: 'Bioenergía: La Fuerza que no se Apaga',
-    locutor: 'Elena & Don Chui',
+    titulo: 'Cápsula de Taller: Bioenergía y Generador',
+    locutor: 'Director & Don Chui [SC3: Anciano]',
     frecuencia: '104.5 MHz',
     duracionAprox: '2:15 min',
     archivoAudio: 'assets/audio/radio/transmision_02_bioenergia.mp3',
-    resumen: 'Instrucciones técnicas para armar el bici-generador con alternador de auto reciclado.',
-    transcripcion: `[Sintonía de radio... zumbido de dinamo]
+    resumen: 'Instrucciones para montar un bici-generador con alternador de camión sin gasolina.',
+    transcripcion: `[Sintonía de radio... zumbido de dinamo de pedaleo]
 
-«Sierra-Uno en 104.5. Hoy tenemos en el micro a Don Chui con un apunte de carpintería y energía:
+—Director (Voz Natural): «Seguimos en 104.5 MHz. Hoy vino al estudio Don Chui para darnos una lección de taller sobre cómo no depender de combustibles fósiles podridos.»
 
-—Don Chui: "Miren muchachos, no se quiebren la cabeza buscando gasolina podrida. Si rescatan una bicicleta vieja y la montan en un caballete de mezquite con una correa al alternador de camión, veinte minutos de pedaleo parejo les llenan la batería de plomo para alumbrar la mesa toda la noche. El cuerpo humano es la única máquina que se hace más fuerte con el uso."
+—Don Chui [Efecto SC3: Anciano]: «¡Buenas noches, muchachos! Miren: no se quiebren la cabeza buscando gasolina vieja que tapa los carburadores. Si rescatan una bicicleta clásica de montaña y la montan sobre un caballete de mezquite con una faja al alternador de camión, veinte minutos de pedaleo parejo les llenan una batería de plomo para alumbrar la mesa toda la noche. El cuerpo humano es la única máquina en el mundo que se hace más fuerte con el uso.»
 
-—Elena: "Confirmado desde el Risco. La bioenergía sostiene nuestros transmisores. Quien pedalea no solo carga luces; despeja la mente y fortalece las piernas para la expedición de mañana. Sierra-Uno fuera."»`
+—Director (Voz Natural): «Así de simple. Quien pedalea no solo carga luces; despeja la mente y fortalece las piernas para la expedición de mañana. Cuiden sus fierros. Cambio y fuera.»`
   },
   {
     id: 'rad_003',
     numero: 3,
-    titulo: 'El Saber de la Tierra: Remedios de Ribera',
-    locutor: 'Doña Concha',
+    titulo: 'Botica de Monte: Remedios de Ribera',
+    locutor: 'Director & Doña Concha [SC3: Anciana]',
     frecuencia: '104.5 MHz',
     duracionAprox: '2:00 min',
     archivoAudio: 'assets/audio/radio/transmision_03_remedios_concha.mp3',
     resumen: 'Doña Concha enseña a usar el llantén, la manzanilla y la salmuera para evitar infecciones.',
-    transcripcion: `[Sonido de hojas crujiendo... tono amable de radio]
+    transcripcion: `[Sonido de hojas crujiendo... tono cálido de radio]
 
-«Habla Concha desde el Valle Bajo. Para todos los que andan raspados por los alambres del monte:
+—Director (Voz Natural): «Son las ocho de la noche. Doña Concha nos envió una nota de voz desde el Valle Bajo para los que andan raspados por el alambre de espino.»
 
-Nunca le echen alcohol reseco a una herida abierta; eso quema la carne viva. Hiervan medio pocillo de agua con una pizca de sal de grano. Cuelen con trapo limpio y machaquen tres hojas frescas de llantén de arroyo. El emplasto verde saca el calor malo y cierra la piel en dos noches.
+—Doña Concha [Efecto SC3: Mujer / Anciana]: «Habla Concha, mijos. Por favor, nunca le echen alcohol reseco a una herida abierta; eso solo quema la carne viva. Hiervan agua limpia con una cucharadita de sal de grano. Cuelen con trapo de lino y machaquen tres hojas frescas de llantén de arroyo. El emplasto verde saca el calor malo y cierra la piel en dos noches. Y cuando sientan que la angustia les aprieta el pecho, una infusión de manzanilla devuelve el sueño. Cuiden su cuerpo, que es su única casa en esta tierra.»
 
-Y cuando sientan que la angustia les aprieta el pecho al anochecer, una infusión tibia de manzanilla silvestre asienta el estómago y devuelve el sueño. Cuiden su cuerpo, que es su única casa en esta tierra.»`
+—Director (Voz Natural): «Palabra sabia de la tierra. Ténganlo a mano en su botiquín. Sierra Central fuera.»`
   },
   {
     id: 'rad_004',
     numero: 4,
-    titulo: 'Los Ecos del Vivero: La Verdad de los Fitolantros',
-    locutor: 'El Tuerto (Isla Clarión)',
+    titulo: 'Alerta Meteorológica: Viento de Ceniza',
+    locutor: 'Director (Anigami Agadni) [Voz Natural]',
     frecuencia: '104.5 MHz',
-    duracionAprox: '3:10 min',
-    archivoAudio: 'assets/audio/radio/transmision_04_proyecto_eden.mp3',
-    resumen: 'Revelación del Proyecto Edén (2031-2038) y el origen simbiótico de los fitolantros.',
-    transcripcion: `[Frecuencia encriptada... tono grave]
+    duracionAprox: '1:30 min',
+    archivoAudio: 'assets/audio/radio/transmision_05_viento_ceniza.mp3',
+    resumen: 'El Director alerta sobre ráfagas secas del norte cargadas de polvo volcánico y ceniza.',
+    transcripcion: `[Tono de alerta breve... ráfagas de viento contra la antena]
 
-«Atención a los receptores de onda corta. Habla El Tuerto. Vengo de la costa con los diarios de la expedición de Clarión.
+«Atención a todos los refugios del cuadrante norte. Boletín meteorológico de urgencia para las próximas 36 horas.
 
-Dejen de llamarles "monstruos verdes". Lo que habita en los viveros no nació de un virus de pesadilla; nació del Proyecto Edén de Elias Voss en 2035 para evitar que la humanidad muriera de hambre cuando colapsaron las cosechas mundiales.
+El barómetro de la estación cayó en picada. Se aproxima una vaguada seca con viento de ceniza volcánica. Si tienen huertos descubiertos o semilleros en cubetas, tápenlos de inmediato con esteras de paja o costales húmedos.
 
-Tienen clorofila en la dermis, hacen fotosíntesis y lloran cuando se queman los árboles. Si no los agredes, no te atacarán. El futuro no es exterminar el monte, es aprender a convivir con lo que brotó de las cenizas. Mantengan los ojos abiertos.»`
+Cierren las compuertas de las alacenas y tapen los filtros de agua con plástico; el polvo fino arruina los lechos de carbón. Quien tenga que salir a trotar o a recoger leña mañana temprano, use un pañuelo de algodón humedecido sobre la boca y la nariz. Cuiden los pulmones; en el Yermo no hay repuestos. Cambio y fuera.»
+
+[Beep de cierre]`
   },
   {
     id: 'rad_005',
     numero: 5,
-    titulo: 'Aviso Meteorológico: Viento de Ceniza',
-    locutor: 'Elena (Sierra-Uno)',
-    frecuencia: '104.5 MHz',
-    duracionAprox: '1:30 min',
-    archivoAudio: 'assets/audio/radio/transmision_05_viento_ceniza.mp3',
-    resumen: 'Elena alerta sobre ráfagas secas del norte cargadas de polvo volcánico y ceniza.',
-    transcripcion: `[Tono de alerta breve... estática modulada]
-
-«Sierra-Uno con boletín meteorológico de urgencia para las próximas 36 horas. 
-
-El barómetro del Risco está cayendo en picada. Se aproxima una vaguada seca desde el norte con viento de ceniza. Si tienen huertos descubiertos o semilleros en cubetas, tápenlos de inmediato con esteras de paja o costales húmedos. 
-
-Cierren las compuertas de las alacenas y aseguren los filtros de agua. El polvo fino colmata los lechos de carbón si los dejan abiertos al aire. Quien tenga que salir a trotar o a recoger leña mañana temprano, use un pañuelo de algodón humedecido sobre la boca y la nariz. Cuiden los pulmones; en el Yermo no hay respiradores de repuesto. Sierra-Uno fuera.»`
-  },
-  {
-    id: 'rad_006',
-    numero: 6,
-    titulo: 'Cápsula Técnica: Mantenimiento del Colector Pluvial',
-    locutor: 'Elena & Don Chui',
+    titulo: 'Cápsula de Fontanería: La Trampa First-Flush',
+    locutor: 'Director & Don Chui [SC3: Anciano]',
     frecuencia: '104.5 MHz',
     duracionAprox: '2:10 min',
     archivoAudio: 'assets/audio/radio/transmision_06_colector_pluvial.mp3',
     resumen: 'Instrucciones para limpiar canaletas y verificar la válvula first-flush antes de la lluvia.',
     transcripcion: `[Zumbido de sintonía... chasquido de micrófono]
 
-«104.5 MHz en la escala. Hoy Don Chui nos recuerda una regla sagrada de fontanería rústica:
+—Director (Voz Natural): «Frecuencia 104.5 MHz. Don Chui nos recuerda una regla de oro antes de que caigan las primeras lluvias de la temporada.»
 
-—Don Chui: "Muchachos, no se confíen de las primeras gotas. El techo junta caca de pájaro, tizne y polvo durante semanas de sequía. Si no limpian la canaleta de lámina y no vacían el tubo de descarte previo —el first-flush—, toda esa porquería se les va directo al tambor de doscientos litros y les pudre la reserva del mes. Cinco minutos de escoba de varas en el tejado les salvan cien litros de agua limpia."
+—Don Chui [Efecto SC3: Anciano]: «Muchachos, no se confíen de las primeras gotas. El techo junta tizne, polvo y caca de pájaro durante semanas de sequía. Si no limpian la canaleta y no vacían el tubo de descarte previo —el first-flush—, toda esa porquería se les va directo al tambor de doscientos litros y les pudre la reserva del mes. Cinco minutos de escoba de varas en el tejado les salvan cien litros de agua pura.»
 
-—Elena: "Escucharon al maestro. La prevención no cuesta nada; la pereza se paga con disentería. Revisen sus codos de PVC y sus mallas mosquiteras antes de que oscurezca. Sierra-Uno fuera."»`
+—Director (Voz Natural): «Prevención pura. La pereza se paga con disentería. Revisen sus canaletas antes de que oscurezca. Buenas tardes a todos.»`
+  },
+  {
+    id: 'rad_006',
+    numero: 6,
+    titulo: 'Ecos de Madrugada: Para el que Tropezó',
+    locutor: 'Director (Anigami Agadni) [Voz Natural Íntima]',
+    frecuencia: '104.5 MHz',
+    duracionAprox: '2:00 min',
+    archivoAudio: 'assets/audio/radio/transmision_07_buenas_noches_risco.mp3',
+    resumen: 'Reflexión nocturna de contención emocional, perdón sin culpa y fuerza estoica.',
+    transcripcion: `[Siseo suave constante... sonido lejano de brasa crepitando]
+
+«Son las once y media de la noche en el valle.
+
+Esta transmisión corta es para vos, que hoy estás mirando el techo de chapa y sientes que las fuerzas no te alcanzan. Para el que dio un paso en falso, o para el que rompió una racha y siente que todo se vino abajo.
+
+Escúchame bien: siete veces cae el justo y vuelve a levantarse. Setenta veces siete. Una caída no te define; lo que te define es la dignidad con la que barres las cenizas y vuelves a encender el fogón mañana al alba.
+
+Respira hondo. Toma un sorbo de agua fresca. Deja la brasa bien tapada para que guarde calor. Mañana volvemos a empezar juntos. Descansa... Sierra Central fuera.»
+
+[Fade-out suave... silencio nocturno]`
   },
   {
     id: 'rad_007',
     numero: 7,
-    titulo: 'Buenas Noches desde el Risco: El Fuego Interior',
-    locutor: 'Elena (Sierra-Uno)',
+    titulo: 'El Secreto de la Isla Clarión: Los Fitolantros',
+    locutor: 'Director & Cría Fitolantra [SC3: Bebé]',
     frecuencia: '104.5 MHz',
-    duracionAprox: '2:00 min',
-    archivoAudio: 'assets/audio/radio/transmision_07_buenas_noches_risco.mp3',
-    resumen: 'Reflexión nocturna de contención emocional y constancia para los supervivientes solitarios.',
-    transcripcion: `[Estática cálida... sonido lejano de viento de montaña]
+    duracionAprox: '2:45 min',
+    archivoAudio: 'assets/audio/radio/transmision_04_proyecto_eden.mp3',
+    resumen: 'Revelación de los diarios de Clarión sobre el origen botánico y pacífico de los Fitolantros.',
+    transcripcion: `[Frecuencia encriptada con tono grave y eco de montaña]
 
-«Son las once de la noche en el valle. Habla Elena desde la cima del Risco.
+—Director (Voz Natural): «Atención a los receptores del valle. Hoy compartimos una grabación recuperada de los diarios de la Isla Clarión sobre el Proyecto Edén de 2035. Dejemos de llamarles monstruos a los seres de los viveros. No nacieron de un virus de pesadilla; nacieron de un intento desesperado de la ciencia por evitar que la humanidad muriera de hambre cuando colapsaron los campos. Tienen clorofila en la piel, hacen fotosíntesis y lloran cuando se queman los árboles.»
 
-A esta hora las luces de los fogones empiezan a apagarse en la quebrada. Sé que hay noches en que el cansancio pesa el doble. Noches en que miran el techo de chapa y se preguntan cuánto más habrá que remar contra la corriente.
+—Cría Fitolantra [Efecto SC3: Bebé / Susurro vegetal]: «Ah... ra-íz... sol... luz...»
 
-Solo quiero recordarles algo: cada clavo que enderezaron hoy, cada gota de agua que hirvieron, cada paso que dieron con la carga al hombro, es una victoria contra el caos. El mundo viejo no va a volver, pero la dignidad con la que nos levantamos mañana depende enteramente de nosotros.
-
-Dejen la brasa bien tapada con ceniza para que guarde calor. Descansen el cuerpo y serenen la mente. Mañana volvemos a empezar. Buenas noches a todos en el Yermo... Sierra-Uno fuera.»
-
-[Tono de cierre... silencio nocturno]`
+—Director (Voz Natural): «Si no los atacamos, no nos atacarán. El futuro no es arrasar el monte, es aprender a convivir con lo que brotó de las cenizas. Mantengan los ojos abiertos y el corazón despierto. Sierra Central fuera.»`
   }
 ];
