@@ -51,16 +51,19 @@ export class ModalCentroAyuda {
 
         <!-- PESTAÑAS INTERNAS -->
         <div style="display: flex; gap: 4px; overflow-x: auto; margin-bottom: 12px; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.05);">
-          <button class="btn-ayuda-tab ${tab === 'sobre' ? 'active' : ''}" data-tab="sobre" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'sobre' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'sobre' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer;">
+          <button class="btn-ayuda-tab ${tab === 'sobre' ? 'active' : ''}" data-tab="sobre" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'sobre' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'sobre' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
             📖 Sobre UPROTA
           </button>
-          <button class="btn-ayuda-tab ${tab === 'faq' ? 'active' : ''}" data-tab="faq" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'faq' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'faq' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer;">
+          <button class="btn-ayuda-tab ${tab === 'respaldo' ? 'active' : ''}" data-tab="respaldo" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'respaldo' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'respaldo' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
+            💾 Respaldo
+          </button>
+          <button class="btn-ayuda-tab ${tab === 'faq' ? 'active' : ''}" data-tab="faq" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'faq' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'faq' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
             ❓ FAQ
           </button>
-          <button class="btn-ayuda-tab ${tab === 'instalacion' ? 'active' : ''}" data-tab="instalacion" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'instalacion' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'instalacion' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer;">
+          <button class="btn-ayuda-tab ${tab === 'instalacion' ? 'active' : ''}" data-tab="instalacion" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'instalacion' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'instalacion' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
             📲 Instalar App
           </button>
-          <button class="btn-ayuda-tab ${tab === 'creditos' ? 'active' : ''}" data-tab="creditos" style="padding: 5px 9px; font-size: 0.74rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'creditos' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'creditos' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer;">
+          <button class="btn-ayuda-tab ${tab === 'creditos' ? 'active' : ''}" data-tab="creditos" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'creditos' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'creditos' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
             👑 Créditos
           </button>
         </div>
@@ -196,6 +199,74 @@ export class ModalCentroAyuda {
       });
     });
 
+    // --- PESTAÑA RESPALDO: EXPORTAR & IMPORTAR ---
+    const btnExportar = container.querySelector('#btn-exportar-partida');
+    const msgExportar = container.querySelector('#msg-exportar-exito');
+    if (btnExportar) {
+      btnExportar.addEventListener('click', async () => {
+        try {
+          btnExportar.disabled = true;
+          const archivo = await estadoApp.exportarRespaldoJSON();
+          if (msgExportar) {
+            msgExportar.style.display = 'block';
+            msgExportar.innerHTML = `✅ Respaldo descargado como <strong>${archivo}</strong> en tu carpeta de Descargas.`;
+          }
+          audioProcedural.playCheckSenda();
+        } catch (err) {
+          alert('Error al exportar: ' + err.message);
+        } finally {
+          btnExportar.disabled = false;
+        }
+      });
+    }
+
+    const btnActivarInput = container.querySelector('#btn-activar-input-respaldo');
+    const inputRespaldo = container.querySelector('#input-archivo-respaldo');
+    const msgImportar = container.querySelector('#msg-importar-estado');
+
+    if (btnActivarInput && inputRespaldo) {
+      btnActivarInput.addEventListener('click', () => {
+        inputRespaldo.click();
+      });
+
+      inputRespaldo.addEventListener('change', async (e) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+
+        if (msgImportar) {
+          msgImportar.style.display = 'block';
+          msgImportar.style.color = '#38bdf8';
+          msgImportar.textContent = '⏳ Leyendo y validando archivo de respaldo...';
+        }
+
+        const reader = new FileReader();
+        reader.onload = async (evento) => {
+          try {
+            const contenido = evento.target.result;
+            await estadoApp.importarRespaldoJSON(contenido);
+            if (msgImportar) {
+              msgImportar.style.color = '#4ade80';
+              msgImportar.innerHTML = '✅ ¡Refugio restaurado con éxito! Recargando...';
+            }
+            audioProcedural.playFanfarriaFaro();
+            setTimeout(() => window.location.reload(), 1200);
+          } catch (err) {
+            if (msgImportar) {
+              msgImportar.style.color = '#f87171';
+              msgImportar.textContent = '❌ ' + err.message;
+            }
+          }
+        };
+        reader.onerror = () => {
+          if (msgImportar) {
+            msgImportar.style.color = '#f87171';
+            msgImportar.textContent = '❌ Error al leer el archivo en este dispositivo.';
+          }
+        };
+        reader.readAsText(file);
+      });
+    }
+
     // Acordeón FAQ
     container.querySelectorAll('.faq-pregunta').forEach(item => {
       item.addEventListener('click', () => {
@@ -266,6 +337,55 @@ export class ModalCentroAyuda {
               <img src="assets/sprites/emojis/emociones/emoji_abrazo_refugio.png" alt="Abrazo" class="pixel-icon icon-16">
               <span>Volver a Empezar desde Cero (Día 1)</span>
             </button>
+          </div>
+        `;
+
+      case 'respaldo':
+        return `
+          <div class="card-yermo" style="border-left: 3px solid var(--oro-torta); background: rgba(0,0,0,0.3); margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <img src="assets/sprites/items/caja_expedicion.png" alt="Respaldo" class="pixel-icon icon-20">
+              <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin: 0;">Soberanía y Seguridad de tu Refugio</h4>
+            </div>
+            <p style="font-size: 0.80rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              En UPROTA tu progreso dura <strong>365 a 730 días reales</strong>. Tus datos viven exclusivamente en la memoria de este dispositivo y nunca se envían a servidores externos. Aquí puedes guardar y cargar tu partida con total libertad.
+            </p>
+          </div>
+
+          <!-- TARJETA 1: EXPORTAR PARTIDA -->
+          <div class="card-yermo" style="background: rgba(0,0,0,0.25); border: 1px solid var(--border-subtle); padding: 12px; margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <img src="assets/sprites/pilares/torta_dorada_badge.png" alt="Guardar" class="pixel-icon icon-16">
+              <h4 style="color: #38bdf8; font-size: 0.88rem; margin: 0;">1. Guardar Copia de Seguridad</h4>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 8px;">
+              Genera un archivo <code>.json</code> con todo tu avance (perfil, días, faros, inventario, vehículos y construcciones).
+            </p>
+            <div style="background: rgba(0,0,0,0.4); border-left: 2px solid #38bdf8; padding: 8px; font-size: 0.74rem; color: #bae6fd; line-height: 1.45; margin-bottom: 10px;">
+              📍 <strong>¿Dónde se descarga el archivo?</strong><br>
+              Se guardará automáticamente en la carpeta <strong>Descargas (Downloads)</strong> de tu teléfono o PC. Te recomendamos guardarlo en tu Google Drive, iCloud o enviártelo a tu propio chat de WhatsApp/Telegram para tenerlo siempre a salvo.
+            </div>
+            <button id="btn-exportar-partida" class="btn-yermo-primary" style="width: 100%; padding: 10px; font-size: 0.82rem; background: #0284c7; border: none; color: #fff; font-weight: bold; cursor: pointer; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; gap: 6px;">
+              <span>💾 Descargar Copia de Seguridad (.json)</span>
+            </button>
+            <div id="msg-exportar-exito" style="display: none; font-size: 0.74rem; color: #4ade80; margin-top: 6px; text-align: center;"></div>
+          </div>
+
+          <!-- TARJETA 2: IMPORTAR PARTIDA -->
+          <div class="card-yermo" style="background: rgba(0,0,0,0.25); border: 1px solid var(--border-subtle); padding: 12px; margin-bottom: 10px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <img src="assets/sprites/emojis/emociones/emoji_bandera_hito.png" alt="Cargar" class="pixel-icon icon-16">
+              <h4 style="color: #4ade80; font-size: 0.88rem; margin: 0;">2. Cargar Partida / Restaurar Respaldo</h4>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 8px;">
+              ¿Cambiaste de teléfono o limpiaste el navegador? Selecciona tu archivo de respaldo <code>.json</code> desde la memoria local de tu dispositivo o desde tu nube (Drive/iCloud/Archivos).
+            </p>
+            
+            <input type="file" id="input-archivo-respaldo" accept=".json" style="display: none;">
+            <button id="btn-activar-input-respaldo" class="btn-yermo-secondary" style="width: 100%; padding: 10px; font-size: 0.82rem; border-color: #22c55e; color: #4ade80; font-weight: bold; cursor: pointer; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; gap: 6px;">
+              <span>📂 Seleccionar Archivo y Restaurar Refugio</span>
+            </button>
+            <div id="msg-importar-estado" style="display: none; font-size: 0.74rem; margin-top: 6px; text-align: center;"></div>
           </div>
         `;
 

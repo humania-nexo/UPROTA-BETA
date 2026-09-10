@@ -41,7 +41,6 @@ export const MUSICA_CHIPTUNE = {
     dutyCycle: 0.25,
     descripcion: 'Tema matutino sereno para el Tablón de Hábitos y la planificación diaria.',
     canales: {
-      // Canal 1: Melodía principal dulce (Pulse 25%)
       lead: [
         { f: NOTAS.C4, d: 0.35, t: 0 },
         { f: NOTAS.E4, d: 0.35, t: 365 },
@@ -58,7 +57,6 @@ export const MUSICA_CHIPTUNE = {
         { f: NOTAS.D4, d: 0.70, t: 5475 },
         { f: NOTAS.C4, d: 1.10, t: 6205 }
       ],
-      // Canal 2: Bajo cálido y seguro (Triangle / Sub-Pulse)
       bass: [
         { f: NOTAS.C3, d: 1.40, t: 0 },
         { f: NOTAS.G2, d: 1.40, t: 1460 },
@@ -67,7 +65,6 @@ export const MUSICA_CHIPTUNE = {
         { f: NOTAS.G2, d: 1.40, t: 5840 },
         { f: NOTAS.C3, d: 1.40, t: 7280 }
       ],
-      // Canal 3: Hi-hat suave filtrado de paso alto (Noise)
       noise: [
         { tipo: 'hihat', d: 0.05, t: 0 },
         { tipo: 'hihat', d: 0.05, t: 730 },
@@ -115,7 +112,6 @@ export const MUSICA_CHIPTUNE = {
         { f: NOTAS.A2, d: 2.20, t: 7300 }
       ],
       noise: [
-        // Crujido suave y esporádico de brasas
         { tipo: 'brasa', d: 0.08, t: 400 },
         { tipo: 'brasa', d: 0.06, t: 2300 },
         { tipo: 'brasa', d: 0.09, t: 4500 },
@@ -138,7 +134,7 @@ export const MUSICA_CHIPTUNE = {
         { f: NOTAS.G4, d: 0.12, t: 0 },
         { f: NOTAS.B4, d: 0.12, t: 130 },
         { f: NOTAS.D5, d: 0.12, t: 260 },
-        { f: NOTAS.F5, d: 0.18, t: 390 }, // Séptima dominante cálida
+        { f: NOTAS.F5, d: 0.18, t: 390 },
         { f: NOTAS.G5, d: 0.40, t: 600 },
         { f: NOTAS.D5, d: 0.15, t: 1100 },
         { f: NOTAS.G5, d: 0.70, t: 1300 }
@@ -237,5 +233,36 @@ export const MUSICA_CHIPTUNE = {
       noise: []
     },
     duracionTotalMs: 6500
+  }
+};
+
+/**
+ * GENERADORES DE PAISAJES AMBIENTALES PROCEDURALES DE ENFOQUE Y CALMA (0 KB)
+ * Tiempos de enfoque Pomodoro (25 min, 45 min o continuo)
+ */
+export const PAISAJES_AMBIENTALES_ENFOQUE = {
+  fogon: {
+    id: 'fogon',
+    nombre: 'El Fogón de Mezquite',
+    icono: '🪵',
+    pilarRecomendado: 'Espíritu / El Hogar',
+    descripcion: 'Crepitar granular cálido de leña seca y oscilaciones térmicas para calmar la mente y meditar.',
+    gananciaSugerida: 0.25
+  },
+  lluvia: {
+    id: 'lluvia',
+    nombre: 'Lluvia en Techo de Lámina',
+    icono: '🌧️',
+    pilarRecomendado: 'Mente / Lectura',
+    descripcion: 'Ruido filtrado continuo con micro-impactos rítmicos de agua para sesiones de estudio profundo.',
+    gananciaSugerida: 0.22
+  },
+  radio_portadora: {
+    id: 'radio_portadora',
+    nombre: 'Portadora Calma 104.5 MHz',
+    icono: '📻',
+    pilarRecomendado: 'Taller / Manos a la Obra',
+    descripcion: 'Zumbido analógico cálido de transformador y siseo suave para aislar distracciones del mundo real.',
+    gananciaSugerida: 0.18
   }
 };

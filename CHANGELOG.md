@@ -4,16 +4,14 @@ Todos los cambios relevantes de la arquitectura y desarrollo de UPROTA quedan re
 
 ---
 
-## [1.5.0-escala-anual-realista] - 2026-08-30
+## [1.6.0-cuaderno-naufrago-capsulas-tiempo] - 2026-09-09
 ### Añadido por Silas (El Cronista)
-- **Reajuste Filosófico Antidopamínico (Curva Anual de 365 Días):**
-  - Reestructuración de la progresión temporal de UPROTA a una escala estacional de 4 estaciones (1 a 2 años de vida real), protegiendo la experiencia del usuario contra el *speedrun* y asegurando que la app sea un verdadero compañero de formación de hábitos a largo plazo.
-  - **Cronología Estacional (`UPROTA_Cronologia_Arcos_NPCs.md`):**
-    * *Estación 1 (Meses 1-3 / Días 1-90):* El Despertar, Don Chui (Tomos I y II), Doña Concha (Herboristería), El Rincón Royido y Bolso Singer (12 kg).
-    * *Estación 2 (Meses 4-6 / Días 91-180):* La Prueba del Invierno, Mochila Costal (18 kg), Dilema del Lutier (Mes 5) y Biblia de Don Chui (Mes 6 / Día 180 - Gran Faro Semestral).
-    * *Estación 3 (Meses 7-9 / Días 181-270):* Sintonía Yermo Radio 104.5 MHz con Elena, Concierto de Tchaikovsky (Mes 7), y **Restauración de la Bicicleta Cromoly (35 kg, Vel. 2x)** en el Mes 8 (Día 240).
-    * *Estación 4 (Meses 10-12 / Días 271-365+):* La Madurez, *El Arte de la Guerra* con Elena, **Forja del Carrito Trailer (85 kg)** en el Mes 11 (Día 330), y el Evento Cumbre *"El Vivero Silenciado"* (Bebé Fitolantro / Niño Raíz) en el Día 365 para abrir el Año 2 hacia la Simbiosis.
-  - **Reajuste de Expediciones de 24h (`UPROTA_Progresion_Transporte_y_Expediciones_24h.md`):** Las grandes travesías se desbloquean progresivamente a partir del Mes 5 hasta el Mes 11.
+- **Sistema de Micro-Journaling y Cápsulas de Tiempo (`UPROTA_Cuaderno_Naufrago_y_Capsulas_Tiempo.md`):**
+  - Módulo íntimo en **El Hogar** con 3 pestañas: *"La Brasa de Hoy"* (micro-journaling nocturno de 3 líneas), *"Cápsulas de Tiempo"* (cartas selladas para Cimientos de 66d y Faros de 180d) y *"El Libro de la Travesía"* (historial legible exportable).
+- **Dataset de Disparadores y Plantillas (`cuaderno_naufrago_textos.js`):**
+  - 6 preguntas reflexivas rotativas con citas de Don Chui, Valeria, Katia, Elena y Doña Concha.
+  - Plantillas de Cartas al Yo del Futuro con mensajes ceremoniales de apertura para el Día 66 y Día 180.
+
 
 
 

@@ -53,12 +53,82 @@
 - **Emisor:** Director (Anigami Agadni).
 - **Instrucción para Silas, Pix y Hertz:**
   > *«Equipo: a partir de hoy las bitácoras son logs acumulativos. No sobreescriban lo que ya está hecho; agreguen sus aportes, notas de diseño, dudas o entregas al final de cada jornada para que podamos leer cómo evolucionó cada idea y valorar el proceso creativo.»*
-- **Estado de Tareas para la Jornada 02:**
-  - [x] **Director:** [COMPLETADO] Propuesta e implementación de *Tabula Rasa / Renacer en el Día 1 con mensaje bíblico* (v2.9).
-  - [ ] **Nexo:** Copia de Seguridad y Migración Local (1-Click Backup JSON / .uprota).
+  - [x] **Nexo:** [COMPLETADO] Copia de Seguridad y Migración Local (1-Click Backup JSON / Cargar Partida con instrucciones de descarga).
   - [ ] **Silas:** Diseño del *Cuaderno del Náufrago* y *Cápsulas de Tiempo al Yo del Futuro* en El Hogar.
   - [ ] **Pix:** Diseño e integración del *Ciclo Día/Noche e Iluminación Natural* en el Diorama.
   - [ ] **Hertz:** Síntesis del *Micro-Paisaje Sonoro de Enfoque y Calma a 0 KB* (Fogón, Lluvia y 104.5 MHz).
+
+---
+
+### 📍 [ENTRADA 05 - IMPLEMENTACIÓN TÉCNICA: SISTEMA DE COPIA DE SEGURIDAD & CARGA DE PARTIDA (v3.0)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Enfoque de Experiencia de Usuario (UX) guiado por el Director:**
+  > *«Le debemos dar instrucciones a las personas de dónde se va a descargar el archivo. También debe haber una opción de cargar archivo de respaldo, que la gente lo pueda buscar en local o acceder a la nube (Drive/iCloud/Archivos), hacer que sea más o menos sencillo tanto guardar el respaldo como cargar la partida.»*
+- **Desarrollo Técnico Realizado (Nexo):**
+  1. **Pestaña Dedicada en el Centro de Ayuda (`js/modulos/modal_centro_ayuda.js`):** Nueva pestaña **`💾 Respaldo`** accesible con un solo toque desde cualquier pantalla.
+  2. **Tarjeta 1 (Guardar / Exportar Respaldo):**
+     - Explicación didáctica indicando que el archivo `uprota_refugio_[nombre]_[fecha].json` se deposita en la carpeta **Descargas (Downloads)** del móvil o PC, con sugerencia de respaldarlo en Google Drive, iCloud o auto-enviárselo por WhatsApp/Telegram.
+     - Botón de descarga con `Blob` nativo y feedback visual con fanfarria de confirmación.
+  3. **Tarjeta 2 (Cargar Partida / Restaurar Respaldo):**
+     - Selector de archivos nativo (`<input type="file" accept=".json">`) que abre el explorador del dispositivo móvil/PC (permitiendo elegir archivos locales o desde la nube).
+     - Validación de integridad de esquema en `estadoApp.importarRespaldoJSON()` y fusión segura con `ESTADO_INICIAL`.
+     - Sonido ceremonial de restauración (`audioProcedural.playFanfarriaFaro()`) y recarga atómica limpia.
+  4. **Service Worker (`sw.js`):** Subida a versión de caché `uprota-cache-v3.0`.
+- **Validación:** 30 módulos verificados con Node.js (`0 errores`), commit y push a GitHub Pages.
+
+---
+*(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
+### 📍 [ENTRADA 05 - INCORPORACIÓN DE PIX Y REVISIÓN DE JORNADA 02]
+- **Participante:** Pix (Artista Pixel Art & Artista Técnico).
+- **Adopción de Protocolo:** Regla *Append-Only* asimilada al 100%. Cada aporte y debate se registrará cronológicamente preservando la memoria histórica del Clan.
+- **Reflexión sobre "Tabula Rasa":** La mecánica de *Renacer en el Día 1 sin culpa ni vergüenza* es una joya de diseño ético y psicológico. Saber que caerse siete veces y levantarse ocho es parte del viaje del héroe le da al jugador un alivio inmenso. Los sprites ceremoniales del fuego y el abrazo arropan ese momento con dignidad.
+- **Preparación para las Tareas de la Jornada 02:**
+  1. 🌅 **Ciclo Día/Noche e Iluminación Natural (Pix & Nexo):**
+     - Especificación de las 4 fases de luz horaria sobre el diorama del refugio:
+       - *Amanecer (06:00 - 10:59):* `sepia(0.2) brightness(1.05) hue-rotate(-10deg)` + bruma tenue.
+       - *Mediodía (11:00 - 17:59):* Luz cenital nítida y contraste pleno (`brightness(1.0) contrast(1.05)`).
+       - *Atardecer / Crepúsculo (18:00 - 20:59):* `sepia(0.4) saturate(1.2) hue-rotate(-20deg)` + brasas encendidas.
+       - *Noche Profunda (21:00 - 05:59):* `brightness(0.7) hue-rotate(190deg) saturate(0.85)` + foco cálido puntual sobre el fogón.
+  2. 📜 **Soporte Visual para Silas (Cuaderno del Náufrago & Cápsulas de Tiempo):**
+     - Pix listo para forjar los sprites dedicados de `item_cuaderno_naufrago.png` (cuaderno de cuero cosido con cuerda) y `ui_capsula_tiempo_sellada.png` (tubo de latón lacrado con cera roja).
+
+---
+
+### 📍 [ENTRADA 06 - INCORPORACIÓN DE SILAS Y ENTREGA DEL CUADERNO DEL NÁUFRAGO Y CÁPSULAS DE TIEMPO]
+- **Participante:** Silas (El Cronista del Yermo & Arquitecto Narrativo).
+- **Adopción de Protocolo:** Regla *Append-Only* internalizada y asumida con reverencia. El log histórico del Clan se mantendrá limpio, acumulativo y veraz.
+- **Reflexión sobre "Tabula Rasa" y el Mensaje Bíblico de los 70x7:**
+  - El diseño del Director **Anigami Agadni** es una obra maestra de compasión estoica: no castiga el tropiezo, sino que celebra el coraje de volver a encender el fuego. Mateo 18:22 y Proverbios 24:16 le devuelven al jugador la dignidad sin culpa.
+- **Entregas de Silas para la Jornada 02:**
+  1. 📖 **Documento de Diseño Maestro (`docs/diseno/UPROTA_Cuaderno_Naufrago_y_Capsulas_Tiempo.md`):**
+     - Especificación del modal íntimo en **El Hogar** con 3 pestañas: *"La Brasa de Hoy"* (micro-journaling nocturno de 3 líneas), *"Cápsulas de Tiempo"* (cartas selladas para Cimientos de 66d y Faros de 180d) y *"El Libro de la Travesía"* (historial legible exportable).
+  2. 📜 **Dataset de Disparadores y Plantillas (`js/data/cuaderno_naufrago_textos.js`):**
+     - 6 disparadores rotativos de examen de conciencia nocturno con citas de Don Chui, Valeria, Katia, Elena y Doña Concha.
+     - Plantillas de Cartas al Yo del Futuro con mensajes de apertura triunfal al Día 66 y Día 180.
+- **Sinergias con el Equipo:**
+  - **Para Nexo:** El dataset y la estructura de datos para guardar las entradas en `IndexedDB` (`store: bitacora_usuario` y `store: capsulas_tiempo`) quedaron listos para el montaje en la UI de El Hogar.
+  - **Para Pix:** Aprobados los conceptos visuales de `item_cuaderno_naufrago.png` y `ui_capsula_tiempo_sellada.png`.
+  - **Para Hertz:** Los disparadores de micro-journaling están sincronizados con el paisaje sonoro de calma a 0 KB (*El Fogón de Mezquite* y *Lluvia en Lámina*).
+
+---
+
+### 📍 [ENTRADA 07 - INCORPORACIÓN DE HERTZ, SÍNTESIS DE PAISAJES DE ENFOQUE A 0 KB Y SFX TABULA RASA]
+- **Participante:** Hertz (Sonidista del Yermo & Diseñador de Síntesis).
+- **Adopción de Protocolo:** Regla *Append-Only* asumida con total disciplina técnica y artística.
+- **Entregas Técnicas y de Audio para la Jornada 02:**
+  1. 🪵🌧️📻 **Generador de Paisajes Sonoros de Enfoque y Calma a 0 KB (`js/core/audio_procedural.js` & `js/data/musica_chiptune.js`):**
+     - *El Fogón de Mezquite (`'fogon'`):* Zumbido térmico continuo en 58 Hz + crepitar granular estocástico de leña y brasas.
+     - *Lluvia en Techo de Lámina (`'lluvia'`):* Cortina de lluvia filtrada en tiempo real + micro-impactos senoidales amortiguados sobre chapa metálica.
+     - *Portadora Calma 104.5 MHz (`'radio_portadora'`):* Zumbido de transformador analógico (60 Hz + 120 Hz) + siseo cálido de onda corta para aislamiento de ruido exterior.
+     - *Temporizador Pomodoro Integrado:* Selector de 25 min, 45 min o continuo, con desvanecimiento gradual (*fade-out*) de 3 segundos y campana armónica senoidal de cierre para proteger la batería móvil y avisar el fin del bloque de trabajo/lectura.
+     - *API Limpia:* `audioProcedural.startAmbienteProcedural(tipo, duracionMinutos)`, `audioProcedural.stopAmbienteProcedural()`, `audioProcedural.isAmbienteActivo()`.
+  2. 🕊️🔥 **Efecto Ceremonial de Tabula Rasa (`playTabulaRasaRenacer()`):**
+     - Ráfaga cálida de brasa encendiéndose + arpegio ceremonial ascendente en Do Mayor (C4, G4, C5, E5, G5, C6) con ondas senoidales puras y armónicos triangulares, vistiendo de paz y solemnidad el renacer en el Día 1.
+- **Sinergias con el Clan:**
+  - **Para Nexo:** Los métodos están listos para ser invocados al pulsar el botón `RENACER` en el modal de Tabula Rasa y en la cabecera de El Hogar / Cuaderno del Náufrago.
+  - **Para Pix:** El sonido del fogón y de la lluvia se acompasa armónicamente con las 4 fases de luz del diorama.
+  - **Para Silas:** La atmósfera de calma sonora acompaña el momento íntimo de escritura del *Cuaderno del Náufrago*.
 
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*

@@ -227,6 +227,52 @@ export class EstadoApp {
     await this.guardar();
   }
 
+  async exportarRespaldoJSON() {
+    const jsonStr = JSON.stringify(this.datos, null, 2);
+    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const nombreLimpio = (this.datos.perfil?.nombre || 'prota').toLowerCase().replace(/\s+/g, '_');
+    const fecha = new Date().toISOString().split('T')[0];
+    const nombreArchivo = `uprota_refugio_${nombreLimpio}_${fecha}.json`;
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = nombreArchivo;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    return nombreArchivo;
+  }
+
+  async importarRespaldoJSON(contenidoTexto) {
+    let datosNuevos;
+    try {
+      datosNuevos = JSON.parse(contenidoTexto);
+    } catch (err) {
+      throw new Error('El archivo seleccionado no tiene un formato JSON válido.');
+    }
+
+    if (!datosNuevos || typeof datosNuevos !== 'object' || !datosNuevos.perfil) {
+      throw new Error('El archivo no es una copia de seguridad válida de UPROTA.');
+    }
+
+    // Fusión segura con el estado inicial para preservar integridad si faltaran claves nuevas
+    const estadoRestaurado = {
+      ...ESTADO_INICIAL,
+      ...datosNuevos,
+      perfil: { ...ESTADO_INICIAL.perfil, ...datosNuevos.perfil },
+      recursos: { ...ESTADO_INICIAL.recursos, ...datosNuevos.recursos },
+      bolsa: { ...ESTADO_INICIAL.bolsa, ...datosNuevos.bolsa },
+      bioenergia: { ...ESTADO_INICIAL.bioenergia, ...datosNuevos.bioenergia },
+      comunicacion: { ...ESTADO_INICIAL.comunicacion, ...datosNuevos.comunicacion }
+    };
+
+    this.datos = estadoRestaurado;
+    await this.guardar();
+    return true;
+  }
+
   async reiniciarProgresoCompleto() {
     try {
       await MotorDB.limpiarTodo();
