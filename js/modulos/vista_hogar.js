@@ -197,17 +197,20 @@ export class VistaHogar {
             const iconoPilar = esMente ? '📜' : '🔥';
 
             return `
-              <div class="card-yermo" style="background: ${activo ? 'rgba(56, 189, 248, 0.15)' : 'rgba(0,0,0,0.4)'}; border: 1px solid ${activo ? '#38bdf8' : 'var(--border-subtle)'}; padding: 10px;">
+              <div class="card-yermo" style="background: ${activo ? 'rgba(56, 189, 248, 0.12)' : 'rgba(0,0,0,0.4)'}; border: 1px solid ${activo ? '#38bdf8' : 'var(--border-subtle)'}; padding: 10px;">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
                   <div style="display: flex; align-items: center; gap: 8px;">
                     <span style="font-size: 1.3rem;">${libro.icono}</span>
                     <div>
-                      <strong style="color: #fff; font-size: 0.86rem; display: block;">${libro.nombre}</strong>
+                      <div style="display: flex; align-items: center; gap: 6px;">
+                        <strong style="color: #fff; font-size: 0.86rem;">${libro.nombre}</strong>
+                        ${activo ? '<span style="background: #0284c7; color: #fff; font-size: 0.62rem; font-weight: 800; padding: 1px 5px; border-radius: 4px; font-family: var(--font-mono);">EQUIPADO</span>' : ''}
+                      </div>
                       <span style="font-size: 0.70rem; color: var(--text-muted); font-style: italic;">${libro.autor}</span>
                     </div>
                   </div>
-                  <button class="btn-toggle-libro-sabiduria btn-yermo-${activo ? 'primary' : 'secondary'}" data-id="${libro.id}" style="font-size: 0.72rem; padding: 4px 8px; white-space: nowrap; ${activo ? 'background: #0284c7; border-color: #38bdf8;' : ''}">
-                    ${activo ? '✅ Equipado (+1)' : 'Equipar'}
+                  <button class="btn-toggle-libro-sabiduria ${activo ? 'btn-yermo-secondary' : 'btn-yermo-primary'}" data-id="${libro.id}" style="font-size: 0.72rem; padding: 4px 10px; white-space: nowrap; ${activo ? 'background: rgba(239, 68, 68, 0.18); border: 1px solid #ef4444; color: #fca5a5;' : 'background: #0284c7; border: 1px solid #38bdf8; color: #fff; font-weight: bold;'} cursor: pointer;" title="${activo ? 'Toca para desequipar este libro' : 'Toca para equipar este libro'}">
+                    ${activo ? '✕ Desequipar' : '+ Equipar'}
                   </button>
                 </div>
 
