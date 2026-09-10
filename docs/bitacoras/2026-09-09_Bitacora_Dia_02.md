@@ -162,4 +162,13 @@
 - **Validación:** 31 módulos JS probados con Node.js (`0 errores`), commit y push realizado con éxito a GitHub Pages.
 
 ---
+
+### 📍 [ENTRADA 10 - ENCARGO NARRATIVO PARA SILAS: GUIONES DE RADIO 104.5 MHz (CABINA CENTRAL DEL DIRECTOR)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Directiva del Director para Silas (Cronista & Guionista):**
+  > *«Si hay que hacer cambio en los guiones le debes pasar esa tarea a Silas. Yo soy el que dará la mayoría de mensajes por la radio y soy hombre. Compré para esta labor un mixer Fifine Ampligame SC3 y un micrófono Fifine AM8. El mixer tiene efectos de voz: hombre, mujer, robot, monstruo, bebé y anciano. La voz principal y más recurrente debe ser la mía natural (masculina) dando las instrucciones de tecnología, clima y supervivencia. Para entrevistas o enlaces especiales pondré el efecto de anciano para Don Chui, mujer para Elena o Valeria, e incluso bebé para el niño planta.»*
+- **Encargo Formal Asignado a Silas:**
+  - [ ] **Silas:** Reestructurar el catálogo de guiones en `js/data/radio_transmisiones.js` y `docs/diseno/` para que el **Operador de Radio Central** sea la voz masculina principal (el Director Anigami), y las apariciones de Elena, Don Chui, Doña Concha y el Fitolantro queden estructuradas como notas de campo y entrevistas con indicación técnica de efecto de voz del SC3.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*
