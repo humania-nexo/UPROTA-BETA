@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v3.0';
+const CACHE_NAME = 'uprota-cache-v3.1';
 const ASSETS = [
   './',
   './index.html',
@@ -23,6 +23,9 @@ const ASSETS = [
   './assets/sprites/avatars/avatar_silas_44x44.png',
   './assets/sprites/avatars/avatar_hertz_44x44.png',
   './assets/sprites/items/item_bici_expedicion.png',
+  './assets/sprites/items/item_trailer_remolque.png',
+  './assets/sprites/items/item_cuaderno_naufrago.png',
+  './assets/sprites/items/ui_capsula_tiempo_sellada.png',
   './assets/sprites/items/item_trailer_remolque.png',
   './assets/sprites/ui/ui_transporte_bici_trailer_combo.png',
   './assets/sprites/ui/ui_trofeo_festival_farol.png',

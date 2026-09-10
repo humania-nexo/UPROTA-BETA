@@ -131,4 +131,18 @@
   - **Para Silas:** La atmósfera de calma sonora acompaña el momento íntimo de escritura del *Cuaderno del Náufrago*.
 
 ---
+
+### 📍 [ENTRADA 08 - INTEGRACIÓN TÉCNICA DEL CUADERNO DEL NÁUFRAGO Y CÁPSULAS DE TIEMPO (NEXO - v3.1)]
+- **Participantes:** Director (Anigami Agadni), Silas (Cronista), Pix (Artista) y Nexo (Ingeniero Principal).
+- **Desarrollo Realizado (Nexo):**
+  1. **Motor de Estado (`js/core/estado.js`):** Integradas las estructuras `diarioNaufrago: []` y `capsulasTiempo: []` con los métodos `guardarEntradaDiario()`, `crearCapsulaTiempo()` y `abrirCapsulaTiempo()`.
+  2. **Vista El Hogar (`js/modulos/vista_hogar.js`):**
+     - **El Cuaderno del Náufrago:** Sección interactiva con el sprite de Pix (`item_cuaderno_naufrago.png`), el disparador reflexivo rotativo del día (6 preguntas estoicas de Silas), área de escritura de 3 líneas sinceras y botón para asentar o actualizar la reflexión de hoy con feedback de audio.
+     - **Bitácora Histórica Plegable:** Botón para desplegar y revisar todas las notas históricas guardadas durante la travesía.
+     - **Cápsulas de Tiempo al Yo del Futuro:** Selector de cartas selladas (66 días para Cimientos, 180 días para Faros o 30 días para Promesas personales), visualización con candado hermético y botón de desellado con fanfarria y mensaje de Don Chui/Elena al cumplirse los días.
+     - **Mantenimiento de las 4 Capas de Validación:** Validación del terreno, evidencia histórica de pasos, luz prestada y sabiduría estoica.
+  3. **Service Worker (`sw.js`):** Actualizado a `uprota-cache-v3.1` precacheando los nuevos sprites de Pix.
+- **Validación:** 31 módulos JS probados con Node.js (`0 errores`), commit y push a GitHub Pages.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*

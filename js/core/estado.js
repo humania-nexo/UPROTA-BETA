@@ -63,6 +63,8 @@ export class EstadoApp {
       cimientos: [],
       cadenas: [],
       faros: [],
+      diarioNaufrago: [],
+      capsulasTiempo: [],
       manualesDonChui: [], // 'tomo_1', 'tomo_2', 'tomo_3'
       donChuiConocido: false,
       hogarDesbloqueado: false,
@@ -271,6 +273,58 @@ export class EstadoApp {
     this.datos = estadoRestaurado;
     await this.guardar();
     return true;
+  }
+
+  async guardarEntradaDiario(disparadorId, texto, pilar = 'mente') {
+    if (!this.datos.diarioNaufrago) this.datos.diarioNaufrago = [];
+    const fecha = new Date().toISOString().split('T')[0];
+    const entrada = {
+      id: `diario_${Date.now()}`,
+      fecha,
+      diaSupervivencia: this.datos.perfil?.diaSupervivencia || 1,
+      disparadorId,
+      texto,
+      pilar
+    };
+    const idx = this.datos.diarioNaufrago.findIndex(e => e.fecha === fecha);
+    if (idx >= 0) {
+      this.datos.diarioNaufrago[idx] = entrada;
+    } else {
+      this.datos.diarioNaufrago.unshift(entrada);
+    }
+    await this.guardar();
+    return entrada;
+  }
+
+  async crearCapsulaTiempo(tipo, metaDias, texto) {
+    if (!this.datos.capsulasTiempo) this.datos.capsulasTiempo = [];
+    const capsula = {
+      id: `capsula_${Date.now()}`,
+      tipo,
+      metaDias,
+      fechaCreacion: new Date().toISOString().split('T')[0],
+      diaCreacion: this.datos.perfil?.diaSupervivencia || 1,
+      diaObjetivo: (this.datos.perfil?.diaSupervivencia || 1) + metaDias,
+      texto,
+      sellada: true,
+      leida: false,
+      fechaApertura: null
+    };
+    this.datos.capsulasTiempo.push(capsula);
+    await this.guardar();
+    return capsula;
+  }
+
+  async abrirCapsulaTiempo(capsulaId) {
+    if (!this.datos.capsulasTiempo) return null;
+    const capsula = this.datos.capsulasTiempo.find(c => c.id === capsulaId);
+    if (capsula) {
+      capsula.sellada = false;
+      capsula.leida = true;
+      capsula.fechaApertura = new Date().toISOString().split('T')[0];
+      await this.guardar();
+    }
+    return capsula;
   }
 
   async reiniciarProgresoCompleto() {
