@@ -3,6 +3,7 @@
  */
 
 import { estadoApp } from './core/estado.js';
+import { audioProcedural } from './core/audio_procedural.js';
 import { VistaTablon } from './modulos/vista_tablon.js';
 import { VistaRefugio } from './modulos/vista_refugio.js';
 import { VistaMisiones } from './modulos/vista_misiones.js';
@@ -255,6 +256,8 @@ class App {
       navigator.serviceWorker.register('./sw.js')
         .then(() => console.log('Service Worker de UPROTA registrado con éxito.'))
         .catch(err => console.warn('Fallo al registrar Service Worker:', err));
+    }
+
     // Exponer herramientas de prueba para el equipo y el Director
     window.UPROTA_TEST = {
       avanzarDias: async (n = 1) => {
