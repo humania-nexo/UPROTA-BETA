@@ -49,7 +49,7 @@ export class ModalSabiduria {
                   <strong style="color: #38bdf8; font-size: 0.88rem;">${data.nombreObjeto}</strong>
                 </div>
                 <span style="font-size: 0.70rem; color: ${data.pilar === 'espiritu' ? '#c084fc' : '#60a5fa'}; font-weight: bold; background: rgba(0,0,0,0.4); padding: 2px 6px; border-radius: 4px;">
-                  +1 ${data.pilar.toUpperCase()}
+                  +1 PERMANENTE A ${data.pilar.toUpperCase()}
                 </span>
               </div>
 

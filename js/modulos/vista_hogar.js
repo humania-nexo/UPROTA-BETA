@@ -173,36 +173,52 @@ export class VistaHogar {
             <div>
               <h3 style="color: #bae6fd; font-size: 0.95rem; margin: 0;">Biblioteca de Sabiduría Universal</h3>
               <span style="font-size: 0.70rem; color: var(--text-muted); font-family: var(--font-mono);">
-                Activos: ${(estado.objetosSabiduriaActivos || []).length} / 2 Libros (+1 Pilar c/u)
+                Equipados: ${(estado.objetosSabiduriaActivos || []).length} / 2 Libros (+1 Permanente c/u)
               </span>
             </div>
           </div>
+          <button id="btn-ayuda-sabiduria" class="btn-yermo-secondary" style="font-size: 0.72rem; padding: 4px 8px; border-color: #38bdf8; color: #bae6fd; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+            ℹ️ ¿Cómo funciona?
+          </button>
         </div>
 
         <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 10px;">
-          Elige hasta <strong>2 libros activos</strong> para nutrir tu rutina. Cada libro activo te otorga +1 punto diario en su Pilar y dispara un aforismo o versículo matutino al abrir el refugio.
+          Equipa hasta <strong>2 libros activos</strong>. Cada uno otorga un <strong>+1 permanente a su Pilar</strong> mientras esté equipado, impactando directamente tu <strong>Torta de Equilibrio</strong> y brindándote su aforismo al amanecer.
         </p>
 
         <!-- GRID DE LOS 10 LIBROS -->
         <div style="display: flex; flex-direction: column; gap: 8px;">
           ${Object.values(OBJETOS_SABIDURIA).map(libro => {
             const activo = (estado.objetosSabiduriaActivos || []).includes(libro.id);
-            const colorPilar = libro.pilar === 'espiritu' ? '#c084fc' : '#60a5fa';
+            const esMente = libro.pilar === 'mente';
+            const bgBadge = esMente ? 'rgba(3, 105, 161, 0.25)' : 'rgba(126, 34, 206, 0.25)';
+            const borderBadge = esMente ? '#38bdf8' : '#c084fc';
+            const colorBadge = esMente ? '#7dd3fc' : '#e9d5ff';
+            const iconoPilar = esMente ? '📜' : '🔥';
+
             return `
               <div class="card-yermo" style="background: ${activo ? 'rgba(56, 189, 248, 0.15)' : 'rgba(0,0,0,0.4)'}; border: 1px solid ${activo ? '#38bdf8' : 'var(--border-subtle)'}; padding: 10px;">
-                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
                   <div style="display: flex; align-items: center; gap: 8px;">
                     <span style="font-size: 1.3rem;">${libro.icono}</span>
                     <div>
                       <strong style="color: #fff; font-size: 0.86rem; display: block;">${libro.nombre}</strong>
-                      <span style="font-size: 0.70rem; color: var(--text-muted); font-style: italic;">${libro.autor} &bull; <span style="color: ${colorPilar}; font-weight: bold;">+1 ${libro.pilar.toUpperCase()}</span></span>
+                      <span style="font-size: 0.70rem; color: var(--text-muted); font-style: italic;">${libro.autor}</span>
                     </div>
                   </div>
-                  <button class="btn-toggle-libro-sabiduria btn-yermo-${activo ? 'primary' : 'secondary'}" data-id="${libro.id}" style="font-size: 0.72rem; padding: 4px 8px; white-space: nowrap; ${activo ? 'background: #0284c7;' : ''}">
-                    ${activo ? '✅ Activo (+1)' : 'Equipar'}
+                  <button class="btn-toggle-libro-sabiduria btn-yermo-${activo ? 'primary' : 'secondary'}" data-id="${libro.id}" style="font-size: 0.72rem; padding: 4px 8px; white-space: nowrap; ${activo ? 'background: #0284c7; border-color: #38bdf8;' : ''}">
+                    ${activo ? '✅ Equipado (+1)' : 'Equipar'}
                   </button>
                 </div>
-                <p style="font-size: 0.74rem; color: var(--text-secondary); line-height: 1.35; margin: 4px 0 0 0;">
+
+                <!-- BADGE EXPLICATIVO DEL PILAR -->
+                <div style="margin-bottom: 6px;">
+                  <span style="display: inline-flex; align-items: center; gap: 4px; background: ${bgBadge}; border: 1px solid ${borderBadge}; color: ${colorBadge}; font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; font-family: var(--font-mono);">
+                    ${iconoPilar} +1 PERMANENTE A ${libro.pilar.toUpperCase()} (Afecta Torta)
+                  </span>
+                </div>
+
+                <p style="font-size: 0.74rem; color: var(--text-secondary); line-height: 1.35; margin: 0;">
                   ${libro.desc}
                 </p>
               </div>
@@ -337,13 +353,78 @@ export class VistaHogar {
       });
     });
 
-    // 6. Volver al Tablón
+    // 6. Botón de Ayuda: Objetos de Sabiduría
+    const btnAyudaSabiduria = this.contenedor.querySelector('#btn-ayuda-sabiduria');
+    if (btnAyudaSabiduria) {
+      btnAyudaSabiduria.addEventListener('click', () => {
+        audioProcedural.playClick();
+        this.mostrarModalAyudaSabiduria();
+      });
+    }
+
+    // 7. Volver al Tablón
     const btnVolver = this.contenedor.querySelector('#btn-volver-tablon-desde-hogar');
     if (btnVolver) {
       btnVolver.addEventListener('click', () => {
         document.querySelector('[data-tab="tablon"]').click();
       });
     }
+  }
+
+  mostrarModalAyudaSabiduria() {
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
+    if (!modalContainer || !modalContent) return;
+
+    modalContent.innerHTML = `
+      <div class="info-modal-wrap" style="text-align: left; padding: 18px 14px; max-height: 85vh; overflow-y: auto;">
+        <button class="modal-close-btn" id="btn-cerrar-modal-ayuda-sabiduria" style="position: absolute; top: 12px; right: 12px;">&times;</button>
+        
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+          <span style="font-size: 1.6rem;">📚</span>
+          <div>
+            <h3 style="color: #38bdf8; font-size: 1.05rem; margin: 0;">Objetos de Sabiduría & Pilares</h3>
+            <span style="font-size: 0.70rem; color: var(--text-muted); font-family: var(--font-mono);">Guía de Mecánicas del Refugio</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.78rem; line-height: 1.45; color: var(--text-secondary);">
+          <div class="card-yermo" style="background: rgba(56, 189, 248, 0.08); border-left: 3px solid #38bdf8; padding: 10px;">
+            <strong style="color: #bae6fd; display: block; margin-bottom: 4px; font-size: 0.82rem;">1. ¿Qué son y cómo funcionan?</strong>
+            Son las 10 grandes obras clásicas de la humanidad (Biblia, Epicteto, Marco Aurelio, Sun Tzu, Nietzsche, Musashi, etc.). Puedes equipar hasta <strong>2 libros activos</strong> en tu baúl.
+          </div>
+
+          <div class="card-yermo" style="background: rgba(168, 85, 247, 0.08); border-left: 3px solid #c084fc; padding: 10px;">
+            <strong style="color: #e9d5ff; display: block; margin-bottom: 4px; font-size: 0.82rem;">2. Puntos Permanentes a los Pilares (+1 Fijo)</strong>
+            Cada libro equipado <strong>NO suma +1 diario</strong>, sino un <strong>+1 punto permanente</strong> al pilar correspondiente (<strong>📜 Mente</strong> o <strong>🔥 Espíritu</strong>) mientras lo mantengas equipado.
+          </div>
+
+          <div class="card-yermo" style="background: rgba(234, 179, 8, 0.08); border-left: 3px solid #eab308; padding: 10px;">
+            <strong style="color: #fef08a; display: block; margin-bottom: 4px; font-size: 0.82rem;">3. Impacto en la Torta de Equilibrio</strong>
+            El punto de cada libro equipado se suma al cálculo de la <strong>Torta de 21 Días</strong>. Junto a tus <strong>Sendas activas</strong> (hábitos que desbloqueas al subir de nivel tu refugio), este punto modifica de inmediato tus porcentajes para ayudarte a balancear y forjar la <strong>Torta Dorada</strong> (20%-30% por pilar).
+          </div>
+
+          <div class="card-yermo" style="background: rgba(34, 197, 94, 0.08); border-left: 3px solid #22c55e; padding: 10px;">
+            <strong style="color: #86efac; display: block; margin-bottom: 4px; font-size: 0.82rem;">4. Aforismos Matutinos</strong>
+            Al iniciar cada jornada en el Yermo, tus libros equipados te desplegarán un aforismo, proverbio o versículo seleccionado para darte enfoque, templanza y claridad mental.
+          </div>
+        </div>
+
+        <button id="btn-entendido-ayuda-sabiduria" class="btn-yermo-primary" style="width: 100%; padding: 10px; margin-top: 14px; font-size: 0.84rem; background: #0284c7; border-color: #38bdf8; font-weight: bold; cursor: pointer;">
+          ✨ Comprendido
+        </button>
+      </div>
+    `;
+
+    modalContainer.classList.remove('hidden');
+
+    const cerrar = () => {
+      audioProcedural.playClick();
+      modalContainer.classList.add('hidden');
+    };
+
+    modalContent.querySelector('#btn-cerrar-modal-ayuda-sabiduria')?.addEventListener('click', cerrar);
+    modalContent.querySelector('#btn-entendido-ayuda-sabiduria')?.addEventListener('click', cerrar);
   }
 
   mostrarModalNuevaCapsula(estado) {

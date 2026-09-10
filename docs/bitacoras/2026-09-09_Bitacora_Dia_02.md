@@ -198,5 +198,16 @@
   - `js/modulos/modal_sabiduria.js`: `ModalSabiduria` actualizado para desplegar simultáneamente las tarjetas de los 1 o 2 libros activos equipados por el sobreviviente.
 - **Validación:** 33 módulos JavaScript comprobados con `node --check` con 0 errores de sintaxis.
 
+### 📍 [ENTRADA 13 - BONO PERMANENTE DE SABIDURÍA, SINERGIA CON SENDAS, IMPACTO EN LA TORTA & MODAL DE AYUDA (NEXO)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Aclaración y Ajuste de Reglas por el Director:**
+  1. **Bono Permanente, no Acumulativo:** Los Objetos de Sabiduría NO suman un +1 diario que crezca infinitamente; otorgan un **+1 permanente y fijo** a su Pilar (*Mente* o *Espíritu*) mientras se mantengan equipados (máx. 2 libros activos).
+  2. **Impacto en Tiempo Real en la Torta de Equilibrio:** Al equipar o desequipar un libro, el cálculo de `PilaresEngine.calcularEquilibrio` actualiza inmediatamente los porcentajes de la Torta de 21 Días.
+  3. **Sinergia con el Desbloqueo Progresivo de Sendas:** Cada ranura de Senda activa desbloqueada al subir de nivel el Refugio (de 4 hasta 12 sendas) aporta +1 punto a su propio pilar, combinándose en tiempo real con los libros equipados para alcanzar el equilibrio de la Torta Dorada (20%-30%).
+  4. **Señalización Visual y Modal de Ayuda:**
+     - En `js/modulos/vista_hogar.js`, cada tarjeta de libro exhibe un badge destacado: `📜 +1 PERMANENTE A MENTE (Afecta Torta)` o `🔥 +1 PERMANENTE A ESPÍRITU (Afecta Torta)`.
+     - Se integró el botón **`ℹ️ ¿Cómo funciona?`** en la cabecera de la Biblioteca, abriendo un modal interactivo con la guía completa de funcionamiento y sinergia con la Torta de Equilibrio.
+- **Validación:** 33 módulos verificados con `node --check` (`0 errores`) y pruebas unitarias de cálculo dinámico de la Torta confirmadas.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 02 se añadirán a continuación de este punto sin borrar las entradas previas).*
