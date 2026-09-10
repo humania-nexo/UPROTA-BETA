@@ -45,7 +45,7 @@ export class ModalCentroAyuda {
           <span style="font-size: 1.3rem;">ℹ️</span>
           <div>
             <h3 style="color: var(--text-primary); font-size: 1.05rem; margin: 0;">Centro de Información & Ayuda</h3>
-            <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--oro-torta);">UPROTA v2.3 &bull; Build 2026.08.30</span>
+            <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--oro-torta);">UPROTA v3.4 &bull; Build 2026.09.10</span>
           </div>
         </div>
 
@@ -545,10 +545,10 @@ export class ModalCentroAyuda {
           <div class="card-yermo" style="background: rgba(0,0,0,0.2);">
             <h4 style="font-size: 0.84rem; color: var(--text-primary); margin-bottom: 6px;">⚙️ Estado Técnico del Sistema:</h4>
             <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); line-height: 1.6;">
-              <div>• <strong>Versión:</strong> UPROTA v2.3</div>
-              <div>• <strong>Compilación:</strong> 2026.08.30-prod</div>
+              <div>• <strong>Versión:</strong> UPROTA v3.4</div>
+              <div>• <strong>Compilación:</strong> 2026.09.10-prod</div>
               <div>• <strong>Almacenamiento:</strong> IndexedDB Local (Persistente)</div>
-              <div>• <strong>Caché Offline:</strong> Service Worker Activo (v2.3)</div>
+              <div>• <strong>Caché Offline:</strong> Service Worker Activo (v3.4)</div>
               <div>• <strong>Motor de Audio:</strong> Web Audio API Chiptune (0 KB)</div>
             </div>
           </div>
