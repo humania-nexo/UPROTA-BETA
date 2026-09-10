@@ -81,4 +81,17 @@ export class MotorDB {
       req.onerror = () => reject(req.error);
     });
   }
+
+  static async limpiarTodo() {
+    if (this.dbInstancia) {
+      this.dbInstancia.close();
+      this.dbInstancia = null;
+    }
+    return new Promise((resolve, reject) => {
+      const req = indexedDB.deleteDatabase(DB_NOMBRE);
+      req.onsuccess = () => resolve(true);
+      req.onerror = () => reject(req.error);
+      req.onblocked = () => resolve(true);
+    });
+  }
 }

@@ -226,6 +226,19 @@ export class EstadoApp {
     this.datos.faros.push(faroObjeto);
     await this.guardar();
   }
+
+  async reiniciarProgresoCompleto() {
+    try {
+      await MotorDB.limpiarTodo();
+    } catch (e) {
+      console.warn('Error purgando DB:', e);
+    }
+    try {
+      localStorage.clear();
+      sessionStorage.clear();
+    } catch (e) {}
+    window.location.reload();
+  }
 }
 
 export const estadoApp = new EstadoApp();

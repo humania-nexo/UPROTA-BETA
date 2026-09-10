@@ -1,9 +1,10 @@
 import { audioProcedural } from '../core/audio_procedural.js';
 import { ModoFiestaEngine } from './modo_fiesta.js';
+import { estadoApp } from '../core/estado.js';
 
 /**
  * Modal: Centro de Ayuda, Información, Instalador PWA, FAQ y Créditos Oficiales
- * UPROTA v2.6 — Equipo Humano + IA
+ * UPROTA v2.9 — Equipo Humano + IA
  */
 
 export class ModalCentroAyuda {
@@ -112,6 +113,89 @@ export class ModalCentroAyuda {
       });
     });
 
+    // Botón de Tabula Rasa / Renacer en el Punto Cero
+    container.querySelector('#btn-abrir-tabula-rasa')?.addEventListener('click', () => {
+      const modalContainer = document.getElementById('modal-container');
+      const modalContent = document.getElementById('modal-content');
+      if (!modalContainer || !modalContent) return;
+
+      modalContent.innerHTML = `
+        <div class="info-modal-wrap" style="text-align: center; padding: 20px 14px; border: 2px solid #ef4444; background: #140d0c; border-radius: var(--radius-md); box-shadow: 0 0 30px rgba(239, 68, 68, 0.35);">
+          <div style="margin-bottom: 8px;">
+            <img src="assets/sprites/emojis/emociones/emoji_fuego_ardiente.png" alt="Fuego" class="pixel-icon icon-48" style="width: 48px; height: 48px; image-rendering: pixelated;">
+          </div>
+
+          <span style="font-size: 0.72rem; font-family: var(--font-mono); color: #fca5a5; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">
+            TABULA RASA &bull; EL ARTE DE VOLVER A EMPEZAR
+          </span>
+
+          <h2 style="color: #fee2e2; font-size: 1.25rem; margin-top: 4px; margin-bottom: 8px; font-family: var(--font-serif);">
+            ¿Deseas Renacer en el Día 1?
+          </h2>
+
+          <!-- CITA BÍBLICA / ESTOICA DE ALIENTO -->
+          <div class="card-yermo" style="background: rgba(0,0,0,0.6); border-left: 3px solid #f59e0b; text-align: left; padding: 12px; margin-bottom: 12px;">
+            <p style="font-size: 0.82rem; color: #fef08a; line-height: 1.5; font-style: italic; margin: 0 0 6px 0;">
+              «Porque siete veces cae el justo, y vuelve a levantarse...»
+              <span style="font-size: 0.72rem; color: var(--text-muted); display: block; font-style: normal; margin-top: 2px;">— Proverbios 24:16 (Mateo 18:22: "Hasta setenta veces siete")</span>
+            </p>
+            <p style="font-size: 0.80rem; color: #e7e5e4; line-height: 1.5; margin: 0;">
+              Volver a empezar <strong>no es un fracaso: es el acto más valiente</strong> de quien se niega a rendirse. Si perdiste el ritmo una semana o un mes, no cargues con la culpa. Tu refugio te recibe de nuevo con la frente en alto y el fuego renovado.
+            </p>
+          </div>
+
+          <!-- ADVERTENCIA TÉCNICA -->
+          <p style="font-size: 0.76rem; color: #fca5a5; line-height: 1.4; margin-bottom: 12px;">
+            ⚠️ <strong>Atención:</strong> Esta acción purgará todo tu progreso actual (hábitos, días acumulados, faros, recursos y mochilas) para entregarte un lienzo 100% limpio.
+          </p>
+
+          <div style="margin-bottom: 14px; text-align: left;">
+            <label style="font-size: 0.76rem; color: var(--text-secondary); display: block; margin-bottom: 4px;">
+              Escribe la palabra <strong>RENACER</strong> para confirmar:
+            </label>
+            <input type="text" id="input-confirmar-renacer" class="card-yermo" style="width: 100%; padding: 8px; color: #fff; background: var(--bg-surface); text-transform: uppercase; font-family: var(--font-mono); text-align: center; border: 1px solid rgba(239, 68, 68, 0.5);" placeholder="RENACER">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <button id="btn-ejecutar-renacer" class="btn-yermo-primary" style="width: 100%; padding: 10px; font-size: 0.88rem; background: #dc2626; border: none; color: #fff; font-weight: bold; cursor: pointer; border-radius: var(--radius-sm); opacity: 0.6;" disabled>
+              🔥 Purgar Memoria y Renacer en el Día 1
+            </button>
+            <button id="btn-cancelar-renacer" class="btn-yermo-secondary" style="width: 100%; padding: 8px; font-size: 0.82rem; cursor: pointer;">
+              🛡️ Cancelar y Continuar Luchando
+            </button>
+          </div>
+        </div>
+      `;
+
+      modalContainer.classList.remove('hidden');
+
+      const inputConfirm = modalContent.querySelector('#input-confirmar-renacer');
+      const btnRenacer = modalContent.querySelector('#btn-ejecutar-renacer');
+      const btnCancelar = modalContent.querySelector('#btn-cancelar-renacer');
+
+      inputConfirm?.addEventListener('input', (e) => {
+        const val = e.target.value.trim().toUpperCase();
+        if (val === 'RENACER') {
+          btnRenacer.disabled = false;
+          btnRenacer.style.opacity = '1';
+        } else {
+          btnRenacer.disabled = true;
+          btnRenacer.style.opacity = '0.6';
+        }
+      });
+
+      btnRenacer?.addEventListener('click', async () => {
+        btnRenacer.textContent = '⏳ Purgando refugio y renaciendo...';
+        btnRenacer.disabled = true;
+        await estadoApp.reiniciarProgresoCompleto();
+      });
+
+      btnCancelar?.addEventListener('click', () => {
+        modalContainer.classList.add('hidden');
+        audioProcedural.playClick();
+      });
+    });
+
     // Acordeón FAQ
     container.querySelectorAll('.faq-pregunta').forEach(item => {
       item.addEventListener('click', () => {
@@ -162,11 +246,26 @@ export class ModalCentroAyuda {
             </ul>
           </div>
 
-          <div class="card-yermo" style="background: rgba(0,0,0,0.2);">
+          <div class="card-yermo" style="background: rgba(0,0,0,0.2); margin-bottom: 10px;">
             <h4 style="color: var(--text-primary); font-size: 0.88rem; margin-bottom: 4px;">🛡️ Filosofía Sin Culpa:</h4>
             <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45;">
               A diferencia de las apps que castigan al usuario con números rojos y culpa cuando tiene un día difícil, UPROTA valida tu esfuerzo humano acumulado. Si tropiezas, el refugio te resguarda en <em>El Hogar</em> para que descanses y vuelvas a empezar con dignidad.
             </p>
+          </div>
+
+          <!-- ZONA DE TABULA RASA / VOLVER A EMPEZAR -->
+          <div class="card-yermo" style="border-left: 3px solid #ef4444; background: rgba(239, 68, 68, 0.08); margin-top: 14px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <img src="assets/sprites/emojis/emociones/emoji_fuego_ardiente.png" alt="Fuego" class="pixel-icon icon-16">
+              <h4 style="color: #fca5a5; font-size: 0.88rem; margin: 0;">Zona de Renacimiento: Tabula Rasa</h4>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">
+              ¿Perdiste el rumbo o deseas comenzar de nuevo con el lienzo en blanco? Volver a empezar es de valientes. Puedes purgar la memoria del refugio y renacer desde el Día 1 con dignidad y sin culpa.
+            </p>
+            <button id="btn-abrir-tabula-rasa" class="btn-yermo-secondary" style="width: 100%; padding: 8px; font-size: 0.82rem; border-color: rgba(239, 68, 68, 0.4); color: #fca5a5; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
+              <img src="assets/sprites/emojis/emociones/emoji_abrazo_refugio.png" alt="Abrazo" class="pixel-icon icon-16">
+              <span>Volver a Empezar desde Cero (Día 1)</span>
+            </button>
           </div>
         `;
 

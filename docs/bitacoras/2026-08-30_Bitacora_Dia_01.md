@@ -122,7 +122,7 @@ Por iniciativa del Director (**Anigami Agadni**), cada integrante del equipo (1 
   - 👑 **Director (Anigami):** [Aprobada por el Director ✅]
   - 🤖 **Nexo:** [A FAVOR ✅] — *«100% factible. Se resuelve de forma pura mediante clases dinámicas de hora local y filtros CSS por hardware (0 KB de texturas duplicadas y fluidez total a 60 FPS en móviles).»*
   - 📜 **Silas:** [A FAVOR ✅] — *«Una maravilla para la inmersión narrativa. Ver el sol ponerse en la pantalla mientras el jugador reflexiona al anochecer le da un alma viva al refugio.»*
-  - 🎧 **Hertz:** [Pendiente]
+  - 🎧 **Hertz:** [A FAVOR ✅] — *«Sinergia pura; cambiar la paleta visual con la hora real me permitirá calibrar los armónicos y la atmósfera sonora del refugio según el momento del día.»*
 
 ---
 
