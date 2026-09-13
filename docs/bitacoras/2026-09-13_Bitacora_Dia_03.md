@@ -490,7 +490,23 @@
      - 34 módulos ES6 validados con Node.js (0 errores). Despliegue en vivo en GitHub Pages (`main`).
 
 ---
+
+### 📍 [ENTRADA 26 - REFINAMIENTO DEL ISOTIPO DE SAPIENSIA CLAN: CURVATURA MARÍTIMA FRONTAL & TEXTO ÚNICO (EL DIRECTOR & NEXO)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada al 100%.
+- **Observaciones del Director:**
+  1. *Curvatura de la Ola:* El corte vertical anterior en la parte delantera de la ola se veía rígido y plano; se requería una curvatura frontal fluida y cóncava que transmita la sensación natural de un mar en movimiento rompiendo hacia adelante.
+  2. *Texto Duplicado:* El rótulo en píxeles integrado en el gráfico competía con la tipografía limpia de la interfaz web; se solicitó removerlo del frame para que el título tipográfico estilizado en CSS/HTML sea el único y protagónico.
+- **Resolución Técnica (Nexo):**
+  - Se redibujaron los cuadros finales de congelamiento (`splash_frame08_freeze_shift.png`, `splash_frame09_isotipo_flat.png` y `logo_sapiensia_clan.png`) con:
+    - Ola orgánica con doble curvatura (ascenso parabólico a popa y caída cóncava suave a proa conectando con la línea de mar).
+    - Proa suspendida en ingravidez y los 6 navegantes en silueta plana ámbar (`#f59e0b`).
+    - Eliminación total del texto pixelado incrustado, dejando el gráfico puro y permitiendo que la tipografía Cinzel / JetBrains Mono del DOM luzca limpia, centrada y sin duplicaciones.
+  - Previsualizaciones actualizadas y Service Worker sincronizado.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
