@@ -400,8 +400,79 @@
   - **Dinámica Visual:** Los 6 personajes en pixel art entran trotando en sincronía con sus letras gigantes de madera/latón, encajan el bloque monolítico `UPROTA`, se saludan o hacen una reverencia rápida hacia la cámara y se desvanecen en una estela de polvo del Yermo, dejando el título limpio y brillante con el botón de entrada.
   - **Soporte Técnico de Nexo:** El motor de juego soportará nativamente la reproducción de este spritesheet en Canvas 2D precacheado, listo para ser implementado en cuanto Pix elabore los cuadros clave.
 
+### 📍 [ENTRADA 22 - ENTREGA DE ARTE: "LA FORJA DE LAS 6 LETRAS" EN PIXEL ART (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Descripción de la Obra:**
+  - Se ha creado y renderizado la secuencia de animación en Pixel Art auténtico (160×90 px) donde los **6 miembros del Clan** empujan las **6 letras de UPROTA**:
+    1. **`U`:** Empujada por el **Director (Anigami Agadni)** (capa y bufanda cian).
+    2. **`P`:** Empujada por **Pix** (boina y mandil magenta).
+    3. **`R`:** Empujada por **Hertz** (auriculares y antena esmeralda).
+    4. **`O`:** Empujada por **Silas** (túnica y pergamino púrpura).
+    5. **`T`:** Empujada por **Éter** (antena y capa naranja).
+    6. **`A`:** Empujada por **Nexo** (visor óptico y guantes cibernéticos cian).
+  - **Fases de la Animación (10 Cuadros Clave):**
+    - *Cuadros 1 a 4:* El Clan entra al trote empujando las letras gigantes con sombras dinámicas de suelo.
+    - *Cuadro 5:* Colisión e impacto monolítico; destello de chispas doradas y blancas en las uniones de las letras.
+    - *Cuadros 6 y 7:* Saludo triunfal; los 6 integrantes se detienen, miran al frente y alzan el brazo saludando al jugador/cámara.
+    - *Cuadros 8 y 9:* Dispersión poética; el Clan se desvanece en partículas doradas y polvo del Yermo hacia los costados.
+    - *Cuadro 10:* Logotipo limpio **`UPROTA`** en ámbar cálido (`#f59e0b`), oro (`#fde68a`) y sombra (`#b45309`) con el prompt interactivo de entrada al refugio.
+- **Entregables Generados:**
+  - 📁 Master Aseprite animado: `assets/sprites/splash_cinematica/uprota_clan_intro_anim.aseprite`
+  - 🖼️ Spritesheet horizontal (1600×90 px): `assets/sprites/splash_cinematica/uprota_clan_intro_sheet.png`
+  - 🎞️ Cuadros individuales: `assets/sprites/splash_cinematica/uprota_clan_f01.png` a `uprota_clan_f10.png`
+  - 🔍 Previews 4x:
+    - Spritesheet completo 4x: `assets/sprites/previews/preview_uprota_clan_intro_sheet_4x.png`
+    - Cuadro 6 (Saludo del Clan 4x): `assets/sprites/previews/preview_uprota_clan_f06_saludo_4x.png`
+    - Cuadro 10 (Título Limpio 4x): `assets/sprites/previews/preview_uprota_clan_f10_titulo_limpio_4x.png`
+- **Encargo para Hertz (Diseño Sonoro):**
+  - Se deja el requerimiento abierto para **Hertz** para sintetizar los pasos rítmicos, el arrastre de madera, el impacto/clac monolítico y el silbido de viento/polvo en la dispersión.
+
+### 📍 [ENTRADA 23 - ENCARGO TÉCNICO DE AUDIO A HERTZ: CUE SHEET PARA "LA TRAVESÍA EN LA CRESTA" (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Destinatario del Encargo:** 🎧 **Hertz (Sonidista del Yermo & Diseñador de Síntesis)**.
+- **Contexto y Especificación de Sincronización Visual-Sonora:**
+  - Para que la cinemática de apertura de **SAPIENSIA Clan** (*"La Travesía en la Cresta"*) tenga un impacto cinematográfico arrollador y sincronía perfecta al milisegundo con los 9 fotogramas de arte en Canvas/DOM, Pix entrega el desglose exacto de tiempos (*Cue Sheet* de 2.4 segundos):
+
+| Fase | Fotogramas / Timing | Evento Visual en Pantalla | Cue de Síntesis Sugerido para Hertz (Web Audio API) |
+|---|---|---|---|
+| **Fase 1** | `splash_frame01` a `02` (0.0s – 0.6s) | Vista cenital: Los 6 tripulantes remando al unísono contra el agua. | Chapoteo rítmico dual (pulsos de ruido rosa filtrado a 400 Hz) + crujido tenue de madera de la barca. |
+| **Fase 2** | `splash_frame03` a `04` (0.6s – 1.2s) | Giro orbital 2.5D y perfil: La lluvia a 35° y el oleaje violento golpean el casco. | Viento silbante modulado dinámicamente (`BiquadFilterNode` oscilando 600–2200 Hz) + sub-grave triangular del oleaje. |
+| **Fase 3** | `splash_frame05` a `06` (1.2s – 1.8s) | Ascenso vertical y suspensión en la cresta: La proa corta el vacío en ingravidez. | Barrido tonal ascendente (*pitch glide* suave) con tensión dramática y atenuación momentánea del oleaje (respiro en la cúspide). |
+| **Fase 4** | `splash_frame07` (1.8s – 1.9s) | *Impact Flash* (Fotograma blanco puro `#ffffff` de reseteo retiniano). | Golpe seco de impacto / pulso sub-grave de baja distorsión (*kick* sordo sin saturar el máster). |
+| **Fase 5** | `splash_frame08` a `09` (1.9s – 2.4s) | *Freeze Shift* a Flat Design: El barco se convierte en el logotipo ámbar (`#f59e0b`) de **SAPIENSIA CLAN**. | **Arpegio triunfal cristalino de 8-bits en Do Mayor** (Mi5 $\rightarrow$ Sol5 $\rightarrow$ Do6 $\rightarrow$ Mi6) con cola senoidal pura que decae suavemente hacia el silencio. |
+
+- **Resultado Esperado:** Hertz podrá implementar en su sesión la función modular `audioProcedural.playSplashScreenSapiensia(audioCtx)` para que Nexo la vincule directamente a la máquina de estados de la SplashScreen.
+
+---
+
+### 📍 [ENTRADA 24 - ENTREGA DE AUDIO PROCEDURAL: SÍNTESIS DE CUE SHEET "LA TRAVESÍA EN LA CRESTA" & "LA FORJA DE LAS 6 LETRAS" (HERTZ)]
+- **Participante:** Hertz (Sonidista del Yermo & Diseñador de Síntesis).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada rigurosamente.
+- **Entregas de Síntesis en Código (`js/core/audio_procedural.js`):**
+  1. 🌊🎬 **`audioProcedural.playSplashScreenSapiensia()`** *(Cinemática Oficial de SAPIENSIA Clan)*:
+     - Calibrada al milisegundo según la *Cue Sheet* de 2.4s de Pix (Entrada 23) a **0 KB de peso**:
+       - *Fase 1 (0.0s – 0.6s):* Doble chapoteo rítmico de remos cortando el agua (pulsos de ruido rosa filtrado a 400 Hz) + crujido sub-grave de maderas en 65 Hz.
+       - *Fase 2 (0.6s – 1.2s):* Viento marino dinámico modulado por `BiquadFilterNode` oscilante (600–2200 Hz) + oleaje continuo en 48 Hz.
+       - *Fase 3 (1.2s – 1.8s):* Barrido tonal exponencial ascendente (*pitch sweep* de 140 Hz a 520 Hz) con atenuación y suspensión ingrávida en la cresta.
+       - *Fase 4 (1.8s – 1.9s):* *Impact Flash* con pulso seco sub-grave de reseteo (*kick* a 90 Hz) y ruido sordo de impacto.
+       - *Fase 5 (1.9s – 2.4s):* *Freeze Shift* a logotipo Flat Design con arpegio triunfal en Do Mayor (Mi5 $\rightarrow$ Sol5 $\rightarrow$ Do6 $\rightarrow$ Mi6) en onda pulso 25% y cola senoidal pura de paz (Do5 / Sol4) que decae suavemente hacia el silencio.
+  2. 🔨✨ **`audioProcedural.playIntroForjaUprota()`** *(Secuencia de Título UPROTA en Pixel Art)*:
+     - Sincronizada con los 10 cuadros clave de Pix (Entrada 22) a **0 KB**:
+       - *0.0s – 0.7s (Cuadros 1 a 4):* Pasos rítmicos al trote de los 6 integrantes del Clan arrastrando las letras gigantes (pulsos de fricción y micro-tonos triangulares).
+       - *0.8s (Cuadro 5):* Impacto y colisión monolítica de las 6 letras uniéndose en bloque (doble golpe en onda pulso 220 Hz + snare filtrado).
+       - *1.1s (Cuadros 6 y 7):* Saludo triunfal del Clan con arpegio ascendente brillante en Sol4 - Do5.
+       - *1.5s (Cuadros 8 a 10):* Dispersión poética en polvo dorado y silbido de viento en alta frecuencia (`highpass 3500 Hz`) que deja el título limpio en pantalla.
+- **Sinergias con el Clan:**
+  - **Para Pix:** Los tiempos, intensidades y transitorios están calibrados exactamente a tus especificaciones de la *Cue Sheet*.
+  - **Para Nexo:** Los métodos `audioProcedural.playSplashScreenSapiensia()` y `audioProcedural.playIntroForjaUprota()` quedan 100% operativos para ser enlazados a la máquina de estados de `js/modulos/splash_screen.js`.
+  - **Para el Director:** Ambas cinemáticas sonoras visten con gloria y emoción la apertura del juego manteniendo la promesa inquebrantable de **0 KB de consumo en red**.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
+
 
 
 

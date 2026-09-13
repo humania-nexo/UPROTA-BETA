@@ -1,7 +1,7 @@
 ﻿/**
- * Motor de Audio Procedural Chiptune (8-bits) — UPROTA v2.9
+ * Motor de Audio Procedural Chiptune (8-bits) — UPROTA v3.6
  * Generación matemática pura en tiempo real mediante Web Audio API (0 KB de peso).
- * Emula los chips de sonido clásicos (NES Ricoh 2A03 / Game Boy DMG) y paisajes ambientales continuos.
+ * Emula los chips de sonido clásicos (NES Ricoh 2A03 / Game Boy DMG), paisajes de calma y cinemáticas de apertura.
  * 
  * Autor: Hertz (Sonidista del Yermo) & Nexo (Ingeniería de Software)
  */
@@ -156,6 +156,14 @@ export class ProceduralAudioEngine {
     } else if (preset === 'ptt_click') {
       filter.type = 'highpass';
       filter.frequency.setValueAtTime(3000, now);
+    } else if (preset === 'oleaje') {
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(450, now);
+      filter.Q.setValueAtTime(1.2, now);
+    } else if (preset === 'viento') {
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(1200, now);
+      filter.Q.setValueAtTime(1.8, now);
     } else if (isLowPass) {
       filter.type = 'lowpass';
       filter.frequency.setValueAtTime(800, now);
@@ -201,12 +209,11 @@ export class ProceduralAudioEngine {
 
     const masterAmbienteGain = this.ctx.createGain();
     masterAmbienteGain.gain.setValueAtTime(0.0001, now);
-    masterAmbienteGain.gain.linearRampToValueAtTime(baseGainVal * this.volumenMaster, now + 1.5); // Fade-in suave 1.5s
+    masterAmbienteGain.gain.linearRampToValueAtTime(baseGainVal * this.volumenMaster, now + 1.5);
     masterAmbienteGain.connect(this.masterCompressor || this.ctx.destination);
     this.ambienteNodes.push(masterAmbienteGain);
 
     if (tipo === 'fogon') {
-      // 1. Zumbido térmico continuo (Graves suaves)
       const oscCalor = this.ctx.createOscillator();
       const oscGain = this.ctx.createGain();
       oscCalor.type = 'triangle';
@@ -217,7 +224,6 @@ export class ProceduralAudioEngine {
       oscCalor.start(now);
       this.ambienteNodes.push(oscCalor, oscGain);
 
-      // 2. Loop estocástico de crepitar de brasas y leña de mezquite
       const intervalCrackle = setInterval(() => {
         if (this.ambienteActivo !== 'fogon') return;
         const r = Math.random();
@@ -230,7 +236,6 @@ export class ProceduralAudioEngine {
       this.ambienteIntervals.push(intervalCrackle);
 
     } else if (tipo === 'lluvia') {
-      // 1. Cortina continua de lluvia filtrada (Ruido blanco + Bandpass)
       const bufferSize = this.ctx.sampleRate * 2;
       const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
       const data = buffer.getChannelData(0);
@@ -254,7 +259,6 @@ export class ProceduralAudioEngine {
       rainSource.start(now);
       this.ambienteNodes.push(rainSource, rainFilter, rainGain);
 
-      // 2. Gotas periódicas en chapa de lámina
       const intervalDrops = setInterval(() => {
         if (this.ambienteActivo !== 'lluvia') return;
         if (Math.random() > 0.4) {
@@ -265,7 +269,6 @@ export class ProceduralAudioEngine {
       this.ambienteIntervals.push(intervalDrops);
 
     } else if (tipo === 'radio_portadora') {
-      // 1. Zumbido de transformador rústico (60 Hz + 120 Hz armónico)
       const osc60 = this.ctx.createOscillator();
       const osc120 = this.ctx.createOscillator();
       const gainHum = this.ctx.createGain();
@@ -284,7 +287,6 @@ export class ProceduralAudioEngine {
       osc120.start(now);
       this.ambienteNodes.push(osc60, osc120, gainHum);
 
-      // 2. Siseo continuo de onda corta (Bandpass con QSB sutil)
       const bufferSize = this.ctx.sampleRate * 2;
       const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
       const data = buffer.getChannelData(0);
@@ -310,7 +312,6 @@ export class ProceduralAudioEngine {
       const duracionMs = duracionMinutos * 60 * 1000;
       this.ambientePomodoroTimer = setTimeout(() => {
         this.stopAmbienteProcedural();
-        // Notificación sonora suave de fin de bloque (Campana armónica)
         this.playTone(NOTAS.C5, 'sine', 0.8, 0.2, 0.01, 0.79);
         setTimeout(() => this.playTone(NOTAS.G5, 'sine', 1.2, 0.18, 0.01, 1.19), 300);
       }, duracionMs);
@@ -358,11 +359,6 @@ export class ProceduralAudioEngine {
 
   // --- REPRODUCTOR DE PISTAS CHIPTUNE PROCEDURALES ---
 
-  /**
-   * Reproduce una pista del catálogo MUSICA_CHIPTUNE
-   * @param {string} trackId - Clave de la pista (ej. 'alba_refugio', 'modo_fiesta')
-   * @param {boolean} loop - Si debe reiniciarse en bucle
-   */
   playChiptuneTrack(trackId, loop = false) {
     const track = MUSICA_CHIPTUNE[trackId];
     if (!track) return;
@@ -376,7 +372,6 @@ export class ProceduralAudioEngine {
     const scheduleNotes = () => {
       if (this.pistaActiva !== trackId) return;
 
-      // 1. Canal Lead
       if (track.canales.lead) {
         track.canales.lead.forEach(n => {
           const tId = setTimeout(() => {
@@ -388,7 +383,6 @@ export class ProceduralAudioEngine {
         });
       }
 
-      // 2. Canal Bass
       if (track.canales.bass) {
         track.canales.bass.forEach(n => {
           const tId = setTimeout(() => {
@@ -400,7 +394,6 @@ export class ProceduralAudioEngine {
         });
       }
 
-      // 3. Canal Noise / Percusión
       if (track.canales.noise) {
         track.canales.noise.forEach(n => {
           const tId = setTimeout(() => {
@@ -412,7 +405,6 @@ export class ProceduralAudioEngine {
         });
       }
 
-      // Loop si está activado
       if (loop && track.duracionTotalMs) {
         this.loopTimerId = setTimeout(() => {
           if (this.pistaActiva === trackId) {
@@ -425,9 +417,6 @@ export class ProceduralAudioEngine {
     scheduleNotes();
   }
 
-  /**
-   * Detiene la pista musical en reproducción y cancela timeouts pendientes
-   */
   stopChiptuneTrack() {
     this.pistaActiva = null;
     if (this.loopTimerId) {
@@ -440,12 +429,10 @@ export class ProceduralAudioEngine {
 
   // --- EFECTOS DE SONIDO DEL SISTEMA (SFX 8-BIT) ---
 
-  // 1. Click sutil de UI / Botón
   playClick() {
     this.playTone(520, 'pulse', 0.03, 0.12, 0.005, 0.025, 0.5);
   }
 
-  // 2. Cumplimiento de Senda (Arpegio ascendente brillante)
   playCheckSenda() {
     const notas = [NOTAS.E4, NOTAS.G4, NOTAS.C5, NOTAS.E5];
     notas.forEach((freq, idx) => {
@@ -455,7 +442,6 @@ export class ProceduralAudioEngine {
     });
   }
 
-  // 3. Cadena Rota / Recaída (Tono descendente sobrio con peso)
   playCadenaRecaida() {
     const notas = [NOTAS.A3, NOTAS.G3, NOTAS.F3, NOTAS.C3];
     notas.forEach((freq, idx) => {
@@ -465,7 +451,6 @@ export class ProceduralAudioEngine {
     });
   }
 
-  // 4. Faro Alcanzado / Hito Dorado (Fanfarria majestuosa)
   playFanfarriaFaro() {
     const acorde = [
       { f: NOTAS.C4, t: 0 },
@@ -483,33 +468,27 @@ export class ProceduralAudioEngine {
     });
   }
 
-  // 5. Estática y Sintonía de Radio 104.5 MHz
   playSintoniaRadio() {
     this.playNoise(0.25, 0.18, false, 'radio_dial');
     setTimeout(() => this.playTone(880, 'sine', 0.08, 0.15), 180);
     setTimeout(() => this.playTone(1760, 'sine', 0.06, 0.10), 260);
   }
 
-  // 6. Martilleo de Taller / Construcción de Módulo
   playGolpeTaller() {
     this.playNoise(0.08, 0.25, true);
     this.playTone(180, 'pulse', 0.06, 0.2, 0.005, 0.055, 0.5);
   }
 
-  // 7. Modo Fiesta (Fanfarria Chiptune de Celebración y Victoria)
   playModoFiestaFanfarria() {
     this.playChiptuneTrack('modo_fiesta', false);
   }
 
-  // 8. Tabula Rasa: Ceremonia de Renacimiento (Mateo 18:22 / Proverbios 24:16)
   playTabulaRasaRenacer() {
     this.init();
     if (this.silenciado || !this.ctx) return;
 
-    // A. Ráfaga de brasa encendiéndose
     this.playNoise(0.35, 0.15, true, 'brasa');
 
-    // B. Arpegio ascendente etéreo de renacimiento (Campana de paz en Do Mayor)
     const renacerNotas = [
       { f: NOTAS.C4, t: 150, d: 0.6 },
       { f: NOTAS.G4, t: 350, d: 0.7 },
@@ -525,6 +504,117 @@ export class ProceduralAudioEngine {
         this.playTone(n.f * 0.5, 'triangle', n.d, 0.15, 0.04, n.d - 0.04);
       }, n.t);
     });
+  }
+
+  // --- CINEMÁTICAS DE APERTURA: SAPIENSIA CLAN & UPROTA INTRO ---
+
+  /**
+   * Cinemática 1: "La Travesía en la Cresta" (Splash Screen Oficial de SAPIENSIA Clan)
+   * Sincronizada con la Cue Sheet de 2.4 segundos de Pix (Entrada 23).
+   */
+  playSplashScreenSapiensia() {
+    this.init();
+    if (this.silenciado || !this.ctx) return;
+
+    // Fase 1 (0.0s – 0.6s): Vista cenital, chapoteo rítmico dual y crujido de maderas
+    this.playNoise(0.12, 0.18, true, 'oleaje');
+    this.playTone(65, 'triangle', 0.4, 0.15, 0.02, 0.38);
+    setTimeout(() => {
+      this.playNoise(0.14, 0.22, true, 'oleaje');
+      this.playTone(55, 'triangle', 0.4, 0.18, 0.02, 0.38);
+    }, 320);
+
+    // Fase 2 (0.6s – 1.2s): Giro orbital 2.5D, lluvia inclinada y viento marino
+    setTimeout(() => {
+      this.playNoise(0.60, 0.24, false, 'viento');
+      this.playTone(48, 'triangle', 0.6, 0.22, 0.05, 0.55);
+    }, 600);
+
+    // Fase 3 (1.2s – 1.8s): Ascenso vertical y suspensión en la cresta (Barrido tonal y tensión)
+    setTimeout(() => {
+      if (this.ctx) {
+        const now = this.ctx.currentTime;
+        const sweepOsc = this.ctx.createOscillator();
+        const sweepGain = this.ctx.createGain();
+        sweepOsc.type = 'sine';
+        sweepOsc.frequency.setValueAtTime(140, now);
+        sweepOsc.frequency.exponentialRampToValueAtTime(520, now + 0.55);
+
+        sweepGain.gain.setValueAtTime(0.0001, now);
+        sweepGain.gain.linearRampToValueAtTime(0.20 * this.volumenMaster, now + 0.1);
+        sweepGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.58);
+
+        sweepOsc.connect(sweepGain);
+        sweepGain.connect(this.masterCompressor || this.ctx.destination);
+        sweepOsc.start(now);
+        sweepOsc.stop(now + 0.60);
+      }
+    }, 1200);
+
+    // Fase 4 (1.8s – 1.9s): Impact Flash (Golpe seco / sub-kick de reseteo)
+    setTimeout(() => {
+      this.playTone(90, 'triangle', 0.10, 0.35, 0.002, 0.098);
+      this.playNoise(0.08, 0.25, true, 'snare');
+    }, 1800);
+
+    // Fase 5 (1.9s – 2.4s): Freeze Shift a Flat Design (Arpegio triunfal en Do Mayor)
+    setTimeout(() => {
+      const arpegioDoMayor = [
+        { f: NOTAS.E5, t: 0, d: 0.12 },
+        { f: NOTAS.G5, t: 80, d: 0.12 },
+        { f: NOTAS.C6, t: 160, d: 0.16 },
+        { f: NOTAS.E6, t: 260, d: 0.45 }
+      ];
+
+      arpegioDoMayor.forEach(n => {
+        setTimeout(() => {
+          this.playTone(n.f, 'pulse', n.d, 0.24, 0.005, n.d - 0.005, 0.25);
+        }, n.t);
+      });
+
+      // Cola armónica senoidal pura de paz
+      setTimeout(() => {
+        this.playTone(NOTAS.C5, 'sine', 0.8, 0.18, 0.02, 0.78);
+        this.playTone(NOTAS.G4, 'triangle', 0.8, 0.12, 0.02, 0.78);
+      }, 300);
+    }, 1900);
+  }
+
+  /**
+   * Cinemática 2: "La Forja de las 6 Letras" (Secuencia de Título UPROTA)
+   * Sincronizada con los 10 cuadros clave de Pix (Entrada 22).
+   */
+  playIntroForjaUprota() {
+    this.init();
+    if (this.silenciado || !this.ctx) return;
+
+    // 1. Trote rítmico del Clan empujando las letras (Cuadros 1 a 4: 0.0s - 0.7s)
+    const pasos = [0, 130, 260, 390, 520, 650];
+    pasos.forEach((t, i) => {
+      setTimeout(() => {
+        this.playNoise(0.04, 0.12, true, 'brasa');
+        this.playTone(140 + (i % 2) * 30, 'triangle', 0.05, 0.10, 0.005, 0.045);
+      }, t);
+    });
+
+    // 2. Colisión monolítica y destello de unión (Cuadro 5: 0.8s)
+    setTimeout(() => {
+      this.playNoise(0.12, 0.30, true, 'snare');
+      this.playTone(220, 'pulse', 0.18, 0.28, 0.005, 0.175, 0.5);
+      this.playTone(440, 'triangle', 0.25, 0.22, 0.005, 0.245);
+    }, 800);
+
+    // 3. Saludo triunfal del Clan (Cuadros 6 y 7: 1.1s)
+    setTimeout(() => {
+      this.playTone(NOTAS.G4, 'pulse', 0.15, 0.18, 0.01, 0.14, 0.25);
+      setTimeout(() => this.playTone(NOTAS.C5, 'pulse', 0.25, 0.22, 0.01, 0.24, 0.25), 100);
+    }, 1100);
+
+    // 4. Dispersión en polvo dorado y título limpio UPROTA (Cuadros 8 a 10: 1.5s)
+    setTimeout(() => {
+      this.playNoise(0.40, 0.16, false, 'hihat');
+      this.playTone(NOTAS.C5, 'sine', 0.7, 0.18, 0.02, 0.68);
+    }, 1500);
   }
 }
 
