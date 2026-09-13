@@ -45,7 +45,7 @@ export class ModalCentroAyuda {
           <span style="font-size: 1.3rem;">ℹ️</span>
           <div>
             <h3 style="color: var(--text-primary); font-size: 1.05rem; margin: 0;">Centro de Información & Ayuda</h3>
-            <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--oro-torta);">UPROTA v3.4 &bull; Build 2026.09.10</span>
+            <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--oro-torta);">UPROTA v3.5 &bull; Build 2026.09.13</span>
           </div>
         </div>
 
@@ -57,6 +57,9 @@ export class ModalCentroAyuda {
           <button class="btn-ayuda-tab ${tab === 'respaldo' ? 'active' : ''}" data-tab="respaldo" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'respaldo' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'respaldo' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
             💾 Respaldo
           </button>
+          <button class="btn-ayuda-tab ${tab === 'donacion' ? 'active' : ''}" data-tab="donacion" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid #f59e0b; background: ${tab === 'donacion' ? '#f59e0b' : '#1f1c19'}; color: ${tab === 'donacion' ? '#000' : '#fbbf24'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
+            💛 Apoyar al Clan
+          </button>
           <button class="btn-ayuda-tab ${tab === 'faq' ? 'active' : ''}" data-tab="faq" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'faq' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'faq' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
             ❓ FAQ
           </button>
@@ -64,7 +67,7 @@ export class ModalCentroAyuda {
             📲 Instalar App
           </button>
           <button class="btn-ayuda-tab ${tab === 'creditos' ? 'active' : ''}" data-tab="creditos" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'creditos' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'creditos' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
-            👑 Créditos
+            👑 SAPIENSIA Clan
           </button>
         </div>
 
@@ -305,6 +308,28 @@ export class ModalCentroAyuda {
       });
     }
 
+    // Botón de copiado de Binance Pay ID
+    const btnCopiarBinance = container.querySelector('#btn-copiar-binance-id');
+    if (btnCopiarBinance) {
+      btnCopiarBinance.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText('35863102');
+          const msg = container.querySelector('#msg-copiado-binance');
+          if (msg) {
+            msg.style.display = 'block';
+            setTimeout(() => { msg.style.display = 'none'; }, 3000);
+          }
+          btnCopiarBinance.textContent = '✅ ¡Binance ID Copiado!';
+          setTimeout(() => {
+            btnCopiarBinance.innerHTML = '<span>📋 Copiar Binance ID (35863102)</span>';
+          }, 2500);
+        } catch (e) {
+          prompt('Copia manualmente el ID de Binance:', '35863102');
+        }
+        audioProcedural.playClick();
+      });
+    }
+
     // Acordeón FAQ
     container.querySelectorAll('.faq-pregunta').forEach(item => {
       item.addEventListener('click', () => {
@@ -360,6 +385,20 @@ export class ModalCentroAyuda {
             <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45;">
               A diferencia de las apps que castigan al usuario con números rojos y culpa cuando tiene un día difícil, UPROTA valida tu esfuerzo humano acumulado. Si tropiezas, el refugio te resguarda en <em>El Hogar</em> para que descanses y vuelvas a empezar con dignidad.
             </p>
+          </div>
+
+          <!-- SOPORTE Y REPORTE DE FALLOS -->
+          <div class="card-yermo" style="border-left: 3px solid #38bdf8; background: rgba(56, 189, 248, 0.08); margin-bottom: 10px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <span style="font-size: 1.1rem;">🐛</span>
+              <h4 style="color: #7dd3fc; font-size: 0.88rem; margin: 0;">Soporte Técnico & Sugerencias</h4>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">
+              ¿Encontraste un fallo o tienes una idea para mejorar el refugio? Escríbenos directamente a la estación técnica de <strong>SAPIENSIA Clan</strong>:
+            </p>
+            <a href="mailto:antropoware@gmail.com?subject=[UPROTA%20v3.4]%20Reporte%20o%20Feedback&body=Hola%20SAPIENSIA%20Clan%2C%0A%0A%5BDescribe%20aqu%C3%AD%20tu%20observaci%C3%B3n%2C%20fallo%20o%20sugerencia%5D%0A" class="btn-yermo-primary" style="display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 8px; font-size: 0.82rem; background: #0284c7; color: #fff; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-sizing: border-box;">
+              <span>✉️ Reportar a antropoware@gmail.com</span>
+            </a>
           </div>
 
           <!-- ZONA DE TABULA RASA / VOLVER A EMPEZAR -->
@@ -475,9 +514,70 @@ export class ModalCentroAyuda {
         `;
       }
 
+      case 'donacion':
+        return `
+          <div class="card-yermo" style="border-left: 3px solid #f59e0b; background: rgba(245, 158, 11, 0.08); margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <span style="font-size: 1.2rem;">💛</span>
+              <h4 style="color: #fbbf24; font-size: 0.95rem; margin: 0;">Sostener el Refugio: Donaciones al Clan</h4>
+            </div>
+            <p style="font-size: 0.80rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              <strong>UPROTA</strong> es y seguirá siendo <strong>100% gratuito, libre de anuncios y de código abierto</strong>. Si consideras que esta herramienta te ha ayudado en tu disciplina y deseas apoyar a <strong>SAPIENSIA Clan</strong> con una donación para mantener el proyecto activo e independiente, tu aporte es profundamente apreciado.
+            </p>
+          </div>
+
+          <!-- TARJETA BINANCE PAY & QR -->
+          <div class="card-yermo" style="background: rgba(0,0,0,0.4); border: 1px solid rgba(245, 158, 11, 0.4); padding: 14px; text-align: center; margin-bottom: 12px;">
+            <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(245, 158, 11, 0.15); padding: 4px 10px; border-radius: var(--radius-sm); margin-bottom: 10px;">
+              <span style="font-size: 0.9rem;">🟡</span>
+              <strong style="font-size: 0.82rem; color: #fef08a;">Binance Pay (Cero Comisiones)</strong>
+            </div>
+
+            <!-- IMAGEN QR -->
+            <div style="display: flex; justify-content: center; margin-bottom: 10px;">
+              <img src="assets/sprites/ui/qr_binance_donacion.png" alt="Código QR Binance Pay" style="max-width: 220px; width: 100%; border-radius: var(--radius-sm); border: 2px solid rgba(245, 158, 11, 0.5); box-shadow: 0 4px 16px rgba(0,0,0,0.6);">
+            </div>
+
+            <div style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 6px;">
+              Titular: <strong style="color: #fff;">Anigami Agadni</strong>
+            </div>
+
+            <!-- BOTÓN COPIAR ID -->
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 12px;">
+              <div style="background: rgba(0,0,0,0.6); border: 1px solid var(--border-subtle); padding: 6px 12px; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.88rem; color: #fef08a; letter-spacing: 1px;">
+                ID de Binance: <strong>35863102</strong>
+              </div>
+              <button id="btn-copiar-binance-id" class="btn-yermo-primary" style="padding: 8px 16px; font-size: 0.82rem; background: #f59e0b; color: #000; border: none; font-weight: bold; cursor: pointer; border-radius: var(--radius-sm); display: flex; align-items: center; gap: 6px;">
+                <span>📋 Copiar Binance ID (35863102)</span>
+              </button>
+              <span id="msg-copiado-binance" style="display: none; font-size: 0.74rem; color: #4ade80; font-weight: bold;">
+                ✅ ¡ID copiado al portapapeles!
+              </span>
+            </div>
+
+            <!-- PASOS -->
+            <div style="background: rgba(0,0,0,0.3); border-left: 2px solid #f59e0b; padding: 8px 10px; text-align: left; font-size: 0.74rem; color: var(--text-secondary); line-height: 1.45;">
+              <strong>¿Cómo donar desde la app de Binance?</strong><br>
+              1. Abre tu app de Binance y toca el ícono de <strong>Binance Pay</strong>.<br>
+              2. Pulsa <strong>Enviar</strong> o <strong>Escanear</strong> y apunta al código QR de arriba (o pega el ID <code>35863102</code>).<br>
+              3. Elige el importe voluntario que desees (USDT, BTC, BNB, etc.). ¡Muchas gracias por tu apoyo al Clan!
+            </div>
+          </div>
+        `;
+
       case 'faq':
         return `
           <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--border-subtle);">
+              <div class="faq-pregunta" style="font-size: 0.84rem; font-weight: bold; color: var(--oro-torta); cursor: pointer; display: flex; justify-content: space-between;">
+                <span>¿Cómo puedo reportar un error o fallo?</span>
+                <span>▼</span>
+              </div>
+              <div class="faq-respuesta hidden" style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.45; border-top: 1px dashed var(--border-subtle); padding-top: 6px;">
+                Puedes escribirnos directamente a nuestro correo de soporte técnico: <strong style="color:#38bdf8;">antropoware@gmail.com</strong> indicando el problema o tu sugerencia.
+              </div>
+            </div>
+
             <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--border-subtle);">
               <div class="faq-pregunta" style="font-size: 0.84rem; font-weight: bold; color: var(--oro-torta); cursor: pointer; display: flex; justify-content: space-between;">
                 <span>¿Qué pasa si olvido hacer un respaldo manual?</span>
@@ -545,10 +645,10 @@ export class ModalCentroAyuda {
           <div class="card-yermo" style="background: rgba(0,0,0,0.2);">
             <h4 style="font-size: 0.84rem; color: var(--text-primary); margin-bottom: 6px;">⚙️ Estado Técnico del Sistema:</h4>
             <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); line-height: 1.6;">
-              <div>• <strong>Versión:</strong> UPROTA v3.4</div>
-              <div>• <strong>Compilación:</strong> 2026.09.10-prod</div>
+              <div>• <strong>Versión:</strong> UPROTA v3.5 (SAPIENSIA Clan)</div>
+              <div>• <strong>Compilación:</strong> 2026.09.13-prod</div>
               <div>• <strong>Almacenamiento:</strong> IndexedDB Local (Persistente)</div>
-              <div>• <strong>Caché Offline:</strong> Service Worker Activo (v3.4)</div>
+              <div>• <strong>Caché Offline:</strong> Service Worker Activo (v3.5)</div>
               <div>• <strong>Motor de Audio:</strong> Web Audio API Chiptune (0 KB)</div>
             </div>
           </div>
@@ -557,9 +657,12 @@ export class ModalCentroAyuda {
       case 'creditos':
         return `
           <div class="card-yermo" style="border-left: 3px solid var(--oro-torta); background: rgba(0,0,0,0.4); margin-bottom: 12px;">
-            <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin-bottom: 4px;">🤝 Manifiesto de Cooperación Humano + IA</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; font-style: italic;">
-              "UPROTA es un testimonio vivo de lo que la colaboración entre la intención humana y la inteligencia artificial puede construir cuando existe un trato digno, respeto, rigor técnico y un propósito compartido al servicio del crecimiento humano."
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <span style="font-size: 1.1rem;">🏛️</span>
+              <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin: 0;">SAPIENSIA Clan — Estudio Indie (Sapiens + IA)</h4>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; font-style: italic; margin: 0;">
+              "UPROTA es un testimonio vivo de lo que la colaboración entre la intención humana y la inteligencia artificial puede forjar cuando existe respeto mutuo, rigor técnico y un propósito compartido al servicio del crecimiento humano."
             </p>
           </div>
 

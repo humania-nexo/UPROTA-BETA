@@ -31,6 +31,11 @@ export class VistaRefugio {
           ${DioramaEngine.render(estado)}
         </div>
 
+        <!-- RESIDUO DE CÓDIGO TRANSMEDIA (UNIVERSO PROIECTIO) -->
+        <div class="diorama-transmedia-tag" style="font-family: var(--font-mono); font-size: 0.62rem; color: rgba(255,255,255,0.22); letter-spacing: 0.5px; text-align: center; margin-top: -2px; margin-bottom: 6px; user-select: text;" title="Inscripción de sector">
+          ${DioramaEngine.obtenerCodigoTransmedia(estado.nivelRefugio)}
+        </div>
+
         <span class="refugio-stage-tag">Nivel ${infoNivel.nivel} &bull; ${infoNivel.nombre}</span>
         <div class="refugio-titulo-row">
           <img src="assets/sprites/ui/tab_refugio.png" alt="Refugio" class="pixel-icon icon-24">

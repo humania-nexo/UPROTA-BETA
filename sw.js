@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v3.4';
+const CACHE_NAME = 'uprota-cache-v3.5';
 const ASSETS = [
   './',
   './index.html',
@@ -17,6 +17,7 @@ const ASSETS = [
   './css/tablon.css',
   './css/refugio.css',
   './css/popups.css',
+  './assets/sprites/ui/qr_binance_donacion.png',
   './assets/sprites/avatars/avatar_anigami_44x44.png',
   './assets/sprites/avatars/avatar_nexo_44x44.png',
   './assets/sprites/avatars/avatar_pix_44x44.png',
