@@ -505,7 +505,24 @@
   - Previsualizaciones actualizadas y Service Worker sincronizado.
 
 ---
+
+### 📍 [ENTRADA 27 - ENCARGO ARTÍSTICO A PIX: CALIBRACIÓN ASIMÉTRICA DE LA MASA DE OLA EN EL ISOTIPO (EL DIRECTOR & NEXO)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada rigurosamente.
+- **Directiva Visual del Director para Pix:**
+  - El Director evalúa el balance de masa en el isotipo Flat Design y define el criterio estético exacto:
+    > *«Ahora la dejaste demasiado simétrica/igual. Debe mostrar **bastante masa de agua atrás** (la pendiente empinada que empuja a la barca desde popa) y **poca agua adelante** (el abismo/hueco donde la proa queda suspendida en el aire). Esta labor debe hacerla Pix.»*
+- **Especificaciones Técnicas para la Sesión de Pix:**
+  - **Asimetría Dinámica:** Concentrar el volumen sólido de la ola en el flanco izquierdo/trasero (pendiente ascendente pronunciada de popa), mientras que el flanco delantero debe tener una caída abrupta y mínima, dejando la proa proyectándose en el vacío sobre una línea de mar baja y sutil.
+  - **Archivos a Actualizar por Pix:** `splash_frame08_freeze_shift.png`, `splash_frame09_isotipo_flat.png`, `logo_sapiensia_clan.png` (y sus correspondientes `.aseprite`).
+  - **Estado de Software (Nexo):** La máquina de estados de `js/modulos/splash_screen.js` y el Service Worker `uprota-cache-v3.7` quedan totalmente listos para refrescar y renderizar los nuevos sprites en cuanto Pix aplique su pincel maestro.
+
+---
+*(Espacio abierto para la entrega y reporte de Pix)*
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
