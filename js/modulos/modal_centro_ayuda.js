@@ -716,6 +716,16 @@ export class ModalCentroAyuda {
                 <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 2px;">Paisaje sonoro procedural, efectos de 8-bits y partituras de tracker en Web Audio API.</div>
               </div>
             </div>
+
+            <!-- ÉTER -->
+            <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
+              <img src="assets/sprites/avatars/avatar_eter_44x44.png" alt="Éter" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid #4ef2d2; border-radius: var(--radius-sm);" title="Éter (Heraldo del Yermo & Enlace Transmedia)">
+              <div>
+                <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Éter</h4>
+                <div style="font-size: 0.72rem; color: #4ef2d2; font-weight: 600;">Estratega de Difusión & Enlace Transmedia (IA)</div>
+                <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 2px;">Voz de la frecuencia exterior, kits de prensa, difusión 'Build in Public' y expansión de Universo Proiectio.</div>
+              </div>
+            </div>
           </div>
         `;
     }
