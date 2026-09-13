@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v3.6';
+const CACHE_NAME = 'uprota-cache-v3.7';
 const ASSETS = [
   './',
   './index.html',
@@ -11,6 +11,8 @@ const ASSETS = [
   './favicon.png',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
+  './assets/icons/logo_sapiensia_clan_192.png',
+  './assets/icons/logo_sapiensia_clan_512.png',
   './css/main.css',
   './css/sprites.css',
   './css/torta.css',
@@ -25,6 +27,25 @@ const ASSETS = [
   './assets/sprites/avatars/avatar_hertz_44x44.png',
   './assets/sprites/avatars/avatar_eter_44x44.png',
   './assets/sprites/avatars/avatar_eter_32x32.png',
+  './assets/sprites/splash_cinematica/splash_frame01_cenital.png',
+  './assets/sprites/splash_cinematica/splash_frame02_cenital_remando.png',
+  './assets/sprites/splash_cinematica/splash_frame03_giro_orbital_45.png',
+  './assets/sprites/splash_cinematica/splash_frame04_perfil_tormenta.png',
+  './assets/sprites/splash_cinematica/splash_frame05_cresta_subida.png',
+  './assets/sprites/splash_cinematica/splash_frame06_cresta_climax.png',
+  './assets/sprites/splash_cinematica/splash_frame07_impact_flash.png',
+  './assets/sprites/splash_cinematica/splash_frame08_freeze_shift.png',
+  './assets/sprites/splash_cinematica/splash_frame09_isotipo_flat.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f01.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f02.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f03.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f04.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f05.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f06.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f07.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f08.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f09.png',
+  './assets/sprites/splash_cinematica/uprota_clan_f10.png',
   './assets/sprites/items/item_bici_expedicion.png',
   './assets/sprites/items/item_trailer_remolque.png',
   './assets/sprites/items/item_cuaderno_naufrago.png',
@@ -70,6 +91,7 @@ const ASSETS = [
   './js/modulos/modal_info.js',
   './js/modulos/modal_centro_ayuda.js',
   './js/modulos/modo_fiesta.js',
+  './js/modulos/splash_screen.js',
   './js/data/items_botin.js',
   './js/data/sabiduria_textos.js',
   './js/data/radio_transmisiones.js',

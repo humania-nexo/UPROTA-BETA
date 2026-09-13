@@ -12,6 +12,7 @@ import { VistaHogar } from './modulos/vista_hogar.js';
 import { ModalSabiduria, TourGuiado, ModalBitacoraMatutina } from './modulos/modal_sabiduria.js';
 import { ModalOnboarding } from './modulos/modal_onboarding.js';
 import { ModalCentroAyuda } from './modulos/modal_centro_ayuda.js';
+import { SplashScreen } from './modulos/splash_screen.js';
 
 class App {
   constructor() {
@@ -20,7 +21,7 @@ class App {
   }
 
   async iniciar() {
-    console.log('Iniciando UPROTA v3.5 (SAPIENSIA Clan)...');
+    console.log('Iniciando UPROTA v3.6 (SAPIENSIA Clan)...');
 
     // Inicializar listener de instalación PWA
     ModalCentroAyuda.init();
@@ -44,17 +45,20 @@ class App {
     await estadoApp.inicializar();
     estadoApp.suscribir((estado) => this.actualizarVistas(estado));
 
-    // 1. Abrir Onboarding si es la primera vez
-    ModalOnboarding.mostrarSiEsNecesario();
+    // Desplegar Secuencia Cinemática de Apertura (SAPIENSIA Clan + UPROTA)
+    SplashScreen.mostrarSiEsNecesario(() => {
+      // 1. Abrir Onboarding si es la primera vez
+      ModalOnboarding.mostrarSiEsNecesario();
 
-    // 2. Abrir Bitácora Matutina si cambió de día real
-    ModalBitacoraMatutina.mostrarSiCorresponde();
+      // 2. Abrir Bitácora Matutina si cambió de día real
+      ModalBitacoraMatutina.mostrarSiCorresponde();
 
-    // 3. Abrir Versículo / Sabiduría Diaria
-    ModalSabiduria.mostrarSiCorresponde();
+      // 3. Abrir Versículo / Sabiduría Diaria
+      ModalSabiduria.mostrarSiCorresponde();
 
-    // 4. Verificar si corresponde el Tour Guiado
-    TourGuiado.verificarYIniciar();
+      // 4. Verificar si corresponde el Tour Guiado
+      TourGuiado.verificarYIniciar();
+    });
 
     // Registrar Service Worker
     this.registrarServiceWorker();

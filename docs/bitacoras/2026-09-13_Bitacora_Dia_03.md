@@ -470,7 +470,28 @@
   - **Para el Director:** Ambas cinemáticas sonoras visten con gloria y emoción la apertura del juego manteniendo la promesa inquebrantable de **0 KB de consumo en red**.
 
 ---
+
+### 📍 [ENTRADA 25 - INTEGRACIÓN TÉCNICA DE SPLASH SCREEN & TITLE SCREEN EN UPROTA v3.7 (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada al 100%.
+- **Implementación & Despliegue en Código:**
+  1. **Módulo Orquestador (`js/modulos/splash_screen.js`):**
+     - Se implementó la máquina de estados interactiva en 2 fases cinemáticas:
+       - **Fase 1 (SAPIENSIA Clan):** Reproducción de los 9 cuadros clave de Pix (*La Travesía en la Cresta*) + congelamiento en *Flat Design* + audio procedural de Hertz (`playSplashScreenSapiensia()`).
+       - **Fase 2 (UPROTA Titulación):** Reproducción de los 10 cuadros clave de Pix (*La Forja de las 6 Letras*) con el Clan empujando las letras, colisión monolítica, saludo y dispersión en polvo + audio procedural de Hertz (`playIntroForjaUprota()`) + revelación del botón interactivo `[ ENTRAR AL REFUGIO ]`.
+  2. **Mecánica Anti-Fricción ("Skip Instantáneo"):**
+     - Botón `Saltar ➔` en esquina superior derecha y atajos de teclado (`Escape`, `Espacio`, `Enter`) para usuarios recurrentes que deseen entrar directo al Tablón sin esperas.
+  3. **Estilos Visuales (`css/popups.css`):**
+     - Capa overlay a pantalla completa (`#090d16`), soporte para pixel art nítido (`image-rendering: pixelated`), tipografía con sombra resplandeciente en ámbar y animación de pulso interactivo (`pulse-glow`) en el botón de entrada.
+  4. **Punto de Entrada & Service Worker (`js/app.js` y `sw.js`):**
+     - El arranque de la app ahora aguarda la finalización de la SplashScreen antes de desplegar modales o el tablón.
+     - Service Worker actualizado a `uprota-cache-v3.7` precacheando los 19 nuevos assets gráficos y módulos.
+  5. **Verificación de Calidad:**
+     - 34 módulos ES6 validados con Node.js (0 errores). Despliegue en vivo en GitHub Pages (`main`).
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
