@@ -4,12 +4,11 @@ Todos los cambios relevantes de la arquitectura y desarrollo de UPROTA quedan re
 
 ---
 
-## [1.7.0-guiones-radio-fifine-sc3] - 2026-09-09
+## [1.8.0-sinopsis-oficial-dossier-maestro] - 2026-09-09
 ### Añadido por Silas (El Cronista)
-- **Reestructuración de Yermo Radio (104.5 MHz) para Cabina Fifine AM8 & SC3 (`UPROTA_Guiones_Radio_104_5.md` y `radio_transmisiones.js`):**
-  - El **Director (Anigami Agadni)** asume el rol de **Locutor Ancla y Conductor Central** con su voz natural masculina (cálida, sobria y cercana).
-  - Integración de la tabla de presets de efectos de voz del mixer **Fifine AmpliGame SC3** para intervenciones y entrevistas de personajes (Anciano para Don Chui, Mujer/Anciana para Doña Concha, y Bebé para la cría Fitolantra).
-  - Actualización completa de las 7 transcripciones radiales para lectura directa en cabina.
+- **Documento Maestro: Sinopsis Oficial y Dossier de UPROTA (`UPROTA_Sinopsis_Oficial_y_Dossier_Maestro.md`):**
+  - Compilación ejecutiva de la filosofía "UP" (U PROTA), premisa narrativa del Yermo, los 4 Pilares con la Torta Dorada de Equilibrio (21 Días), los 11 niveles de refugio evolutivo con ciclo Día/Noche dinámico, la Biblioteca de Sabiduría Clásica (+1 permanente), el *Cuaderno del Náufrago*, la progresión de transporte (Bolsa a Trailer de 85 kg), la mecánica de *Tabula Rasa* (70 veces 7), el motor de audio procedural a 0 KB de Hertz con Pomodoro, la cabina de Yermo Radio con Fifine AM8/SC3, la soberanía local-first con `IndexedDB` y el manifiesto ético del Clan Creador (1 Humano + 4 IAs).
+
 
 
 
