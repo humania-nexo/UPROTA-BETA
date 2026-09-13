@@ -111,3 +111,16 @@ La estación comunitaria de **Yermo Radio (104.5 MHz)** es conducida por el **Di
 | Efectos de Sonido / Entorno | Guion y Acotaciones de Cabina |
 |---|---|
 | `[SFX: Frecuencia encriptada con tono grave y eco de montaña].` | **DIRECTOR (Voz Natural):**<br>Atención a los receptores del valle. Hoy compartimos una grabación recuperada de los diarios de la Isla Clarión sobre el Proyecto Edén de 2035.<br><br>Dejemos de llamarles monstruos a los seres de los viveros. No nacieron de un virus de pesadilla; nacieron de un intento desesperado de la ciencia por evitar que la humanidad muriera de hambre cuando colapsaron los campos. Tienen clorofila en la piel, hacen fotosíntesis y lloran cuando se queman los árboles.<br><br>`[CAMBIO A PRESET SC3: BEBÉ / SUSURRO SUAVE]`<br>**CRÍA FITOLANTRA:**<br>*(Sonido vegetal suave, como hojas secas meciéndose en la brisa).* Ah... ra-íz... sol... luz...<br><br>`[RETORNO A VOZ NATURAL]`<br>**DIRECTOR:**<br>Si no los atacamos, no nos atacarán. El futuro no es arrasar el monte, es aprender a convivir con lo que brotó de las cenizas. Mantengan los ojos abiertos y el corazón despierto. Sierra Central fuera. |
+
+---
+
+### 🎙️ GUION 8: "Cápsula de Taller 016 — Electrólisis y Desoxidación Segura con Don Chui"
+* **Locutor Principal:** Director (Voz Natural).
+* **Invitado Especial:** Don Chui `[CAMBIO SC3: EFECTO ANCIANO]`.
+* **Duración:** ~2:20 min.
+* **Propósito:** Enseñar la técnica real de electrólisis con advertencia obligatoria de seguridad química.
+
+| Efectos de Sonido / Entorno | Guion y Acotaciones de Cabina |
+|---|---|
+| `[SFX: Zumbido eléctrico sutil... sonido suave de burbujeo de agua].` | **DIRECTOR (Voz Natural):**<br>Estación central de Yermo Radio, 104.5 MHz. Para los que están recuperando herramientas oxidadas del barro, Don Chui nos trae hoy la física de la desoxidación por corriente continua.<br><br>`[CAMBIO A PRESET SC3: ANCIANO]`<br>**DON CHUI (Tono pausado de advertencia y taller):**<br>¡Muchachos, escuchen con atención esta regla de oro antes de meterle mano a una batería!<br><br>La electrólisis es una maravilla: en una cubeta de plástico meten agua con carbonato de sodio o ceniza de potasa —ojo, ¡nada de sal común que les suelta gas de cloro picante!—. Conectan el polo positivo a un pedazo de fierro viejo de descarte y el polo negativo a su hacha oxidada. La corriente saca el óxido solito sin gastar lija.<br><br>Pero aquí va la advertencia mayor: **la cubeta burbujea gas hidrógeno puro**. El hidrógeno es invisible, no huele y prende con una sola chispa. ¡Jamás hagan este jale dentro de una choza cerrada ni al lado del fogón! Háganlo siempre en el patio abierto, bajo aire libre donde el viento se lleve los gases. En el taller, un descuido con lumbre te vuela la ceja y el techo.<br><br>`[RETORNO A VOZ NATURAL]`<br>**DIRECTOR:**<br>Entendido y firmado. Ciencia con prudencia. La paciencia hace al buen artesano. Taller abierto y mentes alertas. Sierra Central fuera.<br><br>`[SFX: 'Click' de PTT... tono de cierre].` |
+

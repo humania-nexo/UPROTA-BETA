@@ -154,8 +154,8 @@ Para proteger la atmósfera del Yermo y no romper la narrativa con explicaciones
     * *Desbloqueo:* Cosecha Pluvial Masiva en Días Lluviosos.
 
 13. **🧼 Lejía Desinfectante con Ceniza Blanca (Potasa Rústica):**
-    * *Voz de Don Chui:* *«La ceniza blanca de madera dura no es basura, es química pura. Ciérnela, mézclala con agua de lluvia hirviendo en una cubeta de fierro y déjala reposar dos días. El caldillo amarillo transparente que queda arriba es lejía de potasa. Le metes un huevo fresco: si flota, está lista. Con eso desinfectas letrinas, desengrasas herramientas y lavas la ropa de trabajo para que no junte bichos.»*
-    * *Física real:* Lixiviación de carbonato de potasio ($K_2CO_3$) alcalino y control de densidad empírica con huevo/patata.
+    * *Voz de Don Chui:* *«La ceniza blanca de madera dura no es basura, es química pura. Ciérnela, mézclala con agua de lluvia hirviendo en una cubeta de fierro y déjala reposar dos días. El caldillo amarillo transparente que queda arriba es lejía de potasa. Le metes un huevo fresco: si flota, está lista. Con eso desinfectas letrinas, desengrasas herramientas y lavas la ropa de trabajo para que no junte bichos. ¡Ojo vivo!: manejen la lejía siempre con guantes de carnaza gruesos; esa agua es cáustica y si les salpica a los ojos o a la piel pelada les deja quemada brava. Nada de beberla jamás.»*
+    * *Física real:* Lixiviación de carbonato de potasio ($K_2CO_3$) fuertemente alcalino (pH ~11-12) y control de densidad empírica con huevo/patata.
     * *Desbloqueo:* Higiene Sanitaria del Refugio (-30% riesgo de infecciones).
 
 14. **☀️ Deshidratador Solar por Tiro Térmico:**

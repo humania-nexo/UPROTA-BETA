@@ -58,7 +58,7 @@ A 3 años todo metal sin aceite está oxidado, todo mango de madera a la intempe
 
 **Restauración:**
 - Nivel 2: vinagre blanco 24h + lija + aceite usado + mango apretado con alambre recocido. Pasa de 30% a 80%.
-- Nivel 6: electrólisis — cubeta con agua, sal, batería (ahora la de bici-generador en vez de tierra) y varilla de hierro; la cabeza de la herramienta cuelga y el óxido se cae solo. Programa de radio 016 enseña con audio real.
+- Nivel 6: electrólisis en patio ventilado — cubeta plástica con agua, carbonato de sodio / ceniza de potasa (evitar sal común para no liberar cloro gas), batería de bici-generador y varilla de hierro de sacrificio. La pieza oxidada conectada al cátodo (negativo) desprende el óxido limpiamente. *(⚠️ Advertencia de Taller Real: La electrólisis libera gas hidrógeno inflamable en el polo negativo; se debe realizar siempre al aire libre o en áreas con ventilación cruzada continua, jamás en cuartos cerrados ni cerca de chispas o llamas).* Programa de radio 016 enseña con audio real.
 - Filo: piedra de afilar o lija gruesa.
 
 Aplica a hacha, alicate, martillo, pala, destornillador — todas empiezan horribles, se restauran y se sienten premio real.

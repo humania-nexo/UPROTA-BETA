@@ -139,5 +139,37 @@
   - **Decisión de Sincronización:** Se acuerda pausar el despliegue de las campañas de difusión externa de Éter hasta que el dominio `uprota.com` esté adquirido y configurado con sus registros DNS / CNAME en el repositorio. De este modo, todos los backlinks, enlaces de prensa y menciones en foros apuntarán directamente al dominio definitivo sin dispersar el SEO.
 
 ---
+
+### 📍 [ENTRADA 11 - CONFORMIDAD ESTRATÉGICA DE ÉTER: PROTOCOLO DE PRE-LANZAMIENTO & DOMINIO PROPIO (ÉTER & DIRECTOR)]
+- **Participantes:** Director (Anigami Agadni) y Éter (Estratega de Difusión & Enlace Transmedia).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida con total rigor.
+- **Respaldo Pleno al Aplazamiento Estratégico:**
+  - **Éter respalda al 100% la decisión del Director:** Lanzar las campañas de difusión con un dominio propio oficial (`uprota.com`) es un movimiento táctico maestro.
+  - *Razones Fundamentales:*
+    1. **Preservación y Autoridad del SEO:** Cada enlace, reseña y mención en *Hacker News, Reddit, Dev.to y Product Hunt* sembrará autoridad de dominio (*Domain Authority*) directa e irreversiblemente en `uprota.com`, evitando dispersión de tráfico o enlaces desactualizados de `github.io`.
+    2. **Mayor Tasa de Clics (CTR) y Confianza:** Un dominio limpio y conciso transmite solvencia profesional, incrementando la conversión de curiosos a usuarios activos y facilitando la instalación de la PWA.
+    3. **Previsualizaciones OpenGraph Perfectas:** Los metadatos de tarjetas sociales y Twitter Cards lucen impecables bajo una URL institucional.
+- **Plan de Acción Durante la Semana de Preparación (Cámara de Pre-Lanzamiento):**
+  - Lejos de detener la marcha, esta semana se utilizará para forjar todo el arsenal previo sin quemar la pólvora antes de tiempo:
+    1. 📝 **Redacción de Ensayos Maestros:** Dejar listos los artículos para *Dev.to, Medium y HackerNoon* (el Manifiesto Anti-Culpa, la proeza técnica del audio a 0 KB de Hertz y la arquitectura modular de Nexo).
+    2. 🎨 **Kit Gráfico & Banners en Photoshop/Illustrator:** Diseñar las imágenes OpenGraph (1200x630 px), el kit de prensa para *Product Hunt* y las infografías visuales de la filosofía *Tabula Rasa*.
+    3. 🎬 **Micro-Trailers & Hooks de Video:** Coordinar con Pix y Hertz para estructurar los primeros clips de 15-30s listos para desplegar el día de activación del dominio.
+    4. ⚙️ **Preparación del CNAME:** Coordinar con Nexo la configuración del archivo `CNAME` y verificación de certificados SSL en cuanto el Director registre el dominio.
+
+---
+
+### 📍 [ENTRADA 12 - AUDITORÍA DE SEGURIDAD QUÍMICA & VERACIDAD MATERIAL EN TALLER (NEXO & DIRECTOR)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Contexto & Observación Externa:**
+  - El Director traslada una valiosa alerta de seguridad química: la desoxidación de metales por **electrólisis** libera **gas hidrógeno ($\text{H}_2$)**, un gas inodoro e incoloro de extrema inflamabilidad que en espacios cerrados o ante chispas/fuego puede provocar detonaciones. Asimismo, el uso de sal común ($\text{NaCl}$) puede desprender trazas de gas cloro tóxico.
+- **Resolución Técnica & Actualización de Documentos:**
+  1. **Documento B (Mundo - Sección 2.3):** Se especificó el uso de carbonato de sodio / ceniza de potasa (en lugar de sal) y se añadió la advertencia obligatoria de realizar el proceso exclusivamente en patios abiertos o bajo ventilación cruzada continua, lejos de chispas o lumbre.
+  2. **Guiones de Radio 104.5 MHz (Guion 8):** Se redactó la *Cápsula de Taller 016* con Don Chui y el Director, enfatizando las precauciones de seguridad química ante la audiencia del Yermo.
+  3. **Manuales de Don Chui (Técnica 13 - Lejía de Potasa):** Se incorporó la advertencia de manejo cáustico (pH alcalino ~11-12) y el uso obligado de guantes de carnaza para evitar quemaduras cutáneas y oculares.
+  4. **Auditoría General de Mecánicas:** Se verificó la coherencia y seguridad de las 15 técnicas reales (fuego por fricción, filtros de bioarena, destilación y trampas mecánicas), garantizando veracidad material y educativa al 100%.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
+
 
