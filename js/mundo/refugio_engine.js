@@ -192,21 +192,22 @@ export class DioramaEngine {
 
   /**
    * Genera el residuo de código transmedia de Universo Proiectio (Palabras Gemelas).
-   * Formato exacto: PGXXX-palabra para los 11 niveles de refugio (Nivel 0 al 10).
+   * Formato de polaridad: PG-A-XXX:palabra (Niveles 0 al 10 en UPROTA).
+   * Conecta con la contraparte PG-B-XXX:palabra en el libro/plataformas externas.
    */
   static obtenerCodigoTransmedia(nivel = 0) {
     const codigos = [
-      'PG084-uprota',       // Nivel 0: Punto Cero
-      'PG079-chui',         // Nivel 1: Cajones de Madera
-      'PG080-elena',        // Nivel 2: Techo de Chapa
-      'PG081-tuerto',       // Nivel 3: Huerto en Cajones
-      'PG085-deva',         // Nivel 4: Taller de Reparación
-      'PG086-cloto',        // Nivel 5: Fortaleza Energética
-      'PG089-rigel',        // Nivel 6: Taller de Restauración
-      'PG090-thorne',       // Nivel 7: Enclave Comercial
-      'PG093-templarios',   // Nivel 8: Complejo Autosustentable
-      'PG096-sapiensia',    // Nivel 9: Santuario Comunitario
-      'PG094-anigami'       // Nivel 10: Ciudadela Libre
+      'PG-A-084:uprota',       // Nivel 0: Punto Cero (Par: uprota / refugio)
+      'PG-A-079:chui',         // Nivel 1: Cajones de Madera (Par: chui / fogon)
+      'PG-A-080:elena',        // Nivel 2: Techo de Chapa (Par: elena / frecuencia)
+      'PG-A-081:tuerto',       // Nivel 3: Huerto en Cajones (Par: tuerto / panel)
+      'PG-A-085:deva',         // Nivel 4: Taller de Reparación (Par: deva / consola)
+      'PG-A-086:cloto',        // Nivel 5: Fortaleza Energética (Par: cloto / hilo)
+      'PG-A-089:rigel',        // Nivel 6: Taller de Restauración (Par: rigel / pandora)
+      'PG-A-090:thorne',       // Nivel 7: Enclave Comercial (Par: thorne / vance)
+      'PG-A-093:templarios',   // Nivel 8: Complejo Autosustentable (Par: templarios / juramento)
+      'PG-A-096:sapiensia',    // Nivel 9: Santuario Comunitario (Par: sapiensia / mito)
+      'PG-A-094:anigami'       // Nivel 10: Ciudadela Libre (Par: anigami / agadni)
     ];
     const idx = Math.min(codigos.length - 1, Math.max(0, nivel));
     return codigos[idx];
