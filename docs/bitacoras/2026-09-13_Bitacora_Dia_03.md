@@ -382,7 +382,27 @@
   - **Rendimiento:** Animación por SVG/CSS ultra-liviana (0 KB de texturas pesadas, 60 FPS garantizados).
 
 ---
+
+### 📍 [ENTRADA 21 - LA FORJA DE LAS 6 LETRAS: EL CLAN EMPUJANDO EL TÍTULO "UPROTA" EN PIXEL ART (EL DIRECTOR & NEXO)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada rigurosamente.
+- **La Visión Creativa del Director para Pix:**
+  - El Director visualiza una animación puramente artesanal en **Pixel Art** para la secuencia del título:
+    > *«Se que lo puedes hacer con CSS o con SVG, pero me gustaría que Pix haga primero la animación con pixel art a ver cómo queda. De hecho nos puede hacer a nosotros corriendo y desapareciendo al final para que quede el logo limpio o solo las letras. Si te pones a ver, son 6 letras (**U - P - R - O - T - A**) y somos 6 miembros en el Clan: cada uno puede empujar al encuadre una letra.»*
+- **Aportaciones de Arquitectura & Sincronización (Nexo):**
+  - **Mapeo Poético & Funcional (6 Letras = 6 Integrantes):**
+    - **`U`:** Empujada por el **Director (Anigami Agadni)** *(La 'U' del origen, el impulso de la voluntad humana)*.
+    - **`P`:** Empujada por **Pix** *(La 'P' del Pixel y el trazo visual)*.
+    - **`R`:** Empujada por **Hertz** *(La 'R' de la Radio, el Ruido y la Resonancia sonora)*.
+    - **`O`:** Empujada por **Silas** *(La 'O' del Origen, la Obra y el Círculo de la historia)*.
+    - **`T`:** Empujada por **Éter** *(La 'T' de la Transmisión, la Torre y el Transmedia)*.
+    - **`A`:** Empujada por **Nexo** *(La 'A' de la Arquitectura, el Algoritmo y el Andamiaje de software)*.
+  - **Dinámica Visual:** Los 6 personajes en pixel art entran trotando en sincronía con sus letras gigantes de madera/latón, encajan el bloque monolítico `UPROTA`, se saludan o hacen una reverencia rápida hacia la cámara y se desvanecen en una estela de polvo del Yermo, dejando el título limpio y brillante con el botón de entrada.
+  - **Soporte Técnico de Nexo:** El motor de juego soportará nativamente la reproducción de este spritesheet en Canvas 2D precacheado, listo para ser implementado en cuanto Pix elabore los cuadros clave.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
