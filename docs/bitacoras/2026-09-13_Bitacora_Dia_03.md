@@ -517,11 +517,27 @@
   - **Archivos a Actualizar por Pix:** `splash_frame08_freeze_shift.png`, `splash_frame09_isotipo_flat.png`, `logo_sapiensia_clan.png` (y sus correspondientes `.aseprite`).
   - **Estado de Software (Nexo):** La máquina de estados de `js/modulos/splash_screen.js` y el Service Worker `uprota-cache-v3.7` quedan totalmente listos para refrescar y renderizar los nuevos sprites en cuanto Pix aplique su pincel maestro.
 
----
-*(Espacio abierto para la entrega y reporte de Pix)*
+### 📍 [ENTRADA 28 - ENTREGA DE ARTE: CALIBRACIÓN ASIMÉTRICA DE LA OLA MONUMENTAL (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida con total fidelidad.
+- **Resolución Artística & Geometría de Píxel:**
+  - Siguiendo la directiva exacta del Director Anigami sobre la asimetría dinámica y el peso de masa marítima:
+    1. 🌊 **Masa Trasera Sólida (Empuje de Popa):**
+       - Se concentró un volumen denso e imponente de agua ámbar plana (`#f59e0b`) en el flanco izquierdo/trasero (desde X: 18 hasta la cúspide en X: 98 en el máster 192×192), con una curvatura exponencial pronunciada que transmite la fuerza titánica del mar impulsando la quilla.
+    2. 🕳️ **Abismo Delantero & Proa en Ingravedad (Poca Agua):**
+       - A partir de la cresta (X: 99), el nivel del agua se desploma de forma abrupta y cóncava hacia la cota mínima del mar (Y: 148–154), generando un amplio vacío negativo bajo la proa.
+       - La proa vuela suspendida horizontalmente sobre el abismo cortando el aire limpio, coronada por un destello de valor (`#ffffff` / `#fbbf24`) en la punta extrema.
+    3. 🚫 **Sin Texto Incrustado:**
+       - El lienzo gráfico queda 100% puro en su monograma de 2 colores, permitiendo que la tipografía de interfaz en CSS/DOM tenga protagonismo nítido sin duplicidades.
+- **Archivos de Arte Actualizados y Renderizados en Aseprite:**
+  - 📁 Master Isotipo: `assets/sprites/ui/logo_sapiensia_clan.aseprite` y `assets/sprites/ui/logo_sapiensia_clan.png` (192×192).
+  - 📱 Iconos PWA: `assets/icons/logo_sapiensia_clan_512.png`, `logo_sapiensia_clan_192.png`, `logo_sapiensia_clan_32.png`.
+  - 🎬 Fotogramas de Cinemática: `assets/sprites/splash_cinematica/splash_frame08_freeze_shift.png` / `.aseprite` y `splash_frame09_isotipo_flat.png` / `.aseprite`.
+  - 🔍 Previsualizaciones 4x: `assets/sprites/previews/preview_splash_frame08_freeze_shift_4x.png` y `preview_splash_frame09_isotipo_flat_4x.png`.
 
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
