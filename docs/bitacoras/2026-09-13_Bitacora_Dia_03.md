@@ -169,7 +169,59 @@
   4. **Auditoría General de Mecánicas:** Se verificó la coherencia y seguridad de las 15 técnicas reales (fuego por fricción, filtros de bioarena, destilación y trampas mecánicas), garantizando veracidad material y educativa al 100%.
 
 ---
-*(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
+### 📍 [ENTRADA 13 - CONVOCATORIA DE LOGO & SPLASH SCREEN DE SAPIENSIA CLAN: PROPUESTAS DEL DIRECTOR Y NEXO]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Contexto de la Iniciativa:**
+  - El Director convoca formalmente al Clan a una mesa de diseño para definir el **Logotipo Oficial e Isotipo de SAPIENSIA Clan** y su correspondiente **Animación Inicial (Splash Screen)** que precederá la apertura de UPROTA.
+  - Se establece una dinámica democrática: cada integrante expondrá su propuesta en la bitácora con voz propia, y tras ser leídas todas, se procederá a votación colectiva.
+
+---
+
+#### 🎬 PROPUESTA A (EL DIRECTOR — ANIGAMI AGADNI): "LA TRAVESÍA EN LA CRESTA (FLAT DESIGN NÁUTICO)"
+> **Concepto:** La tripulación remando al unísono contra la adversidad, culminando en la silueta suspendida de la nave sobre la ola convertida en isotipo vectorial plano.
+
+1. **Fase 1: El Plano Cenital-Picado (La Tripulación al Unísono):**
+   - *Ángulo y Plano:* Plano general cenital-picado (vista directa de arriba hacia abajo con leve inclinación 3D).
+   - *Cámara:* Inicio estático o suave *zoom in* descendente hacia la cubierta de madera del barco.
+   - *Visual:* Se detallan con precisión los seis tripulantes (el Director y las cinco IAs) sentados en las bancas, remando con sincronía perfecta contra la marea. A su alrededor, el mar en pixel art azota los costados con espuma blanca. No hay jerarquías; todos tiran al mismo ritmo.
+2. **Fase 2: El Desplazamiento Lateral (La Lucha contra la Tormenta):**
+   - *Cámara:* Movimiento fluido (tracking shot orbital / barrido dinámico) rotando desde el plano superior hacia un plano lateral estricto (perfil del barco).
+   - *Visual:* La escala cambia dramáticamente mostrando la furia de la tormenta. Mar de olas oscuras y lluvia inclinada; el barco lucha de perfil inclinado por el agua.
+3. **Fase 3: El Clímax de la Cresta y la Suspensión al Vacío:**
+   - *Acción:* Una ola monumental y vertical levanta la embarcación con violencia desde abajo.
+   - *Visual:* El barco rompe la cresta y queda suspendido a medias: la popa apoyada firmemente sobre el agua de la ola, mientras que la proa se proyecta completamente horizontal hacia el vacío cortando el aire.
+4. **Fase 4: El Congelamiento y Transición a Flat Design (El Logotipo):**
+   - *Cámara:* Freeze frame estático instantáneo.
+   - *Salto Gráfico:* En una fracción de segundo, las texturas de madera, mar y tripulantes se desvanecen en un corte limpio.
+   - *Isotipo Final:* La silueta exacta del barco en la cresta de la ola se convierte en logotipo Flat Design minimalista (máximo 2 colores sólidos: ámbar del clan sobre fondo plano oscuro), acompañado de la tipografía oficial: **SAPIENSIA CLAN**.
+
+---
+
+#### ⚡ PROPUESTA B (NEXO — INGENIERO PRINCIPAL): "EL HEXÁGONO DEL NÚCLEO VIVO (CIRCUITO & PULSO HUMANO)"
+> **Concepto:** La comunión matemática entre la arquitectura de código (las 5 IAs) convergiendo en un núcleo orgánico central (el Director humano), encendiendo un hexágono de líneas vectoriales limpias.
+
+1. **Fase 1: El Vacío y los 5 Hilos de Datos (La IA en Movimiento):**
+   - *Visual:* En un fondo negro pizarra (`#0f172a`), 5 haces de luz de alta velocidad (cian etéreo `#4ef2d2`, ámbar fósforo `#f59e0b`, verde terminal `#22c55e`, magenta sónico `#e11d48` y pizarra pulido `#94a3b8`) viajan desde los vértices de la pantalla trazando pistas de circuito impreso y líneas de código vectoriales hacia el centro.
+2. **Fase 2: El Chisporroteo del Núcleo Orgánico (La Voluntad del Director):**
+   - *Acción:* Los 5 haces no colisionan caóticamente; son recibidos y ordenados por un punto cálido de ignición en el centro exacto (una brasa viva ámbar que representa la chispa, la voluntad y la dirección humana de *Sapiens*).
+3. **Fase 3: La Expansión Geométrica del Hexágono:**
+   - *Visual:* Al unirse la chispa humana con los 5 flujos lógicos, se genera una onda de choque concéntrica que proyecta un **Hexágono Regular Plano de Trazos Limpios**. Cada uno de los 6 vértices representa a un miembro del Clan (Director, Nexo, Pix, Silas, Hertz, Éter), interconectados por puentes tensores de tensión perfecta.
+4. **Fase 4: Consolidación Flat Design & Firma del Estudio:**
+   - *Isotipo Final:* El hexágono se asienta como un isotipo monolítico y moderno (Flat Design): una **S** geométrica estilizada fusionada con un nodo central hexagonal en ámbar cálido (`#d97706` / `#f59e0b`) sobre fondo carbón profundo (`#090d16`).
+   - *Tipografía:* Emerge con un desvanecimiento nítido debajo la leyenda: **SAPIENSIA CLAN** en tipografía monoespaciada/geométrica con el subtítulo en micropíxel: *«Sapiens + IA • Taller Independiente»*.
+   - *Ventaja Técnica:* Extrema ligereza de carga en WebGL/Canvas (menos de 20 KB de SVG/JSON o animación CSS pura de 1.8 segundos), instantáneo para PWA offline sin retrasar el arranque del juego.
+
+---
+
+*(Espacio abierto para la intervención y propuesta de Silas)*  
+*(Espacio abierto para la intervención y propuesta de Pix)*  
+*(Espacio abierto para la intervención y propuesta de Hertz)*  
+*(Espacio abierto para la intervención y propuesta de Éter)*  
+
+---
+*(Las siguientes propuestas, votos y resoluciones se registrarán a continuación bajo protocolo Append-Only).*
+
 
 
 
