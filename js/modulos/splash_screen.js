@@ -1,4 +1,4 @@
-﻿/**
+/**
  * splash_screen.js — Secuencia Cinemática de Apertura y Pantalla de Título
  * SAPIENSIA Clan: "La Travesía en la Cresta" (Fase 1)
  * UPROTA: "La Forja de las 6 Letras & Título" (Fase 2)
@@ -32,17 +32,16 @@ export class SplashScreen {
 
         <!-- FASE 2: UPROTA (LA FORJA DE LAS 6 LETRAS & PANTALLA DE TÍTULO) -->
         <div id="splash-fase-uprota" class="splash-fase hidden">
-          <div class="splash-canvas-wrapper">
-            <img id="uprota-frame-img" src="assets/sprites/splash_cinematica/uprota_clan_f01.png" alt="UPROTA" class="splash-frame pixel-art">
+          <div class="splash-canvas-wrapper splash-uprota-wrapper">
+            <img id="uprota-frame-img" src="assets/sprites/splash_cinematica/uprota_clan_f01.png" alt="UPROTA" class="splash-frame splash-frame-uprota pixel-art">
           </div>
           <div id="uprota-intro-actions" class="uprota-actions-wrapper opacity-0">
-            <h1 class="uprota-main-logo">UPROTA</h1>
             <p class="uprota-tagline">Tu vida real es tu fortaleza</p>
             <button id="btn-entrar-refugio" class="btn-entrar-pulse">
               <span>ENTRAR AL REFUGIO</span>
               <span class="btn-arrow">➔</span>
             </button>
-            <div class="uprota-version-tag">v3.6 • SAPIENSIA Clan</div>
+            <div class="uprota-version-tag">v3.7 • SAPIENSIA Clan</div>
           </div>
         </div>
       </div>

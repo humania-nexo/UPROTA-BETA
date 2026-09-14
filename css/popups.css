@@ -361,6 +361,14 @@
 }
 
 /* Fase 2: UPROTA Title Screen Actions */
+.splash-uprota-wrapper {
+  margin-bottom: 12px;
+}
+
+.splash-frame-uprota {
+  max-width: 340px;
+}
+
 .uprota-actions-wrapper {
   width: 100%;
   display: flex;
@@ -370,20 +378,12 @@
   transition: opacity 0.5s ease;
 }
 
-.uprota-main-logo {
-  font-family: var(--font-serif);
-  font-size: 2.4rem;
-  letter-spacing: 0.3em;
-  color: var(--oro-torta);
-  text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
-  margin-bottom: 4px;
-}
-
 .uprota-tagline {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   font-style: italic;
-  margin-bottom: 28px;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
 }
 
 .btn-entrar-pulse {

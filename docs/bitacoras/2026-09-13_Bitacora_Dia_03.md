@@ -536,7 +536,21 @@
   - 🔍 Previsualizaciones 4x: `assets/sprites/previews/preview_splash_frame08_freeze_shift_4x.png` y `preview_splash_frame09_isotipo_flat_4x.png`.
 
 ---
+
+### 📍 [ENTRADA 29 - CORRECCIÓN DE DUPLICIDAD EN PANTALLA DE TÍTULO DE UPROTA (EL DIRECTOR & NEXO)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada rigurosamente.
+- **Observación del Director:**
+  - En la Fase 2 de la SplashScreen aparecía el logotipo de **UPROTA** en Pixel Art forjado por Pix (`uprota_clan_f10.png`) y debajo se repetía nuevamente la palabra en texto HTML/DOM estilizado con tipografía Cinzel, generando una redundancia visual incómoda.
+- **Resolución Técnica (Nexo):**
+  - Se eliminó el elemento `<h1>UPROTA</h1>` redundante de `js/modulos/splash_screen.js`.
+  - Ahora el protagonismo del título pertenece **única y exclusivamente a las letras de Pixel Art forjadas por el Clan** en la animación de Pix.
+  - El diseño visual en `css/popups.css` se reestructuró para presentar directamente el lema (*"Tu vida real es tu fortaleza"*), el botón interactivo de pulso `[ ENTRAR AL REFUGIO ➔ ]` y el tag institucional de versión `v3.7 • SAPIENSIA Clan` de forma limpia y perfectamente centrada.
+  - Validación con Node.js en los 34 módulos ES6 (0 errores) y despliegue a GitHub Pages (`main`).
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
