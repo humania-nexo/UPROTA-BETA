@@ -16,11 +16,11 @@ export class SplashScreen {
 
     contenedor.innerHTML = `
       <div class="splash-inner">
-        <!-- BOTÓN DISCRETO PARA SALTAR (FAST-TRACK ANTI-FRICCIÓN) -->
-        <button id="btn-skip-splash" class="splash-skip-btn" title="Saltar intro">Saltar ➔</button>
-
         <!-- FASE 1: SAPIENSIA CLAN (LA TRAVESÍA EN LA CRESTA) -->
         <div id="splash-fase-clan" class="splash-fase activa">
+          <!-- BOTÓN DISCRETO PARA SALTAR (SOLO EN LA INTRO DEL CLAN) -->
+          <button id="btn-skip-splash" class="splash-skip-btn" title="Saltar intro">Saltar ➔</button>
+
           <div class="splash-canvas-wrapper">
             <img id="splash-frame-img" src="assets/sprites/splash_cinematica/splash_frame01_cenital.png" alt="SAPIENSIA Clan" class="splash-frame pixel-art">
           </div>

@@ -549,7 +549,21 @@
   - Validación con Node.js en los 34 módulos ES6 (0 errores) y despliegue a GitHub Pages (`main`).
 
 ---
+
+### 📍 [ENTRADA 30 - REFINAMIENTO DE UX: REUBICACIÓN DEL BOTÓN SALTAR (EL DIRECTOR & NEXO)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada rigurosamente.
+- **Directiva de UX del Director:**
+  - El botón `Saltar ➔` debe existir exclusivamente durante la cinemática de **SAPIENSIA Clan** (Fase 1) para permitir avanzar al título rápidamente.
+  - Al llegar a la pantalla de título de **UPROTA** (Fase 2), dicho botón de saltar se elimina por completo para no competir ni confundir con el botón principal `[ ENTRAR AL REFUGIO ➔ ]`.
+- **Resolución Técnica (Nexo):**
+  - Se movió el contenedor `#btn-skip-splash` dentro del bloque `#splash-fase-clan` en `js/modulos/splash_screen.js`.
+  - Al realizarse la transición hacia la Fase 2, el botón de saltar se desvanece automáticamente junto con la fase 1, dejando la pantalla de título de UPROTA totalmente enfocada en el llamado a la acción principal.
+  - Validación de sintaxis con Node.js y despliegue a producción en GitHub Pages (`main`).
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 03 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
