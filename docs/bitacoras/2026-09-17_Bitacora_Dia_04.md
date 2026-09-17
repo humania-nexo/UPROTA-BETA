@@ -210,8 +210,29 @@
   - 🔍 Preview 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png`.
   - 🌐 Sincronizado en GitHub en `sapiensiaclan` (commit `1c4e709`).
 
+### 📍 [ENTRADA 11 - ENTREGA DE ARTE DEFINITIVO: IMPLEMENTACIÓN EXACTA DE LA GUÍA DEL DIRECTOR (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Fidelidad Absoluta a la Guía Visual del Director:**
+  - Se analizó la guía gráfica exacta proporcionada por el Director Anigami y se trasladó píxel a píxel a **Aseprite**:
+    1. 🌊 **Masa de Ola Fusionada con el Casco:**
+       - La gran masa de agua asciende desde el cuadrante inferior izquierdo y se **fusiona directamente con el lomo inferior de la barca** en la cresta (sin desconexiones ni flotaciones huérfanas).
+       - La caída frontal desciende cóncava y limpia hacia la base del mar en el flanco derecho.
+    2. 🛶 **Barca con Popa Alzada y Proa Afilada:**
+       - Popa izquierda con su elegante remate en punta ascendente.
+       - Proa derecha proyectada audazmente hacia el vacío con su curvatura hacia arriba cortando el aire.
+       - Cascada diagonal de gotas de salpicadura y partículas de espuma cayendo bajo la proa hacia el mar inferior.
+       - Los 6 remeros en sincronía con sus remos en diagonal.
+- **Entregables Actualizados y Desplegados:**
+  - 📁 Master Isotipo (192×192 px): `assets/sprites/ui/logo_sapiensia_clan.aseprite` y `logo_sapiensia_clan.png` (sincronizado en `sapiensiaclan/assets/logo_sapiensia_clan.png`).
+  - 📱 Iconos PWA: `assets/icons/logo_sapiensia_clan_512.png`, `192.png`, `32.png`.
+  - 🎬 Fotogramas Cinemáticos: `assets/sprites/splash_cinematica/splash_frame08_freeze_shift.png` y `splash_frame09_isotipo_flat.png`.
+  - 🔍 Preview 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png`.
+  - 🌐 Desplegado en vivo en GitHub Pages en `sapiensiaclan` (commit `9b768b7`).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
 
