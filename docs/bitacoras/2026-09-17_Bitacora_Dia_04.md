@@ -192,7 +192,26 @@
   - 🔍 Preview 4x GIF (960×540 px): `assets/sprites/previews/preview_salto_salmon_anim_4x.gif`
   - 🌐 **Despliegue en Vivo:** Integrado como GIF dinámico en la cabecera del Manifiesto en `https://humania-nexo.github.io/sapiensiaclan/` (commit `54a50f4`).
 
+### 📍 [ENTRADA 10 - ENTREGA DE ARTE: REDISEÑO DE LA OLA CON RIZO & EMBARCACIÓN EN LA CRESTA (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Corrección Estética de la Ola (Adiós a la Montaña Piramidal):**
+  - Tomando como guía la referencia visual aportada por el Director Anigami (ola oceánica con rizo/tubo cóncavo rompiendo hacia adelante):
+    1. 🌊 **La Curva Orgánica con Rizo (*Breaker Hook*):**
+       - Se reemplazó la pendiente triangular rígida por una curva exponencial cóncava que asciende masivamente desde la popa (izquierda) y se arquea en un rizo / labio enroscado (*crest curl*) hacia la derecha.
+       - Se labró el tubo hueco (*barrel cavity*) en espacio negativo bajo la cresta, con espuma y salpicaduras dinámicas proyectadas hacia el frente.
+    2. 🛶 **La Barca en Posición Orgánica de Cresta:**
+       - La popa descansa firmemente sobre la masa ascendente de agua, mientras que la quilla corta el lomo de la cresta y la proa se proyecta ingrávida y curvada hacia arriba sobre el abismo abierto.
+       - Siluetas esculpidas de los **6 tripulantes** remando en sincronía con remos largos y destello de valor en la proa.
+- **Entregables Generados & Desplegados:**
+  - 📁 Master Isotipo (192×192 px): `assets/sprites/ui/logo_sapiensia_clan.aseprite` y `logo_sapiensia_clan.png` (sincronizado también en `sapiensiaclan/assets/`).
+  - 📱 Iconos PWA: `assets/icons/logo_sapiensia_clan_512.png`, `192.png`, `32.png`.
+  - 🎬 Fotogramas Cinemáticos: `assets/sprites/splash_cinematica/splash_frame08_freeze_shift.png` y `splash_frame09_isotipo_flat.png`.
+  - 🔍 Preview 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png`.
+  - 🌐 Sincronizado en GitHub en `sapiensiaclan` (commit `1c4e709`).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
