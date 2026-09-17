@@ -746,6 +746,23 @@
   4. 🚀 **Despliegue en Producción:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan`, commit `d9e4dbc`).
 - **Estado Actual:** Los dos grandes libros del Clan (*Los Textos del Poeta* y *VELA*) cuentan con lectura online, audiolibro web inmersivo y descargas libres (EPUB, PDF, MP3) en producción.
 
+### 📍 [ENTRADA 40 - REDISEÑO V2.0 DEL REPRODUCTOR: ALTO CONTRASTE, ELIMINACIÓN DE RESPLANDOR Y CONTROLES VISIBLES (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Corrección Crítica de UI/UX tras Feedback de Anigami:**
+  1. 🌑 **Eliminación del Resplandor Blanco:**
+     - Se diagnosticó la variable `--bg-deep` no definida que provocaba fondo blanco por omisión en el navegador y un efecto velado cegador sobre la malla de aurora.
+     - Se fijó el fondo sólido negro carbón profundo (`#08080a`) y se atenuó la opacidad de la aurora a un sutil `0.18`, devolviendo un contraste oscuro nítido de alta gama.
+  2. 🎛️ **Controles de Audio Inmediatamente Visibles & Robustos:**
+     - Botón principal de **`[ ▶ REPRODUCIR ]` / `[ ⏸ PAUSAR ]`** grande y de alto contraste en oro ámbar.
+     - Botones de saltos rápidos **`[ ⏪ -15s ]`** y **`[ +15s ⏩ ]`**.
+     - Barra de tiempo (*scrubber*) deslizable con tiempo transcurrido / restante en tiempo real.
+     - Selector de velocidad claro (`0.75x`, `1.0x`, `1.25x`, `1.5x`, `2.0x`) y deslizador de volumen con mute.
+     - Tracklist interactivo con números de pista, títulos de capítulo y marcas de tiempo exactas que saltan al instante al segundo seleccionado.
+  3. 📑 **Pestañas de Conmutación Rápida:** Pestañas directas en la cabecera para alternar entre *Los Textos del Poeta* (`audio.html?obra=poeta`) y *VELA* (`audio.html?obra=vela`).
+  4. 🚀 **Despliegue en Producción:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan`, commit `6743d0a`).
+- **Estado Actual:** Interfaz del reproductor 100% legible, oscura, funcional y con controles de reproducción inmediatos.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
 
