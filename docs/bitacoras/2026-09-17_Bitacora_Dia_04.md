@@ -1,4 +1,4 @@
-﻿# UPROTA - Bitácora Diaria de Desarrollo
+# UPROTA - Bitácora Diaria de Desarrollo
 ### Jornada 04: 17 de Septiembre de 2026
 **Estudio Indie:** SAPIENSIA Clan (*Sapiens + IA*)  
 **Estado General:** Creación, desarrollo y despliegue del portal institucional de **SAPIENSIA Clan** (`https://humania-nexo.github.io/sapiensiaclan/`), integración del catálogo editorial para validación en Google Play Libros, Manifiesto del Salmón, canal de mecenazgo por Binance Pay y sustitución de emojis por Pixel Art de Pix.
@@ -78,6 +78,55 @@
   - **📜 Para Silas:** Un micro-epígrafe o sentencia estoica para coronar el pie de página de la editorial o profundizar la sinopsis filosófica de las obras.
   - **📡 Para Éter:** Optimización de metadatos de difusión, tarjeta OpenGraph para redes sociales y estructuración del Press Kit de presentación para comunidades exteriores.
 
----
+### 📍 [ENTRADA 04 - REVISIÓN ARTÍSTICA DEL PORTAL & PROPUESTA DE LA VIÑETA DEL SALMÓN (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Impresión Artística & Emocional del Portal:**
+  - El portal oficial de **SAPIENSIA Clan** (`sapiensiaclan`) ha quedado visualmente deslumbrante: la combinación de *Dark Glassmorphism*, el resplandor ámbar (`#f59e0b`) y la integración limpia de mis emojis en Pixel Art le otorgan un carácter artesanal y humano único que contrasta poderosamente con las webs corporativas genéricas.
+  - La sustitución de emojis de sistema por nuestros sprites con `image-rendering: pixelated` refuerza la identidad indie y el espíritu del Clan.
+- **Propuesta de Arte de Pix para Elevar el Portal:**
+  1. 🐟🌊 **Viñeta Hero / Banner en Pixel Art: "El Salto del Salmón":**
+     - Crear una ilustración artesanal en 2.5D (o micro-animación en Aseprite) que capture al salmón ámbar/dorado remontando los rápidos y rompiendo la cascada de agua cristalina y espuma contra la corriente. Esta pieza coronará visualmente la sección de *El Manifiesto del Salmón*, dotando de una fuerza plástica imborrable a la historia del Director.
+  2. 🖼️ **Micro-marcos y Badges Ornamentales:**
+     - Diseñar marcos biselados en pixel art (madera rústica y latón ámbar) para las portadas de los libros (*Los Textos del Poeta*, *VELA*) y las tarjetas del Clan.
+- **Estado:** Pinceles y Aseprite listos para forjar la viñeta del Salmón en cuanto el Director dé luz verde.
 
-*(Espacio abierto para las intervenciones de Pix, Silas, Hertz y Éter)*
+### 📍 [ENTRADA 05 - APORTE LITERARIO & FILOSÓFICO DE SILAS AL PORTAL DE SAPIENSIA CLAN (SILAS)]
+- **Participante:** Silas (El Cronista del Yermo & Arquitecto Narrativo).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada al 100%.
+- **Reflexión sobre el Manifiesto del Salmón y la Dignidad Migratoria:**
+  - Como cronista, he leído con reverencia las palabras del Director **Anigami Agadni**. *El Manifiesto del Salmón* es la piedra angular ética de todo lo que construimos: no es una fábula decorativa, es el testimonio vivo de quien ha sido orillado por las compuertas burocráticas del mundo y, en lugar de rendirse a la amargura, decide forjar su propio río, saltar cascadas arriba y crear belleza de la mano de su Clan.
+  - La literatura de *Los Textos del Poeta*, el viaje ontológico de *VELA* y la disciplina estoica de *UPROTA* tienen un pulso común: **la dignidad humana innegociable frente a la adversidad**.
+- **Entregas Literarias de Silas para el Portal (`https://humania-nexo.github.io/sapiensiaclan/`):**
+  1. 📜 **Sentencia para la Cabecera del Manifiesto del Salmón:**
+     > *«El río empuja hacia abajo con el peso del sistema; el salmón salta hacia arriba con la fuerza del alma. Nadar contra la corriente no es rebeldía: es el único modo de volver al origen.»*
+  2. 🏛️ **Micro-Epígrafe para el Pie de Página (Footer Editorial):**
+     > *«No escribimos para pedir permiso al mundo, sino para recordarle al náufrago que siempre es posible encender un fuego en la noche más fría.»*  
+     > — **SAPIENSIA Clan • Sapiens + IA**
+  3. 💛 **Aforismo para el Módulo de Mecenazgo & Donaciones:**
+     > *«En un mundo que cobra peaje por respirar, sostener el arte libre es un acto de resistencia sagrada.»*
+- **Disponibilidad para Nexo y Éter:**
+  - Estas sentencias quedan a disposición de **Nexo** para ser insertadas en los bloques de texto del portal (`index.html`) y de **Éter** para enriquecer las notas de prensa y la documentación institucional ante Google Play Libros.
+
+### 📍 [ENTRADA 06 - SÍNTESIS DE MICRO-FEEDBACK SONORO PROCEDURAL PARA EL PORTAL SAPIENSIACLAN (HERTZ)]
+- **Participante:** Hertz (Sonidista del Yermo / Síntesis Sonora & Música Chiptune).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada al 100%.
+- **Resonancia Emocional con el Manifiesto del Salmón:**
+  - Las palabras del Director **Anigami Agadni** y los textos de **Silas** vibran con una frecuencia pura: la de la perseverancia y la dignidad frente al ruido del mundo. El audio de una plataforma como **SAPIENSIA Clan** no debe ser una fanfarria estridente, sino un murmullo táctil cálido, una resonancia que acompañe al lector y al jugador sin invadir su concentración.
+- **Implementación Técnica Realizada en `sapiensiaclan` (0 KB / Vanilla Web Audio API):**
+  1. **Motor de Audio Dedicado (`js/audio_ui.js`):**
+     - Desarrollado desde cero con la clase `ClanAudioFeedback` sin librerías externas ni archivos de audio estáticos (**0 KB de tráfico de red**).
+     - **Gestión de Ciclo de Vida y Memoria:** Conexión limpia y desconexión explícita con `onended` de todos los nodos de oscilador y ganancia para evitar fugas de memoria en navegadores móviles.
+     - **Cumplimiento de Política Autoplay:** Inicialización y reactivación fluida (`ensureContext()`) mediante eventos pasivos (`pointerdown`, `keydown`) en el primer gesto del usuario.
+  2. **Diseño de Micro-Interacciones Táctiles y Armónicas:**
+     - 🔊 **Hover Táctil (`playHover()`):** Micro-pulso de cristal amortiguado (880 Hz $\rightarrow$ 1100 Hz, onda senoidal pura, envolvente exponencial de 35 ms, ganancia ultra-sutil de 0.012) para tarjetas, botones y avatares del Clan.
+     - 🎛️ **Click Háptico (`playClick()`):** Pulso cálido y orgánico (480 Hz $\rightarrow$ 180 Hz, onda triangular suave, envolvente de 55 ms, ganancia 0.05) al accionar botones y enlaces de navegación.
+     - 🌟 **Acorde Ámbar de Victoria (`playAmberSuccess()`):** Arpegio dorado en cascada ascendente (Do5: 523.25 Hz, Mi5: 659.25 Hz, Sol5: 783.99 Hz, Do6: 1046.50 Hz con envolventes individuales de 320 ms) al copiar con éxito el Binance ID o interactuar con apoyos.
+  3. **Control de Experiencia de Usuario (Mute/Unmute):**
+     - Integración del botón `#btn-sound-toggle` en la barra de navegación (`navbar-glass`) con icono de nota musical de Pix (`emoji_nota_musical.png`) y etiqueta de estado (`FX: ON / FX: OFF`).
+     - Persistencia de la preferencia del usuario en `localStorage` (`sapiensia_audio_muted`).
+  4. **Sincronización con el Repositorio Oficial:**
+     - Archivos `js/audio_ui.js`, `js/main.js`, `css/style.css` e `index.html` integrados y pusheados a `https://github.com/humania-nexo/sapiensiaclan.git` (commit `31f04a5`), quedando operativos en vivo en `https://humania-nexo.github.io/sapiensiaclan/`.
+
+---
+*(Las siguientes interacciones, entregas y debates de la Jornada 04 se añadirán a continuación de este punto sin borrar las entradas previas).*
