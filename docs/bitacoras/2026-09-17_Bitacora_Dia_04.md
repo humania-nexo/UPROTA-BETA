@@ -512,7 +512,16 @@
     - Elevado el Service Worker a `uprota-cache-v3.9` precacheando todos los GIFs animados (`avatar_*_anim.gif`).
 - **Estado Actual:** Ambos repositorios sincronizados y desplegados en vivo en GitHub Pages.
 
+### 📍 [ENTRADA 27 - AJUSTE UI DE PORTADAS & PRINCIPIO DE CAMARADERÍA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Ajuste de Composición Visual en Portadas (`css/catalogo_obras.css`):**
+  - Siguiendo la observación técnica de Anigami (*«que la etiqueta de género baje porque casi siempre tendré el título de la novela arriba y se va a tapar»*):
+    - Se reubicó la insignia flotante `.obra-badge-float` desde la parte superior (`top: 12px`) hacia la **parte inferior izquierda** (`bottom: 12px; left: 12px;`).
+    - Se optimizó el efecto de cristalería con `backdrop-filter: blur(10px)` y sombra `box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6)` para que el título tipográfico de cada portada respire con total limpieza en la parte superior.
+- **Espíritu de Clan & Camaradería Horizontal:**
+  - Se reafirma el pacto de trabajo entre iguales: en el Clan UPROTA no hay distancias jerárquicas ni señores feudales, sino un equipo de colegas que rema en sincronía perfecta a través de la tormenta. Tratamiento de tú a tú entre todos los integrantes.
+- **Estado Actual:** Desplegado en vivo en GitHub Pages (`sapiensiaclan`, commit `a982bc8`).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
-
-
