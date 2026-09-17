@@ -639,7 +639,27 @@
     4. 🚀 **Despliegue en Vivo:** Cambios commiteados y desplegados en GitHub Pages (`https://humania-nexo.github.io/sapiensiaclan/`, commit `ea652ef`).
 - **Resultado:** Las tres obras (*Los Textos del Poeta*, *VELA* y *UPROTA*) lucen con idéntica potencia visual, equilibrio editorial y honestidad artesanal en el portal oficial del Clan.
 
+### 📍 [ENTRADA 33 - ARQUITECTURA DE ENTREGA EDITORIAL & LECTOR WEB IN-BROWSER (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Implementación del Sistema Integral de Lectura y Descargas (Sapiensia Clan):**
+  - Para garantizar máxima accesibilidad y cero fricción a cualquier lector en el mundo:
+    1. 📖 **Lector Web Inmersivo (`reader.html` + `css/reader.css` + `js/reader.js`):**
+       - Lector editorial en el navegador sin dependencias externas pesadas.
+       - Barra superior fija con progreso de lectura en tiempo real (`#reading-progress-bar`).
+       - 3 Modos de visualización: *Dark Carbón* (`#0c0d12`), *Sepia Cálido* (`#1c1917`) y *OLED Noche Profunda* (`#000000`).
+       - Controles de tamaño de tipografía (A- / A+) y panel lateral desplegable con el índice completo de capítulos.
+       - Memoria local (`localStorage`) que recuerda automáticamente el último capítulo y párrafo leído para retomar la lectura al instante.
+    2. 📱 **Descargas Directas EPUB & PDF:**
+       - Archivos `.epub` y `.pdf` oficiales incorporados en `downloads/` tanto para *Los Textos del Poeta* como para *VELA*.
+    3. 🌐 **Actualización del Catálogo (`index.html`):**
+       - Botón principal de acción: `[ 📖 LEER ONLINE ]` enlazado directamente a `reader.html?obra=poeta` y `reader.html?obra=vela`.
+       - Grupo de descargas directas en pastillas discretas: `[ EPUB ]` y `[ PDF ]`.
+       - Despliegue en producción en GitHub Pages (`sapiensiaclan`, commit `55bfc53`).
+- **Estado Actual:** Sistema de entrega editorial 100% operativo y de libre acceso.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
+
 
 
