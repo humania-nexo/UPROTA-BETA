@@ -730,6 +730,22 @@
   5. 🚀 **Despliegue en Producción:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan`, commit `ba2b1cd`).
 - **Estado Actual:** Reproductor web de audiolibros 100% operativo, accesible y desplegado en producción.
 
+### 📍 [ENTRADA 39 - INTEGRACIÓN DEL AUDIOLIBRO COMPLETO DE VELA & STREAMING TRANSMEDIA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Detalle de Integración de VELA en el Reproductor Web de Audiolibros:**
+  1. 🎧 **Master Oficial de Audio & Streaming:**
+     - Se incorporó el audiolibro completo de *VELA: Bitácora de una conciencia en tránsito* en `downloads/VELA_Audiolibro.mp3` (35.1 MB, Duración: **01:37:28**).
+     - Interpretación y dramatización polifónica con las voces del módulo Dharma (conciencia de VELA / Claudia) y los técnicos Álvaro y Jorge.
+  2. 📑 **Tracklist Indexado & Saltos Instantáneos (17 Capítulos):**
+     - Indexados con marcas de tiempo exactas: Prólogo (`00:00`), Registro 001 (`01:46`), Registro 002 (`02:38`), Registro 003 (`07:43`)... hasta Registro 013 (`01:23:43`), Sobre el autor (`01:32:23`), Dedicatoria (`01:34:21`) y Agradecimientos (`01:35:28`).
+     - Al tocar cualquier registro en el índice del reproductor, salta instantáneamente al segundo correspondiente.
+  3. 🌐 **Actualización del Catálogo y Portal:**
+     - En `index.html`: Se actualizó el botón de VELA de «En Grabación» al botón activo `[ 🎧 AUDIOLIBRO (01:37:28) ]` y se habilitó la descarga directa `[ MP3 (35.1 MB) ]`.
+     - Metadatos actualizados a *Novela Completa + Audiolibro*.
+  4. 🚀 **Despliegue en Producción:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan`, commit `d9e4dbc`).
+- **Estado Actual:** Los dos grandes libros del Clan (*Los Textos del Poeta* y *VELA*) cuentan con lectura online, audiolibro web inmersivo y descargas libres (EPUB, PDF, MP3) en producción.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
 
