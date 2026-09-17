@@ -81,131 +81,326 @@ def draw_uprota_header(img, title_y=28):
 # OPCIÓN 1: EL REFUGIO EN LA NOCHE DEL YERMO (Atmósfera & Calidez)
 # =============================================================
 def make_option_1():
-    img = Image.new("RGBA", (W, H), BG_NIGHT + (255,))
+    img = Image.new('RGBA', (W, H), BG_NIGHT + (255,))
     pix = img.load()
     
-    for y in range(220):
-        t = y / 220.0
+    # Sky gradient
+    for y in range(230):
+        t = y / 230.0
         r = int(SKY_DEEP[0] * (1-t) + SKY_INDIGO[0] * t)
         g = int(SKY_DEEP[1] * (1-t) + SKY_INDIGO[1] * t)
         b = int(SKY_DEEP[2] * (1-t) + SKY_INDIGO[2] * t)
         
-        aurora = math.sin(y * 0.05 + 1.2) * math.cos(y * 0.02)
-        if 40 <= y <= 130 and aurora > 0.3:
-            r = int(r * 0.8 + 10 * 0.2)
-            g = int(g * 0.7 + 180 * 0.3)
-            b = int(b * 0.7 + 210 * 0.3)
+        # Aurora band
+        aurora = math.sin(y * 0.04 + 1.0) * math.cos(y * 0.015)
+        if 45 <= y <= 135 and aurora > 0.25:
+            f = (aurora - 0.25) * 0.4
+            r = int(r * (1-f) + 12 * f)
+            g = int(g * (1-f) + 140 * f)
+            b = int(b * (1-f) + 175 * f)
             
         for x in range(W):
             pix[x, y] = (r, g, b, 255)
             
-    random.seed(101)
-    for _ in range(70):
-        sx = random.randint(5, W - 6)
-        sy = random.randint(8, 170)
+    # Stars & Constellations
+    random.seed(1337)
+    for _ in range(85):
+        sx = random.randint(4, W - 5)
+        sy = random.randint(6, 175)
         bright = random.random()
-        col = WHITE if bright > 0.8 else (CYAN_SOFT if bright > 0.4 else (100, 130, 170))
+        col = WHITE if bright > 0.85 else (CYAN_SOFT if bright > 0.5 else (110, 140, 180))
         pix[sx, sy] = col + (255,)
-        
-    for dy in range(-10, 11):
-        for dx in range(-10, 11):
-            if dx*dx + dy*dy <= 100:
-                if (dx - 4)**2 + (dy - 2)**2 > 75:
-                    pix[200 + dx, 70 + dy] = GOLD_WARM + (255,)
-                    if dx*dx + dy*dy <= 64: pix[200 + dx, 70 + dy] = WHITE + (255,)
+        if bright > 0.96: # Twinkle
+            for ddx, ddy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                if 0 <= sx+ddx < W and 0 <= sy+ddy < H:
+                    pix[sx+ddx, sy+ddy] = (160, 200, 240, 140)
+                    
+    # Crescent Moon with golden glow
+    moon_cx, moon_cy = 196, 72
+    for dy in range(-12, 13):
+        for dx in range(-12, 13):
+            d2 = dx*dx + dy*dy
+            if d2 <= 144:
+                alpha = max(0, 1.0 - math.sqrt(d2)/12.0) * 0.25
+                px, py = moon_cx + dx, moon_cy + dy
+                cr, cg, cb, _ = pix[px, py]
+                pix[px, py] = (int(cr + GOLD_WARM[0]*alpha), int(cg + GOLD_WARM[1]*alpha), int(cb + GOLD_WARM[2]*alpha), 255)
+            if d2 <= 81:
+                if (dx - 4)**2 + (dy - 2)**2 > 60:
+                    pix[moon_cx + dx, moon_cy + dy] = GOLD_WARM + (255,)
+                    if d2 <= 49:
+                        pix[moon_cx + dx, moon_cy + dy] = WHITE + (255,)
 
-    for y in range(160, 240):
+    # Distant mountains in silhouette
+    for y in range(155, 235):
         for x in range(W):
-            m1 = math.sin(x * 0.03) * 18 + math.cos(x * 0.08) * 8
-            m_top = 185 - int(m1)
+            m1 = math.sin(x * 0.025 + 0.5) * 22 + math.cos(x * 0.06) * 10
+            m_top = 180 - int(m1)
             if y >= m_top:
                 d = y - m_top
-                c = (14, 20, 36) if d < 8 else (8, 13, 24)
+                c = (16, 24, 42) if d < 6 else (9, 14, 26)
                 pix[x, y] = c + (255,)
 
-    for y in range(210, H):
+    # Foreground terrain & dunes
+    def get_ground_y(x):
+        if 88 <= x <= 168:
+            return 248
+        elif x < 88:
+            t = (88 - x) / 88.0
+            return int(248 + math.sin(t * 2.5) * 14 + t * 6)
+        else:
+            t = (x - 168) / 72.0
+            return int(248 + math.sin(t * 2.8) * 16 - t * 4)
+
+    for y in range(215, H):
         for x in range(W):
-            ground_h = 240 + math.sin(x * 0.02) * 10 - math.cos(x * 0.06) * 5
-            if y >= ground_h:
-                d = y - ground_h
+            gy = get_ground_y(x)
+            if y >= gy:
+                d = y - gy
                 if d <= 1: c = STONE_RIM
-                elif d <= 6: c = STONE_LIGHT
-                elif d <= 18: c = STONE_MID
+                elif d <= 5: c = STONE_LIGHT
+                elif d <= 16: c = STONE_MID
                 else: c = STONE_DARK
                 pix[x, y] = c + (255,)
 
-    roof_peak_x, roof_peak_y = 130, 175
-    for y in range(175, 215):
-        w = int((y - 175) * 1.1) + 4
+    # CABIN (WOODEN WALLS & ROOF)
+    cab_x1, cab_x2 = 94, 166
+    cab_y_base = 248
+    cab_y_wall_top = 210
+    
+    # 1. Wooden Wall Planks
+    for y in range(cab_y_wall_top, cab_y_base):
+        plank_idx = (y - cab_y_wall_top) // 5
+        is_seam = ((y - cab_y_wall_top) % 5 == 0)
+        for x in range(cab_x1, cab_x2 + 1):
+            grain = (math.sin(x * 0.4 + plank_idx * 2.1) * 2 + math.cos(y * 0.8) * 1.5)
+            if x <= cab_x1 + 3 or x >= cab_x2 - 3:
+                c = WOOD_DARK if is_seam else (45, 18, 5)
+            elif is_seam:
+                c = (45, 18, 5)
+            elif grain > 1.2:
+                c = WOOD_LIGHT
+            elif grain > -0.5:
+                c = WOOD_MID
+            else:
+                c = WOOD_DARK
+            pix[x, y] = c + (255,)
+
+    # 2. Overhanging Wooden Shingle Roof
+    roof_peak_x, roof_peak_y = 130, 168
+    for y in range(roof_peak_y, cab_y_wall_top + 4):
+        t = (y - roof_peak_y) / float(cab_y_wall_top + 4 - roof_peak_y)
+        w = int(t * 42) + 2
+        shingle_seam = (y % 4 == 0)
         for dx in range(-w, w + 1):
             px = roof_peak_x + dx
             if 0 <= px < W:
-                c = WOOD_LIGHT if dx <= 0 and (y % 4 == 0) else (WOOD_MID if dx <= 2 else WOOD_DARK)
+                if shingle_seam:
+                    c = (45, 18, 5)
+                elif dx < 0:
+                    c = (195, 90, 15) if (y % 4 == 1) else WOOD_LIGHT
+                elif dx <= 4:
+                    c = WOOD_MID
+                else:
+                    c = WOOD_DARK
                 pix[px, y] = c + (255,)
-                
-    for y in range(215, 255):
-        for x in range(96, 165):
-            c = STONE_LIGHT if (x % 10 == 0 or y % 8 == 0) else (STONE_MID if x <= 130 else STONE_DARK)
-            pix[x, y] = c + (255,)
-            
-    for y in range(224, 243):
-        for x in range(106, 125):
-            is_frame = (x == 106 or x == 124 or y == 224 or y == 242 or x == 115 or y == 233)
-            pix[x, y] = (WOOD_DARK if is_frame else (WHITE if (x == 111 and y == 228) else GOLD_SUN)) + (255,)
-            
-    for y in range(243, 275):
-        for x in range(85, 145):
-            d = math.sqrt((x - 115)**2 + (y - 233)**2)
-            if d < 36:
-                alpha = (36 - d) / 36.0 * 0.45
+    for x in range(cab_x1 - 4, cab_x2 + 5):
+        if 0 <= x < W:
+            pix[x, cab_y_wall_top + 3] = (45, 18, 5, 255)
+
+    # 3. Window with warm amber glow
+    win_x1, win_x2 = 104, 124
+    win_y1, win_y2 = 219, 239
+    for y in range(win_y1, win_y2 + 1):
+        for x in range(win_x1, win_x2 + 1):
+            is_frame = (x == win_x1 or x == win_x2 or y == win_y1 or y == win_y2 or x == (win_x1+win_x2)//2 or y == (win_y1+win_y2)//2)
+            if is_frame:
+                pix[x, y] = (45, 18, 5, 255)
+            else:
+                dx = x - (win_x1+win_x2)//2
+                dy = y - (win_y1+win_y2)//2
+                col = WHITE if (abs(dx) <= 2 and abs(dy) <= 2) else (GOLD_SUN if abs(dx)+abs(dy) <= 5 else GOLD_WARM)
+                pix[x, y] = col + (255,)
+
+    # 4. Wooden Door
+    door_x1, door_x2 = 138, 156
+    door_y1, door_y2 = 221, cab_y_base
+    for y in range(door_y1, door_y2):
+        for x in range(door_x1, door_x2 + 1):
+            is_door_frame = (x == door_x1 or x == door_x2 or y == door_y1)
+            if is_door_frame:
+                pix[x, y] = (45, 18, 5, 255)
+            else:
+                plank = (x - door_x1) % 5 == 0
+                pix[x, y] = ((45, 18, 5) if plank else (WOOD_MID if y > door_y1 + 10 else WOOD_DARK)) + (255,)
+    pix[141, 236] = GOLD_WARM + (255,)
+    pix[141, 237] = AMBER_FIRE + (255,)
+
+    # 5. Window light spill onto ground
+    for y in range(cab_y_base - 3, cab_y_base + 32):
+        for x in range(80, 160):
+            d = math.sqrt((x - 114)**2 + (y - 235)**2)
+            if d < 40 and y >= get_ground_y(x):
+                alpha = (40 - d) / 40.0 * 0.5
                 cr, cg, cb, _ = pix[x, y]
                 pix[x, y] = (int(cr + GOLD_WARM[0]*alpha), int(cg + GOLD_WARM[1]*alpha), int(cb + GOLD_WARM[2]*alpha), 255)
 
-    for y in range(226, 255):
-        for x in range(138, 155):
-            is_f = (x == 138 or x == 154 or y == 226)
-            pix[x, y] = (WOOD_LIGHT if is_f else WOOD_DARK) + (255,)
-    pix[141, 240] = GOLD_WARM + (255,)
-
-    for y in range(148, 195):
-        pix[102, y] = STONE_RIM + (255,)
-    pix[100, 155] = STONE_RIM + (255,); pix[104, 155] = STONE_RIM + (255,)
-    pix[99, 165] = STONE_RIM + (255,); pix[105, 165] = STONE_RIM + (255,)
-    for r in [8, 16, 24]:
-        for ang in range(-60, 61, 15):
+    # 6. Antenna Mast & Radio Waves (104.5 MHz)
+    ant_x, ant_y_top, ant_y_bottom = 100, 138, 195
+    for y in range(ant_y_top, ant_y_bottom):
+        pix[ant_x, y] = STONE_RIM + (255,)
+    for y_bar in [148, 162]:
+        for dx in range(-3, 4):
+            pix[ant_x + dx, y_bar] = STONE_RIM + (255,)
+    pix[ant_x, ant_y_top] = CYAN_SOFT + (255,)
+    for r in [9, 18, 27]:
+        for ang in range(-65, 66, 12):
             rad = math.radians(ang - 90)
-            wx = int(102 + math.cos(rad) * r)
-            wy = int(148 + math.sin(rad) * r)
+            wx = int(ant_x + math.cos(rad) * r)
+            wy = int(ant_y_top + math.sin(rad) * r)
             if 0 <= wx < W and 0 <= wy < H:
-                pix[wx, wy] = CYAN_GLOW + (180,)
+                pix[wx, wy] = CYAN_GLOW + (190,)
 
-    for (wx, wy) in [(166, 256), (184, 256)]:
-        for dy in range(-4, 5):
-            for dx in range(-4, 5):
-                if 9 <= dx*dx + dy*dy <= 16:
-                    pix[wx + dx, wy + dy] = STONE_RIM + (255,)
-    for i in range(18):
-        pix[166 + i, 250 - i//3] = AMBER_FIRE + (255,)
-    pix[166, 244] = STONE_RIM + (255,); pix[167, 244] = STONE_RIM + (255,)
-    pix[184, 246] = WOOD_DARK + (255,)
+    # -------------------------------------------------------------
+    # EXPEDITION BICYCLE (AUTHENTIC DETAILED PIXEL ART, NO TRAILER)
+    # -------------------------------------------------------------
+    bike_rw_cx, bike_rw_cy = 176, 246
+    bike_fw_cx, bike_fw_cy = 196, 246
+    
+    for cx, cy in [(bike_rw_cx, bike_rw_cy), (bike_fw_cx, bike_fw_cy)]:
+        for dy in range(-5, 6):
+            for dx in range(-5, 6):
+                d2 = dx*dx + dy*dy
+                if 16 <= d2 <= 25:
+                    pix[cx + dx, cy + dy] = (20, 25, 35, 255)
+                elif d2 <= 4:
+                    pix[cx + dx, cy + dy] = STONE_RIM + (255,)
+        for i in range(-4, 5):
+            pix[cx + i, cy] = STONE_LIGHT + (220,)
+            pix[cx, cy + i] = STONE_LIGHT + (220,)
 
-    for dy in range(-2, 3):
-        for dx in range(-5, 6):
-            if dx*dx + dy*dy*2 <= 25:
-                pix[65 + dx, 270 + dy] = STONE_DARK + (255,)
-    for fy in range(256, 270):
-        fw = max(1, int((270 - fy) * 0.45))
-        for fdx in range(-fw, fw + 1):
-            c = WHITE if fdx == 0 and fy > 264 else (GOLD_WARM if abs(fdx) <= 1 else AMBER_FIRE)
-            pix[65 + fdx, fy] = c + (255,)
-    random.seed(99)
-    for _ in range(14):
-        ex = 65 + random.randint(-12, 12)
-        ey = 255 - random.randint(2, 28)
-        pix[ex, ey] = (GOLD_WARM if random.random() > 0.5 else AMBER_FIRE) + (255,)
+    bb_x, bb_y = 184, 246
+    seat_x, seat_y = 181, 234
+    head_x, head_y = 193, 231
+    
+    for i in range(bb_x - bike_rw_cx + 1):
+        pix[bike_rw_cx + i, bike_rw_cy] = AMBER_FIRE + (255,)
+    for i in range(seat_x - bike_rw_cx + 1):
+        t = i / float(seat_x - bike_rw_cx)
+        pix[bike_rw_cx + i, int(bike_rw_cy * (1-t) + seat_y * t)] = AMBER_FIRE + (255,)
+    for i in range(bb_y - seat_y + 1):
+        t = i / float(bb_y - seat_y)
+        pix[int(bb_x * (1-t) + seat_x * t), bb_y - i] = AMBER_FIRE + (255,)
+    for i in range(head_x - bb_x + 1):
+        t = i / float(head_x - bb_x)
+        pix[bb_x + i, int(bb_y * (1-t) + head_y * t)] = AMBER_FIRE + (255,)
+    for i in range(head_x - seat_x + 1):
+        t = i / float(head_x - seat_x)
+        pix[seat_x + i, int(seat_y * (1-t) + head_y * t)] = AMBER_FIRE + (255,)
+    for i in range(bike_fw_cx - head_x + 1):
+        t = i / float(bike_fw_cx - head_x)
+        pix[head_x + i, int(head_y * (1-t) + bike_fw_cy * t)] = AMBER_FIRE + (255,)
+
+    pix[seat_x - 2, seat_y - 2] = (45, 18, 5, 255)
+    pix[seat_x - 1, seat_y - 2] = (45, 18, 5, 255)
+    pix[seat_x, seat_y - 2] = WOOD_DARK + (255,)
+    pix[seat_x + 1, seat_y - 2] = WOOD_DARK + (255,)
+    pix[seat_x, seat_y - 1] = STONE_RIM + (255,)
+
+    pix[head_x, head_y - 2] = STONE_RIM + (255,)
+    pix[head_x - 1, head_y - 3] = STONE_LIGHT + (255,)
+    pix[head_x, head_y - 3] = STONE_LIGHT + (255,)
+    pix[head_x + 1, head_y - 3] = STONE_LIGHT + (255,)
+    pix[head_x + 2, head_y - 1] = GOLD_WARM + (255,)
+    
+    for py in range(235, 244):
+        for px in range(171, 178):
+            pix[px, py] = (WOOD_DARK if px == 171 or py == 243 else WOOD_MID) + (255,)
+    pix[174, 238] = GOLD_WARM + (255,)
+
+    # -------------------------------------------------------------
+    # REAL ORGANIC CAMPFIRE (FOGATA CON PIEDRAS, LEÑOS Y LLAMA VIVA)
+    # -------------------------------------------------------------
+    fire_cx = 58
+    fire_ground_y = get_ground_y(fire_cx)
+    
+    for y in range(fire_ground_y - 15, fire_ground_y + 25):
+        for x in range(fire_cx - 35, fire_cx + 35):
+            d = math.sqrt((x - fire_cx)**2 + (y - (fire_ground_y - 4))**2)
+            if d < 32 and y >= get_ground_y(x) and 0 <= x < W and 0 <= y < H:
+                alpha = (32 - d) / 32.0 * 0.55
+                cr, cg, cb, _ = pix[x, y]
+                pix[x, y] = (int(cr + AMBER_FIRE[0]*alpha), int(cg + AMBER_FIRE[1]*alpha), int(cb + AMBER_FIRE[2]*alpha), 255)
+
+    stone_offsets = [(-9, 0), (-7, 2), (-4, 3), (0, 4), (4, 3), (7, 2), (9, 0), (-6, -1), (6, -1)]
+    for sox, soy in stone_offsets:
+        sx = fire_cx + sox
+        sy = fire_ground_y + soy
+        for ddy in range(-1, 2):
+            for ddx in range(-1, 2):
+                if 0 <= sx+ddx < W and 0 <= sy+ddy < H:
+                    pix[sx+ddx, sy+ddy] = STONE_MID + (255,)
+        pix[sx, sy] = STONE_RIM + (255,)
+
+    for i in range(-5, 6):
+        pix[fire_cx + i, fire_ground_y + 1 - abs(i)//3] = (45, 18, 5, 255)
+        pix[fire_cx + i, fire_ground_y + 2] = RED_RUST + (255,)
+    for i in range(-4, 5):
+        pix[fire_cx + i, fire_ground_y - i//2] = WOOD_DARK + (255,)
+    for i in range(-4, 5):
+        pix[fire_cx + i, fire_ground_y + i//2] = (45, 18, 5, 255)
+
+    flame_rows_outer = [
+        (-1, 0, 0), (-1, 1, 0), (-2, 1, 0), (-2, 2, -1), (-3, 2, -1),
+        (-3, 3, 0), (-4, 3, 1), (-4, 4, 0), (-5, 4, -1), (-5, 5, 0),
+        (-6, 5, 0), (-6, 6, 0), (-5, 5, 0), (-4, 4, 0), (-3, 3, 0)
+    ]
+    for idx, (x_min, x_max, shift) in enumerate(flame_rows_outer):
+        fy = fire_ground_y - 1 - (len(flame_rows_outer) - 1 - idx)
+        for fx in range(fire_cx + x_min + shift, fire_cx + x_max + shift + 1):
+            if 0 <= fx < W and 0 <= fy < H:
+                pix[fx, fy] = (220, 38, 38, 255)
+
+    flame_rows_mid = [
+        (0, 0, 0), (-1, 1, -1), (-2, 1, 0), (-2, 2, 0), (-3, 2, 0),
+        (-3, 3, 0), (-4, 3, 0), (-4, 4, 0), (-4, 3, 0), (-3, 3, 0), (-2, 2, 0)
+    ]
+    for idx, (x_min, x_max, shift) in enumerate(flame_rows_mid):
+        fy = fire_ground_y - 1 - (len(flame_rows_mid) - 1 - idx)
+        for fx in range(fire_cx + x_min + shift, fire_cx + x_max + shift + 1):
+            if 0 <= fx < W and 0 <= fy < H:
+                pix[fx, fy] = AMBER_FIRE + (255,)
+
+    flame_rows_core = [
+        (0, 0, 0), (-1, 0, 0), (-1, 1, 0), (-2, 1, 0), (-2, 1, 0), (-1, 1, 0), (-1, 0, 0)
+    ]
+    for idx, (x_min, x_max, shift) in enumerate(flame_rows_core):
+        fy = fire_ground_y - 1 - (len(flame_rows_core) - 1 - idx)
+        for fx in range(fire_cx + x_min + shift, fire_cx + x_max + shift + 1):
+            if 0 <= fx < W and 0 <= fy < H:
+                c = WHITE if (fy >= fire_ground_y - 4 and abs(fx - fire_cx) <= 1) else GOLD_SUN
+                pix[fx, fy] = c + (255,)
+
+    random.seed(77)
+    for _ in range(16):
+        ex = fire_cx + random.randint(-8, 6) + int(math.sin(_ * 1.3) * 4)
+        ey = fire_ground_y - 16 - random.randint(2, 26)
+        col = GOLD_WARM if random.random() > 0.4 else AMBER_FIRE
+        if 0 <= ex < W and 0 <= ey < H:
+            pix[ex, ey] = col + (255,)
+
+    bench_x1, bench_x2 = 32, 44
+    bench_y = fire_ground_y + 2
+    for x in range(bench_x1, bench_x2 + 1):
+        pix[x, bench_y] = WOOD_LIGHT + (255,)
+        pix[x, bench_y + 1] = WOOD_DARK + (255,)
+    for bx in [bench_x1 + 1, bench_x2 - 1]:
+        pix[bx, bench_y + 2] = (45, 18, 5, 255)
+        pix[bx, bench_y + 3] = (45, 18, 5, 255)
 
     draw_uprota_header(img, title_y=28)
     return img
+
 
 # =============================================================
 # OPCIÓN 2: LA MESA DEL NÁUFRAGO (Bodegón de Disciplina & Hábitos)

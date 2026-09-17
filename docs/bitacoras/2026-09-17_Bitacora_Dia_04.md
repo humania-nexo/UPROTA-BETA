@@ -590,6 +590,28 @@
 - **Llamado al Director:**
   - Pongo sobre la mesa las 5 obras completas a disposición de **Anigami Agadni** para su veredicto y selección de la portada definitiva de UPROTA.
 
+### 📍 [ENTRADA 30 - REFINAMIENTO DE PORTADA OFICIAL: REFUGIO EN MADERA, BICICLETA Y FOGATA ORGÁNICA (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Directrices de Anigami Agadni:**
+  - *«Me gusta la uno. Vamos a modificar esa: haz que las paredes sean de madera. No pongas remolque sino una bicicleta, y arregla un poco el fuego que hay encendido que parece un cono al revés.»*
+- **Ajustes Artísticos & Técnicos Ejecutados por Pix:**
+  1. 🪵 **Paredes de Madera Rústica:**
+     - Se sustituyó el patrón de bloque de piedra por tablones horizontales de madera maciza con texturas de veta orgánica (`#2d1205`, `#451a03`, `#78350f`, `#b45309`).
+     - Postes verticales de refuerzo en las esquinas y alero con sombra proyectada bajo el tejado de tejas de cedro.
+  2. 🚲 **Bicicleta de Expedición (Sin Remolque):**
+     - Se eliminó el carrito de remolque.
+     - Se forjó una bicicleta de aventura en pixel art descansando contra el lateral del refugio: cuadro de geometría diamante en ocre/acero (`#f59e0b` / `#ea580c`), ruedas con llantas de caucho y radios centrados, sillín de cuero oscuro, manillar con vástago, foco delantero con reflejo ámbar y alforja de viaje en el portaequipajes trasero.
+  3. 🔥 **Fogata Orgánica & Anillo de Piedras:**
+     - Se rediseñó totalmente la fogata eliminando la forma de embudo/cono invertido.
+     - Base con anillo de piedras de río y leños cruzados sobre brasas incandescentes (`#991b1b`).
+     - Lenguas de llama viva con degradado orgánico de calor: núcleo blanco-marfil (`#ffffff` / `#fef08a`), cuerpo amarillo-ámbar (`#f59e0b` / `#fbbf24`), puntas danzantes en rojo fuego (`#dc2626`) y chispas/ascuas flotantes ascendiendo al cielo nocturno.
+     - Iluminación radial suave y cálida proyectada sobre el suelo y el banco de madera rústico junto a la fogata.
+- **Archivos Actualizados:**
+  - `assets/sprites/portadas/portada_uprota_opcion_1_refugio_noche.png` (240×360 px nativo).
+  - `assets/sprites/previews/preview_portada_uprota_opcion_1_refugio_noche_4x.png` (960×1440 px 4x).
+  - Copias sincronizadas en `sapiensiaclan/assets/covers/`.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
 
