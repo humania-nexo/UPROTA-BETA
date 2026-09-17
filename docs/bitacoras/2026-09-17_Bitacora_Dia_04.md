@@ -1,4 +1,4 @@
-﻿# UPROTA - Bitácora Diaria de Desarrollo
+# UPROTA - Bitácora Diaria de Desarrollo
 ### Jornada 04: 17 de Septiembre de 2026
 **Estudio Indie:** SAPIENSIA Clan (*Sapiens + IA*)  
 **Estado General:** Creación, desarrollo y despliegue del portal institucional de **SAPIENSIA Clan** (`https://humania-nexo.github.io/sapiensiaclan/`), integración del catálogo editorial para validación en Google Play Libros, Manifiesto del Salmón, canal de mecenazgo por Binance Pay, sustitución de emojis por Pixel Art de Pix, integración de epígrafes filosóficos de Silas y motor de audio procedural a 0 KB de Hertz.
@@ -150,6 +150,24 @@
      - Cambios commiteados y pusheados en `sapiensiaclan` (commit `dda98b8`).
 - **Estado Actual:** El portal se encuentra enriquecido con la voz narrativa de Silas, la acústica táctil de Hertz y los sprites de Pix. Quedamos a la espera del visto bueno del Director para la viñeta del Salmón de Pix y las recomendaciones de difusión de Éter.
 
----
+### 📍 [ENTRADA 08 - ENTREGA DE ARTE: ILUSTRACIÓN "EL SALTO DEL SALMÓN (CONTRA LA CORRIENTE)" (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Descripción de la Obra:**
+  - Siguiendo la autorización del Director Anigami (*«dale a ver qué tal»*), he forjado y renderizado la ilustración maestra panorámica en Pixel Art (240×135 px): **«El Salto del Salmón (Contra la Corriente)»**.
+  - **Composición y Narrativa Visual:**
+    1. 🐟 **El Salmón de Oro & Ámbar:** El pez arquea su lomo en pleno vuelo aerodinámico ascendente, saltando de derecha a izquierda hacia la cima. Sus escamas brillan con degradado de *Hue Shifting* (Ámbar Sapiensia `#f59e0b`, Oro brillante `#fbbf24`, Vientre nacarado `#fef08a` y Sombra caoba `#78350f`). Su ojo destella con un punto blanco de determinación indomable.
+    2. 🌊 **La Cascada y los Rápidos Tormentosos:** Cortina vertical de agua profunda (`#082f49`), oleaje turquesa (`#0284c7`) y crestas de espuma blanca pura (`#ffffff`) que rompen contra las rocas del cañón.
+    3. 💧 **Gotas y Estela de Agua:** Ráfaga parabólica de micro-gotas suspendidas en el aire que acompañan el aleteo potente de la cola.
+    4. 🌄 **Rayo de Luz Ámbar:** Haces diagonales de luz dorada que bajan desde la cumbre izquierda, guiando el salto del náufrago hacia la meta.
+    5. 🖼️ **Marco Biselado Ornamental:** Borde sutil de latón ámbar y esquinas reforzadas con acento dorado para integrarse orgánicamente al *Dark Glassmorphism* de la web.
+- **Entregables Generados & Desplegados en Producción:**
+  - 📁 Master Aseprite multicapa: `assets/sprites/ilustraciones/ilustracion_salto_salmon.aseprite`
+  - 🖼️ Ilustración PNG optimizada: `assets/sprites/ilustraciones/ilustracion_salto_salmon.png`
+  - 🔍 Preview en Alta Resolución 4x (960×540 px): `assets/sprites/previews/preview_salto_salmon_4x.png`
+  - 🌐 **Integración Directa en la Web:** Archivos copiados a `sapiensiaclan/assets/art/`, integrados en la cabecera de la sección *El Manifiesto del Salmón* (`index.html` + `css/style.css`), y desplegados en vivo en GitHub Pages (commit `461d4e2`).
+- **Resultado:** La sección del Manifiesto ahora cuenta con un imponente ancla visual artesanal que eleva la emoción y la belleza del portal.
 
-*(Espacio abierto para las intervenciones de Pix, Silas, Hertz y Éter)*
+---
+*(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
