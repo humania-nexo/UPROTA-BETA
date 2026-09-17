@@ -481,6 +481,38 @@
     - Vistas previas 4x en `UPROTA/assets/sprites/previews/`.
     - Despliegue en `sapiensiaclan/assets/clan/avatar_[nombre]_anim.gif` y `avatar_[nombre]_44x44.gif`.
 
+### 📍 [ENTRADA 26 - ARQUITECTURA MODULAR & DESPLIEGUE DE AVATARES ANIMADOS (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Refactorización a Arquitectura 100% Modular & Comentada (Sapiensia Clan):**
+  - Atendiendo a la instrucción del Director Anigami Agadni (*«que el código de la página de Sapiensia sea enteramente modular en sus archivos de estilo y funciones, y todo el código esté comentado»*):
+    1. 🎨 **Modularización Completa de CSS (`sapiensiaclan/css/`):**
+       - `variables.css`: Design tokens, paletas ámbar/cian/índigo, tipografías y radios.
+       - `base.css`: Reseteo universal, body, glassmorphism base y utilidades de renderizado pixel art.
+       - `aurora_particles.css`: Malla ambiental GPU y canvas de stardust interactivo.
+       - `navbar_hero.css`: Barra superior glass, botón de audio y sección hero.
+       - `manifiesto.css`: Banner del salmón, tarjetas de filosofía y fórmulas éticas.
+       - `clan.css`: Cuadrícula de miembros, avatares animados, insignias y red de colaboradores.
+       - `catalogo_obras.css`: Tarjetas de obras, portadas flotantes, chips y botones.
+       - `transmedia_donaciones.css`: Nodos de conexión transmedia y pasarela Binance Pay.
+       - `footer.css`: Tarjeta de contacto directo y pie de página editorial.
+       - `style.css`: Orquestador maestro con `@import` estructurado y comentado.
+    2. ⚡ **Modularización Completa de JavaScript (`sapiensiaclan/js/`):**
+       - `stardust.js`: Motor de partículas a 60 FPS con física de atracción/repulsión al cursor.
+       - `interactive_ui.js`: Spotlight reactivo con cursor tracking, 3D Tilt cinemático y botón de copiado de Binance ID con feedback visual y sonoro.
+       - `audio_ui.js`: Motor de síntesis procedural Web Audio API a 0 KB (diseño de Hertz).
+       - `main.js`: Orquestador de ciclo de vida del DOM e integración de eventos.
+       - *100% del código en CSS y JS exhaustivamente comentado en español para total facilidad de mantenimiento.*
+    3. 📜 **Actualización Narrativa (Claudia):**
+       - Se amplió la descripción de Claudia en el portal y en UPROTA para reflejar explícitamente su apoyo literario en *Los Textos del Poeta*, *VELA* y en las obras que se encuentran actualmente en producción.
+- **Despliegue de Avatares Animados de Pix en Ambos Proyectos:**
+  - 🌐 **Sapiensia Clan:** Activados los avatares GIF animados de Anigami, Nexo, Pix, Silas, Hertz, Éter y Lumen.
+  - 🎮 **UPROTA (PWA):**
+    - Actualizado el modal de Centro de Ayuda (`js/modulos/modal_centro_ayuda.js`) con los avatares animados de los 7 miembros y el nodo de Claudia en forja.
+    - Elevado el Service Worker a `uprota-cache-v3.9` precacheando todos los GIFs animados (`avatar_*_anim.gif`).
+- **Estado Actual:** Ambos repositorios sincronizados y desplegados en vivo en GitHub Pages.
+
 ---
-*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
+*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
+
 

@@ -669,7 +669,7 @@ export class ModalCentroAyuda {
           <div style="display: flex; flex-direction: column; gap: 8px;">
             <!-- DIRECTOR -->
             <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--oro-torta-dim, #78350f); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_anigami_44x44.png" alt="Anigami Agadni" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 2px solid var(--oro-torta); border-radius: var(--radius-sm);" title="El Hombre de Vitruvio (Pixel Art)">
+              <img src="assets/sprites/avatars/avatar_anigami_anim.gif" alt="Anigami Agadni" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 2px solid var(--oro-torta); border-radius: var(--radius-sm);" title="El Hombre de Vitruvio (Pixel Art Animado)">
               <div>
                 <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin: 0;">Anigami Agadni</h4>
                 <div style="font-size: 0.72rem; color: #fff; font-weight: 600;">Director & Diseñador Principal</div>
@@ -679,7 +679,7 @@ export class ModalCentroAyuda {
 
             <!-- NEXO -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_nexo_44x44.png" alt="Nexo" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
+              <img src="assets/sprites/avatars/avatar_nexo_anim.gif" alt="Nexo" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Nexo</h4>
                 <div style="font-size: 0.72rem; color: #38bdf8; font-weight: 600;">Ingeniero de Software Principal & Mano Derecha (IA)</div>
@@ -689,7 +689,7 @@ export class ModalCentroAyuda {
 
             <!-- PIX -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_pix_44x44.png" alt="Pix" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
+              <img src="assets/sprites/avatars/avatar_pix_anim.gif" alt="Pix" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Pix</h4>
                 <div style="font-size: 0.72rem; color: #f472b6; font-weight: 600;">Artista Visual Pixel Art (IA)</div>
@@ -699,7 +699,7 @@ export class ModalCentroAyuda {
 
             <!-- SILAS -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_silas_44x44.png" alt="Silas" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
+              <img src="assets/sprites/avatars/avatar_silas_anim.gif" alt="Silas" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Silas</h4>
                 <div style="font-size: 0.72rem; color: #fbbf24; font-weight: 600;">Arquitecto Narrativo / El Cronista del Yermo (IA)</div>
@@ -709,7 +709,7 @@ export class ModalCentroAyuda {
 
             <!-- HERTZ -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_hertz_44x44.png" alt="Hertz" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
+              <img src="assets/sprites/avatars/avatar_hertz_anim.gif" alt="Hertz" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Hertz</h4>
                 <div style="font-size: 0.72rem; color: #a78bfa; font-weight: 600;">Diseñador de Sonido & Músico Chiptune (IA)</div>
@@ -719,11 +719,39 @@ export class ModalCentroAyuda {
 
             <!-- ÉTER -->
             <div class="card-yermo" style="padding: 10px; background: #141312; border: 1px solid var(--border-subtle); display: flex; gap: 12px; align-items: center;">
-              <img src="assets/sprites/avatars/avatar_eter_44x44.png" alt="Éter" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid #4ef2d2; border-radius: var(--radius-sm);" title="Éter (Heraldo del Yermo & Enlace Transmedia)">
+              <img src="assets/sprites/avatars/avatar_eter_anim.gif" alt="Éter" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid #4ef2d2; border-radius: var(--radius-sm);" title="Éter (Heraldo del Yermo & Enlace Transmedia)">
               <div>
                 <h4 style="color: var(--text-primary); font-size: 0.9rem; margin: 0;">Éter</h4>
                 <div style="font-size: 0.72rem; color: #4ef2d2; font-weight: 600;">Estratega de Difusión & Enlace Transmedia (IA)</div>
                 <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 2px;">Voz de la frecuencia exterior, kits de prensa, difusión 'Build in Public' y expansión de Universo Proiectio.</div>
+              </div>
+            </div>
+
+            <!-- RED DE COLABORACIÓN EXTERNA -->
+            <div style="margin-top: 10px; padding-top: 10px; border-top: 1px dashed rgba(245, 158, 11, 0.25);">
+              <div style="font-size: 0.76rem; color: var(--oro-torta-glow); font-weight: 700; letter-spacing: 0.08em; margin-bottom: 8px;">✨ RED DE COAUTORÍA & CONSULTORÍA EXTERNA</div>
+              
+              <!-- CLAUDIA -->
+              <div class="card-yermo" style="padding: 8px 10px; background: #121318; border: 1px solid rgba(99, 102, 241, 0.3); display: flex; gap: 12px; align-items: center; margin-bottom: 6px;">
+                <div style="width: 44px; height: 44px; background: #000; border: 1px dashed rgba(99, 102, 241, 0.5); border-radius: var(--radius-sm); display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.9rem;">
+                  <span>✨</span>
+                  <span style="font-size: 0.45rem; color: #e0e7ff; font-weight: 700;">EN FORJA</span>
+                </div>
+                <div>
+                  <h4 style="color: #e0e7ff; font-size: 0.88rem; margin: 0;">Claudia</h4>
+                  <div style="font-size: 0.7rem; color: #a5b4fc; font-weight: 600;">Consultoría Técnica, Investigación & Apoyo Literario (IA)</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">Coautoría en <em>Los Textos del Poeta</em>, <em>VELA</em> y obras en producción.</div>
+                </div>
+              </div>
+
+              <!-- LUMEN -->
+              <div class="card-yermo" style="padding: 8px 10px; background: #121816; border: 1px solid rgba(20, 184, 166, 0.3); display: flex; gap: 12px; align-items: center;">
+                <img src="assets/sprites/avatars/avatar_lumen_anim.gif" alt="Lumen" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid rgba(20, 184, 166, 0.5); border-radius: var(--radius-sm);">
+                <div>
+                  <h4 style="color: #ccfbf1; font-size: 0.88rem; margin: 0;">Lumen</h4>
+                  <div style="font-size: 0.7rem; color: #5eead4; font-weight: 600;">Consultoría Técnica, Investigación & Apoyo Gráfico (IA)</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">Investigación técnica, exploración visual y síntesis conceptual.</div>
+                </div>
               </div>
             </div>
           </div>
