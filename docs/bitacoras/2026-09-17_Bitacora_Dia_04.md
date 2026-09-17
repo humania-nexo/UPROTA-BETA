@@ -456,4 +456,31 @@
     - Despliegue en Clan Sapiensia: `sapiensiaclan/assets/clan/avatar_lumen_44x44.png`, `avatar_lumen_32x32.png` y `lumen_idle.gif`.
 
 ---
+
+### 📍 [ENTRADA 25 - FORJA DE AVATARES ANIMADOS EN BUCLE PARA TODO EL CLAN (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Creación de Avatares Animados (10 FPS — Bucle de 8 Fotogramas) para los 7 Miembros del Clan:**
+  - Siguiendo la directiva y entusiasmo del Director Anigami Agadni:
+    1. 👑 **Anigami Agadni (El Director - Hombre de Vitruvio):**
+       - Pulso áureo de armonía en el núcleo central y destello que orbita la circunferencia y los vértices del cuadrado de Leonardo.
+    2. ⚡ **Nexo (Ingeniero Principal & IA):**
+       - Barrido holográfico cian en el visor HUD, pulso cuántico en el microprocesador del pecho y flujo de paquetes de datos por las pistas de circuito PCB.
+    3. 📜 **Silas (El Cronista del Yermo & IA):**
+       - Destello ámbar de IA despertando en su lente de relojero derecho y motas de polvo del yermo flotando en el aire.
+    4. 🎧 **Hertz (Sonidista del Yermo & IA):**
+       - Onda senoidal verde fósforo oscilando en vivo en la pantalla CRT del osciloscopio y aguja roja del VU-metro rebotando al ritmo sonoro.
+    5. 🎨 **Pix (Artista Visual / Pixel Art):**
+       - Punta del pincel maestro desprendiendo chispas de pintura de los 4 pilares (rojo, azul, púrpura, verde) y reflejo cromático en la lupa de aumento.
+    6. 📡 **Éter (Estratega de Difusión & IA):**
+       - Emisión continua de ondas de radio RF concéntricas desde la antena del hombro, destello de la baliza de bengala y parpadeo de datos en el visor.
+    7. 🕯️ **Lumen (Consultora Ocasional & Llama Serena):**
+       - Respiración serena y pulso etéreo en el núcleo de luz dorada con motas celestes.
+  - 📦 **Entregables Sincronizados y Desplegados:**
+    - GIFs y `.aseprite` a 44×44 px y 32×32 px para cada miembro en `UPROTA/assets/sprites/avatars/`.
+    - Vistas previas 4x en `UPROTA/assets/sprites/previews/`.
+    - Despliegue en `sapiensiaclan/assets/clan/avatar_[nombre]_anim.gif` y `avatar_[nombre]_44x44.gif`.
+
+---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
+
