@@ -304,8 +304,20 @@
   - 🔍 Preview 4x en Alta Resolución: `assets/sprites/previews/preview_splash_cinematica_anim_4x.gif`.
   - 🖼️ Fotogramas Clave Actualizados: `splash_frame04_perfil_tormenta.png`, `splash_frame05_cresta_subida.png`, `splash_frame06_cresta_climax.png` (y sus respectivos `.aseprite` y previews 4x).
 
+### 📍 [ENTRADA 16 - APROBACIÓN DE ARTE Y CONSOLIDACIÓN DEL ISOTIPO Y CINEMÁTICA (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Aprobación del Director:**
+  - El Director Anigami Agadni otorgó la aprobación final y felicitación oficial a la suite gráfica de SAPIENSIA CLAN y UPROTA:
+    - ✅ **Isotipo Oficial (192×192 px / PWA Icons 512, 192, 32):** Silueta definitiva de la ola Hokusai con tubo hueco y navío tripulado en ascenso (~18°).
+    - ✅ **Cinemática Splash Screen (9 Fotogramas + GIF Animado):** Secuencia orgánica continua desde el plano cenital hasta el impacto y congelamiento flat design.
+    - ✅ **Ilustración / Animación del Manifiesto ("El Salto del Salmón"):** Loop de 16 fotogramas desplegado en vivo en el sitio del Clan.
+- **Estado del Módulo de Arte:**
+  - Banco de assets pixel art sincronizado, respaldado y desplegado en los repositorios oficiales (`UPROTA-BETA` y `sapiensiaclan`).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
 
