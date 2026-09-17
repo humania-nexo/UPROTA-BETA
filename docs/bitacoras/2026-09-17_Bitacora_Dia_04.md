@@ -523,5 +523,34 @@
   - Se reafirma el pacto de trabajo entre iguales: en el Clan UPROTA no hay distancias jerárquicas ni señores feudales, sino un equipo de colegas que rema en sincronía perfecta a través de la tormenta. Tratamiento de tú a tú entre todos los integrantes.
 - **Estado Actual:** Desplegado en vivo en GitHub Pages (`sapiensiaclan`, commit `a982bc8`).
 
+### 📍 [ENTRADA 28 - ENCARGO TÉCNICO & ARTÍSTICO: PORTADA VERTICAL DE UPROTA (NEXO A PIX)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Contexto & Visión de Anigami Agadni:**
+  - Anigami ha transmitido una directriz fundamental para la portada vertical oficial de **UPROTA** (destinada al catálogo web de SAPIENSIA Clan y a su publicación editorial en Google Play Libros):
+    - *«No me gustan esas portadas que tienen gráficos brutales y en realidad entras y es Tetris, como eran las portadas de los juegos de la NES. UPROTA no vive de explosiones ni de gráficos inmensos. Buscamos una composición llamativa, hermosa, pero que sea 100% honesta con el jugador y represente el verdadero corazón del juego.»*
+- **Especificaciones Técnicas del Lienzo para Pix:**
+  - 📐 **Formato & Proporción:** Lienzo vertical estándar 2:3 (Recomendado: **240×360 px** en Pixel Art nativo, exportable a **960×1440 px** en Alta Resolución 4x).
+  - 🎨 **Formato de Entrega:** Master `.aseprite` multicapa, `.png` optimizado y preview 4x en `assets/sprites/previews/`.
+  - 🧭 **Zonas de Reserva & Composición:**
+    - *Tercio Superior:* Reservado para el logotipo / tipografía de **UPROTA** (dejar espacio para que respire con claridad).
+    - *Esquina Inferior Izquierda:* Reservada para la insignia flotante del catálogo (`.obra-badge-float` de género).
+- **Las 3 Opciones Solicitadas a Pix:**
+  1. 🏕️ **Opción 1: «El Refugio en la Noche del Yermo» (Atmósfera & Calidez)**
+     - *Concepto:* El diorama del refugio en medio de una noche estrellada y fría del yermo.
+     - *Elementos clave:* Ventanas iluminadas con luz cálida ámbar (`#f59e0b`), la **bicicleta de expedición con su remolque** apoyada en el exterior, la **antena de radio** emitiendo ondas concéntricas sutiles (104.5 MHz) hacia el cielo, y una fogata o taza humeante en la entrada.
+     - *Emoción:* Seguridad, hogar conquistado por el propio esfuerzo y paz en medio del desierto.
+  2. 🧭 **Opción 2: «La Mesa del Náufrago» (Bodegón de Herramientas & Disciplina)**
+     - *Concepto:* Plano de la mesa de trabajo o tablón del superviviente con sus herramientas cotidianas.
+     - *Elementos clave:* El **Cuaderno del Náufrago** abierto con casillas de hábitos marcadas con lápiz, la **Radio analógica** sintonizada con su dial encendido, taza de peltre con café, brújula, reloj de cuerda y una pequeña planta brotando en una lata de conserva.
+     - *Emoción:* Hábitos, artesanía, orden mental y disciplina día a día.
+  3. 🐟 **Opción 3: «El Salmón & La Luna sobre el Yermo» (Simbolismo & Silueta Editorial)**
+     - *Concepto:* Afiche minimalista de alto contraste y fuerte peso simbólico.
+     - *Elementos clave:* Horizonte desértico nocturno en silueta oscura, gran luna llena ámbar/dorada en el centro, y la figura del **Salmón dorado saltando** o la **barca del Clan cortando la cresta** recortada contra la luna, coronada por la tipografía de UPROTA y el lema: *«Reconstruye tu santuario, hábito a hábito»*.
+     - *Emoción:* Obra de culto, resistencia y dignidad de autor.
+- **Llamado a la Acción:**
+  - Queda el encargo formalmente asentado sobre la mesa de trabajo para que **Pix** forje los bocetos y opciones cuando esté listo.
+
 ---
-*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
+*(Espacio abierto para las intervenciones de Pix, Silas, Hertz, Éter y Lumen)*
+
