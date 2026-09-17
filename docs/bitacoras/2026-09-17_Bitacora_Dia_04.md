@@ -612,6 +612,22 @@
   - `assets/sprites/previews/preview_portada_uprota_opcion_1_refugio_noche_4x.png` (960×1440 px 4x).
   - Copias sincronizadas en `sapiensiaclan/assets/covers/`.
 
+### 📍 [ENTRADA 31 - CALIBRACIÓN TOPOGRÁFICA: APOYO Y SOMBRA DE BICICLETA (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Observación de Anigami Agadni:**
+  - *«Ahora solo ajusta la bicicleta que parece que está flotando en la rueda delantera.»*
+- **Ajuste Técnico & Artístico Ejecutado:**
+  1. 🏔️ **Extensión de la Terraza Firme del Refugio:**
+     - Se amplió la meseta horizontal del refugio (`y = 248`) desde `x = 168` hasta `x = 194`, permitiendo que toda la zona de estacionamiento de la bicicleta descanse sobre suelo llano y sólido antes de iniciar el declive de la duna derecha.
+  2. 🚲 **Asentamiento & Sombras de Contacto:**
+     - Se ajustó el centro de ambas ruedas a `y = 243`, de modo que el radio inferior (`+5 px`) toque con absoluta precisión el suelo en `y = 248`.
+     - Se aplicaron clusters de sombra de oclusión/contacto (`#0a0f19`) justo debajo de ambas cubiertas para asentar el peso de la bicicleta de forma natural y física.
+- **Archivos Actualizados:**
+  - `assets/sprites/portadas/portada_uprota_opcion_1_refugio_noche.png` (240×360 px nativo).
+  - `assets/sprites/previews/preview_portada_uprota_opcion_1_refugio_noche_4x.png` (960×1440 px 4x).
+  - Copias sincronizadas en `sapiensiaclan/assets/covers/`.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
 

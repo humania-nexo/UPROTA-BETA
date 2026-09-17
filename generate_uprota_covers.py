@@ -141,16 +141,16 @@ def make_option_1():
                 c = (16, 24, 42) if d < 6 else (9, 14, 26)
                 pix[x, y] = c + (255,)
 
-    # Foreground terrain & dunes
+    # Ground terrace curve: Flat campsite plateau from x=82 to x=194
     def get_ground_y(x):
-        if 88 <= x <= 168:
+        if 82 <= x <= 194:
             return 248
-        elif x < 88:
-            t = (88 - x) / 88.0
+        elif x < 82:
+            t = (82 - x) / 82.0
             return int(248 + math.sin(t * 2.5) * 14 + t * 6)
         else:
-            t = (x - 168) / 72.0
-            return int(248 + math.sin(t * 2.8) * 16 - t * 4)
+            t = (x - 194) / 46.0
+            return int(248 + math.sin(t * 2.6) * 16 - t * 3)
 
     for y in range(215, H):
         for x in range(W):
@@ -262,11 +262,18 @@ def make_option_1():
                 pix[wx, wy] = CYAN_GLOW + (190,)
 
     # -------------------------------------------------------------
-    # EXPEDITION BICYCLE (AUTHENTIC DETAILED PIXEL ART, NO TRAILER)
+    # EXPEDITION BICYCLE (PERFECTLY GROUNDED & CONTACT SHADOWED)
     # -------------------------------------------------------------
-    bike_rw_cx, bike_rw_cy = 176, 246
-    bike_fw_cx, bike_fw_cy = 196, 246
+    bike_rw_cx = 173
+    bike_fw_cx = 191
+    bike_r = 5
+    bike_rw_cy = get_ground_y(bike_rw_cx) - bike_r
+    bike_fw_cy = get_ground_y(bike_fw_cx) - bike_r
     
+    for dx in range(-3, 4):
+        pix[bike_rw_cx + dx, 248] = (10, 15, 25, 255)
+        pix[bike_fw_cx + dx, 248] = (10, 15, 25, 255)
+
     for cx, cy in [(bike_rw_cx, bike_rw_cy), (bike_fw_cx, bike_fw_cy)]:
         for dy in range(-5, 6):
             for dx in range(-5, 6):
@@ -279,9 +286,9 @@ def make_option_1():
             pix[cx + i, cy] = STONE_LIGHT + (220,)
             pix[cx, cy + i] = STONE_LIGHT + (220,)
 
-    bb_x, bb_y = 184, 246
-    seat_x, seat_y = 181, 234
-    head_x, head_y = 193, 231
+    bb_x, bb_y = 180, 243
+    seat_x, seat_y = 177, 231
+    head_x, head_y = 188, 228
     
     for i in range(bb_x - bike_rw_cx + 1):
         pix[bike_rw_cx + i, bike_rw_cy] = AMBER_FIRE + (255,)
@@ -313,10 +320,11 @@ def make_option_1():
     pix[head_x + 1, head_y - 3] = STONE_LIGHT + (255,)
     pix[head_x + 2, head_y - 1] = GOLD_WARM + (255,)
     
-    for py in range(235, 244):
-        for px in range(171, 178):
-            pix[px, py] = (WOOD_DARK if px == 171 or py == 243 else WOOD_MID) + (255,)
-    pix[174, 238] = GOLD_WARM + (255,)
+    for py in range(232, 241):
+        for px in range(168, 175):
+            pix[px, py] = (WOOD_DARK if px == 168 or py == 240 else WOOD_MID) + (255,)
+    pix[171, 235] = GOLD_WARM + (255,)
+
 
     # -------------------------------------------------------------
     # REAL ORGANIC CAMPFIRE (FOGATA CON PIEDRAS, LEÑOS Y LLAMA VIVA)
