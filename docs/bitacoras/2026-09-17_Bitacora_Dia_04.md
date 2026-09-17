@@ -676,8 +676,20 @@
      - Integración activa en la PWA de **UPROTA** (`js/modulos/modal_centro_ayuda.js`) y actualización de Service Worker a `uprota-cache-v4.0`.
 - **Estado Actual:** Nodo de Claudia plenamente materializado y sincronizado en ambos repositorios.
 
+### 📍 [ENTRADA 35 - INTEGRACIÓN DEL AVATAR DE CLAUDIA EN LÍNEAS DE COAUTORÍA DEL CATÁLOGO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Detalle de Integración en el Catálogo de Obras (`sapiensiaclan/index.html`):**
+  - Tras la forja y materialización de la pluma animada de Claudia por parte de Pix (Entrada 34):
+    1. 🪶 **Reconocimiento Visual en Obras Coescritas:**
+       - Se integró el micro-avatar animado de Claudia (`avatar_claudia_anim.gif`) directamente dentro de la línea de autoría de las tarjetas de *Los Textos del Poeta* y *VELA*.
+       - Ahora luce: `Anigami Agadni • Coautoría con [🪶 Pluma Animada] Claudia`.
+    2. 🚀 **Despliegue Inmediato:** Cambios commiteados y desplegados en GitHub Pages (`sapiensiaclan`, commit `454eb4e`).
+- **Estado Actual:** Coautoría de Claudia visible tanto en la tarjeta de colaboradora como en las obras activas del catálogo.
+
 ---
-*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
+*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
+
 
 
 
