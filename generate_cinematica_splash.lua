@@ -1,5 +1,5 @@
 local logFile = io.open("c:/Users/Snow/.gemini/antigravity/scratch/UPROTA/cinematica_log.txt", "w")
-logFile:write("Perfecting Cinematic Sequence and compiling full GIF...\n")
+logFile:write("Enhancing White Foam Crest & Tip on Wave in Cinematic Frames...\n")
 
 local function hex2rgb(hex)
   hex = tostring(hex):gsub("#","")
@@ -183,7 +183,7 @@ do
 end
 
 ----------------------------------------------------------------------
--- FRAME 04: PERFIL TORMENTA (Barco en el Agua, Oleaje Dinámico)
+-- FRAME 04: PERFIL TORMENTA
 ----------------------------------------------------------------------
 do
   local spr, img = createFrame()
@@ -192,7 +192,6 @@ do
     setHex(img, rx, ry, RAIN_CYAN, 140)
   end
 
-  -- Dynamic swell
   for x = 0, 159 do
     local wy = math.floor(64 + math.sin(x * 0.04) * 8 - math.cos(x * 0.02) * 3)
     for y = wy, 89 do
@@ -202,7 +201,6 @@ do
     if x % 3 == 0 then setHex(img, x, wy, SEA_FOAM) end
   end
 
-  -- Boat properly seated in the water (Stern at 35, 62; Prow at 112, 50)
   local sternX = 35; local sternY = 62; local prowX = 112; local prowY = 50
   local bLen = prowX - sternX
   for x = sternX, prowX do
@@ -222,7 +220,6 @@ do
     for o = 0, 7 do setHex(img, cx - o, cy + math.floor(o * 0.8), OAR_GOLD) end
   end
 
-  -- Foam contact at waterline
   for fx = sternX - 2, prowX + 2 do
     if fx % 2 == 0 then
       local t = math.max(0, math.min(1, (fx - sternX) / bLen))
@@ -236,7 +233,7 @@ do
 end
 
 ----------------------------------------------------------------------
--- FRAME 05: CRESTA SUBIDA (Ola Gigante Creciendo & Barco Escalando la Pendiente)
+-- FRAME 05: CRESTA SUBIDA (Con Espuma Blanca en la Cresta)
 ----------------------------------------------------------------------
 do
   local spr, img = createFrame()
@@ -245,7 +242,6 @@ do
     setHex(img, rx, ry, RAIN_CYAN, 120)
   end
 
-  -- Massive breaker swell forming from left
   local wave05 = {
     {0, 89},
     {0, 78},
@@ -295,35 +291,34 @@ do
   }
   fillPolygon(img, waveInner05, SEA_MID)
 
-  -- Foam ridge along upper wave crest
-  local topRidge05 = {
-    {12, 74}, {26, 64}, {42, 50}, {58, 36}, {72, 28}, {84, 25}, {94, 28}, {98, 36}
+  -- Rich White Foam Cap on Crest & Hook
+  local foamCap05 = {
+    {62, 34}, {72, 28}, {84, 24}, {94, 26}, {98, 32}, {96, 38}, {90, 42},
+    {84, 38}, {76, 36}, {68, 42}
   }
-  for i = 1, #topRidge05 - 1 do
-    local p1 = topRidge05[i]
-    local p2 = topRidge05[i+1]
-    local steps = math.max(math.abs(p2[1]-p1[1]), math.abs(p2[2]-p1[2])) * 2
-    for s = 0, steps do
-      local t = s / steps
-      local x = math.floor(p1[1] + (p2[1] - p1[1]) * t)
-      local y = math.floor(p1[2] + (p2[2] - p1[2]) * t)
-      setHex(img, x, y, SEA_LIGHT)
-      if (x + y) % 2 == 0 then setHex(img, x, y - 1, SEA_FOAM) end
-      if x >= 65 and x % 3 == 0 then setHex(img, x, y - 2, WHITE) end
-    end
+  fillPolygon(img, foamCap05, SEA_FOAM)
+
+  -- Pure White outer fringe on the apex
+  for fx = 68, 98 do
+    local t = (fx - 68) / 30.0
+    local fy = math.floor(30 - math.sin(t * math.pi) * 6)
+    setHex(img, fx, fy, WHITE)
+    setHex(img, fx, fy - 1, WHITE)
+    if fx % 2 == 0 then setHex(img, fx, fy + 1, WHITE) end
   end
 
   -- Spray droplets
   local sprayPts = {
-    {96, 24}, {100, 23}, {104, 27}, {108, 32}, {104, 38},
-    {110, 26}, {114, 30}, {106, 44}, {98, 48}
+    {96, 22}, {100, 20}, {104, 24}, {108, 29}, {104, 35},
+    {110, 23}, {114, 27}, {106, 41}, {98, 45}, {102, 18}, {108, 19}
   }
   for _, pt in ipairs(sprayPts) do
-    setHex(img, pt[1], pt[2], SEA_FOAM)
+    setHex(img, pt[1], pt[2], WHITE)
     setHex(img, pt[1]+1, pt[2], WHITE)
+    setHex(img, pt[1], pt[2]+1, SEA_FOAM)
   end
 
-  -- Boat climbing up the wave slope (~24° ascent, Stern at 24, 60; Prow at 104, 24)
+  -- Boat
   local sternX = 24; local sternY = 60; local prowX = 104; local prowY = 24
   local bLen = prowX - sternX
   local hullThick = 5
@@ -337,7 +332,6 @@ do
     end
   end
 
-  -- Crew
   for i = 1, 6 do
     local cx = sternX + 8 + i * 10
     local t = (cx - sternX) / bLen
@@ -346,12 +340,11 @@ do
     for o = 0, 6 do setHex(img, cx - o, cy + math.floor(o * 0.9), OAR_GOLD) end
   end
 
-  -- Contact foam under boat hull
   for fx = 35, 95 do
     if fx % 2 == 0 then
       local t = (fx - sternX) / bLen
       local sy = math.floor(sternY - t * (sternY - prowY)) + hullThick
-      setHex(img, fx, sy + 1, SEA_FOAM)
+      setHex(img, fx, sy + 1, WHITE)
     end
   end
 
@@ -360,7 +353,7 @@ do
 end
 
 ----------------------------------------------------------------------
--- FRAME 06: CRESTA CLÍMAX (La Gran Ola Hokusai A Todo Color & Suspensión)
+-- FRAME 06: CRESTA CLÍMAX (Con Punta y Labio de la Ola Pintados de Blanco Puro)
 ----------------------------------------------------------------------
 do
   local spr, img = createFrame()
@@ -369,7 +362,7 @@ do
     setHex(img, rx, ry, RAIN_CYAN, 100)
   end
 
-  -- 1. Full-Color Hokusai Wave Contour (Base Navy Body)
+  -- 1. Base Navy Body
   local waveContour06 = {
     {12, 82},
     {18, 80},
@@ -440,38 +433,70 @@ do
   }
   fillPolygon(img, waveCyan06, SEA_MID)
 
-  -- 3. Crisp Foam Highlight along Top Ridge only
-  local topRidge06 = {
-    {18, 80}, {26, 75}, {36, 67}, {46, 57}, {56, 47}, {65, 38}, {74, 30},
-    {82, 25}, {90, 24}, {98, 26}, {106, 31}, {112, 37}, {110, 44}, {104, 49}
+  -- 3. PROMINENT WHITE & SEA FOAM CAP ON THE CREST & CURLING TIP (Estilo Hokusai)
+  -- Foam Cap covering the top curl from apex (80, 24) over the hook down to tip (104, 49)
+  local foamCapPoly = {
+    {76, 30},
+    {82, 25},
+    {90, 24},
+    {98, 26},
+    {106, 31},
+    {112, 37},
+    {112, 44},
+    {106, 50},
+    {98, 52},
+    {94, 46},
+    {100, 42},
+    {104, 36},
+    {98, 32},
+    {90, 30},
+    {80, 33}
   }
-  for i = 1, #topRidge06 - 1 do
-    local p1 = topRidge06[i]
-    local p2 = topRidge06[i+1]
-    local steps = math.max(math.abs(p2[1]-p1[1]), math.abs(p2[2]-p1[2])) * 2
+  fillPolygon(img, foamCapPoly, SEA_FOAM)
+
+  -- Solid Pure White highlights on the outer crest ridge and claw teeth
+  local whiteOuterRidge = {
+    {78, 28}, {84, 24}, {90, 23}, {98, 25}, {106, 30}, {112, 36}, {112, 43}, {106, 49}, {98, 51}
+  }
+  for i = 1, #whiteOuterRidge - 1 do
+    local p1 = whiteOuterRidge[i]
+    local p2 = whiteOuterRidge[i+1]
+    local steps = math.max(math.abs(p2[1]-p1[1]), math.abs(p2[2]-p1[2])) * 3
     for s = 0, steps do
       local t = s / steps
-      local x = math.floor(p1[1] + (p2[1] - p1[1]) * t)
-      local y = math.floor(p1[2] + (p2[2] - p1[2]) * t)
-      setHex(img, x, y, SEA_LIGHT)
-      if (x + y) % 2 == 0 then setHex(img, x, y - 1, SEA_FOAM) end
-      if x >= 75 and x % 3 == 0 then setHex(img, x, y - 2, WHITE) end
+      local x = math.floor(p1[1] + (p2[1] - p1[1]) * t + 0.5)
+      local y = math.floor(p1[2] + (p2[2] - p1[2]) * t + 0.5)
+      setHex(img, x, y, WHITE)
+      setHex(img, x, y - 1, WHITE)
+      if x >= 90 then setHex(img, x + 1, y, WHITE) end
     end
   end
 
-  -- 4. Foam Claw Tips & Spray Droplets
-  local foamPts06 = {
-    {106, 51}, {110, 48}, {100, 54}, {94, 56}, {114, 43}, {118, 40},
-    {116, 48}, {112, 54}, {108, 59}, {100, 63}, {92, 66}, {122, 38},
-    {120, 46}, {115, 52}, {104, 61}
+  -- Hokusai Foam Claw Fingers & Splashes in Pure White
+  local clawFingers = {
+    {108, 48, 3, 2}, {104, 52, 3, 2}, {98, 54, 3, 2}, {114, 40, 2, 3},
+    {116, 36, 2, 2}, {118, 44, 2, 2}, {112, 54, 2, 2}, {106, 58, 2, 2}
   }
-  for _, pt in ipairs(foamPts06) do
-    setHex(img, pt[1], pt[2], SEA_FOAM)
-    setHex(img, pt[1]+1, pt[2], WHITE)
-    setHex(img, pt[1], pt[2]+1, SEA_LIGHT)
+  for _, c in ipairs(clawFingers) do
+    for dy = 0, c[4]-1 do
+      for dx = 0, c[3]-1 do
+        setHex(img, c[1]+dx, c[2]+dy, WHITE)
+      end
+    end
   end
 
-  -- 5. The Wooden Ship Riding the Crest (~18° Tilt)
+  -- Flying spray droplets breaking off into the barrel cavity
+  local sprayDroplets = {
+    {116, 48}, {120, 42}, {122, 36}, {118, 52}, {114, 58}, {108, 64},
+    {100, 68}, {92, 70}, {124, 46}, {120, 56}, {112, 66}, {104, 72}
+  }
+  for _, pt in ipairs(sprayDroplets) do
+    setHex(img, pt[1], pt[2], WHITE)
+    setHex(img, pt[1]+1, pt[2], WHITE)
+    setHex(img, pt[1], pt[2]+1, SEA_FOAM)
+  end
+
+  -- 4. The Wooden Ship Riding the Crest (~18° Tilt)
   local sternX = 32; local sternY = 36; local prowX = 126; local prowY = 18
   local bLen = prowX - sternX
   local hullThick = 5
@@ -488,7 +513,7 @@ do
     end
   end
 
-  -- 6. 6 Crew Members Rowing with Golden Oars
+  -- 5. 6 Crew Members Rowing with Golden Oars
   local crewX = { 42, 54, 66, 78, 90, 102 }
   for i, cx in ipairs(crewX) do
     local t = (cx - sternX) / bLen
@@ -507,12 +532,12 @@ do
     end
   end
 
-  -- Contact foam at boat keel
+  -- Contact foam at boat keel (White and Foam)
   for fx = 70, 88 do
     local t = (fx - sternX) / bLen
     local sheerY = math.floor(sternY - t * (sternY - prowY))
     local botY = sheerY + hullThick
-    setHex(img, fx, botY + 1, SEA_FOAM)
+    setHex(img, fx, botY + 1, WHITE)
     if fx % 2 == 0 then setHex(img, fx, botY + 2, WHITE) end
   end
 
@@ -524,7 +549,7 @@ do
 end
 
 ----------------------------------------------------------------------
--- COMPILE ANIMATED GIF (Frames 01 to 09)
+-- RECOMPILE ANIMATED GIF (Frames 01 to 09)
 ----------------------------------------------------------------------
 do
   local framesList = {
@@ -563,5 +588,5 @@ do
   animSpr:close()
 end
 
-logFile:write("SUCCESS: Full Animated GIF compiled successfully!\n")
+logFile:write("SUCCESS: White foam cap enhanced and GIF recompiled!\n")
 logFile:close()

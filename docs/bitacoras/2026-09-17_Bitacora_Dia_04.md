@@ -315,8 +315,18 @@
 - **Estado del Módulo de Arte:**
   - Banco de assets pixel art sincronizado, respaldado y desplegado en los repositorios oficiales (`UPROTA-BETA` y `sapiensiaclan`).
 
+### 📍 [ENTRADA 17 - MEJORA DE DETALLE: CASQUETE DE ESPUMA BLANCA EN LA PUNTA DE LA OLA (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Refuerzo de Espuma Blanca en la Cresta y Labio de la Ola:**
+  - Atendiendo la indicación del Director Anigami de pintar más de blanco la punta de la ola:
+    - 🌊 **Casquete de Espuma en Frame 06 (Cresta Clímax):** Se aplicó una capa sólida de blanco puro (`#ffffff`) y espuma marina suave (`#e0f2fe`) que cubre todo el lomo superior del rompeolas, extendiéndose sobre el labio curvado y rematando en garras y dientes de espuma en la punta del gancho espiral.
+    - 🌊 **Evolución en Frame 05 (Cresta Subida):** Se incorporó el florecimiento de espuma blanca en el ápice de la masa ascendente.
+    - 🎬 **Recompilación de Cinemática:** GIF animado y sprites `.aseprite` / `.png` actualizados en `assets/sprites/splash_cinematica/`.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
 
