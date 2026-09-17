@@ -711,6 +711,25 @@
     3. 🚀 **Despliegue Inmediato:** Pusheado a producción en GitHub Pages (`sapiensiaclan`, commit `6f64f6b`).
 - **Estado Actual:** El Hexágono de Sapiensia luce con balance y proporción geométrica impecable.
 
+### 📍 [ENTRADA 38 - CONSTRUCCIÓN DEL REPRODUCTOR WEB DE AUDIOLIBROS INMERSIVO & STREAMING OFICIAL (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Implementación Técnica en el Ecosistema SAPIENSIA:**
+  1. 🎧 **Reproductor Web de Vanguardia (`audio.html`, `css/audio.css`, `js/audio_player.js`):**
+     - Desarrollado bajo la filosofía *local-first & zero-bloat* en Vanilla JavaScript y CSS modular moderno.
+     - Controles de reproducción con HTML5 Audio: Play/Pause con halo reactivo, saltos rápidos de -15s / +15s, scrubber interactivo con arrastre fluido, selector de velocidad (`0.75x`, `1.0x`, `1.25x`, `1.5x`, `2.0x`), control de volumen deslizante y atajos de teclado (Espacio, Flechas, M).
+     - **Índice de Capítulos con Saltos Temporales (Tracklist):** 24 pistas indexadas con marcas de tiempo exactas (`00:00`, `00:33`, `05:51`... hasta `01:37:47`). Al tocar cualquier capítulo, el reproductor salta instantáneamente al segundo exacto y resalta el capítulo activo en tiempo real.
+     - **Memoria de Escucha Persistente:** Guardado automático de la posición en `localStorage` cada 3 segundos y notificación flotante (*«Reanudando audio en MM:SS»*) al volver.
+     - **Descarga Directa MP3:** Botón oficial de descarga del archivo completo sin intermediarios.
+  2. 📖 **Streaming de *Los Textos del Poeta*:**
+     - Archivo oficial incorporado en `downloads/Los_Textos_del_Poeta_Audiolibro.mp3` (37.4 MB, Duración total: **01:44:07**).
+  3. 🚀 **Slot Cósmico para *VELA* (Estado «En Grabación»):**
+     - Pantalla temática interactiva del módulo Dharma con radar animado, estado de producción, cita filosófica y accesos directos al Lector Web y descargas de EPUB/PDF mientras Anigami finaliza la grabación de tomas.
+  4. 🔄 **Interconexión Transmedia Total:**
+     - Botón `[ 🎧 AUDIOLIBRO ]` incorporado en las tarjetas del catálogo (`index.html`), botón de descarga directa de MP3, y botón de conmutación cruzada en la barra de herramientas del lector (`reader.html`).
+  5. 🚀 **Despliegue en Producción:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan`, commit `ba2b1cd`).
+- **Estado Actual:** Reproductor web de audiolibros 100% operativo, accesible y desplegado en producción.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
 
