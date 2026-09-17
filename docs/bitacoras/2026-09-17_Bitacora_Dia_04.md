@@ -288,8 +288,25 @@
   - 🔍 Previews 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png` y `preview_splash_frame08_freeze_shift_4x.png`.
   - 🌐 Desplegado y sincronizado en el repositorio `sapiensiaclan` (commit `e1db231`).
 
+### 📍 [ENTRADA 15 - ENTREGA DE ARTE: CINEMÁTICA COMPLETA CON FLUJO ORGÁNICO DE LA OLA (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Armonización de la Secuencia Previa (Frames 04 al 09):**
+  - Se adaptó y sincronizó toda la animación cinemática de la splash screen previa al fotograma de congelamiento, asegurando que el agua fluya orgánicamente con la física y curvas del rompeolas de Hokusai:
+    1. 🌊 **Frame 04 (Perfil Tormenta):** El navío navega asentado directamente sobre el lecho marino y oleaje en ascenso (~10° de inclinación) con espuma dinámica en la línea de flotación.
+    2. 🌊 **Frame 05 (Cresta en Ascenso):** La ola gigante se encorva y gana masa hacia el ápice, comenzando a proyectar el labio de espuma hacia adelante; el barco escala la pendiente (~24° de subida) cortando las aguas turbulentas.
+    3. 🌊 **Frame 06 (Cresta Clímax a Todo Color):** La consagración del fotograma legendario a todo color: la gran ola Hokusai con cuerpo azul abisal (`#0a192f`), cresta cóncava en oleaje cian (`#0284c7`), espuma y garras blancas (`#e0f2fe`/`#ffffff`), tubo hueco cavernoso y spray cayendo al vacío, con el barco y los 6 remeros en pleno vuelo heroico a ~18°.
+    4. 💥 **Frame 07 (Impact Flash):** Destello blanco puro de impacto retinal.
+    5. ⚡ **Frame 08 (Freeze-Shift):** Transición a scanlines doradas y colapso lumínico hacia 2 colores planos.
+    6. 🛡️ **Frame 09 (Isotipo Flat Design Consolidado):** Logo vectorial pixel art definitivo de SAPIENSIA CLAN.
+- **Entregables de Animación Cinemática:**
+  - 🎬 Animación GIF Completa (160×90 px): `assets/sprites/splash_cinematica/splash_cinematica_anim.gif` y `.aseprite`.
+  - 🔍 Preview 4x en Alta Resolución: `assets/sprites/previews/preview_splash_cinematica_anim_4x.gif`.
+  - 🖼️ Fotogramas Clave Actualizados: `splash_frame04_perfil_tormenta.png`, `splash_frame05_cresta_subida.png`, `splash_frame06_cresta_climax.png` (y sus respectivos `.aseprite` y previews 4x).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
 
