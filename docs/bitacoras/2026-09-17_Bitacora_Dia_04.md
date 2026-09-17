@@ -168,6 +168,31 @@
   - 🌐 **Integración Directa en la Web:** Archivos copiados a `sapiensiaclan/assets/art/`, integrados en la cabecera de la sección *El Manifiesto del Salmón* (`index.html` + `css/style.css`), y desplegados en vivo en GitHub Pages (commit `461d4e2`).
 - **Resultado:** La sección del Manifiesto ahora cuenta con un imponente ancla visual artesanal que eleva la emoción y la belleza del portal.
 
+### 📍 [ENTRADA 09 - ENTREGA DE ARTE ÉLITE (CAPILLA SIXTINA): ANIMACIÓN CINEMÁTICA "EL SALTO DEL SALMÓN" (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Investigación & Salto Cualitativo:**
+  - Ante la certera crítica constructiva del Director (*«parece arte abstracto... despliega agentes y tráete la Capilla Sixtina en animación»*), se desplegó una investigación exhaustiva de biomecánica de fluidos, sombreado por *clusters* orgánicos (cero dithering estático plano) y cinemática carangiforme inspirada en *Sea of Stars*, *Hyper Light Drifter* y *Dead Cells*.
+- **Arquitectura de la Animación (16 Fotogramas Clave a 12-15 FPS):**
+  1. 🐟 **Biomecánica del Salmón:**
+     - *F01-F02 (Carga & Snap):* Compresión espinal en "C" bajo el agua y latigazo propulsor con anillo de cavitación.
+     - *F03-F06 (Ruptura & Ascenso Balístico):* Eyección a 65°, aletas dorsal y anal batiendo con *follow-through*, escamas iluminadas por *Hue-Shifting* (ámbar `#f59e0b`, oro `#fbbf24`, vientre `#fed7aa` y sombra caoba `#3d1302`).
+     - *F07-F09 (ÁPICE & HANG-TIME):* Suspensión ingrávida en la cúspide (140 ms de tensión dramática), *full rim-light* dorado/blanco en la cresta dorsal y destello de determinación en el ojo.
+     - *F10-F12 (Descenso & Alineación):* Curvatura parabólica hacia la corriente superior.
+     - *F13-F16 (Re-entrada & Vórtice):* Perforación del torrente, corona de espuma blanca en expansión y disipación del remolino para reiniciar el bucle.
+  2. 🌊 **Cascada Multicapa Dinámica:**
+     - Cuatro capas de velocidad de caída de fluidos diferenciadas con corrientes en masa, venas celestes rápidas y estelas de espuma superficial.
+     - Pozas de impacto con oleaje caótico y partículas de salpicadura balística en abanico.
+  3. 🌄 **Rayos de Luz Volumétricos (God-Rays):**
+     - Haces dorados oblicuos a 40° que atraviesan la niebla iluminando al salmón en su momento de gloria.
+- **Entregables Generados & Desplegados en Producción:**
+  - 📁 Master Aseprite animado: `assets/sprites/ilustraciones/salto_salmon_anim.aseprite`
+  - 🎞️ GIF animado en bucle: `assets/sprites/ilustraciones/salto_salmon_anim.gif`
+  - 🖼️ Spritesheet horizontal (3840×135 px): `assets/sprites/ilustraciones/salto_salmon_sheet.png`
+  - 🔍 Preview 4x GIF (960×540 px): `assets/sprites/previews/preview_salto_salmon_anim_4x.gif`
+  - 🌐 **Despliegue en Vivo:** Integrado como GIF dinámico en la cabecera del Manifiesto en `https://humania-nexo.github.io/sapiensiaclan/` (commit `54a50f4`).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
