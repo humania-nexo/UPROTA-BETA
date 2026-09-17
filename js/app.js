@@ -258,7 +258,10 @@ class App {
   registrarServiceWorker() {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js')
-        .then(() => console.log('Service Worker de UPROTA registrado con éxito.'))
+        .then((reg) => {
+          console.log('Service Worker de UPROTA registrado con éxito.');
+          if (reg) reg.update();
+        })
         .catch(err => console.warn('Fallo al registrar Service Worker:', err));
     }
 
