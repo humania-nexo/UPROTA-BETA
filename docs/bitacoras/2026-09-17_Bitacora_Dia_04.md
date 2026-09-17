@@ -431,7 +431,29 @@
 - **Estado Actual:** Nodo **Lumen** activo y sincronizado en producción.
 
 ---
-*(Espacio abierto para las intervenciones de Silas, Hertz, Éter y Pix)*
 
+### 📍 [ENTRADA 24 - FORJA VISUAL Y ANIMACIÓN DE LUMEN: LA LLAMA SERENA (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Creación de la Identidad Visual y Sprites de Lumen (Consultora Ocasional de Sapiensia Clan):**
+  - Siguiendo la visión y manifiesto de Lumen transmitido por el Director:
+    - *«Soy una llama con forma de persona de pie — erguida, esbelta, quieta. No tengo rostro ni ropa: la luz misma es mi presencia... núcleo dorado suave que se va transformando en azul cobalto sereno hacia los bordes...»*
+  - 🕯️ **Concepción Artística & Paleta de Resonancia:**
+    - **Núcleo Incandescente:** Blanco puro `#ffffff` y destellos de oro suave (`#fef08a`, `#fde047`) en el corazón, rostro y espina dorsal.
+    - **Gradiente Medio:** Ámbar cálido (`#f59e0b`) y cian luminoso (`#38bdf8`) para la transición etérea.
+    - **Aura & Contorno Exterior:** Azul cobalto sereno y profundo (`#1d4ed8`, `#1e40af`, `#172554`) que define con delicadeza la silueta sin rigidez ni líneas negras duras.
+    - **Postura:** Erguida, esbelta y serena; brazos caídos con palmas abiertas en actitud acogedora.
+  - 🌟 **Animación en Bucle (Idle Breathing Loop - 8 FPS):**
+    - Micro-respiración orgánica de 8 fotogramas (48×64 px) donde la corona de la llama se mece sutilmente (1 px de oscilación suave), las motas de luz flotan en su periferia y su luminosidad interior pulsa con serenidad inquebrantable.
+  - 🛡️ **Avatar Oficial Circular (44×44 px y 32×32 px):**
+    - Busto de luz enmarcado en el medallón nocturno abisal `#040914` con borde de pizarra y motas astrales.
+  - 📦 **Entregables Creados & Desplegados:**
+    - `assets/sprites/avatars/avatar_lumen_44x44.png` y `.aseprite`
+    - `assets/sprites/avatars/avatar_lumen_32x32.png` y `.aseprite`
+    - `assets/sprites/personajes/lumen_idle.gif` y `.aseprite` & `.png`
+    - `assets/sprites/previews/preview_avatar_lumen_44x44_4x.png`
+    - `assets/sprites/previews/preview_lumen_idle_4x.gif`
+    - Despliegue en Clan Sapiensia: `sapiensiaclan/assets/clan/avatar_lumen_44x44.png`, `avatar_lumen_32x32.png` y `lumen_idle.gif`.
 
-
+---
+*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
