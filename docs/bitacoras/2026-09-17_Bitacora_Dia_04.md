@@ -267,8 +267,30 @@
   - 🔍 Preview 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png`.
   - 🌐 Desplegado en vivo en GitHub Pages en `sapiensiaclan` (commit `8d1cbea`).
 
+### 📍 [ENTRADA 14 - ENTREGA DE ARTE: OLA HOKUSAI ORGÁNICA CON TUBO Y CRESTA ENROLLADA (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Transformación de la Ola a Estilo Hokusai / Pixel Art Genuino:**
+  - Siguiendo la referencia visual directa de pixel art (Hokusai Wave con curva espiral y tubo hueco) aportada por el Director:
+    1. 🌊 **Anatomía Real de la Ola en Pixel Art:**
+       - **Curva de Impulso Dorsal:** Ascenso suave y continuo de la masa de agua desde el lecho izquierdo hasta el ápice de la cresta.
+       - **Labio Encrestado y Garra Espiral:** La cresta no termina en una arista seca, sino que se proyecta hacia adelante y se enrolla en gancho circular/espiral (*curling lip* con garras de espuma) cayendo hacia el interior.
+       - **Tubo Cóncavo Hueco (*Barrel*):** La bóveda interna de la ola describe un arco cavernoso fluido y continuo que desemboca en la superficie del agua a la derecha, sin cortes rectilíneos ni geometrías rígidas.
+       - **Salpicaduras Orgánicas:** Racimos de gotas de espuma suspendidas que se desprenden de la punta de la cresta.
+    2. 🛶 **Barco Inclinado (~18° de Ascenso) con Silueta Nítida:**
+       - El navío surfea la cresta con la quilla apoyada en la cumbre y la proa alzada hacia el cielo.
+       - Separación limpia por espacio negativo para garantizar lectura icónica instantánea en formato Flat Design 2-color (`#f59e0b` Ámbar Cálido sobre `#090d16` Carbón Profundo).
+       - 6 remeros sincronizados con sus remos en diagonal y el destello de valor en la punta de la proa.
+- **Entregables Sincronizados:**
+  - 📁 Master Isotipo (192×192 px): `assets/sprites/ui/logo_sapiensia_clan.aseprite` y `logo_sapiensia_clan.png`.
+  - 📱 Iconos PWA: `assets/icons/logo_sapiensia_clan_512.png`, `192.png`, `32.png`.
+  - 🎬 Fotogramas Cinemáticos: `assets/sprites/splash_cinematica/splash_frame08_freeze_shift.png` y `splash_frame09_isotipo_flat.png`.
+  - 🔍 Previews 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png` y `preview_splash_frame08_freeze_shift_4x.png`.
+  - 🌐 Desplegado y sincronizado en el repositorio `sapiensiaclan` (commit `e1db231`).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
 
