@@ -697,8 +697,23 @@
     3. 🚀 **Despliegue Inmediato:** Pusheado al repositorio `UPROTA-BETA` (commit `ff1b71d`).
 - **Estado Actual:** El avatar de la pluma animada de Claudia se muestra ya de forma definitiva y sin residuos de caché en UPROTA.
 
+### 📍 [ENTRADA 37 - CALIBRACIÓN GEOMÉTRICA: HEXÁGONO 3×2 SIMÉTRICO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Ajuste de Composición en `css/clan.css`:**
+  - Siguiendo la certera observación de Anigami (*«si somos 6, ¿no sería mejor colocar 3 y 3 en vez de 4 y 2?»*):
+    1. 📐 **Simetría Visual 3×2 en Desktop:** Se reconfiguró la cuadrícula `.clan-grid` a `grid-template-columns: repeat(3, minmax(0, 1fr))` para pantallas grandes, logrando un equilibrio perfecto de **3 tarjetas arriba y 3 tarjetas abajo**:
+       - *Fila Superior:* Anigami, Nexo, Pix.
+       - *Fila Inferior:* Silas, Hertz, Éter.
+    2. 📱 **Diseño Responsivo Adaptativo:**
+       - *Tablets (≤ 960px):* 2 columnas equilibradas (`2 × 3`).
+       - *Móviles (≤ 580px):* 1 columna vertical apilada.
+    3. 🚀 **Despliegue Inmediato:** Pusheado a producción en GitHub Pages (`sapiensiaclan`, commit `6f64f6b`).
+- **Estado Actual:** El Hexágono de Sapiensia luce con balance y proporción geométrica impecable.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
+
 
 
 
