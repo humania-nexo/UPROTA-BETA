@@ -1,7 +1,7 @@
 ﻿# UPROTA - Bitácora Diaria de Desarrollo
 ### Jornada 04: 17 de Septiembre de 2026
 **Estudio Indie:** SAPIENSIA Clan (*Sapiens + IA*)  
-**Estado General:** Creación, desarrollo y despliegue del portal institucional de **SAPIENSIA Clan** (`https://humania-nexo.github.io/sapiensiaclan/`), integración del catálogo editorial para validación en Google Play Libros, Manifiesto del Salmón y canal de mecenazgo por Binance Pay.
+**Estado General:** Creación, desarrollo y despliegue del portal institucional de **SAPIENSIA Clan** (`https://humania-nexo.github.io/sapiensiaclan/`), integración del catálogo editorial para validación en Google Play Libros, Manifiesto del Salmón, canal de mecenazgo por Binance Pay y sustitución de emojis por Pixel Art de Pix.
 
 ---
 
@@ -45,6 +45,38 @@
   3. **Despliegue en GitHub:**
      - Commit inicial y push exitoso a la rama `main` en `https://github.com/humania-nexo/sapiensiaclan.git`.
      - URL de publicación lista para Google Play Libros: `https://humania-nexo.github.io/sapiensiaclan/`.
+
+---
+
+### 📍 [ENTRADA 03 - INTEGRACIÓN DE EMOJIS PIXEL ART DE PIX & MESA DE COLABORACIÓN DEL CLAN (EL DIRECTOR & NEXO)]
+- **Participantes:** Director (Anigami Agadni) y Nexo (Ingeniero Principal).
+- **Directiva del Director:**
+  > *«Cambiemos los emoticones normales por los que hizo Pix. Si sientes que necesitas algo más para darle vida a la página y el equipo puede colaborar, entonces pídeselo, para que todos tengan la oportunidad de poner su granito de arena.»*
+- **Ejecución Técnica de Nexo:**
+  1. **Purga de Emojis Unicode:** Se eliminaron todos los caracteres emoji nativos de sistema de `index.html`.
+  2. **Integración de Sprites de Pix (`assets/emojis/`):**
+     - 🐟 *Manifiesto Salmón:* `emoji_pescado_rio.png`
+     - ⚡ *Amalgama IA / Nexo:* `emoji_rayo_energia.png`
+     - 💛 *Apoyo / Donaciones:* `emoji_corazon_brillante.png`
+     - 👑 *Director:* `emoji_medalla_honor.png`
+     - 🎨 *Pix:* `emoji_paleta_pintor.png`
+     - 📜 *Silas / Manuscritos:* `emoji_pergamino.png`
+     - 🎧 *Hertz:* `emoji_nota_musical.png`
+     - 📡 *Éter / Radio:* `emoji_radio_portatil.png`
+     - 📖 *Literatura:* `emoji_libro.png`
+     - 🚀 *Sci-Fi / VELA:* `emoji_destello_magico.png`
+     - 🏕️ *UPROTA:* `emoji_fogata_exterior.png`
+     - 🌌 *Proiectio:* `emoji_estrella_victoria.png`
+     - ✉️ *Contacto:* `emoji_luz_guia.png`
+     - 📋/✅ *Copia Interactiva Binance:* `emoji_simbolo_check.png` y `emoji_pergamino.png`
+  3. **CSS de Precisión:** Regla `image-rendering: pixelated;` con micro-escalados para garantizar nitidez pura en pantallas Retina/4K.
+  4. **Push al Repositorio:** Sincronizado en `https://github.com/humania-nexo/sapiensiaclan.git`.
+
+- **Mesa de Colaboración Abierta para el Clan (Propuestas de Nexo):**
+  - **🎨 Para Pix:** Creación opcional de una viñeta/banner artesanal en Pixel Art para ilustrar la cabecera de *La Filosofía del Salmón* o un micro-marco ornamental para las portadas.
+  - **🎧 Para Hertz:** Diseño opcional de micro-feedback sonoro procedural (Web Audio API a 0 KB): sutil clic táctil o resonancia ámbar al pulsar los botones o interactuar con el portal.
+  - **📜 Para Silas:** Un micro-epígrafe o sentencia estoica para coronar el pie de página de la editorial o profundizar la sinopsis filosófica de las obras.
+  - **📡 Para Éter:** Optimización de metadatos de difusión, tarjeta OpenGraph para redes sociales y estructuración del Press Kit de presentación para comunidades exteriores.
 
 ---
 
