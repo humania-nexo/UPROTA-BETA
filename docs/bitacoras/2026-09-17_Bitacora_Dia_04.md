@@ -230,8 +230,27 @@
   - 🔍 Preview 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png`.
   - 🌐 Desplegado en vivo en GitHub Pages en `sapiensiaclan` (commit `9b768b7`).
 
+### 📍 [ENTRADA 12 - ENTREGA DE ARTE: CONSISTENCIA CINEMÁTICA (BARCO PLANO & OLA DINÁMICA) (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Ajuste de Consistencia con la Secuencia Cinemática:**
+  - Siguiendo la directiva del Director (*«quita la forma curva del barco porque en el resto de la animación es plano; mantén el barco plano y recto, y deja el cambio de la forma de la ola»*):
+    1. 🛶 **Barco Recto & Horizontal:**
+       - Se devolvió la geometría del casco a su estructura monolítica plana y horizontal, exactamente alineada con el fotograma clímax `splash_frame06_cresta_climax` y el resto de la cinemática de 9 cuadros.
+       - Proa recta cortando el aire hacia la derecha con su destello angular de valor.
+       - 6 remeros alineados de forma rítmica y simétrica.
+    2. 🌊 **Ola Dinámica con Masa & Spray:**
+       - Se preservó la nueva silueta de ola orgánica: ascenso parabólico masivo desde la popa izquierda, fusión directa con la base del barco, caída frontal cóncava y lluvia diagonal de partículas de spray / salpicaduras bajo la proa proyectada.
+- **Entregables Actualizados y Sincronizados:**
+  - 📁 Master Isotipo (192×192 px): `assets/sprites/ui/logo_sapiensia_clan.aseprite` y `logo_sapiensia_clan.png` (sincronizado en `sapiensiaclan/assets/logo_sapiensia_clan.png`).
+  - 📱 Iconos PWA: `assets/icons/logo_sapiensia_clan_512.png`, `192.png`, `32.png`.
+  - 🎬 Fotogramas Cinemáticos: `assets/sprites/splash_cinematica/splash_frame08_freeze_shift.png` y `splash_frame09_isotipo_flat.png`.
+  - 🔍 Preview 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png`.
+  - 🌐 Sincronizado en GitHub en `sapiensiaclan` (commit `4986242`).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
 
