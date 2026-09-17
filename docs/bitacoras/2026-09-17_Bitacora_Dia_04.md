@@ -687,8 +687,19 @@
     2. 🚀 **Despliegue Inmediato:** Cambios commiteados y desplegados en GitHub Pages (`sapiensiaclan`, commit `454eb4e`).
 - **Estado Actual:** Coautoría de Claudia visible tanto en la tarjeta de colaboradora como en las obras activas del catálogo.
 
+### 📍 [ENTRADA 36 - INVALIDACIÓN FORZADA DE CACHÉ PWA V4.1 (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Resolución de Caché Local en el Centro de Ayuda de UPROTA:**
+  - Ante la persistencia del marcador provisional en navegadores con caché agresiva del Service Worker:
+    1. 🔄 **Elevación a `uprota-cache-v4.1` (`sw.js`):** Se forzó la invalidación total de cachés anteriores para que el navegador descargue inmediatamente la versión actualizada de `modal_centro_ayuda.js` y el sprite `avatar_claudia_anim.gif`.
+    2. ⚡ **Auto-Update en `app.js`:** Se añadió `reg.update()` en el ciclo de inicio para verificar nuevas versiones del Service Worker al instante.
+    3. 🚀 **Despliegue Inmediato:** Pusheado al repositorio `UPROTA-BETA` (commit `ff1b71d`).
+- **Estado Actual:** El avatar de la pluma animada de Claudia se muestra ya de forma definitiva y sin residuos de caché en UPROTA.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
+
 
 
 
