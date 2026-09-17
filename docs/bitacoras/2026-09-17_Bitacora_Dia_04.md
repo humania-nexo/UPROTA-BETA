@@ -324,8 +324,27 @@
     - 🌊 **Evolución en Frame 05 (Cresta Subida):** Se incorporó el florecimiento de espuma blanca en el ápice de la masa ascendente.
     - 🎬 **Recompilación de Cinemática:** GIF animado y sprites `.aseprite` / `.png` actualizados en `assets/sprites/splash_cinematica/`.
 
+### 📍 [ENTRADA 18 - ENTREGA DE ARTE: TEXTURIZADO MULTITONO Y CORRIENTES EN LA OLA (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Pintado de la Ola con Múltiples Tonalidades de Azul y Fluidez Orgánica:**
+  - Siguiendo la referencia visual de pixel art compartida por el Director (olas con bandas concéntricas y trazos escalonados de color):
+    - 🌊 **Paleta de 5 Tonos Oceánicos:**
+      - `#0f2042` (Azul noche abisal - base y sombras profundas).
+      - `#1d4ed8` (Azul marino intenso - banda dorsal y cuerpo).
+      - `#0284c7` (Azul oceánico medio - corriente principal).
+      - `#38bdf8` (Cian luminoso - flujo dinámico de la cresta).
+      - `#bae6fd` (Espuma celeste suave - base del casquete).
+      - `#ffffff` (Blanco puro - cresta, garras y salpicaduras).
+    - 🌊 **Trazos Fluidos Concéntricos:**
+      - Gradiente orgánico con pequeños clústeres de dithering escalonado siguiendo la curvatura parabólica de la ola.
+      - Vórtice del tubo interior con contraste de sombra profunda y núcleo de azul medio.
+      - Ondulaciones y trazos picados en la superficie del agua a la derecha simulando el mar embravecido.
+    - 🎬 **Cinemática Actualizada:** Fotogramas 04, 05, 06 y GIF animado recompilados en alta fidelidad.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
 

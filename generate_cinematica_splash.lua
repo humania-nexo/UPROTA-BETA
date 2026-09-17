@@ -1,5 +1,5 @@
 local logFile = io.open("c:/Users/Snow/.gemini/antigravity/scratch/UPROTA/cinematica_log.txt", "w")
-logFile:write("Enhancing White Foam Crest & Tip on Wave in Cinematic Frames...\n")
+logFile:write("Crafting Rich Concentric Multi-Blue Bands like Reference...\n")
 
 local function hex2rgb(hex)
   hex = tostring(hex):gsub("#","")
@@ -21,17 +21,20 @@ end
 local baseDir = "c:/Users/Snow/.gemini/antigravity/scratch/UPROTA"
 
 local BG_DARK    = "#090d16"
-local SEA_DEEP   = "#0a192f"
-local SEA_MID    = "#0284c7"
-local SEA_LIGHT  = "#38bdf8"
-local SEA_FOAM   = "#e0f2fe"
+-- Exact color palette from user reference image
+local SEA_ABYSS  = "#0f2042" -- Azul noche tormentoso profundo
+local SEA_DEEP   = "#1d4ed8" -- Azul marino intenso
+local SEA_MID    = "#0284c7" -- Azul oceánico medio
+local SEA_LIGHT  = "#38bdf8" -- Cian luminoso vibrante
+local SEA_ICE    = "#bae6fd" -- Espuma celeste suave
+local WHITE      = "#ffffff" -- Espuma blanca pura
+
 local WOOD_HI    = "#d97706"
 local WOOD_MD    = "#b45309"
 local WOOD_DK    = "#78350f"
 local OAR_GOLD   = "#fde047"
 local AMBER_LOGO = "#f59e0b"
 local AMBER_HI   = "#fbbf24"
-local WHITE      = "#ffffff"
 local RAIN_CYAN  = "#38bdf8"
 local SKIN_TONE  = "#fed7aa"
 
@@ -100,17 +103,17 @@ local function fillPolygon(img, polyPts, fillColor)
 end
 
 ----------------------------------------------------------------------
--- FRAME 01: PLANO CENITAL
+-- FRAME 01, 02, 03
 ----------------------------------------------------------------------
 do
   local spr, img = createFrame()
   for y = 0, 89 do for x = 0, 159 do
-    if (x + y * 2) % 17 == 0 then setHex(img, x, y, SEA_DEEP) end
+    if (x + y * 2) % 17 == 0 then setHex(img, x, y, SEA_ABYSS) end
     if (x * 3 + y) % 31 == 0 then setHex(img, x, y, SEA_MID, 120) end
   end end
   for y = 28, 62 do
-    setHex(img, 56 + math.floor((y-45)^2 * 0.03), y, SEA_FOAM, 180)
-    setHex(img, 104 - math.floor((y-45)^2 * 0.03), y, SEA_FOAM, 180)
+    setHex(img, 56 + math.floor((y-45)^2 * 0.03), y, SEA_ICE, 180)
+    setHex(img, 104 - math.floor((y-45)^2 * 0.03), y, SEA_ICE, 180)
   end
   for y = 25, 65 do
     local w = math.floor(10 - math.abs(y - 45) * 0.35)
@@ -129,9 +132,6 @@ do
   saveSplashFrame(spr, "splash_frame01_cenital")
 end
 
-----------------------------------------------------------------------
--- FRAME 02: PLANO CENITAL REMANDO
-----------------------------------------------------------------------
 do
   local spr, img = createFrame()
   for y = 0, 89 do for x = 0, 159 do
@@ -150,15 +150,12 @@ do
     setHex(img, r[1], r[2], AMBER_LOGO); setHex(img, r[1], r[2]-1, WHITE)
     local dir = (r[1] < 80) and -1 or 1
     for o = 0, 14 do setHex(img, r[1] + o * dir, r[2] - math.floor(o * 0.4), OAR_GOLD) end
-    setHex(img, r[1] + 15 * dir, r[2] - 6, SEA_FOAM)
+    setHex(img, r[1] + 15 * dir, r[2] - 6, SEA_ICE)
     setHex(img, r[1] + 16 * dir, r[2] - 5, WHITE)
   end
   saveSplashFrame(spr, "splash_frame02_cenital_remando")
 end
 
-----------------------------------------------------------------------
--- FRAME 03: GIRO ORBITAL 45°
-----------------------------------------------------------------------
 do
   local spr, img = createFrame()
   for i = 0, 40 do
@@ -167,8 +164,8 @@ do
   end
   for x = 0, 70 do
     local wy = math.floor(75 - x * 0.4)
-    for y = wy, 89 do setHex(img, x, y, SEA_DEEP) end
-    setHex(img, x, wy, SEA_FOAM)
+    for y = wy, 89 do setHex(img, x, y, SEA_ABYSS) end
+    setHex(img, x, wy, SEA_ICE)
   end
   for i = 0, 45 do
     local bx = 60 + i; local by = 55 - math.floor(i * 0.35)
@@ -192,13 +189,28 @@ do
     setHex(img, rx, ry, RAIN_CYAN, 140)
   end
 
+  for y = 60, 89 do for x = 0, 159 do setHex(img, x, y, SEA_ABYSS) end end
+
   for x = 0, 159 do
     local wy = math.floor(64 + math.sin(x * 0.04) * 8 - math.cos(x * 0.02) * 3)
     for y = wy, 89 do
-      local col = (y <= wy + 2) and SEA_LIGHT or ((y <= wy + 6) and SEA_MID or SEA_DEEP)
+      local col = SEA_ABYSS
+      if y <= wy + 2 then col = SEA_LIGHT
+      elseif y <= wy + 5 then col = SEA_MID
+      elseif y <= wy + 11 then col = SEA_DEEP
+      end
       setHex(img, x, y, col)
     end
-    if x % 3 == 0 then setHex(img, x, wy, SEA_FOAM) end
+    if x % 4 == 0 or x % 7 == 0 then setHex(img, x, wy, WHITE) end
+  end
+
+  for y = 72, 85, 4 do
+    for x = 10, 150 do
+      if (x + y*3) % 8 < 4 then
+        setHex(img, x, y, SEA_MID)
+        setHex(img, x, y+1, SEA_LIGHT)
+      end
+    end
   end
 
   local sternX = 35; local sternY = 62; local prowX = 112; local prowY = 50
@@ -224,7 +236,7 @@ do
     if fx % 2 == 0 then
       local t = math.max(0, math.min(1, (fx - sternX) / bLen))
       local sy = math.floor(sternY - t * (sternY - prowY)) + 5
-      setHex(img, fx, sy, SEA_FOAM)
+      setHex(img, fx, sy, WHITE)
     end
   end
 
@@ -233,7 +245,7 @@ do
 end
 
 ----------------------------------------------------------------------
--- FRAME 05: CRESTA SUBIDA (Con Espuma Blanca en la Cresta)
+-- FRAME 05: CRESTA SUBIDA
 ----------------------------------------------------------------------
 do
   local spr, img = createFrame()
@@ -243,62 +255,38 @@ do
   end
 
   local wave05 = {
-    {0, 89},
-    {0, 78},
-    {12, 74},
-    {26, 64},
-    {42, 50},
-    {58, 36},
-    {72, 28},
-    {84, 25},
-    {94, 28},
-    {98, 36},
-    {92, 44},
-    {82, 48},
-    {76, 56},
-    {78, 68},
-    {90, 76},
-    {110, 82},
-    {134, 84},
-    {159, 82},
-    {159, 89},
-    {0, 89}
+    {0, 89}, {0, 78}, {12, 74}, {26, 64}, {42, 50}, {58, 36}, {72, 28},
+    {84, 25}, {94, 28}, {98, 36}, {92, 44}, {82, 48}, {76, 56}, {78, 68},
+    {90, 76}, {110, 82}, {134, 84}, {159, 82}, {159, 89}, {0, 89}
   }
-  fillPolygon(img, wave05, SEA_DEEP)
+  fillPolygon(img, wave05, SEA_ABYSS)
 
-  local waveInner05 = {
-    {0, 89},
-    {0, 78},
-    {12, 74},
-    {26, 64},
-    {42, 50},
-    {58, 36},
-    {72, 28},
-    {84, 25},
-    {94, 28},
-    {96, 34},
-    {88, 38},
-    {80, 42},
-    {74, 50},
-    {74, 62},
-    {84, 70},
-    {102, 76},
-    {124, 78},
-    {148, 77},
-    {159, 78},
-    {159, 89},
-    {0, 89}
+  local waveDeep05 = {
+    {6, 89}, {6, 76}, {16, 72}, {28, 62}, {44, 48}, {58, 34}, {72, 26},
+    {84, 24}, {92, 26}, {94, 34}, {88, 40}, {80, 44}, {74, 52}, {74, 64},
+    {84, 72}, {104, 78}, {128, 80}, {150, 79}, {159, 80}, {159, 89}, {6, 89}
   }
-  fillPolygon(img, waveInner05, SEA_MID)
+  fillPolygon(img, waveDeep05, SEA_DEEP)
 
-  -- Rich White Foam Cap on Crest & Hook
+  local waveMid05 = {
+    {14, 89}, {14, 74}, {24, 66}, {38, 54}, {52, 40}, {66, 30}, {78, 25},
+    {86, 25}, {90, 28}, {86, 36}, {78, 42}, {72, 50}, {72, 60}, {80, 68},
+    {96, 74}, {118, 77}, {140, 77}, {14, 89}
+  }
+  fillPolygon(img, waveMid05, SEA_MID)
+
+  local waveLight05 = {
+    {22, 68}, {34, 58}, {48, 44}, {62, 32}, {74, 26}, {82, 25}, {86, 28},
+    {82, 34}, {76, 38}, {68, 46}, {54, 58}, {40, 68}, {22, 68}
+  }
+  fillPolygon(img, waveLight05, SEA_LIGHT)
+
   local foamCap05 = {
     {62, 34}, {72, 28}, {84, 24}, {94, 26}, {98, 32}, {96, 38}, {90, 42},
     {84, 38}, {76, 36}, {68, 42}
   }
-  fillPolygon(img, foamCap05, SEA_FOAM)
+  fillPolygon(img, foamCap05, SEA_ICE)
 
-  -- Pure White outer fringe on the apex
   for fx = 68, 98 do
     local t = (fx - 68) / 30.0
     local fy = math.floor(30 - math.sin(t * math.pi) * 6)
@@ -307,7 +295,6 @@ do
     if fx % 2 == 0 then setHex(img, fx, fy + 1, WHITE) end
   end
 
-  -- Spray droplets
   local sprayPts = {
     {96, 22}, {100, 20}, {104, 24}, {108, 29}, {104, 35},
     {110, 23}, {114, 27}, {106, 41}, {98, 45}, {102, 18}, {108, 19}
@@ -315,10 +302,9 @@ do
   for _, pt in ipairs(sprayPts) do
     setHex(img, pt[1], pt[2], WHITE)
     setHex(img, pt[1]+1, pt[2], WHITE)
-    setHex(img, pt[1], pt[2]+1, SEA_FOAM)
+    setHex(img, pt[1], pt[2]+1, SEA_LIGHT)
   end
 
-  -- Boat
   local sternX = 24; local sternY = 60; local prowX = 104; local prowY = 24
   local bLen = prowX - sternX
   local hullThick = 5
@@ -353,7 +339,7 @@ do
 end
 
 ----------------------------------------------------------------------
--- FRAME 06: CRESTA CLÍMAX (Con Punta y Labio de la Ola Pintados de Blanco Puro)
+-- FRAME 06: CRESTA CLÍMAX (El Rompeolas Maestro Estilo Referencia Pixel Art)
 ----------------------------------------------------------------------
 do
   local spr, img = createFrame()
@@ -362,105 +348,103 @@ do
     setHex(img, rx, ry, RAIN_CYAN, 100)
   end
 
-  -- 1. Base Navy Body
+  -- 1. BASE DE AZUL ABISAL (Sombra Profunda / Noche)
   local waveContour06 = {
-    {12, 82},
-    {18, 80},
-    {26, 75},
-    {36, 67},
-    {46, 57},
-    {56, 47},
-    {65, 38},
-    {74, 30},
-    {82, 25},
-    {90, 24},
-    {98, 26},
-    {106, 31},
-    {112, 37},
-    {110, 44},
-    {104, 49},
-    {96, 51},
-    {90, 47},
-    {94, 42},
-    {92, 38},
-    {86, 35},
-    {80, 36},
-    {74, 41},
-    {72, 48},
-    {74, 57},
-    {78, 64},
-    {86, 70},
-    {98, 75},
-    {114, 78},
-    {130, 79},
-    {144, 77},
-    {148, 74},
-    {148, 82},
-    {12, 82}
+    {12, 82}, {18, 80}, {26, 75}, {36, 67}, {46, 57}, {56, 47}, {65, 38},
+    {74, 30}, {82, 25}, {90, 24}, {98, 26}, {106, 31}, {112, 37}, {110, 44},
+    {104, 49}, {96, 51}, {90, 47}, {94, 42}, {92, 38}, {86, 35}, {80, 36},
+    {74, 41}, {72, 48}, {74, 57}, {78, 64}, {86, 70}, {98, 75}, {114, 78},
+    {130, 79}, {144, 77}, {148, 74}, {148, 82}, {12, 82}
   }
-  fillPolygon(img, waveContour06, SEA_DEEP)
+  fillPolygon(img, waveContour06, SEA_ABYSS)
 
-  -- 2. Surging Midtone Cyan Core Layer
-  local waveCyan06 = {
-    {16, 80},
-    {26, 74},
-    {36, 65},
-    {46, 55},
-    {56, 45},
-    {65, 36},
-    {74, 28},
-    {82, 24},
-    {90, 23},
-    {98, 25},
-    {106, 30},
-    {111, 36},
-    {108, 43},
-    {102, 47},
-    {95, 48},
-    {88, 44},
-    {84, 38},
-    {78, 42},
-    {75, 48},
-    {76, 56},
-    {80, 63},
-    {90, 68},
-    {104, 73},
-    {120, 76},
-    {136, 77},
-    {144, 75},
-    {144, 80},
-    {16, 80}
+  -- 2. BANDA EXTERIOR Y BASE DE AZUL PROFUNDO (#1d4ed8)
+  local waveDeep06 = {
+    {16, 80}, {22, 77}, {30, 72}, {40, 63}, {50, 53}, {60, 43}, {70, 34},
+    {78, 28}, {86, 26}, {94, 27}, {102, 31}, {108, 37}, {106, 43}, {100, 47},
+    {94, 47}, {88, 42}, {82, 39}, {76, 43}, {74, 51}, {76, 59}, {82, 66},
+    {94, 72}, {110, 76}, {128, 78}, {144, 76}, {146, 80}, {16, 80}
   }
-  fillPolygon(img, waveCyan06, SEA_MID)
+  fillPolygon(img, waveDeep06, SEA_DEEP)
 
-  -- 3. PROMINENT WHITE & SEA FOAM CAP ON THE CREST & CURLING TIP (Estilo Hokusai)
-  -- Foam Cap covering the top curl from apex (80, 24) over the hook down to tip (104, 49)
+  -- Trazos y gradiente dithered entre Abisal y Azul Profundo
+  local ditherAbyss = {
+    {14, 81}, {18, 79}, {24, 75}, {32, 68}, {42, 58}, {52, 48}, {62, 38}, {72, 30},
+    {16, 81}, {20, 78}, {28, 72}, {36, 64}, {46, 54}, {56, 44}, {66, 35},
+    {15, 80}, {23, 76}, {31, 70}, {41, 60}, {51, 50}, {61, 40}, {71, 31}
+  }
+  for _, pt in ipairs(ditherAbyss) do
+    setHex(img, pt[1], pt[2], SEA_DEEP)
+    setHex(img, pt[1]+1, pt[2], SEA_ABYSS)
+  end
+
+  -- 3. BANDA CURVA DE AZUL MEDIO (#0284c7)
+  local waveMid06 = {
+    {26, 75}, {34, 67}, {44, 57}, {54, 47}, {64, 37}, {72, 30}, {80, 27},
+    {88, 26}, {94, 28}, {100, 33}, {98, 39}, {92, 42}, {84, 41}, {78, 45},
+    {78, 53}, {82, 61}, {92, 67}, {106, 72}, {122, 75}, {138, 75}, {26, 75}
+  }
+  fillPolygon(img, waveMid06, SEA_MID)
+
+  -- Trazos dithered entre Azul Profundo y Azul Medio
+  local ditherMid = {
+    {28, 73}, {36, 65}, {46, 55}, {56, 45}, {66, 35}, {74, 29}, {82, 27},
+    {30, 72}, {38, 63}, {48, 53}, {58, 43}, {68, 33}, {76, 28}, {84, 27}
+  }
+  for _, pt in ipairs(ditherMid) do
+    setHex(img, pt[1], pt[2], SEA_MID)
+    setHex(img, pt[1]+1, pt[2], SEA_DEEP)
+  end
+
+  -- 4. BANDA DINÁMICA DE CIAN LUMINOSO (#38bdf8 - Flujo Central)
+  local waveLight06 = {
+    {34, 70}, {42, 61}, {52, 51}, {62, 41}, {70, 32}, {78, 28}, {86, 27},
+    {90, 29}, {92, 35}, {86, 39}, {80, 44}, {80, 50}, {84, 57}, {92, 63},
+    {104, 68}, {118, 71}, {132, 72}, {34, 70}
+  }
+  fillPolygon(img, waveLight06, SEA_LIGHT)
+
+  -- 5. BANDA INTERNA DE SOMBRA EN EL VÓRTICE / TUBO (#1d4ed8 & #0284c7)
+  -- Como en la referencia: el centro del espiral tiene un núcleo de azul profundo rodeado de cian
+  local vortexShadow = {
+    {76, 45}, {82, 41}, {88, 42}, {92, 46}, {88, 52}, {82, 54}, {78, 50}, {76, 45}
+  }
+  fillPolygon(img, vortexShadow, SEA_DEEP)
+
+  local vortexCore = {
+    {80, 46}, {84, 44}, {88, 45}, {86, 49}, {82, 50}, {80, 46}
+  }
+  fillPolygon(img, vortexCore, SEA_MID)
+
+  -- Trazos de fluidez dentro del tubo
+  setHex(img, 84, 47, SEA_LIGHT); setHex(img, 85, 47, SEA_LIGHT)
+  setHex(img, 83, 48, SEA_ICE)
+
+  -- 6. SUPERFICIE PICADA EN EL AGUA DERECHA (Trazos horizontales escalonados como en la ref)
+  local ripples = {
+    {88, 73, 6, SEA_LIGHT}, {96, 74, 8, SEA_ICE}, {108, 73, 7, SEA_LIGHT},
+    {118, 74, 9, SEA_MID}, {130, 73, 7, SEA_LIGHT}, {140, 74, 6, SEA_ICE},
+    {92, 77, 7, SEA_MID}, {102, 76, 9, SEA_LIGHT}, {114, 77, 8, SEA_ICE},
+    {126, 76, 9, SEA_LIGHT}, {136, 77, 7, SEA_MID},
+    {86, 80, 9, SEA_DEEP}, {98, 79, 11, SEA_MID}, {112, 80, 9, SEA_DEEP},
+    {124, 79, 13, SEA_MID}, {140, 80, 7, SEA_DEEP}
+  }
+  for _, r in ipairs(ripples) do
+    for dx = 0, r[3]-1 do setHex(img, r[1]+dx, r[2], r[4]) end
+  end
+
+  -- 7. CASQUETE DE ESPUMA BLANCA & SEA ICE (Cresta y Punta de Hokusai)
   local foamCapPoly = {
-    {76, 30},
-    {82, 25},
-    {90, 24},
-    {98, 26},
-    {106, 31},
-    {112, 37},
-    {112, 44},
-    {106, 50},
-    {98, 52},
-    {94, 46},
-    {100, 42},
-    {104, 36},
-    {98, 32},
-    {90, 30},
-    {80, 33}
+    {74, 30}, {82, 25}, {90, 24}, {98, 26}, {106, 31}, {112, 37}, {112, 44},
+    {106, 50}, {98, 52}, {94, 46}, {100, 42}, {104, 36}, {98, 32}, {90, 30}, {78, 33}
   }
-  fillPolygon(img, foamCapPoly, SEA_FOAM)
+  fillPolygon(img, foamCapPoly, SEA_ICE)
 
-  -- Solid Pure White highlights on the outer crest ridge and claw teeth
   local whiteOuterRidge = {
-    {78, 28}, {84, 24}, {90, 23}, {98, 25}, {106, 30}, {112, 36}, {112, 43}, {106, 49}, {98, 51}
+    {76, 28}, {84, 24}, {90, 23}, {98, 25}, {106, 30}, {112, 36}, {112, 43}, {106, 49}, {98, 51}
   }
   for i = 1, #whiteOuterRidge - 1 do
-    local p1 = whiteOuterRidge[i]
-    local p2 = whiteOuterRidge[i+1]
+    local p1 = whiteOuterRidge[i]; local p2 = whiteOuterRidge[i+1]
     local steps = math.max(math.abs(p2[1]-p1[1]), math.abs(p2[2]-p1[2])) * 3
     for s = 0, steps do
       local t = s / steps
@@ -472,31 +456,28 @@ do
     end
   end
 
-  -- Hokusai Foam Claw Fingers & Splashes in Pure White
+  -- Garras de espuma blanca en la punta espiral
   local clawFingers = {
     {108, 48, 3, 2}, {104, 52, 3, 2}, {98, 54, 3, 2}, {114, 40, 2, 3},
     {116, 36, 2, 2}, {118, 44, 2, 2}, {112, 54, 2, 2}, {106, 58, 2, 2}
   }
   for _, c in ipairs(clawFingers) do
-    for dy = 0, c[4]-1 do
-      for dx = 0, c[3]-1 do
-        setHex(img, c[1]+dx, c[2]+dy, WHITE)
-      end
-    end
+    for dy = 0, c[4]-1 do for dx = 0, c[3]-1 do setHex(img, c[1]+dx, c[2]+dy, WHITE) end end
   end
 
-  -- Flying spray droplets breaking off into the barrel cavity
+  -- Gotas de spray dispersas por el viento
   local sprayDroplets = {
     {116, 48}, {120, 42}, {122, 36}, {118, 52}, {114, 58}, {108, 64},
-    {100, 68}, {92, 70}, {124, 46}, {120, 56}, {112, 66}, {104, 72}
+    {100, 68}, {92, 70}, {124, 46}, {120, 56}, {112, 66}, {104, 72},
+    {128, 40}, {126, 50}, {116, 62}, {108, 70}
   }
   for _, pt in ipairs(sprayDroplets) do
     setHex(img, pt[1], pt[2], WHITE)
     setHex(img, pt[1]+1, pt[2], WHITE)
-    setHex(img, pt[1], pt[2]+1, SEA_FOAM)
+    setHex(img, pt[1], pt[2]+1, SEA_LIGHT)
   end
 
-  -- 4. The Wooden Ship Riding the Crest (~18° Tilt)
+  -- 8. Navío de Madera Cabalgando la Cresta (~18° de Inclinación)
   local sternX = 32; local sternY = 36; local prowX = 126; local prowY = 18
   local bLen = prowX - sternX
   local hullThick = 5
@@ -513,7 +494,7 @@ do
     end
   end
 
-  -- 5. 6 Crew Members Rowing with Golden Oars
+  -- 9. 6 Remeros
   local crewX = { 42, 54, 66, 78, 90, 102 }
   for i, cx in ipairs(crewX) do
     local t = (cx - sternX) / bLen
@@ -532,7 +513,7 @@ do
     end
   end
 
-  -- Contact foam at boat keel (White and Foam)
+  -- Espuma de contacto bajo la quilla
   for fx = 70, 88 do
     local t = (fx - sternX) / bLen
     local sheerY = math.floor(sternY - t * (sternY - prowY))
@@ -541,7 +522,7 @@ do
     if fx % 2 == 0 then setHex(img, fx, botY + 2, WHITE) end
   end
 
-  -- Radiant courage glint on prow
+  -- Destello de valor en la proa
   setHex(img, 127, 17, WHITE); setHex(img, 128, 17, AMBER_HI)
   setHex(img, 127, 16, AMBER_HI); setHex(img, 127, 18, AMBER_HI)
 
@@ -588,5 +569,5 @@ do
   animSpr:close()
 end
 
-logFile:write("SUCCESS: White foam cap enhanced and GIF recompiled!\n")
+logFile:write("SUCCESS: Reference-styled multi-tonal wave completed and GIF recompiled!\n")
 logFile:close()
