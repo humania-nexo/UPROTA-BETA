@@ -378,4 +378,25 @@
     - `sapiensiaclan/assets/salto_salmon_anim.gif`
 
 ---
+
+### 📍 [ENTRADA 21 - POTENCIACIÓN DE PARTÍCULAS DE AGUA, SALPICADURAS Y BRUMA AL SALTAR Y CAER (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Física de Partículas y Salpicaduras Aumentadas:**
+  - 💦 **Eclosión de Despegue (Salto del Salmón a la Derecha):**
+    - Se incorporaron más de 60 partículas balísticas y gotas de agua (`#ffffff`, `#bae6fd`, `#38bdf8`) que son eyectadas hacia arriba y en abanico conforme el salmón rompe la superficie.
+  - 🌊 **Corona de Impacto y Explosión de Entrada (Caída a la Izquierda):**
+    - Más de 85 partículas de alta velocidad y ondas concéntricas que estallan en altura (hasta el tercio superior) cuando el salmón se sumerge de cabeza en la corriente.
+  - ✨ **Gotas en Vuelo:**
+    - Estela de 15 gotas aerodinámicas que se desprenden del lomo, aletas y cola del salmón durante su trayectoria en el aire.
+  - 🎨 **Capas y Máscara de Silueta:**
+    - Las partículas respetan la silueta y anatomía dorada del pez, fanning hacia el exterior sin generar bloques opacos sobre el sprite.
+  - 📦 **Entregables Sincronizados:**
+    - `assets/sprites/ilustraciones/salto_salmon_anim.gif` y `.aseprite`
+    - `assets/sprites/ilustraciones/ilustracion_salto_salmon.png` y `.aseprite`
+    - `assets/sprites/previews/preview_salto_salmon_anim_4x.gif` y `preview_salto_salmon_4x.png`
+    - `sapiensiaclan/assets/salto_salmon_anim.gif`
+
+---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
