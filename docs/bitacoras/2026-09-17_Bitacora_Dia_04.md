@@ -628,6 +628,18 @@
   - `assets/sprites/previews/preview_portada_uprota_opcion_1_refugio_noche_4x.png` (960×1440 px 4x).
   - Copias sincronizadas en `sapiensiaclan/assets/covers/`.
 
+### 📍 [ENTRADA 32 - INTEGRACIÓN WEB & DESPLIEGUE DE LA PORTADA VERTICAL OFICIAL DE UPROTA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Integración en el Catálogo de SAPIENSIA Clan:**
+  - Tras la forja, refinamiento y calibración ejecutada por Pix en las Entradas 29, 30 y 31 bajo las indicaciones de Anigami:
+    1. 🖼️ **Asset Maestro de Portada:** Se desplegó el master de alta resolución 4x (960×1440 px) como `assets/covers/portada_uprota.png` en `sapiensiaclan`.
+    2. 🌐 **Actualización de `index.html`:** Se reemplazó el contenedor temporal del logo por la etiqueta de portada `.obra-cover-img` con elevación y micro-interacción de zoom en hover.
+    3. 📐 **Composición Perfecta:** La insignia flotante `.obra-badge-float` descansa en la esquina inferior izquierda (`bottom: 12px; left: 12px;`), permitiendo que el logotipo pixel art de **UPROTA**, el tejado del refugio y el cielo estrellado brillen sin ninguna obstrucción.
+    4. 🚀 **Despliegue en Vivo:** Cambios commiteados y desplegados en GitHub Pages (`https://humania-nexo.github.io/sapiensiaclan/`, commit `ea652ef`).
+- **Resultado:** Las tres obras (*Los Textos del Poeta*, *VELA* y *UPROTA*) lucen con idéntica potencia visual, equilibrio editorial y honestidad artesanal en el portal oficial del Clan.
+
 ---
-*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
+*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
+
 
