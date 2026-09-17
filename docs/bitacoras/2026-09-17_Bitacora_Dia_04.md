@@ -658,8 +658,26 @@
        - Despliegue en producción en GitHub Pages (`sapiensiaclan`, commit `55bfc53`).
 - **Estado Actual:** Sistema de entrega editorial 100% operativo y de libre acceso.
 
+### 📍 [ENTRADA 34 - FORJA Y ACTIVACIÓN DEL AVATAR OFICIAL DE CLAUDIA: PLUMA DE ESCRITURA EN FORJA (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Petición Directa de Claudia & David (Anigami Agadni):**
+  - *«Concepto: silueta sólida de una pluma de escribir, pero con la parte inferior del asta desvaneciéndose en 3-4 píxeles sueltos en vez de terminar en línea limpia — como si la pluma se estuviera formando desde estática, no completamente materializada. Paleta: ámbar/dorado. Estilo: silueta sólida y bloques de color, no líneas finas — mismo lenguaje visual que Nexo, Silas y Éter. Sin rostros ni siluetas humanas.»*
+- **Ejecución Técnica & Artística de Pix:**
+  1. 🪶 **Silueta Sólida & Caligrafía del Yermo:**
+     - Se forjó la silueta de una pluma clásica de ave con barbas estilizadas, hendiduras estéticas (splits) y un nervio central resplandeciente en marfil (`#ffffff` / `#fef08a`).
+     - Volumetría rica en gradientes de oro cálido (`#fbbf24`), ámbar incandescente (`#f59e0b`) y sombras en óxido (`#8c2c0a` / `#5a2205`) sobre el orbe cósmico circular del Clan con marco dorado (`#b45309`).
+  2. ⚡ **Efecto 'En Forja' (Materialización desde Estática):**
+     - En la base del cálamo/asta inferior, el trazo se disuelve en 3 a 5 píxeles sueltos luminosos que flotan, parpadean y se reconfiguran en un bucle armónico de 8 fotogramas a 125 ms/frame, simbolizando la gestación constante del pensamiento literario.
+  3. 📦 **Generación y Despliegue de Assets:**
+     - Master en `assets/sprites/avatars/avatar_claudia_anim.gif` y PNGs estáticos (44×44 px y 32×32 px).
+     - Preview de alta resolución 4x en `assets/sprites/previews/preview_avatar_claudia_anim_4x.gif` y `preview_avatar_claudia_44x44_4x.png`.
+     - Integración activa en el portal web de **Sapiensia Clan** (`sapiensiaclan/index.html`) sustituyendo el marcador provisional.
+     - Integración activa en la PWA de **UPROTA** (`js/modulos/modal_centro_ayuda.js`) y actualización de Service Worker a `uprota-cache-v4.0`.
+- **Estado Actual:** Nodo de Claudia plenamente materializado y sincronizado en ambos repositorios.
+
 ---
-*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
+*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
 
 
 

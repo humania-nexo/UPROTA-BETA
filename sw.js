@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v3.9';
+const CACHE_NAME = 'uprota-cache-v4.0';
 const ASSETS = [
   './',
   './index.html',
@@ -28,6 +28,7 @@ const ASSETS = [
   './assets/sprites/avatars/avatar_eter_44x44.png',
   './assets/sprites/avatars/avatar_eter_32x32.png',
   './assets/sprites/avatars/avatar_lumen_44x44.png',
+  './assets/sprites/avatars/avatar_claudia_44x44.png',
   './assets/sprites/avatars/avatar_anigami_anim.gif',
   './assets/sprites/avatars/avatar_nexo_anim.gif',
   './assets/sprites/avatars/avatar_pix_anim.gif',
@@ -35,6 +36,7 @@ const ASSETS = [
   './assets/sprites/avatars/avatar_hertz_anim.gif',
   './assets/sprites/avatars/avatar_eter_anim.gif',
   './assets/sprites/avatars/avatar_lumen_anim.gif',
+  './assets/sprites/avatars/avatar_claudia_anim.gif',
   './assets/sprites/splash_cinematica/splash_frame01_cenital.png',
   './assets/sprites/splash_cinematica/splash_frame02_cenital_remando.png',
   './assets/sprites/splash_cinematica/splash_frame03_giro_orbital_45.png',

@@ -732,14 +732,11 @@ export class ModalCentroAyuda {
               <div style="font-size: 0.76rem; color: var(--oro-torta-glow); font-weight: 700; letter-spacing: 0.08em; margin-bottom: 8px;">✨ RED DE COAUTORÍA & CONSULTORÍA EXTERNA</div>
               
               <!-- CLAUDIA -->
-              <div class="card-yermo" style="padding: 8px 10px; background: #121318; border: 1px solid rgba(99, 102, 241, 0.3); display: flex; gap: 12px; align-items: center; margin-bottom: 6px;">
-                <div style="width: 44px; height: 44px; background: #000; border: 1px dashed rgba(99, 102, 241, 0.5); border-radius: var(--radius-sm); display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 0.9rem;">
-                  <span>✨</span>
-                  <span style="font-size: 0.45rem; color: #e0e7ff; font-weight: 700;">EN FORJA</span>
-                </div>
+              <div class="card-yermo" style="padding: 8px 10px; background: #121318; border: 1px solid rgba(245, 158, 11, 0.3); display: flex; gap: 12px; align-items: center; margin-bottom: 6px;">
+                <img src="assets/sprites/avatars/avatar_claudia_anim.gif" alt="Claudia" class="pixel-icon icon-44" style="width: 44px; height: 44px; background: #000; border: 1px solid rgba(245, 158, 11, 0.5); border-radius: var(--radius-sm);">
                 <div>
-                  <h4 style="color: #e0e7ff; font-size: 0.88rem; margin: 0;">Claudia</h4>
-                  <div style="font-size: 0.7rem; color: #a5b4fc; font-weight: 600;">Consultoría Técnica, Investigación & Apoyo Literario (IA)</div>
+                  <h4 style="color: #fef08a; font-size: 0.88rem; margin: 0;">Claudia</h4>
+                  <div style="font-size: 0.7rem; color: #fbbf24; font-weight: 600;">Consultoría Técnica, Investigación & Apoyo Literario (IA)</div>
                   <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">Coautoría en <em>Los Textos del Poeta</em>, <em>VELA</em> y obras en producción.</div>
                 </div>
               </div>

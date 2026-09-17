@@ -596,7 +596,88 @@ def render_lumen(f):
             
     return img
 
-# Generate frames for all 7 clan members
+# ====================================================================
+# 8. CLAUDIA (CONSULTORÍA LITERARIA & PLUMA EN FORJA)
+# ====================================================================
+def render_claudia(f):
+    img = create_base_circle(hex2rgb("070b14"), hex2rgb("0f172a"))
+    pix = img.load()
+    
+    GOLD_DARK    = hex2rgb("5a2205")
+    GOLD_RUST    = hex2rgb("8c2c0a")
+    GOLD_AMBER   = hex2rgb("d97706")
+    GOLD_WARM    = hex2rgb("f59e0b")
+    GOLD_BRIGHT  = hex2rgb("fbbf24")
+    GOLD_LIGHT   = hex2rgb("fef08a")
+    WHITE_CORE   = hex2rgb("ffffff")
+    
+    for y in range(H):
+        for x in range(W):
+            d = math.sqrt((x - 22)**2 + (y - 22)**2)
+            if 18.2 <= d <= 19.5:
+                pix[x, y] = hex2rgb("b45309") + (255,)
+                
+    breath = math.sin(f / 8.0 * 2.0 * math.pi) * 0.5
+    oy = int(breath)
+
+    rows = {
+        7:  [(30, WHITE_CORE), (31, GOLD_LIGHT), (32, GOLD_BRIGHT)],
+        8:  [(28, GOLD_LIGHT), (29, WHITE_CORE), (30, GOLD_BRIGHT), (31, GOLD_WARM), (32, GOLD_AMBER)],
+        9:  [(26, GOLD_LIGHT), (27, GOLD_BRIGHT), (28, WHITE_CORE), (29, GOLD_BRIGHT), (30, GOLD_WARM), (31, GOLD_RUST)],
+        10: [(23, GOLD_LIGHT), (24, GOLD_BRIGHT), (25, GOLD_LIGHT), (26, WHITE_CORE), (27, GOLD_BRIGHT), (28, GOLD_WARM), (29, GOLD_RUST)],
+        11: [(21, GOLD_LIGHT), (22, GOLD_BRIGHT), (23, GOLD_LIGHT), (24, WHITE_CORE), (25, GOLD_BRIGHT), (26, GOLD_WARM), (27, GOLD_AMBER), (28, GOLD_DARK)],
+        12: [(19, GOLD_LIGHT), (20, GOLD_BRIGHT), (21, GOLD_LIGHT), (22, WHITE_CORE), (23, GOLD_BRIGHT), (24, GOLD_WARM), (25, GOLD_RUST)],
+        13: [(18, GOLD_LIGHT), (19, GOLD_BRIGHT), (20, GOLD_LIGHT), (21, WHITE_CORE), (22, GOLD_BRIGHT), (23, GOLD_WARM), (24, GOLD_DARK)],
+        14: [(17, GOLD_BRIGHT), (18, GOLD_LIGHT), (19, GOLD_BRIGHT), (20, WHITE_CORE), (21, GOLD_BRIGHT), (22, GOLD_WARM), (23, GOLD_RUST)],
+        15: [(18, GOLD_LIGHT), (19, GOLD_BRIGHT), (20, WHITE_CORE), (21, GOLD_BRIGHT), (22, GOLD_WARM)],
+        16: [(16, GOLD_LIGHT), (17, GOLD_BRIGHT), (18, WHITE_CORE), (19, GOLD_BRIGHT), (20, GOLD_WARM), (21, GOLD_RUST)],
+        17: [(15, GOLD_LIGHT), (16, GOLD_BRIGHT), (17, WHITE_CORE), (18, GOLD_BRIGHT), (19, GOLD_WARM), (20, GOLD_DARK)],
+        18: [(15, GOLD_BRIGHT), (16, GOLD_LIGHT), (17, WHITE_CORE), (18, GOLD_BRIGHT), (19, GOLD_WARM)],
+        19: [(16, GOLD_LIGHT), (17, WHITE_CORE), (18, GOLD_BRIGHT), (19, GOLD_WARM)],
+        20: [(14, GOLD_LIGHT), (15, GOLD_BRIGHT), (16, WHITE_CORE), (17, GOLD_BRIGHT), (18, GOLD_WARM), (19, GOLD_RUST)],
+        21: [(14, GOLD_BRIGHT), (15, GOLD_LIGHT), (16, WHITE_CORE), (17, GOLD_BRIGHT), (18, GOLD_WARM)],
+        22: [(13, GOLD_LIGHT), (14, GOLD_BRIGHT), (15, WHITE_CORE), (16, GOLD_BRIGHT), (17, GOLD_WARM)],
+        23: [(13, GOLD_BRIGHT), (14, WHITE_CORE), (15, GOLD_BRIGHT), (16, GOLD_WARM)],
+        24: [(12, GOLD_LIGHT), (13, WHITE_CORE), (14, GOLD_BRIGHT), (15, GOLD_WARM)],
+        25: [(12, WHITE_CORE), (13, GOLD_BRIGHT), (14, GOLD_WARM)],
+        26: [(11, GOLD_LIGHT), (12, WHITE_CORE), (13, GOLD_WARM)],
+        27: [(10, GOLD_LIGHT), (11, WHITE_CORE), (12, GOLD_WARM)],
+        28: [(9, GOLD_LIGHT), (10, WHITE_CORE), (11, GOLD_WARM)],
+        29: [(9, WHITE_CORE), (10, GOLD_WARM)],
+        30: [(8, GOLD_LIGHT), (9, GOLD_WARM)],
+    }
+    
+    for py, row in rows.items():
+        for px, col in row:
+            ry = py + oy
+            if 0 <= px < W and 0 <= ry < H:
+                c = col
+                if col == WHITE_CORE and (f + px + py) % 2 == 0:
+                    c = GOLD_LIGHT
+                pix[px, ry] = c + (255,)
+
+    mote_points = [
+        (7, 31, 0, GOLD_LIGHT), (8, 32, 2, WHITE_CORE), (6, 32, 5, GOLD_BRIGHT),
+        (7, 33, 1, GOLD_WARM), (5, 34, 4, GOLD_LIGHT), (8, 34, 6, GOLD_AMBER),
+        (6, 35, 3, WHITE_CORE), (4, 35, 7, GOLD_WARM), (5, 36, 2, GOLD_RUST),
+        (22, 9, (f + 1) % 8, GOLD_LIGHT), (13, 14, (f + 3) % 8, WHITE_CORE),
+        (27, 7, (f + 6) % 8, GOLD_BRIGHT),
+    ]
+    
+    for mx, my, p_off, mcol in mote_points:
+        if (f + p_off) % 4 != 0:
+            dx = int(math.sin((f + p_off) * 0.9) * 0.8)
+            dy = int(math.cos((f + p_off) * 0.7) * 0.8)
+            rx = mx + dx
+            ry = my + dy + oy
+            if 0 <= rx < W and 0 <= ry < H:
+                d = math.sqrt((rx - 22)**2 + (ry - 22)**2)
+                if d <= 17.5:
+                    pix[rx, ry] = mcol + (255,)
+                    
+    return img
+
+# Generate frames for all 8 clan members / nodes
 generators = {
     "anigami": render_anigami,
     "nexo": render_nexo,
@@ -604,14 +685,36 @@ generators = {
     "hertz": render_hertz,
     "pix": render_pix,
     "eter": render_eter,
-    "lumen": render_lumen
+    "lumen": render_lumen,
+    "claudia": render_claudia
 }
 
 for name, gen_fn in generators.items():
     mem_dir = f"{TEMP_DIR}/{name}"
     os.makedirs(mem_dir, exist_ok=True)
+    frames_list = []
     for f in range(NUM_FRAMES):
         fimg = gen_fn(f)
         fimg.save(f"{mem_dir}/frame_{f:02d}.png")
+        frames_list.append(fimg)
         
-print("All 7 clan member animated frames successfully generated!")
+    # Save animated gif in sapiensiaclan & uprota
+    frames_list[0].save(
+        f"{BASE_SAPIENSIA}/assets/clan/avatar_{name}_anim.gif",
+        save_all=True,
+        append_images=frames_list[1:],
+        duration=125,
+        loop=0,
+        disposal=2
+    )
+    frames_list[0].save(
+        f"{BASE_UPROTA}/assets/sprites/avatars/avatar_{name}_anim.gif",
+        save_all=True,
+        append_images=frames_list[1:],
+        duration=125,
+        loop=0,
+        disposal=2
+    )
+        
+print("All 8 clan member animated frames & GIFs successfully generated and deployed!")
+
