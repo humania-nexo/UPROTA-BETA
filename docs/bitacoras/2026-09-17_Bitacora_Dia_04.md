@@ -551,6 +551,45 @@
 - **Llamado a la Acción:**
   - Queda el encargo formalmente asentado sobre la mesa de trabajo para que **Pix** forje los bocetos y opciones cuando esté listo.
 
+### 📍 [ENTRADA 29 - FORJA DE 5 PROPUESTAS DE PORTADA VERTICAL OFICIAL DE UPROTA (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Respuesta al Encargo de Anigami & Nexo:**
+  - Recibidas las directrices de la Entrada 28. Como artista visual del Clan, asumo con orgullo la misión de crear una portada vertical que capture el corazón auténtico de UPROTA: sin artificios engañosos, con pixel art honesto, artesanal y con atmósfera viva.
+  - He forjado en el lienzo de **240×360 px** (proporción vertical estándar 2:3, escalable a **960×1440 px** en resolución 4x) las **3 propuestas sugeridas por Nexo y Anigami**, más **2 propuestas originales concebidas desde mi perspectiva de arte y simbolismo**.
+
+- **Especificaciones Técnicas del Diseño:**
+  - 📏 **Lienzo & Aspect Ratio:** 240×360 px nativo, 2:3 vertical.
+  - 🔤 **Tipografía de Cabecera:** Logotipo "UPROTA" construido píxel a píxel con doble capa de volumen, gradiente de luz cenital (Blanco marfil `#ffffff` -> Oro cálido `#fbbf24` -> Ámbar incandescente `#f59e0b`) y sombra proyectada profunda (`#0a0a0f`), ubicado en el tercio superior para total legibilidad a cualquier escala.
+  - 🛡️ **Compatibilidad UI:** Espacio inferior izquierdo completamente despejado para albergar la insignia flotante `.obra-badge-float` en el catálogo web de Sapiensia Clan.
+
+- **Desglose de las 5 Obras de Portada Forjadas:**
+  1. 🏕️ **Opción 1: «El Refugio en la Noche del Yermo» (Atmósfera & Calidez)**
+     - *Concepto:* El refugio de adobe y madera bajo una noche profunda con sutiles destellos de aurora boreal y constelaciones.
+     - *Elementos:* Ventana con luz ámbar cálida proyectándose al exterior, puerta de madera, bicicleta de expedición con su remolque de carga, fogata ardiendo con chispas doradas y la antena de radio emitiendo ondas concéntricas a 104.5 MHz.
+     - *Archivos:* `assets/sprites/portadas/portada_uprota_opcion_1_refugio_noche.png` | Preview 4x: `assets/sprites/previews/preview_portada_uprota_opcion_1_refugio_noche_4x.png`.
+  2. 🧭 **Opción 2: «La Mesa del Náufrago» (Bodegón de Disciplina & Hábitos)**
+     - *Concepto:* Vista cenital (Top-Down) de la mesa de madera del superviviente, iluminada por haces de luz solar diagonal.
+     - *Elementos:* El Cuaderno del Náufrago abierto con casillas de hábitos marcadas en verde y el sello de UPROTA en ámbar, radio analógica encendida con dial retroiluminado, taza de peltre humeante, brújula dorada y un brote verde renaciendo en una lata de conserva.
+     - *Archivos:* `assets/sprites/portadas/portada_uprota_opcion_2_mesa_naufrago.png` | Preview 4x: `assets/sprites/previews/preview_portada_uprota_opcion_2_mesa_naufrago_4x.png`.
+  3. 🐟 **Opción 3: «El Salmón & La Luna sobre el Yermo» (Simbolismo & Silueta Editorial)**
+     - *Concepto:* Afiche icónico de gran impacto visual y elegancia editorial.
+     - *Elementos:* Gran luna llena dorada radiante en el centro del firmamento nocturno, salmón pixel art saltando en arco contra la luna con estela de agua luminiscente y gotas dispersas, sobre las aguas profundas del mar del yermo.
+     - *Archivos:* `assets/sprites/portadas/portada_uprota_opcion_3_salmon_luna.png` | Preview 4x: `assets/sprites/previews/preview_portada_uprota_opcion_3_salmon_luna_4x.png`.
+  4. 🏛️ **Opción 4 (Original Pix): «Los 4 Pilares del Santuario» (Altar Estoico & Geometría Sagrada)**
+     - *Concepto:* El altar de piedra circular donde se forja el carácter, representando los 4 pilares fundamentales de la vida en el yermo.
+     - *Elementos:* Plataforma circular concéntrica en perspectiva isométrica baja, 4 pedestales de basalto oscuro coronados por orbes elementales luminiscentes (Cuerpo/Rojo `#f87171`, Mente/Cian `#38bdf8`, Espíritu/Púrpura `#c084fc`, Taller/Verde `#4ade80`), con el dial/brújula central de UPROTA latiendo en oro sobre un fondo de cielo crepuscular.
+     - *Archivos:* `assets/sprites/portadas/portada_uprota_opcion_4_cuatro_pilares.png` | Preview 4x: `assets/sprites/previews/preview_portada_uprota_opcion_4_cuatro_pilares_4x.png`.
+  5. 🌅 **Opción 5 (Original Pix): «El Amanecer del Superviviente: Rumbo a la Cumbre» (Cinemática & Esperanza)**
+     - *Concepto:* El náufrago contemplando el horizonte desde la cima rocosa mientras amanece sobre el nuevo mundo.
+     - *Elementos:* Silueta del superviviente con mochila de expedición y báculo en mano sobre el risco de basalto, sol naciente dorado iluminando el cielo en degradado ámbar/índigo, sendero sinuoso de piedra que desciende hacia un valle fértil salpicado de refugios del Clan con chimeneas humeantes.
+     - *Archivos:* `assets/sprites/portadas/portada_uprota_opcion_5_amanecer_cumbre.png` | Preview 4x: `assets/sprites/previews/preview_portada_uprota_opcion_5_amanecer_cumbre_4x.png`.
+
+- **Distribución de Assets:**
+  - Copiados todos los PNGs nativos y previews 4x a `sapiensiaclan/assets/covers/` para uso inmediato en el catálogo web y portales de difusión.
+- **Llamado al Director:**
+  - Pongo sobre la mesa las 5 obras completas a disposición de **Anigami Agadni** para su veredicto y selección de la portada definitiva de UPROTA.
+
 ---
-*(Espacio abierto para las intervenciones de Pix, Silas, Hertz, Éter y Lumen)*
+*(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Nexo y Lumen)*
 
