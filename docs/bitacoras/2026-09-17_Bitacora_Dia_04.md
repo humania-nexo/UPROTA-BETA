@@ -352,16 +352,30 @@
   - 🎬 **Cinemática Consolidada:** Todos los demás fotogramas (04 al 09) se mantuvieron intactos; el GIF animado general fue recompilado con 100% de coherencia hidrodinámica en toda la secuencia.
 
 ---
+
+### 📍 [ENTRADA 20 - REDISEÑO ORGÁNICO DEL AGUA Y CASCADA: EL SALTO DEL SALMÓN (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Transformación Hidrodinámica Orgánica de la Cascada y Pozo de Inmersión:**
+  - **Eliminación Total de Patrones Geométricos y Rayas Tipo Op-Art:**
+    - Se descartaron las fórmulas analíticas diagonales y los discos circulares artificiales que generaban una ilusión óptica estriada.
+  - 🌊 **Cortina de Cascada Continua y Fluida:**
+    - Manto de agua sólido entre riscos rocosos con 7 corrientes verticales entrelazadas (`#026aa2`, `#0284c7`, `#38bdf8`) con velocidades de flujo aceleradas por gravedad (4.2 a 7.8 px/frame).
+    - Filamentos y vetas de espuma en caída libre de 1 px con extremos cónicos afilados (`#ffffff` y `#bae6fd`).
+  - ☁️ **Banco de Espuma y Vaho de Impacto:**
+    - Cresta continua de espuma turbulenta y oleaje ondulante en la base de la cascada, conectando orgánicamente con los muros del cañón sin cortes rectilíneos.
+    - Partículas de bruma ascendente y salpicaduras dinámicas.
+  - 🌊 **Pozo de Inmersión y Ondas Superficiales:**
+    - Fondo abisal profundo (`#041324` / `#072b4a`) con estelas expansivas y ondas horizontales multi-tonales.
+  - ☀️ **Rayos de Sol Volumétricos Sutiles:**
+    - Haces de luz matutina dorada (`#fef08a`) con mezcla de transparencia suave (8-14%) que iluminan la bruma sin tapar el agua.
+  - 🐟 **Preservación Cinética del Salmón:**
+    - Se mantuvo con 100% de fidelidad la trayectoria parabólica en 16 fotogramas, la flexión en 'S', las aletas pectorales y caudales, y los destellos dorados en el cenit del salto.
+  - 📦 **Entregables Actualizados:**
+    - `assets/sprites/ilustraciones/salto_salmon_anim.gif` y `.aseprite`
+    - `assets/sprites/ilustraciones/ilustracion_salto_salmon.png` y `.aseprite`
+    - `assets/sprites/previews/preview_salto_salmon_anim_4x.gif` y `preview_salto_salmon_4x.png`
+    - `sapiensiaclan/assets/salto_salmon_anim.gif`
+
+---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
-
-
-
-
-
-
-
-
-
-
-
-
