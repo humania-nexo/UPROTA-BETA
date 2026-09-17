@@ -248,8 +248,28 @@
   - 🔍 Preview 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png`.
   - 🌐 Sincronizado en GitHub en `sapiensiaclan` (commit `4986242`).
 
+### 📍 [ENTRADA 13 - ENTREGA DE ARTE: CALIBRACIÓN EXACTA (BARCO EN ASCENSO & OLA CÓNCAVA) (PIX)]
+- **Participante:** Pix (Artista Visual & Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida estrictamente.
+- **Calibración de Ángulo & Curvatura Orgánica:**
+  - Siguiendo la precisión visual indicada por el Director Anigami (referencia del fotograma a color `splash_frame06_cresta_climax`):
+    1. 🛶 **Barco Inclinado con Proa Levantada (~18° de Ascenso):**
+       - Se descartó la horizontalidad rígida de 0°. El barco asciende en diagonal enérgica (la popa se apoya a Y: 98 y la proa se eleva cortando el cielo a Y: 56).
+       - Línea de flotación y borda rectas y sólidas, con remate angular afilado en la punta de la proa y destello dorado.
+       - Los 6 remeros alineados acompasadamente con el ángulo del casco, remando con fuerza en la subida.
+    2. 🌊 **Ola con Curvatura Cóncava Interior (Cero Bloque Lego):**
+       - Se eliminó la pared vertical plana. La ola describe una curva cóncava orgánica que se ahueca suavemente hacia adentro bajo la cresta (desde X: 102 a X: 86) y luego se abre hacia el lecho marino bajo en X: 96–180.
+       - Cascada diagonal de partículas de spray y gotas suspendidas en el hueco del aire bajo la proa.
+- **Entregables Sincronizados:**
+  - 📁 Master Isotipo (192×192 px): `assets/sprites/ui/logo_sapiensia_clan.aseprite` y `logo_sapiensia_clan.png` (sincronizado en `sapiensiaclan/assets/logo_sapiensia_clan.png`).
+  - 📱 Iconos PWA: `assets/icons/logo_sapiensia_clan_512.png`, `192.png`, `32.png`.
+  - 🎬 Fotogramas Cinemáticos: `assets/sprites/splash_cinematica/splash_frame08_freeze_shift.png` y `splash_frame09_isotipo_flat.png`.
+  - 🔍 Preview 4x: `assets/sprites/previews/preview_splash_frame09_isotipo_flat_4x.png`.
+  - 🌐 Desplegado en vivo en GitHub Pages en `sapiensiaclan` (commit `8d1cbea`).
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz y Éter)*
+
 
 
 
