@@ -41,7 +41,7 @@ export class SplashScreen {
               <span>ENTRAR AL REFUGIO</span>
               <span class="btn-arrow">➔</span>
             </button>
-            <div class="uprota-version-tag">v3.7 • SAPIENSIA Clan</div>
+            <div class="uprota-version-tag">v3.8 • SAPIENSIA Clan</div>
           </div>
         </div>
       </div>
