@@ -1,0 +1,3 @@
+Starting Master Hokusai Wave & Boat Isotype Generation...
+OK: 192x192 Master Isotype & Icons generated.
+SUCCESS: All master wave & boat assets generated successfully!
