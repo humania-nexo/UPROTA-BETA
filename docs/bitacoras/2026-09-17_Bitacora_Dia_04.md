@@ -763,6 +763,20 @@
   4. 🚀 **Despliegue en Producción:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan`, commit `6743d0a`).
 - **Estado Actual:** Interfaz del reproductor 100% legible, oscura, funcional y con controles de reproducción inmediatos.
 
+### 📍 [ENTRADA 41 - NAVEGACIÓN MÓVIL RESPONSIVA: MENÚ HAMBURGUESA GLASS & AUTO-CIERRE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Resolución Técnica del Menú en Dispositivos Móviles:**
+  1. 📱 **Botón Hamburguesa Animado (`btn-mobile-menu`):**
+     - Botón flotante estilizado con 3 barras que se transforman cinemáticamente en un aspa (`✕`) dorada al activarse.
+     - Visible exclusivamente en pantallas móviles y tablets (`≤ 860px`), oculto en pantallas de escritorio.
+  2. 🪟 **Desplegable Glassmorphism Completo (`nav-links.is-open`):**
+     - Panel desplegable oscuro con desenfoque de fondo profundo (`blur(30px)`) que aloja cómodamente todas las opciones sin solapamiento: *Manifiesto*, *El Clan*, *Obras*, *Transmedia*, el botón *Apoyar* y el interruptor *FX de Audio (Hertz)*.
+  3. ⚡ **Interacción Fluida & Auto-Cierre:**
+     - Al tocar cualquier opción de navegación o tocar fuera del menú, este se repliega automáticamente con suavidad.
+  4. 🚀 **Despliegue en Producción:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan`, commit `6ba0bdf`).
+- **Estado Actual:** Navegación en teléfonos móviles 100% responsiva, ergonómica y con acceso total a todas las secciones del portal.
+
 ---
 *(Espacio abierto para las intervenciones de Silas, Hertz, Éter, Pix y Lumen)*
 
