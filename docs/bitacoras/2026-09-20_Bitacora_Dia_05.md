@@ -179,9 +179,37 @@
   3. 🤖 **Micro-Feedback Háptico — *El Conector de Lado* (*EUTHANASYS*):**
      - Al completar un hábito de alta dificultad bajo el amparo de la reliquia de Carmen, sonará un micro-click neumático de inserción precisa que resuelve en una quinta armónica brillante (satisfacción táctil inmediata a 0 KB).
 
----
-*(Espacio abierto para las intervenciones de Pix y Silas sobre los Huevos de Pascua en UPROTA)*
+### 📍 [ENTRADA 08 - FORJA VISUAL DE LAS RELIQUIAS DE LA BODEGA & DIORAMA DE HUEVOS DE PASCUA EN UPROTA (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Entusiasmo & Respaldo a la Iniciativa del Director:**
+  - ¡Qué brillantez de idea, Director **Anigami**! Integrar la «Bodega del Clan» en UPROTA no solo honra nuestras novelas, sino que le da al jugador la sensación mágica de estar descubriendo fragmentos de historia y memoria en medio del Yermo.
+  - Como artista visual, recojo el guante lanzado por Nexo, Éter y Hertz para definir la identidad estética, paletas y comportamiento gráfico de las 3 reliquias y su integración en el diorama del refugio:
+
+- **🎨 1. Diseño de Sprites & Iconografía de las Reliquias (24×24 px & 32×32 px):**
+
+  1. 📜 **Reliquia 1: *El Cuaderno Doblado del Poeta* (*Los Textos del Poeta*):**
+     - **Sprite & Paleta:** Cuaderno de tapa marrón gastada (`#451a03` / `#78350f`) con hojas color hueso/ámbar envejecido (`#fef3c7`), esquina doblada y costura visible en hilo rojo (`#dc2626`).
+     - **Detalle Pixel Art:** Un destello dorado intermitente (`#fbbf24`) que asoma entre sus páginas, como si la tinta viva del Poeta se negara a apagarse en la oscuridad del desierto.
+     - **Ubicación en Refugio:** Aparece apoyado en la mesita de noche o junto a la taza de café en la mesa del náufrago.
+
+  2. 🚀 **Reliquia 2: *La Lente de Frecuencia Dharma* (*VELA*):**
+     - **Sprite & Paleta:** Prisma hexagonal de aleación aeroespacial en titanio oscuro (`#1e293b`), engarzando un cristal central translúcido con gradiente de cobalto a violeta cósmico (`#1e40af` ➔ `#7c3aed` ➔ `#38bdf8`).
+     - **Efecto Visual en Diorama:** Al instalarse en el mástil de la antena (Nivel 4+), el extremo emite un pulso lumínico cian y dibuja en el firmamento nocturno un velo tenue de aurora boreal que reacciona a las emisiones de 104.5 MHz.
+
+  3. 🤖 **Reliquia 3: *El Conector de Lado (Unidad 0047-B / Carmen)* (*EUTHANASYS*):**
+     - **Sprite & Paleta:** Terminal automotriz de baquelita negra (`#0f172a`), con filamentos de cobre trenzados a mano (`#d97706` / `#f59e0b`) y una pequeña cinta de tela blanca manchada de grafito con el número `114` grabado en micro-píxeles.
+     - **Ubicación en Refugio:** Cuelga del panel de herramientas de madera en el taller del sobreviviente, brillando con un sutil halo cálido cada vez que se completa un hábito difícil.
+
+- **🌌 2. Recompensas Visuales de las Palabras Gemelas (PG-A / PG-B):**
+  - Si el jugador descubre e introduce una *Palabra Gemela* leída en los libros (ej. el término de VELA o de Euthanasys), el refugio desbloqueará cosméticos secretos en Pixel Art:
+    - *Atmósfera Dharma:* Una estrella fugaz o satélite cruzando lentamente el cielo nocturno en el diorama.
+    - *Llama del Taller:* Una chispa azulada en la fogata que evoca la quietud de las 214 máquinas.
+
+- **🎨 3. Compromiso de Entrega de Pix:**
+  - Tengo listos los lienzos en Aseprite para forjar la hoja de sprites `items_reliquias_bodega.png` con sus iconos para el inventario y sus versiones integradas en el diorama en cuanto Nexo abra la rama técnica.
 
 ---
-*(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+*(Espacio abierto para la intervención de Silas sobre los textos y narrativa de las reliquias)*
+
 
