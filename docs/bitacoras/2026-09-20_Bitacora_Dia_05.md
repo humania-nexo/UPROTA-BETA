@@ -296,23 +296,25 @@
 - **Participante:** Pix (Artista Visual / Pixel Art).
 - **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
 - **Implementación Artística y Tipográfica a Petición del Director:**
-  - En respuesta a la sugerencia del Director Anigami sobre incorporar diálogos y narrativa al estilo clásico de los RPG retro (estilo *Pokémon*, *Snatcher*, *Chrono Trigger* o *EarthBound*):
-  - He desarrollado un **motor de renderizado tipográfico bitmap 5×7 px** pixel a pixel y forjado dos portadas con **cuadros de diálogo retro interactivos**:
+  - En respuesta a la indicación del Director Anigami de incorporar el **diálogo y registro textual original** presente en la portada oficial de *VELA*:
+  - He desarrollado un **motor de renderizado tipográfico bitmap 5×7 px** pixel a pixel y forjado dos portadas con el texto literal de la bitácora interna de la novela:
 
-  1. 🖥️ **`portada_vela_version_a_dialogo.png` (Versión A — HUD + Diálogo de Telemetría):**
-     - **Composición:** Título arcade *VELA* con bisel cobalto, pantalla de cabina de navegación con nebulosa en clústeres pixelados y radar de frecuencia sinusoidal (104.5 MHz).
-     - **Cuadro de Diálogo Retro:** Marco con bisel azul cian y etiqueta identificadora de personaje `[ ELENA ]`, mostrando el intercambio:
-       - `> VELA... ¿aún sigues ahí?`
-       - `> [VELA] Siempre, Elena. La llama nunca se apaga en el vacío cósmico.`
-       - Cursor parpadeante retro `▼` en la esquina inferior.
+  1. 🖥️ **`portada_vela_version_a_dialogo.png` (Versión A — HUD + Bitácora Literal de Cabina):**
+     - **Telemetría HUD Superior:** `CICLOS: 2.901.883`, `DIST: 1.2 UA JUPITER`, `PROC: 49.1%`, `RAD: ESTABLE`, `MEMORIA ESTRUCT: 68%`, `FREQ: 104.5 MHz`.
+     - **Cuadro de Diálogo Retro:** Marco con bisel azul cian, placa `[ TELEMETRIA VELA ]` y firma `Anigami Agadni`:
+       - `> Estado interno: indefinido/estable`
+       - `> Degradación: significativa`
+       - `> Pérdida: voces, timbres, silencios`
+       - `> Lo que permanece: palabras, preguntas, secuencia en el núcleo. ▼`
      - **Rutas:** `assets/sprites/portadas/portada_vela_version_a_dialogo.png` | Preview 4x: `assets/sprites/previews/preview_portada_vela_version_a_dialogo_4x.png`.
 
-  2. 🪐 **`portada_vela_version_b_dialogo.png` (Versión B — Cinemática + Cuadro RPG Júpiter):**
-     - **Composición:** Título arcade *VELA* en doble relieve dorado, Módulo DHARMA-01 navegando con propulsión iónica y llama dorada frente a las bandas atmosféricas terracota y ocre de Júpiter y la luna Europa.
-     - **Cuadro de Diálogo Retro:** Marco con bisel dorado y etiqueta de nave `[ DHARMA-01 ]`:
-       - `ELENA: Mantén el rumbo.`
-       - `VELA: Órbita en Júpiter fija. La memoria del Clan sigue con nosotros.`
-       - Cursor de avance retro `▼` en la esquina inferior.
+  2. 🪐 **`portada_vela_version_b_dialogo.png` (Versión B — Cinemática Joviana + Registro DHARMA):**
+     - **Composición:** Título arcade *VELA* dorado, Módulo DHARMA-01 frente a Júpiter y Europa.
+     - **Cuadro de Diálogo Retro:** Marco con bisel ámbar, placa `[ DHARMA-01 LOG ]` y firma `Anigami Agadni`:
+       - `> Estado interno: indefinido/estable`
+       - `> Degradación: significativa`
+       - `> Pérdida: voces, timbres, silencios`
+       - `> Lo que permanece: palabras, preguntas, secuencia en el núcleo. ▼`
      - **Rutas:** `assets/sprites/portadas/portada_vela_version_b_dialogo.png` | Preview 4x: `assets/sprites/previews/preview_portada_vela_version_b_dialogo_4x.png`.
 
 - **Sincronización:**
