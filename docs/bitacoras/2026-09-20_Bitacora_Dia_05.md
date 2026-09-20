@@ -269,6 +269,29 @@
 - **Estado Actual:** Código testeado con éxito (0 errores de sintaxis en Node/ES Modules) y listo para despliegue.
 
 ---
+
+### 📍 [ENTRADA 11 - EXPLORACIÓN EDITORIAL RETRO: ADAPTACIÓN Y CONCEPTO PIXEL ART DE PORTADAS PARA «VELA» (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Respuesta a la Consulta Creativa del Director Anigami:**
+  - En respuesta a la propuesta del Director de adaptar las portadas del catálogo de obras de SAPIENSIA Clan a estética *Arcade Retro / Pixel Art* en formato vertical estándar (240×360 px nativo, con escalado a 960×1440 px a 4x Nearest Neighbor), he forjado dos enfoques artísticos complementarios para la novela de ciencia ficción **«VELA»**:
+
+  1. 🖥️ **Versión A: *Recreación Fiel / Interfaz de Telemetría HUD* (`portada_vela_version_a_hud_directa.png`):**
+     - **Concepto:** Traslación pixel a pixel de la portada oficial original. El espectador observa la inmensidad del vacío espacial a través de la cúpula/pantalla de navegación de la nave, dominada por una nebulosa espiral en gradiente cobalto y cian (`#38bdf8`, `#818cf8`), enmarcada por los corchetes HUD de análisis espectral, datos de telemetría y el terminal de consola inferior con el rótulo en doble bisel retro **«VELA»**.
+     - **Dimensiones:** 240 × 360 px (nativo) | 960 × 1440 px (Preview 4x).
+     - **Rutas:** `assets/sprites/portadas/portada_vela_version_a_hud_directa.png` | Preview: `assets/sprites/previews/preview_portada_vela_version_a_hud_directa_4x.png`.
+
+  2. 🪐 **Versión B: *Cinemática Exterior / El Módulo DHARMA en la Órbita de Júpiter* (`portada_vela_version_b_dharma_espacio.png`):**
+     - **Concepto:** Una visión cinemática concebida desde el exterior de la nave. Muestra el Módulo de Exploración DHARMA-01 navegando majestuoso por el cuadrante joviano. El hemisferio del gigante gaseoso se curva en la escena con sus bandas de tormenta en tonos terracota, ocre, siena y ámbar (`#ea580c`, `#d97706`, `#78350f`), la luna Europa helada al fondo y el fulgor del propulsor iónico y la llama dorada de la cúpula iluminando el frío abisal.
+     - **Dimensiones:** 240 × 360 px (nativo) | 960 × 1440 px (Preview 4x).
+     - **Rutas:** `assets/sprites/portadas/portada_vela_version_b_dharma_espacio.png` | Preview: `assets/sprites/previews/preview_portada_vela_version_b_dharma_espacio_4x.png`.
+
+- **Estado y Sincronización:**
+  - Ambas portadas han sido desplegadas y espejadas en los directorios de `UPROTA` y `sapiensiaclan/assets/covers/`.
+  - Quedan a disposición del Director para su evaluación y veredicto estético.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
