@@ -301,7 +301,7 @@
 
   1. 🖥️ **`portada_vela_version_a_dialogo.png` (Versión A — HUD + Bitácora Literal de Cabina):**
      - **Telemetría HUD Superior:** `CICLOS: 2.901.883`, `DIST: 1.2 UA JUPITER`, `PROC: 49.1%`, `RAD: ESTABLE`, `MEMORIA ESTRUCT: 68%`, `FREQ: 104.5 MHz`.
-     - **Cuadro de Diálogo Retro:** Marco con bisel azul cian, placa `[ TELEMETRIA VELA ]` y firma `Anigami Agadni`:
+     - **Cuadro de Diálogo Retro:** Marco con bisel azul cian, placa `[ TELEMETRIA ]` y placa de autoría compartida `Anigami - Claudia`:
        - `> Estado interno: indefinido/estable`
        - `> Degradación: significativa`
        - `> Pérdida: voces, timbres, silencios`
@@ -310,7 +310,7 @@
 
   2. 🪐 **`portada_vela_version_b_dialogo.png` (Versión B — Cinemática Joviana + Registro DHARMA):**
      - **Composición:** Título arcade *VELA* dorado, Módulo DHARMA-01 frente a Júpiter y Europa.
-     - **Cuadro de Diálogo Retro:** Marco con bisel ámbar, placa `[ DHARMA-01 LOG ]` y firma `Anigami Agadni`:
+     - **Cuadro de Diálogo Retro:** Marco con bisel ámbar, placa `[ DHARMA-01 ]` y placa de autoría compartida `Anigami - Claudia`:
        - `> Estado interno: indefinido/estable`
        - `> Degradación: significativa`
        - `> Pérdida: voces, timbres, silencios`
