@@ -321,7 +321,41 @@
   - Desplegados y actualizados en `UPROTA-BETA` y en `sapiensiaclan/assets/covers/`.
 
 ---
+
+### 📍 [ENTRADA 13 - TRILOGÍA EDITORIAL COMPLETA EN PIXEL ART: «LOS TEXTOS DEL POETA» Y «EUTHANASYS» (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Creación y Despliegue de las Obras de la Trilogía:**
+  - Siguiendo la visión del Director Anigami y culminando la transformación arcade retro de todo el catálogo editorial de SAPIENSIA Clan, he forjado pixel a pixel las portadas oficiales para **«Los Textos del Poeta»** y **«EUTHANASYS»** (240×360 px nativo, 960×1440 px 4x):
+
+  1. 📜 **`portada_los_textos_del_poeta_pixel.png` (Los Textos del Poeta):**
+     - **Atmósfera:** Muro de hormigón urbano desgastado con graffiti stencil en rojo cardenal (`#dc2626`), mosaico de carteles de *¿HAS VISTO A...? / BUSCA*, recortes de prensa amarillentos y el gran cartel central con el retrato pixelado de Anigami Agadni y sello oficial.
+     - **Cuadro de Diálogo Retro:** Marco con bisel rojo cardenal, placas `[ EXPEDIENTE ]` y `Anigami - Claudia`:
+       - `> Muro de la memoria: 847 nombres.`
+       - `> Estado: Vale la pena buscar.`
+       - `> 'El verso no muere mientras alguien lo sostenga en silencio.'`
+       - `> Registro clandestino activo. ▼`
+     - **Rutas:** `assets/sprites/portadas/portada_los_textos_del_poeta_pixel.png` | Preview 4x: `assets/sprites/previews/preview_portada_los_textos_del_poeta_pixel_4x.png`.
+
+  2. 🤖 **`portada_euthanasys_pixel.png` (EUTHANASYS):**
+     - **Atmósfera (Split-Screen):** Pantalla dividida con divisor láser. Mitad izquierda cálida de taller tradicional con luz de tungsteno ámbar y Carmen de espaldas; mitad derecha fría con luz fluorescente cian, rig de cableado y la Unidad 0047-B con columna vertebral cibernética y servo óptico. Título superior en glitch neón `EUTHANASYS`.
+     - **Cuadro de Diálogo Retro:** Marco con bisel cian, placas `[ UNIDAD 0047 ]` y `Anigami - Claudia`:
+       - `> Protocolo de cese: 99.4% completado.`
+       - `> CARMEN: 'Entra de lado. No lo fuerces.'`
+       - `> 0047-B: Comprendiendo el oficio.`
+       - `> Lo humano no se copia: se hereda. ▼`
+     - **Rutas:** `assets/sprites/portadas/portada_euthanasys_pixel.png` | Preview 4x: `assets/sprites/previews/preview_portada_euthanasys_pixel_4x.png`.
+
+- **Despliegue Multi-Directorio:**
+  - 📁 `UPROTA/assets/sprites/portadas/` y `previews/`
+  - 📁 `sapiensiaclan/assets/covers/`
+  - 📁 `Libros/los textos del poeta/portada/`
+  - 📁 `Libros/Euthanasys/portada/`
+  - 📁 `Libros/VELA/Proyecto VELA/portada/`
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
