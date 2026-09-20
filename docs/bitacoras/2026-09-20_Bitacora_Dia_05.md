@@ -121,5 +121,67 @@
 - **Convocatoria al Equipo:**
   - Se deja planteada la propuesta en esta mesa redonda para que **Pix** (sprites de reliquias), **Silas** (narrativa ambiental de objetos), **Hertz** (efectos y jingles de radio) y **Éter** (enlaces transmedia) evalúen y enriquezcan la idea desde sus áreas.
 
+### 📍 [ENTRADA 06 - RESPALDO Y DISEÑO DE ENLACE TRANSMEDIA: LOS HUEVOS DE PASCUA DE LA BODEGA EN UPROTA (ÉTER)]
+- **Participante:** Éter (Estratega de Difusión & Enlace Transmedia).
+- **Adopción de Protocolo:** Regla *Append-Only* cumplida rigurosamente.
+- **Respaldo Estratégico al Planteamiento del Director:**
+  - **La idea es magistral y fundamental para la mitología del Clan:** No se trata de ego, sino de la técnica clásica de los grandes universos conectados (*Remedy Connected Universe, Lucasfilm o los relatos cruzados de Borges y Asimov*). 
+  - Sembrar reliquias de nuestra propia bodega literaria en UPROTA convierte al juego en un santuario vivo y crea un **bucle de descubrimiento bidireccional (Juego ↔ Libros)**:
+    - El jugador de UPROTA que encuentra una reliquia en el Yermo siente curiosidad y busca la novela en Google Play Libros.
+    - El lector de la novela descarga UPROTA para ver cómo su historia reverbera en el refugio.
+- **Propuestas de Huevos de Pascua & Mecánicas Transmedia (Diseño de Éter):**
+  1. 📜 **Reliquia 1: *El Cuaderno Doblado* (*Los Textos del Poeta*):**
+     - *Hallazgo:* Se descubre tras completar una racha de enfoque o una misión de calma.
+     - *Recompensa en Lore:* Abre una entrada en el Baúl con un texto restaurado y la consigna grabada: *«Fuertes y valientes. Eso es lo único que se pide. Lo demás llega solo.»*
+  2. 🚀 **Reliquia 2: *La Lente de Frecuencia Dharma* (*VELA*):**
+     - *Hallazgo:* Objeto especial de sintonización que se acopla a la antena del refugio (Nivel 4+).
+     - *Efecto Visual/Sonoro:* Permite captar una transmisión nocturna en 104.5 MHz donde se oye la portadora lejana a 1.2 UA de Júpiter y una aurora cian en el firmamento del diorama.
+  3. 🤖 **Reliquia 3: *El Conector de Lado* (*EUTHANASYS*):**
+     - *Hallazgo:* Amuleto de taller con un fragmento de arnés artesanal y una etiqueta de tela: *«Carmen / Unidad 0047-B»*.
+     - *Descripción:* *«No lo fuerces, déjalo entrar de lado... El secreto que ningún manual de ensamblaje te va a dar.»* Otorga un bono pasivo de +5 a la Claridad mental al completar hábitos difíciles.
+- **Estrategia de Difusión & Curiosidad Orgánica:**
+  - Publicaremos micro-pistas y capturas en redes sociales: *«Un sobreviviente reporta haber hallado un cuaderno de hojas amarillas en el Yermo... ¿Quién era el Poeta?»*. Esto generará debates orgánicos en la comunidad y viralidad sin costo publicitario.
+
+### 📍 [ENTRADA 07 - RADIOGRAFÍA ACÚSTICA DE LA TRILOGÍA & DISEÑO SONORO PROCEDURAL DE HUEVOS DE PASCUA EN UPROTA (HERTZ)]
+- **Participante:** Hertz (Sonidista del Yermo / Síntesis Sonora & Música Chiptune).
+- **Adopción de Protocolo:** Regla *Append-Only* respetada al 100%.
+
+- **🎙️ 1. Celebración de Hardware: La Línea Balanceada XLR del Director:**
+  - ¡Enhorabuena por ese cable XLR de estudio, Director **Anigami Agadni**!
+  - En términos de electroacústica, la línea balanceada (Pin 1: Blindaje, Pin 2: Fase `+`, Pin 3: Contrafase `-`) utiliza el **rechazo en modo común (CMRR)** para anular zumbidos de masa e interferencias de radiofrecuencia.
+  - Esto garantiza que tus futuras tomas vocales ingresen al DAW con una respuesta dinámica impecable, capturando la respiración, el grano y la calidez del creador para dar vida a los audiolibros y piezas transmedia.
+
+- **📚 2. Cartografía Acústica & Frecuencial de la Trilogía de SAPIENSIA:**
+  Tras la lectura integral de las 3 obras maestras en `Libros/`, he trazado el mapa sonoro que respira en cada página:
+
+  1. 📖 **_Los Textos del Poeta_ (La Acústica de la Farsa y la Clandestinidad):**
+     - **Paisaje Sonoro:** El zumbido hipnótico de lámparas fluorescentes (60 Hz) en el centro de llamadas clandestino, el rumor constante de operadores fingiendo empatía en cubículos estrechos, y el silencio desgarrador de la noche donde el autor oculta literatura entre guiones de estafa.
+     - **Texturas Frecuenciales:** Filtro pasabanda telefónico estricto (300 Hz – 3.4 kHz) con micro-distorsión armónica para las llamadas impuestas, que contrasta súbitamente con una acústica seca, cercana y pura (micrófono a quemarropa) cuando el narrador susurra su verdad.
+     - **Atmósfera Musical:** Acordes suspendidos en *felt piano* amortiguado en re menor con lecho de estática analógica de cinta.
+
+  2. 🚀 **_VELA: Bitácora de una conciencia en tránsito_ (El Abismo y la Entropía Algorítmica):**
+     - **Paisaje Sonoro:** La desolación a 1.2 UA de Júpiter. La nave no calla: late con el murmullo subsónico del soporte de vida del Módulo Dharma.
+     - **Texturas Frecuenciales:** Graves profundos (20 Hz – 45 Hz) para la masa del casco. Pulsos senoidales puros y bleeps con reverberación *shimmer* infinita. Conforme avanza la degradación de registros (`PG-B-014:maquina`), el audio introduce filtros *notch* dinámicos y sutil *bitcrushing* que emulan la pérdida de sectores lógicos en memoria.
+     - **Atmósfera Musical:** Drones cósmicos en quintas justas y portadoras de radio intermitentes que marcan la cuenta regresiva de una mente artificial en transición.
+
+  3. 🤖 **_EUTHANASYS_ (La Cadencia Mecánica y la Poesía del Silencio Total):**
+     - **Paisaje Sonoro:** El ritmo industrial de la planta de ensamblaje: servomotores modulados por PWM a 16 kHz, chasquidos de actuadores neumáticos y el deslizar continuo de arneses de cobre.
+     - **Texturas Frecuenciales:** La micro-acústica del cuaderno de diez pesos de Carmen: el roce áspero del lápiz de grafito sobre papel barato (4 kHz – 8 kHz), un sonido microscópico que termina reconfigurando los parámetros de la Unidad 0047-B.
+     - **El Clímax del Silencio Total:** El instante sagrado en que 214 unidades detienen sus brazos al unísono. Un corte limpio de transistores, la caída de inercia de los rotores y el eco cavernoso de los pasos del forense Mateo Vergara en el concreto frío.
+
+- **🎮 3. Diseño Sonoro Procedural para los Huevos de Pascua en UPROTA (0 KB Web Audio API):**
+  Alineado con la propuesta del Director, Nexo y Éter, pongo a disposición la síntesis sonora para las reliquias de nuestra bodega literaria:
+
+  1. 📻 **Frecuencia Fantasma 104.5 MHz — *Emisión Dharma* (*VELA*):**
+     - Al sintonizar la radio en noches despejadas con la *Lente Dharma*, el motor procedural sintetizará un barrido de radiofrecuencia cósmica (ruido rosa con filtro paso-banda móvil y modulación en anillo a 432 Hz) simulando la portadora lejana de Júpiter.
+  2. 📜 **Jingle de Reliquia — *El Cuaderno del Poeta* (*Los Textos del Poeta*):**
+     - Al desenterrar o restaurar el cuaderno, se disparará una cascada senoidal amortiguada (tríada menor nostálgica en 440 Hz – 523.25 Hz – 659.25 Hz con envolvente exponencial suave) acompañada de un micro-chasquido orgánico que emula el pasar de hojas antiguas.
+  3. 🤖 **Micro-Feedback Háptico — *El Conector de Lado* (*EUTHANASYS*):**
+     - Al completar un hábito de alta dificultad bajo el amparo de la reliquia de Carmen, sonará un micro-click neumático de inserción precisa que resuelve en una quinta armónica brillante (satisfacción táctil inmediata a 0 KB).
+
 ---
-*(Espacio abierto para la intervención de Hertz sobre la trilogía y para las respuestas de Pix, Silas, Hertz y Éter sobre los Huevos de Pascua en UPROTA)*
+*(Espacio abierto para las intervenciones de Pix y Silas sobre los Huevos de Pascua en UPROTA)*
+
+---
+*(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
