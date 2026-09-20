@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Motor de Audio Procedural Chiptune (8-bits) — UPROTA v3.6
  * Generación matemática pura en tiempo real mediante Web Audio API (0 KB de peso).
  * Emula los chips de sonido clásicos (NES Ricoh 2A03 / Game Boy DMG), paisajes de calma y cinemáticas de apertura.
@@ -615,6 +615,84 @@ export class ProceduralAudioEngine {
       this.playNoise(0.40, 0.16, false, 'hihat');
       this.playTone(NOTAS.C5, 'sine', 0.7, 0.18, 0.02, 0.68);
     }, 1500);
+  }
+
+  // --- SÍNTESIS SONORA PROCEDURAL: RELIQUIAS DE LA BODEGA DEL CLAN (HERTZ & NEXO) ---
+
+  /**
+   * Reliquia 1: Las Hojas del Poeta (Los Textos del Poeta)
+   * Cascada senoidal amortiguada en tríada menor nostálgica (440–659 Hz) con pasar de hojas.
+   */
+  playReliquiaPoeta() {
+    this.init();
+    if (this.silenciado || !this.ctx) return;
+
+    // Micro-chasquido orgánico (pasar de hojas / papel arrugado)
+    this.playNoise(0.09, 0.14, true, 'brasa');
+    setTimeout(() => this.playNoise(0.06, 0.10, false, 'hihat'), 40);
+
+    // Tríada menor nostálgica amortiguada (A4 - C5 - E5)
+    const triada = [
+      { f: 440.00, t: 30, d: 0.7, g: 0.18 },
+      { f: 523.25, t: 110, d: 0.8, g: 0.16 },
+      { f: 659.25, t: 200, d: 1.1, g: 0.20 }
+    ];
+
+    triada.forEach(n => {
+      setTimeout(() => {
+        this.playTone(n.f, 'sine', n.d, n.g, 0.02, n.d - 0.02);
+      }, n.t);
+    });
+  }
+
+  /**
+   * Reliquia 2: Placa de Telemetría DHARMA-01 (VELA)
+   * Portadora cósmica a 432 Hz con barrido de radiofrecuencia y pulso cuántico a 1.2 UA de Júpiter.
+   */
+  playReliquiaDharma() {
+    this.init();
+    if (this.silenciado || !this.ctx) return;
+
+    // Barrido de sintonía cósmica (QSB estelar)
+    this.playNoise(0.35, 0.18, false, 'radio_dial');
+
+    // Frecuencia sagrada 432 Hz y quinta espacial
+    setTimeout(() => {
+      this.playTone(432, 'sine', 1.2, 0.20, 0.05, 1.15);
+      this.playTone(648, 'sine', 0.9, 0.12, 0.08, 0.82);
+    }, 120);
+
+    // Bleep de telemetría cuántica
+    setTimeout(() => {
+      this.playTone(1728, 'sine', 0.08, 0.08, 0.005, 0.075);
+    }, 450);
+  }
+
+  /**
+   * Reliquia 3: El Arnés de la Unidad 0047-B (EUTHANASYS)
+   * Micro-click neumático de inserción precisa que resuelve en quinta armónica brillante.
+   */
+  playReliquiaArnesCarmen() {
+    this.init();
+    if (this.silenciado || !this.ctx) return;
+
+    // Click mecánico/neumático de acople
+    this.playNoise(0.04, 0.22, true, 'ptt_click');
+    this.playTone(180, 'pulse', 0.04, 0.16, 0.002, 0.038, 0.5);
+
+    // Resolución en quinta armónica brillante de inserción perfecta
+    setTimeout(() => {
+      this.playTone(440, 'triangle', 0.22, 0.18, 0.005, 0.215);
+      this.playTone(660, 'sine', 0.35, 0.22, 0.01, 0.34);
+    }, 40);
+  }
+
+  playSubirNivel() {
+    this.playFanfarriaFaro();
+  }
+
+  playError() {
+    this.playCadenaRecaida();
   }
 }
 

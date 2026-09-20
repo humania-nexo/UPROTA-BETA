@@ -3,7 +3,7 @@
  * Caché local-first para funcionamiento 100% offline.
  */
 
-const CACHE_NAME = 'uprota-cache-v4.1';
+const CACHE_NAME = 'uprota-cache-v4.2';
 const ASSETS = [
   './',
   './index.html',
@@ -62,6 +62,7 @@ const ASSETS = [
   './assets/sprites/items/item_hojas_poeta.png',
   './assets/sprites/items/item_placa_dharma.png',
   './assets/sprites/items/item_arnes_carmen.png',
+  './assets/sprites/previews/preview_reliquias_trilogia_sapiensia_4x.png',
   './assets/sprites/items/ui_capsula_tiempo_sellada.png',
   './assets/sprites/items/item_trailer_remolque.png',
   './assets/sprites/ui/ui_transporte_bici_trailer_combo.png',
@@ -106,6 +107,7 @@ const ASSETS = [
   './js/modulos/modo_fiesta.js',
   './js/modulos/splash_screen.js',
   './js/data/items_botin.js',
+  './js/data/reliquias_bodega.js',
   './js/data/sabiduria_textos.js',
   './js/data/radio_transmisiones.js',
   './js/data/dialogos_lutier.js',

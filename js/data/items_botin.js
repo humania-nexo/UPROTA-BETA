@@ -8,7 +8,8 @@ export const CAT_BOTIN = {
   COMUN: 'comun',
   POCO_COMUN: 'poco_comun',
   RARO: 'raro',
-  MUY_RARO: 'muy_raro_trueque'
+  MUY_RARO: 'muy_raro_trueque',
+  RELIQUIA: 'reliquia_bodega'
 };
 
 export const ITEMS_BOTIN = [
@@ -74,5 +75,10 @@ export const ITEMS_BOTIN = [
   { id: 'item_106', nombre: 'Rollo de venda elástica estéril', categoria: CAT_BOTIN.MUY_RARO, pesoKg: 0.1, valorTrueque: 35, desc: 'Sujeta apósitos y entablilla torceduras.' },
   { id: 'item_107', nombre: 'Tres balas calibre .22 intactas', categoria: CAT_BOTIN.MUY_RARO, pesoKg: 0.03, valorTrueque: 60, desc: 'Defensa disuasoria del refugio ante saqueadores. No se malgastan.' },
   { id: 'item_108', nombre: 'Navaja suiza multiusos original', categoria: CAT_BOTIN.MUY_RARO, pesoKg: 0.12, valorTrueque: 55, desc: 'Tijeras, punzón, sierra pequeña y abrelatas en una sola pieza.' },
-  { id: 'item_109', nombre: 'Tubo de silicón sellador industrial', categoria: CAT_BOTIN.MUY_RARO, pesoKg: 0.35, valorTrueque: 35, desc: 'Sella grietas en tuberías y techos contra la lluvia.' }
+  { id: 'item_109', nombre: 'Tubo de silicón sellador industrial', categoria: CAT_BOTIN.MUY_RARO, pesoKg: 0.35, valorTrueque: 35, desc: 'Sella grietas en tuberías y techos contra la lluvia.' },
+
+  // --- RELIQUIAS DE LA BODEGA DEL CLAN (SAPIENSIA) ---
+  { id: 'reliquia_poeta', nombre: 'Las Hojas del Poeta', categoria: CAT_BOTIN.RELIQUIA, pesoKg: 0.1, valorTrueque: 100, sprite: 'assets/sprites/items/item_hojas_poeta.png', desc: 'Manuscrito clandestino rescatado. +1 Permanente a Espíritu.' },
+  { id: 'reliquia_dharma', nombre: 'Placa de Telemetría DHARMA-01', categoria: CAT_BOTIN.RELIQUIA, pesoKg: 0.3, valorTrueque: 150, sprite: 'assets/sprites/items/item_placa_dharma.png', desc: 'Aleación aeroespacial a 1.2 UA de Júpiter. +1 Permanente a Mente / Desbloquea Transmisión 104.5 MHz.' },
+  { id: 'reliquia_euthanasys', nombre: 'Arnés de la Unidad 0047-B', categoria: CAT_BOTIN.RELIQUIA, pesoKg: 0.4, valorTrueque: 120, sprite: 'assets/sprites/items/item_arnes_carmen.png', desc: 'Conector automotriz artesanal de Carmen. +1 Permanente a Taller.' }
 ];

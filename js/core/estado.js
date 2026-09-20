@@ -9,6 +9,7 @@ import { NIVELES_REFUGIO } from '../data/niveles_refugio.js';
 import { MisionesEngine } from '../mundo/misiones_engine.js';
 import { CronologiaEngine } from '../mundo/cronologia_npcs.js';
 import { OBJETOS_SABIDURIA } from '../data/sabiduria_textos.js';
+import { RELIQUIAS_BODEGA } from '../data/reliquias_bodega.js';
 
 export class EstadoApp {
   static CLAVE_ESTADO = 'uprota_estado_v1';
@@ -71,6 +72,7 @@ export class EstadoApp {
       hogarDesbloqueado: false,
       objetosSabiduriaActivos: [], // Se desbloquea en Día 60 con la Biblia
       objetosSabiduriaInventario: [],
+      reliquiasBodegaDesbloqueadas: ['reliquia_poeta', 'reliquia_dharma', 'reliquia_euthanasys'],
       sabiduriaVistoHoy: false,
       misionDespachadaHoy: null,        // Misión enviada hoy (en curso)
       informeMisionPendiente: null,     // Informe de expedición listo para ver
@@ -166,7 +168,13 @@ export class EstadoApp {
       return { id, pilar: obj ? obj.pilar : 'espiritu' };
     });
 
-    return PilaresEngine.calcularEquilibrio(this.datos.sendas, objetosActivosData);
+    // Mapeo dinámico de reliquias de la bodega desbloqueadas
+    const reliquiasData = (this.datos.reliquiasBodegaDesbloqueadas || []).map(id => {
+      const rel = RELIQUIAS_BODEGA[id];
+      return { id, pilar: rel ? rel.pilarBeneficio : 'espiritu' };
+    });
+
+    return PilaresEngine.calcularEquilibrio(this.datos.sendas, [...objetosActivosData, ...reliquiasData]);
   }
 
   get infoNivelRefugio() {

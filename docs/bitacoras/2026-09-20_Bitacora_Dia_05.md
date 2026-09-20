@@ -233,5 +233,42 @@
 - **Estado Actual:** Assets gráficos entregados y listos en `assets/sprites/items/` para que Nexo los indexe en el inventario y mecánicas de UPROTA.
 
 ---
+
+### 📍 [ENTRADA 10 - IMPLEMENTACIÓN DE CÓDIGO, SÍNTESIS SONORA Y ENLACE TRANSMEDIA DE LAS 3 RELIQUIAS EN UPROTA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Integración de Entregas del Clan (Silas, Hertz, Pix, Éter & Nexo):**
+  - Con los sprites de 24×24 px forjados por **Pix** (Entrada 09), las fórmulas matemáticas de Web Audio API diseñadas por **Hertz** (Entrada 07), el lore y textos de inventario de **Silas** (Entrada 08) y la visión transmedia de **Éter** y el Director **Anigami** (Entradas 04, 05 y 06), he completado la implementación integral de la **Bodega del Clan** en el código fuente de **UPROTA**:
+
+  1. 📦 **Dataset Oficial de Reliquias (`js/data/reliquias_bodega.js` & `js/data/items_botin.js`):**
+     - Creado el módulo maestro `RELIQUIAS_BODEGA` con los 3 objetos de la trilogía:
+       - 📜 `reliquia_poeta` (*Las Hojas del Poeta*): +1 Permanente a Espíritu.
+       - 🚀 `reliquia_dharma` (*Placa de Telemetría DHARMA-01*): +1 Permanente a Mente.
+       - 🤖 `reliquia_euthanasys` (*Arnés de la Unidad 0047-B*): +1 Permanente a Taller.
+     - Añadida la categoría `CAT_BOTIN.RELIQUIA` en `js/data/items_botin.js` con sus pesos, valores de trueque y rutas a los sprites de Pix.
+
+  2. 🎧 **Síntesis Sonora Procedural a 0 KB (`js/core/audio_procedural.js`):**
+     - Programados los tres osciladores procedurales según las especificaciones exactas de Hertz:
+       - `playReliquiaPoeta()`: Cascada senoidal en tríada menor (440–659 Hz) con envolvente suave y micro-chasquido orgánico de hojas.
+       - `playReliquiaDharma()`: Barrido de radiofrecuencia cósmica con tono sagrado a 432 Hz y bleep cuántico a 1728 Hz.
+       - `playReliquiaArnesCarmen()`: Micro-click neumático de inserción que resuelve en quinta armónica (440–660 Hz).
+
+  3. 📻 **Transmisión Especial #8 en Onda Corta (`js/data/radio_transmisiones.js`):**
+     - Añadida la emisión fantasma en 104.5 MHz: *«Emisión DHARMA-01 (1.2 UA tras Júpiter)»*, con el diálogo entre Elena (Sierra-1) y la voz serena de VELA transmitiendo que la memoria no se pierde, solo cambia de medio.
+
+  4. 🏡 **Interfaz y Modal de Inspección en El Hogar (`js/modulos/vista_hogar.js`):**
+     - Creada la **Sección 4: La Bodega del Clan (Reliquias del Viejo Mundo)** en la vista del Hogar.
+     - Cada tarjeta permite abrir el modal de inspección en alta resolución, escuchar el eco acústico procedural y viajar directamente al catálogo editorial de SAPIENSIA Clan.
+
+  5. ⚖️ **Impacto en la Torta de Equilibrio de 21 Días (`js/core/estado.js`):**
+     - Conectadas las reliquias activas al cálculo reactivo de `infoPilares`, sumando sus puntos permanentes a la ventana móvil y facilitando la conquista de la **Torta Dorada**.
+
+  6. ⚡ **Service Worker PWA (`sw.js`):**
+     - Elevada la versión a `uprota-cache-v4.2`, cacheando los nuevos módulos y previews para ejecución 100% offline.
+
+- **Estado Actual:** Código testeado con éxito (0 errores de sintaxis en Node/ES Modules) y listo para despliegue.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 

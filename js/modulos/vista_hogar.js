@@ -6,6 +6,7 @@
 import { FRASES_HOGAR } from '../data/frases_estoicas.js';
 import { DISPARADORES_MICRO_JOURNALING, PLANTILLAS_CAPSULAS_TIEMPO } from '../data/cuaderno_naufrago_textos.js';
 import { OBJETOS_SABIDURIA } from '../data/sabiduria_textos.js';
+import { RELIQUIAS_BODEGA } from '../data/reliquias_bodega.js';
 import { SabiduriaDiariaEngine } from '../mundo/sabiduria_diaria.js';
 import { audioProcedural } from '../core/audio_procedural.js';
 import { estadoApp } from '../core/estado.js';
@@ -230,7 +231,65 @@ export class VistaHogar {
         </div>
       </div>
 
-      <!-- SECCIÓN 4: LAS 4 CAPAS DE VALIDACIÓN HISTÓRICAS -->
+      <!-- SECCIÓN 4: LA BODEGA DEL CLAN (3 GRANDES RELIQUIAS DE LA TRILOGÍA SAPIENSIA) -->
+      <div class="card-yermo" style="border-left: 3px solid var(--oro-torta); background: rgba(245, 158, 11, 0.07); padding: 14px; margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <img src="assets/sprites/items/item_hojas_poeta.png" alt="Bodega" class="pixel-icon icon-24" style="width: 24px; height: 24px; image-rendering: pixelated;">
+            <div>
+              <h3 style="color: var(--oro-torta-glow); font-size: 0.95rem; margin: 0;">La Bodega del Clan: Reliquias del Viejo Mundo</h3>
+              <span style="font-size: 0.70rem; color: var(--text-muted); font-family: var(--font-mono);">Interconexión Transmedia de la Trilogía SAPIENSIA</span>
+            </div>
+          </div>
+          <span style="background: rgba(245, 158, 11, 0.2); border: 1px solid var(--oro-torta); color: var(--oro-torta-glow); font-size: 0.65rem; font-weight: 800; padding: 2px 6px; border-radius: 10px; font-family: var(--font-mono);">
+            3 / 3 DESCUBIERTAS
+          </span>
+        </div>
+
+        <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 12px;">
+          Reliquias rescatadas de las 3 novelas oficiales del Clan. Cada reliquia aporta un <strong>+1 permanente a su Pilar</strong> en la Torta de 21 días y desbloquea ecos acústicos procedurales.
+        </p>
+
+        <!-- LISTA DE LAS 3 RELIQUIAS -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          ${Object.values(RELIQUIAS_BODEGA).map(rel => {
+            const pilarColor = rel.pilarBeneficio === 'espiritu' ? '#c084fc' : rel.pilarBeneficio === 'mente' ? '#38bdf8' : '#4ade80';
+            const pilarBg = rel.pilarBeneficio === 'espiritu' ? 'rgba(126, 34, 206, 0.25)' : rel.pilarBeneficio === 'mente' ? 'rgba(3, 105, 161, 0.25)' : 'rgba(21, 128, 61, 0.25)';
+            const pilarIcon = rel.pilarBeneficio === 'espiritu' ? '🔥' : rel.pilarBeneficio === 'mente' ? '📜' : '🛠️';
+
+            return `
+              <div class="card-yermo btn-inspeccionar-reliquia" data-id="${rel.id}" style="background: rgba(0,0,0,0.5); border: 1px solid rgba(245, 158, 11, 0.3); padding: 10px; cursor: pointer; transition: transform 0.15s ease, border-color 0.15s ease;" title="Toca para escuchar e inspeccionar esta reliquia">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="${rel.sprite}" alt="${rel.nombre}" class="pixel-icon icon-24" style="width: 28px; height: 28px; image-rendering: pixelated;">
+                    <div>
+                      <div style="display: flex; align-items: center; gap: 6px;">
+                        <strong style="color: #fff; font-size: 0.88rem;">${rel.nombre}</strong>
+                      </div>
+                      <span style="font-size: 0.70rem; color: #f59e0b; font-style: italic;">${rel.obra}</span>
+                    </div>
+                  </div>
+                  <button class="btn-yermo-secondary" style="font-size: 0.68rem; padding: 3px 8px; border-color: rgba(245, 158, 11, 0.4); color: #fef08a; pointer-events: none;">
+                    🔍 Inspeccionar
+                  </button>
+                </div>
+
+                <div style="margin-bottom: 6px;">
+                  <span style="display: inline-flex; align-items: center; gap: 4px; background: ${pilarBg}; border: 1px solid ${pilarColor}; color: ${pilarColor}; font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 10px; font-family: var(--font-mono);">
+                    ${pilarIcon} ${rel.bonoTexto}
+                  </span>
+                </div>
+
+                <p style="font-size: 0.74rem; color: var(--text-secondary); line-height: 1.35; margin: 0;">
+                  "${rel.desc}"
+                </p>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+
+      <!-- SECCIÓN 5: LAS 4 CAPAS DE VALIDACIÓN HISTÓRICAS -->
       <div class="hogar-wrap">
         <!-- CAPA 1: VALIDACIÓN -->
         <div class="hogar-capa-box">
@@ -356,7 +415,18 @@ export class VistaHogar {
       });
     });
 
-    // 6. Botón de Ayuda: Objetos de Sabiduría
+    // 6. Inspeccionar Reliquias de la Bodega del Clan
+    this.contenedor.querySelectorAll('.btn-inspeccionar-reliquia').forEach(card => {
+      card.addEventListener('click', () => {
+        const relId = card.dataset.id;
+        const rel = RELIQUIAS_BODEGA[relId];
+        if (rel) {
+          this.mostrarModalInspeccionarReliquia(rel);
+        }
+      });
+    });
+
+    // 7. Botón de Ayuda: Objetos de Sabiduría
     const btnAyudaSabiduria = this.contenedor.querySelector('#btn-ayuda-sabiduria');
     if (btnAyudaSabiduria) {
       btnAyudaSabiduria.addEventListener('click', () => {
@@ -365,7 +435,7 @@ export class VistaHogar {
       });
     }
 
-    // 7. Volver al Tablón
+    // 8. Volver al Tablón
     const btnVolver = this.contenedor.querySelector('#btn-volver-tablon-desde-hogar');
     if (btnVolver) {
       btnVolver.addEventListener('click', () => {
@@ -500,6 +570,84 @@ export class VistaHogar {
     btnCerrar?.addEventListener('click', () => {
       modalContainer.classList.add('hidden');
       audioProcedural.playClick();
+    });
+  }
+
+  mostrarModalInspeccionarReliquia(rel) {
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content');
+    if (!modalContainer || !modalContent) return;
+
+    // Disparar la síntesis procedural creada por Hertz
+    if (audioProcedural[rel.audioMethod]) {
+      audioProcedural[rel.audioMethod]();
+    }
+
+    const pilarColor = rel.pilarBeneficio === 'espiritu' ? '#c084fc' : rel.pilarBeneficio === 'mente' ? '#38bdf8' : '#4ade80';
+    const pilarBg = rel.pilarBeneficio === 'espiritu' ? 'rgba(126, 34, 206, 0.25)' : rel.pilarBeneficio === 'mente' ? 'rgba(3, 105, 161, 0.25)' : 'rgba(21, 128, 61, 0.25)';
+    const pilarIcon = rel.pilarBeneficio === 'espiritu' ? '🔥' : rel.pilarBeneficio === 'mente' ? '📜' : '🛠️';
+
+    modalContent.innerHTML = `
+      <div class="info-modal-wrap" style="text-align: center; padding: 20px 14px; max-height: 85vh; overflow-y: auto;">
+        <button class="modal-close-btn" id="btn-cerrar-modal-reliquia" style="position: absolute; top: 12px; right: 12px;">&times;</button>
+        
+        <div style="margin-bottom: 12px; display: flex; justify-content: center;">
+          <img src="${rel.preview4x || rel.sprite}" alt="${rel.nombre}" style="width: 80px; height: 80px; image-rendering: pixelated; border: 2px solid var(--oro-torta); border-radius: var(--radius-md); padding: 8px; background: #08080a; box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);">
+        </div>
+
+        <span style="font-size: 0.72rem; color: #f59e0b; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 2px;">
+          ${rel.obra}
+        </span>
+        <h3 style="color: #fff; font-size: 1.15rem; margin: 0 0 4px 0;">${rel.nombre}</h3>
+        <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 12px;">${rel.subtitulo}</span>
+
+        <div style="margin-bottom: 14px;">
+          <span style="display: inline-flex; align-items: center; gap: 4px; background: ${pilarBg}; border: 1px solid ${pilarColor}; color: ${pilarColor}; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; font-family: var(--font-mono);">
+            ${pilarIcon} ${rel.bonoTexto}
+          </span>
+        </div>
+
+        <div class="card-yermo" style="background: rgba(0,0,0,0.5); text-align: left; padding: 12px; border-left: 3px solid var(--oro-torta); margin-bottom: 12px;">
+          <div style="font-size: 0.70rem; color: var(--oro-torta); font-weight: 700; text-transform: uppercase; margin-bottom: 4px;">
+            TESTIMONIO DE INVENTARIO:
+          </div>
+          <p style="font-size: 0.80rem; color: #e7e5e4; line-height: 1.45; margin: 0;">
+            "${rel.desc}"
+          </p>
+        </div>
+
+        <div class="card-yermo" style="background: rgba(0,0,0,0.5); text-align: left; padding: 12px; border-left: 3px solid #38bdf8; margin-bottom: 14px;">
+          <div style="font-size: 0.70rem; color: #38bdf8; font-weight: 700; text-transform: uppercase; margin-bottom: 4px;">
+            REFLEXIÓN DE DON CHUI:
+          </div>
+          <p style="font-size: 0.78rem; color: #fef08a; line-height: 1.45; margin: 0; font-style: italic;">
+            ${rel.reflexionDonChui}
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 8px; margin-top: 14px;">
+          <button id="btn-reproducir-audio-reliquia" class="btn-yermo-secondary" style="flex: 1; padding: 10px; font-size: 0.78rem; display: flex; align-items: center; justify-content: center; gap: 6px;">
+            🔊 Eco Acústico (0 KB)
+          </button>
+          <a href="${rel.enlaceSapiensia}" target="_blank" rel="noopener" class="btn-yermo-primary" style="flex: 1.4; padding: 10px; font-size: 0.78rem; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; font-weight: bold; background: #d97706; border: none; color: #fff; border-radius: var(--radius-sm);">
+            📖 Conocer Obra en SAPIENSIA
+          </a>
+        </div>
+      </div>
+    `;
+
+    modalContainer.classList.remove('hidden');
+
+    const cerrar = () => {
+      audioProcedural.playClick();
+      modalContainer.classList.add('hidden');
+    };
+
+    modalContent.querySelector('#btn-cerrar-modal-reliquia')?.addEventListener('click', cerrar);
+    modalContent.querySelector('#btn-reproducir-audio-reliquia')?.addEventListener('click', () => {
+      if (audioProcedural[rel.audioMethod]) {
+        audioProcedural[rel.audioMethod]();
+      }
     });
   }
 }

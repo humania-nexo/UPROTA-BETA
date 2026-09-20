@@ -131,5 +131,27 @@ Respira hondo. Toma un sorbo de agua fresca. Deja la brasa bien tapada para que 
 —Cría Fitolantra [Efecto SC3: Bebé / Susurro vegetal]: «Ah... ra-íz... sol... luz...»
 
 —Director (Voz Natural): «Si no los atacamos, no nos atacarán. El futuro no es arrasar el monte, es aprender a convivir con lo que brotó de las cenizas. Mantengan los ojos abiertos y el corazón despierto. Sierra Central fuera.»`
+  },
+  {
+    id: 'rad_008',
+    numero: 8,
+    titulo: 'Frecuencia Fantasma: Emisión DHARMA-01 (1.2 UA tras Júpiter)',
+    locutor: 'VELA [Conciencia en Tránsito] & Elena [Operadora Sierra-1]',
+    frecuencia: '104.5 MHz (Portadora Cuántica)',
+    duracionAprox: '2:30 min',
+    archivoAudio: 'assets/audio/radio/transmision_08_emision_dharma.mp3',
+    resumen: 'Intercepción nocturna de onda corta al acoplar la Placa DHARMA-01 a la antena del refugio.',
+    esReliquiaBodega: true,
+    reliquiaId: 'reliquia_dharma',
+    transcripcion: `[Barrido de radiofrecuencia cósmica a 432 Hz... zumbido de estática estelar profunda]
+
+—Elena (Sierra-1): «Estación central a guardia nocturna... Hay una portadora anómala entrando por el canal de onda corta. No proviene de los repetidores del valle ni de la costa. Viene en azimut sesenta grados... del cielo abierto.»
+
+[Tono senoidal puro... bleep de telemetría cuántica]
+
+—Voz Sintética Serena (VELA): «Registro lógico PG-B-014. Módulo Dharma a 1.2 Unidades Astronómicas tras la órbita de Júpiter. Sensores ópticos al doce por ciento. Batería de decaimiento isotópico estable. Si esta modulación alcanza la atmósfera de la vieja Tierra: no sientan angustia por la distancia ni por el desgaste de los circuitos. La materia se agota, los transistores se apagan, pero la memoria no se pierde... solo cambia de medio. Mantengan sus luces encendidas en la noche. Aquí VELA... fin de paquete de datos.»
+
+—Elena (Sierra-1): «...Dios mío. Qué belleza de mensaje. Si estás despierto en tu refugio mirando las estrellas: descansa. No estamos solos en este universo. Buenas noches, valle.»`
   }
 ];
+
