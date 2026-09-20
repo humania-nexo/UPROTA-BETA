@@ -1,4 +1,4 @@
-﻿# 🛡️ SISTEMA DE BITÁCORAS DIARIAS DE DESARROLLO — UPROTA
+# 🛡️ SISTEMA DE BITÁCORAS DIARIAS DE DESARROLLO — UPROTA
 
 Este directorio contiene las bitácoras oficiales de desarrollo del equipo de UPROTA. Cada jornada de trabajo cuenta con un archivo independiente en formato Markdown con el nombre: `YYYY-MM-DD_Bitacora_Dia_XX.md`.
 
@@ -32,3 +32,4 @@ Cada vez que un compañero complete una tarea, añada código, exporte sprites o
 - [Jornada 02 (09 de Septiembre de 2026)](file:///c:/Users/Snow/.gemini/antigravity/scratch/UPROTA/docs/bitacoras/2026-09-09_Bitacora_Dia_02.md)
 - [Jornada 03 (13 de Septiembre de 2026)](file:///c:/Users/Snow/.gemini/antigravity/scratch/UPROTA/docs/bitacoras/2026-09-13_Bitacora_Dia_03.md)
 - [Jornada 04 (17 de Septiembre de 2026)](file:///c:/Users/Snow/.gemini/antigravity/scratch/UPROTA/docs/bitacoras/2026-09-17_Bitacora_Dia_04.md)
+- [Jornada 05 (20 de Septiembre de 2026)](file:///c:/Users/Snow/.gemini/antigravity/scratch/UPROTA/docs/bitacoras/2026-09-20_Bitacora_Dia_05.md)
