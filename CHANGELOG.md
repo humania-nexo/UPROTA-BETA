@@ -4,6 +4,15 @@ Todos los cambios relevantes de la arquitectura y desarrollo de UPROTA quedan re
 
 ---
 
+## [3.8.0-reliquias-bodega-clan] - 2026-09-20
+### Añadido por Nexo (Ingeniero Principal) & Clan SAPIENSIA
+- **La Bodega del Clan (Reliquias de la Trilogía):** Interconexión transmedia de *Los Textos del Poeta* (`reliquia_poeta`), *VELA* (`reliquia_dharma`) y *EUTHANASYS* (`reliquia_euthanasys`).
+- **Sprites Pixel Art Oficiales (24×24 px / 96×96 px):** Forjados por Pix para las 3 reliquias.
+- **Síntesis Sonora Procedural Web Audio API (0 KB):** Diseñada por Hertz con cascada senoidal en tríada menor, portadora cósmica a 432 Hz y click neumático armónico.
+- **Frecuencia Fantasma 104.5 MHz (Transmisión #8):** Emisión DHARMA-01 a 1.2 UA tras Júpiter con Elena y VELA.
+- **Modal de Inspección Interactivo en El Hogar:** Visualizador de reliquias con audio en tiempo real y enlaces a las novelas de SAPIENSIA Clan.
+- **Unificación de Versión UI:** Actualizada la versión del sistema a **v3.8 (Build 2026.09.20-prod)** en Intro Splash Screen, Centro de Ayuda PWA y Service Worker (`uprota-cache-v4.2`).
+
 ## [3.5.0-sapiensia-transmedia-donaciones] - 2026-09-13
 ### Añadido por Nexo (Ingeniero Principal) & Clan
 - **Rebranding Oficial:** Formalización del estudio indie como **SAPIENSIA Clan** (*Sapiens + IA*).

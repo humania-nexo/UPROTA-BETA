@@ -1,5 +1,5 @@
 /**
- * Archivo Principal de Entrada (Bootstrap y Orquestación) — UPROTA v3.5
+ * Archivo Principal de Entrada (Bootstrap y Orquestación) — UPROTA v3.8
  */
 
 import { estadoApp } from './core/estado.js';
@@ -21,7 +21,7 @@ class App {
   }
 
   async iniciar() {
-    console.log('Iniciando UPROTA v3.6 (SAPIENSIA Clan)...');
+    console.log('Iniciando UPROTA v3.8 (SAPIENSIA Clan)...');
 
     // Inicializar listener de instalación PWA
     ModalCentroAyuda.init();

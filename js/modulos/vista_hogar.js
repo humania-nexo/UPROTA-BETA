@@ -1,6 +1,6 @@
 /**
  * Vista: El Hogar (Validación radical sin culpa, Cuaderno del Náufrago & Cápsulas de Tiempo)
- * UPROTA v3.0 — Silas, Pix, Hertz & Nexo
+ * UPROTA v3.8 — SAPIENSIA Clan
  */
 
 import { FRASES_HOGAR } from '../data/frases_estoicas.js';

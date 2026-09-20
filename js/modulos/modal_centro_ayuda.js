@@ -4,7 +4,7 @@ import { estadoApp } from '../core/estado.js';
 
 /**
  * Modal: Centro de Ayuda, Información, Instalador PWA, FAQ y Créditos Oficiales
- * UPROTA v2.9 — Equipo Humano + IA
+ * UPROTA v3.8 — SAPIENSIA Clan (Sapiens + IA)
  */
 
 export class ModalCentroAyuda {
@@ -45,7 +45,7 @@ export class ModalCentroAyuda {
           <span style="font-size: 1.3rem;">ℹ️</span>
           <div>
             <h3 style="color: var(--text-primary); font-size: 1.05rem; margin: 0;">Centro de Información & Ayuda</h3>
-            <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--oro-torta);">UPROTA v3.5 &bull; Build 2026.09.13</span>
+            <span style="font-size: 0.7rem; font-family: var(--font-mono); color: var(--oro-torta);">UPROTA v3.8 &bull; Build 2026.09.20</span>
           </div>
         </div>
 
@@ -396,7 +396,7 @@ export class ModalCentroAyuda {
             <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">
               ¿Encontraste un fallo o tienes una idea para mejorar el refugio? Escríbenos directamente a la estación técnica de <strong>SAPIENSIA Clan</strong>:
             </p>
-            <a href="mailto:antropoware@gmail.com?subject=[UPROTA%20v3.4]%20Reporte%20o%20Feedback&body=Hola%20SAPIENSIA%20Clan%2C%0A%0A%5BDescribe%20aqu%C3%AD%20tu%20observaci%C3%B3n%2C%20fallo%20o%20sugerencia%5D%0A" class="btn-yermo-primary" style="display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 8px; font-size: 0.82rem; background: #0284c7; color: #fff; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-sizing: border-box;">
+            <a href="mailto:antropoware@gmail.com?subject=[UPROTA%20v3.8]%20Reporte%20o%20Feedback&body=Hola%20SAPIENSIA%20Clan%2C%0A%0A%5BDescribe%20aqu%C3%AD%20tu%20observaci%C3%B3n%2C%20fallo%20o%20sugerencia%5D%0A" class="btn-yermo-primary" style="display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 8px; font-size: 0.82rem; background: #0284c7; color: #fff; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-sizing: border-box;">
               <span>✉️ Reportar a antropoware@gmail.com</span>
             </a>
           </div>
@@ -645,10 +645,10 @@ export class ModalCentroAyuda {
           <div class="card-yermo" style="background: rgba(0,0,0,0.2);">
             <h4 style="font-size: 0.84rem; color: var(--text-primary); margin-bottom: 6px;">⚙️ Estado Técnico del Sistema:</h4>
             <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); line-height: 1.6;">
-              <div>• <strong>Versión:</strong> UPROTA v3.5 (SAPIENSIA Clan)</div>
-              <div>• <strong>Compilación:</strong> 2026.09.13-prod</div>
+              <div>• <strong>Versión:</strong> UPROTA v3.8 (SAPIENSIA Clan)</div>
+              <div>• <strong>Compilación:</strong> 2026.09.20-prod</div>
               <div>• <strong>Almacenamiento:</strong> IndexedDB Local (Persistente)</div>
-              <div>• <strong>Caché Offline:</strong> Service Worker Activo (v3.5)</div>
+              <div>• <strong>Caché Offline:</strong> Service Worker Activo (v4.2)</div>
               <div>• <strong>Motor de Audio:</strong> Web Audio API Chiptune (0 KB)</div>
             </div>
           </div>

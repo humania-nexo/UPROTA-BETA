@@ -1,5 +1,5 @@
 /**
- * Motor de Audio Procedural Chiptune (8-bits) — UPROTA v3.6
+ * Motor de Audio Procedural Chiptune (8-bits) — UPROTA v3.8
  * Generación matemática pura en tiempo real mediante Web Audio API (0 KB de peso).
  * Emula los chips de sonido clásicos (NES Ricoh 2A03 / Game Boy DMG), paisajes de calma y cinemáticas de apertura.
  * 
