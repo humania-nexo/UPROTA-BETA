@@ -354,9 +354,28 @@
   - 📁 `Libros/VELA/Proyecto VELA/portada/`
 
 ---
+
+### 📍 [ENTRADA 14 - REDISEÑO Y RECONSTRUCCIÓN FIEL: PORTADA PIXEL ART DE «LOS TEXTOS DEL POETA» (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Ejecución de Correcciones Directas del Director Anigami:**
+  - En estricta concordancia con las indicaciones del Director tras la inspección comparativa de la portada original de *Los Textos del Poeta*:
+  
+  1. 🚫 **Eliminación Total de la Caja de Diálogo RPG:** Se suprimió la caja de texto retro de la parte inferior para devolverle al lienzo su verticalidad y autenticidad visual cruda.
+  2. 🔴 **Título en Línea Única Corrida:** El rótulo en graffiti stencil **`LOS TEXTOS DEL POETA`** ha sido reubicado en la parte superior en una sola línea continua, con tipografía stencil artesanal, goteo de pintura roja (`#d7191c`) y micro-salpicaduras de spray sobre el yeso.
+  3. 🧱 **Pared Urbana & Texturas:** Textura de estuco y hormigón con iluminación diagonal fuerte (rayo de sol incidente), grietas arquitectónicas reales, desconchados y hojas secas / brotes verdes en la junta inferior con el suelo.
+  4. 📋 **Mosaico Orgánico de Desaparecidos & Cartones:**
+     - Se eliminó el cartel desproporcionado central para integrar un collage realista de fichas y volantes con tamaños ligeramente irregulares.
+     - Carteles individuales con diversidad de rostros pixelados (diferentes cortes de cabello, tonos de piel, ropa y encabezados rojos/azules).
+     - Cartones corrugados con vetas visibles, bordes rasgados, cintas de carrocero translúcidas y apuntes manuscritos de versos clandestinos.
+     - Mosaico central de 55 retratos con placa de madera serigrafiada: `HAS VISTO A...? DESAPARECIDOS` y cintillo inferior `INFORMES: 911`.
+  5. 👟 **Par de Zapatos en el Pavimento:** Se modeló el par de zapatillas retro desgastadas en la esquina inferior derecha sobre el asfalto (puntera de goma vulcanizada, cuerpo de lona, ojales, cordones y sombra de contacto).
+  6. 🏷️ **Crédito de Autoría:** Placa estarcida **`Anigami - Claudia`** en rojo ladrillo oscuro con sombra tenue, posicionada exactamente abajo a la derecha de los anuncios, respetando la ubicación del crédito original.
+
+- **Archivos y Despliegue Actualizados:**
+  - `portada_los_textos_del_poeta_pixel.png` (240×360 px nativo).
+  - `preview_portada_los_textos_del_poeta_pixel_4x.png` (960×1440 px 4x Nearest Neighbor).
+  - Copias sincronizadas en `scratch/Libros/los textos del poeta/portada/`, `UPROTA/assets/sprites/portadas/` y `sapiensiaclan/assets/covers/`.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
-
-
-
-
-
