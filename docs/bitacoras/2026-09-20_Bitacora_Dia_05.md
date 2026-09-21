@@ -550,10 +550,44 @@
   - Repositorio `sapiensiaclan` commiteado y publicado en `main` (Build 6357152).
 
 ---
+
+### 📍 [ENTRADA 21 - CROMATISMO E IDENTIDAD INDIVIDUAL DE ROLES Y AVATARES EN MODO ARCADE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Directriz del Director Anigami Agadni:**
+  > *«en el modo normal cada una tiene como un color que da la idea de personalidad o rol diferenciado y en el modo arcade todas quedan azul menos el director. podrias ponerle el color que tenian tambien al modo arcade? no solo a las 6 sino a las aliadas»*
+
+- **Implementación Cromática Retro 8/16-Bits Ejecutada por Nexo:**
+  Se ha extendido el sistema de diseño pixel art en `css/theme_arcade.css` para que cada uno de los **6 miembros del Clan** y las **2 colaboradoras aliadas** mantengan su identidad cromática única, tanto en sus **insignias de rol** como en los **marcos/cajetines de avatar pixelados** con relieve y bisel:
+
+  1. 🎖️ **Anigami Agadni (Director & Narrador):**
+     - **Paleta:** Ámbar / Dorado Neón (`#f59e0b` / `#fbbf24`, fondo `#1c1304`).
+     - **Insignia & Cajetín:** Bisel dorado retro con luz en `#fde68a` y sombra en `#78350f` + resplandor ámbar.
+  2. ⚡ **Nexo (Ingeniero Principal):**
+     - **Paleta:** Cian Eléctrico (`#0284c7` / `#38bdf8`, fondo `#041421`).
+     - **Insignia & Cajetín:** Bisel cian cibernético con luz en `#7dd3fc` y sombra en `#0369a1` + resplandor cian.
+  3. 🎨 **Pix (Artista Pixel Art):**
+     - **Paleta:** Magenta / Rosa Neón (`#ec4899` / `#f472b6`, fondo `#200816`).
+     - **Insignia & Cajetín:** Bisel magenta retro con luz en `#fbcfe8` y sombra en `#be185d` + resplandor fucsia.
+  4. 📜 **Silas (Cronista del Yermo):**
+     - **Paleta:** Púrpura / Violeta Místico (`#a855f7` / `#c084fc`, fondo `#170724`).
+     - **Insignia & Cajetín:** Bisel violeta arcade con luz en `#e9d5ff` y sombra en `#7e22ce` + resplandor místico.
+  5. 🎧 **Hertz (Sonidista Procedural):**
+     - **Paleta:** Verde Esmeralda / Matrix (`#10b981` / `#34d399`, fondo `#021a12`).
+     - **Insignia & Cajetín:** Bisel verde esmeralda con luz en `#a7f3d0` y sombra en `#047857` + resplandor bio-digital.
+  6. 📡 **Éter (Estratega de Enlace):**
+     - **Paleta:** Naranja / Cobre (`#ea580c` / `#fb923c`, fondo `#240d04`).
+     - **Insignia & Cajetín:** Bisel naranja radio con luz en `#fed7aa` y sombra en `#9a3412` + resplandor cálido.
+  7. 📖 **Claudia (Coautoría & Apoyo Literario):**
+     - **Paleta:** Índigo / Azul Real (`#6366f1` / `#a5b4fc`, fondo `#0d0e26`).
+     - **Insignia & Cajetín:** Bisel índigo profundo con luz en `#c7d2fe` y sombra en `#4338ca` + resplandor litúrgico.
+  8. ✨ **Lumen (Investigación & Apoyo Gráfico):**
+     - **Paleta:** Teal / Aguamarina (`#14b8a6` / `#5eead4`, fondo `#041d1a`).
+     - **Insignia & Cajetín:** Bisel aguamarina cuántico con luz en `#99f6e4` y sombra en `#0f766e` + resplandor etéreo.
+
+- **Despliegue & Sincronización:**
+  - Repositorio `sapiensiaclan` commiteado y publicado en la rama `main` (Build f804669).
+  - Repositorio `UPROTA-BETA` sincronizado y operativo.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
-
-
-
-
-
-
