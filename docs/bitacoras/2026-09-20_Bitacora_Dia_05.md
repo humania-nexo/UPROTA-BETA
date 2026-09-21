@@ -688,5 +688,31 @@
   - **Premisa & Universo (2042):** Sátira distópica y realismo mágico existencialista tras la Gran Obsolescencia (*Minerva Global*), la inversión de clase del trabajo físico bruto, las Carreras del Ego (FCTA, `DinastIA™`, `AuraScan™`, `ScentForge™`), el dispositivo Apuntador AR y el fenómeno del *Zumbido* (LRS) desatado por la precisión lingüística de Adrián.
   - **Alineación en Portal Web:** Se actualizó la ficha en la subsección **«El Tintero del Clan»** (`sapiensiaclan`) con su etiqueta (*Sátira Distópica & Existencialismo*) y su sinopsis oficial.
 
+### 📍 [ENTRADA 17 - ESTRENO EDITORIAL RETRO PIXEL ART: «CLOTO — LA QUE HILA» (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Creación de la Portada Pixel Art de «CLOTO» (Transmedia Cruce):**
+  - Siguiendo la dirección de arte del Director Anigami para la nueva línea transmedia y la integración en el **Modo ARCADE** de la plataforma web:
+  
+  1. 🏛️ **Escultura Clásica de Mármol (Cloto):**
+     - Modelado volumétrico con paleta indexada de 8 tonos de mármol cálido y arenisca clásica.
+     - Perfil sereno grecorromano con rizos ondulados, pliegues drapeados de la túnica sobre hombro y pecho, y brazos en postura de hilado.
+     - Bloques de glitching digital transmedia en la muñeca izquierda (desintegración de la piedra hacia el código digital).
+  2. ⚙️ **Rueca Tradicional & Fusión Cyberpunk:**
+     - Madera de roble antigua y herrajes de latón torneados en perspectiva.
+     - **Corona Cinética Incandescente:** Rueda de hilar con arco de energía dorada incandescente que transmuta el hilo en un flujo sinusoidal de datos binarios flotantes (bits `0/1` y destellos neón cian/magenta/oro).
+     - **Terminal Cyber Spindle:** Pantalla micro-OLED en el huso con telemetría `DATA_SPIN [ERR]` en cian y magenta.
+  3. 🔤 **Tipografía Monumental y Sello SAPIENSIA:**
+     - **Autor Superior:** `Anigami Agadni` en tipografía bitmap pura 5×7 px.
+     - **Título:** **`CLOTO`** en tipografía condensa mayúscula de alto contraste y serifa clásica (blanco puro).
+     - **Subtítulo:** **`La que hila`** con aberración cromática glitch (magenta + cian).
+     - **Emblema Inferior:** Sello de brújula dorada con la libélula insignia de SAPIENSIA Clan en pixel art.
+
+- **Archivos y Despliegue Multi-Directorio:**
+  - `portada_cloto_pixel.png` (240×360 px nativo).
+  - `preview_portada_cloto_pixel_4x.png` (960×1440 px 4x Nearest Neighbor).
+  - Desplegado en `Libros/transmedia cruce/portada medida correcta/`, `UPROTA/assets/sprites/portadas/` & `previews/`, y `sapiensiaclan/assets/covers/`.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
