@@ -748,6 +748,21 @@
   - `preview_portada_laquesis_pixel_4x.png` (960×1440 px 4x Nearest Neighbor).
   - Desplegado en `Libros/transmedia cruce/portada medida correcta/`, `UPROTA/assets/sprites/portadas/` & `previews/`, y `sapiensiaclan/assets/covers/`.
 
+### 📍 [ENTRADA 29 - ARCHIVO OFICIAL DE LA BIBLIA DE PRODUCCIÓN «DIARIO DE UN PILOTO ESPACIAL» Y CONSOLIDACIÓN DE «EL TINTERO DEL CLAN» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Custodia de la Biblia de Producción:**
+  - Se recibió del Director Creativo **Anigami Agadni** la biblia de producción completa y definitiva de **«Diario de un Piloto Espacial»**, resguardada en `Libros/Diario_de_un_Piloto_Espacial/Biblia_Produccion_Diario_Piloto_Espacial.md`.
+  - **Identidad de la Obra:**
+    - **Género:** Fábula de Ciencia Ficción & Humanismo / Paternidad y Neurodiversidad.
+    - **Premisa Central:** Un piloto espacial entrenado bajo la filosofía del máximo provecho y cálculo utilitario aterriza en un planeta remoto y halla a un niño humano que aprendió a hablar con la grabación de una sonda terrestre encallada (homenaje al Disco de Oro de las Voyager). Al adoptarlo y llevarlo a la Tierra, descubre que no hay distancia entre ambos, sino una forma distinta de procesar la misma humanidad. Es una conmovedora alegoría sobre el espectro autista y el amor incondicional.
+    - **Diseño de Protagonistas:** Sin nombres propios (universalidad y biblioterapia narrativa para padres y familias).
+    - **Combustible Espacial:** Celenina (raíz Selene / tradición H.G. Wells).
+- **Consolidación del Cuarteto en «El Tintero del Clan» (`sapiensiaclan`):**
+  - Se actualizó la ficha de *Diario de un Piloto Espacial* en el portal oficial con su etiqueta (`Fábula Sci-Fi & Paternidad`) y su sinopsis oficial.
+  - Las 4 obras en forja (*Uruk*, *El Manuscrito de Ceniza*, *Diario de un Piloto Espacial* y *Transparente*) quedan perfectamente documentadas con sus sinopsis oficiales extraídas de sus biblias de producción originales.
+- **Despliegue & Git Sync:** Cambios commiteados y sincronizados en los repositorios de GitHub (`sapiensiaclan` y `UPROTA-BETA`).
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
 
