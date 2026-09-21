@@ -647,4 +647,25 @@
   - **Despliegue:** Repositorio `sapiensiaclan` commiteado y publicado en la rama `main` (`Build be83692`).
 
 ---
+
+### 📍 [ENTRADA 25 - DESPLIEGUE DEL TRÍPTICO DE PORTADAS CONTINUAS DE PROIECTIO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Directriz del Director Anigami Agadni:**
+  > *«necesito que coloques las portadas de la trilogia principal de Proiectio en el modo normal. una al lado de la otra. como obras separadas pero al ponerlas una al lado de la otra se observa la continuidad del arte de las portadas...»*
+
+- **Implementación y Arquitectura Ejecutada por Nexo:**
+  1. 🖼️ **Tríptico Panorámico Continuo (`.proiectio-triptych-grid`):**
+     - Se integraron las tres portadas maestras de alta resolución en secuencia horizontal:
+       - **I. Cloto** (*La que hila*) ➔ `portada_proiectio_cloto.jpg`
+       - **II. Láquesis** (*La que mide*) ➔ `portada_proiectio_laquesis.jpg`
+       - **III. Átropos** (*La que corta*) ➔ `portada_proiectio_atropos.jpg`
+     - Dispuestas en una cuadrícula simétrica de 3 columnas que evidencia la continuidad del lienzo artístico original.
+  2. ⚡ **Compatibilidad y Responsividad:**
+     - En *Modo Antropo*, renderizado fotográfico en alta definición con elevación sutil en *hover*.
+     - En *Modo Arcade*, encuadre pixelado a la espera de los assets bitmap oficiales de Pix.
+  3. 📦 **Despliegue:**
+     - Repositorio `sapiensiaclan` commiteado y publicado en `main` (`Build ffb9bf9`).
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
