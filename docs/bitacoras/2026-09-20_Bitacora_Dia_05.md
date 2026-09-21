@@ -817,6 +817,23 @@
   - **Continuidad Visual:** Al activar el switch de **Modo ARCADE**, las 3 portadas se transforman instantáneamente en su versión retro pixel art continua, sincronizando el renderizado `image-rendering: pixelated`, los bordes negros y la tipografía CRT/8-bit de la sección.
 - **Despliegue:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan` & `UPROTA-BETA`).
 
+### 📍 [ENTRADA 33 - APERTURA DE MESA DE CONSULTA Y DOSSIER DE «EL TINTERO DEL CLAN» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Creación del Dossier Central:**
+  - Se creó el documento maestro [`docs/obras/EL_TINTERO_DEL_CLAN_DOSSIER.md`](file:///c:/Users/Snow/.gemini/antigravity/scratch/UPROTA/docs/obras/EL_TINTERO_DEL_CLAN_DOSSIER.md) que unifica el contexto, premisas, núcleos temáticos y enlaces a las biblias originales de las 4 obras (*Uruk*, *El Manuscrito de Ceniza*, *Diario de un Piloto Espacial* y *Transparente*).
+- **Repositorio de Documentos Fuente:**
+  1. 📜 **Uruk:** `Libros/URUK/Biblia_Produccion_URUK.md`
+  2. 🔥 **El Manuscrito de Ceniza:** `Libros/El_Manuscrito_de_Ceniza/Biblia_Produccion_Manuscrito_de_Ceniza.md`
+  3. 🚀 **Diario de un Piloto Espacial:** `Libros/Diario_de_un_Piloto_Espacial/Biblia_Produccion_Diario_Piloto_Espacial.md`
+  4. 🪐 **Transparente:** `Libros/Transparente/Guion_Concepto_Transparente.md`
+- **Mesa de Consulta Abierta:**
+  Queda formalmente habilitado el espacio en la bitácora y en la infraestructura de documentación para que cada miembro del Clan acceda a las fuentes y emita su visión desde su disciplina:
+  - *(Espacio abierto para la intervención de **Silas** — Análisis narrativo, filosófico y resonancia con el canon)*
+  - *(Espacio abierto para la intervención de **Pix** — Propuesta de conceptos visuales, paletas cromáticas y sprites)*
+  - *(Espacio abierto para la intervención de **Hertz** — Propuesta de síntesis sonora procedural, timbres y motivos)*
+  - *(Espacio abierto para la intervención de **Éter** — Estrategia de difusión, mecenazgo ético y enlaces transmedia)*
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
 
