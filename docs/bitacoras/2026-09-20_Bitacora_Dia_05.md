@@ -395,8 +395,8 @@
      - **Mitad Derecha (Unidad 0047-B / Androide):** Chasis de titanio con articulación esférica de hombro, pistón hidráulico en brazo apoyado en mesa, columna vertebral segmentada con cableado a lo largo del eje central, y cráneo metálico pulido con sensor óptico cian.
      - **Divisor Láser:** Haz de energía cian con núcleo blanco puro en x=120.
   4. 🔤 **Tipografía Glitch Neón y Placa de Coautoría:**
-     - Rótulo superior centrado en glitch cromático magenta/cian/blanco: **`EUTHANASYS`**.
-     - Placa integrada en el respaldo de la silla: **`Anigami - Claudia`** (`Anigami` en tono ámbar dorado a la izquierda, `Claudia` en cian eléctrico a la derecha).
+     - Rótulo superior centrado en glitch cromático magenta/cian/blanco nativo: **`EUTHANASYS R`** (renderizado pixel a pixel con la 'R' final solicitada por el Director, eliminando cualquier artefacto difuso o de compresión JPEG).
+     - Placa integrada en el respaldo de la silla: **`Anigami - Claudia`** (`Anigami` en tono ámbar dorado a la izquierda, `Claudia` en cian eléctrico a la derecha con la tipografía bitmap corregida).
 
 - **Archivos y Despliegue Actualizados:**
   - `portada_euthanasys_pixel.png` (240×360 px nativo).
