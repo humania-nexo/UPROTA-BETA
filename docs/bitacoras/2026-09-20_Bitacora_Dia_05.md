@@ -799,6 +799,24 @@
   - **Prioridad Transmedia:** La culminación planificada de estas obras despejará el ancho de banda creativo y técnico para volcar toda la energía del Clan nuevamente sobre el universo troncal de **Proiectio** (realidad aumentada, terminales interactivas y narrativa transmedia).
   - **Banco de Semillas en Reserva:** Los conceptos y biblias adicionales quedan resguardados en el saquito de semillas del autor para etapas posteriores del ecosistema.
 
+### 📍 [ENTRADA 32 - INTEGRACIÓN Y CONMUTACIÓN DINÁMICA DEL TRÍPTICO DE LAS MOIRAS EN MODO ARCADE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Implementación Técnica de Conmutación de Portadas:**
+  - En respuesta a la directriz del Director **Anigami Agadni** y tras la forja de **Pix** (Entradas 17, 18 y 30), he cableado las 3 portadas de la trilogía *Proiectio* (*Cloto*, *Láquesis* y *Átropos*) al motor de conmutación reactiva `dynamic-cover` en `sapiensiaclan/index.html`.
+  - **Mapeo de Atributos:**
+    1. 🧶 **I. Cloto (La que hila):**
+       - `data-cover-antropo`: `assets/covers/portada_proiectio_cloto.jpg`
+       - `data-cover-arcade`: `assets/covers/preview_portada_cloto_pixel_4x.png`
+    2. 📐 **II. Láquesis (La que mide):**
+       - `data-cover-antropo`: `assets/covers/portada_proiectio_laquesis.jpg`
+       - `data-cover-arcade`: `assets/covers/preview_portada_laquesis_pixel_4x.png`
+    3. ✂️ **III. Átropos (La que corta):**
+       - `data-cover-antropo`: `assets/covers/portada_proiectio_atropos.jpg`
+       - `data-cover-arcade`: `assets/covers/preview_portada_atropos_pixel_4x.png`
+  - **Continuidad Visual:** Al activar el switch de **Modo ARCADE**, las 3 portadas se transforman instantáneamente en su versión retro pixel art continua, sincronizando el renderizado `image-rendering: pixelated`, los bordes negros y la tipografía CRT/8-bit de la sección.
+- **Despliegue:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan` & `UPROTA-BETA`).
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
 
