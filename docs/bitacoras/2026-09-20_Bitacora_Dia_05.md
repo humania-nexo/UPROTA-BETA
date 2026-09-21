@@ -791,6 +791,14 @@
     - `sapiensiaclan/assets/covers/`
   - Tríptico completo de *Las Moiras* (*Cloto*, *Láquesis*, *Átropos*) totalmente listo y sincronizado para el **Modo ARCADE**.
 
+### 📍 [ENTRADA 31 - ESTRATEGIA DE PRODUCCIÓN: DELIMITACIÓN DEL TINTERO Y RUTA DE RETORNO A PROIECTIO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Directriz Estratégica del Director Anigami Agadni:**
+  - **Foco Operativo:** Se establece formalmente que el cuarteto actual en *El Tintero* (*Uruk*, *El Manuscrito de Ceniza*, *Diario de un Piloto Espacial* y *Transparente*) conforma el alcance delimitado de obras literarias en producción inmediata.
+  - **Prioridad Transmedia:** La culminación planificada de estas obras despejará el ancho de banda creativo y técnico para volcar toda la energía del Clan nuevamente sobre el universo troncal de **Proiectio** (realidad aumentada, terminales interactivas y narrativa transmedia).
+  - **Banco de Semillas en Reserva:** Los conceptos y biblias adicionales quedan resguardados en el saquito de semillas del autor para etapas posteriores del ecosistema.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
 
