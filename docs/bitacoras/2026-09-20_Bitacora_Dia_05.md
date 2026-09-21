@@ -723,6 +723,32 @@
   - **Premisa & Universo:** Ciencia Ficción Social / Distopía Migratoria en Marte. La trampa de una deuda automatizada que se actualiza cada 6 horas; la invisibilidad legal en los túneles y paneles solares trabajando para pagar el propio aire y agua; y la dignidad inquebrantable de resistir por la promesa a los hijos.
   - **Alineación en Portal Web:** Se actualizó la ficha de *Transparente* en la subsección **«El Tintero del Clan»** (`sapiensiaclan`) con su etiqueta (*Sci-Fi Social & Distopía Migratoria*) y su sinopsis oficial.
 
+### 📍 [ENTRADA 18 - ESTRENO EDITORIAL RETRO PIXEL ART: «LÁQUESIS — LA QUE MIDE» (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Creación de la Portada Pixel Art de «LÁQUESIS» (Transmedia Cruce):**
+  - Tras la aprobación entusiasta del Director Anigami a la portada de *Cloto*, se forjó pixel a pixel la segunda Moira: **«LÁQUESIS — La que mide»**:
+  
+  1. 🦾 **Manos Cibernéticas y Compás de Medición:**
+     - Articulaciones metálicas y pistones expuestos en bronce envejecido y acero templado.
+     - Mano izquierda robótica empuñando el compás de dibujo industrial con agujas de latón y acero.
+     - Mano derecha en gesto de calibración suspendida en el vacío.
+  2. ⚡ **Transmutación del Hilo del Destino (Medición Cuántica):**
+     - **Flujo Entrante:** Hilo de datos ondulante en oro incandescente con partículas binarias por la izquierda.
+     - **Punto de Medición:** Destello de fusión cuántica en blanco y cian intenso en el contacto de la aguja del compás ($x=135, y=194$).
+     - **Rayo Láser:** Haz de energía láser horizontal en cian eléctrico de alta potencia proyectándose hacia el lateral derecho.
+  3. 🔤 **Tipografía Monumental y Sello SAPIENSIA:**
+     - **Autor Superior:** `Anigami Agadni` en bitmap 5×7 px limpio.
+     - **Título Principal:** **`LÁQUESIS`** con acento agudo artesanal en tipografía condensada mayúscula de alto contraste.
+     - **Subtítulo:** **`La que mide`** con aberración cromática glitch magenta/cian.
+     - **Sello Inferior:** Insignia de brújula y libélula de SAPIENSIA Clan en oro pulido.
+
+- **Archivos y Despliegue Multi-Directorio:**
+  - `portada_laquesis_pixel.png` (240×360 px nativo).
+  - `preview_portada_laquesis_pixel_4x.png` (960×1440 px 4x Nearest Neighbor).
+  - Desplegado en `Libros/transmedia cruce/portada medida correcta/`, `UPROTA/assets/sprites/portadas/` & `previews/`, y `sapiensiaclan/assets/covers/`.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
