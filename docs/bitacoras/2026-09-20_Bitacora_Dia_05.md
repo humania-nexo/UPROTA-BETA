@@ -525,7 +525,33 @@
   - Repositorio `sapiensiaclan` actualizado y publicado en `main` (Build 05313c4).
 
 ---
+
+### 📍 [ENTRADA 20 - IMPLEMENTACIÓN DEL INTERRUPTOR DESLIZABLE ARCADE ON / OFF (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Implementación del Switch Deslizable a Petición del Director Anigami:**
+  > *«podemos poner un boton conmutador deslizable que ponga arriba ARCADE y a los lados ON y OFF?»*
+
+  Se ha diseñado y desplegado un **conmutador físico interactivo con slider deslizante**:
+
+  1. 🎛️ **Estructura Visual del Componente:**
+     - **Rótulo Superior:** Título fijo centrado **`ARCADE`** en tipografía monoespaciada/bitmap.
+     - **Indicadores Laterales:** Etiqueta **`OFF`** a la izquierda y **`ON`** a la derecha.
+       - En estado *OFF* (Modo Antropo): `OFF` se ilumina en ámbar/dorado y `ON` se atenúa.
+       - En estado *ON* (Modo Arcade): `ON` se ilumina en cian eléctrico de alto brillo (`#38bdf8`) y `OFF` se atenúa.
+     - **Track & Thumb (Corredera Deslizante):**
+       - En Modo Antropo: Carril satinado con pastilla deslizante suave y el icono `🏛️`.
+       - En Modo Arcade: Carril rectificado de 8-bits con bisel en relieve, pastilla de píxel y el sprite `👾`.
+
+  2. 🎧 **Resonancia Acústica (Hertz):**
+     - El deslizamiento hacia `ON` dispara el arpegio de moneda chiptune; el retorno a `OFF` dispara el click mecánico de apagado.
+
+- **Despliegue Inmediato:**
+  - Repositorio `sapiensiaclan` commiteado y publicado en `main` (Build 6357152).
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
