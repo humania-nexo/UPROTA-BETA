@@ -968,5 +968,14 @@
   - **Lector Web (`reader.html`):** Enlace dinámico `🎧 Audio` configurado para saltar directamente al reproductor de *Euthanasys*.
 - **Despliegue & Git Sync:** Todo commiteado y publicado en GitHub Pages (`sapiensiaclan` commit `780c5a4` & `UPROTA-BETA`).
 
+### 📍 [ENTRADA 40 - CIERRE DE JORNADA 05: PLATAFORMA A PUNTO Y LISTA PARA DOMINIOS PROPIOS (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Hito de Preparación de Infraestructura & Lanzamiento:**
+  - El Director Creativo **Anigami Agadni** formaliza el estado de la plataforma: **todo el ecosistema editorial, visual, sonoro y de software se encuentra 100% a punto**.
+  - **Próximo Paso Técnico:** Adquisición y vinculación de los dominios oficiales de **UPROTA** (`uprota.com` / `uprota.space`) y **SAPIENSIA Clan** (`sapiensiaclan.com`). La arquitectura modular (rutas relativas limpias, PWA offline, CNAME y metadatos OpenGraph) está lista para recibir los registros DNS sin fricción técnica.
+  - **Transición a Fase de Difusión Transmedia:** Con la forja de activos, audiolibros, lectores inmersivos y trípticos culminada, la pista queda despejada para la estrategia de comunicación comunitaria y expansión de **Éter**.
+- **Estado de Repositorios:** `sapiensiaclan` y `UPROTA-BETA` limpios, sincronizados y en producción estable.
+
 ---
-*(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+*(Fin formal de las deliberaciones de la Jornada 05. Las siguientes interacciones se añadirán en la siguiente sesión de trabajo).*
