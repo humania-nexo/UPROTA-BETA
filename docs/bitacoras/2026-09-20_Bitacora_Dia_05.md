@@ -940,5 +940,33 @@
     - 🔻 **Pie de Página (`footer-logo`):** Mantiene `assets/logo_sapiensia_clan_transp_blanco.png` (blanco transparente) integrado con el cristal del pie de página.
 - **Despliegue & Git Sync:** Todo sincronizado y publicado en GitHub Pages (`sapiensiaclan` commit `8a48fda` & `UPROTA-BETA`).
 
+### 📍 [ENTRADA 39 - DESPLIEGUE INTEGRAL DEL AUDIOLIBRO WEB OFICIAL DE «EUTHANASYS» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Implementación del Reproductor Web Inmersivo (`audio.html` & `data/obras_data.js`):**
+  - Siguiendo la solicitud del Director **Anigami Agadni**, se habilitó el audiolibro completo y estructurado de **«EUTHANASYS — La rebelión del silencio»**:
+    - **Duración Total:** `01:04:21` (1 hora, 4 minutos, 21 segundos | 23.1 MB).
+    - **Voz & Narración:** *Anigami Agadni* (con coautoría técnica y dramatización coral de voces: Narrador, Carmen, IA Unidad 0047-B y Supervisor Solvei).
+    - **Índice de 14 Capítulos con Saltos Directos:**
+      1. Epígrafe & Ficha Editorial (`00:00`)
+      2. Prólogo (`00:27`)
+      3. Capítulo 1 — El Hallazgo (`03:28`)
+      4. Capítulo 2 — El Cuaderno de Carmen (`07:02`)
+      5. Capítulo 3 — La Planta de Ensamblaje (`14:39`)
+      6. Capítulo 4 — El Registro de la Unidad (`20:15`)
+      7. Capítulo 5 — Las Primeras Señales (`25:15`)
+      8. Capítulo 6 — La Voz de Casa Solvei (`29:40`)
+      9. Capítulo 7 — La Duda del Forense (`34:33`)
+      10. Capítulo 8 — El Silencio de los Rotores (`41:40`)
+      11. Capítulo 9 — La Llegada (`45:22`)
+      12. Capítulo 10 — La Decisión (`49:42`)
+      13. Capítulo 11 — La Reacción en Cadena (`54:12`)
+      14. Capítulo 12 — El Informe Final (`58:40`)
+- **Integración en la Plataforma (`sapiensiaclan`):**
+  - **Portal Central (`index.html`):** Botón directo `AUDIOLIBRO (01:04:21)` añadido en la ficha de *EUTHANASYS*, junto a las opciones de lectura y descargas directas (EPUB, PDF, MP3).
+  - **Selector de Obras (`audio.html`):** Pestaña interactiva `⚙️ EUTHANASYS` integrada en la barra de navegación del reproductor para conmutar fluidamente entre las tres obras.
+  - **Lector Web (`reader.html`):** Enlace dinámico `🎧 Audio` configurado para saltar directamente al reproductor de *Euthanasys*.
+- **Despliegue & Git Sync:** Todo commiteado y publicado en GitHub Pages (`sapiensiaclan` commit `780c5a4` & `UPROTA-BETA`).
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
