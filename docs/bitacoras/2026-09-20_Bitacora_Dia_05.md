@@ -714,5 +714,15 @@
   - Desplegado en `Libros/transmedia cruce/portada medida correcta/`, `UPROTA/assets/sprites/portadas/` & `previews/`, y `sapiensiaclan/assets/covers/`.
 
 ---
+
+### 📍 [ENTRADA 28 - RECEPCIÓN DEL GUION DE PRODUCCIÓN Y SINOPSIS DE «TRANSPARENTE» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Aporte y Lore del Director Anigami Agadni:**
+  - Se recibió y resguardó el guion conceptual de producción en `Libros/Transparente/Guion_Concepto_Transparente.md`.
+  - **Premisa & Universo:** Ciencia Ficción Social / Distopía Migratoria en Marte. La trampa de una deuda automatizada que se actualiza cada 6 horas; la invisibilidad legal en los túneles y paneles solares trabajando para pagar el propio aire y agua; y la dignidad inquebrantable de resistir por la promesa a los hijos.
+  - **Alineación en Portal Web:** Se actualizó la ficha de *Transparente* en la subsección **«El Tintero del Clan»** (`sapiensiaclan`) con su etiqueta (*Sci-Fi Social & Distopía Migratoria*) y su sinopsis oficial.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
 
