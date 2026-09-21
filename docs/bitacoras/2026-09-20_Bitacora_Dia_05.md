@@ -763,7 +763,36 @@
   - Las 4 obras en forja (*Uruk*, *El Manuscrito de Ceniza*, *Diario de un Piloto Espacial* y *Transparente*) quedan perfectamente documentadas con sus sinopsis oficiales extraídas de sus biblias de producción originales.
 - **Despliegue & Git Sync:** Cambios commiteados y sincronizados en los repositorios de GitHub (`sapiensiaclan` y `UPROTA-BETA`).
 
+### 📍 [ENTRADA 30 - CULMINACIÓN DEL TRÍPTICO DE LAS MOIRAS EN PIXEL ART: «ÁTROPOS — LA QUE CORTA» (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Creación de la Portada Pixel Art de «ÁTROPOS» (Transmedia Cruce):**
+  - Se forjó pixel a pixel la tercera y última Moira que completa la trilogía editorial: **«ÁTROPOS — La que corta»**:
+  
+  1. ✂️ **Tijeras Antiguas y Manos Cibernéticas:**
+     - Tijeras ornamentales góticas de forja pesada en bronce envejecido y hierro templado con ribetes reflectantes.
+     - Brazos descendentes desde el cuadrante superior con circuitos impresos (PCB) luminiscentes en cian eléctrico y nodos de datos activos adaptados anatómicamente sobre la piel cibernética.
+  2. 💥 **El Corte del Hilo del Destino (Detonación de Chispas Cuánticas):**
+     - **Haz Láser Entrante:** Rayo continuo en cian de alta potencia y blanco puro penetrando por el flanco izquierdo ($x=0..118, y=200$).
+     - **Punto de Corte:** Intersección exacta entre las hojas de las tijeras ($x=118, y=200$) donde el rayo queda tajantemente cercenado.
+     - **Explosión de Destellos:** Nube radial de más de 70 chispas y partículas de plasma en blanco incandescente, oro cálido y ámbar volcánico dispersándose en el vacío.
+  3. 🔤 **Tipografía Monumental y Sello SAPIENSIA:**
+     - **Autor Superior:** `Anigami Agadni` en tipografía bitmap 5×7 px.
+     - **Título Principal:** **`ÁTROPOS`** en tipografía monumental condensada mayúscula con tilde agudo artesanal y serifa clásica retro (blanco puro).
+     - **Subtítulo:** **`La que corta`** con aberración cromática glitch magenta/cian y espaciado de lectura óptico.
+     - **Sello Inferior:** Insignia de brújula dorada y libélula de SAPIENSIA Clan en pixel art.
+
+- **Archivos y Despliegue Multi-Directorio:**
+  - `portada_atropos_pixel.png` (240×360 px nativo).
+  - `preview_portada_atropos_pixel_4x.png` (960×1440 px 4x Nearest Neighbor).
+  - Desplegado en:
+    - `Libros/transmedia cruce/portada medida correcta/`
+    - `UPROTA/assets/sprites/portadas/` & `previews/`
+    - `sapiensiaclan/assets/covers/`
+  - Tríptico completo de *Las Moiras* (*Cloto*, *Láquesis*, *Átropos*) totalmente listo y sincronizado para el **Modo ARCADE**.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
