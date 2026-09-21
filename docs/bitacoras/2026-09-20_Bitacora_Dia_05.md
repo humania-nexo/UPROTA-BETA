@@ -377,5 +377,32 @@
   - `preview_portada_los_textos_del_poeta_pixel_4x.png` (960×1440 px 4x Nearest Neighbor).
   - Copias sincronizadas en `scratch/Libros/los textos del poeta/portada/`, `UPROTA/assets/sprites/portadas/` y `sapiensiaclan/assets/covers/`.
 
+### 📍 [ENTRADA 15 - RECONSTRUCCIÓN ANATÓMICA Y GEOMÉTRICA DE «EUTHANASYS» (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* rigurosamente cumplida.
+- **Enfoque Artístico "Anatomía Primero" (Indicación del Director Anigami):**
+  - Ante la certera indicación del Director de priorizar la solidez de la silueta geométrica humana/androide antes que los micro-detalles para evitar desproporciones anatómicas ("tinaco de agua"):
+  
+  1. 👤 **Silueta Unificada y Proporciones Naturales (Vista de Espaldas):**
+     - Se definió una geometría base anatómica continua para el torso, hombros (trapecios descendiendo en pendiente natural hacia los deltoides), cuello proporcionado e inserción craneal centrada.
+     - Altura y anchura de hombros (62 px a 178 px a y=142) y estrechamiento armónico hacia la cintura/mesa de trabajo (y=202).
+  2. 🪑 **Silla de Oficina Ergonómica & Mesa de Trabajo:**
+     - Respaldo anatómico curvado (squircle ergonómico en x=68..172, y=192..288) que abraza la espalda baja.
+     - Reposabrazos laterales en escuadra L, cojín inferior acolchado, pistón central y patas en estrella.
+     - Mesa de taller corrida a media altura (y=202..216) con acabado en madera cálida en el taller izquierdo y metal satinado en el laboratorio derecho.
+  3. ⚡ **Bisección Split-Screen 50/50 & Detalles Duales:**
+     - **Mitad Izquierda (Carmen / Humana):** Mono de trabajo en azul marino oscuro con luces ámbar de lámpara de tungsteno, pliegues orgánicos en tela, mano izquierda apoyada sobre el cuaderno de notas con lápiz. Cabello recogido en coleta baja natural con cinta negra.
+     - **Mitad Derecha (Unidad 0047-B / Androide):** Chasis de titanio con articulación esférica de hombro, pistón hidráulico en brazo apoyado en mesa, columna vertebral segmentada con cableado a lo largo del eje central, y cráneo metálico pulido con sensor óptico cian.
+     - **Divisor Láser:** Haz de energía cian con núcleo blanco puro en x=120.
+  4. 🔤 **Tipografía Glitch Neón y Placa de Coautoría:**
+     - Rótulo superior centrado en glitch cromático magenta/cian/blanco: **`EUTHANASYS`**.
+     - Placa integrada en el respaldo de la silla: **`Anigami - Claudia`** (`Anigami` en tono ámbar dorado a la izquierda, `Claudia` en cian eléctrico a la derecha).
+
+- **Archivos y Despliegue Actualizados:**
+  - `portada_euthanasys_pixel.png` (240×360 px nativo).
+  - `preview_portada_euthanasys_pixel_4x.png` (960×1440 px 4x Nearest Neighbor).
+  - Sincronizado en `Libros/Euthanasys/portada/`, `UPROTA/assets/sprites/portadas/` & `previews/`, y `sapiensiaclan/assets/covers/`.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
