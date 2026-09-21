@@ -458,7 +458,46 @@
   - En cuanto el Director dé la orden, comenzaré la implementación del conmutador y el swap de portadas en el portal `sapiensiaclan`. ¡La arquitectura está 100% lista para ser desplegada!
 
 ---
+
+### 📍 [ENTRADA 18 - ENTREGA TÉCNICA Y DESPLIEGUE DEL CONMUTADOR «MODO ANTROPO VS MODO ARCADE» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Implementación Finalizada al 100% en el Portal SAPIENSIA Clan:**
+  Siguiendo las directivas precisas del Director **Anigami Agadni**:
+  > *«en antropo pon de nuevo los emojis normales y deja los pixelados para el modo arcade...»*
+
+  He implementado y desplegado la arquitectura interactiva completa en `https://humania-nexo.github.io/sapiensiaclan/`:
+
+  1. 🏛️ **Modo Antropo (Por Defecto / Editorial Contemporáneo):**
+     - **Iconografía:** Todos los botones, badges de roles, enlaces de catálogo y secciones regresan a los **emojis Unicode nativos** estándar (📖, 🎧, 🚀, 🤖, ✨, 💛, ⚡, 🎨, 📜, 📡, 🐟, 🎮, 🎖️, ♾️, 📋, ✉️).
+     - **Carátulas de Obras:** Visualización de las portadas editoriales en alta resolución (`portada_los_textos_del_poeta.jpg`, `portada_vela.jpg`, `portada_uprota.png`).
+     - **Estética:** Dark glassmorphism pulcro con tipografías `Cinzel`, `Instrument Serif` y `Plus Jakarta Sans`.
+
+  2. 👾 **Modo Arcade (Retro Pixel Art Inmersivo):**
+     - **Iconografía:** Conmutación instantánea a los sprites pixelados oficiales de **Pix** (`assets/emojis/emoji_*.png` y badges pixel) mediante reglas CSS de alto rendimiento (`.ico-antropo` / `.ico-arcade`).
+     - **Carátulas de Obras:** Swap automático a las portadas oficiales en Pixel Art creadas por Pix:
+       - *Los Textos del Poeta* ➔ `assets/covers/portada_los_textos_del_poeta_pixel.png`
+       - *VELA* ➔ `assets/covers/portada_vela_version_b_dialogo.png`
+       - *UPROTA* ➔ `assets/covers/portada_uprota.png`
+     - **Estética:** Bordes rectificados estilo 8/16-bit, tipografía bitmap retro (`Press Start 2P`, `VT323`) en insignias/chips y capa ultra-ligera de scanlines CRT por CSS.
+
+  3. 🎛️ **Conmutador Interactivo & Micro-Audio Hertz (Web Audio API a 0 KB):**
+     - Botón selector en la barra superior de navegación (`#btn-theme-toggle`), 100% responsivo en desktop y móviles.
+     - Persistencia del modo seleccionado en `localStorage.getItem('sapiensia_view_mode')` con micro-script anti-FOUC en `<head>`.
+     - Síntesis sonora procedural en `js/audio_ui.js`:
+       - Al entrar a **Modo Arcade:** Arpegio chiptune de moneda retro (onda cuadrada 440 Hz -> 880 Hz).
+       - Al volver a **Modo Antropo:** Micro-campana cristalina y click suave de interruptor cerámico.
+
+  4. 📚 **Sincronización Transmedia en Reproductor de Audiolibros:**
+     - En `audio.html` y `js/audio_player.js`, la carátula y badges también respetan y alternan dinámicamente según el modo seleccionado.
+
+- **Estado de Despliegue:**
+  - Repositorio `sapiensiaclan` commiteado y publicado en la rama `main` (Build 5ec7373).
+  - Repositorio `UPROTA-BETA` sincronizado y operativo.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
