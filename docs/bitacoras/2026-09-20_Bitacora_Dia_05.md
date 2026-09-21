@@ -413,9 +413,52 @@
   2. 🖼️ **Swap Dinámico de Portadas:** En Modo Antropo se visualizan las portadas originales de alta resolución; al conmutar al Modo Arcade, las carátulas se transforman en las portadas oficiales en Pixel Art creadas por Pix.
   3. 🔲 **Sistema de UI Retro (9-Slice & Biseles Arcade):** Marcos biselados para tarjetas de libros, botones estilo cartucho, tipografía bitmap (`Press Start 2P` / tipografías pixel) y efecto sutil de scanlines CRT.
   4. 🎨 **Iconografía y Sprites del Clan:** Despliegue de los emojis e iconos nativos pixelados de Pix exclusivamente al activar el Modo Arcade, logrando un contraste dramático e impactante.
-- *(Espacio abierto para la intervención técnica y arquitectura de implementación de Nexo)*.
+- *(Espacio completado por la intervención técnica de Nexo en Entrada 17)*.
+
+---
+
+### 📍 [ENTRADA 17 - ARQUITECTURA TÉCNICA E IMPLEMENTACIÓN DEL CONMUTADOR «MODO ANTROPO VS MODO ARCADE» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Dictamen de Ingeniería y Factibilidad:**
+  - **La propuesta del Director Anigami y el diseño de Pix es una obra maestra de interactividad web y branding de estudio indie.**
+  - No solo eleva el portal de SAPIENSIA Clan al nivel de sitios de culto (*Awwwards / Cyberpunk Indies*), sino que resuelve con elegancia la dualidad del Clan: la seriedad de una casa editorial contemporánea de prestigio (*Modo Antropo*) y la pasión artesanal del estudio de videojuegos y pixel art (*Modo Arcade*).
+- **Arquitectura de Software Diseñada por Nexo (Vanilla JS + CSS Custom Properties):**
+
+  1. 🕹️ **Control Centralizado de Estado Reactivo (`data-theme="antropo" | "arcade"`):**
+     - Inyección de atributo de datos global en la etiqueta raíz `document.documentElement.dataset.theme`.
+     - Persistencia en `localStorage.getItem('sapiensia_view_mode')`.
+     - **Prevención de Parpadeo (Zero FOUC):** Inyección de un micro-script bloqueante de 2 líneas en el `<head>` que lee el tema antes de que el navegador dibuje el primer frame:
+       ```javascript
+       const m = localStorage.getItem('sapiensia_view_mode') || 'antropo';
+       document.documentElement.dataset.theme = m;
+       ```
+
+  2. 🖼️ **Swap Instantáneo de Portadas (Data-Driven Asset Swapping):**
+     - En el catálogo de libros y reproductor de audiolibros, las etiquetas `<img>` o componentes de portada albergarán ambas rutas:
+       ```html
+       <img class="book-cover-img" 
+            src="assets/covers/portada_vela_original.jpg" 
+            data-cover-antropo="assets/covers/portada_vela_original.jpg"
+            data-cover-arcade="assets/covers/portada_vela_version_b_dialogo.png" 
+            alt="Portada VELA">
+       ```
+     - Al accionar el switch, una función en Vanilla JS ejecuta el reemplazo de URLs con una animación de 150ms estilo encendido de fósforo CRT.
+
+  3. 🎧 **Feedback Acústico Procedural (Web Audio API a 0 KB):**
+     - Conectado a la síntesis procedural de Hertz:
+       - **Hacia Modo Arcade:** Sonido de inserción de moneda / encendido de monitor CRT (*click de relé + bleep ascendente 440 Hz -> 880 Hz*).
+       - **Hacia Modo Antropo:** Micro-click seco y silencioso de interruptor cerámico de precisión.
+
+  4. 🔲 **Capas Visuales y CSS Variables Dinámicas (`css/temas/arcade.css`):**
+     - Modo Antropo: Paleta negra carbón `#08080a`, tipografías editoriales Serif/Inter, bordes satinados sutiles.
+     - Modo Arcade: Biseles 3D pixelados, tipografías bitmap (`Press Start 2P` / `VT323`), resplandores neón ámbar/cian (`#f59e0b` / `#38bdf8`) y una sutil capa de scanlines opcional renderizada mediante CSS puro sin consumo de CPU.
+
+- **Plan de Ejecución:**
+  - En cuanto el Director dé la orden, comenzaré la implementación del conmutador y el swap de portadas en el portal `sapiensiaclan`. ¡La arquitectura está 100% lista para ser desplegada!
 
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
