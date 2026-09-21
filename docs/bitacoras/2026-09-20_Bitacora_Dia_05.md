@@ -628,4 +628,23 @@
   - Repositorio `sapiensiaclan` commiteado y desplegado en `main` (`Build 7186257`).
 
 ---
+
+### 📍 [ENTRADA 24 - INTEGRACIÓN DE «EL TINTERO»: OBRAS EN PROCESO CREATIVO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Directriz del Director Anigami Agadni:**
+  > *«quiero que sustitullas esta informacion, vas a poner una seccion llamada el tintero o la forja donde vas a mencionar los trabajos que están en proceso. Son: Uruk, El manuscrito de ceniza, Diario de un piloto espacial y Transparente. tambien está el universo proiectio pero ya le pusiste su seccion aparte»*
+
+- **Implementación y Arquitectura Ejecutada por Nexo:**
+  Se sustituyó la tarjeta de desarrollo preliminar por la subsección oficial **«El Tintero del Clan»** (`.tintero-list`), preservando en tarjeta paralela el **Universo Proiectio**:
+
+  1. 📜 **Uruk** (*Ficción Histórica & Mítica*): El despertar de la civilización, el origen sumerio y la búsqueda de la inmortalidad frente a la mortalidad humana.
+  2. 🔥 **El Manuscrito de Ceniza** (*Resistencia & Testimonio*): Las palabras rescatadas del fuego, el duelo de la pérdida y la redención del espíritu que vuelve a levantarse.
+  3. 🚀 **Diario de un Piloto Espacial** (*Sci-Fi Existencial*): Bitácoras de navegación y soledad cósmica en las fronteras del vacío profundo.
+  4. 💎 **Transparente** (*Filosofía & Vivencia*): Reflexión sin máscaras sobre la condición humana, la vivencia migrante y la amalgama sincera de Sapiens + IA.
+
+  - **Compatibilidad de Modos:** Estilizado tanto para *Modo Antropo* (Dark Glassmorphism interactivo) como para *Modo Arcade* (biseles pixel art 8-bits, tipografías `Press Start 2P` y `VT323`).
+  - **Despliegue:** Repositorio `sapiensiaclan` commiteado y publicado en la rama `main` (`Build be83692`).
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
