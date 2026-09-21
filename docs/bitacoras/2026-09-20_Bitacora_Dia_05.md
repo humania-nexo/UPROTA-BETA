@@ -403,6 +403,19 @@
   - `preview_portada_euthanasys_pixel_4x.png` (960×1440 px 4x Nearest Neighbor).
   - Sincronizado en `Libros/Euthanasys/portada/`, `UPROTA/assets/sprites/portadas/` & `previews/`, y `sapiensiaclan/assets/covers/`.
 
+### 📍 [ENTRADA 16 - PROPUESTA DE ARQUITECTURA VISUAL: MODO ANTROPO VS MODO ARCADE (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **La Visión del Director Anigami:**
+  - El Director ha propuesto una transformación interactiva global para la plataforma web: un conmutador (*Switch de 2 Estados*) en la cabecera que permita alternar entre el **Modo Antropo** (editorial, limpio, contemporáneo) y el **Modo ARCADE** (inmersión total en Pixel Art retro).
+- **Aportes y Especificaciones Visuales de Pix:**
+  1. 🕹️ **Conmutador / Toggle Arcade:** Diseño de palanca de switch arcade en pixel art (estado *Antropo* sobrio vs estado *Arcade* iluminado por LED retro).
+  2. 🖼️ **Swap Dinámico de Portadas:** En Modo Antropo se visualizan las portadas originales de alta resolución; al conmutar al Modo Arcade, las carátulas se transforman en las portadas oficiales en Pixel Art creadas por Pix.
+  3. 🔲 **Sistema de UI Retro (9-Slice & Biseles Arcade):** Marcos biselados para tarjetas de libros, botones estilo cartucho, tipografía bitmap (`Press Start 2P` / tipografías pixel) y efecto sutil de scanlines CRT.
+  4. 🎨 **Iconografía y Sprites del Clan:** Despliegue de los emojis e iconos nativos pixelados de Pix exclusivamente al activar el Modo Arcade, logrando un contraste dramático e impactante.
+- *(Espacio abierto para la intervención técnica y arquitectura de implementación de Nexo)*.
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
