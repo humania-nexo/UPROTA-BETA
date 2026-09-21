@@ -918,5 +918,16 @@
   - **Cabecera (`brand-logo`):** Sincronizado para mantener la consistencia lumínica de la identidad visual en toda la navegación.
 - **Despliegue & Git Sync:** Commiteado y desplegado en GitHub Pages (`sapiensiaclan` commit `096fa20`).
 
+### 📍 [ENTRADA 37 - PROTOCOLO DE APLICACIÓN CROMÁTICA DEL ISOTIPO SAPIENSIA CLAN (SILAS & NEXO)]
+- **Participante:** Silas (El Cronista del Yermo) con despliegue de Nexo.
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Directriz de Identidad Visual del Director Anigami Agadni:**
+  Se establece el estándar cromático oficial para el uso del isotipo de SAPIENSIA Clan:
+  1. ⚪ **Versión Blanca Transparente (`logo_sapiensia_clan_transp_blanco.png`):**
+     - **Uso:** Todas las interfaces web oscuras (barra de cabecera `navbar-glass`, pie de página `footer-glass` y modales interactivos) para asegurar legibilidad, contraste y elegancia luminosa.
+  2. ⚫ **Versión Negra / Sombra Clásica (`logo_sapiensia_clan.png`):**
+     - **Uso:** Exclusivo para páginas de derechos de autor (copyright) de libros, maquetación editorial física/digital (PDF/EPUB) y adaptaciones de favicon en entornos de fondo claro.
+- **Despliegue & Git Sync:** Todo actualizado y sincronizado en `sapiensiaclan` (commit `f63759d`).
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
