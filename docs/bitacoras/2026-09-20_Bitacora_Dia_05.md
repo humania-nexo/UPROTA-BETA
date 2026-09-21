@@ -668,4 +668,15 @@
      - Repositorio `sapiensiaclan` commiteado y publicado en `main` (`Build ffb9bf9`).
 
 ---
+
+### 📍 [ENTRADA 26 - RECEPCIÓN DE LA BIBLIA DE LORE Y SINOPSIS OFICIAL DE «URUK» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Aporte y Lore del Director Anigami Agadni:**
+  - Se recibió y resguardó la biblia completa de producción en `Libros/URUK/Biblia_Produccion_URUK.md`.
+  - **Premisa:** *«Un junior intocable pierde al único hombre que amó por su propio ego, y tiene que aprender a vivir sin anestesia en un mundo que nunca tuvo que mirar.»*
+  - **Personajes y Arquetipos:** Gil (heredero intocable), Enki (su amante y voz de razón), Grupo Cedro (Humbaba corporativo), Ishtar, El Toro del Cielo (sicario), Siduri (la sabiduría del kiosko) y el Sobreviviente del Diluvio (Utnapishtim: cómo seguir de pie tras perderlo todo).
+  - **Alineación en Portal Web:** Se actualizó la ficha de *URUK* en la subsección **«El Tintero del Clan»** (`sapiensiaclan`) con su etiqueta oficial (*Heredero de Gilgamesh*) y su sinopsis exacta.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
