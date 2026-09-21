@@ -496,7 +496,37 @@
   - Repositorio `UPROTA-BETA` sincronizado y operativo.
 
 ---
+
+### 📍 [ENTRADA 19 - TRANSFORMACIÓN RADICAL A 100% PIXEL ART DEL MODO ARCADE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Respuesta a la Consulta del Director Anigami sobre Factibilidad Técnica:**
+  > *«toda la tipografia, todos los botones, todo debe respural pixel art. bordes redondos no sirven si no tienen dientes de pixel en los bordes. las tipografias deben cambiar. no se si te estoy pidiendo algo que en realidad no se puede hacer... tendriamos que crear una pagina gemela pero en estilo 100% pixel art»*
+
+  **Dictamen de Nexo:** ¡No es necesario duplicar la web ni crear una página gemela! La arquitectura de hojas de estilo modular de CSS (`theme_arcade.css`) permite una **metamorfosis 100% integral y pura a Pixel Art en caliente a 0 ms**:
+
+  1. 🔤 **Transformación Tipográfica Total (Cero Fuentes Serif/Sans en Arcade):**
+     - **Títulos y Encabezados:** Cambian instantáneamente a `Press Start 2P` y `Silkscreen` (títulos épicos, titulares de catálogo, nombres del Clan y rótulo del logo).
+     - **Párrafos, Sinopsis y Descripciones:** Cambian a `VT323` a 1.45rem (legibilidad perfecta de terminal retro cyberpunk / diálogo RPG).
+     - **Botones y Badges:** Cambian a `Press Start 2P` en mayúsculas bitmap puras.
+
+  2. 🔲 **Eliminación Total de Bordes Redondos & Biseles Dentados 8/16-Bits:**
+     - Regla universal `border-radius: 0 !important;` en todos los componentes del Modo Arcade.
+     - **Bordes con Dientes y Relieve Retro:**
+       - Botón Primario (`EXPLORAR OBRAS`): Fondo ámbar retro con bisel de sombra y luz en píxel (`box-shadow: inset 3px 3px 0 #fde68a, inset -3px -3px 0 #78350f, 4px 4px 0 #000;`).
+       - Botón Secundario (`LEER EL MANIFIESTO`): Bisel metálico retro.
+       - Tarjetas Glass (`.card-glass`, `.clan-card`, `.obra-card`): Transformadas en cajas de diálogo RPG/Arcade con marco oscuro, bisel cian/ámbar y sombra dura de píxeles.
+       - Badges y Chips: Marcos rectos pixelados con relieve 3D retro.
+
+  3. 📺 **Capa de Fósforo CRT y Scanlines:**
+     - Scanlines horizontales escalonadas y resplandor de fósforo en títulos (`text-shadow: 2px 2px 0 #000, 0 0 12px rgba(245, 158, 11, 0.5)`).
+
+- **Despliegue Inmediato:**
+  - Repositorio `sapiensiaclan` actualizado y publicado en `main` (Build 05313c4).
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
+
 
 
 
