@@ -78,6 +78,13 @@ class App {
       btnHogarTop.addEventListener('click', () => this.cambiarTab('hogar'));
     }
 
+    const btnPortalClan = document.getElementById('btn-portal-clan-top');
+    if (btnPortalClan) {
+      btnPortalClan.addEventListener('click', () => {
+        audioProcedural.playClick();
+      });
+    }
+
     const btnAmbiente = document.getElementById('btn-ambiente-top');
     if (btnAmbiente) {
       btnAmbiente.addEventListener('click', () => {

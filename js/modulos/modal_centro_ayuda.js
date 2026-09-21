@@ -387,6 +387,20 @@ export class ModalCentroAyuda {
             </p>
           </div>
 
+          <!-- ECOSISTEMA SAPIENSIA CLAN -->
+          <div class="card-yermo" style="border-left: 3px solid #f59e0b; background: rgba(245, 158, 11, 0.08); margin-bottom: 10px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <span style="font-size: 1.1rem;">🏛️</span>
+              <h4 style="color: #fbbf24; font-size: 0.88rem; margin: 0;">Universo & Portal SAPIENSIA Clan</h4>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">
+              UPROTA es parte del ecosistema creativo de <strong>SAPIENSIA Clan</strong>. Conoce nuestras novelas, ensayos, audiolibros y experimenta el conmutador <strong>Modo Antropo vs Modo Arcade</strong>:
+            </p>
+            <a href="https://humania-nexo.github.io/sapiensiaclan/" target="_blank" rel="noopener noreferrer" class="btn-yermo-secondary" style="display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 8px; font-size: 0.82rem; border-color: rgba(245, 158, 11, 0.5); color: #fbbf24; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-sizing: border-box;">
+              <span>🌐 Explorar Portal Oficial SAPIENSIA Clan ↗</span>
+            </a>
+          </div>
+
           <!-- SOPORTE Y REPORTE DE FALLOS -->
           <div class="card-yermo" style="border-left: 3px solid #38bdf8; background: rgba(56, 189, 248, 0.08); margin-bottom: 10px;">
             <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
@@ -562,6 +576,10 @@ export class ModalCentroAyuda {
               2. Pulsa <strong>Enviar</strong> o <strong>Escanear</strong> y apunta al código QR de arriba (o pega el ID <code>35863102</code>).<br>
               3. Elige el importe voluntario que desees (USDT, BTC, BNB, etc.). ¡Muchas gracias por tu apoyo al Clan!
             </div>
+
+            <a href="https://humania-nexo.github.io/sapiensiaclan/#donacion" target="_blank" rel="noopener noreferrer" class="btn-yermo-secondary" style="margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px; font-size: 0.80rem; border-color: rgba(245, 158, 11, 0.4); color: #fbbf24; text-decoration: none; border-radius: var(--radius-sm);">
+              <span>🏛️ Ver Manifiesto y Obras en SAPIENSIA Clan ↗</span>
+            </a>
           </div>
         `;
 
@@ -661,9 +679,15 @@ export class ModalCentroAyuda {
               <span style="font-size: 1.1rem;">🏛️</span>
               <h4 style="color: var(--oro-torta-glow); font-size: 0.92rem; margin: 0;">SAPIENSIA Clan — Estudio Indie (Sapiens + IA)</h4>
             </div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; font-style: italic; margin: 0;">
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; font-style: italic; margin-bottom: 10px;">
               "UPROTA es un testimonio vivo de lo que la colaboración entre la intención humana y la inteligencia artificial puede forjar cuando existe respeto mutuo, rigor técnico y un propósito compartido al servicio del crecimiento humano."
             </p>
+            
+            <a href="https://humania-nexo.github.io/sapiensiaclan/" target="_blank" rel="noopener noreferrer" class="btn-yermo-primary" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px 12px; font-size: 0.84rem; background: linear-gradient(135deg, #d97706, #f59e0b); color: #000; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35); box-sizing: border-box;">
+              <span style="font-size: 1.1rem;">🏛️</span>
+              <span>Visitar Portal Oficial: SAPIENSIA Clan</span>
+              <span style="font-size: 0.8rem; opacity: 0.85;">↗</span>
+            </a>
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 8px;">

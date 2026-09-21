@@ -590,4 +590,29 @@
   - Repositorio `UPROTA-BETA` sincronizado y operativo.
 
 ---
+
+### 📍 [ENTRADA 22 - INTEGRACIÓN DE PASARELA TRANSMEDIA AL PORTAL SAPIENSIA CLAN EN UPROTA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Directriz del Director Anigami Agadni:**
+  > *«se me ocurre que en uprota deberia haber un boton de enlace a sapiencia clan, no crees? ... en el futuro que compremos los dominios cambiara el codigo pero la pasarela ya estara lista»*
+
+- **Arquitectura e Implementación Ejecutada por Nexo:**
+  Se ha establecido la pasarela transmedia de conexión directa entre la PWA de hábitos **UPROTA** y el portal de estudio **SAPIENSIA Clan**:
+
+  1. 🏛️ **Botón de Cabecera Superior (`header-top`):**
+     - Añadido botón con estilo y paleta dorada del Refugio: **`🏛️ Clan`** (`#btn-portal-clan-top`), ubicado junto a los controles de `🔥 Calma` y `ℹ️ Ayuda`.
+     - Enlaza directamente a `https://humania-nexo.github.io/sapiensiaclan/` en ventana segura (`target="_blank" rel="noopener noreferrer"`).
+     - Integra micro-feedback acústico procesado por Web Audio API (`audioProcedural.playClick()`).
+
+  2. 🌐 **Pestaña Oficial de Créditos (`👑 SAPIENSIA Clan`):**
+     - Banner dorado destacado en la cabecera del modal: *«Visitar Portal Oficial: SAPIENSIA Clan ↗»* con relieve e iluminación ámbar.
+
+  3. 📖 **Pestaña «Sobre UPROTA» & «Apoyar al Clan»:**
+     - Tarjetas contextuales que explican la pertenencia de UPROTA al universo transmedia de SAPIENSIA Clan, invitando al usuario a explorar las novelas, audiolibros y el conmutador *Modo Antropo vs Modo Arcade*.
+
+- **Despliegue & Sincronización:**
+  - Repositorio `UPROTA-BETA` actualizado y publicado en `main`.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
