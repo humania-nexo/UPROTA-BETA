@@ -615,4 +615,17 @@
   - Repositorio `UPROTA-BETA` actualizado y publicado en `main`.
 
 ---
+
+### 📍 [ENTRADA 23 - CORRECCIÓN DE PORTADA OFICIAL DE VELA EN MODO ARCADE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Directriz del Director Anigami Agadni:**
+  > *«la portada que pusiste de vela en modo arcade no es. agarra la que se llama preview_portada_vela_version_a_dialogo_4x»*
+
+- **Ajuste Técnico en `sapiensiaclan` Ejecutado por Nexo:**
+  - Se corrigió el atributo `data-cover-arcade` en la tarjeta de catálogo de *VELA* en `index.html`.
+  - Se asignó como portada oficial en Modo Arcade: **`assets/covers/preview_portada_vela_version_a_dialogo_4x.png`** (Versión A con caja de diálogo y renderizado a resolución 4x pixel perfect).
+  - Repositorio `sapiensiaclan` commiteado y desplegado en `main` (`Build 7186257`).
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
