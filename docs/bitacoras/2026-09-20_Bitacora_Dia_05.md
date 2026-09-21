@@ -679,4 +679,14 @@
   - **Alineación en Portal Web:** Se actualizó la ficha de *URUK* en la subsección **«El Tintero del Clan»** (`sapiensiaclan`) con su etiqueta oficial (*Heredero de Gilgamesh*) y su sinopsis exacta.
 
 ---
+
+### 📍 [ENTRADA 27 - RECEPCIÓN DE LA BIBLIA DE LORE Y SINOPSIS DE «EL MANUSCRITO DE CENIZA» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Aporte y Lore del Director Anigami Agadni:**
+  - Se recibió y resguardó la biblia oficial de producción en `Libros/El_Manuscrito_de_Ceniza/Biblia_Produccion_Manuscrito_de_Ceniza.md`.
+  - **Premisa & Universo (2042):** Sátira distópica y realismo mágico existencialista tras la Gran Obsolescencia (*Minerva Global*), la inversión de clase del trabajo físico bruto, las Carreras del Ego (FCTA, `DinastIA™`, `AuraScan™`, `ScentForge™`), el dispositivo Apuntador AR y el fenómeno del *Zumbido* (LRS) desatado por la precisión lingüística de Adrián.
+  - **Alineación en Portal Web:** Se actualizó la ficha en la subsección **«El Tintero del Clan»** (`sapiensiaclan`) con su etiqueta (*Sátira Distópica & Existencialismo*) y su sinopsis oficial.
+
+---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
