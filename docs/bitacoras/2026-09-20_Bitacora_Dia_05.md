@@ -929,5 +929,16 @@
      - **Uso:** Exclusivo para páginas de derechos de autor (copyright) de libros, maquetación editorial física/digital (PDF/EPUB) y adaptaciones de favicon en entornos de fondo claro.
 - **Despliegue & Git Sync:** Todo actualizado y sincronizado en `sapiensiaclan` (commit `f63759d`).
 
+### 📍 [ENTRADA 38 - RESTAURACIÓN DEL FAVICON NEGRO CLÁSICO Y CALIBRACIÓN DE BRANDING (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Calibración de Branding Web:**
+  - Siguiendo la indicación directa del Director **Anigami Agadni**, se restauró el archivo `assets/logo_sapiensia_clan.png` a su versión original en **negro clásico** desde el historial de control de versiones.
+  - **Distribución de Assets de Marca en el Portal:**
+    - 🌐 **Favicon de Navegador (`<link rel="icon">`):** Enlaza a `assets/logo_sapiensia_clan.png` (isotipo negro clásico para visualización limpia en pestañas de navegador y accesos directos).
+    - 🔝 **Cabecera / Navbar (`brand-logo`):** Mantiene `assets/logo_sapiensia_clan_transp_blanco.png` (blanco transparente) para un contraste óptimo con el fondo oscuro y la aurora de partículas.
+    - 🔻 **Pie de Página (`footer-logo`):** Mantiene `assets/logo_sapiensia_clan_transp_blanco.png` (blanco transparente) integrado con el cristal del pie de página.
+- **Despliegue & Git Sync:** Todo sincronizado y publicado en GitHub Pages (`sapiensiaclan` commit `8a48fda` & `UPROTA-BETA`).
+
 ---
 *(Las siguientes interacciones, entregas y debates de la Jornada 05 se añadirán a continuación de este punto sin borrar las entradas previas).*
