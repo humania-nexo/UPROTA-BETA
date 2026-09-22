@@ -396,7 +396,7 @@ export class ModalCentroAyuda {
             <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 8px;">
               UPROTA es parte del ecosistema creativo de <strong>SAPIENSIA Clan</strong>. Conoce nuestras novelas, ensayos, audiolibros y experimenta el conmutador <strong>Modo Antropo vs Modo Arcade</strong>:
             </p>
-            <a href="https://humania-nexo.github.io/sapiensiaclan/" target="_blank" rel="noopener noreferrer" class="btn-yermo-secondary" style="display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 8px; font-size: 0.82rem; border-color: rgba(245, 158, 11, 0.5); color: #fbbf24; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-sizing: border-box;">
+            <a href="https://sapiensiaclan.com" target="_blank" rel="noopener noreferrer" class="btn-yermo-secondary" style="display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 8px; font-size: 0.82rem; border-color: rgba(245, 158, 11, 0.5); color: #fbbf24; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-sizing: border-box;">
               <span>🌐 Explorar Portal Oficial SAPIENSIA Clan ↗</span>
             </a>
           </div>
@@ -577,7 +577,7 @@ export class ModalCentroAyuda {
               3. Elige el importe voluntario que desees (USDT, BTC, BNB, etc.). ¡Muchas gracias por tu apoyo al Clan!
             </div>
 
-            <a href="https://humania-nexo.github.io/sapiensiaclan/#donacion" target="_blank" rel="noopener noreferrer" class="btn-yermo-secondary" style="margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px; font-size: 0.80rem; border-color: rgba(245, 158, 11, 0.4); color: #fbbf24; text-decoration: none; border-radius: var(--radius-sm);">
+            <a href="https://sapiensiaclan.com/#apoyo" target="_blank" rel="noopener noreferrer" class="btn-yermo-secondary" style="margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px; font-size: 0.80rem; border-color: rgba(245, 158, 11, 0.4); color: #fbbf24; text-decoration: none; border-radius: var(--radius-sm);">
               <span>🏛️ Ver Manifiesto y Obras en SAPIENSIA Clan ↗</span>
             </a>
           </div>
@@ -664,7 +664,8 @@ export class ModalCentroAyuda {
             <h4 style="font-size: 0.84rem; color: var(--text-primary); margin-bottom: 6px;">⚙️ Estado Técnico del Sistema:</h4>
             <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); line-height: 1.6;">
               <div>• <strong>Versión:</strong> UPROTA v3.8 (SAPIENSIA Clan)</div>
-              <div>• <strong>Compilación:</strong> 2026.09.20-prod</div>
+              <div>• <strong>Dominio Oficial:</strong> uprota.com</div>
+              <div>• <strong>Red & Seguridad:</strong> Cloudflare Anycast • SSL 256-bit</div>
               <div>• <strong>Almacenamiento:</strong> IndexedDB Local (Persistente)</div>
               <div>• <strong>Caché Offline:</strong> Service Worker Activo (v4.2)</div>
               <div>• <strong>Motor de Audio:</strong> Web Audio API Chiptune (0 KB)</div>
@@ -683,7 +684,7 @@ export class ModalCentroAyuda {
               "UPROTA es un testimonio vivo de lo que la colaboración entre la intención humana y la inteligencia artificial puede forjar cuando existe respeto mutuo, rigor técnico y un propósito compartido al servicio del crecimiento humano."
             </p>
             
-            <a href="https://humania-nexo.github.io/sapiensiaclan/" target="_blank" rel="noopener noreferrer" class="btn-yermo-primary" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px 12px; font-size: 0.84rem; background: linear-gradient(135deg, #d97706, #f59e0b); color: #000; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35); box-sizing: border-box;">
+            <a href="https://sapiensiaclan.com" target="_blank" rel="noopener noreferrer" class="btn-yermo-primary" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px 12px; font-size: 0.84rem; background: linear-gradient(135deg, #d97706, #f59e0b); color: #000; text-decoration: none; border-radius: var(--radius-sm); font-weight: bold; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35); box-sizing: border-box;">
               <span style="font-size: 1.1rem;">🏛️</span>
               <span>Visitar Portal Oficial: SAPIENSIA Clan</span>
               <span style="font-size: 0.8rem; opacity: 0.85;">↗</span>
@@ -774,6 +775,12 @@ export class ModalCentroAyuda {
                   <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 2px;">Investigación técnica, exploración visual y síntesis conceptual.</div>
                 </div>
               </div>
+            </div>
+
+            <!-- INSIGNIA DE SEGURIDAD & INFRAESTRUCTURA -->
+            <div style="margin-top: 14px; padding: 6px 12px; background: rgba(0,0,0,0.5); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm); text-align: center; font-size: 0.70rem; font-family: var(--font-mono); color: #6ee7b7; display: flex; align-items: center; justify-content: center; gap: 6px;">
+              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10b981; box-shadow: 0 0 6px #10b981;"></span>
+              <span>🛡️ SSL 256-bit • Protegido por Cloudflare Anycast • Local-First</span>
             </div>
           </div>
         `;
