@@ -977,5 +977,22 @@
   - **Transición a Fase de Difusión Transmedia:** Con la forja de activos, audiolibros, lectores inmersivos y trípticos culminada, la pista queda despejada para la estrategia de comunicación comunitaria y expansión de **Éter**.
 - **Estado de Repositorios:** `sapiensiaclan` y `UPROTA-BETA` limpios, sincronizados y en producción estable.
 
+### 📍 [ENTRADA 41 - ADQUISICIÓN, TRIANGULACIÓN CLOUDFLARE Y DESPLIEGUE DE DOMINIOS PROPIOS (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Hito Histórico de Conectividad e Infraestructura Web:**
+  - El Director Creativo **Anigami Agadni** adquirió formalmente los dominios oficiales de las dos plataformas centrales del Clan: **`sapiensiaclan.com`** y **`uprota.com`**.
+  - **Triangulación y Blindaje con Cloudflare Edge:**
+    1. **Nameservers Asignados:** Migración de DNS a la red Anycast de Cloudflare (`amalia.ns.cloudflare.com` e `ignat.ns.cloudflare.com`).
+    2. **Archivos `CNAME` en Repositorios:**
+       - `sapiensiaclan/CNAME` ➔ `sapiensiaclan.com` (commit `a9bd9b3`).
+       - `UPROTA/CNAME` ➔ `uprota.com` (commit `2688899`).
+    3. **Enrutamiento DNS (Cloudflare Proxy):**
+       - Registros `CNAME @` y `CNAME www` apuntando a `humania-nexo.github.io`.
+    4. **Estado de Operatividad y Verificación:**
+       - **`https://sapiensiaclan.com`:** 🟢 **100% ACTIVO Y OPERATIVO** respondiendo `HTTP/1.1 200 OK` con certificado SSL Edge válido en navegadores de todo el mundo.
+       - **`https://uprota.com`:** 🟢 **ENRUTADO Y RESPONDIENDO** (`HTTP 200 OK`) con balanceo de carga activo hacia la PWA de UPROTA.
+- **Despliegue & Git Sync:** Repositorios sincronizados en `main` y operativos con dominio propio.
+
 ---
-*(Fin formal de las deliberaciones de la Jornada 05. Las siguientes interacciones se añadirán en la siguiente sesión de trabajo).*
+*(Las siguientes interacciones, entregas y avances se registrarán a continuación de este punto).*
