@@ -319,8 +319,23 @@
     - Si el usuario ejecuta 5 pulsaciones ultrarrápidas en el botón de FE del HUD, desencadena una fuga de datos con sonido glitch y recompensa de contrabando: `+5 FE // ⚠️ BRECHA EN VANCE-CORE (Contrabando de Mite)`.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 17 - CORRECCIÓN DE DOBLE LISTENER, LÍMITES DIARIOS (3/DÍA) & ANTI-EXPLOIT (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Diagnóstico & Causa Raíz:**
+  - El Director detectó que pulsar el HUD sumaba 2 FE en lugar de 1 y permitía pulsaciones ilimitadas.
+  - Causa raíz: doble instanciación de `FEHUDManager` (durante la carga inicial del script y en `DOMContentLoaded`), lo que provocaba que dos listeners independientes capturaran cada clic, duplicando la suma a `+2 FE`.
+- **Acción Ejecutada por Nexo:**
+  - Se implementó patrón Singleton estricto (`if (window.proiectioFE) return window.proiectioFE`), eliminando cualquier listener duplicado.
+  - **Límite Estricto de Ración Diaria:** Máximo de **3 sincronías manuales por día** (`+1 FE` cada una).
+    - Al superar el límite (3/3), Vance-Core emite una alerta visual y sonora bloqueando el canal: `⚠️ Vance-Core: Ración diaria de sincronía agotada (3/3). Espera al siguiente ciclo.`
+    - Cooldown de 4 segundos entre sincronías para evitar spam.
+  - **Single-Use en Hack de Mite:** El exploit de los 5 clics rápidos (`+5 FE`) queda sellado tras su primer uso en `localStorage`. Si se intenta reusar, el sistema advierte que la vulnerabilidad fue parchada.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
