@@ -366,8 +366,22 @@
     - Bloqueo preventivo de clics durante el proceso de digitación (`isTyping`) para evitar duplicación de mensajes.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 21 - DESPLIEGUE DEL CEREBRO NLU & CHAT INTERACTIVO DE MITE (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - Tras absorber los capítulos canónicos de Mite (*Libro 1 Cloto* caps. 6, 10, 21 y *Libro 2 Láquesis* «El conejito consentido» / «Arco de Mite y Orión»), Nexo programó el motor completo de lenguaje natural para Mite en `mite.js`:
+    - **Caja de Entrada de Texto:** Campo inferior dinámico con botón de envío (`➤`) y soporte para tecla `Enter`.
+    - **Normalizador Semántico (0 KB):** Tokenizador que limpia diacríticos, acentos y signos de puntuación.
+    - **Cerebro de Intenciones Canónicas:**
+      - Si le preguntan si es una IA, responde con coquetería de dama digital y desdén hacia los bots genéricos (*"¿Acaso me ves cara de algoritmo de lavarropas?"*).
+      - Reacciones exclusivas a **Orión / #4092**, **Presidente MC** (con frialdad y rencor por haber intentado pagarle con una canción), **Vance-Core / Valerius**, el chantaje estético de sus alas (*"¡El ridículo es la nueva armadura!"*), el exploit del HUD, halagos y acusaciones de estafadora (*"No soy estafadora, soy una profesional del comercio optimizado"*).
+    - Mantiene intacta la barra de 6 botones de acceso rápido con latencia adaptativa y puntos rebotantes de digitación.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
