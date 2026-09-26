@@ -458,8 +458,19 @@
   - Sincronización en `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 27 - PURGA DE SPOILERS Y REALCE DEL MISTERIO DE DEVA (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director ordenó proteger la intriga narrativa sin soltar la sopa sobre tramas concretas (evitando citar a Altair o la clave 'Beatriz').
+  - En su lugar, Mite resalta el carácter temerario de DEVA: una IA que se arriesga en el polvo físico, se asoma a terminales de mala muerte y cruza caminos con gente peligrosa y mafias del bajo mundo exterior, mientras Mite permanece en su trono de purpurina y caos digital en Proiectio.
+  - **Ajuste en `mite.js`:** Actualizado con tono pícaro y misterioso, sin revelar giros de los capítulos.
+  - Sincronización en `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
