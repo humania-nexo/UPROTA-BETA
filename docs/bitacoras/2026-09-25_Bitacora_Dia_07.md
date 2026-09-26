@@ -512,8 +512,21 @@
   - **Ajuste en `test.js`:** Se recalibró el espaciado exacto de las líneas 26 a 31 del bloque `ART_LIBELULA`, asignando 19 espacios continuos a los segmentos `|=|`, `/=\`, `\=/` y 20 espacios al ápice `^`, eliminando el quiebre y asegurando una continuidad vertical perfecta con el tórax.
 - **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
 
+### 📍 [ENTRADA 32 - PURGA DE PROIECTIO Y ACTIVACIÓN DE SAPIENSIA CLAN EN BIFROST (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director instruyó que *Proiectio* no debe figurar en la lista de portales activos/aliados de la terminal de DEVA, dado que Proiectio representa la plataforma y el coliseo opresivo del régimen corporativo en este universo.
+  - En su lugar, se estableció como portal aliado activo fundamental a **SAPIENSIA Clan** (`https://sapiensiaclan.com`), integrando además una leyenda explicativa en el comando `BIFROST`.
+  - **Ajustes en `database.js` y `test.js`:**
+    - `BIFROST_PORTALES`: Se eliminó el registro de `proiectio` y se configuró `sapiensiaclan` (*"Portal SAPIENSIA Clan // Santuario creativo y sede de la hermandad creadora transmedia"*).
+    - `renderizarBifrost()`: Se incorporó la leyenda informativa: *"ℹ️ Todos los portales dimensionales y nodos de resistencia que vayas desbloqueando aparecerán en esta lista."*
+    - `ESTADO`: Se añadió un filtro retrocompatible en `localStorage` para purgar `proiectio` de sesiones previas del usuario y asegurar que `sapiensiaclan` figure por defecto en los portales desbloqueados.
+- **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
