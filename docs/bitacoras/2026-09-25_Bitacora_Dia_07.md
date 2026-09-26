@@ -203,7 +203,25 @@
   - Archivos `footer.html` actualizados, commiteados y desplegados en vivo a producción en ambas plataformas.
 
 ---
+
+### 📍 [ENTRADA 09 - INTEGRIDAD TOTAL DE ACTIVOS Y EXPANSIÓN DE SUBMUNDOS: SOLARIS Y VELVET (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acciones Técnicas Ejecutadas (Punto 1):**
+  1. 🛠️ **Corrección de Imagen de Evento Live (`proiect.io`):**
+     - Subsanado el fallo 404 en el CSS de `index.html` vinculando `multimedia/evento-live.jpeg`.
+  2. ⚡ **Creación de Páginas Canónicas de Inmersión (`proiect.io`):**
+     - **`solaris.html`:** Página dedicada para *Solaris Citrus: Voltaje Puro (Fase Diurna)* con lore canónico del chip CNB-3, ficha técnica interactiva y estética visual Proiectio.
+     - **`velvet.html`:** Página dedicada para *Velvet Dream: Reinicio Profundo (Fase Nocturna)* con descripción de inducción REM, sedación de Paz Preventiva y paleta bio-digital nocturna.
+     - Inclusión de ambas rutas en `sitemap.xml`.
+  3. 🧹 **Depuración de Huérfanos en `humania.space`:**
+     - Eliminadas plantillas residuales de Proiectio (`olympus.html`, `Plantilla.html`) y regenerado el `sitemap.xml` oficial.
+  4. 🔍 **Auditoría Automatizada:**
+     - Script de verificación de rutas y etiquetas ejecutado: **0 errores 404 / 0 enlaces rotos** en ambos ecosistemas.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
