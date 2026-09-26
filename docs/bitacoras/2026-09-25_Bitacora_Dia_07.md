@@ -860,9 +860,14 @@
      - **Plano Holográfico del Hangar (Fase 3.5):** Inclusión de la nave Ranger 01 y del monolito TARS táctico en la bahía de despegue junto a la Endurance II.
 
 - **Estado de Producción:**
-  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`9456451`).
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`4f48906`).
   - Carpeta de activos: `arcade-enramado/nolan-interestelar/assets/sprites/`.
   - Peso total de todos los sprites optimizados: **< 6.5 KB**.
+
+- **🎨 Addendum de Fidelidad Cinematográfica (Revisión de Dirección):**
+  - **Cooper (Matthew McConaughey):** Reestructurado con cabello corto de piloto/astronauta NASA, entradas naturales, textura castaña ondulada corta, sombras de fatiga orbital y barba incipiente de 3 días.
+  - **Dra. Amelia Brand (Anne Hathaway):** Recreado su icónico corte corto liso con raya lateral izquierda bien definida, flequillo liso barrido sobre la frente con brillo espresso/caoba y ojos castaños profundos.
+  - **El Político:** Peinado corporativo formal engominado hacia atrás (*slicked-back*), sienes plateadas, entradas pronunciadas y ceño calculador.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
