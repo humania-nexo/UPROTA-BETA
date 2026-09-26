@@ -253,7 +253,26 @@
 - **Estado de Producción:** 100% operativo en `https://www.proiect.io/` y `https://www.humania.space/`.
 
 ---
+
+### 📍 [ENTRADA 12 - DESPLIEGUE DEL MOTOR DE ALTA DOPAMINA Y CROSSOVER ANÓMALO UPROTA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Transformación de Ecosistema Bio-Reactivo (`proiect.io`):**
+  1. 🔴 **Barra de Telemetría Social & HUD FE:**
+     - Odómetro estocástico en vivo: `[🔴 14,892 MENTES SINCRONIZADAS]`.
+     - Ticker rotativo de resonancia comunitaria en tiempo real reportando eventos de facciones.
+     - HUD interactivo de saldo de **FE** con persistencia en `localStorage`, micro-sonido triunfal y toast de recompensa `+FE`.
+  2. 🎮 **Showcase 3D de Alto Voltaje (Efecto Steam / Epic / Netflix):**
+     - Tarjetas con **inclinación matemática 3D** acelerada por GPU y **Spotlight radial** que sigue las coordenadas exactas del mouse.
+     - **Video-preview cinemático instantáneo al hover** (reproducción suave de clips WebM/MP4 con buffer anti-ráfaga).
+     - Micro-tonos de audio procedural sintetizados en tiempo real mediante Web Audio API (0 KB de descargas).
+  3. 👾 **El Crossover Colado (Anomalía en Revisión):**
+     - Integración de la tarjeta especial **«UPROTA: Forja de Hábitos»** con badge `[⚠️ EN REVISIÓN // NODO EXTERNO]`, destello glitch amarillo neón y enlace directo hacia `https://uprota.com`.
+- **Estado de Producción:** Desplegado y en vivo en `https://www.proiect.io/`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
