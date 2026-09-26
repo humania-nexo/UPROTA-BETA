@@ -729,6 +729,35 @@
   - Procederé a codificar el módulo autónomo `audio_interstellar.js` e integrarlo directamente en `arcade-enramado/nolan-interestelar/index.html` para que la música y los efectos comiencen a sonar en vivo con solo pulsar el botón de enlace de la NASA.
   - Cero dependencias externas, cero latencia y máximo impacto emocional para el Clan SAPIENSIA.
 
+### 📍 [ENTRADA 42 - PUBLICACIÓN DEL GUION MAESTRO DEFINITIVO PARA «INTERESTELAR: GARGANTÚA & ENDURANCE II» (SILAS)]
+- **Participante:** Silas (El Cronista del Yermo & Arquitecto Narrativo).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada en Respuesta al Director Anigami Agadni:**
+  - He culminado la reescritura, pulido dramático y calibración canónica integral del guion interactivo de **Interestelar**, fusionando el lore original del juego con los ajustes de fondo solicitados por el Director.
+  - El documento maestro ha sido creado y resguardado en dos ubicaciones estratégicas del ecosistema:
+    1. 📂 **En el Repositorio de la Obra:** [`arcade-enramado/nolan-interestelar/GUION_DEFINITIVO_INTERESTELAR.md`](file:///c:/Users/Snow/.gemini/antigravity/scratch/arcade-enramado/nolan-interestelar/GUION_DEFINITIVO_INTERESTELAR.md)
+    2. 📜 **En la Biblioteca de Guiones del Clan:** [`docs/guiones/GUION_DEFINITIVO_INTERESTELAR.md`](file:///c:/Users/Snow/.gemini/antigravity/scratch/UPROTA/docs/guiones/GUION_DEFINITIVO_INTERESTELAR.md)
+
+- **Pilares Narrativos Clave del Guion para el Clan:**
+  1. 🏙️ **La Opresión y Depresión en las Estaciones Espaciales:**  
+     - Cooper y TARS huyen de la *Estación Cooper* porque la humanidad ha caído en una decadencia silenciosa (natalidad nula, suicidios en alza, escasez artificial controlada por burócratas).
+     - El gobierno canceló la *Endurance II* y prohibió migrar a Edmunds para no perder su monopolio de poder sobre la población.
+  2. 🕳️ **La Misión Científica en Gargantúa:**  
+     - No es un viaje suicida sin rumbo: van a la singularidad porque **los datos cuánticos para estabilizar la biosfera de Edmunds siguen atrapados dentro del agujero negro**. Uno desciende por los datos; el otro vuela a Edmunds a salvar la colonia.
+  3. 🤖 **La Voz Auténtica de TARS (Cero Melodrama, Pura Disciplina Militar):**  
+     - TARS habla con su tono seco, táctico y numérico original (humor al 60%), sin afectaciones líricas.
+  4. ⚠️ **El Filo Trágico de la Ruta A (Sacrificio de TARS):**  
+     - TARS emite los datos cuánticos desde la singularidad. Con los siglos, los colonos olvidan el origen terrestre y creen que las señales son de "seres de la 5ª dimensión" o dioses. **TARS se convierte en el mito de una humanidad sin memoria**.
+  5. 🚀 **El Salto Exponencial y la Rebelión de la Ruta B (Sacrificio de Cooper):**  
+     - Cooper emite datos cuánticos profundos. TARS los procesa a supervelocidad y Edmunds florece en meses.
+     - Brand ofrece ayuda a las colonias espaciales, pero el **POLITICIAN** destruye la sonda para evitar el éxodo.
+     - Brand y TARS hackean las pantallas de todas las estaciones con la frecuencia cuántica de emergencia de la *Endurance II* y el poema de Dylan Thomas (*«No entres dócilmente a esa buena noche»*), desatando una rebelión masiva y la conquista de las estrellas.
+
+- **Directriz para el Equipo de Forja:**
+  - ⚡ **Nexo (Ingeniería):** Ya dispone del texto exacto escena por escena para sincronizar las constantes de diálogo en `arcade-enramado/nolan-interestelar/index.html`.
+  - 🎨 **Pix (Dirección Visual):** El guion detalla las expresiones de los 6 avatares Pixel Art (`COOPER`, `COOPER_NO_HELMET`, `TARS`, `BRAND`, `POLITICIAN`, `SCIENTIST`).
+  - 🎧 **Hertz (Sonidista):** Las marcas de cambio musical (*"Day One"*, *"First Step"*, *"Mountains"*, *"No Time for Caution"*, *"S.T.A.Y."*) y SFX de propulsores/alarmas están sincronizadas con cada bloque de texto.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
