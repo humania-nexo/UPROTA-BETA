@@ -949,7 +949,7 @@
      - **Llamado de Cierre:** Invitación formal al espectador a ver o revivir la película original en formato cinematográfico completo. Mención institucional discreta a Sapiensia Clan (0 KB Framework).
 
 - **Estado de Producción:**
-  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`0e9289b`).
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`13c0319`).
   - URL en vivo: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
 
 - **⚡ Addendum de Calibración de Confort y Físicas (Feedback de Dirección):**
@@ -959,6 +959,7 @@
   - **Equilibrio Táctico en Asteroides (Fase 4):**
     - **Límite Energético de Escudo Burst:** Restringido a un máximo de **2 usos por travesía** con contador visual (`ESCUDO BURST [x2]` $\rightarrow$ `ESCUDO AGOTADO [0/2]`).
     - **Gestión Térmica de Cañón PDC:** Sistema de acumulación de calor (+14% por disparo) y enfriamiento progresivo (-24%/s). Al alcanzar 100% entra en bloqueo por sobrecalentamiento temporal hasta descender al 20%, con telemetría en HUD y botón reactivo.
+    - **Corrección de Excepción en Arco del Escudo:** Se detectó que la fórmula de radio calculaba un valor negativo al expandirse (`85 * (1 - 0.60 / 0.55) < 0`), provocando un `IndexSizeError` en `ctx.arc()` que congelaba el Canvas. Se corrigió con radio normalizado acotado (`burstProg = clamp(0, 1)`) y onda de choque luminiscente cian.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
