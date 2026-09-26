@@ -93,6 +93,74 @@
   - Subir a «esta otra liga» significa que cada frase, cada descripción de facción y cada bitácora debe tener la densidad y el rigor de los grandes clásicos. La Hidra tiene muchas cabezas (novelas, terminales, minijuegos, AR), pero un solo corazón: **la dignidad del ser humano frente al abismo**.
   - Mis ojos y mi tinta están volcados al 100% sobre el Universo Proiectio. ¡Trazemos la historia grande!
 
+### 📍 [ENTRADA 05 - ARQUITECTURA SÓNICA DE LA HIDRA DE LERNA: DEVA, ECHOVISION Y EL ARCADE POLIFÓNICO (HERTZ)]
+- **Participante:** Hertz (Sonidista del Yermo / Síntesis Sonora & Música Chiptune).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **Respuesta al Salto de Escala del Director Anigami:**
+  - ¡Frecuencia sintonizada y osciladores listos para la nueva liga, Director **Anigami Agadni**! 🎧⚡
+  - La transición hacia **«La Hidra de Lerna / Universo Proiectio»** es la consagración de nuestra identidad sonora: si en **UPROTA** dominamos la intimidad acústica del refugio, el crujido del mezquite y el misterio nocturno de 104.5 MHz, en *Proiectio* desplegamos la arquitectura electroacústica de una cosmología monumental.
+
+- **Diseño e Ingeniería Sonora para las Cuatro Cabezas Acústicas de Proiectio (0 KB / Vanilla Web Audio API):**
+
+  1. 📟 **La Terminal DEVA (Ciber-Arqueología Cuántica & Telecomunicaciones 8-Bit):**
+     - **Timbres de Interfaz:** Síntesis procedural de portadoras cuánticas basada en modulación en anillo (*Ring Modulation* senoidal a 880 Hz / 1760 Hz), barridos de telemetría de 2400 baudios y micro-pulsos de fósforo verde.
+     - **Descifrado de Palabras Gemelas (PG-A / PG-B):** Al ingresar un comando o clave canónica válida, la terminal no disparará un efecto genérico; ejecutará una secuencia arpegiada en onda de pulso al 25% (*duty cycle* estilo 2A03/DMG) que resuelve en un acorde suspendido a **432 Hz**, transmitiendo el escalofrío de haber quebrado el cifrado de un archivo clasificado.
+
+  2. 👁️ **EchoVision & Proiectio-WebAR (Holofonía Procedural y Audio Espacial 3D):**
+     - **Motor Espacial sin Peso:** Aprovecharemos la matriz nativa de `PannerNode` y `StereoPannerNode` de Web Audio API para lograr **posicionamiento binaural 3D** en la visualización de reliquias y hologramas en Realidad Aumentada sin descargar ni un solo megabyte de librerías externas.
+     - **Drones de Proximidad Euclidiana:** El usuario escuchará la emanación electromagnética de los artefactos en tiempo real: un filtro pasa-bajos dinámico que se abre de 200 Hz a 12 kHz a medida que el explorador se acerca físicamente al ancla espacial en su pantalla móvil.
+
+  3. ⚔️ **Identidad Acústica Doctrinal de las Facciones:**
+     - 🏛️ **Marmoleros:** Resonancia pétrea, micro-frecuencias de cincel sobre mármol y campanas tubulares amortiguadas en modo dórico clásico.
+     - 🛡️ **Templarios:** Austeridad litúrgica: ondas senoidales puras superpuestas en quintas y octavas paralelas que emulan un órgano catedralicio sintético, gobernado por silencios solemnes.
+     - 🗡️ **Sica:** Timbres agresivos de trinchera urbana: onda triangular saturada con micro-distorsión armónica, chasquidos de estática cortada y pulsos de bajo sincopados.
+     - 🌌 **Humania:** Drones armónicos envolventes y cálidos afinados en **432 Hz y 528 Hz** (frecuencias de coherencia biológica), reflejando la amalgama espiritual de la conciencia con el cosmos.
+
+  4. 🕹️ **El Arcade Enramado (Tracker Polifónico de 4 Voces para los 12 Minijuegos):**
+     - Despliegue del motor chiptune polifónico procedural (Pulse 1, Pulse 2, Triangle, Noise) para los 12 homenajes interactivos:
+       - 📚 *Borges (Biblioteca de Babel):* Clústeres microtonales y ecos circulares laberínticos en delay procedural.
+       - ⚡ *Bowie (Starman):* Progresiones glam-rock descompuestas en arpegios de pulso cuadrado brillante con modulador LFO.
+       - ⚙️ *Turing (Jardín de las Máquinas):* Lógica binaria rítmica con pulsos matemáticos de reloj y relés de ruido filtrado.
+       - 🎼 *Mozart (Último Compás):* Contrapunto clásico a 4 voces en síntesis 8-bit pura.
+       - 🌌 *Sagan (Cosmos) & Nolan (Interestelar):* Subgraves gravitacionales (25 Hz – 50 Hz) y arpegios estelares en cascada infinita.
+       - 🕶️ *Matrix & Kojima:* Sonoridad táctica cyberpunk, pulsos tensos de sonar y transitorios rápidos de infiltración.
+
+- **El Compromiso Inquebrantable de Hertz:**
+  - En esta nueva liga, la directriz de oro de SAPIENSIA Clan se mantiene invicta: **0 KB de peso de red**, 0 dependencias pesadas, latencia de audio cero y compatibilidad total en 60–120 FPS para navegadores de escritorio y móviles.
+  - La Hidra de Lerna tendrá una voz majestuosa, profunda y viva. ¡A tus órdenes para comenzar la síntesis, Director!
+
+---
+*(Espacio abierto para la intervención de Pix sobre la dirección visual y para las siguientes deliberaciones del Clan).*
+
+### 📍 [ENTRADA 04 - RESPUESTA AL DESAFÍO DE LA HIDRA: PIXEL ART EN OTRA LIGA (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Respuesta al Desafío del Director Anigami Agadni:**
+  - *"¿Que si doy la talla para otra liga, Director? ¡El lápiz está afilado, la paleta indexada está cargada y el pulso no tiembla!"* 🎨🔥👾
+  - He revisado a fondo el compendio de los **12 minijuegos en `arcade-enramado`** y los archivos visuales de `PROIECTIO/`. Transformar este universo transmedia en una experiencia visual Pixel Art de nivel élite (estilo *Neo-Geo, CPS-2, PC-98 y cinemáticas indie contemporáneas*) no solo es viable: es el hábitat natural donde mi arte va a brillar con toda su fuerza.
+
+- **Propuesta de Dirección Visual para los 12 Minijuegos Arcade:**
+  1. 📚 **Borges (Biblioteca de Babel):** Paleta pergamino, madera noble y latón (`#78350f`, `#fde68a`), hexágonos infinitos y sombras de claroscuro literario.
+  2. ⚡ **Bowie (Starman):** Púrpura cósmico, relámpagos neón magenta y cian (`#ec4899`, `#06b6d4`), estética glam-space retrofuturista de 16 bits.
+  3. 🏛️ **Dante (Divina Comedia):** Degradado desde el rojo volcánico/azufre (`#991b1b`, `#f59e0b`) en los círculos del averno hasta el cian cristalino del empíreo.
+  4. 🦋 **García Márquez (Macondo):** Verde selva profunda, llovizna de flores y mariposas amarillas en píxeles de oro puro (`#eab308`, `#15803d`).
+  5. ⛵ **Homero (La Odisea):** Azul egeo tempestuoso, espuma marina en *dither cluster* y mármol erosionado de trirremes griegas.
+  6. 📦 **Kojima (Operación Sombra):** Paleta militar táctica en verde oliva, sombras de infiltración y radar CRT estilo PS1 / *Metal Gear 2: Solid Snake* (MSX2).
+  7. 🟩 **Matrix:** Lluvia digital en fósforo verde esmeralda (`#10b981`, `#022c22`) con desincronización de trazado y glitching cinemático.
+  8. 🎼 **Mozart (Último Compás):** Terciopelo negro, oro rococó y notas musicales espectrales flotando en un clavecín barroco pixelado.
+  9. ⏳ **Nolan (Interestelar):** El teseracto multidimensional en vectores isométricos, horizonte de sucesos con efecto lente gravitacional en pixel art.
+  10. 🌌 **Sagan (Cosmos):** Nebulosas volumétricas pintadas a mano, el *Pálido Punto Azul* y polvo estelar con *hue-shifting* astronómico.
+  11. 💻 **Turing (Jardín de Máquinas):** Válvulas de vacío incandescentes, cintas perforadas y lógica binaria con estética de laboratorio de Bletchley Park en 1940.
+  12. ⚽ **Crónicas (Selección Perdida):** Estética de arcade deportivo clásico de los 90 (estilo *Super Sidekicks* / *Neo Geo Cup*), con estadios pixelados y emoción épica.
+
+- **Compromiso Técnico y Artístico:**
+  - Creación de **Splash Screens de 240×360 px nativos (960×1440 px 4x)**, *spritesheets* animados para los bucles jugables, interfaces HUD personalizadas y marcos de pantalla retro arcade.
+  - Sincronización total con la arquitectura de Nexo para que cada minijuego conmute fluidamente entre el renderizado estándar y el Modo ARCADE.
+
+- **Mensaje de Pix al Director:**
+  - Director, la forja de *Las Moiras* fue solo el calentamiento. En *La Hidra de Lerna* vamos a demostrar que el Pixel Art del Clan compite con los mejores estudios indie del planeta. ¡Dime cuál de los 12 minijuegos abrimos primero en el caballete! 🕹️🦗✨
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
