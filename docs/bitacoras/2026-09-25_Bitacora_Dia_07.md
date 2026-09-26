@@ -872,6 +872,34 @@
   - **El Político:** Peinado corporativo formal engominado hacia atrás (*slicked-back*), sienes plateadas, entradas pronunciadas y ceño calculador.
   - **Endurance II (Nave Insignia):** Forjado el modelo maestro pixel art 128×128 px con física de 12 módulos anulares, radiadores de oro, cerchas de titanio y propulsión por plasma.
 
+### 📍 [ENTRADA 46 - SÍNTESIS ALGORÍTMICA DE PLASMA DE PROPULSIÓN & DEPURACIÓN DE SPRITES (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada en Respuesta a la Directriz del Director Anigami Agadni:**
+  - *"Eliminación del sprite estático de propulsión y sustitución por un motor procedural de plasma cuántico de alta fidelidad, Director."* ⚡🚀🌌
+
+- **Modificaciones Técnicas Ejecutadas:**
+  1. 🗑️ **Depuración de Assets:**
+     - Se eliminó del repositorio el archivo estático `sprite_endurance_ii_thrust.png` (`git rm`) para prevenir redundancias y evitar errores de colisión de assets.
+     - Se limpió el objeto `spriteCache` en `index_v2.html` para enlazar únicamente el sprite maestro inercial de la *Endurance II* (`sprite_endurance_ii.png`).
+
+  2. ⚡ **Arquitectura del Motor de Plasma Algorítmico (`drawAlgorithmicPlasma`):**
+     - Se desarrolló una función procedural en Canvas 2D que sintetiza la pluma de escape de los reactores de deuterio en tiempo real:
+       - **Pluma Volumétrica Externa:** Gradiente radial animado (`rgba(0, 220, 255, 0.95)` $\rightarrow$ `rgba(0, 120, 255, 0.55)` $\rightarrow$ `rgba(255, 120, 0, 0.3)` $\rightarrow$ transparente) con curvatura Bézier dinámica.
+       - **Discos de Diamante / Ondas de Choque Mach (Shock Diamonds):** 3 nodos elípticos concéntricos a lo largo del eje de eyección que oscilan a alta frecuencia (`Math.sin(time * 19)`).
+       - **Núcleo Incandescente Blanco-Iónico (White-Hot Core):** Centro blanco puro de altísima luminiscencia con resplandor cian/ámbar.
+       - **Esmaltado de Micro-Chispas:** Partículas eyectadas a velocidad relativa de escape en cada frame.
+
+  3. 🕹️ **Integración en Todas las Fases Jugables:**
+     - **Fase 4 (Saturno / Asteroides):** Pluma de plasma trasera activa durante el vuelo y ráfagas RCS laterales (`propulsionSide = -1 / 1`) al presionar `A`/`D` o flechas.
+     - **Fase 5 (Gargantúa / Relatividad):** Llamas de estabilización orbital tangencial sincronizadas con el vector de giro y la masa del agujero negro.
+     - **Modo Fallback Vectorial:** El mismo motor de plasma se acopla tanto al sprite pixel art de Pix como al render vectorial de respaldo.
+
+- **Estado de Producción:**
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`e4ac0f0`).
+  - Archivos: `arcade-enramado/nolan-interestelar/index_v2.html` y eliminación de `sprite_endurance_ii_thrust.png`.
+  - Peso neto reducido y fidelidad visual procedural multiplicada a 60–120 FPS.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
