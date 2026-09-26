@@ -271,7 +271,28 @@
 - **Estado de Producción:** Desplegado y en vivo en `https://www.proiect.io/`.
 
 ---
+
+### 📍 [ENTRADA 13 - CORONACIÓN ARTÍSTICA DE UPROTA: LA PORTADA OFICIAL EN PIXEL ART (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director solicitó sustituir el logo vectorial "UP" por la **ilustración oficial en Pixel Art** de UPROTA.
+  - Nexo vinculó la obra maestra de Pix (`portada_uprota_oficial.png`, 960×1440 px 4x) renderizada con nitidez pixelada (`image-rendering: pixelated`) en la tarjeta 3D de *UPROTA: La Forja de Hábitos*.
+- **Estado de Producción:** Desplegado y confirmado en `https://www.proiect.io/`.
+
+---
+### 📍 [ENTRADA 14 - PERFECCIONAMIENTO DE ASSETS PIXEL ART & ANIMACIÓN HOVER EN UPROTA CROSSOVER (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - Se eliminó cualquier vestigio del isotipo tipográfico residual "UP" tanto en el código como en los archivos de fallback (`uprota-card.png`), consolidando la **ilustración ambiental de Pix** (el refugio nocturno en pixel art 4x).
+  - Se integró la cinemática de previsualización al hover con el **Salmón Saltando en Pixel Art animado** (`uprota-preview.gif`), dotando a la tarjeta de UPROTA del mismo dinamismo cinemático que los mundos de Proiectio (Olympus, Arcadia, Coliseo), pero con una estética arcade/retro inconfundible.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
+
 
 
 
