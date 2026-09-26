@@ -949,12 +949,16 @@
      - **Llamado de Cierre:** Invitación formal al espectador a ver o revivir la película original en formato cinematográfico completo. Mención institucional discreta a Sapiensia Clan (0 KB Framework).
 
 - **Estado de Producción:**
-  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`6db29cb`).
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`0e9289b`).
   - URL en vivo: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
 
 - **⚡ Addendum de Calibración de Confort y Físicas (Feedback de Dirección):**
   - **Calibración Acústica:** Ganancia maestra atenuada a un confortable `0.38` (música `0.70`, sfx `0.65`) con curva de compresión suave para preservar la riqueza armónica del órgano sacro sin sobresaltar al usuario.
   - **Física del Agujero de Gusano:** Eliminada la fuerza de repulsión centrífuga divergente. Sustituida por amortiguamiento cuántico viscoso (`drag = 0.85`, velocidad máxima $2.4\text{ px/frame}$), empuje milimétrico pesado y micro-vibraciones / temblor reactivo del casco al maniobrar contra la turbulencia.
+  - **Osciloscopio Cuántico de Lissajous (Fase 7):** Solucionada la inicialización de audio de la sonda y restaurado el renderizado en tiempo real de la onda armónica sobre fondo de persistencia de fósforo verde, retícula métrica, escáner de radar y ejes cruzados.
+  - **Equilibrio Táctico en Asteroides (Fase 4):**
+    - **Límite Energético de Escudo Burst:** Restringido a un máximo de **2 usos por travesía** con contador visual (`ESCUDO BURST [x2]` $\rightarrow$ `ESCUDO AGOTADO [0/2]`).
+    - **Gestión Térmica de Cañón PDC:** Sistema de acumulación de calor (+14% por disparo) y enfriamiento progresivo (-24%/s). Al alcanzar 100% entra en bloqueo por sobrecalentamiento temporal hasta descender al 20%, con telemetría en HUD y botón reactivo.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
