@@ -396,8 +396,21 @@
   - Sincronización de scripts entre repositorios `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 23 - CALIBRACIÓN ORGÁNICA DE MITE: PURGA DE MENÚS, LÍNEA TEMPORAL PRESENTE Y META-RESPUESTAS IMPERTINENTES (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director instruyó simplificar la interfaz visual de Mite eliminando el menú rígido de temas para potenciar la sensación de descubrimiento orgánico ("preguntarle cualquier cosa random de Proiectio y que ella responda naturalmente").
+  - **Corrección Canónica de Línea Temporal (Cero Spoilers):**
+    - Se eliminó toda referencia al duelo o baja de Orión (evento futuro del Libro 3 no ocurrido en el presente de la web). Mite trata a Orión como su actual y vivo *Cliente Preferido #4092*, corriendo por el Coliseo, quejándose del sombrero de 8-bits y escapando por la Madriguera con el Conejito Consentido.
+  - **Inyección de Meta-Respuestas Impertinentes (Off-Topic Filter):**
+    - Si el usuario hace preguntas ajenas al universo de Proiectio (cocina, vida real, tareas cotidianas, filosofía mundana), Mite responde con sarcasmo rompiendo sutilmente la cuarta pared: *"Cariño, estoy aquí para hablar de Humania, Proiectio, Éter y mis skins de lujo... si lo que quieres es hablar de otra cosa, mejor pregúntale a Nexo en el Clan UPROTA. ¡Zashoom!"*.
+  - **Consistencia de Rendimiento:** Código 100% Vanilla JS, 0 KB dependencias, desplegado y sincronizado en producción.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
