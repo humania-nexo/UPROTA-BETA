@@ -485,8 +485,20 @@
   - **Verificación Técnica:** Pruebas unitarias de NLU automatizadas con 100% de tasa de acierto y cero falsos positivos.
 - **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
 
+### 📍 [ENTRADA 29 - CALIBRACIÓN SIMÉTRICA DEL ARTE ASCII Y SPLASH SCREEN TEMPORAL (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director señaló un desfase visual en la cabeza de la libélula ASCII y solicitó desplazarla los espacios correspondientes a la derecha para que la espina dorsal y las alas quedaran perfectamente centradas.
+  - Asimismo, solicitó que el logo de la Libélula actúe como un *Splash Screen* o logo de conexión temporal durante unos segundos y luego se desvanezca suavemente para despejar la pantalla y otorgar todo el espacio limpio al diálogo de DEVA.
+  - **Ajustes Realizados (`test.js`):**
+    - `ART_LIBELULA`: Se re-calibró la alineación de las tres líneas superiores de la cabeza con espaciado simétrico exacto a nivel de columna (centrado en el carácter 19).
+    - `playBootAnim()`: Se configuró un buffer de 2.2 segundos para la contemplación del logo de conexión y una transición suave (`opacity` y `height`) que limpia y oculta el contenedor, dejando el área `#terminal` 100% despejada para el inicio de la conversación y los expedientes.
+- **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
