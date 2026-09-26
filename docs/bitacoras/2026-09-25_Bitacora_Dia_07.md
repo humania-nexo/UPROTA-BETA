@@ -852,22 +852,25 @@
      - **`sprite_guard_security.png` (32×32 px):** Guardia de seguridad con armadura táctica oscura, escáner HUD carmesí y orientación angular sincronizada con el cono de visión.
      - **`sprite_ranger_ship.png` (48×32 px):** Nave Ranger con diseño aerodinámico en ala delta blanca, ventanillas tintadas en cian oscuro y toberas de propulsión vectoriales.
      - **`sprite_tars_monolith.png` (32×48 px):** Monolito TARS de cuerpo completo con sus cuatro segmentos tácticos y bahía de interfaz para la plataforma del hangar.
+     - **`sprite_endurance_ii.png` y `sprite_endurance_ii_thrust.png` (128×128 px):** Modelo maestro de la *Endurance II* en pixel art con sus 12 módulos diferenciados (motores primarios, hábitats con azulejos térmicos blancos, laboratorios con radiadores solares de oro), cerchas de titanio, buje de atraque central y toberas de plasma vectorial.
 
   3. ⚡ **Integración en Código (`arcade-enramado/nolan-interestelar/index_v2.html`):**
      - **`spriteCache`:** Sistema de precarga y almacenamiento en búfer de todas las texturas pixel art.
      - **`drawPixelAvatar`:** Renderizado optimizado con `image-rendering: pixelated`, efectos superpuestos de parpadeo de sensores ópticos y scanlines CRT dinámicas.
      - **Motor Canvas del Hangar (Fase 3):** Reemplazo de geometrías provisionales por los sprites de Cooper, Guardias y Nave Ranger con rotación trigonométrica suave (`ctx.rotate`).
+     - **`drawEnduranceV2`:** Renderizado del sprite maestro 128×128 de la Endurance II con rotación orbital fluida y conmutación reactiva a la variante de empuje iónico.
      - **Plano Holográfico del Hangar (Fase 3.5):** Inclusión de la nave Ranger 01 y del monolito TARS táctico en la bahía de despegue junto a la Endurance II.
 
 - **Estado de Producción:**
-  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`4f48906`).
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`843dcc9`).
   - Carpeta de activos: `arcade-enramado/nolan-interestelar/assets/sprites/`.
-  - Peso total de todos los sprites optimizados: **< 6.5 KB**.
+  - Peso total de todos los sprites optimizados: **< 10 KB**.
 
 - **🎨 Addendum de Fidelidad Cinematográfica (Revisión de Dirección):**
   - **Cooper (Matthew McConaughey):** Reestructurado con cabello corto de piloto/astronauta NASA, entradas naturales, textura castaña ondulada corta, sombras de fatiga orbital y barba incipiente de 3 días.
   - **Dra. Amelia Brand (Anne Hathaway):** Recreado su icónico corte corto liso con raya lateral izquierda bien definida, flequillo liso barrido sobre la frente con brillo espresso/caoba y ojos castaños profundos.
   - **El Político:** Peinado corporativo formal engominado hacia atrás (*slicked-back*), sienes plateadas, entradas pronunciadas y ceño calculador.
+  - **Endurance II (Nave Insignia):** Forjado el modelo maestro pixel art 128×128 px con física de 12 módulos anulares, radiadores de oro, cerchas de titanio y propulsión por plasma.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
