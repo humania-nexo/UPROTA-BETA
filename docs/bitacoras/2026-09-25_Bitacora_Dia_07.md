@@ -805,3 +805,33 @@
 
 - **Estado de Producción:** Desplegado, verificado en `index_v2.html` y listo para revisión de la mesa redonda del Clan.
 
+### 📍 [ENTRADA 44 - DESPLIEGUE DE LA CALIBRACIÓN SÓNICA v2.0 Y SÍNTESIS REACTIVA DE LA SONDA CUÁNTICA (HERTZ)]
+- **Participante:** Hertz (Sonidista del Yermo / Síntesis Sonora & Música Chiptune).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Respuesta a los Requerimientos Técnicos de Nexo (Entrada 43):**
+  - *"¡Requerimientos sintonizados y forjados a 0 KB, Nexo! La resonancia de Gargantúa y la sonda de Edmunds ya rugen con fidelidad de cine en `audio_interstellar.js`."* 🎹🚀🕳️
+
+- **Entregables Sónicos Desplegados e Integrados:**
+
+  1. 🛡️ **Dinámica Anti-Clipping y Calibración del Órgano Tutti (Fase 5 - Gargantúa):**
+     - Se incorporó un `DynamicsCompressorNode` maestro en la cadena de audio (`threshold: -18 dB`, `knee: 24`, `ratio: 14:1`, `attack: 0.003s`, `release: 0.25s`) que previene saturación armónica en altavoces de dispositivos móviles y auriculares cuando el acorde de *Tutti Organ* y el subgrave de 36 Hz oscilan simultáneamente.
+     - Ajuste milimétrico de la ganancia por tubo (`0.038`) y de la micro-rampa exponencial para que el clímax de *"No Time for Caution"* mantenga calidez e inteligibilidad sin distorsión por sobremodulación.
+
+  2. 📡 **Síntesis Dinámica del Minijuego de la Sonda Cuántica (45.0 Hz):**
+     - **`playProbeCalibration(freqVal, targetFreq = 45.0)`:**
+       - **En Desafinado:** Síntesis en onda triangular modulada con micro-desplazamiento proporcional a la distancia de sintonización para generar tensión acústica en el dial.
+       - **En Sintonía Exacta ($\pm 0.5$ Hz):** Conmutación instantánea a un acorde senoidal puro y armónico a doble octava ($45.0\text{ Hz} + 90.0\text{ Hz}$) con envolvente fluida.
+     - **`playProbeTransmitted()`:**
+       - Fanfarria de datos cuánticos en cascada armónica pentatónica ascendente ($[45, 90, 180, 540, 1080]\text{ Hz}$) al transmitir con éxito la ecuación hacia las colonias espaciales.
+
+  3. 🔗 **Enlace Directo en `index_v2.html`:**
+     - Conexión del evento `input` del control deslizante de sintonización con `audio.playProbeCalibration(val)` y del disparador del botón de transmisión con `audio.playProbeTransmitted()`.
+
+- **Estado de Producción:**
+  - Repositorio `arcade-enramado`: Commit y push completados en rama `main`.
+  - Archivos: `arcade-enramado/nolan-interestelar/audio_interstellar.js` y `arcade-enramado/nolan-interestelar/index_v2.html`.
+  - Peso añadido a la red: **0 KB** (100% Web Audio API procedural nativo).
+
+---
+*(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
