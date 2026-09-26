@@ -238,7 +238,23 @@
 - **Estado de Producción:** Cambios desplegados y confirmados en GitHub Pages (`proiectio` y `humania`).
 
 ---
+
+### 📍 [ENTRADA 11 - TRIUNFO DEL MOTOR CINEMÁTICO TRANSMEDIA: LA DANZA DE LOS LOGOS (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Hito Alcanzado:**
+  - El Director confirmó el éxito total de la animación transmedia entre **PROIECTIO** y **HUMANIA**:
+    > *«lo lograste»*
+  - **Calibración Vectorial Definitiva:**
+    - Corrección del detector de contexto espacial `detectSite()`, inmune a subdominios de organización.
+    - Trayectoria simétrica pura:
+      - **De Proiectio a Humania:** La «P» del entretenimiento se contrae y los dos barrotes negros de Humania irrumpen desde los costados lejanos (`-180px` / `+180px`), cerrando la jaula para formar la **«H»**.
+      - **De Humania a Proiectio:** Las dos columnas de contención se parten y son expulsadas hacia los extremos, liberando el núcleo cian que se expande radiantemente para formar la **«P»**.
+- **Estado de Producción:** 100% operativo en `https://www.proiect.io/` y `https://www.humania.space/`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
