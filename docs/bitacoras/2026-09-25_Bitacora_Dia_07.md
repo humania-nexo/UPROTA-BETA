@@ -220,7 +220,26 @@
      - Script de verificación de rutas y etiquetas ejecutado: **0 errores 404 / 0 enlaces rotos** en ambos ecosistemas.
 
 ---
+
+### 📍 [ENTRADA 10 - CALIBRACIÓN RESPONSIVA, FAVICONS ROOT Y BLINDAJE DE ANIMACIÓN TRANSMEDIA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acciones Correctivas Inmediatas:**
+  1. 🖼️ **Corrección de Encuadre Visual en PC/Móvil (Solaris & Velvet):**
+     - Sustituido `object-fit: cover` con recorte por `object-fit: contain` con `min-height: 380px` y `max-height: 420px`.
+     - Las piezas 3D de *Solaris* y *Velvet* ahora se aprecian íntegras, centradas y con micro-sombra flotante tanto en monitores de alta resolución como en pantallas móviles.
+     - Vinculada la imagen canónica de la **Barra Solaris** (`solarisbarra.png`) con fallback inteligente.
+  2. 🌐 **Restauración y Estandarización de Favicons:**
+     - Desplegados `favicon.ico` y `favicon.png` directamente en la raíz de ambos servidores (`proiect.io` y `humania.space`).
+     - Inyectadas las etiquetas `<link rel="icon">` y `<link rel="shortcut icon">` en el `<head>` de todas las páginas y submundos.
+  3. ⚡ **Blindaje del Sistema de Transición Transmedia SVG (`transmedia-transition.js`):**
+     - Reescrita la captura de eventos en modo *Capture Phase* (`true`) para interceptar clics en cabeceras y elementos asíncronos.
+     - Inyectado `transmedia-transition.js` en **todas las subpáginas** de Proiectio, garantizando que el morphing entre la **«H»** de Humania y la **«P»** de Proiectio se ejecute con fluidez total en cualquier navegación cruzada.
+- **Estado de Producción:** Cambios desplegados y confirmados en GitHub Pages (`proiectio` y `humania`).
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
