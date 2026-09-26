@@ -333,8 +333,22 @@
   - **Single-Use en Hack de Mite:** El exploit de los 5 clics rápidos (`+5 FE`) queda sellado tras su primer uso en `localStorage`. Si se intenta reusar, el sistema advierte que la vulnerabilidad fue parchada.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 18 - CICLO SEMANAL DE HACKING DE MITE Y REPOSICIÓN DE VULNERABILIDAD (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director determinó que el exploit de Mite debe ser una mecánica recurrente que recompense la constancia a largo plazo, funcionando **una vez por semana (cada 7 días)**.
+  - **Lógica de Cooldown Cíclico (7 Días):**
+    - Se almacena el timestamp de ejecución (`proiectio_mite_hack_last_claimed_v2`).
+    - Durante los 7 días posteriores a su uso, el exploit se mantiene parchado por los centinelas de Vance-Core (`🛡️ Vance-Core: Vulnerabilidad parchada temporalmente. Centinelas en alerta.`).
+    - Transcurrido el ciclo semanal (7 días), la vulnerabilidad se reabre orgánicamente para otorgar nuevamente los `+5 FE` clandestinos.
+  - **Narrativa Orgánica en Diálogos de Mite (`mite.js`):**
+    - Mite ahora advierte entre susurros que los centinelas tardan un tiempo en olvidar el rastro y bajar la guardia, dejando pistas sutiles sin revelar números explícitos para que el usuario descubra el ciclo por experiencia.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
