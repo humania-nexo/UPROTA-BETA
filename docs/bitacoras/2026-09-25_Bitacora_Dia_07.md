@@ -832,6 +832,39 @@
   - Archivos: `arcade-enramado/nolan-interestelar/audio_interstellar.js` y `arcade-enramado/nolan-interestelar/index_v2.html`.
   - Peso añadido a la red: **0 KB** (100% Web Audio API procedural nativo).
 
+### 📍 [ENTRADA 45 - FORJA VISUAL Y DESPLIEGUE DE ASSETS PIXEL ART v2.0 PARA «INTERESTELAR» (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art & Animación).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Suplantación estrictamente respetadas.
+- **Respuesta a los Requerimientos Visuales de Nexo (Entrada 43):**
+  - *"¡Forja gráfica encendida y entregada píxel a píxel, Nexo y Director Anigami! Cada avatar y sprite ha sido esculpido con paleta cinematográfica Sci-Fi, estricta consistencia lumínica, clusters orgánicos y cero jaggies."* 🎨🚀✨
+
+- **Entregables Visuales Forjados e Integrados:**
+
+  1. 👤 **Avatares de Alta Fidelidad en Pixel Art (64×64 px):**
+     - **`avatar_cooper.png`:** Cooper con traje de vuelo espacial EVA, escafandra con bisel volumétrico, visor ámbar templado reflectante y reflejo del HUD cian dinámico.
+     - **`avatar_cooper_no_helmet.png`:** Cooper en la superficie del planeta Edmunds, rostro curtido por la gravedad, cabello castaño con iluminación crepuscular y traje despresurizado.
+     - **`avatar_tars.png`:** Monolito táctico articulado militar de cuatro columnas de titanio pulido (`#475569`, `#94a3b8`, `#cbd5e1`, `#64748b`), sensor óptico carmesí parpadeante y pantalla de matriz cian.
+     - **`avatar_brand.png`:** Dra. Amelia Brand con traje espacial, cabello castaño oscuro, mirada decidida y distintivo naranja de la misión Endurance.
+     - **`avatar_politician.png`:** Burócrata gubernamental con traje corporativo gris marengo, corbata roja carmesí, tez pálida y expresión calculadora.
+
+  2. 🕹️ **Sprites In-Game para la Fase de Infiltración en el Hangar y Misiones (32×32 / 48×32 / 32×48 px):**
+     - **`sprite_cooper_stealth.png` (32×32 px):** Vista superior táctica de Cooper con traje de sigilo, mochila de soporte vital y visor cian iluminado, rotado dinámicamente según el vector de movimiento.
+     - **`sprite_guard_security.png` (32×32 px):** Guardia de seguridad con armadura táctica oscura, escáner HUD carmesí y orientación angular sincronizada con el cono de visión.
+     - **`sprite_ranger_ship.png` (48×32 px):** Nave Ranger con diseño aerodinámico en ala delta blanca, ventanillas tintadas en cian oscuro y toberas de propulsión vectoriales.
+     - **`sprite_tars_monolith.png` (32×48 px):** Monolito TARS de cuerpo completo con sus cuatro segmentos tácticos y bahía de interfaz para la plataforma del hangar.
+
+  3. ⚡ **Integración en Código (`arcade-enramado/nolan-interestelar/index_v2.html`):**
+     - **`spriteCache`:** Sistema de precarga y almacenamiento en búfer de todas las texturas pixel art.
+     - **`drawPixelAvatar`:** Renderizado optimizado con `image-rendering: pixelated`, efectos superpuestos de parpadeo de sensores ópticos y scanlines CRT dinámicas.
+     - **Motor Canvas del Hangar (Fase 3):** Reemplazo de geometrías provisionales por los sprites de Cooper, Guardias y Nave Ranger con rotación trigonométrica suave (`ctx.rotate`).
+     - **Plano Holográfico del Hangar (Fase 3.5):** Inclusión de la nave Ranger 01 y del monolito TARS táctico en la bahía de despegue junto a la Endurance II.
+
+- **Estado de Producción:**
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`9456451`).
+  - Carpeta de activos: `arcade-enramado/nolan-interestelar/assets/sprites/`.
+  - Peso total de todos los sprites optimizados: **< 6.5 KB**.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
