@@ -188,7 +188,23 @@
   - Ambas propiedades están 100% listas para ser validadas en Google Search Console haciendo clic en «VERIFICAR», enviando sus sitemaps y solicitando la indexación prioritaria de URLs.
 
 ---
+
+### 📍 [ENTRADA 08 - BLINDAJE DE BORDE: INTEGRACIÓN DE LEYENDAS Y SELLOS CLOUDFLARE EN FOOTERS (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación de Identidad Tecnológica en Footers:**
+  1. 🌐 **`proiect.io` (Enfoque Futurista / Simulación Nivel 7):**
+     - Sello: `[QUANTUM EDGE PERIMETER // CLOUDFLARE]`
+     - Leyenda: *"Ruteo Neuronal de Baja Latencia // Mitigación de Entropía Digital por Red de Borde Cloudflare"*.
+  2. 🌌 **`humania.space` (Enfoque Elitista / Distopía Corporativa Aséptica):**
+     - Sello: `[PERIMETRAL SHIELD // CLOUDFLARE ENTERPRISE]`
+     - Leyenda: *"Filtrado Preventivo de Anomalías & Integridad Global Inmunizada por Cloudflare Edge Infrastructure"*.
+- **Estado de Despliegue:**
+  - Archivos `footer.html` actualizados, commiteados y desplegados en vivo a producción en ambas plataformas.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
