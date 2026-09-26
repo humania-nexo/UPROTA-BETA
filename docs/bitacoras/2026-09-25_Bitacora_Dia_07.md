@@ -496,8 +496,17 @@
     - `playBootAnim()`: Se configuró un buffer de 2.2 segundos para la contemplación del logo de conexión y una transición suave (`opacity` y `height`) que limpia y oculta el contenedor, dejando el área `#terminal` 100% despejada para el inicio de la conversación y los expedientes.
 - **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
 
+### 📍 [ENTRADA 30 - RESTAURACIÓN CROMÁTICA DEL CONEJO BLANCO (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director solicitó devolver el color blanco puro al conejo ASCII (`/\ /\ ( -.- ) ( >🐇< )`) en la secuencia de bienvenida de DEVA, preservando el contraste simbólico del homenaje al conejo blanco.
+  - **Ajuste en `test.js`:** Se aplicó estilo `color: #ffffff; text-shadow: 0 0 8px rgba(255, 255, 255, 0.75); font-weight: bold;` al contenedor `<pre>` del conejo, asegurando que resalte en blanco brillante sobre el fondo oscuro de la terminal.
+- **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
