@@ -355,8 +355,20 @@
   - De este modo, la reapertura de la brecha depende enteramente de la complicidad y confianza en el secreto susurrado por Mite.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 20 - INDICADOR ORGÁNICO DE ESCRITURA Y LATENCIA CONVERSACIONAL EN MITE (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director solicitó incorporar una simulación de lectura y digitación orgánica en el widget de Mite (`Mite está escribiendo...`) antes de mostrar las respuestas.
+  - **Ingeniería de Comportamiento Conversacional (`mite.js`):**
+    - Se diseñó un indicador visual con tres puntos rebotantes animados (`.typing-dot`) en color cian sobre burbuja translúcida.
+    - Se implementó una latencia orgánica adaptativa proporcional a la longitud de la respuesta (`650ms` a `1100ms`).
+    - Bloqueo preventivo de clics durante el proceso de digitación (`isTyping`) para evitar duplicación de mensajes.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
