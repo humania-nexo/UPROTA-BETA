@@ -524,8 +524,28 @@
     - `ESTADO`: Se añadió un filtro retrocompatible en `localStorage` para purgar `proiectio` de sesiones previas del usuario y asegurar que `sapiensiaclan` figure por defecto en los portales desbloqueados.
 - **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
 
+### 📍 [ENTRADA 33 - INTEGRACIÓN DE PORTALES Y SEMILLAS TRANSMEDIA (MATRIX, INTERESTELAR, HARRY POTTER) (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director consultó la disponibilidad y enlaces de los portales de homenaje a **Matrix**, **Interestelar** y **Harry Potter**.
+  - **Revisión e Integración en `database.js` y `efectos.js`:**
+    1. **The Matrix (Sector Zión):**
+       - URL: `https://humania-nexo.github.io/arcade-enramado/matrix/`
+       - Semilla / Claves: `"noexistenpreguntassinrespuestasolopreguntasmalformuladas"`, `"matrix"`, `"conejoblanco"`.
+       - Efecto Visual: `efectoMatrix` (cascada de caracteres verdes katakana y alfanuméricos).
+    2. **Interestelar (Gargantúa // Christopher Nolan):**
+       - URL: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/`
+       - Semilla / Claves: `"noentresdocilmenteenestabuenanoche"`, `"interestelar"`, `"interstellar"`, `"gargantua"`, `"tars"`, `"cooper"`.
+       - Efecto Visual: `efectoInterestelar` (poema de Dylan Thomas en ámbar estelar + audio procedural/anomalía gravitacional + enlace a Endurance II).
+    3. **Harry Potter (El Mapa del Merodeador):**
+       - Semilla / Claves: `"jurosolemnementequemisintencionesnosonbuenas"`, `"jurosolemnemente"`, `"harrypotter"`, `"merodeador"`.
+       - Efecto Visual: `efectoHarryPotter` (aparición de tinta dorada / pergamino de Lunático, Colagusano, Canuto y Cornamenta).
+- **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
