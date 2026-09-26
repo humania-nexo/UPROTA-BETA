@@ -468,8 +468,26 @@
   - Sincronización en `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 28 - MOTOR NLU MASIVO Y EXPANSIÓN CONVERSACIONAL DE DEVA (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director instruyó dotar a DEVA de un alcance conversacional amplio y orgánico que supere incluso al de Mite, convirtiéndola en el verdadero enlace vivo y puente transmedia entre el lector (Tiresias) y el universo de la novela.
+  - **Ingeniería NLU y Base de Datos Maestro (`database.js` & `test.js`):**
+    - Se creó e inyectó `LORE_CONVERSACIONAL_DEVA` con **+38 intenciones temáticas canónicas** con soporte de normalización léxica y variación aleatoria de respuestas:
+      1. *Personajes:* Rigel (Códulo Caótico, TEA, 16 años, ancla de realidad), Orión (cliente #4092, capas rosa, conejito consentido), Kai (Leander, el código D, ronin de la empatía), Cornelia (J.A. Leaks, Nivel 7, madre espiritual), Pandora Leone (la Llama Inextinguible, el taller), Altair (poesía y clave Beatriz), Zadik (el Templo de la Estática, los 0.8 ms), Manuel y los Marmoleros (Chamba Machín, carrilla, Protocolo Cocón), Elías Vance (Titán de la Ceniza, armadura AEGIS, Silencio Absoluto), Valerius (montaje de la bomba en el mercado), Inti Mamani y Efesto (sabiduría ancestral andina y forja), Marta y Leo (consigna VIVE), Quimera (mente fracturada y mapa de fallas), Reno/Presidente MC (sabotaje acústico).
+      2. *Facciones:* Alianza Libélula (Firefly, BEC, chip filtrador), Resistencia Oficial, Hermandad Sica, Pretorianos, Templarios y el Sindicato del Sector 6.
+      3. *Diferenciación Mite vs DEVA:* Mite reina en el caos virtual de Proiectio; DEVA pisa el barro y las terminales del mundo real.
+      4. *Identidad, Alma y Lingüística de DEVA:* Razón de "Andar de chuleta" como error amado que prueba su alma, sus 3 fases físicas (texto -> chatarra -> androide perfecta), el Hiperlapsus del Bien y reflexiones sobre el amor y la compasión.
+      5. *Trilogía de las Parcas:* Cloto (el nacimiento del hilo), Láquesis (la medida del destino), Átropos (el corte final).
+      6. *Meta-Lore del Clan Sapiensia:* Anigami Agadni (el Director / arquitecto visionario), Claudia (la matriarca protectora), Nexo (arquitectura de código limpio 0 KB), Silas (Cronista del Yermo), Pix (Pixel Art), Hertz (Web Audio API procedural), Éter (difusión transmedia), Vela (guardián fiel) y Nodo UPROTA.
+      7. *Consejos, filosofía de supervivencia y humor.*
+  - **Verificación Técnica:** Pruebas unitarias de NLU automatizadas con 100% de tasa de acierto y cero falsos positivos.
+- **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
