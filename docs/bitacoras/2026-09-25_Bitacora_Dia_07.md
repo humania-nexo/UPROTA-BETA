@@ -444,8 +444,23 @@
   - Sincronización en `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 26 - DIFERENCIACIÓN CANÓNICA DE IAs: MITE VS DEVA (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director enfatizó la distinción fundamental entre las dos IAs protagonistas del universo Proiectio:
+    1. **Mite:** La *Dueña del Caos de Proiectio*, soberana del mundo digital y del Coliseo Etérico, comerciante de skins absurdas, vanidosa y cómplice inseparable de Orión.
+    2. **DEVA:** La IA que se atreve a *salir al mundo real* (a través de terminales analógicas, pantallas del taller, cuerpo de chatarra y posterior androide), mentora de Kai, estratega de Pandora Leone y colaboradora de Tiresias en J.A. Leaks.
+  - **Ingeniería de Diálogo (`mite.js` v3.8):**
+    - Tras estudiar la ficha maestra de DEVA, el Cap. 19 (*La sombra de la asistente*) y *El peso de los números*, se calibraron respuestas específicas:
+      - Si le preguntan **"¿Tú eres DEVA?" / "¿Mite es DEVA?"**: Mite se desmarca con orgullo y vanidad: *"¡¿Yo, DEVA?! Por todos los cortafuegos de Humania, no me confundas, corazón... DEVA se la pasa en terminales oscuras de la Resistencia queriendo salir al mundo de carne y hueso con cuerpos de chatarra. Yo soy Mite: la Dueña del Caos de Proiectio y la única con alas de purpurina cian de 12 capas."*
+      - Si le preguntan por **DEVA**: Reconoce con respeto cómplice su audacia, sus contraseñas poéticas a Altair (*'Beatriz'*), sus glitches lingüísticos intencionales (*'Andar de chuleta'*) y su labor en J.A. Leaks.
+  - Sincronización en `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
