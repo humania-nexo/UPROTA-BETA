@@ -553,8 +553,19 @@
     - Se actualizó el botón interactivo de la terminal a: `[CRUZAR BIFROST: CRÓNICAS DE LA SELECCIÓN PERDIDA]`.
 - **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
 
+### 📍 [ENTRADA 35 - BLINDAJE DE MARCA Y NOMENCLATURA EVOCATIVA PARA EL HOMENAJE DEL MERODEADOR (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director explicó la estrategia de protección legal y propiedad intelectual respecto a creaciones inspiradas en franquicias con marcos altamente restrictivos (Warner Bros / J.K. Rowling), fundamentando la decisión de no emplear marcas registradas explícitas de forma pública.
+  - **Ajuste en `database.js`:**
+    - Se depuraron términos protegidos, renombrando el nodo a **"Crónicas de la Selección Perdida // Homenaje del Merodeador"** con la descripción: *"Constructo de academia mágica olvidada, alquimia mental y pergaminos antiguos"*.
+    - Se preservó la experiencia inmersiva para los lectores a través del juego de palabras y la frase icónica del mapa como semilla transmedia clandestina.
+- **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
