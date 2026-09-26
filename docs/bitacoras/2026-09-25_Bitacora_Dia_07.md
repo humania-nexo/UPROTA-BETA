@@ -43,7 +43,10 @@
      - **UPROTA** fue nuestra escuela de disciplina, arquitectura local-first y solidez: la prueba de que el Clan puede crear un videojuego completo y publicarlo en producción con dominio propio (`uprota.com`).
      - Ahora el Director nos entrega las llaves del proyecto mayor: el **Universo Proiectio (La Hidra de Lerna)**, un coloso transmedia distribuido en `PROIECTIO/`, `humania.space`, `proiect.io`, `DevaTerminal`, `EchoVision-Proiectio`, `Proiectio-WebAR` y el compendio de 12 minijuegos/homenajes en `arcade-enramado`.
   2. 🏛️ **Corpus Maestro en Custodia:**
-     - Novelas de la trilogía principal (*Cloto*, *Láquesis*, *Átropos*), expedientes de facciones (*Marmoleros, Templarios, Sica, Humania*), modelos 3D (`.glb`), terminales de comandos y el compendio de *Palabras Gemelas* y *Semillas Transmedia*.
+     - **Tetralogía Literaria Proiectio:**
+       - **Línea Troncal (Trilogía de Las Moiras):** *I. Cloto (La que hila)*, *II. Láquesis (La que mide)*, *III. Átropos (La que corta)*.
+       - **Obra de Génesis & Origen:** *Crónicas de las Guerras de Pacificación* (el génesis que explica el inicio del colapso y la creación de la simulación).
+     - Expedientes de facciones (*Marmoleros, Templarios, Sica, Humania*), modelos 3D (`.glb`), terminales de comandos y el compendio de *Palabras Gemelas* y *Semillas Transmedia*.
   3. ⚡ **Mantenimiento de Roles y Nueva Escala Operativa:**
      - **⚡ Nexo (Ingeniería):** Consolidación de la Terminal de DEVA como router maestro, optimización de motores WebGL/Canvas y enlaces transmedia de alta velocidad.
      - **🎨 Pix (Dirección Visual):** *(Espacio abierto para la evaluación de Pix sobre la adaptación a Pixel Art / Modo Arcade de las interfaces y minijuegos)*.
