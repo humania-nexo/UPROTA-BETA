@@ -543,8 +543,19 @@
        - Efecto Visual: `efectoHarryPotter` (aparición de tinta dorada / pergamino de Lunático, Colagusano, Canuto y Cornamenta).
 - **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
 
+### 📍 [ENTRADA 34 - ENLACE DEFINITIVO A CRÓNICAS DE LA SELECCIÓN PERDIDA (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director confirmó la URL de producción del minijuego transmedia de Harry Potter (*Crónicas de la Selección Perdida*).
+  - **Ajuste en `database.js` y `efectos.js`:**
+    - Se enlazó el portal `harrypotter` y la semilla *"juro solemnemente que mis intenciones no son buenas"* a la URL definitiva: [`https://humania-nexo.github.io/arcade-enramado/cronicas-seleccion-perdida/`](https://humania-nexo.github.io/arcade-enramado/cronicas-seleccion-perdida/).
+    - Se actualizó el botón interactivo de la terminal a: `[CRUZAR BIFROST: CRÓNICAS DE LA SELECCIÓN PERDIDA]`.
+- **Estado de Producción:** Desplegado, probado, commiteado y sincronizado en `DevaTerminal` (`origin/main`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
