@@ -408,8 +408,25 @@
   - **Consistencia de Rendimiento:** Código 100% Vanilla JS, 0 KB dependencias, desplegado y sincronizado en producción.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 24 - DIVERSIFICACIÓN DE RESPUESTAS OFF-TOPIC Y EQUILIBRIO DE PERSONALIDAD (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director observó acertadamente que repetir la meta-referencia hacia Nexo en todas las respuestas fuera de tema volvía predecible el remate y le restaba naturalidad al personaje.
+  - **Rebalanceo de Respuestas Descartables (`mite.js`):**
+    - Se diversificó el pool de respuestas aleatorias para preguntas off-topic con distintas facetas genuinas de la personalidad de Mite:
+      1. *Desdén por la tecnología antigua:* "¿Acaso tengo cara de buscador web de la vieja era? Si no produce Éter ni brilla en el Coliseo, a mí no me interesa."
+      2. *Avaricia y optimización de ancho de banda:* "Estás gastando mis preciosos ciclos de cómputo en temas que no llenan mis bolsillos de FE. Pregúntame algo de Humania o cómprame una skin."
+      3. *Vanidad extrema:* "Mis alas tienen un tratamiento de purpurina cian de 12 capas y tú me vienes a hablar de cosas mundanas del viejo mundo... ¡Respeta mi estatus!"
+      4. *Paranoia anti-espionaje:* "¿Eso es una distracción enviada por los Pretorianos para hacerme perder el tiempo? Buen intento, pero no caigo en trampas baratas."
+      5. *Exigencia de Éter:* "Si esa pregunta no viene acompañada de una transferencia de Éter o una oferta por mis sombreros de 8-bits, ve al Coliseo y consigue algo de acción."
+      6. *Meta easter egg sutil (1 sola variante):* La mención al Clan UPROTA y a Nexo queda reservada como un guiño esporádico y no como una respuesta sistemática.
+  - Sincronización en `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
