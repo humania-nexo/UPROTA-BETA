@@ -289,8 +289,24 @@
   - Se integró la cinemática de previsualización al hover con el **Salmón Saltando en Pixel Art animado** (`uprota-preview.gif`), dotando a la tarjeta de UPROTA del mismo dinamismo cinemático que los mundos de Proiectio (Olympus, Arcadia, Coliseo), pero con una estética arcade/retro inconfundible.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 15 - CALIBRACIÓN CANÓNICA DE COSTOS DE FE EN SUBMUNDOS (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director especificó y corrigió los costos canónicos de FE (Fragmentos de Éter) para todas las tarjetas de inmersión en `proiect.io`:
+    - ⚡ **Olympus V-Games:** `10 FE`
+    - 🌿 **Arcadia Eterna:** `45 FE`
+    - ⚔️ **Coliseo Etérico:** `5 FE`
+    - 💋 **El Beso Prohibido:** `65 FE`
+    - 🌃 **Neon Nirvana:** `25 FE`
+    - ⏳ **Chronos:** `0 FE` (Acceso libre)
+    - 👾 **UPROTA (Nodo Rebelde):** `0 FE` (Acceso libre)
+  - Nexo sincronizó la cuadrícula principal de tarjetas en `index.html` con las fichas técnicas individuales de cada submundo.
+- **Estado de Producción:** Desplegado y verificado en `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
