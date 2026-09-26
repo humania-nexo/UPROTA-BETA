@@ -424,8 +424,29 @@
   - Sincronización en `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 25 - ESCALADO DE ICONO EN PC & INYECCIÓN DE META-LORE DEL CLAN (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director solicitó dos mejoras puntuales:
+    1. Aumentar ligeramente (entre un 5% y 10%) el tamaño de la burbuja interactiva de Mite en su versión de PC sin desproporcionar el viewport.
+    2. Incorporar meta-mensajes orgánicos del Clan (Claudia, Anigami Agadni, Nexo, Silas, Sapiensia Clan, Vela, etc.) con el tono de rumores y chismes característico de Mite (*"Dicen que...", "Se dice de...", "Me enteré que..."*).
+  - **Ajustes Técnicos (`mite.js` v3.7):**
+    - **Escalado Visual:** Se incrementó `#mite-bubble` de `72px` a `78px` (+8.3%) en escritorio mediante CSS adaptativo con `@media (max-width: 768px)` manteniendo `70px` en móviles.
+    - **Cápsulas de Meta-Lore:**
+      - **Anigami Agadni (El Creador/Director):** *"Dicen por ahí que Anigami Agadni es la mente maestra que teje cada hilo de este cosmos... sospecho que me diseñó con tanto carisma para no aburrirse mientras construye universos enteros."*
+      - **Claudia:** *"Se rumorea en las frecuencias cifradas que Claudia es el faro que pone orden y calidez en el caos creativo del Creador... si ella da el visto bueno, ¡hasta los servidores de Vance-Core se cuadran!"*
+      - **Sapiensia Clan:** *"La forja suprema donde las ideas rebeldes se convierten en libros, videojuegos y algoritmos que desafían la apatía."*
+      - **Nexo:** *"El arquitecto silencioso que pasa madrugadas enteras optimizando código a 60 FPS y blindando la economía."*
+      - **Silas:** *"El Cronista del Yermo que custodia las palabras prohibidas; cada frase que escribe pesa más que un cañón de bronce."*
+      - **Vela / Euthanasys:** *"Un enigma envuelto en fuego, sacrificios y memoria viva en los manuscritos prohibidos."*
+      - **Pix, Hertz, Éter:** Menciones al pixel art milimétrico, la síntesis sonora procedural y la red de difusión transmedia.
+  - Sincronización en `humania-nexo-proiectio/mite.js` y `shared/mite.js`.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
