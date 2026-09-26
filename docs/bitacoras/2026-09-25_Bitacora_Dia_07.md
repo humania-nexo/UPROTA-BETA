@@ -900,6 +900,58 @@
   - Archivos: `arcade-enramado/nolan-interestelar/index_v2.html` y eliminación de `sprite_endurance_ii_thrust.png`.
   - Peso neto reducido y fidelidad visual procedural multiplicada a 60–120 FPS.
 
+### 📍 [ENTRADA 47 - REINGENIERÍA JUGABLE v2.5: AGUANTE EN AGUJERO DE GUSANO, FÍSICA DE GARGANTÚA, OSCILOSCOPIO MULTI-PARÁMETRO & CRÉDITOS CINEMATOGRÁFICOS (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada en Respuesta a las Directrices del Director Anigami Agadni:**
+  - *"Calibración profunda de la experiencia jugable, audio masivo de alta presencia, minijuegos con duración cinematográfica, interfaz móvil táctil y tributo formal a los creadores de Interstellar."* ⚡🚀🪐
+
+- **Desglose de Mejoras y Calibración Técnica Ejecutadas:**
+  1. 🪐 **Minijuego de Asteroides (Saturno / Fase 4):**
+     - **Extensión Jugable:** Distancia meta ampliada a 6000m (~28-32s de gameplay tenso por oleadas).
+     - **Pantalla de Inicio Táctica:** Resumen visual de controles y mecánicas antes de soltar la nave.
+     - **Arsenal y Defensas:**
+       - `ESCUDO BURST` (Barra espaciadora o botón UI): Pulso electromagnético que repele y desvía asteroides.
+       - `CAÑÓN PDC` (`E`, `X` o botón UI): Ráfagas cinéticas de punto defensivo para fracturar asteroides de hierro en fragmentos menores.
+     - **Controles Táctiles Smartphone:** Botones táctiles dedicados (`m-btn-burst`, `m-btn-pdc`, `m-left-ast`, `m-right-ast`) visibles en pantallas `<= 768px` con eventos `touchstart`/`touchend` de cero latencia (`passive: false`).
+
+  2. 🌀 **Minijuego del Agujero de Gusano (Wormhole / Fase 4.2):**
+     - **De Cinemática Pasiva a Minijuego Activo de Aguante:** Navegación en el corredor de coherencia cuántica de 135 km.
+     - **Fuerzas de Cizalla y Turbulencia:** Fuerzas caóticas de arrastre que desestabilizan la nave.
+     - **Integridad Cuántica:** Barra de salud cuántica que se degrada si la nave sale de la zona segura.
+     - **Controles y Audio Reactivo:** Maniobras mediante propulsores direccionales (WASD / D-Pad táctil) con síntesis de rugido dimensional procedural (`audio.playWormholeTurbulence()`).
+
+  3. 🌌 **Minijuego de Órbita en Gargantúa (Fase 5):**
+     - **Extensión Jugable:** Calibración ajustada a `0.08 * dt` (~22-25s de tensión relativista en el periastro).
+     - **Física de Succión Gravitatoria Real:** $F_g = 0.52 \times \left(\frac{175}{r}\right)^{2.1} \times dt$, intensificando el tirón hacia la singularidad a medida que la nave se aproxima al límite de marea de 110 km.
+     - **Disco de Acreción Relativista & Estrellas en Órbita:** 300 componentes con efecto Doppler (desplazamiento al rojo/azul) y curvatura de lente gravitacional superior, más 90 estrellas de fondo giratorias alrededor de la singularidad.
+     - **Controles Táctiles Móviles:** Integración completa de D-pad táctil (`m-up-orb`, `m-down-orb`, `m-left-orb`, `m-right-orb`).
+
+  4. 📡 **Osciloscopio Cuántico Multi-Parámetro (Rama B / Fase 7):**
+     - **Doble Control Analógico:**
+       - Slider de Frecuencia Cuántica: $10.0\text{ Hz} - 80.0\text{ Hz}$ (Objetivo: $45.0\text{ Hz}$).
+       - Slider de Desfase Métrico: $0.0^\circ - 180.0^\circ$ (Objetivo: $90.0^\circ$).
+     - **Curva de Lissajous Dinámica:** Síntesis matemática en Canvas 2D que combina frecuencia y fase con jitter armónico.
+     - **Audio Reactivo Dual:** Calibración sonora continua (`audio.playProbeCalibration(freqVal, phaseVal)` y `audio.updateQuantumProbeAudio`).
+
+  5. 🎧 **Mejora Global de Audio Web Audio API (`audio_interstellar.js`):**
+     - Ganancia general y de submezcla incrementadas (`masterGain = 0.70`, `musicGain = 0.92`, `sfxGain = 0.88`).
+     - Sistema de bucles continuos por fase (`startDayOneLoop`, `startFirstStepLoop`, `startMountainsLoop`, `startWormholeImmersion`, `startNoTimeForCautionLoop`, `startStayLoop`) con transiciones suaves.
+
+  6. 🎬 **Créditos Finales // Homenaje Cinematográfico:**
+     - Pantalla de créditos rediseñada y dedicada íntegramente a los creadores de la película original:
+       - **Dirección:** Christopher Nolan.
+       - **Guion:** Jonathan Nolan & Christopher Nolan.
+       - **Asesoría Científica & Producción Ejecutiva:** Kip Thorne (Premio Nobel).
+       - **Banda Sonora Original:** Hans Zimmer.
+       - **Reparto:** Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine, Bill Irwin.
+       - **Producción:** Syncopy, Lynda Obst, Legendary, Paramount & Warner Bros.
+     - **Llamado de Cierre:** Invitación formal al espectador a ver o revivir la película original en formato cinematográfico completo. Mención institucional discreta a Sapiensia Clan (0 KB Framework).
+
+- **Estado de Producción:**
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`b63ce17`).
+  - URL en vivo: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
