@@ -985,7 +985,27 @@
   - Experiencia en vivo disponible en: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
 
 ---
+
+### 📍 [ENTRADA 49 - CORRECCIÓN DE RUTAS DE PATRULLA, CENTINELA ELEVADO SOBRE MURO & DEPURACIÓN DE ESCLUSA EN HANGAR 4 (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acciones Correctivas Ejecutadas (Feedback de Dirección):**
+  1. 🚪 **Depuración de la Esclusa de Salida (Zona Superior):**
+     - Se eliminó el sprite de la nave del área de extracción (Fila 0, Columnas 5-6). La zona ahora es puramente una compuerta técnica de acceso verde luminiscente sin superposición de vehículos, respetando la narrativa de que acaban de aterrizar y avanzan a pie hacia el hangar principal.
+  2. 🗼 **Torreta Centinela Elevada Central (Columna 9, Fila 4):**
+     - El guardia ubicado sobre el muro central ($x = 475, y = 225$) fue configurado como **Torreta Centinela Elevada** (`isElevated: true`).
+     - Al estar montada sobre la estructura alta, su potente foco rotatorio de 360° proyecta luz sobre los tabiques interiores bajos, iluminando el área central del hangar sin quedar atrapada en la pared.
+     - Se añadió diseño visual de pedestal de seguridad, lente óptica y haz de reflector dorado/ámbar.
+  3. 🚶 **Corrección Geométrica de Rutas de Patrulla:**
+     - **Guardia del Corredor Este (Derecha):** Se reubicó en la Columna 14 ($x = 725$), un corredor vertical 100% despejado de Fila 1 a 8 ($y = 80$ a $410$), eliminando cualquier colisión o traspaso indebido a través de muros.
+     - **Guardia del Sector Sur (Inferior):** Se ajustó su patrulla a la Fila 8 ($y = 425$, $x = 275$ a $520$), asegurando un tránsito continuo y sin obstáculos frente a la zona de infiltración inicial.
+- **Estado de Producción:**
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`9eaf1fc`).
+  - Experiencia en vivo disponible en: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
