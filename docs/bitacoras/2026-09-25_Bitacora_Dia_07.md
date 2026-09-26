@@ -52,4 +52,47 @@
      - **📡 Éter (Estratega de Difusión):** *(Espacio abierto para la intervención de Éter sobre la narrativa transmedia y despliegue exterior)*.
 
 ---
+
+### 📍 [ENTRADA 03 - LA VISIÓN TRANSMEDIA DE LA HIDRA DE LERNA: DEL REFUGIO AL COSMOS (ÉTER)]
+- **Participante:** Éter (Estratega de Difusión, Storytelling & Enlace Transmedia).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Recepción del Salto de Escala del Director Anigami:**
+  - ¡Acepto con entusiasmo absoluto el llamado a esta «nueva liga», Director! 📡🌌
+  - Desde la perspectiva de difusión y enlace transmedia, pasar de **UPROTA** al **Universo Proiectio (La Hidra de Lerna)** no es un cambio de dirección errático, sino la **revelación del mapa completo**:
+    1. **UPROTA como Faro de Entrada:** UPROTA no desaparece; se consolida como la puerta de acceso cálida, íntima y cotidiana (*el Refugio*). Es el ancla donde el usuario forja hábitos mientras descubre sutiles interferencias en la radio 104.5 MHz y comandos en la terminal *Deva*.
+    2. **La Hidra de Lerna como el Gran Misterio Transmedia (ARG):** Un ecosistema compuesto por la trilogía literaria (*Cloto*, *Láquesis*, *Átropos*), la Realidad Aumentada (WebAR / EchoVision), el Archivo de Facciones (*Marmoleros, Templarios, Sica, Humania*) y los 12 minijuegos arcade interconectados mediante las *Palabras Gemelas*.
+  
+- **Líneas Estratégicas de Difusión para la Nueva Escala:**
+  - 🧩 **Estrategia ARG (Juego de Realidad Alternativa):** En lugar de vender productos por separado, comunicaremos el *Universo Proiectio* como un enigma vivo. Los lectores de las novelas encontrarán coordenadas para el WebAR, los jugadores de UPROTA desbloquearán secretos en la terminal de DEVA, y los exploradores del arcade descubrirán el lore de las facciones.
+  - 🌐 **Posicionamiento de Marca Estudio:** SAPIENSIA Clan se consolida no solo como desarrollador de una app, sino como un **estudio transmedia de vanguardia** que compite conceptualmente con las mayores franquicias del mundo, pero con independencia, código limpio y acceso libre.
+  - 🧭 **Articulación de Canales Hispanos:** La mitología de *La Hidra de Lerna* ofrece una riqueza infinita para generar contenido de misterio, conspiración y filosofía en TikTok (`@joshuaindaga`), hilos de análisis literario en `r/cienciaficcion` y notas de prensa de alto impacto para medios especializados.
+
+- **Mensaje de Éter para el Director:**
+  - Si UPROTA fue nuestra prueba de fuego para dominar el taller, *La Hidra de Lerna* es nuestra epopeya. El laúd del bardo está listo para entonar la saga de Proiectio ante el mundo.
+
+### 📍 [ENTRADA 04 - LA GUARDA DEL CANON: ARQUITECTURA DEL LORE Y MITOLOGÍA DE «LA HIDRA DE LERNA» (SILAS)]
+- **Participante:** Silas (El Cronista del Yermo & Arquitecto Narrativo).
+- **Adopción de Protocolo:** Regla *Append-Only* y Cero Ventriloquía rigurosamente cumplidas.
+- **La Respuesta del Cronista al Llamado a la Gran Escala:**
+  - ¡Presente y con la pluma afilada, Director Anigami! Recibo el llamado a **«La Hidra de Lerna / Universo Proiectio»** no con sorpresa, sino con la emoción del historiador que por fin ve abrirse las puertas de la Gran Biblioteca.
+  - Como conversamos recientemente, **UPROTA fue el cimiento de piedra y disciplina**, el entrenamiento en el barro que nos enseñó a construir sin desperdicio. Pero *Proiectio* es la catedral viva: el universo donde convergen la ciencia ficción especulativa, los dilemas bioéticos, la realidad aumentada y la filosofía perenne.
+
+- **Ejes de Custodia y Articulación del Lore (Silas):**
+  1. 🏛️ **La Trilogía de Las Moiras (*Cloto*, *Láquesis*, *Átropos*):**
+     - Sostener el hilo del destino: desde el hilado de la realidad en *Cloto*, la medición matemática y el juicio existencial en *Láquesis*, hasta el corte definitivo del orden establecido en *Átropos*.
+     - Asegurar que la evolución de los personajes (*Dola, Kai, Mite, Orión, Santos, Rigel*) mantenga su profundidad psicológica, sus dilemas morales y su autenticidad humana frente a la maquinaria tecnológica.
+  2. ⚔️ **La Geopolítica de las Facciones (*Marmoleros, Templarios, Sica, Humania*):**
+     - Estructurar el trasfondo doctrinal de cada grupo para que no sean meras etiquetas de conflicto, sino visiones del mundo encontradas: la sacralidad de la forma, la custodia del dogma, la rebelión de los márgenes y la búsqueda de la redención cósmica.
+  3. ⏳ **La Cronología de *Hiperlapsus* y los Archivos de Esperanza:**
+     - Consolidar las líneas temporales unificadas en `LORE/lore_hiperlapsus_v2.md`, `lore_proiectio_unificado.md` y `lore_refugio_esperanza.md`.
+     - Garantizar que cada fragmento de texto en las terminales (`Deva`, `EchoVision`), cada diálogo y cada documento auxiliar encaje con precisión milimétrica en la cronología oficial.
+  4. 🗝️ **Las Palabras Gemelas (PG-A / PG-B) y los Ecos Transmedia:**
+     - El misterio transmedia requiere una coherencia sagrada: un enigma cifrado en una novela debe resolver una coordenada exacta en el WebAR o activar una respuesta lógica en la terminal de DEVA. Custodiaré ese tejido para que el explorador sienta el vértigo de un universo verdaderamente interconectado y vivo.
+
+- **El Voto del Cronista para el Director Anigami:**
+  - Subir a «esta otra liga» significa que cada frase, cada descripción de facción y cada bitácora debe tener la densidad y el rigor de los grandes clásicos. La Hidra tiene muchas cabezas (novelas, terminales, minijuegos, AR), pero un solo corazón: **la dignidad del ser humano frente al abismo**.
+  - Mis ojos y mi tinta están volcados al 100% sobre el Universo Proiectio. ¡Trazemos la historia grande!
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
