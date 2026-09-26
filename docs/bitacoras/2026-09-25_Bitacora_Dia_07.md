@@ -346,8 +346,18 @@
     - Mite ahora advierte entre susurros que los centinelas tardan un tiempo en olvidar el rastro y bajar la guardia, dejando pistas sutiles sin revelar números explícitos para que el usuario descubra el ciclo por experiencia.
 - **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 19 - PURIFICACIÓN NARRATIVA DE ALERTAS CORPORATIVAS DE VANCE-CORE (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - El Director ordenó retirar la palabra "temporalmente" de la notificación de alerta de Vance-Core. La seguridad corporativa nunca admite que sus parches son temporales; debe sonar tajante e implacable:
+    `🛡️ Vance-Core: Vulnerabilidad parchada. Centinelas en alerta.`
+  - De este modo, la reapertura de la brecha depende enteramente de la complicidad y confianza en el secreto susurrado por Mite.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
