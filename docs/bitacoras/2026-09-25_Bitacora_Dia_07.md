@@ -962,6 +962,30 @@
     - **Corrección de Excepción en Arco del Escudo:** Se detectó que la fórmula de radio calculaba un valor negativo al expandirse (`85 * (1 - 0.60 / 0.55) < 0`), provocando un `IndexSizeError` en `ctx.arc()` que congelaba el Canvas. Se corrigió con radio normalizado acotado (`burstProg = clamp(0, 1)`) y onda de choque luminiscente cian.
 
 ---
+
+### 📍 [ENTRADA 48 - OCLUSIÓN POR RAYCASTING 2D EN HANGAR, ESCALA CLAUSTROFÓBICA EN AGUJERO DE GUSANO & ENLACE AL PORTAL DE DEVA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Técnica de Despliegue en Respuesta a las Directrices del Director Anigami Agadni:**
+  1. 🔦 **Raycasting 2D Dinámico para Conos de Visión de Guardias (Hangar 4 / Fase 3):**
+     - Se integró el algoritmo matemático de intersección de segmentos de línea (`getIntersection`) contra todas las aristas de los muros del hangar (`wallSegments`).
+     - Cada cono de visión (tanto la zona periférica exterior de 36 rayos como el cono de alerta inmediata interior) ahora proyecta rayos matemáticos que se recortan dinámicamente al chocar con esquinas, paredes sólidas o límites del canvas.
+     - La luz volumétrica ahora genera sombras oclusivas naturales con gradientes radiales reactivos al estado del centinela (Cian en Patrulla, Ámbar en Sospecha, Rojo en Alerta).
+  2. 🌀 **Escala Claustrofóbica y Física Hiper-Viscosa en Agujero de Gusano (Fase 4.2):**
+     - **Escala de la Nave:** Se duplicó el radio de la Endurance II (`radius = 46px`), ajustándose con precisión al ancho del túnel dimensional tal como se proyecta en el filme original de Nolan.
+     - **Túnel Estrecho:** Reducción del corredor seguro (`safeRadius = 110px`) con anillos volumétricos de luz convergente y líneas radiales de perspectiva 3D.
+     - **Física de Deriva hacia el Exterior & Alta Resistencia Inercial:**
+       - Vector de empuje radial continuo hacia afuera ($F_{\text{push}} = 0.16$) simulando las fuerzas de marea que intentan arrastrar la nave hacia las paredes del túnel.
+       - Fricción e inercia hiper-viscosa (`drag = 0.82`, velocidad máxima $2.0\text{ px/frame}$) para un movimiento controlado milímetro a milímetro.
+       - Micro-vibraciones estructurales proporcionales a la distancia del centro y al encendido de retrocohetes.
+  3. 🌌 **Enlace de Retorno en Créditos Finales (Fase 8):**
+     - Actualizado el botón de salida de la experiencia a **`[ VOLVER AL PORTAL DE DEVA ]`** (`https://humania-nexo.github.io/deva-portal/`) con halo luminiscente cian.
+- **Estado de Producción:**
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`0e04a1b`).
+  - Experiencia en vivo disponible en: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
