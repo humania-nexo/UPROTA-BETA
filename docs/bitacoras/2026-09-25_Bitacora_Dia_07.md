@@ -1004,7 +1004,27 @@
   - Experiencia en vivo disponible en: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
 
 ---
+
+### 📍 [ENTRADA 50 - APERTURA TOTAL DEL CORREDOR SUR & BLINDAJE DE COLISIÓN DE IA EN HANGAR 4 (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acciones Correctivas Ejecutadas:**
+  1. 🏗️ **Reestructuración de la Geometría del Mapa (`walls`):**
+     - Se eliminaron los bloques residuales en la Fila 7 (Columnas 6 y 9) que cortaban la trayectoria del guardia inferior.
+     - La **Fila 7 ($y = 375$)** quedó configurada como un pasillo transversal 100% diáfano y despejado de Columna 1 a 14 ($x = 50$ a $750$).
+     - La Fila 4 fue limpiada dejando únicamente el pilar central de soporte en Columna 9 ($x = 475, y = 225$) para la torreta centinela.
+  2. 🛡️ **Ruta de Patrulla del Guardia Sur (Fila 7):**
+     - Recorre holgadamente de $x = 120$ a $x = 680$ a $y = 375$, cubriendo todo el sector inferior sin tocar ningún muro.
+  3. 🧠 **Física de Deslizamiento y Detección de Muros para la IA (`checkWallCollision`):**
+     - Se inyectó detección de colisión de paredes (`checkWallCollision(nextX, g.y, 8)` y `checkWallCollision(g.x, nextY, 8)`) en el estado `SUSPICIOUS` (cuando los guardias investigan un ruido o golpe en la pared).
+     - La IA ahora se desliza contra los obstáculos o aborta el trayecto si no hay paso, garantizando que **bajo ninguna circunstancia** un guardia pueda traspasar muros.
+- **Estado de Producción:**
+  - Repositorio `arcade-enramado`: Commit y push exitosos en `main` (`dedb1b8`).
+  - Experiencia en vivo disponible en: `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
