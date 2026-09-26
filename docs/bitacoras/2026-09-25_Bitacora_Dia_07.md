@@ -304,8 +304,24 @@
   - Nexo sincronizó la cuadrícula principal de tarjetas en `index.html` con las fichas técnicas individuales de cada submundo.
 - **Estado de Producción:** Desplegado y verificado en `origin/main` en `https://www.proiect.io/`.
 
+### 📍 [ENTRADA 16 - ECONOMÍA OPRESIVA DE FE, TOASTS EXTENDIDOS Y HACKING SECRETO DE MITE (EL DIRECTOR & NEXO)]
+- **Participantes:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada:**
+  - **Calibración de Escasez y Racionamiento Dystópico:**
+    - Ración base inicial ajustada a `20 FE` de supervivencia.
+    - Recompensas ordinarias estrictamente racionadas: `+1 FE` (Sincronía manual con cooldown), `+1 FE` (Decodificación de telemetría al inspeccionar simulación), `+2 FE` (Exploración de nodos periféricos por scroll).
+    - Techo máximo de bonificación excepcional: `+5 FE` para eventos de hackeo o hitos mayores.
+  - **Legibilidad Mejorada de Toasts:**
+    - Duración extendida de `2.6s` a `4.6s` con tipografía monoespaciada de alto contraste, panel dark glassmorphism y borde cian translúcido.
+  - **Mecánica de Hacking de Vance-Core con Mite:**
+    - Si el usuario consulta la opción de "Secreto" en el widget de Mite, la asistente le susurra con guiño cómplice el exploit del sistema.
+    - Si el usuario ejecuta 5 pulsaciones ultrarrápidas en el botón de FE del HUD, desencadena una fuga de datos con sonido glitch y recompensa de contrabando: `+5 FE // ⚠️ BRECHA EN VANCE-CORE (Contrabando de Mite)`.
+- **Estado de Producción:** Desplegado, commiteado y sincronizado con `origin/main` en `https://www.proiect.io/`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
