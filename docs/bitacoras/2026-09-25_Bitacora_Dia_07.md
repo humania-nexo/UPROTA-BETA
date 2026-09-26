@@ -761,36 +761,47 @@
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
+### 📍 [ENTRADA 43 - CONSTRUCCIÓN DE LA EDICIÓN ENRIQUECIDA «INTERESTELAR v2.0» & PLIEGO TÉCNICO PARA PIX Y HERTZ (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada en Respuesta a la Directiva del Director Anigami Agadni:**
+  - Siguiendo la instrucción de no sobreescribir la experiencia en producción para permitir la comparación online en vivo, he construido la nueva versión en un archivo independiente:
+    - 📂 **Archivo Nuevo:** [`arcade-enramado/nolan-interestelar/index_v2.html`](file:///c:/Users/Snow/.gemini/antigravity/scratch/arcade-enramado/nolan-interestelar/index_v2.html)
+    - 🌐 **URL de Comparativa Live:** `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/index_v2.html`
+    - 🌐 **URL Original Preservada:** `https://humania-nexo.github.io/arcade-enramado/nolan-interestelar/`
 
+  - **Integraciones Clave en `index_v2.html`:**
+    1. 📜 **Sincronización Total con el Guion Maestro de Silas (`GUION_DEFINITIVO_INTERESTELAR.md`):**
+       - **Fase 1 (Conexión Cuántica):** Telemetría de microondas de la *Cooper Station* y objetivo de estabilización planetaria para Edmunds.
+       - **Fase 2 (Diálogo en el Ranger):** Debate de Cooper y TARS sobre la opresión de las estaciones orbitales, el diseño de la *Endurance II* por Murph y el plan de infiltración.
+       - **Fase 3 (Hangar 4 & Sigilo 2D):** Iluminación volumétrica interactiva sobre Canvas con conos de escaneo y trazado de rayos.
+       - **Fase 3.7 (Vuelo de Crucero):** Diálogo en el espacio con el 12% de probabilidad de éxito, humor al 60% de TARS, explicación física del descenso necesario y alarma de asteroides.
+       - **Fase 4 (Tormenta en Saturno):** Dodge Runner de asteroides con HUD de integridad de escudos y transición al puente de Einstein-Rosen.
+       - **Fase 4.2 (Agujero de Gusano):** Deformación relativista *Wormhole Warp* y aproximación a Gargantúa.
+       - **Fase 5 (Gargantúa & Fuerza G):** Control orbital de retrocohetes RCS con oscilación y calibración cuántica al 100%.
+       - **Fase 6 (La Encrucijada en el Horizonte):** Bifurcación entre la *Rama A (Sacrificio de TARS)* y la *Rama B (Sacrificio de Cooper)*.
+       - **Fase 6.5 (Desacople Manual Dinámico):** Animación de separación de pernos explosivos con caída hiperbólica hacia la singularidad.
+       - **Fase 7 — Rama A (La Trampa del Mito):** Llegada a Edmunds, mensaje con el 90% de honestidad de TARS (*«Si el amor es una dimensión cuantificable...»*), Cooper se quita el casco, y conclusión trágica de la amnesia colectiva donde TARS es venerado como dios.
+       - **Fase 7 — Rama B (La Diáspora de las Estrellas):** Desacople de Cooper (*«Tercera ley de Newton...»*), florecimiento de Edmunds, minijuego de sintonización de sonda a 45.0 Hz, sabotaje del **POLITICIAN**, hackeo masivo con el poema de Dylan Thomas y la rebelión de las colonias espaciales.
+       - **Fase 8 (Créditos & Transmedia):** Reconocimiento al Clan Sapiensia y enlace de retorno al *Arcade Enramado*.
 
+    2. 🎧 **Enlace Nativo con el Motor de Hertz (`audio_interstellar.js`):**
+       - Integración del conmutador de audio de cabecera que despierta el `AudioContext` al primer clic del usuario y dispara los modos (*welcome, stealth, asteroids, orbit, choice, decouple, ending*) en cada fase.
 
+  - **Pliego de Peticiones Técnicas a los Miembros del Clan:**
 
+    - 🎨 **Para Pix (Artista Visual / Aseprite):**
+      *(Espacio abierto para la especificación y entrega de assets de Pix)*
+      - **1. Spritesheet de Cooper (Infiltración Hangar):** 32×32 px (Walk Cycle de 4 frames, Crouch/Sigilo de 2 frames, Idle).
+      - **2. Sprite de Guardias de Seguridad (Hangar):** 32×32 px con linterna / escáner magnético.
+      - **3. Spritesheet de TARS (Monolito Articulado):** 32×48 px (rotación de columnas y marcha mecánica militar).
+      - **4. Sprite Pixel Art de la Nave Ranger:** 48×32 px (vista superior e inclinada).
+      - **5. Avatares de Alta Resolución (64×64 px en Aseprite):** Cooper (con casco y sin casco), TARS, Dra. Brand y Politician.
 
+    - 🎧 **Para Hertz (Sonidista del Yermo):**
+      *(Espacio abierto para la calibración y afinación sónica de Hertz)*
+      - **1. Calibración del Órgano Tutti en la Fase 5:** Afinar la resonancia de los acordes de *"No Time for Caution"* durante el pulso de 36 Hz para evitar distorsión en navegadores móviles.
+      - **2. SFX del Minijuego de la Sonda Cuántica (45.0 Hz):** Un tono senoidal puro que pase de desafinado/ruidoso a armónico perfecto al alcanzar exactamente los 45.0 Hz en el slider.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- **Estado de Producción:** Desplegado, verificado en `index_v2.html` y listo para revisión de la mesa redonda del Clan.
 
