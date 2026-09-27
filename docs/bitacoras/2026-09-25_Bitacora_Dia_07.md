@@ -1218,9 +1218,9 @@
        - `deva()` / `desbloquearDEVA()` $\rightarrow$ Inicia la sincronización y abre la terminal.
        - `resistencia()` / `statusRebelde()` $\rightarrow$ Devuelve el reporte de estado de los nodos rebeldes del Yermo.
 - **Estado de Producción:**
-  - Repositorio `proiectio`: Commit `138840a` subido a `origin/main`.
-  - Repositorio `humania`: Commit `e928172` subido a `origin/main`.
-  - Repositorio `sapiensiaclan`: Commit `9cecb2f` subido a `origin/main`.
+  - Repositorio `proiectio`: Commits `138840a` y `521f27f` subidos a `origin/main`.
+  - Repositorio `humania`: Commits `e928172` y `6f5c942` subidos a `origin/main`.
+  - Repositorio `sapiensiaclan`: Commits `9cecb2f` y `2a0172b` subidos a `origin/main`.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
