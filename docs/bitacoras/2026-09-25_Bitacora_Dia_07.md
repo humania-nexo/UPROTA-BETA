@@ -1149,5 +1149,20 @@
 - **Estado de Producción:**
   - Repositorio `proiectio`: Commit `6678f53` subido a `origin/main`.
 
+### 📍 [ENTRADA 58 - CALIBRACIÓN CINEMÁTICA EN MODO OSCURO Y UNIFICACIÓN DE LA TARJETA UPROTA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directriz Estratégica del Director Anigami Agadni:**
+  - *"Poner el fondo oscuro en la sección Ecosistemas de Inmersión para que el efecto de partículas resalte con total nitidez y reparar la tarjeta de UPROTA que presentaba una duplicación visual."*
+- **Acciones Ejecutadas en `proiect.io`:**
+  1. 🌌 **Calibración a Fondo Oscuro Profundo (`#0d172a` a `#040814`):**
+     - Se aplicó un gradiente radial oscuro espacial a la sección `#ecosistemas-section`.
+     - Título *"Ecosistemas de Inmersión"* estilizado en blanco brillante con resplandor cian cuántico (`text-shadow: 0 0 25px rgba(0, 195, 255, 0.45)`).
+     - Se ajustó la intensidad de brillo, opacidad y grosor de los filamentos y halos de los nodos en `ecosistemas-synapse.js`, logrando un contraste cinemático electrizante.
+  2. 🛠️ **Restauración y Unificación de la Tarjeta 3D de UPROTA:**
+     - Se subsanó el cierre de etiquetas HTML dentro de la tarjeta de anomalía analógica, unificando el póster pixel art animado y el bloque descriptivo en una sola tarjeta monolítica con borde glitch dorado (`0 FE // ACCESO LIBRE` y botón `CONECTAR NODO`).
+- **Estado de Producción:**
+  - Repositorio `proiectio`: Commit `e3c70db` subido a `origin/main`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
