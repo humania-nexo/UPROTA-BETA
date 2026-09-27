@@ -54,6 +54,9 @@ export class ModalCentroAyuda {
           <button class="btn-ayuda-tab ${tab === 'sobre' ? 'active' : ''}" data-tab="sobre" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'sobre' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'sobre' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
             📖 Sobre UPROTA
           </button>
+          <button class="btn-ayuda-tab ${tab === 'privacidad' ? 'active' : ''}" data-tab="privacidad" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid #38bdf8; background: ${tab === 'privacidad' ? '#38bdf8' : '#1f1c19'}; color: ${tab === 'privacidad' ? '#000' : '#7dd3fc'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
+            🛡️ Privacidad & Datos
+          </button>
           <button class="btn-ayuda-tab ${tab === 'respaldo' ? 'active' : ''}" data-tab="respaldo" style="padding: 5px 8px; font-size: 0.72rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); background: ${tab === 'respaldo' ? 'var(--oro-torta)' : '#1f1c19'}; color: ${tab === 'respaldo' ? '#000' : '#fff'}; font-weight: bold; cursor: pointer; white-space: nowrap;">
             💾 Respaldo
           </button>
@@ -431,6 +434,47 @@ export class ModalCentroAyuda {
           </div>
         `;
 
+      case 'privacidad':
+        return `
+          <div class="card-yermo" style="border-left: 3px solid #38bdf8; background: rgba(56, 189, 248, 0.08); margin-bottom: 12px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+              <span style="font-size: 1.2rem;">🛡️</span>
+              <h4 style="color: #7dd3fc; font-size: 0.95rem; margin: 0;">Soberanía de Datos, Cero Cookies & Privacidad</h4>
+            </div>
+            <p style="font-size: 0.80rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
+              En <strong>UPROTA</strong> tu privacidad, disciplina y tranquilidad son sagradas. Operamos bajo arquitectura <strong>Local-First / Zero-Telemetry</strong> conforme a estándares internacionales (RGPD y ePrivacy).
+            </p>
+          </div>
+
+          <div class="card-yermo" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 12px; margin-bottom: 10px;">
+            <h5 style="color: #fbbf24; font-size: 0.84rem; margin-bottom: 6px;">🚫 1. Cero Cookies de Rastreo y Cero Anuncios</h5>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
+              UPROTA <strong>no utiliza cookies de rastreo publicitario</strong>, ni píxeles de terceros (Meta, Google Ads, TikTok), ni scripts de analítica invasiva. Ninguna empresa comercial monitorea tu actividad en el Yermo.
+            </p>
+          </div>
+
+          <div class="card-yermo" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 12px; margin-bottom: 10px;">
+            <h5 style="color: #fbbf24; font-size: 0.84rem; margin-bottom: 6px;">💾 2. Almacenamiento 100% Técnico y Local (IndexedDB)</h5>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
+              Tus hábitos, rachas, faros, recursos y mochilas se almacenan <strong>exclusivamente en la base de datos interna de tu dispositivo (IndexedDB / localStorage)</strong>. Tus datos nunca se envían ni se guardan en servidores externos.
+            </p>
+          </div>
+
+          <div class="card-yermo" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 12px; margin-bottom: 10px;">
+            <h5 style="color: #fbbf24; font-size: 0.84rem; margin-bottom: 6px;">🔒 3. Conexión Segura HTTPS & Cifrado TLS</h5>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
+              Toda la aplicación se sirve bajo canal cifrado <strong>TLS 1.3 / HTTPS</strong> con certificación SSL de 256 bits, garantizando la autenticidad e integridad del software.
+            </p>
+          </div>
+
+          <div class="card-yermo" style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 12px;">
+            <h5 style="color: #fbbf24; font-size: 0.84rem; margin-bottom: 6px;">👑 4. Soberanía Absoluta de tu Progreso</h5>
+            <p style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
+              Eres el dueño irrestricto de tu información. Puedes exportar respaldos manuales en formato JSON desde la pestaña <strong>Respaldo</strong> o purgar tu memoria cuando lo desees desde <strong>Tabula Rasa</strong>.
+            </p>
+          </div>
+        `;
+
       case 'respaldo': {
         const snapshots = estadoApp.datos.respaldosAutomaticos || [];
         return `
@@ -586,6 +630,16 @@ export class ModalCentroAyuda {
       case 'faq':
         return `
           <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--border-subtle);">
+              <div class="faq-pregunta" style="font-size: 0.84rem; font-weight: bold; color: var(--oro-torta); cursor: pointer; display: flex; justify-content: space-between;">
+                <span>¿UPROTA utiliza cookies de rastreo o comparte mis datos?</span>
+                <span>▼</span>
+              </div>
+              <div class="faq-respuesta hidden" style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 8px; line-height: 1.45; border-top: 1px dashed var(--border-subtle); padding-top: 6px;">
+                <strong>No, jamás.</strong> UPROTA no utiliza cookies publicitarias, ni trackers comerciales, ni vende información a terceros. Toda tu información se guarda de forma 100% privada y local en tu propio dispositivo mediante IndexedDB y localStorage. Puedes consultar los detalles en la pestaña <strong>🛡️ Privacidad & Datos</strong>.
+              </div>
+            </div>
+
             <div class="card-yermo" style="padding: 10px; background: #1a1714; border: 1px solid var(--border-subtle);">
               <div class="faq-pregunta" style="font-size: 0.84rem; font-weight: bold; color: var(--oro-torta); cursor: pointer; display: flex; justify-content: space-between;">
                 <span>¿Cómo puedo reportar un error o fallo?</span>
