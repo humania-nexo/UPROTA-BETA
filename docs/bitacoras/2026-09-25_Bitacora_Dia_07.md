@@ -1181,7 +1181,7 @@
      - Soporte táctil optimizado para móviles y tablets (`touchstart`, `touchmove`).
      - Apagado inteligente al cambiar de pestaña (`visibilitychange`), asegurando 0% de uso de CPU en reposo y 60-120 FPS estables en interacción activa.
 - **Estado de Producción:**
-  - Repositorio `sapiensiaclan`: Commit `186f155` subido a `origin/main`.
+  - Repositorio `sapiensiaclan`: Commits `186f155` y `1e10b2f` (Cache-Busting `v=3.0` forzado en CDN/Cloudflare) subidos a `origin/main`.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
