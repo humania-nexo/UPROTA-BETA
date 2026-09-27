@@ -1304,8 +1304,30 @@
 - **Estado de Producción:**
   - Repositorio `humania`: Commit `65794ab` subido a `origin/main`.
 
+### 📍 [ENTRADA 65 - INTEGRACIÓN DEL PERSONAL IMPERIAL EN EL CEREBRO DE MITE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directriz Estratégica del Director Anigami Agadni:**
+  - *"Incorporar en Mite información sobre el personal del imperio: Elías Vance, Valerius, Efesto, Dr. Aris Thorne, Cornelia y figuras clave, consultando los archivos canónicos de personajes."*
+- **Acciones Ejecutadas en `humania.space` (`mite.js?v=2.1`):**
+  1. 👑 **Expansión NLU con el Cuadro de Liderazgo Imperial:**
+     - **Elías Vance (Director de Seguridad):** *El Arquitecto del Orden*, estratega supremo de la estabilidad global y garante de la Paz Preventiva.
+     - **Comandante Valerius:** *El Rostro del Orden*, líder de los Pretorianos, célebre por combatir a rostro descubierto con su armadura *Leviatán V.2* y su lanza *Justicia*.
+     - **Efesto (La Inteligencia Forjadora):** Inteligencia táctica y maestro forjador de armaduras de combate (Leviatán V.2, Atlas) y soporte de seguridad.
+     - **Dr. Aris Thorne:** Fundador pionero de Humania hace 47 años y creador del estándar CNB.
+     - **Directora Cornelia:** Alta ejecutiva de Nivel 7 a cargo de Monitoreo Biológico y Coherencia Sináptica.
+     - **General Russo:** Figura condecorada de la vieja guardia en las Guerras de Pacificación.
+  2. 🔘 **Integración de Acciones Rápidas Contextuales:**
+     - Botón directo en barra superior: `👑 Personal del Imperio`.
+     - Sub-botones dinámicos para consultar a **Director Vance**, **Comandante Valerius** y **Forjador Efesto**.
+  3. ⚡ **Despliegue con Cache-Busting (`v=2.1`):**
+     - Sincronizado en `index.html` y desplegado en producción.
+- **Estado de Producción:**
+  - Repositorio `humania`: Commit `2b56cf9` subido a `origin/main`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
