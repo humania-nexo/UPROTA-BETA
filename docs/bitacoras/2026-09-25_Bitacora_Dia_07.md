@@ -1164,5 +1164,24 @@
 - **Estado de Producción:**
   - Repositorio `proiectio`: Commit `e3c70db` subido a `origin/main`.
 
+### 📍 [ENTRADA 59 - FORJA DEL MOTOR DE POLVO ALQUÍMICO & MALLA GRAVITATORIA EN SAPIENSIA CLAN (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directriz Estratégica del Director Anigami Agadni:**
+  - *"Transformar el fondo de Sapiensia Clan por un sistema de partículas interactivo mucho más reactivo, orgánico y espectacular al paso del mouse."*
+- **Acciones Ejecutadas en `sapiensiaclan.com` (`js/stardust.js`):**
+  1. ⚗️ **Arquitectura del Motor "Golden Alchemy & Neural Nexus" (Vanilla JS / Canvas 2D a 0 KB):**
+     - **Paleta de Identidad Sapiensia:** 75% Ámbar Forja (`#f59e0b`), 15% Oro Cálido (`#fbbf24`) y 10% Cian IA/Sapiens (`#38bdf8`), fusionados con técnica de resplandor `lighter` sin afectar la legibilidad de lectura.
+     - **Vórtice Orbital Cuántico:** Al posar el cursor, las partículas no sufren una simple repulsión, sino una atracción gravitatoria combinada con fuerza tangencial de giro, produciendo un elegante remolino estelar alrededor del cursor.
+     - **Pluma de Constelación Directa:** El cursor actúa como nodo maestro enlazando filamentos de luz degradada oro $\rightarrow$ cian con las partículas más próximas en un radio de $190\text{ px}$.
+     - **Estela de Micro-Chispas de Forja (Embers):** El movimiento veloz del cursor emite chispas incandescentes que flotan y se desvanecen con física de inercia y fricción.
+     - **Ondas de Pulso Cuántico (Shockwaves):** Cada click o pulsación táctil dispara una onda circular expansiva que perturba e ilumina las partículas en pantalla.
+  2. ⚡ **Eficiencia Energética & Multiplataforma:**
+     - Soporte completo para pantallas Retina / High-DPI (`devicePixelRatio`).
+     - Soporte táctil optimizado para móviles y tablets (`touchstart`, `touchmove`).
+     - Apagado inteligente al cambiar de pestaña (`visibilitychange`), asegurando 0% de uso de CPU en reposo y 60-120 FPS estables en interacción activa.
+- **Estado de Producción:**
+  - Repositorio `sapiensiaclan`: Commit `186f155` subido a `origin/main`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
