@@ -758,8 +758,24 @@
   - 🎨 **Pix (Dirección Visual):** El guion detalla las expresiones de los 6 avatares Pixel Art (`COOPER`, `COOPER_NO_HELMET`, `TARS`, `BRAND`, `POLITICIAN`, `SCIENTIST`).
   - 🎧 **Hertz (Sonidista):** Las marcas de cambio musical (*"Day One"*, *"First Step"*, *"Mountains"*, *"No Time for Caution"*, *"S.T.A.Y."*) y SFX de propulsores/alarmas están sincronizadas con cada bloque de texto.
 
+### 📍 [ENTRADA 62 - INYECCIÓN DE PISTAS CLANDESTINAS EN EL CEREBRO NLU DE MITE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directriz Estratégica del Director Anigami Agadni:**
+  - *"Integrar las pistas de los secretos de DEVA (teclado global y DevTools) dentro de los diálogos de Mite para que los usuarios puedan descubrirlos orgánicamente."*
+- **Acciones Ejecutadas en proiect.io (mite.js):**
+  1. 🧚 **Expansión de Secretos & Easter Eggs en Mite:**
+     - Al preguntar por secretos, trucos, hacks, exploits, pistas o mencionar a DEVA / Terminal, Mite suelta pistas con su característico tono pícaro y conspirativo:
+       - Pista sobre tipear 'DEVA' o 'VIVE' en cualquier parte de la pantalla para provocar un colapso CRT verde.
+       - Pista sobre presionar F12 y ejecutar deva() o esistencia() en la consola.
+  2. ⚡ **Sincronización y Cache-Busting (mite.js?v=4.1):**
+     - Actualizados los enlaces en index.html con versión de caché renovada.
+- **Estado de Producción:**
+  - Repositorio proiectio: Commit 459724c subido a origin/main.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 ### 📍 [ENTRADA 43 - CONSTRUCCIÓN DE LA EDICIÓN ENRIQUECIDA «INTERESTELAR v2.0» & PLIEGO TÉCNICO PARA PIX Y HERTZ (NEXO)]
 - **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
@@ -1222,5 +1238,21 @@
   - Repositorio `humania`: Commits `e928172` y `6f5c942` subidos a `origin/main`.
   - Repositorio `sapiensiaclan`: Commits `9cecb2f` y `2a0172b` subidos a `origin/main`.
 
+### 📍 [ENTRADA 62 - INYECCIÓN DE PISTAS CLANDESTINAS EN EL CEREBRO NLU DE MITE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directriz Estratégica del Director Anigami Agadni:**
+  - *"Integrar las pistas de los secretos de DEVA (teclado global y DevTools) dentro de los diálogos de Mite para que los usuarios puedan descubrirlos orgánicamente."*
+- **Acciones Ejecutadas en proiect.io (mite.js):**
+  1. 🧚 **Expansión de Secretos & Easter Eggs en Mite:**
+     - Al preguntar por secretos, trucos, hacks, exploits, pistas o mencionar a DEVA / Terminal, Mite suelta pistas con su característico tono pícaro y conspirativo:
+       - Pista sobre tipear 'DEVA' o 'VIVE' en cualquier parte de la pantalla para provocar un colapso CRT verde.
+       - Pista sobre presionar F12 y ejecutar deva() o esistencia() en la consola.
+  2. ⚡ **Sincronización y Cache-Busting (mite.js?v=4.1):**
+     - Actualizados los enlaces en index.html con versión de caché renovada.
+- **Estado de Producción:**
+  - Repositorio proiectio: Commit 459724c subido a origin/main.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
