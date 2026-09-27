@@ -1079,8 +1079,11 @@
   4. 🎮 **`PROIECTIO` (`origin/main` - `2ddae62`):**
      - Actualizado `footer.html` incorporando los accesos `Privacidad & Cookies` y `Seguridad`.
      - Creada la página de soporte legal [`privacidad.html`](https://proiect.io/privacidad.html).
+  5. 🛡️ **`UPROTA` (`origin/main` - `becf793`):**
+     - Integrada la pestaña **`🛡️ Privacidad & Datos`** directamente en el **Centro de Información & Ayuda (`ℹ️ Ayuda`)** en la barra superior.
+     - Añadida sección explicativa en el **`❓ FAQ`** certificando la arquitectura *Local-First* (IndexedDB/localStorage) y la ausencia total de cookies o rastreadores comerciales.
 - **Estado de Producción:**
-  - Los 4 repositorios sincronizados y desplegados en `main`. Ecosistema 100% blindado legalmente sin intrusión visual ni banners invasivos.
+  - Los 5 proyectos y repositorios sincronizados y desplegados en `main`. Ecosistema 100% blindado legalmente sin intrusión visual ni banners invasivos.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
