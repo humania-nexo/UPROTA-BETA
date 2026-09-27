@@ -1183,5 +1183,22 @@
 - **Estado de Producción:**
   - Repositorio `sapiensiaclan`: Commits `186f155` y `1e10b2f` (Cache-Busting `v=3.0` forzado en CDN/Cloudflare) subidos a `origin/main`.
 
+### 📍 [ENTRADA 60 - DESPLIEGUE DEL MOTOR DE ASCUAS DE FORJA & VIENTO REACTIVO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directriz Estratégica del Director Anigami Agadni:**
+  - *"Reemplazar la sobrecarga de conexiones y líneas por un fondo distintivo, ultra-fluido y sin tirones que responda orgánicamente al cursor."*
+- **Acciones Ejecutadas en `sapiensiaclan.com` (`js/stardust.js`):**
+  1. 🕯️ **Arquitectura de Ascuas Flotantes de Forja (Cero Líneas • $O(N)$ Puro):**
+     - Se eliminó por completo el cálculo de mallas y líneas conectadas ($O(N^2)$), liberando el 100% del rendimiento del navegador.
+     - Sistema de 35-55 ascuas y partículas de polvo dorado cálido (`#f59e0b`, `#fbbf24`) que flotan suavemente en convección vertical con balanceo armónico sinusoidal.
+  2. 💨 **Física de Corriente de Viento Reactiva:**
+     - El cursor actúa como una corriente de aire: al mover el mouse o deslizar en touch, las ascuas se apartan de forma elástica y suave según el vector de velocidad del puntero, y su brillo se intensifica al estar cerca del cursor.
+  3. ⚡ **Garantía de Rendimiento & Cache-Busting (`v=4.0`):**
+     - Rendimiento bloqueado a **60-120 FPS fijos** sin caídas de cuadros en ningún dispositivo.
+     - Parámetro de versión `?v=4.0` aplicado en `index.html` y `audio.html` para entrega inmediata sin fricción de caché.
+- **Estado de Producción:**
+  - Repositorio `sapiensiaclan`: Commit `e7d99f3` subido a `origin/main`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
