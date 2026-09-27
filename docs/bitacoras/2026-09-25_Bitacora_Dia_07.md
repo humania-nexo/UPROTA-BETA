@@ -771,7 +771,7 @@
   2. ⚡ **Sincronización y Cache-Busting (mite.js?v=4.1):**
      - Actualizados los enlaces en index.html con versión de caché renovada.
 - **Estado de Producción:**
-  - Repositorio proiectio: Commits 459724c y 8f7b55a (diálogos narrativos sin spoilers técnicos) subidos a origin/main.
+  - Repositorio proiectio: Commits 459724c, 8f7b55a y d4d36fa (diálogos orgánicos sin mención a F12) subidos a origin/main.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
@@ -1251,7 +1251,7 @@
   2. ⚡ **Sincronización y Cache-Busting (mite.js?v=4.1):**
      - Actualizados los enlaces en index.html con versión de caché renovada.
 - **Estado de Producción:**
-  - Repositorio proiectio: Commits 459724c y 8f7b55a (diálogos narrativos sin spoilers técnicos) subidos a origin/main.
+  - Repositorio proiectio: Commits 459724c, 8f7b55a y d4d36fa (diálogos orgánicos sin mención a F12) subidos a origin/main.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
