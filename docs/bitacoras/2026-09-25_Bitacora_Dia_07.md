@@ -1194,11 +1194,11 @@
      - Sistema de 35-55 ascuas y partículas de polvo dorado cálido (`#f59e0b`, `#fbbf24`) que flotan suavemente en convección vertical con balanceo armónico sinusoidal.
   2. 💨 **Física de Corriente de Viento Reactiva:**
      - El cursor actúa como una corriente de aire: al mover el mouse o deslizar en touch, las ascuas se apartan de forma elástica y suave según el vector de velocidad del puntero, y su brillo se intensifica al estar cerca del cursor.
-  3. ⚡ **Garantía de Rendimiento & Cache-Busting (`v=4.0`):**
+  3. ⚡ **Purga Total de CDN & Nueva Ruta (`js/forja_embers.js?v=5.1`):**
+     - Se migró el script a una nueva ruta de archivo (`js/forja_embers.js`) eliminando `stardust.js`, garantizando un bypass total e inmediato de la caché de Cloudflare e ISPs.
      - Rendimiento bloqueado a **60-120 FPS fijos** sin caídas de cuadros en ningún dispositivo.
-     - Parámetro de versión `?v=4.0` aplicado en `index.html` y `audio.html` para entrega inmediata sin fricción de caché.
 - **Estado de Producción:**
-  - Repositorio `sapiensiaclan`: Commit `e7d99f3` subido a `origin/main`.
+  - Repositorio `sapiensiaclan`: Commits `e7d99f3`, `6600373` y `6a9fd30` subidos a `origin/main`.
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
