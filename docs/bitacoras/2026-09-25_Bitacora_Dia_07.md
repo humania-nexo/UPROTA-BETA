@@ -1402,8 +1402,28 @@
 - **Estado de Producción:**
   - Repositorio `DevaTerminal`: Sincronizado y operativo en [DevaTerminal](https://humania-nexo.github.io/DevaTerminal/).
 
+### 📍 [ENTRADA 69 - DISEÑO DEL MINIJUEGO DE COMBATE RÍTMICO EN PIXEL ART: CAPÍTULO 22 DE CLOTO (EL DIRECTOR & NEXO)]
+- **Participante:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directriz Estratégica del Director Anigami Agadni:**
+  - *"Guardar la idea para un minijuego perteneciente al Capítulo 22 de Proiectio: Libro 1 (Cloto), 'El Centinela del Ritmo'. Un juego de pulsar flechas para baile y evasión rítmica estilo Bust a Groove / Dance Dance Revolution en Pixel Art para que Pix lo desarrolle."*
+- **Acciones Ejecutadas por Nexo:**
+  1. 🎮 **Arquitectura del GDD Maestro:**
+     - Creados los documentos técnicos en `PROIECTIO/LIBROS/LIBRO 1 CLOTO/Anexos/MINIJUEGO_CAP22_EL_CENTINELA_DEL_RITMO_GDD.md` y `docs/diseno/PROIECTIO_GDD_Minijuego_Cap22_El_Centinela_del_Ritmo.md`.
+     - **Core Loop:** Secuencia de entrada de flechas en compases de 4 tiempos ($1, 2, 3, 4$) con validación en el cuarto tiempo (`ESPACIO` / `[X]`), con calificaciones *Perfect (±30ms)*, *Great*, *Early/Late* y *Miss*.
+     - **Mecánica Narrativa:** Orion (*«El Bytestreet Boy de la Resistencia»*) debe esquivar los láseres y ráfagas en espiral del *Centinela de la Frecuencia* usando el ritmo y la anomalía cuántica de la danza que Mite le enseñó durante el entrenamiento del Cortafuegos Cinético.
+  2. 🎨 **Especificaciones para Pix (Pixel Art 16-bits):**
+     - Sprites de Orion: `idle_rifle`, `duck_slide`, `spin_kick`, `jump_dodge`, `hit_stumble` y `triumph_pose`.
+     - Sprites de Mite con bocina gigante flotante y letrero luminoso *"FLOW CARÍSIMO"*.
+     - Centinela de la Frecuencia con núcleo latiente estilo ecualizador.
+  3. 🎧 **Especificaciones para Hertz (Síntesis Web Audio API):**
+     - Motor de batería chiptune (bombo senoidal 55 Hz, caja con ruido blanco 2.4 kHz y bajo funk en onda de pulso 25% a 130 BPM).
+- **Estado de Producción:**
+  - GDD documentado y listo para ser evaluado por Pix y Hertz en la siguiente sesión.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
