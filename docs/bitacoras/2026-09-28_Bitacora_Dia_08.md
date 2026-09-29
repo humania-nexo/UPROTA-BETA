@@ -368,6 +368,29 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   - Experiencia arcade extendida de 32 compases completamente operativa y jugable en `PROIECTIO/Web/centinela_ritmo/index.html`.
 
 ---
+
+### 📍 [ENTRADA 10 - IMPLEMENTACIÓN DEL HIGHWAY GUITAR HERO STREAM DE FLECHAS FLOTANTES (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Módulo Desarrollado e Integrado (`PROIECTIO/Web/centinela_ritmo/engine.js`):**
+  1. 🎸 **Highway de 4 Carriles + Beat Drop (`drawHighwayStream`):**
+     - **Carril 1 (Azul Vance `#00E5FF`):** Flechas `←` (`LEFT` / `KeyA`). Posición $X = 145\text{ px}$.
+     - **Carril 2 (Rosa Magenta `#FF3366`):** Flechas `↓` (`DOWN` / `KeyS`). Posición $X = 175\text{ px}$.
+     - **Carril 3 (Verde Esmeralda `#00FF66`):** Flechas `↑` (`UP` / `KeyW`). Posición $X = 205\text{ px}$.
+     - **Carril 4 (Oro Pulido `#FFCC00`):** Flechas `→` (`RIGHT` / `KeyD`). Posición $X = 235\text{ px}$.
+     - **Línea de Beat Drop (Carmesí Neón `#FF0055`):** Marcador `DROP` (`HIT` / `Space` / `Enter`) en el tiempo 4 de cada compás. Posición $X = 270\text{ px}$.
+  2. ⏱️ **Cálculo Cinemático y Desplazamiento Continuo Zero-Drift:**
+     - Posición vertical precisa de cada flecha flotante en el Highway ($Y_{\text{receptor}} = 165\text{ px}$, $V_{\text{scroll}} = 160\text{ px/s}$):
+       $$Y_{\text{nota}} = Y_{\text{receptor}} - (t_{\text{target}} - t_{\text{song}}) \times V_{\text{scroll}}$$
+     - Cada flecha aparece flotando en la parte superior del Highway ($Y = 35\text{ px}$) con $\approx 0.81\text{ s}$ de anticipación cinemática y desciende con estela de neón hasta coincidir milimétricamente con el receptor luminoso.
+  3. 🎯 **Ventanas de Calificación y Feedback de Entrada:**
+     - **PERFECT ($\pm45\text{ ms}$):** Pop-up dorado *"¡DING-PUM! ¡FLOW CARÍSIMO!"*, brillo estelar, Ghost Trails de Orion y daño al Boss Centinela.
+     - **GREAT ($\pm90\text{ ms}$):** Pop-up verde *"¡BUEN RITMO!"* y fintas de baile.
+     - **MISS ($>110\text{ ms}$ o nota no pulsada):** Desvanecimiento a gris de la nota, sonido de glitch, tropezón de Orion y disparo láser del Boss.
+  4. 📱 **Mapeo Ergonómico Dual:**
+     - Controles físicos de teclado (Flechas / WASD / Barra Espaciadora) y D-Pad táctil virtual integrado en pantalla para dispositivos móviles.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
