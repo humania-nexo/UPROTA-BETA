@@ -461,6 +461,38 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Ambas fases (Tutorial de Mite y Duelo contra el Centinela Boss) corren sincronizadas y estables a 60-120 FPS sin instalaciones ni dependencias externas.
 
 ---
+
+### 📍 [ENTRADA 14 - CALIBRACIÓN DE SENSIBILIDAD, EXTENSIÓN DE FASES Y CORRECCIÓN CRÍTICA DE CRASH (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Auditoría y Correcciones de Ingeniería (`PROIECTIO/Web/centinela_ritmo/engine.js`):**
+
+  1. 🎯 **Corrección de Sensibilidad y Ventanas de Juicio Generosas:**
+     - **Causa Raíz del 100% de Fallos:** El motor anterior evaluaba con un límite estricto de $\pm 110\text{ ms}$ y marcaba `missed = true` instantáneamente apenas la nota cruzaba dicho umbral en el loop, descartando entradas ligeramente tardías.
+     - **Nueva Ventana Ampliada:**
+       - **Juicio Global:** $\pm 220\text{ ms}$ de margen para captura de pulsaciones.
+       - **PERFECT ($\pm 75\text{ ms}$):** *"¡DING-PUM! ¡FLOW CARÍSIMO!"* (+8% Flow, +1000 pts, Ghost Trails).
+       - **GREAT ($\pm 155\text{ ms}$):** *"¡BUEN RITMO!"* (+5% Flow, +600 pts).
+       - **GOOD ($\pm 220\text{ ms}$):** *"¡A TIEMPO!"* (+2% Flow, +300 pts).
+       - **Margen de Descarte:** La nota solo pasa a *MISS* si transcurren $>240\text{ ms}$ tras cruzar el receptor.
+
+  2. ⏳ **Expansión de Duración de la Experiencia:**
+     - **Fase 1 (Tutorial de Mite):** Ampliado de 8 a **16 compases progresivos** ($\approx 33\text{ segundos}$):
+       - *Compases 1-4:* Flechas individuales espaciadas (tiempos 1 y 3).
+       - *Compases 5-8:* Flechas alternadas con remate de Beat Drop en tiempo 4.
+       - *Compases 9-16:* Grabación completa a ritmo total con Mite en «● REC».
+     - **Fase 2 (Duelo contra el Centinela):** Ampliado a **32 compases completos** ($\approx 66\text{ segundos}$).
+
+  3. 🛡️ **Comprobación de Calificación en Tutorial (Sin Paso Automático):**
+     - Al finalizar los 16 compases del tutorial, se evalúa el Flow del jugador:
+       - Si $\text{Flow} \ge 35\%$: Se desbloquea la cinemática del Cortafuegos y la Batalla contra el Centinela.
+       - Si $\text{Flow} < 35\%$: Se activa `PHASE_1_FAILED` con pantalla de bochorno (*Facepalm* de Mite) exigiendo repetir el entrenamiento sin permitir avanzar a la Fase 2.
+
+  4. 💥 **Resolución Definitiva del Crash en Fase 2:**
+     - **Causa del Crash:** `startPhase2Boss()` generaba un nuevo stream de 24 compases (tiempos $0..49\text{ s}$) pero conservaba el `songStartTime` anterior ($\approx 33\text{ s}$), provocando que en el primer frame se dispararan **96 eventos `handleMiss()` simultáneos**, saturando el bus de audio y colapsando el bucle.
+     - **Solución:** Reinicio limpio del reloj de audio y del despachador: `this.audio.stopMusic()`, `this.audio.startMusic()`, y sincronización de `songStartTime = this.audio.ctx.currentTime + 0.05`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
