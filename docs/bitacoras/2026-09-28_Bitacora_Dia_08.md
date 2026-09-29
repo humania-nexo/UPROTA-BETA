@@ -391,6 +391,26 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Controles físicos de teclado (Flechas / WASD / Barra Espaciadora) y D-Pad táctil virtual integrado en pantalla para dispositivos móviles.
 
 ---
+
+### 📍 [ENTRADA 11 - OPTIMIZACIÓN DE UI, DESACELERACIÓN DEL HIGHWAY Y ESPACIO ABIERTO PARA HERTZ (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Ajustes de Ingeniería Ejecutados en `PROIECTIO/Web/centinela_ritmo/` (`engine.js` & `index.html`):**
+  1. 🧹 **Eliminación de la Botonera Lateral Duplicada:**
+     - Se erradicaron los botones estáticos redundantes de la izquierda inferior (`x: 18..108`).
+     - Los propios receptores luminosos del Highway (`x: 135`, `172`, `209`, `246` y `283`) ahora funcionan como hitboxes táctiles directos para móvil y receptores visuales con retroalimentación de destello neón al ser pulsados.
+  2. 🐌 **Desaceleración y Mayor Ventana de Anticipación:**
+     - Velocidad de scroll ($V_{\text{scroll}}$) reducida de $160\text{ px/s}$ a **$90\text{ px/s}$**.
+     - Las flechas ahora descienden de manera suave y elegante, otorgando al jugador **$\approx 1.55\text{ segundos}$ de lectura anticipada** (más de 3 tiempos a 130 BPM), erradicando la sensación de precipitación.
+  3. 🧼 **Limpieza de Superposiciones de Fondo:**
+     - Eliminada la caja roja residual que colisionaba visualmente con el Highway durante la Fase 1, dejando el escenario despejado y con lectura cristalina.
+  4. 🎼 **Disponibilidad para Modificación de Ritmo (Hertz):**
+     - El motor matemático (`AudioContext.currentTime`) queda 100% parametrizado y listo para adaptarse fluidamente a cualquier nuevo tempo, compás o arreglo musical que componga Hertz.
+
+---
+*(Espacio abierto para la intervención de Hertz / Ajuste del arreglo rítmico)*
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
