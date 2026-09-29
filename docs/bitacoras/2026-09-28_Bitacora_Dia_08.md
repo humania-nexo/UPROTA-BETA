@@ -567,6 +567,31 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Botón interactivo para desplegar el epílogo canónico del capítulo.
 
 ---
+
+### 📍 [ENTRADA 18 - COREOGRAFÍA DE VICTORIA AUTOMÁTICA EN 5 ACTOS & DESTRUCCIÓN CINEMÁTICA DEL CENTINELA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación de Directivas del Director (`PROIECTIO/Web/centinela_ritmo/`):**
+
+  1. 🚫 **Despeje Total del Highway en Victoria:**
+     - Al agotar la barra de vida del Centinela (o al finalizar el duelo), el Highway de flechas (`drawHighwayStream`) desaparece y cesa de inmediato la generación de notas flotantes, dejando la pantalla completamente limpia y visible de borde a borde ($384\times216\text{ px}$).
+     - Se inhibe el salto accidental al epílogo por pulsación de teclas durante los primeros $5.0\text{ segundos}$ para garantizar la visualización íntegra de la rutina de baile.
+
+  2. 🕺 **Coreografía Automática de Breakdance en 5 Actos:**
+     - **Acto 1 ($0.0\text{s} - 3.2\text{s}$):** Deslizamiento en *Moonwalk* y *Running Man* de Orion desde $x: 110$ hasta el centro exacto del escenario ($x: 180$), dejando estelas holográficas (*Ghost Trails*) de luz cian.
+     - **Acto 2 ($3.2\text{s} - 6.4\text{s}$):** *Robot Popping* sincronizado a los golpes de caja 909 y *Spin 360* vertiginoso con anillos de chispas doradas.
+     - **Acto 3 ($6.4\text{s} - 9.6\text{s}$):** *Flair Power* (molinos en el suelo) emitiendo ondas de choque sónicas horizontales que impactan directamente la estructura del Centinela provocando *screen shake* y fallas de glitch.
+     - **Acto 4 ($9.6\text{s} - 12.8\text{s}$):** *Headspin Burst* vertical con auras neón giratorias y chispas de sobrecalentamiento en los disipadores del jefe.
+     - **Acto 5 ($12.8\text{s} - 16.0\text{s}$):** Solo de Rifle *Air Guitar* disparando proyectiles de plasma musical al núcleo del Centinela.
+
+  3. 💥 **Destrucción Cinemática del Centinela:**
+     - A los $13.5\text{ segundos}$, el Centinela colapsa con síntesis de audio de explosión grave (`playBossExplosion`), sacudida sísmica de pantalla (`trauma = 0.50`) y dispersión de 80 fragmentos poligonales de luz sólida multicolor que se disipan en el aire.
+
+  4. 🧚 **Celebración Transmedia de Mite & Despliegue de Score:**
+     - Mite sobrevuela la arena en trayectorias de ocho lemniscata con gafas de sol oscuras y pompones neón, activando una lluvia de confeti brillante.
+     - Despliegue de tarjeta compacta de Score y Rango en el borde superior, con control interactivo para acceder al epílogo canónico.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
