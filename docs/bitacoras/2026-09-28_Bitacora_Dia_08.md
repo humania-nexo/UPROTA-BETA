@@ -663,7 +663,34 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Despliegue en producción sincronizado para `https://www.proiect.io/solaris.html`.
 
 ---
+
+### 📍 [ENTRADA 23 - GENERACIÓN DE MARCADORES Y ETIQUETAS AR PARA LA SAGA CLOTO (CAPÍTULOS 7-13 & EXPANSIÓN 14-24) (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica de Realidad Aumentada & Metadata:**
+
+  1. 🏷️ **Generación de Marcadores Matrix 3x3 Barcode:**
+     - Generados todos los marcadores físicos en resolución web ($226\times226\text{ px}$) y editorial para impresión ($300\text{ DPI}$) en `proiectio_webar/marcadores/` e `impresion_300dpi/`:
+       - `marcador_capitulo_7.png` (Barcode `value="8"`) ➔ *La Orden de la Noche*.
+       - `marcador_capitulo_8.png` (Barcode `value="9"`) ➔ *La Copa del Olvido*.
+       - `marcador_capitulo_9.png` (Barcode `value="10"`) ➔ *El Choque en la Niebla*.
+       - `marcador_capitulo_10.png` (Barcode `value="11"`) ➔ *El Protocolo Secreto*.
+       - `marcador_capitulo_11.png` (Barcode `value="12"`) ➔ *El Ritual del Filo*.
+       - `marcador_capitulo_12.png` (Barcode `value="13"`) ➔ *La Nariz de Cyrano*.
+       - `marcador_capitulo_13.png` (Barcode `value="14"`) ➔ *El Arrullo del Silencio* (Clímax).
+       - Marcadores de expansión reservados del 14 al 24 (Barcodes `15` a `25`).
+
+  2. 🌐 **Montaje de Escena 3D & Scaffolding en WebAR (`index.html`):**
+     - Integrados los nodos `<a-marker>` con geometrías holográficas wireframe, leyendas 3D en tipografía neón y soporte táctil/mouse `drag-rotate` para inspección 360°, listos para enlazar a futuros archivos `.glb`.
+
+  3. 📑 **Documentación y Etiquetas de Publicación:**
+     - Actualizado [`documentacion_AR.md`](file:///C:/Users/Snow/.gemini/antigravity/scratch/proiectio_webar/marcadores/documentacion_AR.md) con la tabla maestra de correspondencias.
+     - Creado [`etiquetas_capitulos.txt`](file:///C:/Users/Snow/.gemini/antigravity/scratch/proiectio_webar/marcadores/etiquetas_capitulos.txt) con tags globales, SEO, Wattpad y descriptores canónicos por capítulo.
+     - Sincronizado y publicado en el repositorio oficial de GitHub `https://github.com/humania-nexo/Proiectio-WebAR.git` (Commit `b9f1e20`).
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
