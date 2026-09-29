@@ -493,6 +493,28 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - **Solución:** Reinicio limpio del reloj de audio y del despachador: `this.audio.stopMusic()`, `this.audio.startMusic()`, y sincronización de `songStartTime = this.audio.ctx.currentTime + 0.05`.
 
 ---
+
+### 📍 [ENTRADA 15 - ARQUITECTURA NARRATIVA TRANSMEDIA & CONEXIÓN CANÓNICA CON EL CAPÍTULO 22 (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación del Estándar Transmedia (Referencia: *«El Remix de la Justicia»* — Cap. 6):**
+
+  1. 🖥️ **Terminal Táctica Global (`TERM_ORION // CLOTO_CAP_22`):**
+     - Integrada la estructura de terminal cyberpunk en [`index.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/centinela_ritmo/index.html) y [`style.css`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/centinela_ritmo/style.css) con tipografías premium *Orbitron* y *JetBrains Mono*, marco de cristal translúcido, cabecera de telemetría en vivo y efectos scanline CRT.
+
+  2. 📜 **Pantalla 1: Contexto e Infiltración al Coliseo Virtual:**
+     - Cuadro narrativo (*Story Box*) que sitúa al lector/jugador directamente en la escena del **Capítulo 22**: la llegada de Orion y Mite frente al **Cortafuegos Cinético**, la invulnerabilidad del **Centinela de la Frecuencia** a disparos balísticos convencionales y la necesidad de introducir una variable caótica e impredecible: el ritmo y síncopa de 1996.
+
+  3. 🧚 **Pantalla 2: Briefing Táctico con el Avatar de Mite:**
+     - Tarjeta de diálogo interactiva con el avatar holográfico de Mite (`assets/avatar_mite_pixel.png`), donde explica la estrategia de sobrecarga sensorial del Centinela a 116 BPM y el despliegue de su cámara holográfica (*«● REC»*) para grabar la secuencia.
+
+  4. 🎮 **Pantalla 3: Ejecución Arcade en Tiempo Real:**
+     - Enlace directo al Canvas con Highway de flechas flotantes, 10 poses de baile, 4 reacciones de Mite y duelo en la Cámara Blanca.
+
+  5. 🏆 **Pantalla 4: Epílogo y Resolución Canónica:**
+     - Pantalla de desenlace transmedia tras vencer al Boss: secuestro de la frecuencia en las pantallas gigantes de Neon Nirvana, ovación multitudinaria en la Red ANIMA e instalación definitiva del **Hiper-Lazo de Pandora**.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
