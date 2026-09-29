@@ -708,7 +708,26 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Commits subidos al repositorio oficial de GitHub `https://github.com/humania-nexo/Proiectio-WebAR.git` (Commit `44f5df9`).
 
 ---
+
+### 📍 [ENTRADA 25 - DESARROLLO Y DESPLIEGUE DE PÁGINAS OFICIALES CNB-1, CNB-2 Y RED A.N.I.M.A. EN HUMANIA.SPACE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica Web & Expansión de Lore:**
+
+  1. 🧠 **Creación de Páginas Específicas de Hitos:**
+     - [`cnb1.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/cnb1.html): *Proyecto CNB-1 — Libertad Motriz Absoluta*. Documenta el origen fundacional de Humania por 5 científicos (Thorne, Chen, Romero, Walsh, Tanaka), el implante de 1 cm para neuronas motoras, lentes de visión neuronal, generadores de voz y sensores táctiles. Ficha técnica y diseño *Imperial Minimalist*.
+     - [`cnb2.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/cnb2.html): *Integración CNB-2 — Sentidos y Conciencia Unificados*. Aborda el procesamiento multitarea centralizado, el algoritmo bio-predictivo del *Centinela de Salud Preventiva* (Parkinson, Alzheimer, glucosa, cortisol), las Unidades de Respuesta Rápida (U.R.R.) y los Tratados de Asistencia Soberana.
+     - [`anima.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/anima.html): *Red A.N.I.M.A. — La Conexión Que Erradicó la Soledad*. Detalla la infraestructura concéntrica (constelación LEO, repetidores tácticos y fibra cuántica), latencia de 0.8 ms, precisión sub-centimétrica, y el tránsito hacia la Paz Preventiva y la economía de los Fragmentos de Éter (FE).
+
+  2. 🔗 **Enlace y Navegación Dinámica en `index.html`:**
+     - Se actualizaron los enlaces del carrusel interactivo en [`index.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/index.html) para dirigir de forma fluida hacia `cnb1.html`, `cnb2.html` y `anima.html`.
+
+  3. 🚀 **Sincronización y Publicación en Producción:**
+     - Commiteado y subido al repositorio oficial de Humania (`https://github.com/humania-nexo/humania.git`, Commit `7d1e588`), desplegando en vivo para el dominio `https://www.humania.space/`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
