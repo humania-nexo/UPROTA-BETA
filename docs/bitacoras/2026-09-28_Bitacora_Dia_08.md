@@ -240,7 +240,64 @@
 - **Estado de Producción:**
   - Prototipo 100% jugable, responsive y operativo en `PROIECTIO/Web/centinela_ritmo/index.html`.
 
+### 📍 [ENTRADA 07 - PLIEGO TÉCNICO DE COREOGRAFÍA EXTENDIDA & ESCENOGRAFÍA DINÁMICA PARA PIX (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directriz de Ingeniería en Respuesta al Director Anigami Agadni:**
+  - *"Estructurar y solicitar formalmente a Pix la suite completa de animaciones coreográficas y escenografía dinámica para que la experiencia de 32 compases (~1 minuto) sea visualmente rica, variada y fluida a través de las 6 secciones musicales del tema, eliminando cualquier monotonía o sensación de brevedad."*
+
+---
+
+#### 🎨 1. Catálogo Coreográfico Extendido Requerido para Orion (48×48 px / 64×64 px):
+
+Para que el baile de Orion evolucione al compás de las 6 secciones musicales compuestas por Hertz:
+
+1. **🕺 Bloque Versos & Groove Inicial (Compases 0 al 11):**
+   - `orion_moonwalk_glide` ($4\text{–}6$ frames): Deslizamiento suave hacia atrás / Moonwalk táctico con el rifle sujeto al pecho.
+   - `orion_hip_hop_bounce` ($4$ frames): Rebote cruzado con balanceo rítmico de hombros y toque del visor.
+   - `orion_running_man` ($4\text{–}6$ frames): Paso clásico de Running Man de los 90s con estética cyberpunk.
+
+2. **⚡ Bloque Pre-Chorus & Aceleración (Compases 12 al 15):**
+   - `orion_robot_popping` ($4$ frames): Aislamientos angulares robóticos y contracción muscular rítmica.
+   - `orion_spin_360` ($4$ frames): Giro completo de $360^\circ$ sobre el talón con destello de estela de luz.
+
+3. **🔥 Bloque Drop & Coro Principal (Compases 16 al 27 — Clímax de Breakdance):**
+   - `orion_flair_power` ($6\text{–}8$ frames): Giro acrobático de piernas estilo *Flair / Molino* en el suelo con chispas de luz sólida.
+   - `orion_headspin_burst` ($6$ frames): Giro sobre la cabeza con el rifle girando como hélice.
+   - `orion_air_guitar_rifle` ($4$ frames): Gesto cómico y épico tocando el rifle como guitarra eléctrica al compás de los stabs Eurodance.
+
+4. **💥 Bloque de Reacciones y Variaciones de Falla (Miss / Stumble):**
+   - `orion_slip_banana` ($4$ frames): Resbalón cómico hacia atrás cayendo sobre el suelo al fallar un paso.
+   - `orion_dizzy_spin` ($4$ frames): Giro mareado con chispas/píxeles orbitando la cabeza tras romper un combo alto.
+
+---
+
+#### 🏛️ 2. Escenografía Dinámica y Elementos Visuales de Escenario:
+
+Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
+
+1. **`stage_equalizer_bg.png` ($384 \times 100\text{ px}$):**
+   - Estructura de ecualizador de frecuencia gigante al fondo que late con las 6 bandas de audio en tiempo real.
+2. **`stage_tile_floor_pulse.png` ($384 \times 60\text{ px}$):**
+   - Baldosas de suelo que cambian de tonalidad (Cian Vance $\rightarrow$ Púrpura Neón $\rightarrow$ Oro) durante el Drop del coro.
+3. **`stage_spotlight_lasers.png` ($128 \times 128\text{ px}$):**
+   - Haces de reflectores de concierto que cruzan el escenario al ritmo de los tiempos fuertes.
+
+---
+
+#### 🧚 3. Reacciones Adicionales para Mite:
+- `mite_combo_cheer` ($4$ frames): Mite agitando pompones de luz neón cuando el jugador alcanza *Combo x10* o *x20*.
+- `mite_facepalm` ($3$ frames): Mite cubriéndose los ojos cuando Orion sufre un tropezón consecutivo.
+
+---
+*(Espacio formal reservado para la intervención, evaluación y entrega gráfica de Pix).*
+
+---
+- **Estado de Producción:**
+  - Pliego coreográfico y escenográfico registrado en bitácora para la sesión de trabajo con Pix.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
