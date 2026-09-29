@@ -874,8 +874,47 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Actualizados los pósters de video y tarjetas 3D en [`index.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/index.html) y en las fichas de inmersión individuales: [`olympus.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/olympus.html), [`neon.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/neon.html), [`chronos.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/chronos.html), [`arcadia.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/arcadia.html) y [`coliseo.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/coliseo.html).
      - Sincronizado y publicado en el repositorio oficial de GitHub `https://github.com/humania-nexo/proiectio.git` (Commit `8d81f23`).
 
+
+### 📍 [ENTRADA 33 - ARQUITECTURA DE EXPLORACIÓN PROFUNDA: RESTAURACIÓN DE PORTADAS Y GALERÍAS SENSORIALES EN SUBMUNDOS (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, Visual & Lore del Catálogo de la Adicción:**
+
+  1. 🔄 **Restauración de Portadas Principales en el Catálogo Exterior:**
+     - En [`index.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/index.html) y en los pósters de video de cabecera, se restauraron fielmente las imágenes de identidad canónica: `Olympus.jpeg`, `arcadia.jpg`, `coliseo.jpg`, `elbeso.jpg`, `neonnir.png`/`neonn.png` y `chronos.png`.
+
+  2. 🎨 **Implementación de Galerías de Inmersión Sensorial / Registros de Red:**
+     - Dentro de cada una de las fichas de inmersión individuales, se implementó una sección estructurada de **Mapeo Sensorial & Registros de Red** con tarjetas interactivas de alta resolución y descripciones canónicas basadas en el *Catálogo de la Adicción*:
+       - ⚡ **Olympus V-Games ([`olympus.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/olympus.html)):**
+         1. *La Acrópolis Celestial* (`submundo-olympus.jpg`): Templos flotantes sobre estratos dorados de nubes.
+         2. *La Epifanía Física* (`olympus-epifania.jpg`): Potencia muscular al 100%, pistas de cristal ingrávidas y propiocepción sin fatiga.
+         3. *Duelo de Campeones* (`olympus-duelo.jpg`): Combates aéreos con armaduras de plasma y alabardas energéticas.
+       - 🌲 **Arcadia Eterna ([`arcadia.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/arcadia.html)):**
+         1. *La Cordillera Turquesa* (`submundo-arcadia.jpg`): Ecosistemas extintos recreados con precisión molecular.
+         2. *El Bosque Primigenio* (`arcadia-bosque.jpg`): Senderos nocturnos bioluminiscentes, arroyos cristalinos y fauna extinta.
+         3. *El Santuario del Agua Pura* (`arcadia-cascada.jpg`): Cascadas colosales y cerezos en flor para el descanso botánico absoluto.
+       - 🌆 **Neon Nirvana ([`neon.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/neon.html)):**
+         1. *La Metrópolis Vertical* (`submundo-neon.jpg`): Skyline de rascacielos infinitos en noche perpetua.
+         2. *The Nexus Sensory Club* (`neon-club.jpg`): Pistas multinivel con síntesis de dopamina y láseres volumétricos.
+         3. *El Bulevar Sensorial* (`neonnir.png`): Espacios de contacto interpersonal supervisados por Humania.
+       - 📜 **Chronos — El Archivo de la Verdad ([`chronos.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/chronos.html)):**
+         1. *La Catedral Cuántica* (`submundo-chronos.jpg`): Registros históricos holográficos infinitos.
+         2. *La Verdad Reescrita* (`chr.png`): Documentos clasificados bajo la tutela del orden soberano.
+         3. *Inmersión de Época* (`chronos.png`): Participación total en talleres renacentistas y batallas clásicas.
+       - ⚔️ **Coliseo Etérico ([`coliseo.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/coliseo.html)):**
+         1. *El Anfiteatro Dimensional* (`submundo-coliseo.jpg`): Estadio suspendido sobre el abismo digital.
+         2. *Juegos Etéricos Globales* (`Juegosetericos.jpg`): Espectáculo anual multitudinario de combate etérico.
+         3. *Duelo de Criaturas* (`coliseo.jpg`): Evolución táctica de núcleos de conciencia por FE.
+       - 💖 **El Beso Prohibido ([`beso.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/beso.html)):**
+         1. *El Constructo de Identidad* (`elbeso.jpg`): IAs afectivas alimentadas por memoria viva.
+         2. *La Cámara Afectiva* (`evento-live.jpeg`): Santuarios íntimos donde los adioses nunca existieron.
+
+  3. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/proiectio.git` (Commit `2d91788`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
