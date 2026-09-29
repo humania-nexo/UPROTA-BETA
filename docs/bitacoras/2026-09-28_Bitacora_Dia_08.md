@@ -951,20 +951,17 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   2. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/proiectio.git` (Commit `1ccba23`).
 
+### 📍 [ENTRADA 36 - DEPURACIÓN TEMÁTICA EN EL BESO PROHIBIDO (RETIRO DE ASSET FUERA DE TONO) (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica & Depuración de Lore:**
+
+  1. 💖 **Depuración en la Ficha de Inmersión ([`beso.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/beso.html)):**
+     - Retirada la tarjeta gráfica que contenía la imagen de combate/dragón (`evento-live.jpeg`) por no corresponder a la atmósfera emocional, íntima y psicológica del constructo de identidad afectiva de *El Beso Prohibido*.
+     - Preservada la galería con el asset canónico de alta fidelidad *El Constructo de Identidad* (`elbeso.jpg`) conectado al motor de ampliación *Lightbox Viewer*.
+
+  2. 🚀 **Despliegue a Producción:**
+     - Sincronizado, comiteado y subido al repositorio oficial de GitHub `https://github.com/humania-nexo/proiectio.git` (Commit `5d5f120`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
