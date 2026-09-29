@@ -349,8 +349,27 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   - **Cuerpo de Peluche Completo:** Torso de felpa turquesa, brazos expresivos y patitas redondas.
   - **Alas de Mariposa/Hada:** Doble lóbulo amplio con ribete de hilo de oro pulido (`#e1af2d`).
 
+### 📍 [ENTRADA 09 - ENSAMBLAJE DE LA SUITE COREOGRÁFICA EXTENDIDA & ESCENOGRAFÍA DINÁMICA DE PIX EN EL MOTOR WEB (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acciones Ejecutadas en `PROIECTIO/Web/centinela_ritmo/` (`engine.js` & `assets/`):**
+  1. 🕺 **Integración de las 10 Poses de Coreografía Extendida de Orion:**
+     - Conectados y modulados por sección musical:
+       - *Intro & Versos:* `orion_moonwalk_glide` (Frame 0), `orion_hip_hop_bounce` (Frame 1) y `orion_running_man` (Frame 2).
+       - *Pre-Chorus:* `orion_robot_popping` (Frame 3) y `orion_spin_360` (Frame 4).
+       - *Drop & Coro Principal:* `orion_flair_power` (Frame 5) y `orion_headspin_burst` (Frame 6) con estelas holográficas (*Ghost Trails*).
+       - *Solo de Sintetizador:* `orion_air_guitar_rifle` (Frame 7) tocando el rifle como guitarra.
+       - *Fallas / Miss:* `orion_slip_banana` (Frame 8 — resbalón cómico) y `orion_dizzy_spin` (Frame 9 — mareo por ruptura de combo alto).
+  2. 🧚 **Integración de las 4 Reacciones de Mite:**
+     - `mite_combo_cheer` (Frame 0 — pompones neón en combos), `mite_facepalm` (Frame 1 — bochorno ante fallas), `mite_sunglasses_groove` (Frame 2 — lentes oscuros de flow) y `mite_hologram_record` (Frame 3 — «● REC» en tutorial).
+  3. 🏛️ **Escenografía Dinámica del Coliseo Virtual:**
+     - Acoplado el fondo monumental `stage_equalizer_bg.png` ($384 \times 100\text{ px}$), el suelo reactivo `stage_tile_floor_pulse.png` ($384 \times 60\text{ px}$) y los reflectores volumétricos `stage_spotlight_lasers.png` ($128 \times 128\text{ px}$).
+- **Estado de Producción:**
+  - Experiencia arcade extendida de 32 compases completamente operativa y jugable en `PROIECTIO/Web/centinela_ritmo/index.html`.
+
 ---
-*(Espacio formal reservado para el ensamble de Nexo y pruebas de jugabilidad de la coreografía extendida).*
+*(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
