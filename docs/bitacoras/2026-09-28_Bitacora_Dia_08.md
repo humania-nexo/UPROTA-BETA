@@ -786,6 +786,29 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Commiteado y subido al repositorio oficial `https://github.com/humania-nexo/Proiectio-WebAR.git` (Commits `2de5a02`, `65e1998` y `ab90ff9`).
 
 ---
+
+### 📍 [ENTRADA 29 - CREACIÓN Y DESPLIEGUE DE PÁGINA OFICIAL CNB-3 EN HUMANIA.SPACE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica Web & Lore de Humania:**
+
+  1. 🧠 **Página Oficial de Hito ([`cnb3.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/cnb3.html)):**
+     - *Evolución CNB-3 — Sintonía Bio-Cuántica y Enlace Directo*: Documenta el salto generacional hacia la comunión mente-red, el microprocesador de nano-diamante cuántico (16 cores, 65,536 canales sinápticos), el *Coprocesador Onírico-Sensorial* para la inmersión total en *Proiectio* durante el descanso con *Velvet*, y el protocolo de código serial alfanumérico grabado a láser en la cara posterior para la validación de identidad y transacciones de Fragmentos de Éter (FE).
+     - Ficha técnica completa, grilla de características interactivas, barra lateral y diseño *Imperial Minimalist*.
+
+  2. 🖼️ **Integración de Activo Multimedia:**
+     - Se integró la imagen oficial `multimedia/CNB-3.jpg` proveniente de la galería multimedia general del universo.
+
+  3. 🔗 **Sincronización de Navegación y Carrusel:**
+     - [`index.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/index.html): Añadida la tarjeta interactiva de *Evolución CNB-3* dentro del carrusel cinético «Nuestro Legado» (actualizado a 4 hitos secuenciales).
+     - [`cnb2.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/cnb2.html): Botón de siguiente hito reorientado a `cnb3.html`.
+     - [`anima.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/anima.html): Incorporado botón de navegación hacia el hito predecesor `cnb3.html`.
+     - Actualizado [`sitemap.xml`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/sitemap.xml) con la nueva estructura de 4 páginas de hitos.
+
+  4. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido al repositorio oficial de Humania (`https://github.com/humania-nexo/humania.git`, Commit `2ffa465`), publicado en vivo para el dominio `https://www.humania.space/cnb3.html`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
