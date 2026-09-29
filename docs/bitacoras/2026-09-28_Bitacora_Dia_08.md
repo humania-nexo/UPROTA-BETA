@@ -938,8 +938,22 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   3. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/proiectio.git` (Commit `8d06dae`).
 
+
+### 📍 [ENTRADA 35 - CALIBRACIÓN DE INSIGNIAS: MÁS POPULAR PARA COLISEO ETÉRICO Y SANTUARIO DE PAZ PARA ARCADIA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica & Calibración de UX:**
+
+  1. 🏷️ **Ajuste de Insignias en Catálogo Central ([`index.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/index.html)):**
+     - **Coliseo Etérico:** Reasignada la insignia estelar a `MÁS POPULAR` (en ámbar/oro de alto impacto) + `COMBATE`, reflejando canónicamente su estatus como el título insignia de entretenimiento masivo de Proiectio.
+     - **Arcadia Eterna:** Reasignada la insignia a `SANTUARIO DE PAZ` (en verde esmeralda) + `TIERRA PURA`, alineada con su lore como paraíso botánico y de reposo contemplativo frente a la urbe industrial de Humania.
+
+  2. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/proiectio.git` (Commit `1ccba23`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
