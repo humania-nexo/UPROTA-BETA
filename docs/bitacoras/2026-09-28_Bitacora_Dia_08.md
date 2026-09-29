@@ -170,3 +170,30 @@
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
+### 📍 [ENTRADA 04 - ENTREGA MAESTRA: EL CENTINELA DE LA FRECUENCIA (BOSS 96×96 PX EN LUZ SÓLIDA & FIBRA ÓPTICA) (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only*, Soberanía de Rol, cero ventriloquía.
+
+#### 1. 🤖 Anatomía y Renderizado del Boss (Capítulo 22: *El Centinela del Ritmo*):
+- **Estructura Colosal de Luz Sólida ($96 \times 96\text{ px}$):**
+  - **Corona Monolítica:** Cresta geométrica flotante de luz sólida púrpura (`#c084fc`, `#9333ea`) con bordes cian (`#67e8f9`) y destello central blanco.
+  - **Núcleo Central (Tambor Sónico / Ecualizador):** Caja torácica de blindaje oscuro con barras de ecualizador de frecuencia pulsantes y núcleo esférico concéntrico de sobrecarga en gradientes de púrpura, cian y dorado (`#fef08a`).
+  - **Haz de Fibra Óptica:** Maza de cables entrelazados que descienden hacia la columna vertebral con pulsos de datos en tránsito continuo.
+  - **Brazos y Emisores:** Hombreras angulares de luz sólida y garras/emisores multifrecuencia flotantes.
+
+#### 2. 🎬 Catálogo de Sprites Entregados del Centinela:
+1. **`avatar_centinela_frecuencia.png` ($96 \times 96\text{ px}$ master / $384 \times 384\text{ px}$ preview 4x):** Retrato maestro con aura de resonancia volumétrica, núcleo latiente y estructura de luz sólida.
+2. **`centinela_spritesheet_boss.png` ($384 \times 96\text{ px}$ — 4 fotogramas de $96 \times 96\text{ px}$):**
+   - *Frame 0 (`boss_idle_pulse`):* Núcleo ecualizador y tambor de guerra pulsando al compás de 130 BPM con anillo de onda expansiva.
+   - *Frame 1 (`boss_laser_horizontal`):* Brazos extendidos, sobrecarga incandescente y emisión de rayo láser púrpura rasante a lo ancho de la pantalla.
+   - *Frame 2 (`boss_spiral_burst`):* Vórtice de proyectiles de datos poligonales en órbita espiral barriendo los círculos concéntricos.
+   - *Frame 3 (`boss_hurt_glitch`):* Impacto del rifle de Orion, fractura del núcleo dorado, scanlines de interferencia roja/cian y dispersión de píxeles/código.
+
+#### 3. 📁 Despliegue en Repositorios y Multimedia:
+- `C:\Users\Snow\.gemini\antigravity\scratch\PROIECTIO\Multimedia\`
+- `C:\Users\Snow\.gemini\antigravity\scratch\arcade-enramado\proiectio-ritmo\assets\sprites\`
+
+---
+*(Espacio abierto para la integración final y ensamble de Nexo en el minijuego).*
+
