@@ -592,6 +592,24 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Despliegue de tarjeta compacta de Score y Rango en el borde superior, con control interactivo para acceder al epílogo canónico.
 
 ---
+
+### 📍 [ENTRADA 19 - CAPA DE HUD VECTORIAL EN ALTA DEFINICIÓN & ELIMINACIÓN DE PIXELADO DE TEXTO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación de Directivas del Director (`PROIECTIO/Web/centinela_ritmo/`):**
+
+  1. 🔤 **Diagnóstico y Eliminación de Ilegibilidad:**
+     - El texto previamente rasterizado en baja resolución con `ctx.fillText` ($7\text{ px} - 8\text{ px}$) sufría distorsión severa al escalarse con `image-rendering: pixelated` y quedar cortado por las líneas analógicas del filtro CRT.
+     - Se eliminó el dibujo de texto vectorial diminuto en la matriz del Canvas, preservando este exclusivamente para los sprites en pixel art ($48\times48$ y $96\times96$), escenario de Pix, Highway de flechas y efectos de partículas a 60 FPS.
+
+  2. 🖥️ **Arquitectura de Capa HUD Vectorial DOM (`#hud-overlay`):**
+     - **Barra Superior (`#hud-top-bar`):** Indicador de Flow con gradiente cian/oro, panel de Score, Combo dinámico, contador de compases y medidor de vida del Centinela en color rojo neón.
+     - **Banner Dinámico de Diálogo (`#hud-dialogue-banner`):** Ubicado en el tercio inferior con fondo de cristal translúcido (*Dark Glassmorphism*), efecto *backdrop-filter*, tipografía *JetBrains Mono* / *Orbitron* y distintivo luminoso según el interlocutor (`ORION`, `MITE`, `CENTINELA`).
+     - **Popups de Precisión (`#hud-popup-container`):** Insignias flotantes en alta resolución con físicas elásticas para calificaciones (`¡DING-PUM! ¡FLOW CARÍSIMO!`, `¡BUEN RITMO!`, `¡DEMASIADO LENTO!`).
+     - **Tarjeta de Victoria & Score (`#hud-victory-card`):** Despliegue nítido en el borde superior con desglose de Puntos, Combo Máximo, Rango S/A y botón de acción interactivo `[ CONTINUAR AL EPÍLOGO CANÓNICO ]`.
+     - **Modales de Fase (`#hud-phase-modal`):** Cuadros de diálogo emergentes nítidos para repetición de tutorial y reintento tras *Game Over*.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
