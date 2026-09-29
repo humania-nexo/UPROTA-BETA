@@ -774,10 +774,8 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
 
   2. 📡 **Estructura Holográfica en Escena WebAR (`index.html`):**
      - Marcador físico asignado: Capítulo 13 (*El Arrullo del Silencio* / Barcode Matrix 3x3 `value="14"`).
-     - **Inmersión Dieléctrica Pura:** Eliminación de cualquier texto metanarrativo o etiquetas flotantes de cuarta pared para que la proyección surja como una pantalla viva e integrada al universo de la novela.
-     - **Haz de Luz Piramidal Emisor:** `<a-cone>` invertido semitransparente (`#00f0ff`, opacidad 0.15) que emana verticalmente desde el libro físico hacia la pantalla.
-     - **Anillo Emisor Base:** `<a-ring>` de retroproyección (`#00e5ff`) anclado al plano del marcador.
-     - **Pantalla Flotante 16:9:** `<a-plane>` de 1.77m x 1.0m con textura de video dynamic flat shader, loop automático, rotación táctil 3D (`drag-rotate`) y marco wireframe neón (`#00f0ff`).
+     - **Inmersión Dieléctrica Pura:** Eliminación total de conos 3D, anillos o textos metanarrativos obstructivos.
+     - **Pantalla Flotante Limpia 16:9:** `<a-plane>` de 1.77m x 1.0m con textura de video dynamic flat shader, loop automático, rotación táctil 3D (`drag-rotate`) que levita limpia y directamente sobre el libro físico.
 
   3. 🔊 **Control de Audio y Solución Mobile Autoplay:**
      - Componente A-Frame `hologram-video-screen` que reproduce automáticamente el video silenciado al detectar el marcador (`markerFound`) y pausa al perder el anclaje (`markerLost`).
@@ -785,7 +783,7 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
 
   4. 🚀 **Documentación y Sincronización:**
      - Actualizado [`marcadores/documentacion_AR.md`](file:///C:/Users/Snow/.gemini/antigravity/scratch/proiectio_webar/marcadores/documentacion_AR.md) con el registro canónico de la pantalla holográfica.
-     - Commiteado y subido al repositorio oficial `https://github.com/humania-nexo/Proiectio-WebAR.git` (Commits `2de5a02` y `65e1998`).
+     - Commiteado y subido al repositorio oficial `https://github.com/humania-nexo/Proiectio-WebAR.git` (Commits `2de5a02`, `65e1998` y `ab90ff9`).
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
