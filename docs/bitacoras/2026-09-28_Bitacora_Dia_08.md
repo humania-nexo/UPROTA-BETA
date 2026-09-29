@@ -627,6 +627,26 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Configuración recomendada en GitHub: `Settings` ➔ `Pages` ➔ `Branch: main` / `/ (root)`.
 
 ---
+
+### 📍 [ENTRADA 21 - INTEGRACIÓN UNIVERSAL DEL FAVICON «LA LLAMA INEXTINGUIBLE» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación de Identidad Visual del Clan:**
+
+  1. 🔥 **Estandarización de Identidad en Pestañas & Navegadores:**
+     - Extraído el isotipo canónico de **«La Llama Inextinguible»** desde `PROIECTIO/Multimedia/la llama inextinguible.png`.
+     - Implementado y vinculado como favicon oficial (`favicon.png` / `<link rel="icon" type="image/png" href="favicon.png">`) en **todos los minijuegos, módulos web y experiencias del universo PROIECTIO / HUMANIA**:
+       - *El Centinela del Ritmo* (`PROIECTIO/Web/centinela_ritmo/` y GitHub Pages).
+       - *El Remix de la Justicia* (`PROIECTIO/Web/remix_justicia/`).
+       - *DEVA: IA Ancestral* (`PROIECTIO/Web/deva/`).
+       - *Echo Vision / Reality Shifter* (`PROIECTIO/Web/echo_vision/`).
+       - *Hub de Arcade Enramado* (`arcade-enramado/` y sus 6 sub-experiencias: *Matrix Píldoras*, *Matrix Runner*, *Nolan Interestelar*, *Crónicas Selección Perdida*, *Proiectio Ritmo*).
+       - *Portales de Humania y Proiectio* (`PROIECTIO/Web/humania/`, `humania-repo/`, `proiectio/`, `proiectio_webar/`).
+       - *Plataforma UPROTA* (`UPROTA/`, `UPROTA/public/`).
+       - *Citymaz & Sapiensia Clan*.
+     - Actualizado y pusheado el commit oficial en el repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
