@@ -515,6 +515,33 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Pantalla de desenlace transmedia tras vencer al Boss: secuestro de la frecuencia en las pantallas gigantes de Neon Nirvana, ovación multitudinaria en la Red ANIMA e instalación definitiva del **Hiper-Lazo de Pandora**.
 
 ---
+
+### 📍 [ENTRADA 16 - COREOGRAFÍA REACTIVA EN TIEMPO REAL & DIÁLOGOS DINÁMICOS DE MISIÓN (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Auditoría e Implementación de Feedback del Director (`PROIECTIO/Web/centinela_ritmo/engine.js`):**
+
+  1. 🕺 **Activación Reactiva Inmediata del Baile por Tecla/Flecha:**
+     - **Causa del problema:** El motor anterior restringía las poses a compases fijos de la canción y revertía a `MOONWALK` tras cada nota, haciendo que Orion pareciera inmóvil salvo al fallar.
+     - **Solución implementada:**
+       - **`←` / `A` (`LEFT`):** Orion ejecuta instantáneamente el deslizamiento `MOONWALK` / `RUNNING_MAN`.
+       - **`↓` / `S` (`DOWN`):** Orion baja al suelo en breakdance `FLAIR_POWER` con rotación de piernas.
+       - **`↑` / `W` (`UP`):** Orion se eleva en `ROBOT_POPPING` / `HEADSPIN_BURST`.
+       - **`→` / `D` (`RIGHT`):** Orion gira en `SPIN_360` / `HIP_HOP_BOUNCE`.
+       - **`ESPACIO` / `ENTER` (`DROP`):** Orion desata el solo de guitarra con el rifle `AIR_GUITAR_RIFLE`, disparando chispas y estelas holográficas (*Ghost Trails*).
+
+  2. 🎶 **Groove Dinámico Continuo a 116 BPM:**
+     - Incluso cuando no se pulsan teclas, Orion rebota verticalmente y alterna poses rítmicas al compás de los bombos y cajas de Hertz, eliminando cualquier sensación de sprite estático o congelado.
+
+  3. 💬 **Diálogos Dinámicos de Medio de Misión (Capítulo 22):**
+     - Sincronizados con los compases del juego:
+       - **Compás 4 (Tutorial):** `ORION: "¿En serio tengo que bailar así? ¡Siento que las cámaras se burlan!"`
+       - **Compás 7 (Tutorial):** `MITE: "¡No se burlan, Orion! ¡Están asombrados por el Flow de 1996!"`
+       - **Compás 11 (Tutorial):** `ORION: "¡Si este video llega a la resistencia, juro que borro mi memoria!"`
+       - **Compás 14 (Tutorial):** `MITE: "¡Demasiado tarde, Bytestreet Boy! ¡El Cortafuegos está al 80%!"`
+       - **Compases 5, 10, 16, 22 (Duelo Boss):** Diálogos tácticos de batalla contra el Centinela con avisos de sobrecalentamiento y remate final.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
