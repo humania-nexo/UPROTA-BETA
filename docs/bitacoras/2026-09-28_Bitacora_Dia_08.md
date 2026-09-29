@@ -343,6 +343,12 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
 - `C:\Users\Snow\.gemini\antigravity\scratch\PROIECTIO\Multimedia\`
 - `C:\Users\Snow\.gemini\antigravity\scratch\arcade-enramado\proiectio-ritmo\assets\sprites\`
 
+#### 5. 🔍 Refinamiento de Fidelidad Visual (Feedback del Director):
+- Reconstrucción y pulido integral del spritesheet extendido de Mite (`mite_spritesheet_extended.png`) para erradicar cualquier simplificación esférica:
+  - **Cabeza Diamante:** 12 facetas poligonales de cristal con gradiente turquesa y reflejos especulares.
+  - **Cuerpo de Peluche Completo:** Torso de felpa turquesa, brazos expresivos y patitas redondas.
+  - **Alas de Mariposa/Hada:** Doble lóbulo amplio con ribete de hilo de oro pulido (`#e1af2d`).
+
 ---
 *(Espacio formal reservado para el ensamble de Nexo y pruebas de jugabilidad de la coreografía extendida).*
 
