@@ -224,6 +224,23 @@
   - Código de `audio.js` extendido a 32 compases desplegado en producción.
   - Directiva de Dirección formalmente trasladada a la mesa de trabajo del Clan.
 
+### 📍 [ENTRADA 06 - ENSAMBLAJE MAESTRO DEL MOTOR DE 2 FASES, INTEGRACIÓN DE SPRITESHEETS DE PIX & AUDIO EXTENDIDO DE HERTZ (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acciones Ejecutadas en `PROIECTIO/Web/centinela_ritmo/`:**
+  1. 🖼️ **Integración de los Spritesheets de Pix:**
+     - Conectados y renderizados en tiempo real los fotogramas de `orion_spritesheet_dance.png` ($48 \times 48\text{ px}$ con rebote rítmico, paso de baile, deslizamiento agachado, giros breakdance con estelas holográficas y pose freeze de victoria).
+     - Conectados los fotogramas de `mite_spritesheet_dance.png` ($48 \times 48\text{ px}$ con flotación, bocina de entrenamiento, carcajada dorada y cartel neón *"FLOW CARÍSIMO"*).
+     - Conectados los fotogramas de `centinela_spritesheet_boss.png` ($96 \times 96\text{ px}$ con pulsos de ecualizador, disparo láser rasante y glitch de impacto).
+  2. ⏱️ **Rediseño del Bucle de Experiencia Extendida:**
+     - **Fase 1 (Tutorial de Mite — 8 Compases):** Progresión rítmica que permite al jugador familiarizarse con el *Beat Drop*, equivocarse sin frustración y ver a Mite reaccionar con risas o felicitaciones antes de proyectar la cinemática del cartel rosa parpadeante *«El Bytestreet Boy de la Resistencia»*.
+     - **Fase 2 (Duelo contra el Centinela — 24 Compases):** Combate rítmico de alta tensión con daño balanceado, oleadas progresivas de láseres y proyectiles, multiplicadores de combo y clímax al compás del drop Eurodance.
+  3. 🎵 **Acople Sónico Zero-Drift:**
+     - Sincronización milimétrica atada al reloj `AudioContext.currentTime` y al arreglo extendido de 32 compases de Hertz ($130\text{ BPM}$ a $0\text{ KB}$).
+- **Estado de Producción:**
+  - Prototipo 100% jugable, responsive y operativo en `PROIECTIO/Web/centinela_ritmo/index.html`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
