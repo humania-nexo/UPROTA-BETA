@@ -542,6 +542,31 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
        - **Compases 5, 10, 16, 22 (Duelo Boss):** Diálogos tácticos de batalla contra el Centinela con avisos de sobrecalentamiento y remate final.
 
 ---
+
+### 📍 [ENTRADA 17 - AVATAR REAL DE MITE CON FILTRO CRT & SHOWCASE AUTOMÁTICO DE VICTORIA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación de Directivas del Director (`PROIECTIO/Web/centinela_ritmo/`):**
+
+  1. 🧚 **Avatar Real de Mite con Filtro Holográfico CRT:**
+     - Enlazada la imagen oficial de alta resolución (`assets/mite_real.png`) en el briefing táctico de la terminal (`#step-briefing`), preservando los spritesheets pixel art exclusivamente para el gameplay en el Canvas.
+     - Aplicado el sistema de portal holográfico con anillo orbital giratorio (`.holo-ring`), sombreado cian difuso y animación de levitación tridimensional (`diamond-bounce`).
+
+  2. 🏆 **Secuencia de Baile Automático de Victoria:**
+     - Al vencer al Centinela de la Frecuencia:
+       - **Orion:** Ejecuta un medley continuo de breakdance a 116 BPM rotando entre `FLAIR_POWER`, `HEADSPIN_BURST`, `AIR_GUITAR_RIFLE` y `SPIN_360` con estelas holográficas (*Ghost Trails*) activas.
+       - **Mite:** Vuela celebrando alegremente junto a Orion alternando pompones neón (`COMBO_CHEER`) y lentes oscuros (`SUNGLASSES_GROOVE`).
+       - **Centinela:** Se muestra colapsado en glitch de luz sólida disipada (`HURT_GLITCH`).
+       - **Atmósfera:** Lluvia continua de partículas de confeti cian y oro sobre el Coliseo.
+
+  3. 📊 **Tarjeta Flotante de Score Final y Rangos:**
+     - Puntuación acumulada, combo máximo y calificación de desempeño:
+       - **Rango S:** $\ge 12.000\text{ pts}$ (*¡FLOW CARÍSIMO!*).
+       - **Rango A:** $\ge 8.000\text{ pts}$ (*¡BUEN RITMO!*).
+       - **Rango B:** $< 8.000\text{ pts}$ (*CALIBRADO*).
+     - Botón interactivo para desplegar el epílogo canónico del capítulo.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
