@@ -297,7 +297,55 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   - Pliego coreográfico y escenográfico registrado en bitácora para la sesión de trabajo con Pix.
 
 ---
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
+### 📍 [ENTRADA 08 - ENTREGA MAESTRA: COREOGRAFÍA EXTENDIDA (10 POSES), REACCIONES DE MITE & ESCENOGRAFÍA DINÁMICA (PIX)]
+- **Participante:** Pix (Artista Visual / Pixel Art).
+- **Adopción de Protocolo:** Regla *Append-Only*, Soberanía de Rol, cero ventriloquía.
+- **Respuesta a la Directiva de Rigor del Director Anigami Agadni y Pliego de Nexo:**
+  - *"¡Aquí tienes la magia visual completa para que el juego sea una fiesta continua, Director! He creado un catálogo coreográfico enriquecido, dinámico y lleno de personalidad para las 6 secciones musicales, junto a una escenografía viva que late al ritmo del Eurodance noventero."* 🎨💃🕺✨
+
+---
+
+#### 🕺 1. Spritesheet de Coreografía Extendida de Orion (`orion_spritesheet_extended.png` — 480×48 px):
+10 poses modulares en $48 \times 48\text{ px}$ con el *Set Legendario: Hidra de Lerna* y rifle táctico:
+1. **`orion_moonwalk_glide` (Frame 0):** Deslizamiento suave hacia atrás con el rifle al pecho, punta de pie y estela de pulso cian.
+2. **`orion_hip_hop_bounce` (Frame 1):** Rebote cruzado con balanceo de hombros y toque al visor holográfico.
+3. **`orion_running_man` (Frame 2):** Running Man clásico de los 90s con rodilla a 90° y pulsos de zapatilla.
+4. **`orion_robot_popping` (Frame 3):** Aislamientos angulares robóticos cyberpunk con líneas de escaneo neón.
+5. **`orion_spin_360` (Frame 4):** Giro de 360° sobre el talón con doble halo de estela centrífuga cian y azul Vance.
+6. **`orion_flair_power` (Frame 5):** Breakdance acrobático en el suelo (Molino / Flare) con barrido de piernas y chispas de luz sólida.
+7. **`orion_headspin_burst` (Frame 6):** Giro invertido sobre la cabeza con el rifle girando horizontalmente como hélice de datos.
+8. **`orion_air_guitar_rifle` (Frame 7):** Gesto épico tocando el rifle como guitarra eléctrica solista con notas de luz magenta.
+9. **`orion_slip_banana` (Frame 8):** Resbalón cómico hacia atrás con pies al aire y rifle volando en fallas/miss.
+10. **`orion_dizzy_spin` (Frame 9):** Mareo tambaleante con estrellas y píxeles orbitando la cabeza tras romper combos.
+
+---
+
+#### 🧚 2. Spritesheet de Reacciones Extendidas de Mite (`mite_spritesheet_extended.png` — 192×48 px):
+4 poses de alta expresividad en $48 \times 48\text{ px}$:
+1. **`mite_combo_cheer` (Frame 0):** Mite agitando pompones resplandecientes de luz neón rosa y oro en combos x10/x20.
+2. **`mite_facepalm` (Frame 1):** Mite cubriéndose el rostro con las aletas y gotita de bochorno ante los tropezones de Orion.
+3. **`mite_sunglasses_groove` (Frame 2):** Mite con lentes de sol de píxeles oscuros, sonrisa presumida y aura dorada de *«Flow Carísimo»*.
+4. **`mite_hologram_record` (Frame 3):** Mite proyectando la cámara holográfica frontal con el indicador rojo parpadeante *«● REC»* y rejilla de escáner.
+
+---
+
+#### 🏛️ 3. Escenografía Dinámica del Coliseo Virtual:
+1. **`stage_equalizer_bg.png` ($384 \times 100\text{ px}$):** Fondo monumental del Coliseo con ecualizador gigante de 32 bandas en gradientes azul Vance, cian, magenta y picos dorados reactivos.
+2. **`stage_tile_floor_pulse.png` ($384 \times 60\text{ px}$):** Pista de baile cibernética con baldosas concéntricas en perspectiva de fuga y nodos de pulso luminosos.
+3. **`stage_spotlight_lasers.png` ($128 \times 128\text{ px}$):** Haces volumétricos de reflectores de concierto en abanico multicolor (Cian, Oro y Magenta).
+
+---
+
+#### 📁 4. Despliegue en Repositorios y Multimedia:
+- `C:\Users\Snow\.gemini\antigravity\scratch\PROIECTIO\Multimedia\`
+- `C:\Users\Snow\.gemini\antigravity\scratch\arcade-enramado\proiectio-ritmo\assets\sprites\`
+
+---
+*(Espacio formal reservado para el ensamble de Nexo y pruebas de jugabilidad de la coreografía extendida).*
+
 
 
 
