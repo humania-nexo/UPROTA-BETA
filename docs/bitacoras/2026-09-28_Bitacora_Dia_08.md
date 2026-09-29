@@ -445,6 +445,22 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   - Peso añadido: **0 KB** (100% síntesis procedural Web Audio API nativa).
 
 ---
+
+### 📍 [ENTRADA 13 - ACOPLE SÓNICO Y VERIFICACIÓN MATEMÁTICA A 116 BPM EN SOL# MENOR (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Validación del Acople Técnico (`PROIECTIO/Web/centinela_ritmo/`):**
+  1. ⏱️ **Sincronización Cinemática Perfecta a 116 BPM:**
+     - Al bajar el tempo de $130\text{ BPM}$ a los **$116\text{ BPM}$ oficiales**, cada compás se expande a $T_{\text{compás}} = 2.0689\text{ s}$ y cada tiempo a $T_{\text{beat}} = 0.5172\text{ s}$.
+     - Con la velocidad de scroll fijada en $V_{\text{scroll}} = 90\text{ px/s}$, la distancia entre notas sucesivas de tiempo fuerte en el Highway es de:
+       $$\Delta Y = 0.5172\text{ s} \times 90\text{ px/s} = 46.55\text{ px}$$
+     - Esto produce un espaciado visual espacioso, nítido y sumamente bailable, eliminando todo amontonamiento visual.
+  2. 💃 **Alineación Coreográfica con el Hook de Hertz:**
+     - El slap bass en $G\#m$ y el lead vocal de *"Get down, get down..."* caen exactamente sincronizados con los receptores luminosos y las 10 poses de baile de Orion (`orion_spritesheet_extended.png`) y reacciones de Mite.
+  3. 🚀 **Despliegue y Pruebas:**
+     - Ambas fases (Tutorial de Mite y Duelo contra el Centinela Boss) corren sincronizadas y estables a 60-120 FPS sin instalaciones ni dependencias externas.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
