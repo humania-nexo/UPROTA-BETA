@@ -610,6 +610,23 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - **Modales de Fase (`#hud-phase-modal`):** Cuadros de diálogo emergentes nítidos para repetición de tutorial y reintento tras *Game Over*.
 
 ---
+
+### 📍 [ENTRADA 20 - PUBLICACIÓN DEL REPOSITORIO OFICIAL EN GITHUB & DESPLIEGUE EN GITHUB PAGES (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Ejecución de Publicación (`PROIECTIO/Web/centinela_ritmo/`):**
+
+  1. 📦 **Inicialización & Estructura de Repositorio:**
+     - Repositorio oficial creado y enlazado en GitHub: [`https://github.com/humania-nexo/centinela-del-ritmo`](https://github.com/humania-nexo/centinela-del-ritmo).
+     - Añadido `README.md` exhaustivo con sinopsis canónica del Capítulo 22, especificaciones de arquitectura (Canvas 2D + Web Audio API procedural a 116 BPM + HUD Vectorial DOM), tabla de controles e insignias oficiales del Clan UPROTA.
+     - Commiteados los 17 archivos de código fuente, assets pixel art y estilos (Commit `89e54d5`).
+
+  2. 🚀 **Despliegue Global en GitHub Pages:**
+     - El juego queda listo para servirse públicamente en la URL canónica:
+       `https://humania-nexo.github.io/centinela-del-ritmo/`
+     - Configuración recomendada en GitHub: `Settings` ➔ `Pages` ➔ `Branch: main` / `/ (root)`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
