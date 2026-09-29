@@ -912,8 +912,35 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   3. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/proiectio.git` (Commit `2d91788`).
 
+
+### 📍 [ENTRADA 34 - INTEGRACIÓN DE ACTORES VISUALES DEL COLISEO ETÉRICO Y MOTOR LIGHTBOX FULLSCREEN (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, Visual & UX de Pantalla Completa:**
+
+  1. ⚔️ **Integración de 6 Activos de Combate del Coliseo Etérico:**
+     - Se incorporaron las 6 capturas de alta definición desde `Multimedia/coliseo eterico` hacia [`multimedia/`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/multimedia/):
+       - `coliseo-combate-1.png`: *Duelo de Campeones* (Acrobacia aérea y armas de plasma).
+       - `coliseo-combate-2.png`: *Invocación Dimensional* (Materialización neuronal de núcleos de conciencia).
+       - `coliseo-combate-3.png`: *Furia Dimensional* (Ondas de choque y dispersión de FE).
+       - `coliseo-combate-4.png`: *Pugna de Élite* (Estrategias de combate por escuadras).
+       - `coliseo-combate-5.png`: *Titanes y Mechas* (Colosos de titanio y bestias aladas).
+       - `coliseo-combate-6.png`: *El Clímax de Sincronía* (El golpe definitivo de la victoria).
+     - Grilla del Coliseo ampliada a **8 tarjetas de inmersión** en [`coliseo.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/coliseo.html).
+
+  2. 🔍 **Desarrollo del Motor Universal `lightbox-viewer.js`:**
+     - Creado e integrado el visor modal de alta resolución a pantalla completa:
+       - **Fondo:** Difuminado bio-digital (`backdrop-filter: blur(16px)` / `rgba(4, 8, 18, 0.92)`).
+       - **Escalado:** Mantiene proporciones nativas de las imágenes en alta definición con resplandor cian reactivo.
+       - **Navegación:** Botón de cierre `[✕]`, botones de anterior/siguiente `[❮]` `[❯]`, soporte de flechas de teclado `[←]` `[→]`, click exterior y tecla `[Esc]`.
+       - **Interactividad Global:** Activado automáticamente en todas las fichas de submundos ([`olympus.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/olympus.html), [`arcadia.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/arcadia.html), [`neon.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/neon.html), [`chronos.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/chronos.html), [`coliseo.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/coliseo.html) y [`beso.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/beso.html)).
+
+  3. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/proiectio.git` (Commit `8d06dae`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
