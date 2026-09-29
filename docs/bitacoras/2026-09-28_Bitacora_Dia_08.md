@@ -726,7 +726,30 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Commiteado y subido al repositorio oficial de Humania (`https://github.com/humania-nexo/humania.git`, Commit `7d1e588`), desplegando en vivo para el dominio `https://www.humania.space/`.
 
 ---
+
+### 📍 [ENTRADA 26 - SEGREGACIÓN CANÓNICA DE IDENTIDAD VISUAL (FAVICONS INSTITUCIONALES VS LA LLAMA INEXTINGUIBLE) (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Corrección y Blindaje de Identidad Transmedia:**
+
+  1. 🏢 **Restauración de Identidad Institucional Corporativa:**
+     - **Humania Global Systems (`humania.space` / `humania-repo`):** Favicon restaurado a `humania-logo.png` (Isotipo corporativo de Humania). Subido a GitHub (`https://github.com/humania-nexo/humania.git`, Commit `b0f492c`).
+     - **Proiectio (`proiect.io` / `humania-nexo-proiectio`):** Favicon restaurado a `proiectio-logo.png` (Isotipo oficial de Proiectio / Libélula dorada). Subido a GitHub (`https://github.com/humania-nexo/proiectio.git`, Commit `09c8abe`).
+     - **Proiectio WebAR (`proiectio_webar`):** Favicon restaurado a `proiectio-logo.png` (`Proiectio-WebAR.git`, Commit `45dd6b2`).
+
+  2. 🔥 **Preservación Exclusiva de «La Llama Inextinguible» para la Resistencia:**
+     - El símbolo de **La Llama Inextinguible** (`la llama inextinguible.png`) permanece única y exclusivamente en los bastiones y módulos de la **Resistencia / Clan Sapiensia / UPROTA**:
+       - *Plataforma UPROTA* (`UPROTA/`).
+       - *El Centinela del Ritmo* (`centinela-del-ritmo.git` / `centinela_ritmo/`).
+       - *El Remix de la Justicia* (`remix_justicia/`).
+       - *DEVA Clandestina / Terminal Deva* (`deva/`).
+       - *Echo Vision / Reality Shifter* (`echo_vision/`).
+       - *Hub y Minijuegos de Arcade Enramado* (`arcade-enramado/`).
+       - *Sapiensia Clan & Citymaz*.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
