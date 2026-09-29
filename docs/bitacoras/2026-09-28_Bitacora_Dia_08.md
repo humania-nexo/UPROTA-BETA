@@ -834,6 +834,25 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Desplegado a producción en GitHub (`https://github.com/humania-nexo/humania.git`, Commit `ba76af8`).
 
 ---
+
+### 📍 [ENTRADA 31 - GENERACIÓN E INTEGRACIÓN DE ACTIVOS VISUALES DE PROPAGANDA IMPERIAL (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica Web & Lore de Humania:**
+
+  1. 🎨 **Generación de Activos de Propaganda Imperial:**
+     - **Póster Oficial Ángeles de Marfil (`multimedia/pretorianos-propaganda.jpg`):** Formación ceremonial pretoriana con armaduras de marfil, escudos y lanzas de plasma frente al Arco Triunfal y la arquitectura monumental de Humania.
+     - **Muestra Conceptual de la Armadura Leviatán (`multimedia/armadura-leviatan.jpg`):** Pedestal de exposición con placas de cerámica blanca pulida, filigranas de oro conductor y visor dorado de realidad aumentada A.N.I.M.A.
+     - **Muestra de la Lanza de Resonancia Bio-Digital (`multimedia/lanza-resonancia.jpg`):** Alabarda de cerámica y oro con núcleo emisor HGS 1.3 GW y hoja de cristal energético cian con HUD holográfico.
+
+  2. 🏛️ **Integración en Páginas Oficiales:**
+     - [`pretorianos.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/pretorianos.html): Actualizado el Hero con el póster oficial e incorporadas dos tarjetas de exhibición técnica para la Armadura Leviatán y la Lanza de Resonancia.
+     - [`index.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/index.html): Actualizado el estandarte de la sección *La Muralla Blanca* con el póster ceremonial.
+
+  3. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido al repositorio oficial de Humania (`https://github.com/humania-nexo/humania.git`, Commit `917c698`).
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
 
