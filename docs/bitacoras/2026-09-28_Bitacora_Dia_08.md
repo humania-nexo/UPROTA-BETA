@@ -689,7 +689,27 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Sincronizado y publicado en el repositorio oficial de GitHub `https://github.com/humania-nexo/Proiectio-WebAR.git` (Commit `b9f1e20`).
 
 ---
+
+### 📍 [ENTRADA 24 - EXPANSIÓN COMPLETA DE REALIDAD AUMENTADA HASTA EL CAPÍTULO 30 + RESERVA 35 (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica de Realidad Aumentada & Metadata Integral:**
+
+  1. 🏷️ **Estructura de Doble Marcador y 30 Capítulos Canónicos:**
+     - **Capítulo 2 con Doble Marcador:** Marcador oficial del Dispositivo Deltar (`marcador_capitulo_2.png` ➔ Barcode `value="2"`) y Marcador Extra del Jugador Caótico (`marcador_jugador_caotico.png` ➔ Barcode `value="7"`).
+     - **Capítulos 1 al 30 Completados:** Barcodes `1` a `6` (Caps 1-6), Barcode `7` (Cap 2 Extra), y Barcodes `8` a `31` (Caps 7 al 30) generados en resolución Web (72 DPI) y Editorial Impresión (300 DPI en `marcadores/impresion_300dpi/`).
+     - **Suite de Reserva:** Marcadores 31 al 35 generados preventivamente (Barcodes `32` a `36`).
+
+  2. 🌐 **Scaffolding Integral en WebAR (`index.html`):**
+     - Registrados todos los marcadores del 1 al 30 en la escena A-Frame / AR.js con leyendas 3D flotantes, retículas temáticas e interactividad `drag-rotate`.
+
+  3. 📑 **Documentación y Sincronización:**
+     - Actualizados `documentacion_AR.md` y `etiquetas_capitulos.txt` con el desglose temático canónico de los 30 capítulos.
+     - Commits subidos al repositorio oficial de GitHub `https://github.com/humania-nexo/Proiectio-WebAR.git` (Commit `44f5df9`).
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
