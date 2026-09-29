@@ -647,7 +647,24 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Actualizado y pusheado el commit oficial en el repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo`.
 
 ---
+
+### 📍 [ENTRADA 22 - ACTUALIZACIÓN MULTIMEDIA DE SOLARIS CITRUS A «SOLARIS WEB» Y PUBLICACIÓN EN PROIECTIO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Multimedia & Sincronización Web:**
+
+  1. 🖼️ **Sustitución de Imagen de Portada de Solaris:**
+     - Se integró el asset canónico `solaris web.jpg` proveniente de `PROIECTIO/Multimedia/` en la web oficial de Proiectio (`PROIECTIO/Web/humania-nexo-proiectio/multimedia/solaris-web.jpg`).
+     - Actualizado [`solaris.html`](file:///C:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-nexo-proiectio/solaris.html) vinculando el contenedor `.image-showcase` con la nueva imagen de alta resolución y respaldo en PNG, además de su correspondiente favicon de «La Llama Inextinguible».
+     - Replicado el asset en los directorios compartidos (`humania-repo/multimedia/` y `shared/multimedia/`).
+
+  2. 🚀 **Commit y Push al Repositorio Remoto:**
+     - Comiteado y subido con éxito al repositorio oficial `https://github.com/humania-nexo/proiectio.git` (Commit `22b518a` en la rama `main`).
+     - Despliegue en producción sincronizado para `https://www.proiect.io/solaris.html`.
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
