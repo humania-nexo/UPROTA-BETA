@@ -1522,8 +1522,36 @@
 - **Estado de Producción:**
   - Orden canónico y hoja de ruta dramatúrgica formalmente integrados en el canon de la saga.
 
+### 📍 [ENTRADA 74 - ARQUITECTURA DE 2 FASES JUGABLES Y CONVOCATORIA A PIX & HERTZ PARA «EL CENTINELA DEL RITMO» (EL DIRECTOR & NEXO)]
+- **Participante:** Director Creativo (Anigami Agadni) y Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Directrices Estratégicas del Director Anigami Agadni:**
+  - *"Estructurar el minijuego en dos fases jugables obligatorias: 1. Explicación previa + entrenamiento grabado por Mite (tutorial), y 2. El enfrentamiento contra el Centinela de la Frecuencia (Boss). Solicitar a Hertz la síntesis de la pista inspirada en el pop de los 90s/Backstreet Boys, y encargar a Pix el catálogo completo de sprites de baile en alta resolución (sin limitarse a 16x16), garantizando un estándar de calidad arcade de culto."*
+- **Especificaciones de Ingeniería y Hoja de Ruta para el Clan:**
+  1. 🕹️ **Estructura Jugable de 2 Fases (Nexo):**
+     - **Fase 1: El Cortafuegos Cinético & Entrenamiento de Mite:**
+       - Cinemática interactiva con Mite y su bocina holográfica marcando órdenes al compás.
+       - Secuencias de entrada con flechas (`[↓]` Agáchate, `[↑]` Salta, `[←/→]` Gira).
+       - Cinemática de reproducción de la grabación con el letrero rosa parpadeante: *«El Bytestreet Boy de la Resistencia»* y apertura de la compuerta.
+     - **Fase 2: El Duelo contra el Centinela de la Frecuencia:**
+       - Arena de luz sólida y vacío blanco infinito.
+       - Duelo por compases: Ráfagas láser y proyectiles en espiral del Boss vs Evasión rítmica y contragolpe de Orion con su rifle.
+       - Sistema de juicio triple (*Excelente/Flow Carísimo*, *Bien*, *Falla/Miss* con tropezones y sacudida de pantalla).
+  2. 🎧 **Solicitud de Síntesis Sonora para Hertz:**
+     - *(Espacio formal para la intervención y diseño de Hertz)*:
+       - Pista de 130 BPM con groove de batería pop de los 90s, bajo funk en onda de pulso 25% y sintetizadores chiptune en Web Audio API (0 KB de archivos externos).
+       - Efectos de sonido procedurales a latencia cero: Chime armónico en C6/G6 (Perfect), Hi-hat crunch (Good) y Glitch descendente (Miss).
+  3. 🎨 **Solicitud de Animación y Spritesheets para Pix (Resolución 48x48 / 64x64 px):**
+     - *(Espacio formal para la intervención y entrega gráfica de Pix)*:
+       - **Orion (Danza & Combate):** `idle_groove`, `dance_step_cross`, `breakdance_windmill`, `spin_kick`, `duck_slide`, `jump_dodge`, `stumble_fail` (tropezón aparatoso), `hit_damage` (impacto láser) y `freeze_climax` (pose con rifle).
+       - **Mite:** `mite_float`, `mite_speaker` (bocina gigante), `mite_laugh` (carcajada dorada) y `mite_sign_flow` (*"FLOW CARÍSIMO"*).
+       - **Centinela de la Frecuencia (Boss):** `boss_idle_pulse`, `boss_laser_horizontal`, `boss_spiral_burst` y `boss_hurt_glitch`.
+- **Estado de Producción:**
+  - Motor de sincronización `Zero-Drift` y FSM listos para recibir los assets de Pix y Hertz.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
