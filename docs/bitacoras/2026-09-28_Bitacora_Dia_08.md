@@ -1019,5 +1019,23 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   4. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `b4ecd42`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
 
+### 📍 [ENTRADA 40 - SIMPLIFICACIÓN A 4 CARRILES Y NUEVA MECÁNICA DE MOVIMIENTO ESPECIAL / DESCARGA DE FLOW CON ALTERACIÓN CROMÁTICA (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, UX & Nueva Mecánica de Juego:**
+
+  1. 🎯 **Desacople y Eliminación del Conflicto de Botones Rojos:**
+     - Se eliminó el 5to carril `HIT / Beat Drop` del Highway de notas que competía visual y mecánicamente con la flecha derecha roja (`RIGHT`).
+     - El Highway ahora opera de forma 100% limpia y simétrica con **4 únicos carriles direccionales** centrados en el Canvas (`◀ IZQ #00E5FF`, `▼ ABAJO #FFE066`, `▲ ARRIBA #00FFAA`, `▶ DER #FF0055`), facilitando la lectura rítmica instantánea tanto en móvil como en PC.
+
+  2. ⚡ **Mecánica de Movimiento Especial / «Descarga Sónica de Flow»:**
+     - **Acumulación de Energía:** Cada paso de baile bien ejecutado (Excelente: +10%, Bien: +6%, OK: +3%) alimenta progresivamente la barra de Flow (`flowMeter`) de 0% a 100%.
+     - **Estado de Listo (`.ready`):** Al alcanzar el 100%, el botón táctil inferior (`#btn-special-move`) se ilumina con un resplandor dorado neón pulsante, emite alerta háptica/visual y habilita la detonación mediante toque en pantalla o la tecla `ESPACIO`/`ENTER`/`E` en teclado físico.
+     - **Descarga y Alteración Cromática Potente:** Al activarse, desencadena una onda de sobrecarga sonora con arpegio de sintetizador procedural (`playSpecialOverdrive`), altera la paleta de colores del Canvas con pulsos estroboscópicos y ondas expansivas multicolor, desata la pose legendaria `AIR_GUITAR_RIFLE` de Orion con estelas triples, e inflige un daño masivo inmediato de **25% de HP al Centinela** (o +2500 puntos y +10 combo en tutorial), reseteando la barra para un nuevo ciclo de carga.
+
+  3. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `df3c742`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
