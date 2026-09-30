@@ -1036,6 +1036,24 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   3. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `df3c742`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
 
+### 📍 [ENTRADA 41 - DEPURACIÓN DE PARSEO EN MOTOR Y CORRECCIÓN DE INICIALIZACIÓN DE FLOW EN 0% (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Corrección Técnica y Estabilización:**
+
+  1. 🐛 **Diagnóstico y Corrección de Error de Parseo (`SyntaxError`):**
+     - Se detectó una doble declaración de identificador léxico (`const speakerBadge`) dentro del método `updateDOMHUD` en `engine.js` introducida en la última refactorización.
+     - Dicho error impedía que el navegador parseara e instanciara `GameEngine`, provocando que el Canvas permaneciera estático y la síntesis musical no arrancara.
+     - Se unificó la captura de referencias DOM en el alcance superior del método, eliminando la duplicación.
+
+  2. ⚡ **Corrección de Inicialización de Flow a 0%:**
+     - Se eliminó el remanente de prueba (`20%`) tanto en el constructor de `GameEngine`, en `actuallyStartTutorial()`, como en la estructura HTML estática inicial (`index.html`).
+     - La barra de Flow y el indicador del botón de Movimiento Especial inician limpiamente en **0%**, requiriendo que el jugador ejecute pasos precisos (10% en Excelente, 6% en Bien, 3% en OK) para cargarlo al 100%.
+
+  3. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `10a9fa7`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
