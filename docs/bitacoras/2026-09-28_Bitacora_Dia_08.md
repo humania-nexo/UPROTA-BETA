@@ -1053,6 +1053,25 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   3. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `10a9fa7`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
 
+### 📍 [ENTRADA 42 - TRANSICIÓN FLUIDA AL EPÍLOGO, DETENCIÓN TOTAL DE AUDIO Y NAVEGACIÓN DE HOMENAJE EN «EL CENTINELA DEL RITMO» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, Audio & UX:**
+
+  1. 🔇 **Detención Inmediata de Audio y Prevención de Colisión Sonora:**
+     - En `triggerVictorySequence()` y en el cambio a la pantalla de victoria/epílogo se invoca `this.audio.stopMusic()`, silenciando completamente las pistas procedurales de fondo antes de reproducir la fanfarria y al pasar al epílogo.
+     - En el botón de video de homenaje (`#btn-bsb-tribute`), se configuró `target="_self"` y un listener que detiene cualquier audio activo de Web Audio API antes de abandonar la aplicación, evitando la superposición ruidosa de dos fuentes de audio.
+
+  2. 📱 **Corrección de Transición y Scroll en Móvil:**
+     - Se implementó `window.scrollTo({ top: 0, left: 0, behavior: 'instant' })` dentro de `showStep()`, reseteando el scroll vertical a la cúspide en cada transición de pantalla para evitar pantallas negras o desajustes donde el usuario debía deslizar hacia abajo para ver el contenido.
+     - Se ajustó `.screen-view` móvil con `justify-content: flex-start` y `overflow-y: auto`, asegurando que tanto el resumen de combate como los botones de «Volver a Jugar» y «Ver Homenaje» queden a la vista inmediatamente.
+
+  3. ⚡ **Mapeo Robusto de Botón de Victoria (`#vic-btn-continue`):**
+     - Se vincularon listeners estáticos de `click` y `pointerdown` con `z-index: 100` y `pointer-events: auto` en la tarjeta de victoria del HUD (`#hud-victory-card`), asegurando respuesta táctil instantánea al presionar «CONTINUAR AL EPÍLOGO CANÓNICO».
+
+  4. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `b896105`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
