@@ -983,8 +983,23 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Incorporada una barra táctil dedicada con 4 botones direccionales amplios (`◀ IZQ`, `▼ ABAJO`, `▲ ARRIBA`, `▶ DER`) de 58px de altura con reborde neón específico por carril, más un botón panorámico `⚡ BEAT DROP / RIFLE SÓNICO`.
      - Manejadores de eventos `pointerdown`/`touchstart` optimizados con `touch-action: manipulation` para garantizar cero latencia de respuesta, soporte multitáctil y retroalimentación háptica visual instantánea al pulsar.
 
-  5. 🚀 **Despliegue a Producción:**
-     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `7cc707d`), reflejándose de inmediato en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
+### 📍 [ENTRADA 38 - CORRECCIÓN CRÍTICA DE TRANSICIÓN DE CUENTA REGRESIVA & LEAD-IN DE NOTAS EN «EL CENTINELA DEL RITMO» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, Diagnóstico & Depuración:**
+
+  1. 🐛 **Diagnóstico y Corrección del Bloqueo en Conteo:**
+     - Se identificó que la llamada a la generación del stream de tutorial se truncó en la compilación anterior, provocando que la función `actuallyStartTutorial` no concluyera y el overlay `¡FLOW!` permaneciera visible en pantalla.
+     - Se restauró íntegramente `generateTutorialNotesStream(numBars)` blindando la ejecución con bloques `try...catch...finally` para garantizar que `#hud-countdown-overlay` se oculte incondicionalmente al expirar el temporizador.
+
+  2. ⏱️ **Reloj Híbrido de Sincronización Ininterrumpida:**
+     - Se implementó un reloj de sincronización robusto (`gameSongTime`) basado en `performance.now()` y `dt`, sincronizado con `AudioContext.currentTime`. Esto asegura que el avance de compases y la caída de notas jamás se congelen incluso si el contexto de audio del navegador móvil se suspende temporalmente.
+
+  3. 🎯 **Calibración de Lead-in en Compás 0:**
+     - Se recalibró el primer compás de la pista para que las notas inicien en el tiempo 2 y 3 (a más de 1.0 segundo del arranque), permitiendo al jugador ver cómo descienden fluidamente desde la parte superior del Highway hasta los receptores.
+
+  4. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `3c194b1`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
 
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
