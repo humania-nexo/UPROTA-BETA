@@ -1072,6 +1072,27 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   4. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `b896105`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
 
+### 📍 [ENTRADA 43 - RESOLUCIÓN DEFINITIVA DE VISIBILIDAD MÓVIL (ESPECIFICIDAD CSS) & CACHE BUSTING EN «EL CENTINELA DEL RITMO» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Diagnóstico y Corrección de Ingeniería:**
+
+  1. 🐛 **Diagnóstico Raíz del Fallo en Móvil:**
+     - En el media query de móvil de `style.css`, la regla `#step-game.screen-view` contenía `display: flex;` sin condicionarse a la clase `.active`.
+     - Debido a la alta especificidad del selector de ID (`#step-game`), sobreescribía la propiedad `display: none` de `.screen-view` general.
+     - Como resultado, al transicionar hacia el epílogo (`#step-victory`), la pantalla de juego `#step-game` continuaba mostrándose fija con `min-height: calc(100dvh - 38px)` en la parte superior, empujando la pantalla de victoria hacia abajo y dando la apariencia de que el botón no hacía nada.
+
+  2. 🛠️ **Blindaje de Reglas de Pantalla (`.screen-view`):**
+     - Se refactorizó el selector a `#step-game.screen-view.active { display: flex !important; }`.
+     - Se forzó `display: none !important;` en `.screen-view` inactiva y `display: flex !important;` en `.screen-view.active`, garantizando que al cambiar de pantalla, el viewport del juego se oculte instantáneamente y el epílogo ocupe el 100% de la pantalla sin solapamientos.
+
+  3. ⚡ **Mapeo Táctil Triple y Prevención de Caché (`Cache Busting`):**
+     - Se reforzó el botón `#vic-btn-continue` con listeners directos en `index.html` para `click` y `touchend`, asignando `touch-action: manipulation`, `-webkit-tap-highlight-color: transparent` y `z-index: 105`.
+     - Se incorporó versión explícita (`?v=20260929_02`) en las etiquetas `<link>` y `<script>` para forzar a los navegadores móviles a invalidar cualquier caché local de scripts o estilos.
+
+  4. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `ea10110`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
