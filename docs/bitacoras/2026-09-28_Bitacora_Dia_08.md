@@ -1001,5 +1001,23 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   4. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `3c194b1`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
 
+### 📍 [ENTRADA 39 - DESACOPLE TOTAL DE MENSAJES FUERA DEL CANVAS Y MONITOR TÁCTICO EXTERNO EN «EL CENTINELA DEL RITMO» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, UX & Arquitectura Visual:**
+
+  1. 📺 **Monitor de Transmisión Táctica Exterior (`#external-dialogue-bar`):**
+     - Se extrajo el sistema de diálogos por completo del interior del Canvas y del viewport del juego, trasladándolo a un panel de comunicaciones tácticas externo ubicado en el espacio superior de la terminal.
+     - Incorpora indicador de señal en vivo (`.comms-live-dot`), distintivo de emisor (`MITE`, `ORION`, `CENTINELA`), frecuencia (`116 BPM // ENLACE ANIMA`) y texto de diálogo en tipografía monoespaciada de alta nitidez sin solapamientos.
+
+  2. 💃 **Canvas de Juego 100% Despejado e Inmersivo:**
+     - El área de juego (`#game-viewport`) queda totalmente libre de cuadros de texto, pancartas o banners flotantes obstructivos, dedicando la totalidad del espacio a los sprites de Orion, Mite, el Centinela, el Highway de 4 carriles y los efectos visuales.
+
+  3. 📱 **Aprovechamiento Integral del Espacio Móvil:**
+     - En smartphones, la mitad inferior y superior se distribuyen equilibradamente: Transmisión Táctica ➔ Viewport del Juego ➔ Pad Táctil Ergonómico de 54px ➔ Barra de Beat Drop ➔ Controles, eliminando cualquier espacio muerto y permitiendo jugar cómodamente con los pulgares.
+
+  4. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/centinela-del-ritmo.git` (Commit `b4ecd42`), activo en GitHub Pages (`https://humania-nexo.github.io/centinela-del-ritmo/`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
