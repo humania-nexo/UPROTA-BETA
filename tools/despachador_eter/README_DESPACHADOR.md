@@ -25,27 +25,28 @@ UPROTA/
 
 ---
 
-## 🚀 Cómo Ponerlo en Marcha (Setup de 2 minutos)
+## 🚀 Modos de Operación
 
-### 1. Obtener las credenciales gratuitas de Reddit API
-1. Inicia sesión en tu cuenta de Reddit en el navegador.
-2. Ve a: [https://www.reddit.com/prefs/apps](https://www.reddit.com/prefs/apps)
-3. Haz clic abajo en **"are you a developer? create an app..."** o **"create another app..."**.
-4. Rellena los datos:
-   - **name:** `DespachadorEter`
-   - **type:** Marca la casilla **`script`** *(Importante: no web app)*.
-   - **redirect uri:** `http://localhost:8080`
-5. Haz clic en **"create app"**.
-6. Copia el **Client ID** (el código alfanumérico debajo del nombre de la app) y el **Secret**.
+### 🌐 VÍA DIRECTA POR NAVEGADOR (Recomendada: Cero formularios ni API Keys)
+No requiere solicitar credenciales a Reddit ni lidiar con bloqueos de API. Utiliza un navegador Chromium local con sesión persistente:
 
-### 2. Configurar tu `.env` local
-Copia `config.example.env` a `.env` en `tools/despachador_eter/`:
-```ini
-REDDIT_CLIENT_ID=tu_client_id_aqui
-REDDIT_CLIENT_SECRET=tu_client_secret_aqui
-REDDIT_USERNAME=tu_usuario_reddit
-REDDIT_PASSWORD=tu_contrasena_reddit
-REDDIT_USER_AGENT=SapiensiaClanDispatcher/1.0 by u/tu_usuario_reddit
+1. **Lanzar el despachador para el siguiente post pendiente:**
+   ```bash
+   python tools/despachador_eter/despachador_browser.py
+   ```
+2. La primera vez se abrirá la ventana de Reddit: inicia sesión con `u/SapiensiaClan` una sola vez. *(Tu sesión quedará guardada permanentemente en `.browser_session`)*.
+3. El script irá automáticamente al subreddit objetivo, rellenará el título y todo el texto en Markdown.
+4. Puedes revisarlo en la ventana y hacer clic en **Publicar** con 1 solo toque, o usar `--auto` para envío directo:
+   ```bash
+   python tools/despachador_eter/despachador_browser.py --auto
+   ```
+
+---
+
+### 🔑 VÍA API OFICIAL (Para cuentas con API previa)
+Si ya cuentas con Client ID y Secret en `tools/despachador_eter/.env`:
+```bash
+python tools/despachador_eter/despachador_reddit.py --live
 ```
 
 ---
