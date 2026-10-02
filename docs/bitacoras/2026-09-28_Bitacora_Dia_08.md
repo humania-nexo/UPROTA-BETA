@@ -1114,6 +1114,23 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   4. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/sapiensiaclan.git` (Commit `bf8fbef`).
 
+### 📍 [ENTRADA 45 - RECALIBRACIÓN DE GANANCIA Y POTENCIA ACÚSTICA EN LA METAMORFOSIS DE SAPIENSIA CLAN (NEXO & HERTZ)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica & Calibración de Audio:**
+
+  1. 🔊 **Recalibración del Master Gain (0.08 ➔ 0.45):**
+     - El `masterGain` inicial estaba excesivamente atenuado en 0.08 (-22 dB), lo que provocaba que los efectos procedurales operaran a un volumen casi inaudible (~0.24% de amplitud real).
+     - Se elevó el techo dinámico maestro a 0.45, garantizando claridad cristalina y pegada dinámica sin saturar el canal del navegador.
+
+  2. ⚡ **Ajuste Dinámico de las Fases de Síntesis:**
+     - **Modo Arcade:** La ráfaga de ruido blanco CRT Degauss se incrementó de 0.035 a 0.35, el sweep de pitch drop subió a 0.28 y el arpegio 8-bit a 0.26, generando un crujido retro contundente e inmersivo.
+     - **Modo Antropo:** El swell armónico senoidal ascendente subió a 0.32 y el acorde de campanas de mármol a 0.30 con decaimiento natural de 400ms.
+     - **Micro-interacciones:** Se calibraron los micro-chimes de hover (0.06), click táctil (0.18) y éxito de Binance Pay (0.22).
+
+  3. 🚀 **Despliegue a Producción:**
+     - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/sapiensiaclan.git` (Commit `5d6adb7`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
