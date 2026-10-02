@@ -1131,6 +1131,28 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   3. 🚀 **Despliegue a Producción:**
      - Commiteado y subido en vivo al repositorio de GitHub `https://github.com/humania-nexo/sapiensiaclan.git` (Commit `5d6adb7`).
 
+### 📍 [ENTRADA 46 - ARQUITECTURA Y CREACIÓN DEL DESPACHADOR AUTÓNOMO DE ÉTER (NEXO & ÉTER)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, Automatización & Pacing Orgánico:**
+
+  1. 🏗️ **Estructura de la Cola de Emisión (`docs/difusion/cola_publicaciones/`):**
+     - Se implementó `cola_manifest.json` con metadatos estructurados para programar posts con control de estado (`pendiente` / `publicado`), subreddit objetivo, títulos, flairs y marcas temporales.
+     - Se crearon los primeros 4 posts maestros listos para emisión orgánica:
+       * `post_01_literatura_sapiens_ia.md` (r/libros)
+       * `post_02_centinela_ritmo_webdev.md` (r/WebDev_Espanol)
+       * `post_03_pixelart_aseprite_showcase.md` (r/PixelArt)
+       * `post_04_scifi_origin_story.md` (r/scifi)
+
+  2. 🤖 **Motor Ejecutor Python (`tools/despachador_eter/despachador_reddit.py`):**
+     - Desarrollado con soporte para la API oficial de Reddit (tipo Script, sin CAPTCHAs ni bloqueos de Cloudflare).
+     - **Protección Anti-Spam / Pacing:** Enfriamiento forzoso de mínimo 24h entre cualquier post y mínimo 7 días antes de repetir el mismo subreddit.
+     - **Modos de Operación:** Simulación `--dry-run` por defecto para verificación sintáctica, modo `--live` para emisión real, y consulta con `--list`.
+     - Soporte completo de codificación UTF-8 para consolas Windows y actualización atómica de `historial_despachos.json`.
+
+  3. 🚀 **Despliegue a Producción:**
+     - Commiteado y sincronizado en el repositorio central de UPROTA.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 

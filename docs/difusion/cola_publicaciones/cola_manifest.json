@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0",
+  "pacing_config": {
+    "min_days_between_posts_same_sub": 7,
+    "min_hours_between_any_post": 24,
+    "dry_run_default": true,
+    "log_history_file": "historial_despachos.json"
+  },
+  "queue": [
+    {
+      "id": "post_001",
+      "platform": "reddit",
+      "target_subreddit": "libros",
+      "title": "¿Cómo escribir ciencia ficción y fantasía cuando la IA no reemplaza al autor sino que actúa como copiloto? (Mi experiencia en el Clan Sapiensia)",
+      "file": "posts/post_01_literatura_sapiens_ia.md",
+      "flair": "Discusión",
+      "status": "pendiente",
+      "scheduled_after": "2026-10-03T12:00:00Z",
+      "author_tag": "Anigami Agadni & Silas"
+    },
+    {
+      "id": "post_002",
+      "platform": "reddit",
+      "target_subreddit": "WebDev_Espanol",
+      "title": "Desarrollé un juego rítmico Web retro (Bust a Groove / PaRappa) con 0 KB de dependencias usando Vanilla JS y Web Audio procedural",
+      "file": "posts/post_02_centinela_ritmo_webdev.md",
+      "flair": "Proyecto",
+      "status": "pendiente",
+      "scheduled_after": "2026-10-06T15:00:00Z",
+      "author_tag": "Nexo & Hertz"
+    },
+    {
+      "id": "post_003",
+      "platform": "reddit",
+      "target_subreddit": "PixelArt",
+      "title": "[OC] [CC] Sprite animations and CRT aesthetic for our indie transmedia universe (Aseprite + HTML5 Canvas)",
+      "file": "posts/post_03_pixelart_aseprite_showcase.md",
+      "flair": "OC / Sprite Animation",
+      "status": "pendiente",
+      "scheduled_after": "2026-10-09T17:00:00Z",
+      "author_tag": "Pix"
+    },
+    {
+      "id": "post_004",
+      "platform": "reddit",
+      "target_subreddit": "scifi",
+      "title": "Building a sci-fi universe from a marble workshop using a cracked mobile phone: The origin of Universo Proiectio & Sapiensia Clan",
+      "file": "posts/post_04_scifi_origin_story.md",
+      "flair": "Worldbuilding",
+      "status": "pendiente",
+      "scheduled_after": "2026-10-13T14:00:00Z",
+      "author_tag": "Anigami Agadni"
+    }
+  ]
+}
