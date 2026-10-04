@@ -1172,7 +1172,31 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Actualización de `index.html` (Sección 6: *Cuerpos de Seguridad de Humania*) y `header.html` con navegación dual integrada.
      - Commiteado y sincronizado en el repositorio de Humania (`https://github.com/humania-nexo/humania.git`, Commit `943ed58`).
 
+### 📍 [ENTRADA 48 - RESTAURACIÓN VISUAL DE LOS JÓVENES ÍDOLOS PRETORIANOS Y CONTRASTE ESTÉTICO CON LA GUARDIA CIVIL (NEXO & SILAS)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, Lore & Verificación Visual:**
+
+  1. 🌟 **Restauración de la Fotografía de Portada de Los Pretorianos:**
+     - Se restituyó la imagen `pretorianos.png` en la tarjeta de presentación de `index.html` (Sección 6: *Cuerpos de Seguridad de Humania*).
+     - **Propósito Visual y Narrativo:** Reflejar el rostro radiante, saludable y aspiracional de los jóvenes atletas de marfil («el ideal que todo niño de Humania sueña con llegar a ser»), proyectando el espectáculo público y la cercanía mediática del régimen.
+
+  2. 🏛️ **Preservación y Despliegue de los Archivos Tácticos:**
+     - En el archivo expandido [`pretorianos.html`](file:///c:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/pretorianos.html), se conservan y exhiben todos los documentos visuales:
+       * **Banner Hero:** El Gran Desfile de la Falange de Marfil (`pretorianos-propaganda.jpg`).
+       * **Showcase 0:** El Rostro Heroico e Ídolos de Marfil (`pretorianos.png`).
+       * **Showcase 1:** La Armadura Leviatán Grado Marfil V-9 (`armadura-leviatan.jpg`).
+       * **Showcase 2:** La Lanza de Resonancia Bio-Digital HGS-Core 1.3 GW (`lanza-resonancia.jpg`).
+
+  3. ⚖️ **Diferenciación Estética Definitiva:**
+     - **La Guardia Civil:** Soldados con uniforme integral, cascos cerrados, exoesqueletos tácticos motorizados (HGS-74) y presencia táctica en calle para el orden civil continuo.
+     - **Los Pretorianos:** Rostros visibles, juventud resplandeciente, trajes ceremoniales de marfil y oro como espectáculo aspiracional en las academias, respaldados en el frente táctico por el blindaje pesado Leviatán.
+
+  4. 🚀 **Despliegue a Producción:**
+     - Commiteado y sincronizado en el repositorio oficial de Humania (`https://github.com/humania-nexo/humania.git`, Commit `f448ff0`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
