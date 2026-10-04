@@ -1195,8 +1195,25 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   4. 🚀 **Despliegue a Producción:**
      - Commiteado y sincronizado en el repositorio oficial de Humania (`https://github.com/humania-nexo/humania.git`, Commit `f448ff0`).
 
+### 📍 [ENTRADA 49 - REDISEÑO DE ENCUADRE VISUAL (ASPECT-RATIO 1:1) Y COMPACTACIÓN EDITORIAL EN HUMANIA.SPACE (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica & Optimización de Layout:**
+
+  1. 📐 **Corrección de Oclusión y Encuadre Fotográfico:**
+     - Se eliminó la limitación de altura fija de `260px` que recortaba más del 50% de las imágenes de la Guardia Civil y los Pretorianos.
+     - Se configuró el contenedor de imagen con `aspect-ratio: 1 / 1` y `max-height: 480px`, permitiendo desplegar el 100% de la fotografía (cuerpos completos, uniformes, armas y escenografía arquitectónica monumental).
+
+  2. ✍️ **Compactación y Jerarquía del Bloque de Texto:**
+     - Se optimizó el padding (`20px 22px`) y se redujo el tamaño de títulos, subtítulos y resúmenes a 1-2 líneas directas.
+     - La proporción de la tarjeta ahora otorga más del 75% del peso visual a la fotografía y el 25% a la información táctica de enlace.
+
+  3. 🚀 **Despliegue a Producción:**
+     - Commiteado y sincronizado en `https://github.com/humania-nexo/humania.git` (Commit `8e3a79c`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
