@@ -1153,6 +1153,25 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
   3. 🚀 **Despliegue a Producción:**
      - Commiteado y sincronizado en el repositorio central de UPROTA.
 
+### 📍 [ENTRADA 47 - INTEGRACIÓN DE LA GUARDIA CIVIL & ARQUITECTURA DE EXOESQUELETOS URBANOS EN HUMANIA.SPACE (NEXO & SILAS)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Implementación Técnica, Lore & Generación de Concept Art:**
+
+  1. 🛡️ **Doctrina y Diferenciación de Seguridad en Humania:**
+     - Se estableció la jerarquía y distinción institucional:
+       * **La Guardia Civil (Fuerzas Regulares):** Preservación del orden civil cotidiano, tráfico, patrullaje de proximidad, control de masas y asistencia ciudadana permanente.
+       * **Los Pretorianos (Fuerzas Especiales):** El brazo de choque (Ángeles de Marfil) con Armadura Leviatán pesada y Lanzas de Resonancia para supresión de amenazas mayores e incursiones rebeldes.
+
+  2. 🎨 **Generación de Arte Conceptual en Alta Resolución:**
+     - `guardia_civil_patrulla.jpg`: Escuadrón regular patrullando la Vía Aurelia de Humania con exoesqueletos tácticos motorizados, visores HUD y drones de apoyo sobre arquitectura neoclásica monumental.
+     - `guardia_civil_exoesqueleto.jpg`: Showcase técnico 3/4 del **Exoesqueleto Modelo HGS-74 Aeterna**, detallando la columna biomecánica, paquete de energía dorsal de 24h, servomotores hidráulicos y rifle de pulsos sinápticos no letales.
+
+  3. 🌐 **Despliegue Web Modular en `humania.space`:**
+     - Creación de la página dedicada [`guardia-civil.html`](file:///c:/Users/Snow/.gemini/antigravity/scratch/PROIECTIO/Web/humania-repo/guardia-civil.html) con tabla comparativa de doctrina, fichas tácticas y enlaces interactivos.
+     - Actualización de `index.html` (Sección 6: *Cuerpos de Seguridad de Humania*) y `header.html` con navegación dual integrada.
+     - Commiteado y sincronizado en el repositorio de Humania (`https://github.com/humania-nexo/humania.git`, Commit `943ed58`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
