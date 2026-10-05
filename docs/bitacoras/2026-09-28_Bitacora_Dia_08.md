@@ -1231,8 +1231,22 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - **Humania (`Web\humania-repo`):** Commit `ecc940c` en `https://github.com/humania-nexo/humania.git`.
      - **Proiectio (`Web\humania-nexo-proiectio`):** Commit `ac81468` en `https://github.com/humania-nexo/proiectio.git`.
 
+### 📍 [ENTRADA 51 - RECALIBRACIÓN VISUAL: ARMADURA LEVIATÁN CON PROPULSORES RETRÁCTILES EN VUELO (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada en Respuesta a la Corrección del Director Anigami Agadni:**
+
+  1. 🛠️ **Corrección Conceptual del Diseño Dorsal:**
+     - Se reemplazó la interpretación figurada de «alas» por la especificación mecánica canónica del autor: un pack dorsal compacto de propulsores cerámicos retráctiles con aletas angostas, actuadores hidráulicos, bisagras visibles y toberas vectoriales que emiten un escape iónico limpio blanco-azulado.
+     - Soldado pretoriano a rostro descubierto (joven de cabello oscuro y expresión serena), sin casco, portando la Lanza de Estática Sináptica con arco eléctrico azul, en vuelo controlado sobre la metrópolis blanca de Humania durante la hora dorada.
+
+  2. 🚀 **Despliegue a Producción:**
+     - Archivo sustituido en `humania-repo/multimedia/armadura-leviatan.jpg` y sincronizado en `humania/multimedia/`.
+     - Commiteado y desplegado en `https://github.com/humania-nexo/humania.git` (Commit `3c673d6`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
