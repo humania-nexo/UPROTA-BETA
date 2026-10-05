@@ -1244,8 +1244,22 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Archivo sustituido en `humania-repo/multimedia/armadura-leviatan.jpg` y sincronizado en `humania/multimedia/`.
      - Commiteado y desplegado en `https://github.com/humania-nexo/humania.git` (Commit `3c673d6`).
 
+### 📍 [ENTRADA 52 - SUSTITUCIÓN DEFINITIVA DE LA ARMADURA LEVIATÁN POR «PRETORIANO_VUELO.JPG» (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada por Instrucción Directa del Director Anigami Agadni:**
+
+  1. 🖼️ **Sustitución en Producción:**
+     - Se ubicó el archivo maestro suministrado por el Director en `humania/multimedia/pretoriano_vuelo.jpg` ($1536 \times 1024\text{ px}$).
+     - Se sustituyó el activo de producción `humania-repo/multimedia/armadura-leviatan.jpg` y se preservó adicionalmente como `pretoriano_vuelo.jpg`.
+     - Imagen vinculada directamente al showcase de la Armadura Leviatán en `pretorianos.html` sin alterar las rutas HTML.
+
+  2. 🚀 **Despliegue a Producción:**
+     - Commiteado y sincronizado en `https://github.com/humania-nexo/humania.git` (Commit `31bf494`).
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
+
 
 
 
