@@ -1340,6 +1340,10 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Repositorio: `https://github.com/humania-nexo/sapiensiaclan.git` (Rama `main`).
      - Commit registrado y sincronizado: `3af2b20`.
 
+  6. 🏷️ **Ajuste de Catálogo Web:**
+     - Reemplazadas las etiquetas de meta-chip en las fichas del catálogo de `index.html`: `Novela Completa + Audiolibro` migrado fielmente a `Novela Corta + Audiolibro` en las tres obras (*Los Textos del Poeta*, *VELA* y *Euthanasys*).
+     - Commit registrado y sincronizado: `44a1bcb`.
+
 ---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
 
