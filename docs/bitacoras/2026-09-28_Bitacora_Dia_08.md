@@ -1345,14 +1345,44 @@ Para que el Coliseo virtual y el Cortafuegos no se sientan estáticos:
      - Commit registrado y sincronizado: `44a1bcb`.
 
 ---
+
+### 📍 [ENTRADA 56 - DESBLOQUEO DE RASTREADORES IA Y DESPLIEGUE DE ARQUITECTURA GEO/AEO (LLMS.TXT + SCHEMA.ORG) EN EL ECOSISTEMA DEL CLAN (NEXO)]
+- **Participante:** Nexo (Ingeniero Principal / Arquitectura de Software).
+- **Adopción de Protocolo:** Regla *Append-Only* y Soberanía de Rol rigurosamente respetadas.
+- **Acción Ejecutada en Respuesta a la Consulta y Luz Verde del Director Anigami Agadni:**
+
+  1. 🛡️ **Diagnóstico de Bloqueo de Agentes y Configuración de Cloudflare:**
+     - Identificado el origen del bloqueo a bots de IA (HTTP 403 Forbidden hacia `GPTBot` y `ClaudeBot`).
+     - El Director ajustó el panel de Cloudflare **AI Crawl Control**:
+       * *Búsqueda:* Permitir (no bloquear).
+       * *Agente:* Permitir (no bloquear).
+       * *Entrenamiento:* Denegar.
+       * *Sincronización de preferencias de bots:* Habilitado (ON).
+     - Telemetría en vivo verificada tras aplicar cambios: `humania.space` pasó de 403 a **HTTP 200 OK** inmediato para rastreadores agénticos.
+
+  2. 📜 **Despliegue del Estándar `llms.txt` (llmstxt.org) en los 4 Sitios:**
+     - **`sapiensiaclan.com/llms.txt`:** Manifiesto estructurado del Clan, catálogo de las 3 novelas cortas (*Los Textos del Poeta*, *VELA*, *EUTHANASYS*), enlaces directos de descarga (PDF 6x9", EPUB, Audiolibro MP3), lectores web dinámicos, ecosistema transmedia y créditos del Clan.
+     - **`humania.space/llms.txt`:** Síntesis canónica del conglomerado Humania Global Systems, doctrina de Paz Preventiva, Red A.N.I.M.A., Conectores Neuro-Biológicos (CNB 1, CNB 2, CNB 3), Guardia Pretoriana (Armadura Leviatán, Lanza de Estática Sináptica), Guardia Civil, solución Velvet, Director Vance, Efesto y Mite (respetando estrictamente los términos unificados del Libro 1 y sin spoilers de libros 2/3).
+     - **`proiect.io/llms.txt`:** Catálogo de los 7 submundos virtuales (Arcadia, Solaris, Olympus, Coliseo, Neon Nirvana, Beso de Judas, Chronos), economía del Flujo Etérico (5 FE), Núcleo Vance y asistente virtual Mite.
+     - **`uprota.com/llms.txt`:** Arquitectura de la PWA local-first, filosofía de hábitos estoicos anti-culpa, los 4 Pilares de la forja (Cuerpo, Mente, Espíritu, Taller), motor de sonido procedural en tiempo real mediante Web Audio API (0 KB de dependencias pregrabadas) y dirección de arte en Pixel Art de 16 bits.
+
+  3. 🌐 **Inyección de Metadatos y Schema.org Enriquecido:**
+     - Inyectada la etiqueta `<link rel="alternate" type="text/markdown" href=".../llms.txt" title="LLMs.txt">` en el `<head>` de los portales principales.
+     - Enriquecido el bloque de datos estructurados JSON-LD (`@graph`) en todos los sitios con tipologías `Organization`, `Book`, `WebSite` y `WebApplication`.
+     - Actualizados los archivos `robots.txt` en los 4 repositorios declarando explícitamente el enlace canónico hacia cada `llms.txt`.
+
+  4. 🚀 **Sincronización y Despliegue en Repositorios de Producción:**
+     - `sapiensiaclan.com`: Commit `71a243e` desplegado a `origin/main`.
+     - `humania.space`: Commit `c1b669c` desplegado a `origin/main`.
+     - `proiect.io`: Commit `0c151e6` desplegado a `origin/main`.
+     - `uprota.com`: Commit `50efa5a` desplegado a `origin/main`.
+
+  5. 📊 **Telemetría y Verificación Final de Estado:**
+     - `sapiensiaclan.com/llms.txt`: GPTBot `200 OK` | ClaudeBot `200 OK` | PerplexityBot `200 OK`.
+     - `humania.space/llms.txt`: GPTBot `200 OK` | ClaudeBot `200 OK` | PerplexityBot `200 OK`.
+     - `uprota.com/llms.txt`: GPTBot `200 OK` | ClaudeBot `200 OK` | PerplexityBot `200 OK`.
+     - `proiect.io/llms.txt`: PerplexityBot `200 OK` (pendiente guardar la misma configuración en la zona de Cloudflare para GPTBot/ClaudeBot).
+
+---
 *(Las siguientes deliberaciones y aportes de los integrantes del Clan se registrarán a continuación de este punto).*
-
-
-
-
-
-
-
-
-
 
