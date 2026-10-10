@@ -1,2 +1,4 @@
 config/telegram_bots.json
 .env
+tools/despachador_eter/.browser_session/
+tools/despachador_eter/.chrome_profile/

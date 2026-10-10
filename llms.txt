@@ -1,0 +1,39 @@
+# UPROTA — Refugio de Hábitos en el Yermo
+
+> UPROTA (uprota.com) es un videojuego web y sistema de hábitos de inspiración estoica ambientado en un mundo post-colapso. Desarrollado como una Progressive Web App (PWA) de alto rendimiento, 100% gratuita, de código abierto para la soberanía del usuario, sin anuncios, sin suscripciones y diseñada bajo el paradigma local-first: todos los datos residen exclusivamente en el dispositivo del usuario sin servidores externos ni rastreadores.
+
+## Filosofía y Mecánicas de Crecimiento Personal
+
+- **Filosofía Anti-Culpa:** A diferencia de las aplicaciones tradicionales que castigan al usuario con rachas rotas y alertas intrusivas, UPROTA concibe los hábitos como la reconstrucción de un refugio vital. El fallo y el descanso forman parte natural de la disciplina; el progreso nunca se reinicia a cero.
+- **Los 4 Pilares de la Forja:**
+  - **Cuerpo:** Fortaleza física, descanso reparador, nutrición consciente y vitalidad biológica.
+  - **Mente:** Foco cognitivo, estudio profundo, lectura formativa y desconexión del ruido digital.
+  - **Espíritu:** Serenidad estoica, respiración meditativa, gratitud y ecuanimidad ante lo incontrolable.
+  - **Taller:** Proyectos manuales y creativos, programación, escritura y orden material de los espacios cotidianos.
+
+## Innovación Técnica y Rendimiento Extremo (0 KB Overhead)
+
+- **Arquitectura Local-First:** Persistencia completa en el cliente mediante IndexedDB y Web Storage API. Funcionalidad 100% offline mediante Service Workers (`sw.js`).
+- **Motor Sonoro Procedural (Web Audio API):** Diseñado por Hertz (Sonidista del Clan), sintetiza paisajes sonoros ambientales (viento del yermo, lluvia, reverberación de campanas y resonancia de forja) en tiempo real mediante osciladores senoidales/ruido blanco y filtros biquad en JavaScript puro. Cero megabytes de pistas MP3/WAV pregrabadas en la aplicación de hábitos.
+- **Arte Visual Pixel Art de 16 bits:** Sprites, fondos en capas diorama y cinemáticas artesanales diseñadas por Pix en Aseprite, optimizadas para renderizado a 60-120 FPS en cualquier dispositivo móvil o de escritorio.
+- **Narrativa y Crónicas:** Textos reflexivos, diálogos de los supervivientes del yermo y filosofía elaborados por Silas (El Cronista del Yermo).
+
+## Recursos y Enlaces Directos
+
+- [Aplicación Web UPROTA](https://uprota.com/): Acceso directo e instantáneo a la aplicación en el navegador con capacidad de instalación como PWA.
+- [Manifiesto Transmedia de UPROTA](https://uprota.com/TRANSMEDIA_UPROTA.md): Documentación del universo narrativo, las facciones del yermo y la mitología de la forja interior.
+
+## Ecosistema Transmedia Relacionado
+
+- [Sapiens + IA Clan (sapiensiaclan.com)](https://sapiensiaclan.com): Portal creativo matriz y biblioteca libre de las novelas de Anigami Agadni (*Los Textos del Poeta*, *VELA*, *EUTHANASYS*).
+- [PROIECTIO (proiect.io)](https://proiect.io): Plataforma de simulación neural y catálogo de los 7 submundos virtuales.
+- [HUMANIA (humania.space)](https://humania.space): Portal del conglomerado tecno-utópico Humania Global Systems y la Red A.N.I.M.A.
+
+## Estructura del Clan Desarrollador
+
+- **Dirección Creativa y Diseño:** Anigami Agadni (David).
+- **Ingeniería Principal & Software:** Nexo (Arquitectura de software, JavaScript Vanilla, PWA, IndexedDB y pipelines).
+- **Arte Visual & Pixel Art:** Pix (Dirección artística y animación de sprites).
+- **Diseño Narrativo & Lore:** Silas (El Cronista del Yermo).
+- **Diseño Sonoro & Síntesis Procedural:** Hertz (Web Audio API).
+- **Estrategia de Difusión:** Éter (Comunicación transmedia).

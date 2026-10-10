@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -31,32 +31,47 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
 
-  <!-- Datos Estructurados Schema.org (JSON-LD para Google Search) -->
+  <!-- Enlace a manifiesto LLMs para Agentes de IA -->
+  <link rel="alternate" type="text/markdown" href="https://uprota.com/llms.txt" title="LLMs.txt">
+
+  <!-- Datos Estructurados Schema.org (JSON-LD para Motores de IA y Buscadores) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "UPROTA",
-    "alternateName": "UPROTA — Refugio de Hábitos en el Yermo",
-    "url": "https://uprota.com",
-    "applicationCategory": "LifestyleApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript. Requires HTML5.",
-    "description": "Videojuego web y sistema de hábitos en un mundo post-colapso basado en la psicología estoica y el crecimiento personal.",
-    "creator": {
-      "@type": "Organization",
-      "name": "SAPIENSIA Clan",
-      "url": "https://sapiensiaclan.com"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Anigami Agadni"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://uprota.com/#app",
+        "name": "UPROTA",
+        "alternateName": "UPROTA — Refugio de Hábitos en el Yermo",
+        "url": "https://uprota.com",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "Videojuego web y sistema de hábitos en un mundo post-colapso basado en la psicología estoica, los 4 pilares (Cuerpo, Mente, Espíritu, Taller) y la soberanía de datos local-first.",
+        "creator": {
+          "@type": "Organization",
+          "name": "SAPIENSIA Clan",
+          "url": "https://sapiensiaclan.com"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Anigami Agadni"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://uprota.com/#organization",
+        "name": "SAPIENSIA Clan",
+        "url": "https://sapiensiaclan.com",
+        "logo": "https://uprota.com/assets/icons/icon-512.png"
+      }
+    ]
   }
   </script>
 
